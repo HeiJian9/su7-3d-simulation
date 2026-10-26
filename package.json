@@ -1,7 +1,7 @@
 {
   "name": "su7-interaction-lab",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "workspaces": [
     "apps/*",
@@ -20,7 +20,9 @@
     "start": "node apps/server/dist/apps/server/src/index.js",
     "asset:import": "node scripts/import-model.mjs",
     "asset:check": "node scripts/check-assets.mjs",
-    "asset:export": "node scripts/export-windows.mjs"
+    "asset:export": "node scripts/export-windows.mjs",
+    "start:test": "node apps/server/dist/apps/server/src/index.js --test-unconfigured",
+    "speech:probe": "node --import tsx scripts/probe-speech.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

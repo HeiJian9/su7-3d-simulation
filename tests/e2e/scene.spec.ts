@@ -41,7 +41,7 @@ test('actual GLB, health, visible controls and responsive layout', async ({ page
   await reset(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
   await page.getByRole('button', { name: '关闭调试记录', exact: true }).click();
-  await page.screenshot({ path: `docs/assets/i2-i3/su7-exterior-${testInfo.project.name}.png` });
+  await page.screenshot({ path: `docs/assets/aliyun/su7-exterior-${testInfo.project.name}.png` });
   expect(errors).toEqual([]);
 });
 
@@ -75,7 +75,7 @@ test('cabin, free movement, look, focused input isolation and keyboard return', 
   await page.getByRole('button', { name: '进入座舱', exact: true }).click();
   await expect.poll(() => position(page)).toEqual([-0.4, 1.15, -0.05]);
   await page.getByRole('button', { name: '关闭调试记录', exact: true }).click();
-  await page.screenshot({ path: `docs/assets/i2-i3/su7-cabin-${testInfo.project.name}.png` });
+  await page.screenshot({ path: `docs/assets/aliyun/su7-cabin-${testInfo.project.name}.png` });
   await page.getByRole('button', { name: '调试记录', exact: false }).click();
   await page.locator('canvas').click({ position: { x: 700, y: 350 } });
   await page.keyboard.down('w');

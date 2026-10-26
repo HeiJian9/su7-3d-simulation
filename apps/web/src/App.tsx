@@ -4,9 +4,10 @@ import { Scene } from './Scene';
 import { MicrophoneProbe } from './MicrophoneProbe';
 import { WindowPanel } from './WindowPanel';
 import { ControlConsole } from './ControlConsole';
-import { configureSpeech } from './speech';
+import { configureSpeech, useSpeech } from './speech';
 import type { SpeechHealth } from '../../../packages/shared/src/speech';
 import { useScene, type View } from './store';
+import { useVehicle, windowPoses } from './vehicle';
 
 function Icon({ name }: { name: 'orbit' | 'move' | 'reset' | 'cabin' | 'info' | 'arrow' }) {
   const paths = {
@@ -28,6 +29,7 @@ export function App() {
   const [help, setHelp] = useState(false);
   const [debug, setDebug] = useState(false);
   const [health, setHealth] = useState('连接中');
+  const providers = useSpeech((s)=>s.health);
   const [savedReport, setSavedReport] = useState('');
   const mode = useScene((s) => s.mode);
   const panTool = useScene((s) => s.panTool);
@@ -69,8 +71,11 @@ export function App() {
   const reload = () => { useScene.getState().patch({ loadError: null, loaded: false }); setAttempt((s) => s + 1); };
   const exportDiagnostics = async () => {
     const state = useScene.getState();
-    const data = { exportedAt: new Date().toISOString(), increment: 'I2–I3-framework', userAgent: navigator.userAgent, asset,
-      loadMs: state.loadMs, mode: state.mode, gesture: state.gesture, microphone: state.microphone, samples: state.samples };
+    const voice = useSpeech.getState(), vehicle = useVehicle.getState();
+    const data = { exportedAt: new Date().toISOString(), increment: 'I3-aliyun', userAgent: navigator.userAgent, asset,
+      loadMs: state.loadMs, mode: state.mode, gesture: state.gesture, microphone: state.microphone, samples: state.samples,
+      voice: { phase: voice.phase, transcript: voice.transcript, message: voice.message, errorCode: voice.errorCode, asrModel: voice.health.asr.model, ttsModel: voice.health.tts.model, mode: voice.health.mode, traces: voice.traces },
+      vehicle: { revision: vehicle.state.revision, targets: vehicle.state.windows, actual: { ...windowPoses } } };
     try {
       const response = await fetch('/api/diagnostics', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), signal: AbortSignal.timeout(8000) });
       if (!response.ok) throw new Error('报告写入失败，请重试。');
@@ -110,8 +115,8 @@ export function App() {
     </section>
 
     <ControlConsole />
-    <footer className="footer"><div><span className="footer-tag">WINDOW INTERACTION</span><span className="footer-caption">本轮 · 四窗统一控制与语音框架</span></div><button className="debug-toggle" aria-expanded={debug} onClick={() => setDebug(!debug)}><span className="debug-symbol">⌘</span>{debug ? '收起记录' : '调试记录'}<span>{debug ? '−' : '+'}</span></button><span className="footer-version">v0.3.0 <span>/ LOCAL</span></span></footer>
-    {debug && <aside className="debug-panel" aria-label="调试记录"><div className="panel-top"><strong>场景诊断</strong><button onClick={() => setDebug(false)} aria-label="关闭调试记录">×</button></div><dl><dt>资产状态</dt><dd data-testid="asset-status">{loaded ? 'ready / 实际 GLB 已加载' : asset?.status ?? 'connecting'}</dd><dt>SHA-256</dt><dd className="hash">{asset?.sha256 ?? '尚无运行资源'}</dd><dt>相机位置</dt><dd data-testid="camera-position">{metrics.position.join(', ')}</dd><dt>相机朝向</dt><dd data-testid="camera-rotation">{metrics.rotation.join(', ')}</dd><dt>渲染</dt><dd>{metrics.calls} calls · {metrics.triangles.toLocaleString()} triangles</dd><dt>GPU</dt><dd>{metrics.renderer}</dd><dt>手势</dt><dd data-testid="gesture">{gesture}</dd><dt>首帧模型</dt><dd>{useScene.getState().loadMs ?? "—"} ms / 页面导航起</dd><dt>累计运行</dt><dd>{metrics.elapsed}s</dd><dt>语音 / 控车</dt><dd>四窗已接入 · 外部语音待配置</dd></dl><button className="primary-button" onClick={exportDiagnostics}>保存场景诊断 JSON <Icon name="arrow" /></button><p className="saved-report" role="status">{savedReport}</p><MicrophoneProbe /></aside>}
-    {help && <div className="modal-backdrop" onClick={() => setHelp(false)}><section className="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title" onClick={(e) => e.stopPropagation()}><div className="panel-top"><span>HOW TO EXPLORE</span><button autoFocus onClick={() => setHelp(false)} aria-label="关闭帮助">×</button></div><h2 id="help-title">把视角交给自己。</h2><div className="help-row"><Icon name="orbit" /><div><h3>外观环绕</h3><p>左键旋转，右键平移，滚轮缩放。也可选择工具栏“平移”后用左键拖动。使用前、后、左、右按钮快速定位。</p></div></div><div className="help-row"><Icon name="move" /><div><h3>自由观察</h3><p>点击场景获得焦点。WASD 或方向键移动，Q/E 升降；左键拖动转头，右键拖动平移，滚轮向前或向后。可穿过车身进入座舱。</p></div></div><div className="help-row"><Icon name="reset" /><div><h3>随时返回</h3><p>点击“回到车辆”或在场景中按 R 恢复初始视角。座舱按钮自动切换为自由观察。</p></div></div><p className="help-note">点击 3D 车窗可选中；左侧滑块、开关和下方文字指令共用状态。语音框架本轮接入，外部服务暂不配置。</p><button className="primary-button" onClick={() => setHelp(false)}>开始探索 <Icon name="arrow" /></button></section></div>}
+    <footer className="footer"><div><span className="footer-tag">WINDOW INTERACTION</span><span className="footer-caption">本轮 · 四窗统一控制与语音交互</span></div><button className="debug-toggle" aria-expanded={debug} onClick={() => setDebug(!debug)}><span className="debug-symbol">⌘</span>{debug ? '收起记录' : '调试记录'}<span>{debug ? '−' : '+'}</span></button><span className="footer-version">v0.3.1 <span>/ LOCAL</span></span></footer>
+    {debug && <aside className="debug-panel" aria-label="调试记录"><div className="panel-top"><strong>场景诊断</strong><button onClick={() => setDebug(false)} aria-label="关闭调试记录">×</button></div><dl><dt>资产状态</dt><dd data-testid="asset-status">{loaded ? 'ready / 实际 GLB 已加载' : asset?.status ?? 'connecting'}</dd><dt>SHA-256</dt><dd className="hash">{asset?.sha256 ?? '尚无运行资源'}</dd><dt>相机位置</dt><dd data-testid="camera-position">{metrics.position.join(', ')}</dd><dt>相机朝向</dt><dd data-testid="camera-rotation">{metrics.rotation.join(', ')}</dd><dt>渲染</dt><dd>{metrics.calls} calls · {metrics.triangles.toLocaleString()} triangles</dd><dt>GPU</dt><dd>{metrics.renderer}</dd><dt>手势</dt><dd data-testid="gesture">{gesture}</dd><dt>首帧模型</dt><dd>{useScene.getState().loadMs ?? "—"} ms / 页面导航起</dd><dt>累计运行</dt><dd>{metrics.elapsed}s</dd><dt>语音 / 控车</dt><dd>{providers.asr.configured && providers.tts.configured ? '四窗已接入 · 语音 API 已配置' : '四窗已接入 · 语音待配置'}</dd></dl><button className="primary-button" onClick={exportDiagnostics}>保存场景诊断 JSON <Icon name="arrow" /></button><p className="saved-report" role="status">{savedReport}</p><MicrophoneProbe /></aside>}
+    {help && <div className="modal-backdrop" onClick={() => setHelp(false)}><section className="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title" onClick={(e) => e.stopPropagation()}><div className="panel-top"><span>HOW TO EXPLORE</span><button autoFocus onClick={() => setHelp(false)} aria-label="关闭帮助">×</button></div><h2 id="help-title">把视角交给自己。</h2><div className="help-row"><Icon name="orbit" /><div><h3>外观环绕</h3><p>左键旋转，右键平移，滚轮缩放。也可选择工具栏“平移”后用左键拖动。使用前、后、左、右按钮快速定位。</p></div></div><div className="help-row"><Icon name="move" /><div><h3>自由观察</h3><p>点击场景获得焦点。WASD 或方向键移动，Q/E 升降；左键拖动转头，右键拖动平移，滚轮向前或向后。可穿过车身进入座舱。</p></div></div><div className="help-row"><Icon name="reset" /><div><h3>随时返回</h3><p>点击“回到车辆”或在场景中按 R 恢复初始视角。座舱按钮自动切换为自由观察。</p></div></div><p className="help-note">点击 3D 车窗可选中；左侧滑块、开关和下方文字指令共用状态。点击麦克风开始录音，说完自动结束；可取消、手动结束或重新录音。</p><button className="primary-button" onClick={() => setHelp(false)}>开始探索 <Icon name="arrow" /></button></section></div>}
   </main>;
 }

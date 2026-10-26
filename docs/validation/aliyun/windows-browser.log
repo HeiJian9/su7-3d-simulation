@@ -1,0 +1,23 @@
+
+> su7-interaction-lab@0.3.1 test:e2e
+> playwright test tests/e2e/windows.spec.ts --grep .
+
+
+Running 10 tests using 1 worker
+
+(node:39264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (10.6s)
+  ok  2 [Edge-1920x1080] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (3.2s)
+  ok  3 [Edge-1920x1080] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (2.3s)
+  ok  4 [Edge-1920x1080] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.6s)
+  ok  5 [Edge-1920x1080] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.8s)
+(node:11104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [Edge-1366x768] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (10.4s)
+  ok  7 [Edge-1366x768] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (3.1s)
+  ok  8 [Edge-1366x768] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (2.2s)
+  ok  9 [Edge-1366x768] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.5s)
+  ok 10 [Edge-1366x768] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.5s)
+
+  10 passed (47.5s)

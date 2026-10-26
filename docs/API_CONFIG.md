@@ -1,6 +1,30 @@
 # API 填写位置与协议约定
 
-当前按用户最新要求完成框架，**暂不接入外部服务**。I2 可用，I3 真实 API 验收仍未完成。页面显示“ASR / TTS 待配置”，不会用浏览器语音或 Mock 冒充 Gemini / API TTS。
+2026-10-26 更新：用户选择国内服务并创建、保存阿里云百炼 Key，当前使用北京地域千问 ASR + CosyVoice。真实接口及合成语音浏览器闭环已通过；真人麦克风体验单独记录，不能由合成音源替代。原 Gemini 适配保留可选。
+
+## 当前阿里云配置
+
+根目录 `.env` 已设置以下非密钥项，`ASR_API_KEY` 和 `TTS_API_KEY` 由用户在本机填写（可使用同地域、同业务空间且有相应权限的同一个 Key）。
+
+```dotenv
+ASR_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+ASR_MODEL=qwen3-asr-flash
+ASR_PROTOCOL=dashscope-asr
+ASR_AUTH_HEADER=bearer
+ASR_AUDIO_FORMATS=audio/wav
+TTS_BASE_URL=https://dashscope.aliyuncs.com/api/v1
+TTS_MODEL=cosyvoice-v3-flash
+TTS_VOICE=longanyang
+TTS_PROTOCOL=dashscope-cosyvoice
+```
+
+若有业务空间专属 API Host，可将两项地址的域名替换为对应北京业务空间域名，保留各自路径。当前文档确认旧域名仍可用，且真实请求已经成功。其它地域不能混用北京 Key 与接口。
+
+`dashscope-asr` 使用音频 Data URL，调用 `/chat/completions`，携带 `asr_options`；只上传音频，不发送 Gemini 系统角色指令。`dashscope-cosyvoice` 使用原生 `/services/audio/tts/SpeechSynthesizer`，接收 JSON 中的 OSS 音频地址，再由服务端无凭据下载并返回完整 WAV。处理了实际服务返回 WAV 长度占位值的情况。签名地址和 Key 不返回网页、不写入日志。
+
+诊断：`npm run speech:probe` 会产生少量真实 API 调用，以合成短句验证 TTS→ASR→规则，报告位于 `docs/validation/aliyun/live-api-probe.json`；该命令不是真人麦克风验收。自动回归 `npm run test:e2e` 使用独立 3003 端口，明确跳过读取 `.env`，不会消耗真实 Key。
+
+官方依据：[千问 ASR](https://help.aliyun.com/zh/model-studio/qwen-asr-api-reference)、[CosyVoice HTTP](https://help.aliyun.com/zh/model-studio/cosyvoice-tts-http-api)、[模型与音色匹配](https://help.aliyun.com/zh/model-studio/cosyvoice-voice-list)。
 
 ## 填写位置
 
@@ -10,13 +34,13 @@
 |---|---|
 | ASR_BASE_URL | 平台文档确认的 API 基地址，不含最终操作路径、查询参数或密钥 |
 | ASR_API_KEY | 本机填写 ASR 凭据 |
-| ASR_MODEL | 必须为 `gemini-3.8-flash`；平台若使用别名，需先核实映射并调整适配器，不能随意替换模型 |
-| ASR_PROTOCOL | `gemini-native` 或 `openai-chat-audio`，按真实音频协议选择 |
+| ASR_MODEL | 当前 `qwen3-asr-flash`；Gemini 协议仍限定 `gemini-3.8-flash`，按协议校验模型配对 |
+| ASR_PROTOCOL | 当前 `dashscope-asr`；另保留 `gemini-native` / `openai-chat-audio` |
 | ASR_AUTH_HEADER | 原生默认 `x-goog-api-key`；中转要求时填 `bearer` |
 | ASR_AUDIO_FORMATS | 可留空采用协议默认；或填 `audio/wav` / `audio/webm,audio/wav`，只允许平台明确支持的格式 |
 | TTS_BASE_URL | 支持下述二进制语音接口的平台基地址 |
 | TTS_API_KEY | 本机填写 TTS 凭据，可与 ASR 平台不同 |
-| TTS_PROTOCOL | 现有适配器为 `openai-speech`（协议名称，不代表已选择某家服务商） |
+| TTS_PROTOCOL | 当前 `dashscope-cosyvoice`；另保留 `openai-speech` |
 | TTS_MODEL | 平台真实可调用的 TTS 模型 ID，没有默认值 |
 | TTS_VOICE | 该模型实际支持的普通话音色 ID，没有默认值 |
 | INTENT_* | I7 DeepSeek 预留，本轮不填写、不调用 |
@@ -35,6 +59,6 @@
 
 `GET http://localhost:3000/api/health` 只返回是否配置、缺失字段和 `not-verified`，不返回凭据。“已配置”不代表调用成功。
 
-需要补做：平台协议核对 → 指定模型真实中文音频探针 → 普通话 TTS 探针 → 真人说“左前车窗打开一半” → 真实几何达到 50% → 文字和实际 API 音频反馈 → 澄清、打断、取消及失败恢复。保存去敏耗时/结果后才可勾选 I3 / A10。当前自动测试中的音源、ASR 与 TTS 全部明确为测试 Mock，不计真实 API 验收。
+真实平台协议、中文音频探针和 API 合成音源浏览器动作已验证，见 `docs/validation/aliyun/`。仍需真人说“左前车窗打开一半”、确认文字／动作／实际播报，以及真实设备澄清、打断、取消复验。保存实际证据后才可完成 I3 / A10。自动 Mock 回归仍单独标记，不计真实 API 通过。
 
 Gemini 原生音频协议参考：[Google 音频理解文档](https://ai.google.dev/gemini-api/docs/audio)。中转站实际支持情况需由其文档和真实探针另行确认。

@@ -1,0 +1,15 @@
+
+> su7-interaction-lab@0.3.1 test:e2e
+> playwright test --grep cancelling actual
+
+
+Running 2 tests using 1 worker
+
+(node:34664) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (2.2s)
+(node:28168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (2.0s)
+
+  2 passed (7.0s)

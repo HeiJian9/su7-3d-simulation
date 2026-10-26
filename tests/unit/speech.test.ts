@@ -101,4 +101,9 @@ describe('voice orchestration race protection (explicit test Mock)',()=>{
     expect(player.stop).toHaveBeenCalled();expect(recorder.cancel).toHaveBeenCalled();expect(useSpeech.getState().phase).toBe('recording');
     coordinator.cancel();expect(useSpeech.getState().phase).toBe('idle');
   });
+  it('rejects a transcript from a different configured model before changing the vehicle',async()=>{
+    coordinator=new SpeechCoordinator(recorder,player,async(_url,init)=>Response.json({requestId:(init?.body as FormData).get('requestId'),text:'左前窗开一半',provider:'test-mock',model:'qwen3-asr-flash',durationMs:1,mock:true}));
+    await coordinator.start();const input=await audio();callbacks.done({blob:new Blob([input.bytes],{type:'audio/wav'}),mimeType:'audio/wav',durationMs:1000,peakRms:.1,reason:'silence-end'});
+    await vi.waitFor(()=>expect(useSpeech.getState().errorCode).toBe('MODEL_MISMATCH'));expect(useVehicle.getState().state.windows.fl.openness).toBe(0);
+  });
 });

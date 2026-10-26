@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-26T12:30:01.638Z",
+  "mode": "real-api-synthesized-speech",
+  "humanMicrophone": false,
+  "asrModel": "qwen3-asr-flash",
+  "ttsModel": "cosyvoice-v3-flash",
+  "voice": "longanyang",
+  "tts": {
+    "passed": true,
+    "elapsedMs": 1325,
+    "mime": "audio/wav",
+    "bytes": 96044,
+    "durationMs": 2000
+  },
+  "asr": {
+    "passed": true,
+    "text": "左前车窗打开一半。",
+    "elapsedMs": 523,
+    "provider": "dashscope-asr",
+    "model": "qwen3-asr-flash"
+  },
+  "rules": {
+    "passed": true,
+    "kind": "execute"
+  }
+}

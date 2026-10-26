@@ -69,7 +69,7 @@ test('fixed-view actual openings at zero half and full',async({page},info)=>{
     await page.mouse.move(700,380);await page.mouse.wheel(0,-250);
     for(const [label,value] of [['所有车窗关闭',0],['所有车窗开一半',.5],['所有车窗打开',1]] as const){
       await command(page,label);for(const c of corners)await expect.poll(()=>pose(page,c)).toBe(value);
-      await page.screenshot({path:`docs/assets/i2-i3/windows-${side}-${value*100}-${info.project.name}.png`});
+      await page.screenshot({path:`docs/assets/aliyun/windows-${side}-${value*100}-${info.project.name}.png`});
     }
   }
 });

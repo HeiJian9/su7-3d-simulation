@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-26T12:34:35.783Z",
+  "mode": "real-api-with-synthesized-microphone",
+  "humanMicrophone": false,
+  "inputSampleRate": 24000,
+  "passed": true,
+  "transcript": "转写：左前车窗打开一半。",
+  "asrModel": "qwen3-asr-flash",
+  "ttsModel": "cosyvoice-v3-flash",
+  "poses": {
+    "fl": 0.5,
+    "fr": 0,
+    "rl": 0,
+    "rr": 0
+  },
+  "requests": [
+    {
+      "endpoint": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/synthesize",
+      "status": 200
+    }
+  ]
+}

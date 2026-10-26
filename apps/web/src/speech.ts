@@ -80,6 +80,7 @@ export class SpeechCoordinator {
       const transcript = transcriptSchema.parse(await response.json());
       if (!this.valid(generation)) return;
       if (transcript.requestId !== requestId) throw new SpeechFailure('REQUEST_ID_MISMATCH', '转写响应编号不匹配，已丢弃。');
+      if (transcript.model !== useSpeech.getState().health.asr.model) throw new SpeechFailure('MODEL_MISMATCH', '转写响应模型与当前配置不一致，已丢弃。');
       useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '转写完成，正在解析四窗规则…' });
       this.trace('rules', `${transcript.model}; ${transcript.durationMs} ms`);
       const result = useVehicle.getState().text(transcript.text, 'voice', { ...this.base, requestId });
