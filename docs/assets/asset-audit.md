@@ -1,0 +1,61 @@
+# 指定 SU7 资产审查 · I0–I1
+
+日期：2026-10-26（Asia/Shanghai）。审查对象为本机原包和实际运行 GLB，未以占位车型或 Sketchfab 查看器资源代替。
+
+## 获取与溯源
+
+指定作品为 [Xiaomi SU7 · Mona x Supercars](https://sketchfab.com/3d-models/xiaomi-su7-ca2cda599f5341068c992c9f44551bf9)，模型 ID `ca2cda599f5341068c992c9f44551bf9`。公开页许可为 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。点击正规 Download 3D Model 后出现登录窗口，已保存 [交接截图](sketchfab-login-required.png)。用户随后在本机下载并将原包放入指定目录，明确回复“已经下载好了”。未提取查看器私有资源。
+
+| 文件 | 实际结果 |
+|---|---|
+| 原包 | `assets/source/original/xiaomi-su7.zip`，17,491,975 bytes，已设只读 |
+| 原包 SHA-256 | `08311174e475cf3a227a042af2dd30028717b53226bba11f0bc56f14de91e5b4` |
+| 包内来源 | `source/su7.zip` → `2024 Xiaomi SU7.obj`、同名 MTL、15 张纹理；外层另有纹理副本 |
+| 原始结构 | 84 个 OBJ group，24 个材质，92,410 个三角面；无骨架或动画 |
+| 工作工程 | `assets/source/blender/su7-enhanced.blend`，Blender 4.5.15 LTS |
+| 运行资源 | `apps/web/public/models/su7-runtime.glb`，6,245,740 bytes（约 5.96 MiB） |
+| 运行 SHA-256 | `287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b` |
+| GLB 结构 | 85 节点（含 SU7_ROOT）、84 网格、24 材质、15 张内嵌纹理、0 动画 |
+| 几何与比例 | 保留 92,410 三角面；长度统一为 4.997 m，等比系数 0.2533153492230705 |
+| 坐标 | GLB：Y 向上，车头 −Z；驾驶员视角左侧为 −X；地面为 Y=0 附近 |
+
+原始 OBJ 写有 116,273 个顶点条目；Blender 导入后各组顶点数之和为 113,154，不能与平台按不同去重口径显示的 54,960 顶点直接等同。几何身份核对以原包交接、完整来源哈希、结构和外形共同为证。
+
+完整数据见 [model-structure.json](model-structure.json)、[runtime-check.json](runtime-check.json)、[nodes.csv](nodes.csv)、[materials.csv](materials.csv)；来源记录在 `assets/source/source-record.json`。
+
+## 结构与缺口
+
+下表的 Mesh/ Paint 对应关系是审查结果或明确标出的候选映射，不是已通过运动验收的部件注册表。
+
+| 项目 | 实际观察 | 后续任务 |
+|---|---|---|
+| 左前窗 | 独立候选 Mesh46 / Mesh26Mtl，−X、前部 | I2 校准升降方向、行程、门板遮挡及是否有重复玻璃 |
+| 右前窗 | Mesh33 / Mesh26Mtl，+X、前部 | 同上 |
+| 左后窗 | Mesh39 / Mesh26Mtl，−X、后部 | 同上，注意固定三角窗与活动窗边界 |
+| 右后窗 | Mesh26 / Mesh26Mtl，+X、后部 | 同上 |
+| 四门 | Paint4 / Paint2 / Paint3 / Paint1 分别为左前／右前／左后／右后外壳候选；关联玻璃、门内饰、把手及镜体分散在多个组 | I2/I4 建立完整门集合；尤其复核跨多门范围的 Paint6、Mesh24、Mesh25 是否留下原几何遮挡 |
+| 后备箱 | 没有语义尾箱节点或铰链；Paint5 等大组覆盖后部车身与其他表面 | I4 精确切分盖体、检查并补内腔，不能直接旋转整个后部网格 |
+| 雨刷 | 未识别出可直接驱动的独立双雨刷及轴心；仅凭通用 Mesh 名不能断言完全无相关几何 | I6 近距离定位；按实际结果分离或补建，不在 I1 加动作 |
+| 内饰 | 实际可见方向盘、仪表、中控屏、座椅、门内板和中控区域；部分结构／贴图较简化 | 保留已有内饰；后续开门后检查背面、开口与近距离材质，无需先重建整舱 |
+| 氛围灯 | 有红色装饰条／贴图线条可见，尚无独立可控发光灯带 | I5 建立真正的灯带材质与局部照明，贴图不等同于氛围灯功能 |
+| 车灯 | 前后灯可见，灯罩和灯芯以普通 Mesh 及共享材质组织，无已验证灯组映射 | I5 明确左右／远近／转向材质与发光区域，不能整体改共享材质 |
+| 车漆 | Paint1Mtl 被 Paint1–Paint7 使用，非车漆另有材质 | I5 复核白名单后换色；I1 保留原始浅色外观 |
+| 玻璃 | Mesh26Mtl 共用于侧窗、风挡／后玻璃、天幕；Mesh32Mtl、Mesh71Mtl 也带原始透明度 | 运行多角度复核已完成；后续移动玻璃时仍需检查透明排序与遮挡 |
+| 可动结构 | 所有 84 网格当前都在 SU7_ROOT 下，无门窗父子层级、机构枢轴或动画 | I2 起建立语义映射；不以当前独立网格存在就声称部件已可动 |
+
+## 本轮加工与真实修复
+
+1. 官方 Blender 4.5 LTS 便携版安装在项目 `.tools/`；下载包 SHA-256 与官方校验文件一致。
+2. 通过 `scripts/prepare_su7.py` 导入 OBJ/MTL，保留原始组名、UV、法线、贴图和三角面。等比缩放、居中并统一为运行坐标。
+3. 为车漆／玻璃适配可导出的 PBR 参数，保留原始漫反射颜色与玻璃标量透明度。
+4. 首次网页检查发现轮胎缺片。MTL 对不透明 PNG 重复写了 `map_d=<diffuse>`，Blender 把漫反射亮度接入 Alpha，导致深色区域透明。核对所有 diffuse PNG 的 Alpha 均为 255 后，移除错误连接；最终网页轮胎完整。没有用额外车轮或代理车型遮盖问题。
+5. 所有 15 张源纹理打包进 `.blend`，运行 GLB 内嵌纹理（最大 1024×1024），不依赖开发机纹理绝对路径。GLB 使用标准 PBR、clearcoat 和 specular 扩展，没有外部缓冲或图片 URI。
+6. 将 `.blend` 复制到独立目录，禁用所有外部纹理路径后强制解码像素；84 网格、92,410 三角面及 15 张打包纹理均通过。见 [blend-portability-check.json](blend-portability-check.json)。
+
+本轮没有实现门窗、尾箱、雨刷动画，没有补建内饰、换色或灯光控制。`su7-enhanced.blend` 是可继续编辑的导入工作工程，名称不代表后续机构增强已经完成。
+
+## 浏览器证据
+
+- [1080p 外观](su7-exterior-Edge-1920x1080.png)、[1080p 座舱](su7-cabin-Edge-1920x1080.png)。
+- [1366×768 外观](su7-exterior-Edge-1366x768.png)、[1366×768 座舱](su7-cabin-Edge-1366x768.png)。
+- 实际相机与性能、回归结论见 [本轮验收报告](../I0_I1_VALIDATION.md)。

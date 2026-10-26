@@ -1,0 +1,7336 @@
+{
+  "exportedAt": "2026-10-26T09:52:59.944Z",
+  "increment": "I0–I1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+  "asset": {
+    "modelId": "ca2cda599f5341068c992c9f44551bf9",
+    "status": "ready",
+    "title": "Xiaomi SU7",
+    "author": "Mona x Supercars",
+    "sourceUrl": "https://sketchfab.com/3d-models/xiaomi-su7-ca2cda599f5341068c992c9f44551bf9",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "runtimeUrl": "/models/su7-runtime.glb",
+    "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
+    "bytes": 6245740,
+    "rotationY": 0,
+    "scale": 1,
+    "message": "指定原包导入的 SU7；I0–I1 仅观察，无部件动画。"
+  },
+  "loadMs": 568140,
+  "mode": "orbit",
+  "gesture": "尚无手势",
+  "microphone": {
+    "status": "signal-detected",
+    "peakRms": 0.30296944464319336,
+    "samples": 75,
+    "durationMs": 3002,
+    "message": "已收到真实输入信号，麦克风已释放。此检查不验证语音转写。"
+  },
+  "samples": [
+    {
+      "fps": 153,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 1,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 2,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 3,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 4,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 5,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 6,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 7,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 8,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 9,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 10,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 11,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 12,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 13,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 14,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 15,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 16,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 17,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 18,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 19,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 235,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 20,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 21,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 22,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 23,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 24,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 25,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 26,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 27,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 28,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 102,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 30,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 186,
+      "triangles": 185108,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 31,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 32,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 33,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 34,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 35,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 36,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 37,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 38,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 39,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 40,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 41,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 42,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 43,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 44,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 45,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 46,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 47,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 48,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 49,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 50,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 51,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 52,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 53,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 54,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 55,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 56,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 57,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 58,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 59,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 60,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 61,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 190,
+      "triangles": 185306,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 63,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 186,
+      "triangles": 185108,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 64,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 65,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 66,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 67,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 68,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 69,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 70,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 71,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 72,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 73,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 74,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 75,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 76,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 77,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 78,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 79,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 80,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 81,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 82,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 83,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 84,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 85,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 86,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 87,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 88,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 89,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 90,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 91,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 92,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 93,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 94,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 11,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 95,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 186,
+      "triangles": 185108,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 96,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 97,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 98,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 99,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 100,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 101,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 102,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 103,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 104,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 105,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 106,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 107,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 108,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 109,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 110,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 111,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 112,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 190,
+      "triangles": 185306,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 114,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 186,
+      "triangles": 185108,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 115,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 116,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 117,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 118,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 119,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 120,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 121,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 122,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 123,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 124,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 125,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 126,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 127,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 128,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 129,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 130,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 131,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 132,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 133,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 134,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 135,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 136,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 137,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 138,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 139,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 140,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 141,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 142,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 143,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 144,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 145,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 146,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 190,
+      "triangles": 185306,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 148,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 186,
+      "triangles": 185108,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 149,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 150,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 151,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 152,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 153,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 154,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 155,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 156,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 157,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 158,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 159,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 205,
+      "triangles": 185336,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 160,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 174,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 161,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 162,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 163,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 165,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 166,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        6.687,
+        3.103,
+        -7.553
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 167,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 168,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 169,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 170,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 171,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 172,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 173,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 174,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 175,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 176,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 177,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 178,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 179,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 180,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 181,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 182,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 183,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 184,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 185,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 186,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 187,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 188,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 189,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 190,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 191,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 192,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 193,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 194,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 195,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 196,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 197,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 198,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 234,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 199,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 200,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 201,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 202,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 203,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 204,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 205,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 206,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 207,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 208,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 209,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 210,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 211,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 212,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 213,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 214,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 215,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 216,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 217,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 218,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 219,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 220,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 221,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 222,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 223,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 224,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 225,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 226,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 227,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 228,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 229,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 230,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 231,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 232,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 233,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 234,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 235,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 236,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 237,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 238,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 239,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 240,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 241,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 242,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 243,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 244,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 245,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 246,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 247,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 232,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 248,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 249,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 250,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 228,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 251,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 252,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 253,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 254,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 255,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 256,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 257,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 258,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 259,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 260,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 261,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 262,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 263,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 264,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 265,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 266,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 267,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 268,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 269,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 270,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 271,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 272,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 273,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 274,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 275,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 276,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 277,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 278,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 279,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 280,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 281,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 282,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 283,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 284,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 285,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 286,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 287,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 288,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 289,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 290,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 291,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 292,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 293,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 232,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 294,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 295,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 296,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 297,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 298,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 235,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 299,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 300,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 301,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 302,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 303,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 304,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 305,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 306,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 307,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 308,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        4.683,
+        2.398,
+        -5.29
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 309,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 185,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 1,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 2,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 3,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 4,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 5,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 6,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 7,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 8,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 9,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 10,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 11,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 12,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 13,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 14,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 15,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 16,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 232,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 17,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 18,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 19,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 20,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 21,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 22,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 23,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 239,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 24,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 25,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 26,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 27,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 171,
+      "triangles": 185078,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 28,
+      "focused": true,
+      "viewport": [
+        2133,
+        1200
+      ]
+    }
+  ]
+}

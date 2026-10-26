@@ -1,0 +1,27 @@
+﻿material,alpha,baseColor,textures
+Dots Stroke,,,
+Material,1.0,"[0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]",
+Mesh13Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh13_diff.png;Mesh13_diff.png
+Mesh16Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh16_diff.png;Mesh16_diff.png
+Mesh17Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh17_diff.png;Mesh17_diff.png
+Mesh19Mtl,1.0,"[0.37361499667167664, 0.3685910105705261, 0.383774995803833, 1.0]",
+Mesh1Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh1_diff.png;Mesh1_diff.png
+Mesh22Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh22_diff.png;Mesh22_diff.png
+Mesh23Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh23_diff.png;Mesh23_diff.png
+Mesh24Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh16_diff.png;Mesh16_diff.png
+Mesh25Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh25_diff.png;Mesh25_diff.png
+Mesh26Mtl,0.5019609928131104,"[0.002585829934105277, 0.002585829934105277, 0.002585829934105277, 1.0]",
+Mesh2Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh2_diff.png;Mesh2_diff.png
+Mesh30Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh30_diff.png;Mesh30_diff.png
+Mesh32Mtl,0.20000000298023224,"[0.002585829934105277, 0.002585829934105277, 0.002585829934105277, 1.0]",
+Mesh35Mtl,1.0,"[0.37361499667167664, 0.3685910105705261, 0.383774995803833, 1.0]",
+Mesh3Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh3_diff.png;Mesh3_diff.png
+Mesh4Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh4_diff.png;Mesh4_diff.png
+Mesh60Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh60_diff.png;Mesh60_diff.png
+Mesh61Mtl,1.0,"[0.9406009912490845, 0.9406009912490845, 0.9406009912490845, 1.0]",Mesh61_diff.png;Mesh61_spec.png;Mesh61_diff.png;Mesh61_nmap.png
+Mesh62Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",
+Mesh65Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh25_diff.png;Mesh25_diff.png
+Mesh68Mtl,1.0,"[1.0, 1.0, 1.0, 1.0]",Mesh17_diff.png;Mesh17_diff.png
+Mesh71Mtl,0.3019610047340393,"[0.002585829934105277, 0.002585829934105277, 0.002585829934105277, 1.0]",
+Mesh72Mtl,1.0,"[0.002585829934105277, 0.002585829934105277, 0.002585829934105277, 1.0]",
+Paint1Mtl,1.0,"[0.851252019405365, 0.8277260065078735, 0.8277260065078735, 1.0]",

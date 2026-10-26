@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.glb binary
+*.blend binary
+*.zip binary
+# Preserve imported author assets byte-for-byte; do not expand OBJ geometry in diffs.
+*.obj binary
+*.mtl -text -diff
+assets/source/extracted/** -text
+apps/web/public/decoders/** -text -diff
+licenses/** -text -diff

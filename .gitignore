@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+!docs/validation/*.log
+test-results/
+playwright-report/
+.tools/
+*.blend1
+assets/source/original/*
+!assets/source/original/README.md
+

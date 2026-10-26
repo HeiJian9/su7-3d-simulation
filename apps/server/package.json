@@ -1,0 +1,14 @@
+{
+  "name": "@su7/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts --dev",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "zod": "4.6.7"
+  }
+}

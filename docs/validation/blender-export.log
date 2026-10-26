@@ -1,0 +1,196 @@
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh30_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh22_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh13_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh2_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh61_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh25_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh16_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh60_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh17_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh4_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh16_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh23_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh17_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh25_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh3_diff.png'
+WARN (io.obj): C:\Users\blender\git\blender-v450\blender.git\source\blender\io\wavefront_obj\importer\obj_import_file_reader.cc:800 parse_texture_map: MTL texture map type not supported: 'map_Ka Mesh1_diff.png'
+Info: Packed 15 file(s)
+Info: Saved as "su7-enhanced.blend"
+INFO Draco mesh compression is available, use library at D:\code\Projects\3D simulation\.tools\blender-4.5.15-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+17:36:50 | INFO: Starting glTF 2.0 export
+17:36:50 | INFO: Extracting primitive: Mesh1
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh10
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh11
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh12
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh13
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh14
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh15
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh16
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh17
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh18
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh19
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh2
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh20
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh21
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh22
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh23
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh24
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh25
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh26
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh27
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh28
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh29
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh3
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh30
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh31
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh32
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh33
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh34
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh35
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh36
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh37
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh38
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh39
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh4
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh40
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh41
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh42
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh43
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh44
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh45
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh46
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh47
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh48
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh49
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh5
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh50
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh51
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh52
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh53
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh54
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh55
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh56
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh57
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh58
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh59
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh6
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh60
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh61
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh62
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh63
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh64
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh65
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh66
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh67
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh68
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh69
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh7
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh70
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh71
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh72
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh73
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh74
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh75
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh76
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh77
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh8
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Mesh9
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint1
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint2
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint3
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint4
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint5
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint6
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Extracting primitive: Paint7
+17:36:50 | INFO: Primitives created: 1
+17:36:50 | INFO: Finished glTF 2.0 export in 0.24385857582092285 s
+
+SU7_EXPORT_COMPLETE {"meshCount": 84, "triangles": 92410, "sourceUnitToMeters": 0.2533153492230705, "blender": "4.5.15 LTS"}
+Blender 4.5.15 LTS (hash 5afeabba6097 built 2026-10-22 01:35:27)
+OBJ import of '2024 Xiaomi SU7.obj' took 211.95 ms
+
+Blender quit
+

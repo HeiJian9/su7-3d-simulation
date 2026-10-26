@@ -1,0 +1,15 @@
+{
+  "modelId": "ca2cda599f5341068c992c9f44551bf9",
+  "status": "ready",
+  "title": "Xiaomi SU7",
+  "author": "Mona x Supercars",
+  "sourceUrl": "https://sketchfab.com/3d-models/xiaomi-su7-ca2cda599f5341068c992c9f44551bf9",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "runtimeUrl": "/models/su7-runtime.glb",
+  "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
+  "bytes": 6245740,
+  "rotationY": 0,
+  "scale": 1,
+  "message": "指定原包导入的 SU7；I0–I1 仅观察，无部件动画。"
+}

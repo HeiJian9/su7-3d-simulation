@@ -1,0 +1,43 @@
+{
+  "name": "su7-interaction-lab",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.14.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w @su7/server\" \"npm run dev -w @su7/web\"",
+    "typecheck": "tsc --noEmit -p apps/web && tsc --noEmit -p apps/server && tsc --noEmit -p packages/shared",
+    "lint": "eslint apps packages tests",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build": "npm run typecheck && npm run build -w @su7/web && npm run build -w @su7/server",
+    "start": "node apps/server/dist/apps/server/src/index.js",
+    "asset:import": "node scripts/import-model.mjs",
+    "asset:check": "node scripts/check-assets.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@playwright/test": "1.64.1",
+    "@types/express": "5.0.6",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "5.0.4",
+    "concurrently": "10.0.6",
+    "eslint": "10.13.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0",
+    "vite": "7.3.7",
+    "vitest": "4.1.12"
+  }
+}

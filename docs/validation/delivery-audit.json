@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-26T10:11:17.900Z",
+  "status": "pass",
+  "requiredArtifacts": 18,
+  "runtimeSha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
+  "originalSha256": "08311174e475cf3a227a042af2dd30028717b53226bba11f0bc56f14de91e5b4",
+  "fullBrowserPassed": 9,
+  "skipped": 1,
+  "visualRechecks": 4,
+  "freeTraversalRechecks": 2,
+  "unitPassed": 4,
+  "liveUrl": "http://localhost:3000",
+  "scope": "I0–I1 only; no I2+ acceptance checked"
+}

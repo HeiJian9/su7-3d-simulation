@@ -1,0 +1,25 @@
+{
+  "modelId": "ca2cda599f5341068c992c9f44551bf9",
+  "sourceUrl": "https://sketchfab.com/3d-models/xiaomi-su7-ca2cda599f5341068c992c9f44551bf9",
+  "author": "Mona x Supercars",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "acquisition": "User downloaded from the official Sketchfab download entry and placed the ZIP in original/ after the login handoff.",
+  "original": "assets\\source\\original\\xiaomi-su7.zip",
+  "originalBytes": 17491975,
+  "originalSha256": "08311174e475cf3a227a042af2dd30028717b53226bba11f0bc56f14de91e5b4",
+  "importedAt": "2026-10-26T09:36:50.686Z",
+  "blender": {
+    "version": "4.5.15",
+    "url": "https://download.blender.org/release/Blender4.5/blender-4.5.15-windows-x64.zip",
+    "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
+    "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
+  },
+  "runtimeSha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
+  "modifications": [
+    "OBJ/MTL import with all 84 groups",
+    "Uniform meter scale, Y-up / front -Z",
+    "PBR material adaptation; original diffuse color retained",
+    "Packed textures and self-contained GLB; no component animation"
+  ]
+}

@@ -1,0 +1,308 @@
+newmtl Mesh30Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh30_diff.png
+map_Kd Mesh30_diff.png
+map_d Mesh30_diff.png
+
+newmtl Mesh22Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh22_diff.png
+map_Kd Mesh22_diff.png
+map_d Mesh22_diff.png
+
+newmtl Paint1Mtl
+Material Color
+Ka 0.851252 0.827726 0.827726
+Kd 0.851252 0.827726 0.827726
+Ks 0.337162 0.327844 0.327844 
+
+d 1
+
+Ns 0
+
+newmtl Mesh13Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh13_diff.png
+map_Kd Mesh13_diff.png
+map_d Mesh13_diff.png
+
+newmtl Mesh62Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0901961 0.0901961 0.0901961 
+
+d 1
+
+Ns 0
+
+newmtl Mesh72Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 1
+
+Ns 0
+
+newmtl Mesh2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh2_diff.png
+map_Kd Mesh2_diff.png
+map_d Mesh2_diff.png
+
+newmtl Mesh26Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 0.501961
+
+Ns 0
+
+newmtl Mesh61Mtl
+Material Color
+Ka 0.940601 0.940601 0.940601
+Kd 0.940601 0.940601 0.940601
+Ks 0.627067 0.627067 0.627067 
+
+d 1
+
+Ns 255
+
+map_Ka Mesh61_diff.png
+map_Kd Mesh61_diff.png
+map_d Mesh61_diff.png
+
+map_Bump Mesh61_nmap.png
+
+map_Ns Mesh61_spec.png
+
+newmtl Mesh65Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh25_diff.png
+map_Kd Mesh25_diff.png
+map_d Mesh25_diff.png
+
+newmtl Mesh24Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh16_diff.png
+map_Kd Mesh16_diff.png
+map_d Mesh16_diff.png
+
+newmtl Mesh60Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh60_diff.png
+map_Kd Mesh60_diff.png
+map_d Mesh60_diff.png
+
+newmtl Mesh32Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 0.2
+
+Ns 0
+
+newmtl Mesh19Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+newmtl Mesh17Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh17_diff.png
+map_Kd Mesh17_diff.png
+map_d Mesh17_diff.png
+
+newmtl Mesh35Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.147981 0.145991 0.152005 
+
+d 1
+
+Ns 0
+
+newmtl Mesh4Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh4_diff.png
+map_Kd Mesh4_diff.png
+map_d Mesh4_diff.png
+
+newmtl Mesh16Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh16_diff.png
+map_Kd Mesh16_diff.png
+map_d Mesh16_diff.png
+
+newmtl Mesh71Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 0.301961
+
+Ns 0
+
+newmtl Mesh23Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh23_diff.png
+map_Kd Mesh23_diff.png
+map_d Mesh23_diff.png
+
+newmtl Mesh68Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.666667 0.666667 0.666667 
+
+d 1
+
+Ns 255
+
+map_Ka Mesh17_diff.png
+map_Kd Mesh17_diff.png
+map_d Mesh17_diff.png
+
+newmtl Mesh25Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh25_diff.png
+map_Kd Mesh25_diff.png
+map_d Mesh25_diff.png
+
+newmtl Mesh3Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh3_diff.png
+map_Kd Mesh3_diff.png
+map_d Mesh3_diff.png
+
+newmtl Mesh1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0392157 0.0392157 0.0392157 
+
+d 1
+
+Ns 0
+
+map_Ka Mesh1_diff.png
+map_Kd Mesh1_diff.png
+map_d Mesh1_diff.png
+

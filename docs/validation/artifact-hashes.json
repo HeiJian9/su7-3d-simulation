@@ -1,0 +1,38 @@
+{
+  "createdAt": "2026-10-26T10:03:44.874Z",
+  "version": "0.1.0",
+  "increment": "I0–I1",
+  "node": "v24.14.0",
+  "files": [
+    {
+      "path": "assets/source/original/xiaomi-su7.zip",
+      "bytes": 17491975,
+      "sha256": "08311174e475cf3a227a042af2dd30028717b53226bba11f0bc56f14de91e5b4"
+    },
+    {
+      "path": "assets/source/blender/su7-enhanced.blend",
+      "bytes": 12892590,
+      "sha256": "8a682971a1f8f8eb32f010042a430fa302c08022dcbfb75ae446701115bbd67b"
+    },
+    {
+      "path": "assets/derived/su7-runtime.glb",
+      "bytes": 6245740,
+      "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b"
+    },
+    {
+      "path": "apps/web/public/models/su7-runtime.glb",
+      "bytes": 6245740,
+      "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b"
+    },
+    {
+      "path": "apps/web/dist/models/su7-runtime.glb",
+      "bytes": 6245740,
+      "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 188749,
+      "sha256": "15bf3b14527cf5a99debe328832cebe352effb095fb07ac215409cc816634ea7"
+    }
+  ]
+}
