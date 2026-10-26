@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { transcriptSchema, type SpeechHealth } from '../../../packages/shared/src/speech';
 import { VoiceRecorder, type RecordedAudio } from './audio/recorder';
-import { ApiAudioPlayer } from './audio/player';
+import { ApiAudioPlayer, type PlaybackStop } from './audio/player';
 import { useVehicle, waitForWindowExecution } from './vehicle';
 
 export type SpeechPhase = 'idle' | 'requesting' | 'recording' | 'transcribing' | 'resolving' | 'executing' | 'clarifying' | 'synthesizing' | 'speaking' | 'error';
@@ -32,7 +32,7 @@ async function responseError(response: Response): Promise<never> {
   throw new SpeechFailure(error.code ?? 'SERVICE_ERROR', error.message ?? `语音服务暂不可用（HTTP ${response.status}）。`);
 }
 export interface RecorderPort { start(formats: string[], callbacks: Parameters<VoiceRecorder['start']>[1]): Promise<void>; stop(): Promise<void>; cancel(): void }
-export interface PlayerPort { play(blob: Blob): Promise<'ended' | 'stopped'>; stop(): void }
+export interface PlayerPort { play(blob: Blob): Promise<'ended' | 'stopped'>; stop(): PlaybackStop | void }
 export class SpeechCoordinator {
   private generation = 0;
   private request?: AbortController;
@@ -44,24 +44,32 @@ export class SpeechCoordinator {
     this.unsubscribe = useVehicle.subscribe((state, previous) => { if (state.epoch !== previous.epoch && useSpeech.getState().phase !== 'idle') this.cancel('已优先处理新的手动或文字操作。'); });
   }
   destroy() { this.cancel(); this.unsubscribe(); }
-  private trace(stage: string, detail: string) {
-    useSpeech.setState((s) => ({ traces: [...s.traces.slice(-79), { requestId: this.currentId, time: new Date().toISOString(), stage, detail, mock: s.health.mode === 'test-mock' }] }));
+  private trace(stage: string, detail: string, requestId = this.currentId) {
+    useSpeech.setState((s) => ({ traces: [...s.traces.slice(-79), { requestId, time: new Date().toISOString(), stage, detail: detail.slice(0,500), mock: s.health.mode === 'test-mock' }] }));
   }
   private valid(generation: number) { return generation === this.generation; }
   cancel(message = '此次语音已取消；已接受的车窗动作不回滚。') {
-    this.generation++; this.request?.abort(); this.request = undefined; this.recorder.cancel(); this.player.stop();
+    const phase=useSpeech.getState().phase;
+    this.generation++; this.request?.abort(); this.request = undefined; this.recorder.cancel(); const playback=this.player.stop();
+    if(playback?.wasPlaying)this.trace('tts-stopped',`paused; position ${playback.positionMs} ms`);
+    if(!['idle','error'].includes(phase))this.trace('cancelled',`${phase}; ${message}`);
     useSpeech.setState({ phase: 'idle', message, rms: 0, errorCode: '', hasSpeech: false });
+    return playback;
   }
   async start() {
-    this.cancel('准备录音。');
+    const playback=this.cancel('准备录音。');
     const generation = this.generation;
     this.currentId = crypto.randomUUID(); this.base = { revision: useVehicle.getState().state.revision, epoch: useVehicle.getState().epoch };
-    useSpeech.setState({ phase: 'requesting', message: '等待麦克风权限…', transcript: '', durationMs: 0, errorCode: '' });
-    this.trace('recording-request', '用户点击开始；已停止旧播报');
+    const requestId=this.currentId;
+    useSpeech.setState({ phase: 'requesting', message: playback?.wasPlaying ? '已停止播报，正在准备麦克风…' : '等待麦克风权限…', transcript: '', durationMs: 0, errorCode: '' });
+    this.trace('recording-request', '用户点击开始');
+    if(playback?.wasPlaying){await new Promise(resolve=>setTimeout(resolve,180));if(!this.valid(generation))return;}
+    this.trace('capture-starting','旧音频已停止；请求音频输入');
     await this.recorder.start(useSpeech.getState().health.asr.audioFormats, {
       meter: (rms, durationMs, hasSpeech) => { if (this.valid(generation)) useSpeech.setState({ phase: 'recording', message: hasSpeech ? '正在聆听，停顿后自动结束。' : '请说一句车窗指令。', rms, durationMs, hasSpeech }); },
       done: (audio) => { if (this.valid(generation)) void this.transcribe(audio, generation); },
       error: (error) => { if (this.valid(generation)) this.fail(error.code, error.message); },
+      released: (tracks,allEnded) => this.trace('microphone-released',`${tracks} tracks; all ended: ${allEnded}`,requestId),
     });
   }
   async stopRecording() { await this.recorder.stop(); }
@@ -82,6 +90,7 @@ export class SpeechCoordinator {
       if (transcript.requestId !== requestId) throw new SpeechFailure('REQUEST_ID_MISMATCH', '转写响应编号不匹配，已丢弃。');
       if (transcript.model !== useSpeech.getState().health.asr.model) throw new SpeechFailure('MODEL_MISMATCH', '转写响应模型与当前配置不一致，已丢弃。');
       useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '转写完成，正在解析四窗规则…' });
+      this.trace('transcript',transcript.text);
       this.trace('rules', `${transcript.model}; ${transcript.durationMs} ms`);
       const result = useVehicle.getState().text(transcript.text, 'voice', { ...this.base, requestId });
       if (result.kind === 'stale') { this.fail('STALE_RESPONSE', result.message); return; }
@@ -105,14 +114,21 @@ export class SpeechCoordinator {
       const execution = await waitForWindowExecution(result.execution);
       if (!this.valid(generation)) return;
       if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
-      message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}`);
+      message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.values)}`);
     }
     if (!this.valid(generation)) return;
     useSpeech.setState({ phase: result.kind === 'clarify' ? 'clarifying' : 'idle', message, lastFeedback: message });
+    if(result.kind==='clarify')this.trace('clarifying',message);
+    else if(!result.execution)this.trace('no-action',message);
     if (useSpeech.getState().enabled && useSpeech.getState().health.tts.configured) await this.speak(message, generation, result.kind === 'clarify');
   }
   async replay() { this.cancel('准备重播。'); const message = useSpeech.getState().lastFeedback || useVehicle.getState().feedback; this.currentId = crypto.randomUUID(); await this.speak(message, this.generation, !!useVehicle.getState().context.pending); }
   stopSpeaking() { this.cancel('播报已停止，车窗状态保持。'); }
+  cancelClarification() {
+    this.cancel('已取消待确认指令，车窗目标保持不变。');
+    useVehicle.getState().beginManual();useVehicle.getState().say('已取消待确认指令，车窗目标保持不变。');
+    this.trace('clarification-cancelled','用户取消追问；未提交车辆动作');
+  }
   private async speak(text: string, generation: number, clarify: boolean) {
     this.player.stop(); this.request?.abort(); this.request = new AbortController();
     useSpeech.setState({ phase: 'synthesizing', message: '动作与文字已确认，正在生成语音…', lastFeedback: text });
@@ -124,8 +140,9 @@ export class SpeechCoordinator {
       if (!this.valid(generation)) return;
       if (!blob.size || !blob.type.startsWith('audio/')) throw new SpeechFailure('INVALID_TTS_AUDIO', '播报接口没有返回有效音频。');
       useSpeech.setState({ phase: 'speaking', message: text });
+      this.trace('tts-started','正在播放实际 API 音频');
       const ended = await this.player.play(blob);
-      if (this.valid(generation) && ended === 'ended') { useSpeech.setState({ phase: clarify ? 'clarifying' : 'idle', message: text }); this.trace('tts-ended', 'API audio playback ended'); }
+      if (this.valid(generation) && ended === 'ended') { useSpeech.setState({ phase: clarify && useVehicle.getState().context.pending ? 'clarifying' : 'idle', message: text }); this.trace('tts-ended', 'API audio playback ended'); }
     } catch (error) {
       if (!this.valid(generation)) return;
       this.fail(error instanceof SpeechFailure ? error.code : 'TTS_FAILED', `${error instanceof SpeechFailure ? error.message : 'API 播报失败，可单独重播。'} 已完成的车窗动作与文字保留。`);

@@ -1,0 +1,59 @@
+
+> su7-interaction-lab@0.3.2 test:e2e
+> playwright test --grep clarification cancellation|actual GLB, health
+
+
+Running 4 tests using 1 worker
+
+(node:25772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (8.8s)
+  ok 2 [Edge-1920x1080] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action (935ms)
+(node:34804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (6.8s)
+  x  4 [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action (11.1s)
+
+
+  1) [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  getByRole('button', { name: '完全打开右后车窗', exact: true })
+    Expected: in viewport
+    Received: viewport ratio 0.6315789222717285
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeInViewport" getByRole('button', { name: '完全打开右后车窗', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '完全打开右后车窗', exact: true })
+        24 × locator resolved to <button aria-label="完全打开右后车窗">开</button>
+           - unexpected value "viewport ratio 0.6315789222717285"
+
+
+      94 |   const input=page.getByRole('textbox',{name:'车窗文字指令'});await input.fill('打开车窗');await input.press('Enter');
+      95 |   await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+    > 96 |   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
+         |                                                                       ^
+      97 |   await page.screenshot({path:`docs/assets/i3-final/clarification-panel-${info.project.name}.png`});
+      98 |   await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
+      99 |   await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+        at D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:96:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action
+  3 passed (30.5s)

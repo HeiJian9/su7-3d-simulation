@@ -43,6 +43,7 @@ describe('unified window executor', () => {
 describe('complete Chinese four-window rules', () => {
   it.each([
     ['左前窗开一半','fl',.5],['右后窗关闭','rr',0],['主驾车窗打开','fl',1],['副驾窗开到百分之五十','fr',.5],['左后车窗打开到30%','rl',.3],
+    ['关闭右后方车窗','rr',0],['打开右后方的车窗','rr',1],['左前方的窗户打开一半','fl',.5],
   ])('%s', (text,target,value) => {
     const r=parseWindowText(text);expect(r.kind).toBe('execute');
     if(r.kind==='execute'){expect(r.commands[0].targets).toEqual([target]);expect('value' in r.commands[0] && r.commands[0].value).toBe(value);}
@@ -53,6 +54,7 @@ describe('complete Chinese four-window rules', () => {
     expect(answer.kind==='execute'&&answer.commands[0].targets).toEqual(['rl']);
     const override=parseWindowText('左后那个，开一半',ctx,200);
     expect(override.kind==='execute'&&'value' in override.commands[0]&&override.commands[0].value).toBe(.5);
+    const all=parseWindowText('所有车窗',ctx,200);expect(all.kind==='execute'&&all.targets).toEqual(['fl','fr','rl','rr']);
   });
   it('uses fresh focus, expires it, and opens all only when explicitly requested', () => {
     const focus={focus:{targets:['fr'] as const,updatedAt:0}};
@@ -68,5 +70,10 @@ describe('complete Chinese four-window rules', () => {
     const mixed=parseWindowText('不要打开左前车窗，右后关闭');
     expect(mixed.kind==='execute'&&mixed.targets).toEqual(['rr']);
     expect(parseWindowText('左前开到150%').kind).toBe('unsupported');
+  });
+  it('asks again after a bulk selection and clears an unresolved request on spoken cancellation',()=>{
+    expect(parseWindowText('打开车窗',{focus:{targets:['fl','fr','rl','rr'],updatedAt:100}},200).kind).toBe('clarify');
+    const question=parseWindowText('打开车窗',{},100);if(question.kind!=='clarify')throw Error('Expected clarification');
+    const cancel=parseWindowText('取消这条指令',{pending:question.pending},200);expect(cancel.kind).toBe('noop');
   });
 });

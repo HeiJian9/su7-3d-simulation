@@ -106,4 +106,20 @@ describe('voice orchestration race protection (explicit test Mock)',()=>{
     await coordinator.start();const input=await audio();callbacks.done({blob:new Blob([input.bytes],{type:'audio/wav'}),mimeType:'audio/wav',durationMs:1000,peakRms:.1,reason:'silence-end'});
     await vi.waitFor(()=>expect(useSpeech.getState().errorCode).toBe('MODEL_MISMATCH'));expect(useVehicle.getState().state.windows.fl.openness).toBe(0);
   });
+  it('stops playback before capture and cancellation during the settling delay cannot acquire a microphone',async()=>{
+    vi.useFakeTimers();
+    try{
+      const capture={start:vi.fn(async()=>{}),stop:async()=>{},cancel:vi.fn()};
+      const playing={play:async()=> 'ended' as const,stop:vi.fn(()=>({wasPlaying:true,positionMs:220}))};
+      coordinator=new SpeechCoordinator(capture,playing);useSpeech.setState({phase:'speaking'});
+      const start=coordinator.start();expect(capture.start).not.toHaveBeenCalled();expect(useSpeech.getState().phase).toBe('requesting');
+      coordinator.cancel();await vi.advanceTimersByTimeAsync(200);await start;
+      expect(capture.start).not.toHaveBeenCalled();expect(useSpeech.getState().traces.some(t=>t.stage==='tts-stopped')).toBe(true);
+    }finally{vi.useRealTimers();}
+  });
+  it('UI cancellation clears clarification without committing a vehicle operation',async()=>{
+    coordinator=new SpeechCoordinator(recorder,player,async()=>new Response(new Uint8Array([1]),{headers:{'Content-Type':'audio/wav'}}));
+    await coordinator.text('打开车窗');expect(useVehicle.getState().context.pending).toBeDefined();
+    coordinator.cancelClarification();expect(useVehicle.getState().context.pending).toBeUndefined();expect(useVehicle.getState().state.revision).toBe(0);
+  });
 });

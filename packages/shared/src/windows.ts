@@ -100,13 +100,15 @@ function chineseNumber(text: string): number | undefined {
   return numbers[text];
 }
 export function parseWindowText(raw: string, context: WindowContext = {}, now = Date.now()): RuleResult {
-  const text = raw.trim().replace(/[\s。！!？?]/g, '').replace(/百分之([零一二两三四五六七八九十百\d.]+)/g, (_, n: string) => `${chineseNumber(n) ?? n}%`).replace(/(左前|右前|左后|右后)(?:那个)?[，,](?=开|关|升|降)/g, '$1');
+  const text = raw.trim().replace(/[\s。！!？?]/g, '').replace(/(左前|右前|左后|右后|前左|前右|后左|后右)方/g,'$1').replace(/百分之([零一二两三四五六七八九十百\d.]+)/g, (_, n: string) => `${chineseNumber(n) ?? n}%`).replace(/(左前|右前|左后|右后)(?:那个)?[，,](?=开|关|升|降)/g, '$1');
   if (!text) return { kind: 'noop', message: '请输入车窗指令。' };
-  if (/^(取消|算了|不用了|停止操作)$/.test(text)) return { kind: 'noop', message: '已取消本轮指令，车窗保持原状态。' };
-  const freshFocus = context.focus && now - context.focus.updatedAt < 120000 ? context.focus.targets : undefined;
+  if (/^(取消|算了|不用了|停止操作|取消这条指令|取消刚才的指令)$/.test(text)) return { kind: 'noop', message: '已取消待确认指令，车窗目标保持不变。' };
+  // An implicit target must identify one window. A previous bulk action is not consent to act on all again.
+  const freshFocus = context.focus && context.focus.targets.length === 1 && now - context.focus.updatedAt < 120000 ? context.focus.targets : undefined;
   if (context.pending && context.pending.expiresAt > now) {
-    const answerTargets = targetsIn(text);
-    const justTarget = text.replace(/(?:左前|右前|左后|右后|前左|前右|后左|后右|主驾(?:驶)?(?:位)?|副驾(?:驶)?(?:位)?|驾驶位)(?:那个|那个窗|车窗|窗户|窗|玻璃)?/g, '').replace(/的|那个/g, '');
+    const allAnswer=/^(全部|所有|四个|四扇|四面)(?:的)?(?:车窗|窗户|窗|玻璃)?$/.test(text);
+    const answerTargets = allAnswer ? [...corners] : targetsIn(text);
+    const justTarget = allAnswer ? '' : text.replace(/(?:左前|右前|左后|右后|前左|前右|后左|后右|主驾(?:驶)?(?:位)?|副驾(?:驶)?(?:位)?|驾驶位)(?:那个|那个窗|车窗|窗户|窗|玻璃)?/g, '').replace(/的|那个/g, '');
     if (answerTargets.length && !justTarget) {
       const commands = context.pending.commands.map((c) => ({ ...c, targets: c.targets.length ? c.targets : answerTargets }) as WindowCommand);
       return { kind: 'execute', commands, targets: answerTargets };

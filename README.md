@@ -1,6 +1,6 @@
 # SU7 交互实验室 · I2 + 阿里云语音
 
-指定 Mona x Supercars 小米 SU7 的四窗控制场景。0.3.1 在 I2／框架基础上接入用户选择的阿里云千问 ASR + CosyVoice，真实接口、合成音源浏览器动作和真人麦克风基础闭环均已通过。完整需求以 [设计基线及服务修订](docs/SU7_INCREMENTAL_DESIGN.md) 为准。
+指定 Mona x Supercars 小米 SU7 的四窗控制场景。0.3.2 完成当前 I3 范围：阿里云千问 ASR + CosyVoice、自动结束、对象追问／取消及播报打断均有实际分层验证。完整需求以 [设计基线及服务修订](docs/SU7_INCREMENTAL_DESIGN.md) 为准。
 
 ## 打开演示
 
@@ -47,7 +47,7 @@ npm run asset:check
 npm run test:e2e
 ```
 
-浏览器回归使用本机 Microsoft Edge，覆盖 1920×1080 与 1366×768。`test:e2e` 在 3003 启动不读取 `.env` 的隔离服务，语音 Mock 不消耗真实 Key；结果在 `docs/validation/aliyun/`。`npm run speech:probe` 是显式真实 API 探针，会使用本机凭据并产生少量调用。I1 两分钟连续相机历史证据保留。真实接口／合成音源／真人分别记录，不能互相代替。
+浏览器回归使用本机 Microsoft Edge，覆盖 1920×1080 与 1366×768。`test:e2e` 在 3003 启动不读取 `.env` 的隔离服务，语音 Mock 不消耗真实 Key；当前结果在 `docs/validation/i3-final/`。`npm run speech:probe` 和 `npm run speech:verify-i3` 是显式真实 API 探针，会使用本机凭据并产生少量调用。I1 两分钟连续相机已再次回归。真实接口／合成音源／真人分别记录，不能互相代替。
 
 本轮完整回归保存在 `docs/validation/playwright-results-full.json`，最终界面定向复测在 `playwright-results-visual.json`，最近一次定向复测在 `playwright-results.json`。
 
@@ -78,4 +78,4 @@ npm run build
 
 ## 下一轮
 
-当前先等待用户体验并补齐 I3 真人复杂场景验证，再按 [NEXT_ITERATION.md](docs/NEXT_ITERATION.md) 交接；不提前推进 I4。最新接入证据见 [阿里云报告](docs/ALIYUN_SPEECH_VALIDATION.md)，I2／框架历史报告保留。
+当前 I3 四窗范围通过，等待用户体验，不提前推进 I4 或 I7。最新证据见 [I3 最终报告](docs/I3_FINAL_VALIDATION.md)，交接见 [NEXT_ITERATION.md](docs/NEXT_ITERATION.md)。DeepSeek 尚未接入，规则未命中的复杂表达会提示重说；完整大模型意图兜底留在 I7。

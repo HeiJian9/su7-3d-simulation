@@ -21,7 +21,7 @@ if (!testUnconfigured) loadProjectEnv(root);
 const providers = providerConfig(testUnconfigured ? {} : process.env);
 app.disable('x-powered-by');
 app.get('/api/health', (_req, res) => {
-  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I3-aliyun', version: '0.3.1', providers: {
+  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I3-aliyun', version: '0.3.2', providers: {
     ...providers.health,
     intent: { configured: false, probe: 'pending-I7' },
   } });

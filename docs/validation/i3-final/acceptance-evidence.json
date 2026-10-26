@@ -1,0 +1,28 @@
+{
+  "humanDiagnostic": "docs/validation/scene-diagnostics-2026-10-26T12-59-36-316Z.json",
+  "humanAutomaticEnds": 2,
+  "humanClarificationPrompts": 1,
+  "humanPlaybackStop": {
+    "requestId": "63074bd0-3200-4e34-bc67-48b6a0ec1b14",
+    "time": "2026-10-26T12:58:47.375Z",
+    "stage": "tts-stopped",
+    "detail": "paused; position 1137 ms",
+    "mock": false
+  },
+  "humanCaptureAfterStopMs": 182,
+  "humanReleaseEvents": [
+    "1 tracks; all ended: true",
+    "1 tracks; all ended: true",
+    "1 tracks; all ended: true",
+    "1 tracks; all ended: true",
+    "1 tracks; all ended: true",
+    "1 tracks; all ended: true"
+  ],
+  "syntheticLiveApiPassed": true,
+  "syntheticPauseToCaptureMs": [
+    180,
+    181
+  ],
+  "syntheticApiRequests": 8,
+  "syntheticHumanMicrophone": false
+}

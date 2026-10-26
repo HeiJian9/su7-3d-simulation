@@ -1,5 +1,7 @@
 # API 填写位置与协议约定
 
+0.3.2：当前 I3 四窗验收见 [I3_FINAL_VALIDATION.md](I3_FINAL_VALIDATION.md)。普通自动测试的最新报告在 docs/validation/i3-final；`npm run speech:verify-i3` 为显式真实 API 的澄清／停播复测，使用合成音源，不替代真人。
+
 2026-10-26 更新：用户选择国内服务并创建、保存阿里云百炼 Key，当前使用北京地域千问 ASR + CosyVoice。真实接口及合成语音浏览器闭环已通过；真人麦克风体验单独记录，不能由合成音源替代。原 Gemini 适配保留可选。
 
 ## 当前阿里云配置

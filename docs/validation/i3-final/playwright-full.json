@@ -1,0 +1,2149 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/validation/i3-final/playwright-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "scene.spec.ts",
+      "file": "scene.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual GLB, health, visible controls and responsive layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7012,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:55:21.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-2ac551e64097a3c9278d",
+          "file": "scene.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:55:28.847Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-920583f006026f0a0dd3",
+          "file": "scene.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "cabin, free movement, look, focused input isolation and keyboard return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:55:38.261Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-c0992699a20a454db8f6",
+          "file": "scene.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "corrupt model fails visibly, then retry loads the actual asset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:55:50.187Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-dda5e954d515a4347fc1",
+          "file": "scene.spec.ts",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "two minutes of continuous camera operations remain responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 165000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 122830,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:55:51.159Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "continuous-camera-result",
+                      "contentType": "application/json",
+                      "body": "ewogICJkdXJhdGlvbk1zIjogMTIxMjM4LAogICJjeWNsZXMiOiAxMTIsCiAgImVycm9ycyI6IFtdLAogICJkaWFnbm9zdGljIjogewogICAgInNhdmVkIjogImRvY3MvdmFsaWRhdGlvbi9zY2VuZS1kaWFnbm9zdGljcy0yMDI2LTEwLTI2VDEyLTU3LTUzLTg1OFouanNvbiIKICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-7b64af9b2e97a4a2b4f5",
+          "file": "scene.spec.ts",
+          "line": 125,
+          "column": 1
+        },
+        {
+          "title": "actual GLB, health, visible controls and responsive layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8129,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:29.213Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-30fda315ab7b3df10c27",
+          "file": "scene.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7573,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:37.537Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-b6e4f3dbd0d29795ecf6",
+          "file": "scene.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "cabin, free movement, look, focused input isolation and keyboard return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11511,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:45.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-ed7237f5c490e1c410c9",
+          "file": "scene.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "corrupt model fails visibly, then retry loads the actual asset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 718,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:56.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-9819587139a038d51ea1",
+          "file": "scene.spec.ts",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "two minutes of continuous camera operations remain responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "The stability baseline is measured once at 1080p; all functional cases run at both resolutions.",
+                  "location": {
+                    "file": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\scene.spec.ts",
+                    "line": 126,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:57.378Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "The stability baseline is measured once at 1080p; all functional cases run at both resolutions.",
+                      "location": {
+                        "file": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\scene.spec.ts",
+                        "line": 126,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-e02e560f509a44462ce4",
+          "file": "scene.spec.ts",
+          "line": 125,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "speech.spec.ts",
+      "file": "speech.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:57:54.012Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-47e0edebd50519628625",
+          "file": "speech.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Mock clarification chooses one window and new recording stops old API playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8224,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:57:58.475Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-947c4360d64da4cee5ef",
+          "file": "speech.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "Mock late ASR reply cannot override even an unchanged manual target",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4495,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:06.708Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-e24391618521cc2752d4",
+          "file": "speech.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "cancelling actual browser capture releases tracks and sends no audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1091,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:11.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-97e3ced696ffad923c5c",
+          "file": "speech.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "manual recording finish works before the silence timeout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2372,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:12.323Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-f9490f7aec03e5f34e87",
+          "file": "speech.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "Mock TTS failure preserves actual action and supports a separate replay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4642,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:14.708Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-a0c83ea601ade80acda3",
+          "file": "speech.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Mock microphone error: 权限拒绝; manual control survives",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:19.366Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-690ae156c66cff58a87d",
+          "file": "speech.spec.ts",
+          "line": 68,
+          "column": 3
+        },
+        {
+          "title": "Mock microphone error: 无设备; manual control survives",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1385,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:20.739Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-43022510d30ee09fa164",
+          "file": "speech.spec.ts",
+          "line": 68,
+          "column": 3
+        },
+        {
+          "title": "Mock silence never uploads audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:22.138Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-53dac10cf7bd11defc4e",
+          "file": "speech.spec.ts",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "Mock ASR error 401: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:28.497Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-e0a1cbb08d0873148aaf",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 429: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:32.926Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-86da52799dd7f857bfe5",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 504: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4310,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:37.241Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-28cdaca00974384f0a7e",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 415: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:41.563Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-99d31485fc6fe7915b6e",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:45.862Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-fe7afe9a97b9cce972ed",
+          "file": "speech.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "Mock clarification cancellation clears pending intent after a bulk action",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:50.602Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-4570f46d52ced1373d03",
+          "file": "speech.spec.ts",
+          "line": 92,
+          "column": 1
+        },
+        {
+          "title": "Mock cancelling native WebM finalization permits immediate re-record without uploading old audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5809,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:51.805Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-bd009af73506f84912d4",
+          "file": "speech.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "Mock network failure is explicit and manual recovery remains available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:58:57.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-9b8dab01b6c40e5e9fa1",
+          "file": "speech.spec.ts",
+          "line": 108,
+          "column": 56
+        },
+        {
+          "title": "Mock invalid-json failure is explicit and manual recovery remains available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:01.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-a04050c9922a6acb5458",
+          "file": "speech.spec.ts",
+          "line": 108,
+          "column": 56
+        },
+        {
+          "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4707,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:57.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-7700f3a3ae17d7abdc92",
+          "file": "speech.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Mock clarification chooses one window and new recording stops old API playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7775,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:02.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-72a98ce5f41b8cedd7b2",
+          "file": "speech.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "Mock late ASR reply cannot override even an unchanged manual target",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4060,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:10.007Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-c8f59870f0752f46c37d",
+          "file": "speech.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "cancelling actual browser capture releases tracks and sends no audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:14.076Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-9860aca4fbaa75e91bfe",
+          "file": "speech.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "manual recording finish works before the silence timeout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:14.857Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-bc23d347a270b8f3a4e8",
+          "file": "speech.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "Mock TTS failure preserves actual action and supports a separate replay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:16.936Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-6ce5f8b7f07b089a5fb4",
+          "file": "speech.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Mock microphone error: 权限拒绝; manual control survives",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1090,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:21.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-500f4cb434f1a05bf43b",
+          "file": "speech.spec.ts",
+          "line": 68,
+          "column": 3
+        },
+        {
+          "title": "Mock microphone error: 无设备; manual control survives",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1081,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:22.313Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-01ab088748407ee1ed9c",
+          "file": "speech.spec.ts",
+          "line": 68,
+          "column": 3
+        },
+        {
+          "title": "Mock silence never uploads audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5970,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:23.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-1a85117898723c929121",
+          "file": "speech.spec.ts",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "Mock ASR error 401: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:29.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-6236549ad25af066de9c",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 429: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:33.797Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-21cba248768e31c057a8",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 504: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3878,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:38.158Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-1a94ea514561b855b54c",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "Mock ASR error 415: manual path remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3845,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:42.042Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-daf2e86539c5308d9412",
+          "file": "speech.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:45.894Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-aebc23a0982f3dd6bb18",
+          "file": "speech.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "Mock clarification cancellation clears pending intent after a bulk action",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 811,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:49.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-ed168f344a890e95a3b5",
+          "file": "speech.spec.ts",
+          "line": 92,
+          "column": 1
+        },
+        {
+          "title": "Mock cancelling native WebM finalization permits immediate re-record without uploading old audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5453,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:50.581Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-37fba4906a65d1cfe2d6",
+          "file": "speech.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "Mock network failure is explicit and manual recovery remains available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:56.040Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-932c7fc498fe30521d58",
+          "file": "speech.spec.ts",
+          "line": 108,
+          "column": 56
+        },
+        {
+          "title": "Mock invalid-json failure is explicit and manual recovery remains available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:00:59.927Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77eff9ecbf108095579-d9fa8a24c3913642ddb6",
+          "file": "speech.spec.ts",
+          "line": 108,
+          "column": 56
+        }
+      ]
+    },
+    {
+      "title": "windows.spec.ts",
+      "file": "windows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9049,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:06.347Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-window-poses",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICItMC43NTAwMDAsMC45Nzg3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZsIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICItMC44MDUwMDAsMC43NjQyODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC41NDk3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAsCiAgICAicG9zaXRpb24iOiAiMC43NTAwMDAsMC45Nzg3OTAsLTAuMTcyNTIwIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICIwLjgwNTAwMCwwLjc2NDI5MCwtMC4xNzI1MjAiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJmciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNTQ5NzkwLC0wLjE3MjUyMCIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDEKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLAogICAgInBvc2l0aW9uIjogIi0wLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMSIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiLTAuODA1MDAwLDAuODE1NTI0LDAuNzU4OTIxIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC42MTg1MjQsMC43NTg5MjEiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAxCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicnIiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICIwLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMiIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiMC44MDUwMDAsMC44MTU1MjQsMC43NTg5MjIiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNjE4NTI0LDAuNzU4OTIyIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9CiAgICB9CiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-990b4af61edf5ca619de",
+          "file": "windows.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:15.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-a81494ba35b8ea4d8d83",
+          "file": "windows.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "3D window selection works for open apertures; camera dragging never operates a window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:18.503Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-32b41abb9fee28f4635f",
+          "file": "windows.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "reverses an active animation and preserves a real intermediate pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1503,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:20.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-7a32a71db8c156178237",
+          "file": "windows.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "fixed-view actual openings at zero half and full",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5092,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T12:59:22.223Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-264e7ea2913e7bf4407e",
+          "file": "windows.spec.ts",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:01:03.863Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-window-poses",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICItMC43NTAwMDAsMC45Nzg3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZsIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICItMC44MDUwMDAsMC43NjQyODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC41NDk3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAsCiAgICAicG9zaXRpb24iOiAiMC43NTAwMDAsMC45Nzg3OTAsLTAuMTcyNTIwIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICIwLjgwNTAwMCwwLjc2NDI5MCwtMC4xNzI1MjAiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJmciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNTQ5NzkwLC0wLjE3MjUyMCIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDEKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLAogICAgInBvc2l0aW9uIjogIi0wLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMSIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiLTAuODA1MDAwLDAuODE1NTI0LDAuNzU4OTIxIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC42MTg1MjQsMC43NTg5MjEiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAxCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicnIiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICIwLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMiIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiMC44MDUwMDAsMC44MTU1MjQsMC43NTg5MjIiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNjE4NTI0LDAuNzU4OTIyIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9CiAgICB9CiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-9480eafa853bee656c1a",
+          "file": "windows.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2611,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:01:11.724Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-df79b3799c8b5aa2e1ff",
+          "file": "windows.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "3D window selection works for open apertures; camera dragging never operates a window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1749,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:01:14.341Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-c23dd564b2fb05ac80b8",
+          "file": "windows.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "reverses an active animation and preserves a real intermediate pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:01:16.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-9bc8393f837f62c53869",
+          "file": "windows.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "fixed-view actual openings at zero half and full",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:01:17.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-1de502b4b85e7cd9d006",
+          "file": "windows.spec.ts",
+          "line": 65,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T12:55:20.316Z",
+    "duration": 361615.62299999996,
+    "expected": 55,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

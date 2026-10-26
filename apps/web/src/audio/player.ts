@@ -1,3 +1,4 @@
+export interface PlaybackStop { wasPlaying: boolean; positionMs: number }
 export class ApiAudioPlayer {
   private audio?: HTMLAudioElement;
   private url?: string;
@@ -14,10 +15,12 @@ export class ApiAudioPlayer {
       void audio.play().catch(() => { cleanup(); reject(new Error('浏览器未能播放 API 音频，请点击重播。')); });
     });
   }
-  stop() {
+  stop(): PlaybackStop {
+    const result = { wasPlaying: !!this.audio && !this.audio.paused && !this.audio.ended, positionMs: Math.round((this.audio?.currentTime ?? 0) * 1000) };
     this.audio?.pause();
     if (this.audio) { this.audio.onended = null; this.audio.onerror = null; this.audio.removeAttribute('src'); this.audio.load(); }
     if (this.url) URL.revokeObjectURL(this.url);
     this.settle?.('stopped'); this.audio = undefined; this.url = undefined; this.settle = undefined;
+    return result;
   }
 }

@@ -2,7 +2,7 @@ import { encodeWav, newVad, stepVad, type VadDecision } from './vad';
 
 export class RecordingError extends Error { constructor(public code: string, message: string) { super(message); } }
 export interface RecordedAudio { blob: Blob; mimeType: string; durationMs: number; reason: VadDecision | 'manual'; peakRms: number }
-export interface RecorderCallbacks { meter: (rms: number, elapsedMs: number, speech: boolean) => void; done: (audio: RecordedAudio) => void; error: (error: RecordingError) => void }
+export interface RecorderCallbacks { meter: (rms: number, elapsedMs: number, speech: boolean) => void; done: (audio: RecordedAudio) => void; error: (error: RecordingError) => void; released?: (tracks: number, allEnded: boolean) => void }
 export class VoiceRecorder {
   private stream?: MediaStream;
   private context?: AudioContext;
@@ -18,12 +18,13 @@ export class VoiceRecorder {
   private vad = newVad(0);
   private callbacks?: RecorderCallbacks;
   private mimeType = 'audio/webm';
+  private settleStop?: () => void;
   async start(formats: string[], callbacks: RecorderCallbacks) {
     this.cancel(); const generation = this.generation; this.callbacks = callbacks; this.stopping = false;
     try {
       if (!navigator.mediaDevices?.getUserMedia) throw new RecordingError('MIC_UNAVAILABLE', '浏览器不支持麦克风，请使用本机 Chrome 或 Edge。');
       const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }, video: false });
-      if (generation !== this.generation) { stream.getTracks().forEach((t) => t.stop()); return; }
+      if (generation !== this.generation) { const tracks=stream.getTracks();tracks.forEach((t) => t.stop());callbacks.released?.(tracks.length,tracks.every(t=>t.readyState==='ended'));return; }
       this.stream = stream; this.context = new AudioContext(); await this.context.resume();
       if (generation !== this.generation) return;
       this.source = this.context.createMediaStreamSource(stream); this.analyser = this.context.createAnalyser(); this.analyser.fftSize = 1024; this.source.connect(this.analyser);
@@ -32,7 +33,7 @@ export class VoiceRecorder {
       if (webm) {
         this.mimeType = 'audio/webm';
         this.recorder = new MediaRecorder(stream, { mimeType: 'audio/webm;codecs=opus' });
-        this.recorder.ondataavailable = (event) => { if (event.data.size) this.chunks.push(event.data); };
+        this.recorder.ondataavailable = (event) => { if (generation === this.generation && event.data.size) this.chunks.push(event.data); };
         this.recorder.onerror = () => { if (generation === this.generation) { this.cancel(); callbacks.error(new RecordingError('RECORDING_FAILED', '录音器发生错误，请重试。')); } };
         this.recorder.start(200);
       } else {
@@ -70,7 +71,8 @@ export class VoiceRecorder {
     try {
       if (this.recorder?.state === 'recording') {
         const recorder = this.recorder;
-        await new Promise<void>((resolve) => { recorder.onstop = () => resolve(); recorder.stop(); });
+        await new Promise<void>((resolve) => { this.settleStop=resolve;recorder.onstop = () => {if(generation===this.generation)this.settleStop=undefined;resolve();};recorder.stop(); });
+        if (generation !== this.generation) return;
         blob = new Blob(this.chunks, { type: this.mimeType });
       } else blob = encodeWav(this.pcm, this.context?.sampleRate ?? 48000);
       const valid = this.vad.hasSpeech && this.vad.peak >= .012 && durationMs >= 250 && blob.size >= 60;
@@ -85,14 +87,17 @@ export class VoiceRecorder {
   }
   cancel() {
     this.generation++; this.stopping = true; clearInterval(this.timer);
-    if (this.recorder?.state === 'recording') { this.recorder.ondataavailable = null; this.recorder.onstop = null; this.recorder.stop(); }
+    if (this.recorder) { this.recorder.ondataavailable = null; this.recorder.onstop = null;this.recorder.onerror=null;if(this.recorder.state==='recording')this.recorder.stop(); }
+    this.settleStop?.();this.settleStop=undefined;
     void this.release();
   }
   private async release() {
     clearInterval(this.timer); this.source?.disconnect(); this.worklet?.disconnect();
-    this.stream?.getTracks().forEach((track) => track.stop()); this.stream = undefined;
+    const tracks=this.stream?.getTracks()??[],callbacks=this.callbacks;
+    tracks.forEach((track) => track.stop()); this.stream = undefined;
     const context = this.context; this.context = undefined;
     this.recorder = undefined; this.source = undefined; this.worklet = undefined; this.analyser = undefined;
-    if (context && context.state !== 'closed') await context.close();
+    try{if (context && context.state !== 'closed') await context.close();}
+    finally{if(tracks.length)callbacks?.released?.(tracks.length,tracks.every(track=>track.readyState==='ended'));}
   }
 }

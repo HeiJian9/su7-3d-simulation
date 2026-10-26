@@ -1,0 +1,15 @@
+
+> su7-interaction-lab@0.3.2 test:e2e
+> playwright test --grep direction wording from human
+
+
+Running 2 tests using 1 worker
+
+(node:36692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\speech.spec.ts:113:1 › direction wording from human logs and explicit all-window clarification share actual state (4.5s)
+(node:37644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\speech.spec.ts:113:1 › direction wording from human logs and explicit all-window clarification share actual state (4.5s)
+
+  2 passed (11.6s)

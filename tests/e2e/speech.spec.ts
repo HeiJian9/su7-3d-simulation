@@ -9,8 +9,8 @@ async function instrument(page:Page){
   });
 }
 const health={status:'ok',version:'0.3.0',providers:{mode:'test-mock',asr:{configured:true,model:'gemini-3.8-flash',protocol:'test-mock',audioFormats:['audio/wav'],missing:[],probe:'test-mock'},tts:{configured:true,model:'test-mock-tts',voice:'test-mock-zh',protocol:'test-mock',missing:[],probe:'test-mock'}}};
-async function ready(page:Page,tts=true){
-  await instrument(page);await page.route('**/api/health',r=>r.fulfill({json:{...health,providers:{...health.providers,tts:{...health.providers.tts,configured:tts}}}}));
+async function ready(page:Page,tts=true,formats=['audio/wav']){
+  await instrument(page);await page.route('**/api/health',r=>r.fulfill({json:{...health,providers:{...health.providers,asr:{...health.providers.asr,audioFormats:formats},tts:{...health.providers.tts,configured:tts}}}}));
   await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await expect(page.getByTestId('speech-mode')).toContainText('测试 Mock');
 }
 function requestId(route:Route){const body=route.request().postDataBuffer()!.toString('latin1');return body.match(/name="requestId"\r\n\r\n([^\r\n]+)/)![1];}
@@ -26,7 +26,7 @@ test('Mock-only microphone VAD → transcript → real geometry → API audio pl
   await expect(page.getByTestId('transcript')).toContainText('左前车窗打开一半',{timeout:12000});await expect.poll(()=>pose(page)).toBe(.5);
   await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪');await expect.poll(()=>tracksStopped(page)).toBe(true);
   expect(asr).toBe(1);expect(tts).toBe(1);for(const c of ['fr','rl','rr'])expect(await pose(page,c)).toBe(0);
-  await page.screenshot({path:`docs/assets/aliyun/speech-MOCK-${info.project.name}.png`});
+  await page.screenshot({path:`docs/assets/i3-final/speech-MOCK-${info.project.name}.png`});
 });
 test('Mock clarification chooses one window and new recording stops old API playback',async({page})=>{
   let count=0;
@@ -88,4 +88,33 @@ test('unconfigured local server: WebM recording reaches explicit 503 and manual 
   let mime='';await page.route('**/api/speech/transcribe',async route=>{mime=route.request().postDataBuffer()!.toString('latin1').includes('audio/webm')?'audio/webm':'unknown';await route.continue();});
   await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('尚未配置',{timeout:12000});expect(mime).toBe('audio/webm');
   await expect.poll(()=>tracksStopped(page)).toBe(true);await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+});
+test('Mock clarification cancellation clears pending intent after a bulk action',async({page},info)=>{
+  await ready(page,false);await page.getByRole('button',{name:'全部关闭',exact:true}).click();
+  const input=page.getByRole('textbox',{name:'车窗文字指令'});await input.fill('打开车窗');await input.press('Enter');
+  await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+  await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
+  await page.screenshot({path:`docs/assets/i3-final/clarification-panel-${info.project.name}.png`});
+  await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
+  await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+});
+test('Mock cancelling native WebM finalization permits immediate re-record without uploading old audio',async({page})=>{
+  await page.addInitScript(()=>{const stop=MediaRecorder.prototype.stop;MediaRecorder.prototype.stop=function(){const handler=this.onstop;this.onstop=e=>setTimeout(()=>handler?.call(this,e),300);return stop.call(this);};});
+  let sent=0;await page.route('**/api/speech/transcribe',r=>{sent++;return transcript(r,'右后窗开一半');});
+  await ready(page,false,['audio/webm']);
+  await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('正在聆听');
+  await page.getByRole('button',{name:'结束录音',exact:true}).click();await page.getByRole('button',{name:'取消语音',exact:true}).click();
+  await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect.poll(()=>pose(page,'rr'),{timeout:15000}).toBe(.5);
+  expect(sent).toBe(1);await expect.poll(()=>tracksStopped(page)).toBe(true);expect(await pose(page,'fl')).toBe(0);
+});
+for(const mode of ['network','invalid-json'] as const){test(`Mock ${mode} failure is explicit and manual recovery remains available`,async({page})=>{
+  await page.route('**/api/speech/transcribe',r=>mode==='network'?r.abort('internetdisconnected'):r.fulfill({contentType:'application/json',body:'{bad-json'}));await ready(page,false);
+  await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-phase')).toHaveText('需要重试',{timeout:12000});expect(await pose(page)).toBe(0);
+  await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+});}
+test('direction wording from human logs and explicit all-window clarification share actual state',async({page})=>{
+  await ready(page,false);const input=page.getByRole('textbox',{name:'车窗文字指令'});
+  for(const [text,value] of [['打开右后方的车窗',1],['关闭右后方车窗',0]] as const){await input.fill(text);await input.press('Enter');await expect.poll(()=>pose(page,'rr')).toBe(value);}
+  await page.getByRole('button',{name:'新对话',exact:true}).click();await input.fill('打开车窗');await input.press('Enter');await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();
+  await input.fill('所有车窗');await input.press('Enter');for(const c of ['fl','fr','rl','rr'])await expect.poll(()=>pose(page,c)).toBe(1);
 });

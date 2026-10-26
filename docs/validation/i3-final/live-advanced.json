@@ -1,0 +1,138 @@
+{
+  "at": "2026-10-26T13:02:29.792Z",
+  "mode": "real-api-synthetic-audio",
+  "humanMicrophone": false,
+  "passed": true,
+  "asrModel": "qwen3-asr-flash",
+  "ttsModel": "cosyvoice-v3-flash",
+  "phrases": [
+    "打开车窗。",
+    "左后那个。",
+    "右前车窗打开一半。",
+    "关闭右后方车窗。"
+  ],
+  "requests": [
+    {
+      "endpoint": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "events": [
+    {
+      "kind": "get-media",
+      "index": 0,
+      "time": 1408.8999999985099
+    },
+    {
+      "kind": "track-ended",
+      "index": 0,
+      "ended": true,
+      "time": 4259.39999999851
+    },
+    {
+      "kind": "playing",
+      "time": 7655.699999999255
+    },
+    {
+      "kind": "pause",
+      "wasPlaying": true,
+      "time": 8395.89999999851
+    },
+    {
+      "kind": "get-media",
+      "index": 1,
+      "time": 8576.29999999702
+    },
+    {
+      "kind": "track-ended",
+      "index": 1,
+      "ended": true,
+      "time": 11410
+    },
+    {
+      "kind": "playing",
+      "time": 13834.599999997765
+    },
+    {
+      "kind": "pause",
+      "wasPlaying": true,
+      "time": 14287.29999999702
+    },
+    {
+      "kind": "get-media",
+      "index": 2,
+      "time": 14467.79999999702
+    },
+    {
+      "kind": "track-ended",
+      "index": 2,
+      "ended": true,
+      "time": 17832.29999999702
+    },
+    {
+      "kind": "playing",
+      "time": 20422.699999999255
+    },
+    {
+      "kind": "get-media",
+      "index": 3,
+      "time": 25398.89999999851
+    },
+    {
+      "kind": "track-ended",
+      "index": 3,
+      "ended": true,
+      "time": 28881.099999997765
+    },
+    {
+      "kind": "playing",
+      "time": 31178
+    },
+    {
+      "kind": "get-media",
+      "index": 4,
+      "time": 33636
+    },
+    {
+      "kind": "track-ended",
+      "index": 4,
+      "ended": true,
+      "time": 33749.29999999702
+    }
+  ],
+  "poses": {
+    "fl": 0,
+    "fr": 0.5,
+    "rl": 1,
+    "rr": 0
+  },
+  "diagnostic": "docs/validation/scene-diagnostics-2026-10-26T13-03-03-902Z.json"
+}
