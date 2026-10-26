@@ -2,8 +2,12 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from 'node:fs/promises'
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
+import { existsSync } from 'node:fs';
 
 const root = path.resolve(import.meta.dirname, '..');
+if (existsSync(path.join(root, 'apps/web/public/models/window-mapping.json'))) {
+  throw new Error('I2 enhanced assets already exist. Use npm run asset:export to export the current Blender project. Source reimport would overwrite enhanced geometry.');
+}
 const args = process.argv.slice(2);
 const value = (flag) => args[args.indexOf(flag) + 1];
 const modelId = 'ca2cda599f5341068c992c9f44551bf9';

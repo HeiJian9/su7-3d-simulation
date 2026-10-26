@@ -1,0 +1,41 @@
+{
+  "status": "ok",
+  "increment": "I2–I3-framework",
+  "version": "0.3.0",
+  "providers": {
+    "mode": "unconfigured",
+    "asr": {
+      "configured": false,
+      "model": "gemini-3.8-flash",
+      "protocol": "unconfigured",
+      "audioFormats": [
+        "audio/webm",
+        "audio/wav"
+      ],
+      "missing": [
+        "ASR_BASE_URL",
+        "ASR_API_KEY",
+        "ASR_PROTOCOL"
+      ],
+      "probe": "not-verified"
+    },
+    "tts": {
+      "configured": false,
+      "model": "",
+      "voice": "",
+      "protocol": "unconfigured",
+      "missing": [
+        "TTS_BASE_URL",
+        "TTS_API_KEY",
+        "TTS_MODEL",
+        "TTS_VOICE",
+        "TTS_PROTOCOL"
+      ],
+      "probe": "not-verified"
+    },
+    "intent": {
+      "configured": false,
+      "probe": "pending-I7"
+    }
+  }
+}

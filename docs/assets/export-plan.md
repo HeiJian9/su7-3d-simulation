@@ -13,7 +13,11 @@
 
 两份运行 GLB 必须相同：`assets/derived/su7-runtime.glb` 与 `apps/web/public/models/su7-runtime.glb`。原始 ZIP 不修改，解包材料在 `assets/source/extracted/`，可编辑纹理副本在 `assets/source/textures/`。
 
-## 后续顺序（本轮未执行）
+## I2 当前导出补充
+
+I2 已在现有 `.blend` 完成四窗语义机构；当前使用 `npm run asset:export`，随后 `npm run build`。脚本导出 GLB、运行／文档／前端映射并登记哈希。初始 `asset:import` 在检测到 I2 映射时拒绝覆盖增强。运行校验写入 `i2-runtime-check.json`，保留 I1 历史报告。原始 ZIP 始终不修改，历史版本只通过 Git 保存。
+
+## 后续顺序（下表为原 I1 计划；I2 当前结果见资产审查）
 
 | 阶段 | 起点与输出 |
 |---|---|

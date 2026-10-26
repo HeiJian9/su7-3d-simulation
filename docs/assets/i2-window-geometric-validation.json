@@ -1,0 +1,165 @@
+{
+  "windows": {
+    "fl": {
+      "closedWorldVertexMaxError": 2.9802322387695312e-08,
+      "connectedComponents": 1,
+      "poses": [
+        {
+          "openness": 0,
+          "glassRayHitsInOriginalAperture": 57,
+          "sampleCount": 57,
+          "maxY": 1.3367030620574951,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 0.5,
+          "glassRayHitsInOriginalAperture": 12,
+          "sampleCount": 57,
+          "maxY": 1.1222031116485596,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 1,
+          "glassRayHitsInOriginalAperture": 0,
+          "sampleCount": 57,
+          "maxY": 0.9077031016349792,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "staticAdjacentGlazingRetained": true
+    },
+    "fr": {
+      "closedWorldVertexMaxError": 2.9802322387695312e-08,
+      "connectedComponents": 1,
+      "poses": [
+        {
+          "openness": 0,
+          "glassRayHitsInOriginalAperture": 57,
+          "sampleCount": 57,
+          "maxY": 1.3367081880569458,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 0.5,
+          "glassRayHitsInOriginalAperture": 12,
+          "sampleCount": 57,
+          "maxY": 1.1222081184387207,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 1,
+          "glassRayHitsInOriginalAperture": 0,
+          "sampleCount": 57,
+          "maxY": 0.9077082276344299,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "staticAdjacentGlazingRetained": true
+    },
+    "rl": {
+      "closedWorldVertexMaxError": 0.0,
+      "connectedComponents": 1,
+      "poses": [
+        {
+          "openness": 0,
+          "glassRayHitsInOriginalAperture": 73,
+          "sampleCount": 73,
+          "maxY": 1.335322618484497,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 0.5,
+          "glassRayHitsInOriginalAperture": 24,
+          "sampleCount": 73,
+          "maxY": 1.1383225917816162,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 1,
+          "glassRayHitsInOriginalAperture": 0,
+          "sampleCount": 73,
+          "maxY": 0.9413226246833801,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "staticAdjacentGlazingRetained": true
+    },
+    "rr": {
+      "closedWorldVertexMaxError": 0.0,
+      "connectedComponents": 1,
+      "poses": [
+        {
+          "openness": 0,
+          "glassRayHitsInOriginalAperture": 73,
+          "sampleCount": 73,
+          "maxY": 1.335322618484497,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 0.5,
+          "glassRayHitsInOriginalAperture": 24,
+          "sampleCount": 73,
+          "maxY": 1.1383225917816162,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "openness": 1,
+          "glassRayHitsInOriginalAperture": 0,
+          "sampleCount": 73,
+          "maxY": 0.9413226246833801,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "staticAdjacentGlazingRetained": true
+    }
+  },
+  "kind": "actual geometric ray intersections, not transparency checks"
+}

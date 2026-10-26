@@ -1,0 +1,15 @@
+
+> su7-interaction-lab@0.3.0 test:e2e
+> playwright test --grep unconfigured local server
+
+
+Running 2 tests using 1 worker
+
+(node:15084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (5.5s)
+(node:35304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (5.0s)
+
+  2 passed (12.9s)

@@ -1,0 +1,525 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--grep",
+      "each real window|text rules|3D window|reverses|fixed-view"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/validation/i2-i3/playwright-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm start",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "windows.spec.ts",
+      "file": "windows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:48:59.015Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-window-poses",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICItMC43NTAwMDAsMC45Nzg3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZsIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICItMC44MDUwMDAsMC43NjQyODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC41NDk3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAsCiAgICAicG9zaXRpb24iOiAiMC43NTAwMDAsMC45Nzg3OTAsLTAuMTcyNTIwIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICIwLjgwNTAwMCwwLjc2NDI5MCwtMC4xNzI1MjAiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJmciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNTQ5NzkwLC0wLjE3MjUyMCIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDEKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLAogICAgInBvc2l0aW9uIjogIi0wLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMSIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiLTAuODA1MDAwLDAuODE1NTI0LDAuNzU4OTIxIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC42MTg1MjQsMC43NTg5MjEiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAxCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicnIiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICIwLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMiIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiMC44MDUwMDAsMC44MTU1MjQsMC43NTg5MjIiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNjE4NTI0LDAuNzU4OTIyIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9CiAgICB9CiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-990b4af61edf5ca619de",
+          "file": "windows.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:08.924Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-a81494ba35b8ea4d8d83",
+          "file": "windows.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "3D window selection works for open apertures; camera dragging never operates a window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:11.981Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-32b41abb9fee28f4635f",
+          "file": "windows.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "reverses an active animation and preserves a real intermediate pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1546,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:14.202Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-7a32a71db8c156178237",
+          "file": "windows.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "fixed-view actual openings at zero half and full",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:15.755Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-264e7ea2913e7bf4407e",
+          "file": "windows.spec.ts",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:20.727Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-window-poses",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICItMC43NTAwMDAsMC45Nzg3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZsIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICItMC44MDUwMDAsMC43NjQyODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAiZmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC41NDk3ODMsLTAuMTcyNTEzIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAsCiAgICAicG9zaXRpb24iOiAiMC43NTAwMDAsMC45Nzg3OTAsLTAuMTcyNTIwIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9CiAgICB9CiAgfSwKICB7CiAgICAiY29ybmVyIjogImZyIiwKICAgICJvcGVubmVzcyI6IDAuNSwKICAgICJwb3NpdGlvbiI6ICIwLjgwNTAwMCwwLjc2NDI5MCwtMC4xNzI1MjAiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJmciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNTQ5NzkwLC0wLjE3MjUyMCIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDEKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLAogICAgInBvc2l0aW9uIjogIi0wLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMSIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJybCIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiLTAuODA1MDAwLDAuODE1NTI0LDAuNzU4OTIxIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMC41CiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicmwiLAogICAgIm9wZW5uZXNzIjogMSwKICAgICJwb3NpdGlvbiI6ICItMC44NjAwMDAsMC42MTg1MjQsMC43NTg5MjEiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAxCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0KICAgIH0KICB9LAogIHsKICAgICJjb3JuZXIiOiAicnIiLAogICAgIm9wZW5uZXNzIjogMCwKICAgICJwb3NpdGlvbiI6ICIwLjc1MDAwMCwxLjAxMjUyNCwwLjc1ODkyMiIsCiAgICAidGFyZ2V0cyI6IHsKICAgICAgImZsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgImZyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJsIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfSwKICAgICAgInJyIjogewogICAgICAgICJvcGVubmVzcyI6IDAKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAwLjUsCiAgICAicG9zaXRpb24iOiAiMC44MDUwMDAsMC44MTU1MjQsMC43NTg5MjIiLAogICAgInRhcmdldHMiOiB7CiAgICAgICJmbCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJmciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJybCI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwCiAgICAgIH0sCiAgICAgICJyciI6IHsKICAgICAgICAib3Blbm5lc3MiOiAwLjUKICAgICAgfQogICAgfQogIH0sCiAgewogICAgImNvcm5lciI6ICJyciIsCiAgICAib3Blbm5lc3MiOiAxLAogICAgInBvc2l0aW9uIjogIjAuODYwMDAwLDAuNjE4NTI0LDAuNzU4OTIyIiwKICAgICJ0YXJnZXRzIjogewogICAgICAiZmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAiZnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicmwiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMAogICAgICB9LAogICAgICAicnIiOiB7CiAgICAgICAgIm9wZW5uZXNzIjogMQogICAgICB9CiAgICB9CiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-9480eafa853bee656c1a",
+          "file": "windows.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:30.397Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-df79b3799c8b5aa2e1ff",
+          "file": "windows.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "3D window selection works for open apertures; camera dragging never operates a window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2157,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:33.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-c23dd564b2fb05ac80b8",
+          "file": "windows.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "reverses an active animation and preserves a real intermediate pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:35.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-9bc8393f837f62c53869",
+          "file": "windows.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "fixed-view actual openings at zero half and full",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:49:37.213Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c098327896050d377ef5-1de502b4b85e7cd9d006",
+          "file": "windows.spec.ts",
+          "line": 65,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T10:48:58.494Z",
+    "duration": 43202.386000000006,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

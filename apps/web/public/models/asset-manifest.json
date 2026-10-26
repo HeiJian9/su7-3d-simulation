@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
-  "bytes": 6245740,
+  "sha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b",
+  "bytes": 6247344,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定原包导入的 SU7；I0–I1 仅观察，无部件动画。"
+  "message": "指定 SU7 · I2 四窗真实几何升降；语音接口待配置。"
 }

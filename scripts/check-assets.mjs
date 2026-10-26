@@ -18,5 +18,5 @@ const report = { sha256: digest, bytes: bytes.length, nodes: root.listNodes().le
   extensions: root.listExtensionsUsed().map((e) => e.extensionName),
 };
 if (report.meshes !== 84 || report.triangles !== 92410) throw new Error('Unexpected geometry, compare with the selected original package.');
-await writeFile('docs/assets/runtime-check.json', JSON.stringify(report, null, 2) + '\n');
+await writeFile(root.listNodes().some(n=>n.getName()==='WINDOW_FL_ROOT') ? 'docs/assets/i2-runtime-check.json' : 'docs/assets/runtime-check.json', JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));

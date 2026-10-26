@@ -5,6 +5,7 @@ dist/
 !.env.example
 *.log
 !docs/validation/*.log
+!docs/validation/**/*.log
 test-results/
 playwright-report/
 .tools/

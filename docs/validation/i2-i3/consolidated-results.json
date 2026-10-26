@@ -1,0 +1,345 @@
+{
+  "note": "Consolidated by test title and project; full original and final targeted reports retained. Initial WebM test observer error fixed; 1366 layout compacted and verified. No real external API validation.",
+  "createdAt": "2026-10-26T11:54:45.104Z",
+  "passed": 47,
+  "skipped": 1,
+  "failed": 0,
+  "cases": [
+    {
+      "key": "Edge-1920x1080|actual GLB, health, visible controls and responsive layout",
+      "project": "Edge-1920x1080",
+      "title": "actual GLB, health, visible controls and responsive layout",
+      "status": "expected",
+      "durationMs": 7794
+    },
+    {
+      "key": "Edge-1920x1080|orbit rotation, actual right-button pan, wheel zoom and exact reset",
+      "project": "Edge-1920x1080",
+      "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+      "status": "expected",
+      "durationMs": 8375
+    },
+    {
+      "key": "Edge-1920x1080|cabin, free movement, look, focused input isolation and keyboard return",
+      "project": "Edge-1920x1080",
+      "title": "cabin, free movement, look, focused input isolation and keyboard return",
+      "status": "expected",
+      "durationMs": 12559
+    },
+    {
+      "key": "Edge-1920x1080|corrupt model fails visibly, then retry loads the actual asset",
+      "project": "Edge-1920x1080",
+      "title": "corrupt model fails visibly, then retry loads the actual asset",
+      "status": "expected",
+      "durationMs": 924
+    },
+    {
+      "key": "Edge-1920x1080|two minutes of continuous camera operations remain responsive",
+      "project": "Edge-1920x1080",
+      "title": "two minutes of continuous camera operations remain responsive",
+      "status": "expected",
+      "durationMs": 122537
+    },
+    {
+      "key": "Edge-1366x768|actual GLB, health, visible controls and responsive layout",
+      "project": "Edge-1366x768",
+      "title": "actual GLB, health, visible controls and responsive layout",
+      "status": "expected",
+      "durationMs": 8680
+    },
+    {
+      "key": "Edge-1366x768|orbit rotation, actual right-button pan, wheel zoom and exact reset",
+      "project": "Edge-1366x768",
+      "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+      "status": "expected",
+      "durationMs": 7559
+    },
+    {
+      "key": "Edge-1366x768|cabin, free movement, look, focused input isolation and keyboard return",
+      "project": "Edge-1366x768",
+      "title": "cabin, free movement, look, focused input isolation and keyboard return",
+      "status": "expected",
+      "durationMs": 11598
+    },
+    {
+      "key": "Edge-1366x768|corrupt model fails visibly, then retry loads the actual asset",
+      "project": "Edge-1366x768",
+      "title": "corrupt model fails visibly, then retry loads the actual asset",
+      "status": "expected",
+      "durationMs": 913
+    },
+    {
+      "key": "Edge-1366x768|two minutes of continuous camera operations remain responsive",
+      "project": "Edge-1366x768",
+      "title": "two minutes of continuous camera operations remain responsive",
+      "status": "skipped",
+      "durationMs": 178
+    },
+    {
+      "key": "Edge-1920x1080|Mock-only microphone VAD → transcript → real geometry → API audio playback",
+      "project": "Edge-1920x1080",
+      "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+      "status": "expected",
+      "durationMs": 5129
+    },
+    {
+      "key": "Edge-1920x1080|Mock clarification chooses one window and new recording stops old API playback",
+      "project": "Edge-1920x1080",
+      "title": "Mock clarification chooses one window and new recording stops old API playback",
+      "status": "expected",
+      "durationMs": 7982
+    },
+    {
+      "key": "Edge-1920x1080|Mock late ASR reply cannot override even an unchanged manual target",
+      "project": "Edge-1920x1080",
+      "title": "Mock late ASR reply cannot override even an unchanged manual target",
+      "status": "expected",
+      "durationMs": 4344
+    },
+    {
+      "key": "Edge-1920x1080|cancelling actual browser capture releases tracks and sends no audio",
+      "project": "Edge-1920x1080",
+      "title": "cancelling actual browser capture releases tracks and sends no audio",
+      "status": "expected",
+      "durationMs": 1024
+    },
+    {
+      "key": "Edge-1920x1080|manual recording finish works before the silence timeout",
+      "project": "Edge-1920x1080",
+      "title": "manual recording finish works before the silence timeout",
+      "status": "expected",
+      "durationMs": 2333
+    },
+    {
+      "key": "Edge-1920x1080|Mock TTS failure preserves actual action and supports a separate replay",
+      "project": "Edge-1920x1080",
+      "title": "Mock TTS failure preserves actual action and supports a separate replay",
+      "status": "expected",
+      "durationMs": 4626
+    },
+    {
+      "key": "Edge-1920x1080|Mock microphone error: 权限拒绝; manual control survives",
+      "project": "Edge-1920x1080",
+      "title": "Mock microphone error: 权限拒绝; manual control survives",
+      "status": "expected",
+      "durationMs": 1296
+    },
+    {
+      "key": "Edge-1920x1080|Mock microphone error: 无设备; manual control survives",
+      "project": "Edge-1920x1080",
+      "title": "Mock microphone error: 无设备; manual control survives",
+      "status": "expected",
+      "durationMs": 1277
+    },
+    {
+      "key": "Edge-1920x1080|Mock silence never uploads audio",
+      "project": "Edge-1920x1080",
+      "title": "Mock silence never uploads audio",
+      "status": "expected",
+      "durationMs": 6265
+    },
+    {
+      "key": "Edge-1920x1080|Mock ASR error 401: manual path remains usable",
+      "project": "Edge-1920x1080",
+      "title": "Mock ASR error 401: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4227
+    },
+    {
+      "key": "Edge-1920x1080|Mock ASR error 429: manual path remains usable",
+      "project": "Edge-1920x1080",
+      "title": "Mock ASR error 429: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4200
+    },
+    {
+      "key": "Edge-1920x1080|Mock ASR error 504: manual path remains usable",
+      "project": "Edge-1920x1080",
+      "title": "Mock ASR error 504: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4205
+    },
+    {
+      "key": "Edge-1920x1080|Mock ASR error 415: manual path remains usable",
+      "project": "Edge-1920x1080",
+      "title": "Mock ASR error 415: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4213
+    },
+    {
+      "key": "Edge-1920x1080|unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+      "project": "Edge-1920x1080",
+      "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+      "status": "expected",
+      "durationMs": 3987
+    },
+    {
+      "key": "Edge-1366x768|Mock-only microphone VAD → transcript → real geometry → API audio playback",
+      "project": "Edge-1366x768",
+      "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+      "status": "expected",
+      "durationMs": 4500
+    },
+    {
+      "key": "Edge-1366x768|Mock clarification chooses one window and new recording stops old API playback",
+      "project": "Edge-1366x768",
+      "title": "Mock clarification chooses one window and new recording stops old API playback",
+      "status": "expected",
+      "durationMs": 7977
+    },
+    {
+      "key": "Edge-1366x768|Mock late ASR reply cannot override even an unchanged manual target",
+      "project": "Edge-1366x768",
+      "title": "Mock late ASR reply cannot override even an unchanged manual target",
+      "status": "expected",
+      "durationMs": 4308
+    },
+    {
+      "key": "Edge-1366x768|cancelling actual browser capture releases tracks and sends no audio",
+      "project": "Edge-1366x768",
+      "title": "cancelling actual browser capture releases tracks and sends no audio",
+      "status": "expected",
+      "durationMs": 939
+    },
+    {
+      "key": "Edge-1366x768|manual recording finish works before the silence timeout",
+      "project": "Edge-1366x768",
+      "title": "manual recording finish works before the silence timeout",
+      "status": "expected",
+      "durationMs": 2244
+    },
+    {
+      "key": "Edge-1366x768|Mock TTS failure preserves actual action and supports a separate replay",
+      "project": "Edge-1366x768",
+      "title": "Mock TTS failure preserves actual action and supports a separate replay",
+      "status": "expected",
+      "durationMs": 4666
+    },
+    {
+      "key": "Edge-1366x768|Mock microphone error: 权限拒绝; manual control survives",
+      "project": "Edge-1366x768",
+      "title": "Mock microphone error: 权限拒绝; manual control survives",
+      "status": "expected",
+      "durationMs": 1224
+    },
+    {
+      "key": "Edge-1366x768|Mock microphone error: 无设备; manual control survives",
+      "project": "Edge-1366x768",
+      "title": "Mock microphone error: 无设备; manual control survives",
+      "status": "expected",
+      "durationMs": 1361
+    },
+    {
+      "key": "Edge-1366x768|Mock silence never uploads audio",
+      "project": "Edge-1366x768",
+      "title": "Mock silence never uploads audio",
+      "status": "expected",
+      "durationMs": 6215
+    },
+    {
+      "key": "Edge-1366x768|Mock ASR error 401: manual path remains usable",
+      "project": "Edge-1366x768",
+      "title": "Mock ASR error 401: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4140
+    },
+    {
+      "key": "Edge-1366x768|Mock ASR error 429: manual path remains usable",
+      "project": "Edge-1366x768",
+      "title": "Mock ASR error 429: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4136
+    },
+    {
+      "key": "Edge-1366x768|Mock ASR error 504: manual path remains usable",
+      "project": "Edge-1366x768",
+      "title": "Mock ASR error 504: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4127
+    },
+    {
+      "key": "Edge-1366x768|Mock ASR error 415: manual path remains usable",
+      "project": "Edge-1366x768",
+      "title": "Mock ASR error 415: manual path remains usable",
+      "status": "expected",
+      "durationMs": 4115
+    },
+    {
+      "key": "Edge-1366x768|unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+      "project": "Edge-1366x768",
+      "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+      "status": "expected",
+      "durationMs": 3865
+    },
+    {
+      "key": "Edge-1920x1080|each real window independently reaches 0, 50, 100 and continuous slider positions",
+      "project": "Edge-1920x1080",
+      "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+      "status": "expected",
+      "durationMs": 9898
+    },
+    {
+      "key": "Edge-1920x1080|text rules, ambiguity, relative operations, negation and unknown clauses share state",
+      "project": "Edge-1920x1080",
+      "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+      "status": "expected",
+      "durationMs": 3016
+    },
+    {
+      "key": "Edge-1920x1080|3D window selection works for open apertures; camera dragging never operates a window",
+      "project": "Edge-1920x1080",
+      "title": "3D window selection works for open apertures; camera dragging never operates a window",
+      "status": "expected",
+      "durationMs": 2007
+    },
+    {
+      "key": "Edge-1920x1080|reverses an active animation and preserves a real intermediate pose",
+      "project": "Edge-1920x1080",
+      "title": "reverses an active animation and preserves a real intermediate pose",
+      "status": "expected",
+      "durationMs": 1549
+    },
+    {
+      "key": "Edge-1920x1080|fixed-view actual openings at zero half and full",
+      "project": "Edge-1920x1080",
+      "title": "fixed-view actual openings at zero half and full",
+      "status": "expected",
+      "durationMs": 4630
+    },
+    {
+      "key": "Edge-1366x768|each real window independently reaches 0, 50, 100 and continuous slider positions",
+      "project": "Edge-1366x768",
+      "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+      "status": "expected",
+      "durationMs": 9704
+    },
+    {
+      "key": "Edge-1366x768|text rules, ambiguity, relative operations, negation and unknown clauses share state",
+      "project": "Edge-1366x768",
+      "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+      "status": "expected",
+      "durationMs": 2945
+    },
+    {
+      "key": "Edge-1366x768|3D window selection works for open apertures; camera dragging never operates a window",
+      "project": "Edge-1366x768",
+      "title": "3D window selection works for open apertures; camera dragging never operates a window",
+      "status": "expected",
+      "durationMs": 2094
+    },
+    {
+      "key": "Edge-1366x768|reverses an active animation and preserves a real intermediate pose",
+      "project": "Edge-1366x768",
+      "title": "reverses an active animation and preserves a real intermediate pose",
+      "status": "expected",
+      "durationMs": 1392
+    },
+    {
+      "key": "Edge-1366x768|fixed-view actual openings at zero half and full",
+      "project": "Edge-1366x768",
+      "title": "fixed-view actual openings at zero half and full",
+      "status": "expected",
+      "durationMs": 4383
+    }
+  ]
+}

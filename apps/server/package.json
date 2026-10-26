@@ -1,6 +1,6 @@
 {
   "name": "@su7/server",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "5.3.0",
+    "multer": "2.5.0",
     "zod": "4.6.7"
   }
 }

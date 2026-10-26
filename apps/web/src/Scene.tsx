@@ -8,6 +8,7 @@ import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.j
 import type { AssetManifest } from '../../../packages/shared/src/asset';
 import { CameraRig } from './CameraRig';
 import { useScene } from './store';
+import { WindowMechanism } from './WindowMechanism';
 
 class WebGLErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
   state = { error: false };
@@ -89,7 +90,7 @@ function RuntimeModel({ asset, attempt }: { asset: AssetManifest; attempt: numbe
     void load();
     return () => { disposed = true; abort.abort(); clearTimeout(timer); draco.dispose(); if (scene) disposeScene(scene); };
   }, [asset, attempt]);
-  return model ? <primitive object={model} dispose={null} /> : null;
+  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /></> : null;
 }
 
 function Diagnostics() {

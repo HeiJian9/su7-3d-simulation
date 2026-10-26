@@ -1,0 +1,27 @@
+[
+  {
+    "file": "assets/source/blender/su7-enhanced.blend",
+    "bytes": 12880755,
+    "sha256": "bf875a6cb960f8e77d7e8e211b24f053c5e444c687406a06ee5c43cbe5fe6fba"
+  },
+  {
+    "file": "apps/web/public/models/su7-runtime.glb",
+    "bytes": 6247344,
+    "sha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b"
+  },
+  {
+    "file": "assets/derived/su7-runtime.glb",
+    "bytes": 6247344,
+    "sha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b"
+  },
+  {
+    "file": "docs/assets/window-mapping.json",
+    "bytes": 27912,
+    "sha256": "351d283f321207ecddc6371caea2b59bfa898d26c8fa0d8d7f4c711b2f984d7d"
+  },
+  {
+    "file": "apps/web/src/data/window-mapping.json",
+    "bytes": 27912,
+    "sha256": "351d283f321207ecddc6371caea2b59bfa898d26c8fa0d8d7f4c711b2f984d7d"
+  }
+]

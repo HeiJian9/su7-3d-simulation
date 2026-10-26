@@ -1,0 +1,152 @@
+
+> su7-interaction-lab@0.3.0 test:e2e
+> playwright test
+
+
+Running 48 tests using 1 worker
+
+(node:38992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (6.9s)
+  ok  2 [Edge-1920x1080] › tests\e2e\scene.spec.ts:47:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (8.4s)
+  ok  3 [Edge-1920x1080] › tests\e2e\scene.spec.ts:72:1 › cabin, free movement, look, focused input isolation and keyboard return (12.6s)
+  ok  4 [Edge-1920x1080] › tests\e2e\scene.spec.ts:112:1 › corrupt model fails visibly, then retry loads the actual asset (924ms)
+  ok  5 [Edge-1920x1080] › tests\e2e\scene.spec.ts:124:1 › two minutes of continuous camera operations remain responsive (2.0m)
+  ok  6 [Edge-1920x1080] › tests\e2e\speech.spec.ts:21:1 › Mock-only microphone VAD → transcript → real geometry → API audio playback (5.1s)
+  ok  7 [Edge-1920x1080] › tests\e2e\speech.spec.ts:31:1 › Mock clarification chooses one window and new recording stops old API playback (8.0s)
+  ok  8 [Edge-1920x1080] › tests\e2e\speech.spec.ts:42:1 › Mock late ASR reply cannot override even an unchanged manual target (4.3s)
+  ok  9 [Edge-1920x1080] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (1.0s)
+  ok 10 [Edge-1920x1080] › tests\e2e\speech.spec.ts:56:1 › manual recording finish works before the silence timeout (2.3s)
+  ok 11 [Edge-1920x1080] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (4.6s)
+  ok 12 [Edge-1920x1080] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 权限拒绝; manual control survives (1.3s)
+  ok 13 [Edge-1920x1080] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 无设备; manual control survives (1.3s)
+  ok 14 [Edge-1920x1080] › tests\e2e\speech.spec.ts:74:1 › Mock silence never uploads audio (6.3s)
+  ok 15 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 401: manual path remains usable (4.2s)
+  ok 16 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 429: manual path remains usable (4.2s)
+  ok 17 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 504: manual path remains usable (4.2s)
+  ok 18 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 415: manual path remains usable (4.2s)
+  x  19 [Edge-1920x1080] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (4.0s)
+(node:36276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [Edge-1920x1080] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (9.9s)
+  ok 21 [Edge-1920x1080] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (3.0s)
+  ok 22 [Edge-1920x1080] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (2.0s)
+  ok 23 [Edge-1920x1080] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.5s)
+  ok 24 [Edge-1920x1080] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.6s)
+(node:36776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 25 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (8.8s)
+  ok 26 [Edge-1366x768] › tests\e2e\scene.spec.ts:47:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (7.6s)
+  ok 27 [Edge-1366x768] › tests\e2e\scene.spec.ts:72:1 › cabin, free movement, look, focused input isolation and keyboard return (11.6s)
+  ok 28 [Edge-1366x768] › tests\e2e\scene.spec.ts:112:1 › corrupt model fails visibly, then retry loads the actual asset (913ms)
+  -  29 [Edge-1366x768] › tests\e2e\scene.spec.ts:124:1 › two minutes of continuous camera operations remain responsive
+  ok 30 [Edge-1366x768] › tests\e2e\speech.spec.ts:21:1 › Mock-only microphone VAD → transcript → real geometry → API audio playback (4.5s)
+  ok 31 [Edge-1366x768] › tests\e2e\speech.spec.ts:31:1 › Mock clarification chooses one window and new recording stops old API playback (8.0s)
+  ok 32 [Edge-1366x768] › tests\e2e\speech.spec.ts:42:1 › Mock late ASR reply cannot override even an unchanged manual target (4.3s)
+  ok 33 [Edge-1366x768] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (939ms)
+  ok 34 [Edge-1366x768] › tests\e2e\speech.spec.ts:56:1 › manual recording finish works before the silence timeout (2.2s)
+  ok 35 [Edge-1366x768] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (4.7s)
+  ok 36 [Edge-1366x768] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 权限拒绝; manual control survives (1.2s)
+  ok 37 [Edge-1366x768] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 无设备; manual control survives (1.4s)
+  ok 38 [Edge-1366x768] › tests\e2e\speech.spec.ts:74:1 › Mock silence never uploads audio (6.2s)
+  ok 39 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 401: manual path remains usable (4.1s)
+  ok 40 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 429: manual path remains usable (4.1s)
+  ok 41 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 504: manual path remains usable (4.1s)
+  ok 42 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 415: manual path remains usable (4.1s)
+  x  43 [Edge-1366x768] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (3.9s)
+(node:27392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 44 [Edge-1366x768] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (9.7s)
+  ok 45 [Edge-1366x768] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (2.9s)
+  ok 46 [Edge-1366x768] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (2.1s)
+  ok 47 [Edge-1366x768] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.4s)
+  ok 48 [Edge-1366x768] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.4s)
+
+
+  1) [Edge-1920x1080] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover
+
+    TypeError: Cannot read properties of null (reading 'toString')
+
+      86 | test('unconfigured local server: WebM recording reaches explicit 503 and manual controls recover',async({page})=>{
+      87 |   await instrument(page);await page.goto('/');await expect(page.getByTestId('speech-mode')).toContainText('待配置');
+    > 88 |   let mime='';page.on('request',request=>{if(request.url().endsWith('/api/speech/transcribe'))mime=request.postDataBuffer()!.toString('latin1').includes('audio/webm')?'audio/webm':'unknown';});
+         |                                                                                                                            ^
+      89 |   await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('尚未配置',{timeout:12000});expect(mime).toBe('audio/webm');
+      90 |   await expect.poll(()=>tracksStopped(page)).toBe(true);await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+      91 | });
+        at _Page.<anonymous> (D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:88:124)
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "audio/webm"
+    Received: ""
+
+      87 |   await instrument(page);await page.goto('/');await expect(page.getByTestId('speech-mode')).toContainText('待配置');
+      88 |   let mime='';page.on('request',request=>{if(request.url().endsWith('/api/speech/transcribe'))mime=request.postDataBuffer()!.toString('latin1').includes('audio/webm')?'audio/webm':'unknown';});
+    > 89 |   await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('尚未配置',{timeout:12000});expect(mime).toBe('audio/webm');
+         |                                                                                                                                                                       ^
+      90 |   await expect.poll(()=>tracksStopped(page)).toBe(true);await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+      91 | });
+      92 |
+        at D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:89:167
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1920x1080\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1920x1080\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1920x1080\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1920x1080\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [Edge-1366x768] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover
+
+    TypeError: Cannot read properties of null (reading 'toString')
+
+      86 | test('unconfigured local server: WebM recording reaches explicit 503 and manual controls recover',async({page})=>{
+      87 |   await instrument(page);await page.goto('/');await expect(page.getByTestId('speech-mode')).toContainText('待配置');
+    > 88 |   let mime='';page.on('request',request=>{if(request.url().endsWith('/api/speech/transcribe'))mime=request.postDataBuffer()!.toString('latin1').includes('audio/webm')?'audio/webm':'unknown';});
+         |                                                                                                                            ^
+      89 |   await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('尚未配置',{timeout:12000});expect(mime).toBe('audio/webm');
+      90 |   await expect.poll(()=>tracksStopped(page)).toBe(true);await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+      91 | });
+        at _Page.<anonymous> (D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:88:124)
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "audio/webm"
+    Received: ""
+
+      87 |   await instrument(page);await page.goto('/');await expect(page.getByTestId('speech-mode')).toContainText('待配置');
+      88 |   let mime='';page.on('request',request=>{if(request.url().endsWith('/api/speech/transcribe'))mime=request.postDataBuffer()!.toString('latin1').includes('audio/webm')?'audio/webm':'unknown';});
+    > 89 |   await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('尚未配置',{timeout:12000});expect(mime).toBe('audio/webm');
+         |                                                                                                                                                                       ^
+      90 |   await expect.poll(()=>tracksStopped(page)).toBe(true);await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
+      91 | });
+      92 |
+        at D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:89:167
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1366x768\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1366x768\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1366x768\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\speech-unconfigured-local--92383-and-manual-controls-recover-Edge-1366x768\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [Edge-1920x1080] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover
+    [Edge-1366x768] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover
+  1 skipped
+  45 passed (5.6m)

@@ -1,0 +1,174 @@
+{
+  "openedFile": "D:\\code\\Projects\\3D simulation\\.tools\\i2-portable-check\\su7-enhanced.blend",
+  "blender": "4.5.15 LTS",
+  "meshes": 84,
+  "triangles": 92410,
+  "images": [
+    {
+      "name": "Mesh13_diff.png",
+      "packed": true,
+      "packedBytes": 185651,
+      "hasData": true,
+      "size": [
+        512,
+        512
+      ],
+      "firstPixel": 0.27843138575553894
+    },
+    {
+      "name": "Mesh16_diff.png",
+      "packed": true,
+      "packedBytes": 793,
+      "hasData": true,
+      "size": [
+        256,
+        128
+      ],
+      "firstPixel": 0.12941177189350128
+    },
+    {
+      "name": "Mesh17_diff.png",
+      "packed": true,
+      "packedBytes": 161007,
+      "hasData": true,
+      "size": [
+        512,
+        512
+      ],
+      "firstPixel": 0.08627451211214066
+    },
+    {
+      "name": "Mesh1_diff.png",
+      "packed": true,
+      "packedBytes": 51834,
+      "hasData": true,
+      "size": [
+        512,
+        256
+      ],
+      "firstPixel": 0.125490203499794
+    },
+    {
+      "name": "Mesh22_diff.png",
+      "packed": true,
+      "packedBytes": 94,
+      "hasData": true,
+      "size": [
+        4,
+        4
+      ],
+      "firstPixel": 0.0
+    },
+    {
+      "name": "Mesh23_diff.png",
+      "packed": true,
+      "packedBytes": 26118,
+      "hasData": true,
+      "size": [
+        128,
+        128
+      ],
+      "firstPixel": 0.5803921818733215
+    },
+    {
+      "name": "Mesh25_diff.png",
+      "packed": true,
+      "packedBytes": 61166,
+      "hasData": true,
+      "size": [
+        512,
+        512
+      ],
+      "firstPixel": 0.10588236153125763
+    },
+    {
+      "name": "Mesh2_diff.png",
+      "packed": true,
+      "packedBytes": 29702,
+      "hasData": true,
+      "size": [
+        256,
+        256
+      ],
+      "firstPixel": 0.38431376218795776
+    },
+    {
+      "name": "Mesh30_diff.png",
+      "packed": true,
+      "packedBytes": 87414,
+      "hasData": true,
+      "size": [
+        512,
+        256
+      ],
+      "firstPixel": 0.19215688109397888
+    },
+    {
+      "name": "Mesh3_diff.png",
+      "packed": true,
+      "packedBytes": 17705,
+      "hasData": true,
+      "size": [
+        256,
+        256
+      ],
+      "firstPixel": 0.14901961386203766
+    },
+    {
+      "name": "Mesh4_diff.png",
+      "packed": true,
+      "packedBytes": 69204,
+      "hasData": true,
+      "size": [
+        512,
+        512
+      ],
+      "firstPixel": 0.08235294371843338
+    },
+    {
+      "name": "Mesh60_diff.png",
+      "packed": true,
+      "packedBytes": 13025,
+      "hasData": true,
+      "size": [
+        128,
+        128
+      ],
+      "firstPixel": 0.41960787773132324
+    },
+    {
+      "name": "Mesh61_diff.png",
+      "packed": true,
+      "packedBytes": 438727,
+      "hasData": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "firstPixel": 0.8823530077934265
+    },
+    {
+      "name": "Mesh61_nmap.png",
+      "packed": true,
+      "packedBytes": 303625,
+      "hasData": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "firstPixel": 0.49803924560546875
+    },
+    {
+      "name": "Mesh61_spec.png",
+      "packed": true,
+      "packedBytes": 465161,
+      "hasData": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "firstPixel": 1.0
+    }
+  ],
+  "allTexturesPacked": true
+}

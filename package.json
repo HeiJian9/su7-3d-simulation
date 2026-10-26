@@ -1,7 +1,7 @@
 {
   "name": "su7-interaction-lab",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.3.0",
   "type": "module",
   "workspaces": [
     "apps/*",
@@ -19,7 +19,8 @@
     "build": "npm run typecheck && npm run build -w @su7/web && npm run build -w @su7/server",
     "start": "node apps/server/dist/apps/server/src/index.js",
     "asset:import": "node scripts/import-model.mjs",
-    "asset:check": "node scripts/check-assets.mjs"
+    "asset:check": "node scripts/check-assets.mjs",
+    "asset:export": "node scripts/export-windows.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -27,6 +28,7 @@
     "@gltf-transform/extensions": "4.5.1",
     "@playwright/test": "1.64.1",
     "@types/express": "5.0.6",
+    "@types/multer": "2.3.0",
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",

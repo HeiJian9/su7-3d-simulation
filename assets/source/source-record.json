@@ -15,11 +15,15 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "287466e0ba87f2a17d5d544600e12b207881902fb68b026ffb18a4518e20c57b",
+  "runtimeSha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
     "PBR material adaptation; original diffuse color retained",
-    "Packed textures and self-contained GLB; no component animation"
-  ]
+    "Packed textures and self-contained GLB; no component animation",
+    "I2: semantic four-window roots from original source glass; local translation into doors, no glass scaling or opacity animation; adjacent static glazing retained"
+  ],
+  "enhancedAt": "2026-10-26T11:09:08.023Z",
+  "assetIncrement": "I2",
+  "windowMapping": "docs/assets/window-mapping.json"
 }

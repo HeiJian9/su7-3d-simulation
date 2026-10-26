@@ -68,6 +68,7 @@ export function CameraRig() {
       if (!drag || event.pointerId !== drag.id) return;
       const dragged = isCameraDrag(drag.start, [event.clientX, event.clientY], drag.distance);
       useScene.getState().patch({ gesture: dragged ? '相机拖动（已抑制部件点击）' : '场景点击（I1 无部件动作）' });
+      if (!dragged && drag.button === 0 && !useScene.getState().panTool) canvas.dispatchEvent(new CustomEvent('su7:scene-click', { detail: { clientX: event.clientX, clientY: event.clientY } }));
       if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
       drag = null;
     };

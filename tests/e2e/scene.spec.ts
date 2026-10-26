@@ -30,6 +30,7 @@ test('actual GLB, health, visible controls and responsive layout', async ({ page
   for (const label of ['进入座舱', '回到车辆', '前方视角', '后方视角', '左方视角', '右方视角']) {
     await expect(page.getByRole('button', { name: label, exact: true })).toBeInViewport();
   }
+  for(const label of ['左前车窗开度','右前车窗开度','左后车窗开度','右后车窗开度'])await expect(page.getByRole('slider',{name:label,exact:true})).toBeInViewport();
   for (const [label, expected] of [
     ['前方视角', [0, 1.7, -7.8]], ['后方视角', [0, 1.7, 7.8]],
     ['左方视角', [-7.8, 1.7, 0]], ['右方视角', [7.8, 1.7, 0]],
@@ -40,7 +41,7 @@ test('actual GLB, health, visible controls and responsive layout', async ({ page
   await reset(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
   await page.getByRole('button', { name: '关闭调试记录', exact: true }).click();
-  await page.screenshot({ path: `docs/assets/su7-exterior-${testInfo.project.name}.png` });
+  await page.screenshot({ path: `docs/assets/i2-i3/su7-exterior-${testInfo.project.name}.png` });
   expect(errors).toEqual([]);
 });
 
@@ -74,7 +75,7 @@ test('cabin, free movement, look, focused input isolation and keyboard return', 
   await page.getByRole('button', { name: '进入座舱', exact: true }).click();
   await expect.poll(() => position(page)).toEqual([-0.4, 1.15, -0.05]);
   await page.getByRole('button', { name: '关闭调试记录', exact: true }).click();
-  await page.screenshot({ path: `docs/assets/su7-cabin-${testInfo.project.name}.png` });
+  await page.screenshot({ path: `docs/assets/i2-i3/su7-cabin-${testInfo.project.name}.png` });
   await page.getByRole('button', { name: '调试记录', exact: false }).click();
   await page.locator('canvas').click({ position: { x: 700, y: 350 } });
   await page.keyboard.down('w');
@@ -98,7 +99,7 @@ test('cabin, free movement, look, focused input isolation and keyboard return', 
   await page.mouse.up();
   await expect.poll(async () => distance(await rotation(page), view)).toBeGreaterThan(0.1);
   const point = await position(page);
-  await page.getByRole('slider').focus();
+  await page.getByRole('slider', { name: '移动速度', exact: false }).focus();
   await page.keyboard.press('ArrowRight');
   await page.keyboard.down('w');
   await page.waitForTimeout(350);
