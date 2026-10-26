@@ -10,6 +10,7 @@ import { CameraRig } from './CameraRig';
 import { useScene } from './store';
 import { WindowMechanism } from './WindowMechanism';
 import { VehicleMechanism } from './VehicleMechanism';
+import { AppearanceMechanism } from './AppearanceMechanism';
 
 class WebGLErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
   state = { error: false };
@@ -91,7 +92,7 @@ function RuntimeModel({ asset, attempt }: { asset: AssetManifest; attempt: numbe
     void load();
     return () => { disposed = true; abort.abort(); clearTimeout(timer); draco.dispose(); if (scene) disposeScene(scene); };
   }, [asset, attempt]);
-  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/></> : null;
+  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/><AppearanceMechanism model={model}/></> : null;
 }
 
 function Diagnostics() {
@@ -127,14 +128,15 @@ function Diagnostics() {
 }
 
 export function Scene({ asset, attempt }: { asset: AssetManifest | null; attempt: number }) {
+  const night=useScene(s=>s.night);
   return <WebGLErrorBoundary><Canvas shadows dpr={[1, 1.5]} camera={{ position: [6.4, 3.15, -7.2], fov: 42, near: 0.01, far: 120 }}
     gl={{ antialias: true, toneMapping: ACESFilmicToneMapping }}>
     <color attach="background" args={['#0b1014']} />
     <fog attach="fog" args={['#0b1014', 16, 48]} />
-    <hemisphereLight args={['#c4e1ec', '#253139', 0.7]} />
-    <directionalLight position={[4, 7, -3]} intensity={2} color="#e6f2f6" castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0001} shadow-camera-left={-5} shadow-camera-right={5} shadow-camera-top={5} shadow-camera-bottom={-5} />
-    <directionalLight position={[-4, 3, 5]} intensity={1.2} color="#81c5be" />
-    <Environment resolution={128} frames={1}>
+    <hemisphereLight args={['#c4e1ec', '#253139', night?.08:0.7]} />
+    <directionalLight position={[4, 7, -3]} intensity={night?.12:2} color="#e6f2f6" castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0001} shadow-camera-left={-5} shadow-camera-right={5} shadow-camera-top={5} shadow-camera-bottom={-5} />
+    <directionalLight position={[-4, 3, 5]} intensity={night?.04:1.2} color="#81c5be" />
+    <Environment key={String(night)} resolution={128} frames={1} environmentIntensity={night?.1:1}>
       <Lightformer position={[0, 6, 0]} rotation={[Math.PI / 2, 0, 0]} scale={[10, 3, 1]} intensity={4} />
       <Lightformer position={[-5, 3, 1]} rotation={[0, Math.PI / 2, 0]} scale={[8, 2, 1]} intensity={3} />
       <Lightformer position={[5, 2, -2]} rotation={[0, -Math.PI / 2, 0]} scale={[6, 1, 1]} intensity={2} color="#a0e2d6" />

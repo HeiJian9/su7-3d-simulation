@@ -8,7 +8,8 @@ export const actualValues: Record<string, Value> = {};
 interface VehicleStore {
   state: VehicleState;
   capabilities: string[];
-  registerCapabilities: (capabilities: string[]) => void;
+  capabilityOwners: Record<string,string[]>;
+  registerCapabilities: (owner:string, capabilities: string[]) => void;
   selectedPart: string | null;
   selectPart: (key: string) => void;
   available: Corner[];
@@ -32,8 +33,8 @@ interface VehicleStore {
   newConversation: () => void;
 }
 export const useVehicle = create<VehicleStore>((set, get) => ({
-  state: defaultVehicle(), capabilities: [], selectedPart: null, available: [], selected: null, preview: {}, context: {}, epoch: 0, executions: [], messages: [],
-  registerCapabilities: (capabilities) => set({capabilities}),
+  state: defaultVehicle(), capabilities: [], capabilityOwners:{}, selectedPart: null, available: [], selected: null, preview: {}, context: {}, epoch: 0, executions: [], messages: [],
+  registerCapabilities: (owner,capabilities) => set(s=>{const capabilityOwners={...s.capabilityOwners,[owner]:capabilities};return {capabilityOwners,capabilities:[...new Set(Object.values(capabilityOwners).flat())]};}),
   selectPart: (key) => { const [component,target]=key.split(':');set(s=>({selectedPart:key,epoch:s.epoch+1,context:{focus:{component:component as VehicleCommand['component'],targets:[target],updatedAt:Date.now()}},feedback:`已选择${effectLabel(key)}，可点击热点操作或使用控制面板。`})); },
   actual: { ...windowPoses }, feedback: '选择车窗，拖动滑块，或输入一句指令。',
   register: (available) => {

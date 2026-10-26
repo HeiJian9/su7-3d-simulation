@@ -32,3 +32,14 @@ describe('I4 complete rules',()=>{
     expect(parseVehicleText('不要打开左前门').kind).toBe('noop');expect(parseVehicleText('打开左前门，然后启动引擎').kind).toBe('unsupported');
   });
 });
+describe('I5 material and lighting rules',()=>{
+  it.each([['打开近光灯','headlights','low'],['打开远光灯','headlights','high'],['打开左转向灯','turnSignal','left'],['打开双闪','turnSignal','hazard'],['车身换成蓝色','paint','#4d80b4'],['打开氛围灯','ambient',true]])('%s',(text,component,value)=>{const r=parseVehicleText(text);expect(r.kind==='execute'&&r.commands[0]).toMatchObject({component,value});});
+  it('handles compound ambient color/brightness atomically and rejects unknown suffixes and out-of-range values',()=>{
+    const r=parseVehicleText('氛围灯换成紫色，亮度设为百分之四十');expect(r.kind).toBe('execute');if(r.kind!=='execute')throw Error();expect(r.commands).toMatchObject([{property:'color',value:'#9867ff'},{property:'brightness',value:.4}]);
+    const ledger=new VehicleLedger(),state=defaultVehicle(),available=new Set(['ambient:cabin','headlights:front','turnSignal:vehicle','paint:body']);
+    const result=ledger.apply(state,request(r.commands),available);expect(result.ok&&result.state.ambient).toMatchObject({color:'#9867ff',brightness:.4});
+    expect(parseVehicleText('车身换成蓝色然后自爆').kind).toBe('unsupported');expect(parseVehicleText('氛围灯亮度设为150%').kind).toBe('unsupported');expect(parseVehicleText('不要打开双闪').kind).toBe('noop');
+    const hazard=parseVehicleText('打开双闪');if(hazard.kind!=='execute')throw Error();const a=ledger.apply(state,request(hazard.commands,'hazard'),available);if(!a.ok)throw Error();
+    const left=parseVehicleText('打开左转向灯');if(left.kind!=='execute')throw Error();const b=ledger.apply(a.state,request(left.commands,'left',a.state.revision),available);expect(b.ok&&b.state.lights.turnSignal).toBe('left');
+  });
+});

@@ -36,5 +36,14 @@ const lid=objects.get(mapping.trunk.node);for(const name of mapping.trunk.source
 // Probe down into the source deck at the central trunk opening.
 function trunkProbe(){scene.updateMatrixWorld(true);ray.set(new Vector3(0,1.12,3),new Vector3(0,-.5,-1).normalize());return ray.intersectObject(scene,true).filter(h=>!h.object.userData.glass).map(h=>({name:h.object.name,y:h.point.y}));}
 const closed=trunkProbe();assert.equal(closed[0]?.name,'TRUNK_Paint5');lid.rotation.x=mapping.trunk.maxAngle;const open=trunkProbe();assert.equal(open[0]?.name,'TRUNK_INNER_CAVITY');assert.ok(open[0].y<.8);
-const report={stage:mapping.version,source:'actual exported GLB; no proxy animation',doorRecords:records,trunk:{closed:closed.slice(0,4),open:open.slice(0,4)},passed:true};
+let materialRoles;
+if(mapping.materialRoles){
+  const roles=mapping.materialRoles;const paintNodes=doc.getRoot().listNodes().filter(n=>n.getMesh()?.listPrimitives().some(p=>p.getMaterial()?.getName()===roles.paint.material)).map(n=>n.getName()).sort();
+  assert.deepEqual(paintNodes,[...roles.paint.nodes].sort(),'paint whitelist membership');
+  for(const name of roles.ambient.nodes)assert.ok(objects.get(name));
+  for(const c of ['fl','fr','rl','rr'])assert.equal(objects.get(`AMBIENT_DOOR_${c.toUpperCase()}`).parent,objects.get(mapping.doors[c].node));
+  for(const cfg of Object.values(roles.turnSignals))for(const name of cfg.nodes)assert.ok(objects.get(name));
+  materialRoles={paintNodes,ambientStrips:roles.ambient.nodes.length,independentMaterialNames:doc.getRoot().listMaterials().map(m=>m.getName())};
+}
+const report={stage:mapping.version,source:'actual exported GLB; no proxy animation',doorRecords:records,trunk:{closed:closed.slice(0,4),open:open.slice(0,4)},materialRoles,passed:true};
 await writeFile(`docs/assets/${mapping.version.split('.')[0].toLowerCase()}-geometry-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

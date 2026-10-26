@@ -1,5 +1,5 @@
 {
-  "version": "I4.1",
+  "version": "I5.1",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -255,5 +255,142 @@
       "destination": "TRUNK_Mesh71",
       "faces": 726
     }
-  ]
+  ],
+  "materialRoles": {
+    "paint": {
+      "material": "SU7_PAINT_BODY",
+      "nodes": [
+        "Paint1",
+        "Paint2",
+        "Paint3",
+        "Paint4",
+        "Paint5",
+        "Paint7",
+        "DOOR_FL_RETURNS",
+        "DOOR_FR_RETURNS",
+        "DOOR_RL_RETURNS",
+        "DOOR_RR_RETURNS",
+        "TRUNK_Paint5"
+      ],
+      "source": "Paint1Mtl clone; original roughness, metalness and maps retained"
+    },
+    "headlights": {
+      "left": {
+        "drlNodes": [
+          "HEADLIGHT_LEFT_DRL"
+        ],
+        "drlMaterial": "LAMP_LEFT_WHITE",
+        "projectors": [
+          {
+            "node": "HEADLIGHT_LEFT_PROJECTOR_0",
+            "material": "LAMP_LEFT_PROJECTOR_0",
+            "highOnly": true
+          },
+          {
+            "node": "HEADLIGHT_LEFT_PROJECTOR_1",
+            "material": "LAMP_LEFT_PROJECTOR_1",
+            "highOnly": false
+          },
+          {
+            "node": "HEADLIGHT_LEFT_PROJECTOR_2",
+            "material": "LAMP_LEFT_PROJECTOR_2",
+            "highOnly": false
+          }
+        ],
+        "lightPosition": [
+          -0.7321397662162781,
+          0.6415238976478577,
+          -2.2397382259368896
+        ]
+      },
+      "right": {
+        "drlNodes": [
+          "HEADLIGHT_RIGHT_DRL"
+        ],
+        "drlMaterial": "LAMP_RIGHT_WHITE",
+        "projectors": [
+          {
+            "node": "HEADLIGHT_RIGHT_PROJECTOR_0",
+            "material": "LAMP_RIGHT_PROJECTOR_0",
+            "highOnly": true
+          },
+          {
+            "node": "HEADLIGHT_RIGHT_PROJECTOR_1",
+            "material": "LAMP_RIGHT_PROJECTOR_1",
+            "highOnly": false
+          },
+          {
+            "node": "HEADLIGHT_RIGHT_PROJECTOR_2",
+            "material": "LAMP_RIGHT_PROJECTOR_2",
+            "highOnly": false
+          }
+        ],
+        "lightPosition": [
+          0.73213791847229,
+          0.6415233612060547,
+          -2.239736557006836
+        ]
+      }
+    },
+    "turnSignals": {
+      "left": {
+        "material": "TURN_LEFT_AMBER",
+        "nodes": [
+          "TURN_LEFT_FRONT",
+          "TURN_LEFT_REAR_LID",
+          "TURN_LEFT_REAR_BODY"
+        ]
+      },
+      "right": {
+        "material": "TURN_RIGHT_AMBER",
+        "nodes": [
+          "TURN_RIGHT_FRONT",
+          "TURN_RIGHT_REAR_LID",
+          "TURN_RIGHT_REAR_BODY"
+        ]
+      }
+    },
+    "ambient": {
+      "material": "AMBIENT_CABIN_LED",
+      "nodes": [
+        "AMBIENT_DASHBOARD",
+        "AMBIENT_DOOR_FL",
+        "AMBIENT_DOOR_FR",
+        "AMBIENT_DOOR_RL",
+        "AMBIENT_DOOR_RR"
+      ],
+      "lightPositions": [
+        [
+          -0.45,
+          0.87,
+          -0.55
+        ],
+        [
+          0.45,
+          0.87,
+          -0.55
+        ]
+      ],
+      "radius": 0.0028,
+      "note": "Physical tubes added along dashboard and existing door trim; each door strip is a child of its door hinge."
+    }
+  },
+  "cockpitHotspots": {
+    "lights": [
+      -0.5639777779579163,
+      0.8801214098930359,
+      -0.4736498119831085
+    ],
+    "ambient": [
+      0.07999999821186066,
+      0.9092371463775635,
+      -0.5768472375869751
+    ],
+    "wiper": [
+      -0.26801788806915283,
+      0.8801175951957703,
+      -0.47365994477272033
+    ]
+  },
+  "cockpitHotspotSource": "Original Mesh57 left/right steering button surfaces and center screen; annotations only, no full cockpit rebuild."
 }

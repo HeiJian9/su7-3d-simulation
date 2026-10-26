@@ -7,6 +7,7 @@ export const presets = {
   left: { position: [-7.8, 1.7, 0], target: [0, 0.8, 0] },
   right: { position: [7.8, 1.7, 0], target: [0, 0.8, 0] },
   cabin: { position: [-0.4, 1.15, -0.05], target: [-0.3, 0.93, -1.6] },
+  lighting: { position: [7, 5.5, -12], target: [0, .3, -4.5] },
 } as const;
 
 export function isCameraDrag(start: [number, number], end: [number, number], maxDistance = 0) {

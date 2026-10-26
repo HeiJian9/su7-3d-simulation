@@ -6,10 +6,10 @@ import mapping from './data/vehicle-mapping.json';
 import {actualValues,completeExecutions,manualCommand,useVehicle} from './vehicle';
 import {corners,doorLabels,type Corner} from '../../../packages/shared/src/vehicle';
 interface Binding {key:string;node:Group;angle:number;axis:'x'|'y';value:number}
-function Hotspot({model,parent,position,label,part,activate}:{model:Group;parent:Group;position:number[];label:string;part:string;activate:()=>void}){
+export function Hotspot({model,parent,position,label,part,activate,occlusion=true}:{model:Group;parent:Group;position:number[];label:string;part:string;activate:()=>void;occlusion?:boolean}){
   const selected=useVehicle(s=>s.selectedPart===part);const modelRef=useRef(model);
   const down=useRef({x:0,y:0});
-  return createPortal(<group position={position as [number,number,number]}><Html center occlude={[modelRef]} zIndexRange={[2,0]}><button className={`model-hotspot ${selected?'selected':''}`} aria-label={`模型热点：${label}`} data-part={part} onPointerDown={e=>{e.stopPropagation();down.current={x:e.clientX,y:e.clientY};}} onClick={e=>{e.stopPropagation();if(e.detail!==0&&Math.hypot(e.clientX-down.current.x,e.clientY-down.current.y)>5)return;useVehicle.getState().selectPart(part);activate();}}>{label}<span>↗</span></button></Html></group>,parent);
+  return createPortal(<group position={position as [number,number,number]}><Html center occlude={occlusion?[modelRef]:false} zIndexRange={[2,0]}><button className={`model-hotspot ${selected?'selected':''}`} aria-label={`模型热点：${label}`} data-part={part} onPointerDown={e=>{e.stopPropagation();down.current={x:e.clientX,y:e.clientY};}} onClick={e=>{e.stopPropagation();if(e.detail!==0&&Math.hypot(e.clientX-down.current.x,e.clientY-down.current.y)>5)return;useVehicle.getState().selectPart(part);activate();}}>{label}<span>↗</span></button></Html></group>,parent);
 }
 export function VehicleMechanism({model}:{model:Group}){
   const {gl}=useThree();const bindings=useRef<Binding[]>([]);const [hotspots,setHotspots]=useState<Array<{parent:Group;position:number[];label:string;part:string;corner?:Corner}>>([]);
@@ -20,8 +20,8 @@ export function VehicleMechanism({model}:{model:Group}){
     }
     const cfg=mapping.trunk,node=model.getObjectByName(cfg.node) as Group|undefined;
     if(node){items.push({key:'trunk:rear:openness',node,angle:cfg.maxAngle,axis:'x',value:0});points.push({parent:node,position:cfg.hotspot.map((v,i)=>v-cfg.hinge[i]),label:'后备箱',part:'trunk:rear'});}
-    bindings.current=items;setHotspots(points);useVehicle.getState().registerCapabilities(items.map(b=>b.key.split(':').slice(0,2).join(':')));
-    return()=>{for(const b of items){b.node.rotation[b.axis]=0;delete actualValues[b.key];}bindings.current=[];useVehicle.getState().registerCapabilities([]);};
+    bindings.current=items;setHotspots(points);useVehicle.getState().registerCapabilities('mechanical',items.map(b=>b.key.split(':').slice(0,2).join(':')));
+    return()=>{for(const b of items){b.node.rotation[b.axis]=0;delete actualValues[b.key];}bindings.current=[];useVehicle.getState().registerCapabilities('mechanical',[]);};
   },[model]);
   useFrame((_,delta)=>{
     const store=useVehicle.getState();

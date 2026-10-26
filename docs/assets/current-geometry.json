@@ -1,9 +1,10 @@
 {
-  "stage": "I4.1",
-  "sha256": "efd45fd7e1889a151769ba05b8383dd4ec59a0223bb48a7e37d4534b76e50d8b",
-  "nodes": 106,
-  "meshes": 96,
-  "triangles": 98760,
-  "materials": 25,
+  "stage": "I5.1",
+  "sha256": "6d61c9019c9d4307162dc586d2e2890d51995d4b02034e2241e38ce220fc5b16",
+  "blendSha256": "bbdd79d970cbf0451bb52e98d236c19cc3e2c0b30641a7ac9d7af5fc85afdc9c",
+  "nodes": 125,
+  "meshes": 115,
+  "triangles": 99580,
+  "materials": 36,
   "textures": 15
 }

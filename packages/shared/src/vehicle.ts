@@ -61,7 +61,7 @@ export function describeEffects(effects:Effect[],query=false){return effects.map
   if(property==='openness')return `${label}${query?'目标开度为':value===0?'已关闭':value===1?'已完全打开':'已打开到 '}${(query||value!==0&&value!==1)?`${Math.round(Number(value)*100)}%`:''}`;
   if(property==='swipe')return '雨刷已完成一次刮刷并归位';
   if(property==='brightness')return `${label}亮度${query?'目标为':'已设为'} ${Math.round(Number(value)*100)}%`;
-  if(property==='color')return `${label}颜色${query?'为':'已设为'} ${value}`;
+  if(property==='color')return `${label}颜色${query?'为':'已设为'} ${paintPresets.find(p=>p.color===value)?.name??'自定义颜色'}`;
   if(property==='enabled')return `${label}${value?'已开启':'已关闭'}`;
   const values:Record<string,string>={off:'关闭',low:key.startsWith('wiper')?'低速':'近光',high:key.startsWith('wiper')?'高速':'远光',intermittent:'间歇',left:'左转向',right:'右转向',hazard:'双闪'};
   return `${label}${query?'目标为':'已设为'}${values[String(value)]??value}`;
@@ -96,6 +96,38 @@ export class VehicleLedger {
 }
 export interface VehicleContext {focus?:{component:VehicleCommand['component'];targets:string[];updatedAt:number};pending?:{commands:VehicleCommand[];component:'window'|'door';expiresAt:number}}
 export type RuleResult={kind:'execute';commands:VehicleCommand[]}|{kind:'clarify';message:string;pending:NonNullable<VehicleContext['pending']>}|{kind:'noop'|'unsupported';message:string};
+export const paintPresets=[{name:'霞光紫',color:'#9867ff'},{name:'海湾蓝',color:'#4d80b4'},{name:'珍珠白',color:'#e4e6e8'},{name:'曜石黑',color:'#202932'},{name:'熔岩红',color:'#b13f47'},{name:'雅灰',color:'#a2a9b2'},{name:'海绿',color:'#4d8784'}];
+const colorWords:Record<string,string>={紫:'#9867ff',蓝:'#4d80b4',白:'#e4e6e8',黑:'#202932',红:'#b13f47',灰:'#a2a9b2',绿:'#4d8784',黄:'#edbf53',橙:'#db8955'};
+function percentText(text:string){const nums:Record<string,number>={零:0,一:1,二:2,两:2,三:3,四:4,五:5,六:6,七:7,八:8,九:9};return text.replace(/百分之([零一二两三四五六七八九十百\d.]+)/g,(_,n:string)=>{let value=Number(n);if(!Number.isFinite(value)){if(n==='一百'||n==='百')value=100;else if(n.includes('十')){const [a,b]=n.split('十');value=(a?nums[a]:1)*10+(b?nums[b]:0);}else value=nums[n];}return `${value}%`;});}
+function accessory(clause:string,component:VehicleCommand['component']):VehicleCommand[]|null {
+  let cleaned=percentText(clause).replace(/[\s。！!？?]/g,'').replace(/请|帮我|麻烦|把|将|吧|谢谢/g,'');
+  if(component==='headlights'){
+    if(/^(关闭|关掉|关上)(所有)?车灯$/.test(cleaned))return [{component:'headlights',targets:['front'],operation:'set',property:'mode',value:'off'},{component:'turnSignal',targets:['vehicle'],operation:'set',property:'mode',value:'off'}];
+    if(!/^(打开|开启|开|关闭|关掉|关上|关|切换到|切到|设为|调到)?(近光灯?|远光灯?|前灯|大灯)(打开|开启|关闭|关掉|关上)?$/.test(cleaned))return null;
+    return [{component,targets:['front'],operation:'set',property:'mode',value:/关/.test(cleaned)?'off':/远光/.test(cleaned)?'high':'low'}];
+  }
+  if(component==='turnSignal'){
+    if(!/^(打开|开启|开|关闭|关掉|关上|关|切换到|切到|设为)?(左转向灯?|右转向灯?|双闪灯?|转向灯)(打开|开启|关闭|关掉|关上)?$/.test(cleaned))return null;
+    if(!/关|左|右|双闪/.test(cleaned))return null;
+    return [{component,targets:['vehicle'],operation:'set',property:'mode',value:/关/.test(cleaned)?'off':/双闪/.test(cleaned)?'hazard':/左/.test(cleaned)?'left':'right'}];
+  }
+  if(component==='paint'||component==='ambient'){
+    cleaned=cleaned.replace(component==='paint'?/车身|车漆|车身颜色/g:/氛围灯|灯带/g,'');
+    const color=cleaned.match(/(?:#[\da-fA-F]{6}|[紫蓝白黑红灰绿黄橙]色)/);
+    if(color){const left=cleaned.replace(color[0],'').replace(/颜色|换成|换为|改成|改为|设为|设置为|调成|变成|的/g,'');if(left)return null;
+      const value=color[0].startsWith('#')?color[0].toLowerCase():colorWords[color[0][0]];
+      return component==='paint'?[{component,targets:['body'],operation:'set',property:'color',value}]:[{component,targets:['cabin'],operation:'set',property:'color',value}];
+    }
+    if(component==='paint')return null;
+    if(/^(打开|开启|开|关闭|关掉|关上|关)$/.test(cleaned))return [{component,targets:['cabin'],operation:'set',property:'enabled',value:!cleaned.includes('关')}];
+    const percent=cleaned.match(/(\d+(?:\.\d+)?)%/);
+    if(percent&&Number(percent[1])>100)return null;
+    if(!/^(亮度|再|调|设为|设置为|调到|调为|增加|降低|减小|提高|亮|暗|一点|一些|到|为|\d|\.|%)+$/.test(cleaned))return null;
+    const relative=/再|增加|降低|减小|提高|一点|一些/.test(cleaned);if(!percent&&!relative)return null;
+    return [{component,targets:['cabin'],operation:relative?'adjust':'set',property:'brightness',value:(relative&&/暗|降低|减小/.test(cleaned)?-1:1)*(percent?Number(percent[1])/100:.1)}];
+  }
+  return null;
+}
 export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.now()):RuleResult {
   const text=raw.trim().replace(/(左前|右前|左后|右后|前左|前右|后左|后右)方/g,'$1').replace(/(左前|右前|左后|右后)(?:那个)?[，,](?=开|关|升|降)/g,'$1');
   if(/^(取消|算了|不用了|停止操作|取消这条指令|取消刚才的指令)[。！!]?$/u.test(text))return {kind:'noop',message:'已取消待确认指令，车辆目标保持不变。'};
@@ -107,7 +139,12 @@ export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.n
   }
   const clauses=text.split(/[，,；;]|然后|接着|并且|同时/).filter(c=>c.trim());const commands:VehicleCommand[]=[];let focus=fresh;let unresolved:VehicleContext['pending'];
   for(const clause of clauses){
-    let component:VehicleCommand['component']|undefined=/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|刮一下/.test(clause)?'wiper':focus?.component;
+    if(/先不要|先别|不要|不需要|不用|不想|别/.test(clause)){
+      const positive=parseVehicleText(clause.replace(/先不要|先别|不要|不需要|不用|不想|别/g,''),{focus},now);
+      if(positive.kind==='unsupported'||positive.kind==='noop')return {kind:'unsupported',message:'否定子句未被完整理解，车辆未改变。请明确部件和动作。'};
+      continue;
+    }
+    let component:VehicleCommand['component']|undefined=/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|刮一下/.test(clause)?'wiper':focus?.component;
     // Existing I3 accepts directional shorthand without a noun.
     component ??= /左前|右前|左后|右后|主驾|副驾|开|关/.test(clause)?pending?.component??'window':undefined;
     if(component==='window'||component==='door'||component==='trunk'){
@@ -119,7 +156,10 @@ export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.n
       if(r.kind==='clarify'){
         const added=r.pending.commands.map(convert);commands.push(...added);unresolved={commands,component:component==='door'?'door':'window',expiresAt:now+120000};
       }else if(r.kind==='execute'){const added=r.commands.map(convert);commands.push(...added);focus={component,targets:added.at(-1)!.targets,updatedAt:now};}
-    }else return {kind:'unsupported',message:'当前规则未完整覆盖这条表达，车辆未改变。DeepSeek 兜底保留在 I7。'};
+    }else if(component){
+      const added=accessory(clause,component);if(!added)return {kind:'unsupported',message:'当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 I7。'};
+      commands.push(...added);focus={component,targets:added.at(-1)!.targets,updatedAt:now};
+    }else return {kind:'unsupported',message:'需要控制哪个部件？请明确车门、车窗、后备箱、近光／远光、转向灯、车漆或氛围灯。车辆未改变。'};
   }
   if(unresolved)return {kind:'clarify',message:`需要调整哪一扇${unresolved.component==='door'?'车门':'车窗'}？请选择左前、右前、左后或右后。`,pending:{...unresolved,commands}};
   return commands.length?{kind:'execute',commands}:{kind:'noop',message:'已保留否定要求，车辆没有改变。'};

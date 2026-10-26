@@ -1,0 +1,15 @@
+
+Running 6 tests using 1 worker
+
+(node:31800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.9s)
+  ok 2 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (4.9s)
+  ok 3 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.1s)
+(node:35480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.2s)
+  ok 5 [Edge-1366x768] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (5.3s)
+  ok 6 [Edge-1366x768] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.1s)
+
+  6 passed (24.1s)
