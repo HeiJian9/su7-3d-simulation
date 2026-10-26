@@ -1,0 +1,50 @@
+
+Running 3 tests using 1 worker
+
+(node:29132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (22.2s)
+  ok 2 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (36.4s)
+  x  3 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (11.1s)
+
+
+  1) [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: '模型热点：左前车门', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: '模型热点：左前车门', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '模型热点：左前车门', exact: true })
+
+
+      29 | test('I4 labelled model hotspots act on real parts; canvas drag cannot activate a part',async({page},info)=>{
+      30 |   await ready(page);await page.getByRole('button',{name:'折叠车辆面板',exact:true}).click();await page.getByRole('button',{name:'左方视角',exact:true}).click();
+    > 31 |   const hotspot=page.getByRole('button',{name:'模型热点：左前车门',exact:true});await expect(hotspot).toBeVisible();await hotspot.click();await expect.poll(()=>pose(page,'door:fl')).toBe(1);
+         |                                                                                              ^
+      32 |   await page.screenshot({path:`docs/assets/i4-i6/I4-door-open-${info.project.name}.png`});
+      33 |   await page.getByRole('button',{name:'左前车门关闭',exact:true}).click();await expect.poll(()=>pose(page,'door:fl')).toBe(0);
+      34 |   const canvas=(await page.locator('canvas').boundingBox())!;await page.mouse.move(canvas.x+canvas.width*.55,canvas.y+canvas.height*.50);await page.mouse.down();await page.mouse.move(canvas.x+canvas.width*.66,canvas.y+canvas.height*.55,{steps:12});await page.mouse.up();expect(await pose(page,'door:fl')).toBe(0);
+        at D:\code\Projects\3D simulation\tests\e2e\mechanical.spec.ts:31:94
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\mechanical-I4-labelled-mod-74792-drag-cannot-activate-a-part-Edge-1920x1080\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\mechanical-I4-labelled-mod-74792-drag-cannot-activate-a-part-Edge-1920x1080\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\mechanical-I4-labelled-mod-74792-drag-cannot-activate-a-part-Edge-1920x1080\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\mechanical-I4-labelled-mod-74792-drag-cannot-activate-a-part-Edge-1920x1080\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part 
+  2 passed (1.2m)

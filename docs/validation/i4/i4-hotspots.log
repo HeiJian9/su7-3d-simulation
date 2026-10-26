@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:38748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (8.0s)
+(node:8448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (7.2s)
+
+  2 passed (18.0s)

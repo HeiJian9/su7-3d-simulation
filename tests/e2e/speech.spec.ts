@@ -26,7 +26,7 @@ test('Mock-only microphone VAD → transcript → real geometry → API audio pl
   await expect(page.getByTestId('transcript')).toContainText('左前车窗打开一半',{timeout:12000});await expect.poll(()=>pose(page)).toBe(.5);
   await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪');await expect.poll(()=>tracksStopped(page)).toBe(true);
   expect(asr).toBe(1);expect(tts).toBe(1);for(const c of ['fr','rl','rr'])expect(await pose(page,c)).toBe(0);
-  await page.screenshot({path:`docs/assets/i3-final/speech-MOCK-${info.project.name}.png`});
+  await page.screenshot({path:`docs/assets/i4-i6/speech-MOCK-${info.project.name}.png`});
 });
 test('Mock clarification chooses one window and new recording stops old API playback',async({page})=>{
   let count=0;
@@ -94,7 +94,7 @@ test('Mock clarification cancellation clears pending intent after a bulk action'
   const input=page.getByRole('textbox',{name:'车窗文字指令'});await input.fill('打开车窗');await input.press('Enter');
   await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
-  await page.screenshot({path:`docs/assets/i3-final/clarification-panel-${info.project.name}.png`});
+  await page.screenshot({path:`docs/assets/i4-i6/clarification-panel-${info.project.name}.png`});
   await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
   await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
 });

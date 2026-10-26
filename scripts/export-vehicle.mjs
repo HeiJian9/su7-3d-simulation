@@ -1,0 +1,7 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+const install=JSON.parse((await readFile('.tools/blender-install.json','utf8')).replace(/^\uFEFF/,''));
+const result=spawnSync(install.executable,['--background','assets/source/blender/su7-enhanced.blend','--python','scripts/export_current.py'],{encoding:'utf8',maxBuffer:8*1024*1024});
+await mkdir('docs/validation/i4-i6',{recursive:true});await writeFile('docs/validation/i4-i6/blender-export.log',`${result.stdout}\n${result.stderr}`);
+if(result.status!==0)throw Error('Enhanced Blender export failed.');
+for(const script of ['scripts/register-vehicle.mjs','scripts/check-assets.mjs','scripts/verify-vehicle-geometry.mjs']){const r=spawnSync(process.execPath,[script],{stdio:'inherit'});if(r.status!==0)process.exit(r.status??1);}

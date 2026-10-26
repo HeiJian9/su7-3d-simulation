@@ -22,6 +22,9 @@ report = {'openedFile': bpy.data.filepath, 'blender': bpy.app.version_string, 'm
     'allTexturesPacked': all(image['packed'] and image['hasData'] for image in images)}
 output = sys.argv[sys.argv.index('--') + 1] if '--' in sys.argv else 'docs/assets/blend-portability-check.json'
 (ROOT/output).write_text(json.dumps(report, indent=2), encoding='utf8')
-assert report['meshes'] == 84 and report['triangles'] == 92410
+if bpy.data.objects.get('TRUNK_REAR_ROOT'):
+    expected=json.loads((ROOT/'docs/assets/current-geometry.json').read_text(encoding='utf8'))
+    assert report['meshes']==expected['meshes'] and report['triangles']==expected['triangles']
+else: assert report['meshes'] == 84 and report['triangles'] == 92410
 assert len(images) == 15 and report['allTexturesPacked']
 print('BLEND_PORTABILITY_PASS')

@@ -2,11 +2,12 @@ import { useEffect, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { BufferGeometry, DoubleSide, EdgesGeometry, Group, LineBasicMaterial, LineSegments, Matrix4, Mesh, MeshBasicMaterial, Plane, Raycaster, Vector2, Vector3, type Material } from 'three';
 import mapping from './data/window-mapping.json';
-import { corners, useVehicle, windowPoses, type Corner } from './vehicle';
+import { actualValues, completeExecutions, corners, useVehicle, windowPoses, type Corner } from './vehicle';
 
 interface Binding {
   corner: Corner; control: Group; glass: Mesh; closed: Vector3; travel: Vector3; door: Group;
   clip: Plane; localClip: Plane; pick: Mesh; outline: LineSegments; originalMaterials: Material | Material[]; materials: Material[];
+  companions: Array<{mesh:Mesh;original:Material|Material[];materials:Material[]}>;
 }
 export function WindowMechanism({ model }: { model: Group }) {
   const { camera, gl } = useThree();
@@ -32,6 +33,11 @@ export function WindowMechanism({ model }: { model: Group }) {
         material.side = DoubleSide; material.depthWrite = false; return material;
       });
       glass.material = Array.isArray(originalMaterials) ? materials : materials[0];
+      const companions=(config.companionGlass??[]).flatMap(name=>{
+        const mesh=model.getObjectByName(name) as Mesh|undefined;if(!mesh?.isMesh)return [];
+        const original=mesh.material;const materials=(Array.isArray(original)?original:[original]).map(source=>{const m=source.clone();m.clippingPlanes=[clip];m.side=DoubleSide;return m;});
+        mesh.material=Array.isArray(original)?materials:materials[0];return [{mesh,original,materials}];
+      });
       glass.userData.windowCorner = corner;
       const matrix = new Matrix4().copy(door.matrixWorld).invert().multiply(glass.matrixWorld);
       const pick = new Mesh(glass.geometry.clone(), new MeshBasicMaterial({ transparent: true, opacity: 0, colorWrite: false, depthWrite: false, side: DoubleSide }));
@@ -40,7 +46,7 @@ export function WindowMechanism({ model }: { model: Group }) {
       const outline = new LineSegments(new EdgesGeometry(glass.geometry, 20), new LineBasicMaterial({ color: '#72dccb', transparent: true, opacity: .85 }));
       outline.matrixAutoUpdate = false; outline.matrix.copy(matrix); outline.visible = false; door.add(outline);
       windowPoses[corner] = 0;
-      items.push({ corner, control, glass, closed, travel: new Vector3().fromArray(config.travel), door, clip, localClip: plane, pick, outline, originalMaterials, materials });
+      items.push({ corner, control, glass, closed, travel: new Vector3().fromArray(config.travel), door, clip, localClip: plane, pick, outline, originalMaterials, materials,companions });
     }
     bindings.current = items;
     useVehicle.getState().register(items.map((b) => b.corner));
@@ -64,6 +70,7 @@ export function WindowMechanism({ model }: { model: Group }) {
       gl.domElement.removeEventListener('su7:scene-click', select); gl.localClippingEnabled = previousClipping;
       for (const b of items) {
         b.control.position.copy(b.closed); b.glass.material = b.originalMaterials; delete b.glass.userData.windowCorner;
+        for(const c of b.companions){c.mesh.material=c.original;c.materials.forEach(m=>m.dispose());}
         b.materials.forEach((m) => m.dispose()); b.pick.removeFromParent(); b.pick.geometry.dispose(); (b.pick.material as Material).dispose();
         b.outline.removeFromParent(); (b.outline.geometry as BufferGeometry).dispose(); (b.outline.material as Material).dispose();
       }
@@ -77,6 +84,7 @@ export function WindowMechanism({ model }: { model: Group }) {
       const previous = windowPoses[b.corner];
       const value = Math.abs(target - previous) <= delta * 1.6 ? target : previous + Math.sign(target - previous) * delta * 1.6;
       windowPoses[b.corner] = value;
+      actualValues[`window:${b.corner}:openness`] = value;
       b.control.position.copy(b.closed).addScaledVector(b.travel, value);
       b.clip.copy(b.localClip).applyMatrix4(b.door.matrixWorld);
       b.outline.visible = state.selected === b.corner;
@@ -86,9 +94,7 @@ export function WindowMechanism({ model }: { model: Group }) {
       gl.domElement.setAttribute(`data-window-${b.corner}-position`, b.control.position.toArray().map((n) => n.toFixed(6)).join(','));
       gl.domElement.setAttribute(`data-window-${b.corner}-openness`, value.toFixed(4));
     }
-    for (const execution of state.executions) {
-      if (execution.status === 'animating' && execution.targets.every((c) => state.preview[c] === undefined && Math.abs(windowPoses[c] - execution.values[c]!) < .0001)) state.finish(execution.requestId, 'completed');
-    }
+    completeExecutions();
     interval.current += delta;
     if (interval.current > .12) { interval.current = 0; state.sample(); }
   });

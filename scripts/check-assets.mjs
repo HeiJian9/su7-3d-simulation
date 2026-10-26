@@ -17,6 +17,8 @@ const report = { sha256: digest, bytes: bytes.length, nodes: root.listNodes().le
   triangles: root.listMeshes().flatMap((mesh) => mesh.listPrimitives()).reduce((sum, primitive) => sum + (primitive.getIndices()?.getCount() ?? primitive.getAttribute('POSITION')?.getCount() ?? 0) / 3, 0),
   extensions: root.listExtensionsUsed().map((e) => e.extensionName),
 };
-if (report.meshes !== 84 || report.triangles !== 92410) throw new Error('Unexpected geometry, compare with the selected original package.');
-await writeFile(root.listNodes().some(n=>n.getName()==='WINDOW_FL_ROOT') ? 'docs/assets/i2-runtime-check.json' : 'docs/assets/runtime-check.json', JSON.stringify(report, null, 2) + '\n');
+const enhanced = root.listNodes().some(n=>n.getName()==='TRUNK_REAR_ROOT');
+if(enhanced){const expected=JSON.parse(await readFile('docs/assets/current-geometry.json','utf8'));for(const key of ['sha256','nodes','meshes','triangles','materials'])if(report[key]!==expected[key])throw Error(`Geometry mismatch ${key}`);}
+else if (report.meshes !== 84 || report.triangles !== 92410) throw new Error('Unexpected original geometry.');
+await writeFile(enhanced ? 'docs/assets/current-runtime-check.json' : root.listNodes().some(n=>n.getName()==='WINDOW_FL_ROOT') ? 'docs/assets/i2-runtime-check.json' : 'docs/assets/runtime-check.json', JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));

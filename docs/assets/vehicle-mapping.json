@@ -1,0 +1,259 @@
+{
+  "version": "I4.1",
+  "coordinates": "Y up, front -Z, left -X",
+  "doors": {
+    "fl": {
+      "node": "DOOR_FL_ROOT",
+      "hinge": [
+        -0.8949999809265137,
+        0.6650000214576721,
+        -0.875
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngle": -1.1344640137963142,
+      "sourceOuter": "Paint4",
+      "sourceRelated": [
+        "Mesh44",
+        "Mesh45",
+        "Mesh47",
+        "Mesh48",
+        "Mesh49",
+        "Mesh50",
+        "Mesh51"
+      ],
+      "hotspot": [
+        -0.963,
+        0.86,
+        0.1
+      ]
+    },
+    "fr": {
+      "node": "DOOR_FR_ROOT",
+      "hinge": [
+        0.8949999809265137,
+        0.6650000214576721,
+        -0.875
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngle": 1.1344640137963142,
+      "sourceOuter": "Paint2",
+      "sourceRelated": [
+        "Mesh31",
+        "Mesh32",
+        "Mesh34",
+        "Mesh35",
+        "Mesh36",
+        "Mesh37",
+        "Mesh38"
+      ],
+      "hotspot": [
+        0.963,
+        0.86,
+        0.1
+      ]
+    },
+    "rl": {
+      "node": "DOOR_RL_ROOT",
+      "hinge": [
+        -0.8949999809265137,
+        0.6650000214576721,
+        0.25999999046325684
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngle": -1.1344640137963142,
+      "sourceOuter": "Paint3",
+      "sourceRelated": [
+        "Mesh40",
+        "Mesh41",
+        "Mesh42",
+        "Mesh43"
+      ],
+      "hotspot": [
+        -0.963,
+        0.86,
+        0.93
+      ]
+    },
+    "rr": {
+      "node": "DOOR_RR_ROOT",
+      "hinge": [
+        0.8949999809265137,
+        0.6650000214576721,
+        0.25999999046325684
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngle": 1.1344640137963142,
+      "sourceOuter": "Paint1",
+      "sourceRelated": [
+        "Mesh27",
+        "Mesh28",
+        "Mesh29",
+        "Mesh30"
+      ],
+      "hotspot": [
+        0.963,
+        0.86,
+        0.93
+      ]
+    }
+  },
+  "trunk": {
+    "node": "TRUNK_REAR_ROOT",
+    "hinge": [
+      0.0,
+      1.0770000219345093,
+      1.975000023841858
+    ],
+    "axis": [
+      1,
+      0,
+      0
+    ],
+    "maxAngle": -1.1868238913561442,
+    "sourceParts": [
+      "TRUNK_Paint5",
+      "TRUNK_Mesh17",
+      "TRUNK_Mesh18",
+      "TRUNK_Mesh19",
+      "TRUNK_Mesh20",
+      "TRUNK_Mesh21",
+      "TRUNK_Mesh23",
+      "TRUNK_Mesh24",
+      "TRUNK_Mesh25",
+      "TRUNK_Mesh58",
+      "TRUNK_Mesh71"
+    ],
+    "footprint": [
+      [
+        -0.55,
+        1.975
+      ],
+      [
+        0.55,
+        1.975
+      ],
+      [
+        0.76,
+        2.18
+      ],
+      [
+        0.775,
+        2.4
+      ],
+      [
+        0.68,
+        2.5
+      ],
+      [
+        -0.68,
+        2.5
+      ],
+      [
+        -0.775,
+        2.4
+      ],
+      [
+        -0.76,
+        2.18
+      ]
+    ],
+    "hotspot": [
+      0,
+      0.91,
+      2.43
+    ]
+  },
+  "changes": [
+    {
+      "source": "Paint6_SOURCE",
+      "destination": "DOOR_FL_RETURNS",
+      "faces": 648
+    },
+    {
+      "source": "Paint6_SOURCE",
+      "destination": "DOOR_FR_RETURNS",
+      "faces": 650
+    },
+    {
+      "source": "Paint6_SOURCE",
+      "destination": "DOOR_RL_RETURNS",
+      "faces": 294
+    },
+    {
+      "source": "Paint6_SOURCE",
+      "destination": "DOOR_RR_RETURNS",
+      "faces": 294
+    },
+    {
+      "source": "Paint5",
+      "destination": "TRUNK_Paint5",
+      "faces": 2084
+    },
+    {
+      "source": "Mesh17",
+      "destination": "TRUNK_Mesh17",
+      "faces": 72
+    },
+    {
+      "source": "Mesh18",
+      "destination": "TRUNK_Mesh18",
+      "faces": 136
+    },
+    {
+      "source": "Mesh19",
+      "destination": "TRUNK_Mesh19",
+      "faces": 14
+    },
+    {
+      "source": "Mesh20",
+      "destination": "TRUNK_Mesh20",
+      "faces": 14
+    },
+    {
+      "source": "Mesh21",
+      "destination": "TRUNK_Mesh21",
+      "faces": 394
+    },
+    {
+      "source": "Mesh23",
+      "destination": "TRUNK_Mesh23",
+      "faces": 8
+    },
+    {
+      "source": "Mesh24",
+      "destination": "TRUNK_Mesh24",
+      "faces": 1774
+    },
+    {
+      "source": "Mesh25",
+      "destination": "TRUNK_Mesh25",
+      "faces": 108
+    },
+    {
+      "source": "Mesh58",
+      "destination": "TRUNK_Mesh58",
+      "faces": 382
+    },
+    {
+      "source": "Mesh71",
+      "destination": "TRUNK_Mesh71",
+      "faces": 726
+    }
+  ]
+}

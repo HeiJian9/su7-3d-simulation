@@ -1,0 +1,9 @@
+{
+  "stage": "I4.1",
+  "sha256": "efd45fd7e1889a151769ba05b8383dd4ec59a0223bb48a7e37d4534b76e50d8b",
+  "nodes": 106,
+  "meshes": 96,
+  "triangles": 98760,
+  "materials": 25,
+  "textures": 15
+}

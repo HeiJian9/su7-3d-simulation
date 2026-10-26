@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b",
-  "bytes": 6247344,
+  "sha256": "efd45fd7e1889a151769ba05b8383dd4ec59a0223bb48a7e37d4534b76e50d8b",
+  "bytes": 6441976,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I2 四窗真实几何升降；语音接口待配置。"
+  "message": "指定 SU7 · I4.1 增强资产 · 原车几何与局部补建"
 }

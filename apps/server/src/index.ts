@@ -4,6 +4,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assetSchema } from '../../../packages/shared/src/asset.js';
+import { vehicleStateSchema } from '../../../packages/shared/src/vehicle.js';
 import { z } from 'zod';
 import { loadProjectEnv, providerConfig } from './speech/config.js';
 import { speechRoutes } from './speech/routes.js';
@@ -40,12 +41,14 @@ app.get('/api/asset', async (_req, res) => {
   }
 });
 const diagnosticSchema = z.object({
-  exportedAt: z.string().max(50), increment: z.enum(['I0–I1', 'I2–I3-framework', 'I3-aliyun']), userAgent: z.string().max(500),
+  exportedAt: z.string().max(50), increment: z.enum(['I0–I1', 'I2–I3-framework', 'I3-aliyun','I4','I5','I6']), userAgent: z.string().max(500),
   asset: assetSchema.nullable(), loadMs: z.number().nonnegative().nullable(), mode: z.enum(['free', 'orbit']), gesture: z.string().max(200),
   microphone: z.object({ status: z.string().max(40), peakRms: z.number().nonnegative().max(1), samples: z.number().int().nonnegative(), durationMs: z.number().nonnegative(), message: z.string().max(500) }),
   samples: z.array(z.object({ fps: z.number().nonnegative(), calls: z.number().int().nonnegative(), triangles: z.number().nonnegative(), position: z.array(z.number()).length(3), rotation: z.array(z.number()).length(3), renderer: z.string().max(500), elapsed: z.number().nonnegative(), focused: z.boolean(), viewport: z.array(z.number()).length(2) })).max(360),
   voice: z.object({phase:z.string().max(40),transcript:z.string().max(2000),message:z.string().max(2000),errorCode:z.string().max(100),asrModel:z.string().max(100),ttsModel:z.string().max(100),mode:z.string().max(40),traces:z.array(z.object({requestId:z.string().max(200),time:z.string().max(50),stage:z.string().max(50),detail:z.string().max(500),mock:z.boolean()})).max(80)}).optional(),
   vehicle: z.object({revision:z.number().int().nonnegative(),targets:z.record(z.enum(['fl','fr','rl','rr']),z.object({openness:z.number().min(0).max(1)})),actual:z.record(z.enum(['fl','fr','rl','rr']),z.number().min(0).max(1))}).optional(),
+  fullState: vehicleStateSchema.optional(),
+  actualParts: z.record(z.string().max(100),z.union([z.number().finite(),z.string().max(100),z.boolean()])).optional(),
 });
 app.post('/api/diagnostics', express.json({ limit: '512kb' }), async (req, res) => {
   const parsed = diagnosticSchema.safeParse(req.body);

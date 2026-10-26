@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { corners, useVehicle, windowLabels } from './vehicle';
 import { speechCoordinator, useSpeech, type SpeechPhase } from './speech';
+import { doorLabels } from '../../../packages/shared/src/vehicle';
 
 const phaseLabels: Record<SpeechPhase, string> = { idle: '准备就绪', requesting: '等待权限', recording: '正在录音', transcribing: '正在转写', resolving: '规则解析', executing: '正在执行', clarifying: '等待澄清', synthesizing: '生成播报', speaking: '正在播报', error: '需要重试' };
 
@@ -28,7 +29,7 @@ export function ControlConsole() {
     </div>
     <p className="console-feedback" role="status" data-testid="console-feedback">{feedback}</p>
     <div className="speech-status-row"><span className={`provider-badge ${speech.health.mode === 'test-mock' ? 'mock-mode' : ''}`} data-testid="speech-mode">{speech.health.mode === 'test-mock' ? '测试 Mock · 不计真实 API 验收' : speech.health.asr.configured && speech.health.tts.configured ? '语音服务已配置' : 'ASR / TTS 待配置'}</span><span className={speech.phase === 'error' ? 'speech-error' : ''} role="status" data-testid="speech-message">{speech.message}</span>{speech.transcript && <span className="transcript" data-testid="transcript">转写：{speech.transcript}</span>}<label className="tts-toggle"><input type="checkbox" checked={speech.enabled} onChange={(e) => { useSpeech.setState({ enabled: e.target.checked }); if (!e.target.checked) coordinator.stopSpeaking(); }} />语音反馈</label><button className="tts-replay" disabled={!speech.health.tts.configured || !speech.lastFeedback} onClick={() => void coordinator.replay()}>重播</button></div>
-    {pending && <div className="clarification" role="group" aria-label="请选择车窗"><span>需要哪一扇？可点麦克风回答。</span>{corners.map((c) => <button key={c} onClick={() => void coordinator.text(windowLabels[c])}>{windowLabels[c]}</button>)}<button onClick={()=>coordinator.cancelClarification()}>取消这条指令</button></div>}
+    {pending && <div className="clarification" role="group" aria-label={pending.component==='door'?'请选择车门':'请选择车窗'}><span>需要哪一扇？可点麦克风回答。</span>{corners.map((c) => <button key={c} onClick={() => void coordinator.text(pending.component==='door'?doorLabels[c]:windowLabels[c])}>{pending.component==='door'?doorLabels[c]:windowLabels[c]}</button>)}<button onClick={()=>coordinator.cancelClarification()}>取消这条指令</button></div>}
     {history && <aside className="command-history" aria-label="指令记录"><div className="panel-top"><span>CONVERSATION / RULES</span><button onClick={() => setHistory(false)} aria-label="关闭指令记录">×</button></div>{messages.length ? messages.slice(-8).reverse().map((m) => <div className="conversation-row" key={m.id}><p>{m.input}</p><small>{m.output}</small><span>{m.origin} · {m.status}</span></div>) : <p className="empty-history">输入一句话，查看规则解析与执行结果。</p>}</aside>}
   </section>;
 }

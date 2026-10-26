@@ -1,5 +1,5 @@
 {
-  "version": "I2.1",
+  "version": "I4.1",
   "modelId": "ca2cda599f5341068c992c9f44551bf9",
   "coordinates": "Y up, front -Z, driver left -X",
   "windows": {
@@ -9,9 +9,9 @@
       "glass": "WINDOW_FL_GLASS",
       "parent": "DOOR_FL_ROOT",
       "closedTranslation": [
-        -0.75,
-        0.9787834286689758,
-        -0.1725131720304489
+        0.14499998092651367,
+        0.3137834072113037,
+        0.7024868130683899
       ],
       "travel": [
         -0.11,
@@ -22,7 +22,7 @@
         0,
         1,
         -0.03196267899397047,
-        -0.9782974052635928
+        -0.2853300396861965
       ],
       "closedBounds": {
         "min": [
@@ -320,7 +320,10 @@
       ],
       "material": "Mesh26Mtl",
       "fixedAdjacentGlazing": "Other glass meshes (including Mesh69 and Mesh63) remain static.",
-      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained."
+      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained.",
+      "companionGlass": [
+        "Mesh44"
+      ]
     },
     "fr": {
       "sourceNode": "Mesh33",
@@ -328,9 +331,9 @@
       "glass": "WINDOW_FR_GLASS",
       "parent": "DOOR_FR_ROOT",
       "closedTranslation": [
-        0.75,
-        0.9787903428077698,
-        -0.17251960933208466
+        -0.14499998092651367,
+        0.31379032135009766,
+        0.7024803757667542
       ],
       "travel": [
         0.11,
@@ -341,7 +344,7 @@
         0,
         1,
         -0.031965760770409725,
-        -0.9783050871626073
+        -0.28533502503082675
       ],
       "closedBounds": {
         "min": [
@@ -639,7 +642,10 @@
       ],
       "material": "Mesh26Mtl",
       "fixedAdjacentGlazing": "Other glass meshes (including Mesh69 and Mesh63) remain static.",
-      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained."
+      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained.",
+      "companionGlass": [
+        "Mesh31"
+      ]
     },
     "rl": {
       "sourceNode": "Mesh39",
@@ -647,9 +653,9 @@
       "glass": "WINDOW_RL_GLASS",
       "parent": "DOOR_RL_ROOT",
       "closedTranslation": [
-        -0.75,
-        1.0125235319137573,
-        0.7589213848114014
+        0.14499998092651367,
+        0.3475235104560852,
+        0.49892139434814453
       ],
       "travel": [
         -0.11,
@@ -660,7 +666,7 @@
         0,
         1,
         -0.04720986692777872,
-        -0.9706949314782392
+        -0.31796947497156114
       ],
       "closedBounds": {
         "min": [
@@ -946,7 +952,8 @@
       ],
       "material": "Mesh26Mtl",
       "fixedAdjacentGlazing": "Other glass meshes (including Mesh69 and Mesh63) remain static.",
-      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained."
+      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained.",
+      "companionGlass": []
     },
     "rr": {
       "sourceNode": "Mesh26",
@@ -954,9 +961,9 @@
       "glass": "WINDOW_RR_GLASS",
       "parent": "DOOR_RR_ROOT",
       "closedTranslation": [
-        0.75,
-        1.0125235319137573,
-        0.7589215040206909
+        -0.14499998092651367,
+        0.3475235104560852,
+        0.4989215135574341
       ],
       "travel": [
         0.11,
@@ -967,7 +974,7 @@
         0,
         1,
         -0.04720988194171029,
-        -0.9706949166896829
+        -0.31796946408662696
       ],
       "closedBounds": {
         "min": [
@@ -1253,7 +1260,8 @@
       ],
       "material": "Mesh26Mtl",
       "fixedAdjacentGlazing": "Other glass meshes (including Mesh69 and Mesh63) remain static.",
-      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained."
+      "fixedTriangleFinding": "Source candidate is one connected main pane without a separate triangular island; all neighboring static glazing is retained.",
+      "companionGlass": []
     }
   }
 }

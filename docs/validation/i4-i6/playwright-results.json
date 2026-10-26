@@ -1,0 +1,236 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/mechanical.spec.ts",
+      "--project=Edge-1366x768",
+      "-g",
+      "independent|local travel"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/validation/i4-i6/playwright-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "mechanical.spec.ts",
+      "file": "mechanical.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22238,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:44:27.857Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mechanical-actual-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAicGFydCI6ICJkb29yOmZsIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmbCIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwwLjUzNzMwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsLTAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6ZmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsMC4yNjAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJkb29yOnJyIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cnIiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpyciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAidHJ1bms6cmVhciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4xMDIwMDAsMS45NzUwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJ0cnVuazpyZWFyIiwKICAgICAgInZhbHVlIjogMC41LAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuODI5MDM4LC0wLjU1OTE5MywwLjAwMDAwMCwwLjAwMDAwMCwwLjU1OTE5MywwLjgyOTAzOCwwLjAwMDAwMCwwLjAwMDAwMCwxLjEwMjAwMCwxLjk3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogInRydW5rOnJlYXIiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMzc0NjA3LC0wLjkyNzE4NCwwLjAwMDAwMCwwLjAwMDAwMCwwLjkyNzE4NCwwLjM3NDYwNywwLjAwMDAwMCwwLjAwMDAwMCwxLjEwMjAwMCwxLjk3NTAwMCwxLjAwMDAwMCIKICAgIH0KICBdLAogICJyZXZlcnNhbCI6IDAuMTU5OAp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-a9862b55a7027609cae4",
+          "file": "mechanical.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T13:44:50.271Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "door-window-local-frame-combinations",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjMxMzc4MywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMDk5MjgzLDAuNzAyNDg3IgogIH0sCiAgewogICAgImMiOiAiZmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zMTM3OTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4wOTkyOTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjM0NzUyNCwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMTUwNTI0LDAuNDk4OTIxIgogIH0sCiAgewogICAgImMiOiAicmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9Cl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-49d27b85e0bd997d5996",
+          "file": "mechanical.spec.ts",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T13:44:26.587Z",
+    "duration": 60360.653,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

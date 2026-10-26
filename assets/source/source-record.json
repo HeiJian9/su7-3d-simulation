@@ -15,15 +15,17 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "82ba4756063493577893b31c83b4e5f331f5852d539a8308381d8a41710b7e8b",
+  "runtimeSha256": "efd45fd7e1889a151769ba05b8383dd4ec59a0223bb48a7e37d4534b76e50d8b",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
     "PBR material adaptation; original diffuse color retained",
     "Packed textures and self-contained GLB; no component animation",
-    "I2: semantic four-window roots from original source glass; local translation into doors, no glass scaling or opacity animation; adjacent static glazing retained"
+    "I2: semantic four-window roots from original source glass; local translation into doors, no glass scaling or opacity animation; adjacent static glazing retained",
+    "I4: source door shells, inner trim, mirrors and split return strips on calibrated hinges; original deck and attached lamp/logo surfaces partitioned into trunk lid; recessed open cavity and inner skin added; all original glazing retained."
   ],
-  "enhancedAt": "2026-10-26T11:09:08.023Z",
-  "assetIncrement": "I2",
-  "windowMapping": "docs/assets/window-mapping.json"
+  "enhancedAt": "2026-10-26T13:34:36.858Z",
+  "assetIncrement": "I4.1",
+  "windowMapping": "docs/assets/window-mapping.json",
+  "vehicleMapping": "docs/assets/vehicle-mapping.json"
 }

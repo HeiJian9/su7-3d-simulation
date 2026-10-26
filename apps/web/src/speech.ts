@@ -110,11 +110,11 @@ export class SpeechCoordinator {
   private async feedback(result: ReturnType<ReturnType<typeof useVehicle.getState>['text']>, generation: number) {
     let message = result.message;
     if (result.execution) {
-      useSpeech.setState({ phase: 'executing', message: '正在调整车窗…' });
+      useSpeech.setState({ phase: 'executing', message: '正在调整车辆部件…' });
       const execution = await waitForWindowExecution(result.execution);
       if (!this.valid(generation)) return;
       if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
-      message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.values)}`);
+      message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
     }
     if (!this.valid(generation)) return;
     useSpeech.setState({ phase: result.kind === 'clarify' ? 'clarifying' : 'idle', message, lastFeedback: message });
