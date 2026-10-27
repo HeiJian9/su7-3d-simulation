@@ -7,4 +7,5 @@ if(result.status!==0)throw Error('Enhanced Blender export failed.');
 const mapping=JSON.parse(await readFile('docs/assets/vehicle-mapping.json','utf8'));
 const checks=['scripts/register-vehicle.mjs','scripts/check-assets.mjs','scripts/verify-vehicle-geometry.mjs'];
 if(mapping.wipers)checks.push('scripts/verify-wiper-glb.mjs');
+if(mapping.trunk.requiredMovingBadges)checks.push('scripts/verify-trunk-correction.mjs');
 for(const script of checks){const r=spawnSync(process.execPath,[script],{stdio:'inherit'});if(r.status!==0)process.exit(r.status??1);}

@@ -1,5 +1,5 @@
 {
-  "version": "I6.2",
+  "version": "I6.3-trunk-correction",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -117,15 +117,15 @@
     "node": "TRUNK_REAR_ROOT",
     "hinge": [
       0.0,
-      1.0770000219345093,
-      1.975000023841858
+      1.0750000476837158,
+      1.965000033378601
     ],
     "axis": [
       1,
       0,
       0
     ],
-    "maxAngle": -1.1868238913561442,
+    "maxAngle": -1.7453292519943295,
     "sourceParts": [
       "TRUNK_Paint5",
       "TRUNK_Mesh17",
@@ -137,47 +137,70 @@
       "TRUNK_Mesh24",
       "TRUNK_Mesh25",
       "TRUNK_Mesh58",
-      "TRUNK_Mesh71"
+      "TRUNK_Mesh71",
+      "Mesh52",
+      "Mesh55",
+      "Mesh56"
     ],
     "footprint": [
       [
-        -0.55,
-        1.975
+        -0.56,
+        1.98
       ],
       [
-        0.55,
-        1.975
+        0.56,
+        1.98
       ],
       [
-        0.76,
-        2.18
+        0.66,
+        2.14
       ],
       [
-        0.775,
-        2.4
+        0.66,
+        2.27
       ],
       [
-        0.68,
-        2.5
+        0.61,
+        2.45
       ],
       [
-        -0.68,
-        2.5
+        0.59,
+        2.52
       ],
       [
-        -0.775,
-        2.4
+        -0.59,
+        2.52
       ],
       [
-        -0.76,
-        2.18
+        -0.61,
+        2.45
+      ],
+      [
+        -0.66,
+        2.27
+      ],
+      [
+        -0.66,
+        2.14
       ]
     ],
     "hotspot": [
       0,
-      0.91,
-      2.43
-    ]
+      0.86,
+      2.47
+    ],
+    "rearFasciaMinimumY": 0.63,
+    "requiredMovingBadges": [
+      "Mesh52",
+      "Mesh55",
+      "Mesh56",
+      "TRUNK_Mesh58"
+    ],
+    "liner": "TRUNK_INNER_SKIN",
+    "cavity": "TRUNK_INNER_CAVITY",
+    "flushFlange": "TRUNK_BODY_FLANGE",
+    "repairNote": "Complete deck and badged rear fascia travel together. Previous raised wire ring / shallow box removed; formed underside, edge returns and deep carpet-lined opening added.",
+    "reference": "https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_12_2.jpg"
   },
   "changes": [
     {

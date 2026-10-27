@@ -1,0 +1,43 @@
+{
+  "version": "0.6.1",
+  "tag": "v0.6.1-trunk-correction",
+  "report": "docs/TRUNK_CORRECTION.md",
+  "asset": {
+    "stage": "I6.3-trunk-correction",
+    "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
+    "blendSha256": "ab59b98f7c0006d68d6838d9e90ecfc48e5b2396fbd65192cb3d45a4953283af",
+    "nodes": 140,
+    "meshes": 128,
+    "triangles": 110056,
+    "materials": 39,
+    "textures": 15
+  },
+  "geometryPassed": true,
+  "browser": {
+    "startTime": "2026-10-27T07:14:49.280Z",
+    "duration": 29887.597999999998,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "regression": {
+    "startTime": "2026-10-27T07:06:20.617Z",
+    "duration": 212167.769,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTestsPassed": 71,
+  "typecheckPassed": true,
+  "buildPassed": true,
+  "lintPassed": true,
+  "blenderPackedTextures": 15,
+  "humanNewComponents": "pending_user_unavailable",
+  "I7Started": false,
+  "developmentHarnessCorrections": [
+    "Standalone test JSON import changed to fs parsing for Node ESM compatibility",
+    "Production smoke request context explicitly given localhost baseURL"
+  ]
+}

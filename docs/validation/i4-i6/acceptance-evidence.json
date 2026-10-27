@@ -1,15 +1,15 @@
 {
-  "version": "0.6.0",
+  "version": "0.6.1",
   "date": "2026-10-27",
   "acceptance": "functional_paths_verified_new_human_microphone_pending",
   "currentAsset": {
-    "stage": "I6.2",
-    "sha256": "cc08105d6f3850c780a43c8667083c5f07f579942bfb8f5b2574267ca62c9d20",
-    "blendSha256": "f02ce3b946535185b5a4c308ed5686536ee1d15702e6ffd887ab03cc9f640b38",
-    "nodes": 129,
-    "meshes": 117,
-    "triangles": 99580,
-    "materials": 37,
+    "stage": "I6.3-trunk-correction",
+    "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
+    "blendSha256": "ab59b98f7c0006d68d6838d9e90ecfc48e5b2396fbd65192cb3d45a4953283af",
+    "nodes": 140,
+    "meshes": 128,
+    "triangles": 110056,
+    "materials": 39,
     "textures": 15
   },
   "fullRegression": {
@@ -58,5 +58,30 @@
     "newComponents": "not_tested_user_currently_unavailable",
     "historicalI3": "docs/I3_FINAL_VALIDATION.md",
     "overallAcceptanceComplete": false
+  },
+  "historicalValidationVersion": "0.6.0",
+  "trunkCorrection": {
+    "version": "0.6.1",
+    "previousAppearanceConclusionWithdrawn": true,
+    "report": "docs/TRUNK_CORRECTION.md",
+    "geometry": "docs/validation/trunk-correction/geometry.json",
+    "browser": {
+      "startTime": "2026-10-27T07:14:49.280Z",
+      "duration": 29887.597999999998,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "regression": {
+      "startTime": "2026-10-27T07:06:20.617Z",
+      "duration": 212167.769,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production": "docs/validation/trunk-correction/production.json",
+    "realSpeechRevalidated": false
   }
 }

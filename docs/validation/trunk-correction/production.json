@@ -1,0 +1,12 @@
+{
+  "url": "http://localhost:3000",
+  "version": "0.6.1",
+  "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
+  "bytes": 6966520,
+  "asrConfigured": true,
+  "ttsConfigured": true,
+  "realSpeechApiInvoked": false,
+  "speechRequests": [],
+  "errors": [],
+  "passed": true
+}

@@ -1,6 +1,6 @@
 # SU7 交互实验室 · I4–I6
 
-指定 Mona x Supercars 小米 SU7 交互展示工程。0.6.0 已实现四窗、四门、后备箱、近远光／转向灯、车漆、座舱灯带和双雨刷，手动／文字／语音共用执行器。真实阿里云 ASR／TTS 的新能力闭环已通过合成音源测试；**新增部件真人麦克风复验待补，整轮未标记全部通过**。
+指定 Mona x Supercars 小米 SU7 交互展示工程。0.6.1 已实现四窗、四门、后备箱、近远光／转向灯、车漆、座舱灯带和双雨刷，手动／文字／语音共用执行器。尾箱完整盖板及外露框架问题已作 [专项修正](docs/TRUNK_CORRECTION.md)。真实阿里云 ASR／TTS 的新能力闭环已通过合成音源测试；**新增部件真人麦克风复验待补，整轮未标记全部通过**。
 
 总体需求见 [设计基线及服务修订](docs/SU7_INCREMENTAL_DESIGN.md)，当前结果见 [I4–I6 报告](docs/I4_I6_VALIDATION.md) 与 [清单](docs/IMPLEMENTATION_CHECKLIST.md)。I7 DeepSeek 尚未接入。
 
@@ -55,10 +55,10 @@ Edge 回归覆盖 1920×1080 和 1366×768，3003 `--test-unconfigured` 不读�
 - 唯一工作工程 `assets/source/blender/su7-enhanced.blend`，15 张纹理全部打包。
 - 运行 GLB `apps/web/public/models/su7-runtime.glb`，导出副本在 `assets/derived/`。
 - [机构／材质／热点映射](docs/assets/vehicle-mapping.json)、[修改记录](docs/assets/I4_I6_MODIFICATIONS.md)。
-- 当前 129 节点、117 网格、99,580 三角面、37 材质、15 张纹理；哈希见 `docs/assets/current-geometry.json`。
+- 当前 140 节点、128 网格、110,056 三角面、39 材质、15 张纹理；哈希见 `docs/assets/current-geometry.json`。
 
 需要重新导出时使用项目内 Blender 4.5 LTS 便携工具，运行 `npm run asset:export`、`npm run build`。导出从当前工程复位机构、更新资源和哈希，不重跑 I2 分件。
 
-历史只使用 Git：`v0.1.0-i1`、`v0.3.2-i3-complete`、`v0.4.0-i4-mechanics`、`v0.5.0-i5-appearance`、`v0.6.0-i4-i6-functional`，不复制旧工程或运行旧版对照服务。[第三方许可](THIRD_PARTY_NOTICES.md)。
+历史只使用 Git：`v0.1.0-i1`、`v0.3.2-i3-complete`、`v0.4.0-i4-mechanics`、`v0.5.0-i5-appearance`、`v0.6.0-i4-i6-functional`、`v0.6.1-trunk-correction`，不复制旧工程或运行旧版对照服务。[第三方许可](THIRD_PARTY_NOTICES.md)。
 
 先等待体验及补齐新增部件真人语音复验，再获授权推进 I7。见 [下一轮起点](docs/NEXT_ITERATION.md)。

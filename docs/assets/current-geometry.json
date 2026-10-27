@@ -1,10 +1,10 @@
 {
-  "stage": "I6.2",
-  "sha256": "cc08105d6f3850c780a43c8667083c5f07f579942bfb8f5b2574267ca62c9d20",
-  "blendSha256": "f02ce3b946535185b5a4c308ed5686536ee1d15702e6ffd887ab03cc9f640b38",
-  "nodes": 129,
-  "meshes": 117,
-  "triangles": 99580,
-  "materials": 37,
+  "stage": "I6.3-trunk-correction",
+  "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
+  "blendSha256": "ab59b98f7c0006d68d6838d9e90ecfc48e5b2396fbd65192cb3d45a4953283af",
+  "nodes": 140,
+  "meshes": 128,
+  "triangles": 110056,
+  "materials": 39,
   "textures": 15
 }
