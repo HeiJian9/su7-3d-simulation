@@ -22,7 +22,7 @@ if (!testUnconfigured) loadProjectEnv(root);
 const providers = providerConfig(testUnconfigured ? {} : process.env);
 app.disable('x-powered-by');
 app.get('/api/health', (_req, res) => {
-  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I3-aliyun', version: '0.3.2', providers: {
+  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I6-aliyun', version: '0.6.0', providers: {
     ...providers.health,
     intent: { configured: false, probe: 'pending-I7' },
   } });
@@ -63,7 +63,7 @@ app.post('/api/diagnostics', express.json({ limit: '512kb' }), async (req, res) 
     res.status(500).json({ code: 'DIAGNOSTIC_WRITE_FAILED', message: '本地报告写入失败，请检查目录权限。' });
   }
 });
-app.use('/api', (_req, res) => res.status(404).json({ code: 'NOT_IMPLEMENTED', message: '此接口不属于当前四窗与语音框架。', retryable: false }));
+app.use('/api', (_req, res) => res.status(404).json({ code: 'NOT_IMPLEMENTED', message: '此接口尚未注册。', retryable: false }));
 const webDist = path.join(root, 'apps/web/dist');
 if (existsSync(webDist)) {
   // Original packages and Blender sources are never served.
@@ -80,5 +80,5 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, _next) => {
   if (!res.headersSent) res.status(error?.status === 413 ? 413 : 400).json({ code: 'INVALID_REQUEST', message: '请求内容或大小不符合接口要求。', retryable: false });
 };
 app.use(errorHandler);
-const server = app.listen(port, '127.0.0.1', () => console.log(`SU7 I2–I3 framework: http://localhost:${port}`));
+const server = app.listen(port, '127.0.0.1', () => console.log(`SU7 I4–I6: http://localhost:${port}`));
 server.on('error', (error) => { console.error(error.message); process.exitCode = 1; });

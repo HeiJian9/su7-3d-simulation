@@ -3,7 +3,7 @@ import { providerConfig, type AsrConfig, type TtsConfig } from '../../apps/serve
 import { synthesize, transcribe, validateAudio } from '../../apps/server/src/speech/providers';
 import { encodeWav, newVad, stepVad } from '../../apps/web/src/audio/vad';
 import { SpeechCoordinator, useSpeech, type RecorderPort, type PlayerPort } from '../../apps/web/src/speech';
-import { corners, defaultWindows } from '../../packages/shared/src/windows';
+import { corners, defaultVehicle as defaultWindows } from '../../packages/shared/src/vehicle';
 import { manualWindow, useVehicle } from '../../apps/web/src/vehicle';
 
 const asr: AsrConfig = { baseUrl: 'https://relay.example/v1beta', apiKey: 'unit-test-token', model: 'gemini-3.8-flash', protocol: 'gemini-native', auth: 'x-goog-api-key', formats: ['audio/wav'], timeoutMs: 1000 };

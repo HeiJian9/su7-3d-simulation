@@ -1,0 +1,318 @@
+{
+  "source": "Original Mesh24 wiper subassemblies; original Mesh69 windshield",
+  "axis": [
+    7.266162782570973e-08,
+    0.8878909945487976,
+    -0.4600538909435272
+  ],
+  "samples": 8,
+  "assemblies": {
+    "driver": {
+      "node": "WIPER_DRIVER_ROOT",
+      "mesh": "WIPER_DRIVER_ASSEMBLY",
+      "pivot": [
+        0.21250639855861664,
+        0.9355716109275818,
+        -1.108124017715454
+      ],
+      "axis": [
+        7.266162782570973e-08,
+        0.8878909945487976,
+        -0.4600538909435272
+      ],
+      "maxAngle": 1.0821041362364843,
+      "morphTargets": [
+        "SWEEP_01",
+        "SWEEP_02",
+        "SWEEP_03",
+        "SWEEP_04",
+        "SWEEP_05",
+        "SWEEP_06",
+        "SWEEP_07",
+        "SWEEP_08"
+      ],
+      "sourceFaces": 256,
+      "sourceVertices": 401
+    },
+    "passenger": {
+      "node": "WIPER_PASSENGER_ROOT",
+      "mesh": "WIPER_PASSENGER_ASSEMBLY",
+      "pivot": [
+        0.718308687210083,
+        0.9199643135070801,
+        -1.0017367601394653
+      ],
+      "axis": [
+        7.266162782570973e-08,
+        0.8878909945487976,
+        -0.4600538909435272
+      ],
+      "maxAngle": 1.0821041362364843,
+      "morphTargets": [
+        "SWEEP_01",
+        "SWEEP_02",
+        "SWEEP_03",
+        "SWEEP_04",
+        "SWEEP_05",
+        "SWEEP_06",
+        "SWEEP_07",
+        "SWEEP_08"
+      ],
+      "sourceFaces": 306,
+      "sourceVertices": 476
+    }
+  },
+  "sourceComponents": [
+    {
+      "side": "driver",
+      "faces": 20,
+      "min": [
+        -0.42421457171440125,
+        0.9121338129043579,
+        -1.1106055974960327
+      ],
+      "max": [
+        -0.38882386684417725,
+        0.9355806708335876,
+        -1.0894207954406738
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 20,
+      "min": [
+        0.24184650182724,
+        0.9107937216758728,
+        -1.132215976715088
+      ],
+      "max": [
+        0.2767622172832489,
+        0.9337517023086548,
+        -1.1085233688354492
+      ]
+    },
+    {
+      "side": "driver",
+      "faces": 20,
+      "min": [
+        0.19471032917499542,
+        0.9277405142784119,
+        -1.1196691989898682
+      ],
+      "max": [
+        0.2307153195142746,
+        0.9495712518692017,
+        -1.0995280742645264
+      ]
+    },
+    {
+      "side": "driver",
+      "faces": 48,
+      "min": [
+        -0.38916078209877014,
+        0.9162096977233887,
+        -1.119534969329834
+      ],
+      "max": [
+        0.1951756775379181,
+        0.9499689936637878,
+        -1.0925897359848022
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 60,
+      "min": [
+        0.2723342776298523,
+        0.9142261743545532,
+        -1.1258831024169922
+      ],
+      "max": [
+        0.7074489593505859,
+        0.9402467608451843,
+        -1.000684380531311
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 20,
+      "min": [
+        0.7030818462371826,
+        0.9132002592086792,
+        -1.0180643796920776
+      ],
+      "max": [
+        0.736463725566864,
+        0.9358035922050476,
+        -0.9905492663383484
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 156,
+      "min": [
+        -0.24100956320762634,
+        0.8717198967933655,
+        -1.2127246856689453
+      ],
+      "max": [
+        0.5088016390800476,
+        0.9546173214912415,
+        -1.0511956214904785
+      ]
+    },
+    {
+      "side": "driver",
+      "faces": 124,
+      "min": [
+        -0.6766661405563354,
+        0.8513659834861755,
+        -1.1640981435775757
+      ],
+      "max": [
+        -0.05112740024924278,
+        0.958295464515686,
+        -1.0973318815231323
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 16,
+      "min": [
+        -0.2314111739397049,
+        0.8652172684669495,
+        -1.2011860609054565
+      ],
+      "max": [
+        -0.2140456587076187,
+        0.8855686187744141,
+        -1.1797276735305786
+      ]
+    },
+    {
+      "side": "driver",
+      "faces": 16,
+      "min": [
+        -0.6709893345832825,
+        0.8410129547119141,
+        -1.1536033153533936
+      ],
+      "max": [
+        -0.6504049301147461,
+        0.8694045543670654,
+        -1.1268354654312134
+      ]
+    },
+    {
+      "side": "driver",
+      "faces": 28,
+      "min": [
+        -0.4107381999492645,
+        0.913539707660675,
+        -1.1140152215957642
+      ],
+      "max": [
+        0.21730707585811615,
+        0.9395779967308044,
+        -1.0941553115844727
+      ]
+    },
+    {
+      "side": "passenger",
+      "faces": 34,
+      "min": [
+        0.2543843388557434,
+        0.9121261835098267,
+        -1.124370813369751
+      ],
+      "max": [
+        0.7243729829788208,
+        0.9298962950706482,
+        -0.9976648688316345
+      ]
+    }
+  ],
+  "note": "Original UV/material surfaces retained. Root rotations plus baked surface-conforming corrections, interpolated by sweep fraction. Cowl remains fixed.",
+  "fitMetrics": [
+    {
+      "side": "driver",
+      "fraction": 0.125,
+      "maxTangentialCorrection": 0.0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.25,
+      "maxTangentialCorrection": 0.001454
+    },
+    {
+      "side": "driver",
+      "fraction": 0.375,
+      "maxTangentialCorrection": 0.0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.5,
+      "maxTangentialCorrection": 0.000176
+    },
+    {
+      "side": "driver",
+      "fraction": 0.625,
+      "maxTangentialCorrection": 0.000986
+    },
+    {
+      "side": "driver",
+      "fraction": 0.75,
+      "maxTangentialCorrection": 0.000117
+    },
+    {
+      "side": "driver",
+      "fraction": 0.875,
+      "maxTangentialCorrection": 0.0
+    },
+    {
+      "side": "driver",
+      "fraction": 1.0,
+      "maxTangentialCorrection": 0.0
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.125,
+      "maxTangentialCorrection": 0.0
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.25,
+      "maxTangentialCorrection": 0.000953
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.375,
+      "maxTangentialCorrection": 0.000883
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.5,
+      "maxTangentialCorrection": 0.000919
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.625,
+      "maxTangentialCorrection": 0.000736
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.75,
+      "maxTangentialCorrection": 6.5e-05
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.875,
+      "maxTangentialCorrection": 0.000523
+    },
+    {
+      "side": "passenger",
+      "fraction": 1.0,
+      "maxTangentialCorrection": 0.00203
+    }
+  ]
+}

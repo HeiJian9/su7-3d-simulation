@@ -1,0 +1,5 @@
+WIPER_CLEARANCE {"samplesPerAssembly": 101, "mode": "actual-saved-rig", "source": "saved enhanced Blender source, original windshield and original wiper faces", "minGlassClearanceMeters": 0.0030543523535015993, "maxGlassClearanceMeters": 0.026366152218542993, "intersectionsBetweenWipers": 0, "collisionExamples": [], "passed": true}
+Blender 4.5.15 LTS (hash 5afeabba6097 built 2026-10-22 01:35:27)
+Read blend: "D:\code\Projects\3D simulation\assets\source\blender\su7-enhanced.blend"
+
+Blender quit

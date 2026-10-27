@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { transcriptSchema, type SpeechHealth } from '../../../packages/shared/src/speech';
 import { VoiceRecorder, type RecordedAudio } from './audio/recorder';
 import { ApiAudioPlayer, type PlaybackStop } from './audio/player';
-import { useVehicle, waitForWindowExecution } from './vehicle';
+import { useVehicle, waitForVehicleExecution } from './vehicle';
 
 export type SpeechPhase = 'idle' | 'requesting' | 'recording' | 'transcribing' | 'resolving' | 'executing' | 'clarifying' | 'synthesizing' | 'speaking' | 'error';
 interface SpeechState {
@@ -48,7 +48,7 @@ export class SpeechCoordinator {
     useSpeech.setState((s) => ({ traces: [...s.traces.slice(-79), { requestId, time: new Date().toISOString(), stage, detail: detail.slice(0,500), mock: s.health.mode === 'test-mock' }] }));
   }
   private valid(generation: number) { return generation === this.generation; }
-  cancel(message = '此次语音已取消；已接受的车窗动作不回滚。') {
+  cancel(message = '此次语音已取消；已接受的车辆动作不回滚。') {
     const phase=useSpeech.getState().phase;
     this.generation++; this.request?.abort(); this.request = undefined; this.recorder.cancel(); const playback=this.player.stop();
     if(playback?.wasPlaying)this.trace('tts-stopped',`paused; position ${playback.positionMs} ms`);
@@ -111,7 +111,7 @@ export class SpeechCoordinator {
     let message = result.message;
     if (result.execution) {
       useSpeech.setState({ phase: 'executing', message: '正在调整车辆部件…' });
-      const execution = await waitForWindowExecution(result.execution);
+      const execution = await waitForVehicleExecution(result.execution);
       if (!this.valid(generation)) return;
       if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
       message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
@@ -123,10 +123,10 @@ export class SpeechCoordinator {
     if (useSpeech.getState().enabled && useSpeech.getState().health.tts.configured) await this.speak(message, generation, result.kind === 'clarify');
   }
   async replay() { this.cancel('准备重播。'); const message = useSpeech.getState().lastFeedback || useVehicle.getState().feedback; this.currentId = crypto.randomUUID(); await this.speak(message, this.generation, !!useVehicle.getState().context.pending); }
-  stopSpeaking() { this.cancel('播报已停止，车窗状态保持。'); }
+  stopSpeaking() { this.cancel('播报已停止，车辆状态保持。'); }
   cancelClarification() {
-    this.cancel('已取消待确认指令，车窗目标保持不变。');
-    useVehicle.getState().beginManual();useVehicle.getState().say('已取消待确认指令，车窗目标保持不变。');
+    this.cancel('已取消待确认指令，车辆目标保持不变。');
+    useVehicle.getState().beginManual();useVehicle.getState().say('已取消待确认指令，车辆目标保持不变。');
     this.trace('clarification-cancelled','用户取消追问；未提交车辆动作');
   }
   private async speak(text: string, generation: number, clarify: boolean) {
@@ -145,7 +145,7 @@ export class SpeechCoordinator {
       if (this.valid(generation) && ended === 'ended') { useSpeech.setState({ phase: clarify && useVehicle.getState().context.pending ? 'clarifying' : 'idle', message: text }); this.trace('tts-ended', 'API audio playback ended'); }
     } catch (error) {
       if (!this.valid(generation)) return;
-      this.fail(error instanceof SpeechFailure ? error.code : 'TTS_FAILED', `${error instanceof SpeechFailure ? error.message : 'API 播报失败，可单独重播。'} 已完成的车窗动作与文字保留。`);
+      this.fail(error instanceof SpeechFailure ? error.code : 'TTS_FAILED', `${error instanceof SpeechFailure ? error.message : 'API 播报失败，可单独重播。'} 已完成的车辆动作与文字保留。`);
     }
   }
 }

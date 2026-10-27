@@ -97,6 +97,6 @@ export function WindowMechanism({ model }: { model: Group }) {
     completeExecutions();
     interval.current += delta;
     if (interval.current > .12) { interval.current = 0; state.sample(); }
-  });
+  },-1);
   return null;
 }

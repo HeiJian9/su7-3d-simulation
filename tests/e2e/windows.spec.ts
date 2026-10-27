@@ -8,7 +8,7 @@ async function ready(page: Page) {
 const pose = (page: Page, corner: Corner) => page.locator('canvas').getAttribute(`data-window-${corner}-openness`).then(Number);
 const targets = async (page: Page) => JSON.parse((await page.getByRole('complementary', { name: '四窗控制', exact: true }).getAttribute('data-window-targets'))!);
 async function command(page: Page, value: string) {
-  await page.getByRole('textbox', { name: '车窗文字指令', exact: true }).fill(value);
+  await page.getByRole('textbox', { name: '车辆文字指令', exact: true }).fill(value);
   await page.getByRole('button', { name: '发送', exact: false }).click();
 }
 test('each real window independently reaches 0, 50, 100 and continuous slider positions', async ({ page }, info) => {
@@ -40,7 +40,8 @@ test('text rules, ambiguity, relative operations, negation and unknown clauses s
   await command(page,'不要打开左前车窗，右后窗开一半');await expect.poll(()=>pose(page,'rr')).toBe(.5);
   expect((await targets(page)).fl.openness).toBe(.4);
   const before=await targets(page);await command(page,'左前打开，顺便启动雨刷');
-  await expect(page.getByTestId('console-feedback')).toContainText('尚未被四窗规则完整覆盖');expect(await targets(page)).toEqual(before);
+  await expect(page.getByTestId('console-feedback')).toContainText('未完整');expect(await targets(page)).toEqual(before);
+  expect(JSON.parse((await page.locator('canvas').getAttribute('data-vehicle-state'))!).wipers.mode).toBe('off');
 });
 test('3D window selection works for open apertures; camera dragging never operates a window', async ({ page }) => {
   await ready(page);await page.getByRole('button',{name:'左方视角',exact:true}).click();

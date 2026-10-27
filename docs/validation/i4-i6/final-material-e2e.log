@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:13052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (4.0s)
+  ok 2 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (7.5s)
+  ok 3 [Edge-1920x1080] › tests\e2e\wipers.spec.ts:5:1 › I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking (16.7s)
+  ok 4 [Edge-1920x1080] › tests\e2e\wipers.spec.ts:14:1 › I6 rules and labelled cabin entry work while camera and other components remain usable (3.2s)
+(node:25964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.9s)
+  ok 6 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (7.4s)
+  ok 7 [Edge-1366x768] › tests\e2e\wipers.spec.ts:5:1 › I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking (16.7s)
+  ok 8 [Edge-1366x768] › tests\e2e\wipers.spec.ts:14:1 › I6 rules and labelled cabin entry work while camera and other components remain usable (2.3s)
+
+  8 passed (1.1m)

@@ -1,0 +1,338 @@
+
+Running 74 tests using 1 worker
+
+(node:29304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (4.2s)
+  ok  2 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (5.0s)
+  ok  3 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.4s)
+  ok  4 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (20.8s)
+  ok  5 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (36.8s)
+  ok  6 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (6.8s)
+  x   7 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (12.5s)
+(node:40788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [Edge-1920x1080] › tests\e2e\scene.spec.ts:48:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (9.6s)
+  ok  9 [Edge-1920x1080] › tests\e2e\scene.spec.ts:73:1 › cabin, free movement, look, focused input isolation and keyboard return (11.6s)
+  ok 10 [Edge-1920x1080] › tests\e2e\scene.spec.ts:113:1 › corrupt model fails visibly, then retry loads the actual asset (1.1s)
+  ok 11 [Edge-1920x1080] › tests\e2e\scene.spec.ts:125:1 › two minutes of continuous camera operations remain responsive (2.0m)
+  ok 12 [Edge-1920x1080] › tests\e2e\speech.spec.ts:21:1 › Mock-only microphone VAD → transcript → real geometry → API audio playback (4.9s)
+  ok 13 [Edge-1920x1080] › tests\e2e\speech.spec.ts:31:1 › Mock clarification chooses one window and new recording stops old API playback (8.0s)
+  ok 14 [Edge-1920x1080] › tests\e2e\speech.spec.ts:42:1 › Mock late ASR reply cannot override even an unchanged manual target (4.3s)
+  ok 15 [Edge-1920x1080] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (900ms)
+  ok 16 [Edge-1920x1080] › tests\e2e\speech.spec.ts:56:1 › manual recording finish works before the silence timeout (2.3s)
+  ok 17 [Edge-1920x1080] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (4.5s)
+  ok 18 [Edge-1920x1080] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 权限拒绝; manual control survives (1.3s)
+  ok 19 [Edge-1920x1080] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 无设备; manual control survives (1.3s)
+  ok 20 [Edge-1920x1080] › tests\e2e\speech.spec.ts:74:1 › Mock silence never uploads audio (6.2s)
+  ok 21 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 401: manual path remains usable (4.1s)
+  ok 22 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 429: manual path remains usable (4.1s)
+  ok 23 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 504: manual path remains usable (4.1s)
+  ok 24 [Edge-1920x1080] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 415: manual path remains usable (4.1s)
+  ok 25 [Edge-1920x1080] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (4.0s)
+  x  26 [Edge-1920x1080] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action (11.2s)
+(node:27184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 27 [Edge-1920x1080] › tests\e2e\speech.spec.ts:101:1 › Mock cancelling native WebM finalization permits immediate re-record without uploading old audio (8.1s)
+  ok 28 [Edge-1920x1080] › tests\e2e\speech.spec.ts:110:56 › Mock network failure is explicit and manual recovery remains available (4.1s)
+  ok 29 [Edge-1920x1080] › tests\e2e\speech.spec.ts:110:56 › Mock invalid-json failure is explicit and manual recovery remains available (4.1s)
+  ok 30 [Edge-1920x1080] › tests\e2e\speech.spec.ts:115:1 › direction wording from human logs and explicit all-window clarification share actual state (3.6s)
+  ok 31 [Edge-1920x1080] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (8.2s)
+  x  32 [Edge-1920x1080] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (13.3s)
+(node:40128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 33 [Edge-1920x1080] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (5.1s)
+  ok 34 [Edge-1920x1080] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.4s)
+  ok 35 [Edge-1920x1080] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.3s)
+  ok 36 [Edge-1920x1080] › tests\e2e\wipers.spec.ts:5:1 › I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking (16.5s)
+  ok 37 [Edge-1920x1080] › tests\e2e\wipers.spec.ts:14:1 › I6 rules and labelled cabin entry work while camera and other components remain usable (3.3s)
+(node:36156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 38 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (4.0s)
+  ok 39 [Edge-1366x768] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (4.9s)
+  ok 40 [Edge-1366x768] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.9s)
+  ok 41 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (21.0s)
+  ok 42 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (36.7s)
+  ok 43 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (6.1s)
+  x  44 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (12.3s)
+(node:37360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 45 [Edge-1366x768] › tests\e2e\scene.spec.ts:48:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (8.7s)
+  ok 46 [Edge-1366x768] › tests\e2e\scene.spec.ts:73:1 › cabin, free movement, look, focused input isolation and keyboard return (12.7s)
+  ok 47 [Edge-1366x768] › tests\e2e\scene.spec.ts:113:1 › corrupt model fails visibly, then retry loads the actual asset (874ms)
+  -  48 [Edge-1366x768] › tests\e2e\scene.spec.ts:125:1 › two minutes of continuous camera operations remain responsive
+  ok 49 [Edge-1366x768] › tests\e2e\speech.spec.ts:21:1 › Mock-only microphone VAD → transcript → real geometry → API audio playback (4.9s)
+  ok 50 [Edge-1366x768] › tests\e2e\speech.spec.ts:31:1 › Mock clarification chooses one window and new recording stops old API playback (8.0s)
+  ok 51 [Edge-1366x768] › tests\e2e\speech.spec.ts:42:1 › Mock late ASR reply cannot override even an unchanged manual target (4.2s)
+  ok 52 [Edge-1366x768] › tests\e2e\speech.spec.ts:51:1 › cancelling actual browser capture releases tracks and sends no audio (1.0s)
+  ok 53 [Edge-1366x768] › tests\e2e\speech.spec.ts:56:1 › manual recording finish works before the silence timeout (2.3s)
+  ok 54 [Edge-1366x768] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (4.4s)
+  ok 55 [Edge-1366x768] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 权限拒绝; manual control survives (1.2s)
+  ok 56 [Edge-1366x768] › tests\e2e\speech.spec.ts:68:3 › Mock microphone error: 无设备; manual control survives (1.2s)
+  ok 57 [Edge-1366x768] › tests\e2e\speech.spec.ts:74:1 › Mock silence never uploads audio (6.1s)
+  ok 58 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 401: manual path remains usable (4.0s)
+  ok 59 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 429: manual path remains usable (4.0s)
+  ok 60 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 504: manual path remains usable (4.0s)
+  ok 61 [Edge-1366x768] › tests\e2e\speech.spec.ts:80:3 › Mock ASR error 415: manual path remains usable (4.0s)
+  ok 62 [Edge-1366x768] › tests\e2e\speech.spec.ts:86:1 › unconfigured local server: WebM recording reaches explicit 503 and manual controls recover (4.0s)
+  x  63 [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action (11.2s)
+(node:29356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 64 [Edge-1366x768] › tests\e2e\speech.spec.ts:101:1 › Mock cancelling native WebM finalization permits immediate re-record without uploading old audio (7.5s)
+  ok 65 [Edge-1366x768] › tests\e2e\speech.spec.ts:110:56 › Mock network failure is explicit and manual recovery remains available (4.6s)
+  ok 66 [Edge-1366x768] › tests\e2e\speech.spec.ts:110:56 › Mock invalid-json failure is explicit and manual recovery remains available (4.0s)
+  ok 67 [Edge-1366x768] › tests\e2e\speech.spec.ts:115:1 › direction wording from human logs and explicit all-window clarification share actual state (3.6s)
+  ok 68 [Edge-1366x768] › tests\e2e\windows.spec.ts:14:1 › each real window independently reaches 0, 50, 100 and continuous slider positions (8.4s)
+  x  69 [Edge-1366x768] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state (13.4s)
+(node:40652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 70 [Edge-1366x768] › tests\e2e\windows.spec.ts:45:1 › 3D window selection works for open apertures; camera dragging never operates a window (4.4s)
+  ok 71 [Edge-1366x768] › tests\e2e\windows.spec.ts:59:1 › reverses an active animation and preserves a real intermediate pose (1.9s)
+  ok 72 [Edge-1366x768] › tests\e2e\windows.spec.ts:65:1 › fixed-view actual openings at zero half and full (4.1s)
+  ok 73 [Edge-1366x768] › tests\e2e\wipers.spec.ts:5:1 › I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking (16.7s)
+  ok 74 [Edge-1366x768] › tests\e2e\wipers.spec.ts:14:1 › I6 rules and labelled cabin entry work while camera and other components remain usable (3.2s)
+
+
+  1) [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  getByRole('slider', { name: '右后车窗开度', exact: true })
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeInViewport" getByRole('slider', { name: '右后车窗开度', exact: true }) with timeout 10000ms
+      - waiting for getByRole('slider', { name: '右后车窗开度', exact: true })
+        24 × locator resolved to <input min="0" step="1" max="100" value="0" type="range" aria-label="右后车窗开度"/>
+           - unexpected value "viewport ratio 0"
+
+
+      31 |     await expect(page.getByRole('button', { name: label, exact: true })).toBeInViewport();
+      32 |   }
+    > 33 |   for(const label of ['左前车窗开度','右前车窗开度','左后车窗开度','右后车窗开度'])await expect(page.getByRole('slider',{name:label,exact:true})).toBeInViewport();
+         |                                                                                                                           ^
+      34 |   for (const [label, expected] of [
+      35 |     ['前方视角', [0, 1.7, -7.8]], ['后方视角', [0, 1.7, 7.8]],
+      36 |     ['左方视角', [-7.8, 1.7, 0]], ['右方视角', [7.8, 1.7, 0]],
+        at D:\code\Projects\3D simulation\tests\e2e\scene.spec.ts:33:123
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1920x1080\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1920x1080\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1920x1080\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1920x1080\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [Edge-1920x1080] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  getByRole('button', { name: '完全打开右后车窗', exact: true })
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeInViewport" getByRole('button', { name: '完全打开右后车窗', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '完全打开右后车窗', exact: true })
+        24 × locator resolved to <button aria-label="完全打开右后车窗">开</button>
+           - unexpected value "viewport ratio 0"
+
+
+      94 |   const input=page.getByRole('textbox',{name:'车辆文字指令'});await input.fill('打开车窗');await input.press('Enter');
+      95 |   await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+    > 96 |   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
+         |                                                                       ^
+      97 |   await page.screenshot({path:`docs/assets/i4-i6/clarification-panel-${info.project.name}.png`});
+      98 |   await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
+      99 |   await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+        at D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:96:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1920x1080\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1920x1080\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1920x1080\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1920x1080\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [Edge-1920x1080] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('console-feedback')
+    Expected substring: "尚未被四窗规则完整覆盖"
+    Received string:    "当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 I7。"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" getByTestId('console-feedback') with timeout 10000ms
+      - waiting for getByTestId('console-feedback')
+        24 × locator resolved to <p role="status" class="console-feedback" data-testid="console-feedback">当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 …</p>
+           - unexpected value "当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 I7。"
+
+
+      41 |   expect((await targets(page)).fl.openness).toBe(.4);
+      42 |   const before=await targets(page);await command(page,'左前打开，顺便启动雨刷');
+    > 43 |   await expect(page.getByTestId('console-feedback')).toContainText('尚未被四窗规则完整覆盖');expect(await targets(page)).toEqual(before);
+         |                                                      ^
+      44 | });
+      45 | test('3D window selection works for open apertures; camera dragging never operates a window', async ({ page }) => {
+      46 |   await ready(page);await page.getByRole('button',{name:'左方视角',exact:true}).click();
+        at D:\code\Projects\3D simulation\tests\e2e\windows.spec.ts:43:54
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1920x1080\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1920x1080\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1920x1080\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1920x1080\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  getByRole('slider', { name: '右前车窗开度', exact: true })
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeInViewport" getByRole('slider', { name: '右前车窗开度', exact: true }) with timeout 10000ms
+      - waiting for getByRole('slider', { name: '右前车窗开度', exact: true })
+        24 × locator resolved to <input min="0" step="1" max="100" value="0" type="range" aria-label="右前车窗开度"/>
+           - unexpected value "viewport ratio 0"
+
+
+      31 |     await expect(page.getByRole('button', { name: label, exact: true })).toBeInViewport();
+      32 |   }
+    > 33 |   for(const label of ['左前车窗开度','右前车窗开度','左后车窗开度','右后车窗开度'])await expect(page.getByRole('slider',{name:label,exact:true})).toBeInViewport();
+         |                                                                                                                           ^
+      34 |   for (const [label, expected] of [
+      35 |     ['前方视角', [0, 1.7, -7.8]], ['后方视角', [0, 1.7, 7.8]],
+      36 |     ['左方视角', [-7.8, 1.7, 0]], ['右方视角', [7.8, 1.7, 0]],
+        at D:\code\Projects\3D simulation\tests\e2e\scene.spec.ts:33:123
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1366x768\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1366x768\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1366x768\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\scene-actual-GLB-health-vi-599e6-trols-and-responsive-layout-Edge-1366x768\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  getByRole('button', { name: '完全打开右后车窗', exact: true })
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeInViewport" getByRole('button', { name: '完全打开右后车窗', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '完全打开右后车窗', exact: true })
+        24 × locator resolved to <button aria-label="完全打开右后车窗">开</button>
+           - unexpected value "viewport ratio 0"
+
+
+      94 |   const input=page.getByRole('textbox',{name:'车辆文字指令'});await input.fill('打开车窗');await input.press('Enter');
+      95 |   await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+    > 96 |   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
+         |                                                                       ^
+      97 |   await page.screenshot({path:`docs/assets/i4-i6/clarification-panel-${info.project.name}.png`});
+      98 |   await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
+      99 |   await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+        at D:\code\Projects\3D simulation\tests\e2e\speech.spec.ts:96:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\speech-Mock-clarification--59ba9--intent-after-a-bulk-action-Edge-1366x768\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [Edge-1366x768] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('console-feedback')
+    Expected substring: "尚未被四窗规则完整覆盖"
+    Received string:    "当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 I7。"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" getByTestId('console-feedback') with timeout 10000ms
+      - waiting for getByTestId('console-feedback')
+        24 × locator resolved to <p role="status" class="console-feedback" data-testid="console-feedback">当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 …</p>
+           - unexpected value "当前规则未完整覆盖这条表达，车辆未改变。请明确灯光模式、颜色或亮度；DeepSeek 兜底保留在 I7。"
+
+
+      41 |   expect((await targets(page)).fl.openness).toBe(.4);
+      42 |   const before=await targets(page);await command(page,'左前打开，顺便启动雨刷');
+    > 43 |   await expect(page.getByTestId('console-feedback')).toContainText('尚未被四窗规则完整覆盖');expect(await targets(page)).toEqual(before);
+         |                                                      ^
+      44 | });
+      45 | test('3D window selection works for open apertures; camera dragging never operates a window', async ({ page }) => {
+      46 |   await ready(page);await page.getByRole('button',{name:'左方视角',exact:true}).click();
+        at D:\code\Projects\3D simulation\tests\e2e\windows.spec.ts:43:54
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1366x768\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1366x768\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1366x768\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\windows-text-rules-ambigui-4a9f1-unknown-clauses-share-state-Edge-1366x768\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout 
+    [Edge-1920x1080] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action 
+    [Edge-1920x1080] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state 
+    [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout 
+    [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action 
+    [Edge-1366x768] › tests\e2e\windows.spec.ts:32:1 › text rules, ambiguity, relative operations, negation and unknown clauses share state 
+  1 skipped
+  67 passed (10.5m)

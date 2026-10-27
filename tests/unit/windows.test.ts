@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { CommandLedger, defaultWindows, parseWindowText, type CommandRequest, type WindowContext } from '../../packages/shared/src/windows';
+import { parseWindowText, type WindowContext } from '../../packages/shared/src/windows';
+import { VehicleLedger as CommandLedger, defaultVehicle as defaultWindows, type CommandRequest } from '../../packages/shared/src/vehicle';
 
 function request(id: string, revision: number, targets = ['fl'], value = 0.5, operation = 'set'): unknown {
   return { requestId: id, baseRevision: revision, origin: 'text', route: 'rules', commands: [{ component: 'window', targets, operation, property: 'openness', value }] };

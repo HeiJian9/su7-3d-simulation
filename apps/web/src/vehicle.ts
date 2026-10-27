@@ -20,6 +20,7 @@ interface VehicleStore {
   executions: Execution[];
   messages: Array<{ id: string; input: string; output: string; origin: string; status: string }>;
   actual: Record<Corner, number>;
+  actualParts: Record<string,Value>;
   feedback: string;
   register: (available: Corner[]) => void;
   beginManual: (corner?: Corner) => void;
@@ -36,7 +37,7 @@ export const useVehicle = create<VehicleStore>((set, get) => ({
   state: defaultVehicle(), capabilities: [], capabilityOwners:{}, selectedPart: null, available: [], selected: null, preview: {}, context: {}, epoch: 0, executions: [], messages: [],
   registerCapabilities: (owner,capabilities) => set(s=>{const capabilityOwners={...s.capabilityOwners,[owner]:capabilities};return {capabilityOwners,capabilities:[...new Set(Object.values(capabilityOwners).flat())]};}),
   selectPart: (key) => { const [component,target]=key.split(':');set(s=>({selectedPart:key,epoch:s.epoch+1,context:{focus:{component:component as VehicleCommand['component'],targets:[target],updatedAt:Date.now()}},feedback:`已选择${effectLabel(key)}，可点击热点操作或使用控制面板。`})); },
-  actual: { ...windowPoses }, feedback: '选择车窗，拖动滑块，或输入一句指令。',
+  actual: { ...windowPoses },actualParts:{}, feedback: '选择模型热点或控制面板，也可以直接说出车辆指令。',
   register: (available) => {
     set({ available });
     if (!available.length) for (const execution of get().executions) if (execution.status === 'animating') get().finish(execution.requestId, 'failed', '模型已卸载，车窗动作未确认完成。');
@@ -81,7 +82,7 @@ export const useVehicle = create<VehicleStore>((set, get) => ({
       ...(s.executions.at(-1)?.requestId === id ? { feedback: execution.message } : {}) }));
     waiters.get(id)?.forEach((resolve) => resolve(execution)); waiters.delete(id);
   },
-  sample: () => set({ actual: { ...windowPoses } }),
+  sample: () => set({ actual: { ...windowPoses },actualParts:{...actualValues} }),
   say: (feedback) => set({ feedback }),
   newConversation: () => set((s) => ({ context: {}, messages: [], epoch: s.epoch + 1, feedback: '新对话已开始，车辆状态保持不变。' })),
 }));
@@ -92,7 +93,7 @@ export function manualWindow(targets: Corner[], value: number): Execution | null
   for (const c of targets) store.setPreview(c, undefined);
   return store.submit({ requestId: crypto.randomUUID(), baseRevision: store.state.revision, origin: 'manual', route: 'manual', commands });
 }
-export function waitForWindowExecution(execution: Execution): Promise<Execution> {
+export function waitForVehicleExecution(execution: Execution): Promise<Execution> {
   const current = useVehicle.getState().executions.find((e) => e.requestId === execution.requestId) ?? execution;
   if (current.status !== 'animating') return Promise.resolve(current);
   return new Promise((resolve) => {

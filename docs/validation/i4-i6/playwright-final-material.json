@@ -1,0 +1,505 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "-g",
+      "actual GLB, health|paint whitelist|I6"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/validation/i4-i6/playwright-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "appearance.spec.ts",
+      "file": "appearance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I5 paint whitelist preserves non-paint materials, seven presets and a custom color",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4014,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:08:40.719Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "protected-materials-before-after",
+                      "contentType": "application/json",
+                      "body": "ewogICJiZWZvcmUiOiBbCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gzMk10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDEzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzVNdGwiLAogICAgICAiY29sb3IiOiAiYTRhM2E2IiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxNk10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI1TXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzBNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxOU10bCIsCiAgICAgICJjb2xvciI6ICJhNGEzYTYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI2TXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjExOTk5OTk5NzMxNzc5MDk5LAogICAgICAibWV0YWxuZXNzIjogMC4wNTAwMDAwMDA3NDUwNTgwNgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDFNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoM010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxN010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMjRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2ME10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYxTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoNjVNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2OE10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC40OTUwMjQ3NDA2OTU5NTMzNywKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g3MU10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDcyTXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJJNF9UUlVOS19MSU5FUiIsCiAgICAgICJjb2xvciI6ICIyYzMwMzQiLAogICAgICAicm91Z2huZXNzIjogMC44OTk5OTk5NzYxNTgxNDIxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJXSVBFUl9HUkFQSElURSIsCiAgICAgICJjb2xvciI6ICI1MDU5NWYiLAogICAgICAicm91Z2huZXNzIjogMC42MDAwMDAwMjM4NDE4NTc5LAogICAgICAibWV0YWxuZXNzIjogMC4zNDk5OTk5OTQwMzk1MzU1CiAgICB9CiAgXSwKICAiYWZ0ZXIiOiBbCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gzMk10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDEzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzVNdGwiLAogICAgICAiY29sb3IiOiAiYTRhM2E2IiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxNk10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI1TXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzBNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxOU10bCIsCiAgICAgICJjb2xvciI6ICJhNGEzYTYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI2TXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjExOTk5OTk5NzMxNzc5MDk5LAogICAgICAibWV0YWxuZXNzIjogMC4wNTAwMDAwMDA3NDUwNTgwNgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDFNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoM010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxN010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMjRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2ME10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYxTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoNjVNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2OE10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC40OTUwMjQ3NDA2OTU5NTMzNywKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g3MU10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDcyTXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJJNF9UUlVOS19MSU5FUiIsCiAgICAgICJjb2xvciI6ICIyYzMwMzQiLAogICAgICAicm91Z2huZXNzIjogMC44OTk5OTk5NzYxNTgxNDIxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJXSVBFUl9HUkFQSElURSIsCiAgICAgICJjb2xvciI6ICI1MDU5NWYiLAogICAgICAicm91Z2huZXNzIjogMC42MDAwMDAwMjM4NDE4NTc5LAogICAgICAibWV0YWxuZXNzIjogMC4zNDk5OTk5OTQwMzk1MzU1CiAgICB9CiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "800c8f995c061dbbf429-e69ac38193ff57594955",
+          "file": "appearance.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "I5 paint whitelist preserves non-paint materials, seven presets and a custom color",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3855,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:09:12.911Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "protected-materials-before-after",
+                      "contentType": "application/json",
+                      "body": "ewogICJiZWZvcmUiOiBbCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gzMk10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDEzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzVNdGwiLAogICAgICAiY29sb3IiOiAiYTRhM2E2IiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxNk10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI1TXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzBNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxOU10bCIsCiAgICAgICJjb2xvciI6ICJhNGEzYTYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI2TXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjExOTk5OTk5NzMxNzc5MDk5LAogICAgICAibWV0YWxuZXNzIjogMC4wNTAwMDAwMDA3NDUwNTgwNgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDFNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoM010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxN010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMjRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2ME10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYxTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoNjVNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2OE10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC40OTUwMjQ3NDA2OTU5NTMzNywKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g3MU10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDcyTXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJJNF9UUlVOS19MSU5FUiIsCiAgICAgICJjb2xvciI6ICIyYzMwMzQiLAogICAgICAicm91Z2huZXNzIjogMC44OTk5OTk5NzYxNTgxNDIxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJXSVBFUl9HUkFQSElURSIsCiAgICAgICJjb2xvciI6ICI1MDU5NWYiLAogICAgICAicm91Z2huZXNzIjogMC42MDAwMDAwMjM4NDE4NTc5LAogICAgICAibWV0YWxuZXNzIjogMC4zNDk5OTk5OTQwMzk1MzU1CiAgICB9CiAgXSwKICAiYWZ0ZXIiOiBbCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gzMk10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDEzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzVNdGwiLAogICAgICAiY29sb3IiOiAiYTRhM2E2IiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxNk10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI1TXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMzBNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxOU10bCIsCiAgICAgICJjb2xvciI6ICJhNGEzYTYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDI2TXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjExOTk5OTk5NzMxNzc5MDk5LAogICAgICAibWV0YWxuZXNzIjogMC4wNTAwMDAwMDA3NDUwNTgwNgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDFNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoM010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2gxN010bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoMjRNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2ME10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYxTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDYyTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJNZXNoNjVNdGwiLAogICAgICAiY29sb3IiOiAiZmZmZmZmIiwKICAgICAgInJvdWdobmVzcyI6IDAuNzIwMDAwMDI4NjEwMjI5NSwKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g2OE10bCIsCiAgICAgICJjb2xvciI6ICJmZmZmZmYiLAogICAgICAicm91Z2huZXNzIjogMC40OTUwMjQ3NDA2OTU5NTMzNywKICAgICAgIm1ldGFsbmVzcyI6IDAKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogIk1lc2g3MU10bCIsCiAgICAgICJjb2xvciI6ICIwOTA5MDkiLAogICAgICAicm91Z2huZXNzIjogMC43MjAwMDAwMjg2MTAyMjk1LAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDcyTXRsIiwKICAgICAgImNvbG9yIjogIjA5MDkwOSIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJJNF9UUlVOS19MSU5FUiIsCiAgICAgICJjb2xvciI6ICIyYzMwMzQiLAogICAgICAicm91Z2huZXNzIjogMC44OTk5OTk5NzYxNTgxNDIxLAogICAgICAibWV0YWxuZXNzIjogMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiTWVzaDIzTXRsIiwKICAgICAgImNvbG9yIjogImZmZmZmZiIsCiAgICAgICJyb3VnaG5lc3MiOiAwLjcyMDAwMDAyODYxMDIyOTUsCiAgICAgICJtZXRhbG5lc3MiOiAwCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJXSVBFUl9HUkFQSElURSIsCiAgICAgICJjb2xvciI6ICI1MDU5NWYiLAogICAgICAicm91Z2huZXNzIjogMC42MDAwMDAwMjM4NDE4NTc5LAogICAgICAibWV0YWxuZXNzIjogMC4zNDk5OTk5OTQwMzk1MzU1CiAgICB9CiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "800c8f995c061dbbf429-21096a7d0bd14a80fd61",
+          "file": "appearance.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "scene.spec.ts",
+      "file": "scene.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual GLB, health, visible controls and responsive layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7503,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:08:44.922Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-2ac551e64097a3c9278d",
+          "file": "scene.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "actual GLB, health, visible controls and responsive layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:09:16.931Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3aa4c5b91f4bbc99f382-30fda315ab7b3df10c27",
+          "file": "scene.spec.ts",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wipers.spec.ts",
+      "file": "wipers.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:08:52.439Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-wiper-cadence",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAibW9kZSI6ICJpbnRlcm1pdHRlbnQiLAogICAgICAiY3ljbGVzIjogMQogICAgfSwKICAgIHsKICAgICAgIm1vZGUiOiAibG93IiwKICAgICAgImN5Y2xlcyI6IDMKICAgIH0sCiAgICB7CiAgICAgICJtb2RlIjogImhpZ2giLAogICAgICAiY3ljbGVzIjogNgogICAgfQogIF0sCiAgImJlZm9yZSI6IHsKICAgICJwaGFzZSI6IDAuMzY4NDczMjE0Mjg1NzAxOSwKICAgICJmcmFjdGlvbiI6IDAuODM4NzYxMzMxMTkyOTk2LAogICAgInBhcmtlZCI6IGZhbHNlLAogICAgIndhaXRpbmciOiAwLAogICAgImN5Y2xlcyI6IDExLAogICAgImNvbXBsZXRlZE9uY2UiOiAxLAogICAgImFwcGxpZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkTW9kZSI6ICJsb3ciLAogICAgInJlcXVlc3RlZE9uY2UiOiAxLAogICAgImFuZ2xlcyI6IFsKICAgICAgMC45MDc2MjcxMDU3OTkxNjA2LAogICAgICAwLjkwNzYyNzEwNTc5OTE2MDYKICAgIF0KICB9LAogICJhZnRlciI6IHsKICAgICJwaGFzZSI6IDAuMzk1MTg3NDk5OTk5OTIxMTQsCiAgICAiZnJhY3Rpb24iOiAwLjg5NTQzODI2Mzk5MzI4OTIsCiAgICAicGFya2VkIjogZmFsc2UsCiAgICAid2FpdGluZyI6IDAsCiAgICAiY3ljbGVzIjogMTEsCiAgICAiY29tcGxldGVkT25jZSI6IDEsCiAgICAiYXBwbGllZE1vZGUiOiAiaGlnaCIsCiAgICAicmVxdWVzdGVkTW9kZSI6ICJoaWdoIiwKICAgICJyZXF1ZXN0ZWRPbmNlIjogMSwKICAgICJhbmdsZXMiOiBbCiAgICAgIDAuOTY4OTU3NDQ5MjExNTU1MSwKICAgICAgMC45Njg5NTc0NDkyMTE1NTUxCiAgICBdCiAgfSwKICAicGFyayI6IHsKICAgICJwaGFzZSI6IDAsCiAgICAiZnJhY3Rpb24iOiAwLAogICAgInBhcmtlZCI6IHRydWUsCiAgICAid2FpdGluZyI6IDAsCiAgICAiY3ljbGVzIjogMTIsCiAgICAiY29tcGxldGVkT25jZSI6IDEsCiAgICAiYXBwbGllZE1vZGUiOiAib2ZmIiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogIm9mZiIsCiAgICAicmVxdWVzdGVkT25jZSI6IDEsCiAgICAiYW5nbGVzIjogWwogICAgICAwLAogICAgICAwCiAgICBdCiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-679d679fd4e86e3310df",
+          "file": "wipers.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3246,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:09:09.149Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-c72e15d9090f6e51ce70",
+          "file": "wipers.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:09:24.376Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-wiper-cadence",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAibW9kZSI6ICJpbnRlcm1pdHRlbnQiLAogICAgICAiY3ljbGVzIjogMQogICAgfSwKICAgIHsKICAgICAgIm1vZGUiOiAibG93IiwKICAgICAgImN5Y2xlcyI6IDMKICAgIH0sCiAgICB7CiAgICAgICJtb2RlIjogImhpZ2giLAogICAgICAiY3ljbGVzIjogNgogICAgfQogIF0sCiAgImJlZm9yZSI6IHsKICAgICJwaGFzZSI6IDAuMzkxMDM1NzE0Mjg1Njc5MzUsCiAgICAiZnJhY3Rpb24iOiAwLjg4NzMyMjQ5NDU1NDg1MDMsCiAgICAicGFya2VkIjogZmFsc2UsCiAgICAid2FpdGluZyI6IDAsCiAgICAiY3ljbGVzIjogMTEsCiAgICAiY29tcGxldGVkT25jZSI6IDEsCiAgICAiYXBwbGllZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkT25jZSI6IDEsCiAgICAiYW5nbGVzIjogWwogICAgICAwLjk2MDE3NTM0MTUzMzQ3ODgsCiAgICAgIDAuOTYwMTc1MzQxNTMzNDc4OAogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInBoYXNlIjogMC40MTc4MjE0Mjg1NzEzOTM2NSwKICAgICJmcmFjdGlvbiI6IDAuOTM0ODE1MTg0MTM2NjkzMywKICAgICJwYXJrZWQiOiBmYWxzZSwKICAgICJ3YWl0aW5nIjogMCwKICAgICJjeWNsZXMiOiAxMSwKICAgICJjb21wbGV0ZWRPbmNlIjogMSwKICAgICJhcHBsaWVkTW9kZSI6ICJoaWdoIiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImhpZ2giLAogICAgInJlcXVlc3RlZE9uY2UiOiAxLAogICAgImFuZ2xlcyI6IFsKICAgICAgMS4wMTE1NjczNzczNzA5ODY2LAogICAgICAxLjAxMTU2NzM3NzM3MDk4NjYKICAgIF0KICB9LAogICJwYXJrIjogewogICAgInBoYXNlIjogMCwKICAgICJmcmFjdGlvbiI6IDAsCiAgICAicGFya2VkIjogdHJ1ZSwKICAgICJ3YWl0aW5nIjogMCwKICAgICJjeWNsZXMiOiAxMiwKICAgICJjb21wbGV0ZWRPbmNlIjogMSwKICAgICJhcHBsaWVkTW9kZSI6ICJvZmYiLAogICAgInJlcXVlc3RlZE1vZGUiOiAib2ZmIiwKICAgICJyZXF1ZXN0ZWRPbmNlIjogMSwKICAgICJhbmdsZXMiOiBbCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-cc946c5b63675833477b",
+          "file": "wipers.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:09:41.035Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-02a173318b98db79fdda",
+          "file": "wipers.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T06:08:39.451Z",
+    "duration": 64268.832,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

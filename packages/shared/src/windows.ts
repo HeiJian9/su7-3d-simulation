@@ -11,73 +11,8 @@ export const windowCommandSchema = z.discriminatedUnion('operation', [
   z.object({ ...common, operation: z.literal('query') }).strict(),
 ]);
 export type WindowCommand = z.infer<typeof windowCommandSchema>;
-export const commandRequestSchema = z.object({
-  requestId: z.string().min(1).max(128), baseRevision: z.number().int().nonnegative(),
-  origin: z.enum(['manual', 'text', 'voice']), route: z.enum(['manual', 'rules']),
-  commands: z.array(windowCommandSchema).min(1).max(16),
-}).strict().superRefine((r, ctx) => {
-  if ((r.origin === 'manual') !== (r.route === 'manual')) ctx.addIssue({ code: 'custom', message: '入口与路由不一致' });
-});
-export type CommandRequest = z.infer<typeof commandRequestSchema>;
 export interface WindowState { revision: number; windows: Record<Corner, { openness: number }> }
 export const defaultWindows = (): WindowState => ({ revision: 0, windows: { fl: { openness: 0 }, fr: { openness: 0 }, rl: { openness: 0 }, rr: { openness: 0 } } });
-export interface Execution {
-  requestId: string;
-  status: 'accepted' | 'animating' | 'completed' | 'superseded' | 'failed';
-  revision: number;
-  origin: CommandRequest['origin'];
-  route: CommandRequest['route'];
-  targets: Corner[];
-  values: Partial<Record<Corner, number>>;
-  query: boolean;
-  boundary: boolean;
-  message: string;
-}
-export type ApplyResult = { ok: true; state: WindowState; execution: Execution; duplicate: boolean } | { ok: false; code: string; message: string };
-export function describeWindows(values: Partial<Record<Corner, number>>) {
-  return corners.filter((c) => values[c] !== undefined).map((c) => `${windowLabels[c]}${values[c] === 0 ? '已关闭' : values[c] === 1 ? '已完全打开' : `已打开到 ${Math.round(values[c]! * 100)}%`}`).join('，');
-}
-export class CommandLedger {
-  private requests = new Map<string, { fingerprint: string; result: ApplyResult }>();
-  clear() { this.requests.clear(); }
-  apply(state: WindowState, input: unknown, available: ReadonlySet<Corner> = new Set(corners)): ApplyResult {
-    const parsed = commandRequestSchema.safeParse(input);
-    if (!parsed.success) return { ok: false, code: 'INVALID_COMMAND', message: '指令格式或数值无效，车辆未改变。' };
-    const request = parsed.data;
-    const fingerprint = JSON.stringify(request);
-    const existing = this.requests.get(request.requestId);
-    if (existing) return existing.fingerprint === fingerprint ? { ...existing.result, ...(existing.result.ok ? { state, duplicate: true } : {}) } : { ok: false, code: 'REQUEST_ID_CONFLICT', message: '请求编号已被其他指令使用。' };
-    if (request.baseRevision !== state.revision) return { ok: false, code: 'STALE_REVISION', message: '车辆状态已改变，请重新发出指令。' };
-    const targetSet = new Set(request.commands.flatMap((c) => c.targets));
-    if ([...targetSet].some((c) => !available.has(c))) return { ok: false, code: 'COMPONENT_UNAVAILABLE', message: '车窗模型尚未就绪，请待加载完成后重试。' };
-    const next = structuredClone(state);
-    let boundary = false;
-    for (const command of request.commands) {
-      for (const c of new Set(command.targets)) {
-        if (command.operation === 'query') continue;
-        const old = next.windows[c].openness;
-        const proposed = command.operation === 'set' ? command.value : old + command.value;
-        const value = Math.round(Math.min(1, Math.max(0, proposed)) * 10000) / 10000;
-        if (command.operation === 'adjust' && (proposed < 0 || proposed > 1 || (value === old && command.value !== 0))) boundary = true;
-        next.windows[c].openness = value;
-      }
-    }
-    const changed = corners.some((c) => next.windows[c].openness !== state.windows[c].openness);
-    if (changed) next.revision++;
-    const targets = [...targetSet];
-    const values = Object.fromEntries(targets.map((c) => [c, next.windows[c].openness]));
-    const query = request.commands.every((c) => c.operation === 'query');
-    const execution: Execution = {
-      requestId: request.requestId, status: query ? 'completed' : 'accepted', revision: next.revision,
-      origin: request.origin, route: request.route, targets, values, query, boundary,
-      message: query ? targets.map((c) => `${windowLabels[c]}目标开度为 ${Math.round(values[c] * 100)}%`).join('，') + '。' : `${describeWindows(values)}${boundary ? '，已到达调节边界' : ''}。`,
-    };
-    const result: ApplyResult = { ok: true, state: next, execution, duplicate: false };
-    this.requests.set(request.requestId, { fingerprint, result });
-    if (this.requests.size > 256) this.requests.delete(this.requests.keys().next().value!);
-    return result;
-  }
-}
 
 export interface WindowContext {
   focus?: { targets: Corner[]; updatedAt: number };

@@ -15,7 +15,7 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "6d61c9019c9d4307162dc586d2e2890d51995d4b02034e2241e38ce220fc5b16",
+  "runtimeSha256": "cc08105d6f3850c780a43c8667083c5f07f579942bfb8f5b2574267ca62c9d20",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
@@ -23,11 +23,12 @@
     "Packed textures and self-contained GLB; no component animation",
     "I2: semantic four-window roots from original source glass; local translation into doors, no glass scaling or opacity animation; adjacent static glazing retained",
     "I4: source door shells, inner trim, mirrors and split return strips on calibrated hinges; original deck and attached lamp/logo surfaces partitioned into trunk lid; recessed open cavity and inner skin added; all original glazing retained.",
-    "I5: isolated original body-paint material whitelist, source-lens-fitted front LED strips/projectors and lid-aware rear amber strips; physical dashboard and door LEDs; original steering button and center-screen annotations."
+    "I5: isolated original body-paint material whitelist, source-lens-fitted front LED strips/projectors and lid-aware rear amber strips; physical dashboard and door LEDs; original steering button and center-screen annotations.",
+    "I6: split the actual original Mesh24 twin wiper assemblies; calibrated windshield-normal pivots and eight surface-conforming morph corrections; source passenger assembly physically shortened to eliminate driver-pivot crossings; runtime scale remains one; front LED depth refined beneath original lenses; isolated graphite display material improves wiper visibility."
   ],
-  "enhancedAt": "2026-10-26T14:01:44.610Z",
-  "assetIncrement": "I5.1",
+  "enhancedAt": "2026-10-27T06:21:13.089Z",
+  "assetIncrement": "I6.2",
   "windowMapping": "docs/assets/window-mapping.json",
   "vehicleMapping": "docs/assets/vehicle-mapping.json",
-  "enhancedBlendSha256": "bbdd79d970cbf0451bb52e98d236c19cc3e2c0b30641a7ac9d7af5fc85afdc9c"
+  "enhancedBlendSha256": "f02ce3b946535185b5a4c308ed5686536ee1d15702e6ffd887ab03cc9f640b38"
 }

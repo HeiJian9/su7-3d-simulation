@@ -1,0 +1,274 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/wipers.spec.ts",
+      "-g",
+      "labelled cabin"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/validation/i4-i6/playwright-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "wipers.spec.ts",
+      "file": "wipers.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8137,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:13:00.769Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-screenshot-wiper-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJleHRlcmlvckJlZm9yZSI6IHsKICAgICJwaGFzZSI6IDAuNDA0Mjg1NzE0Mjg1NzE0NywKICAgICJmcmFjdGlvbiI6IDAuOTEyMjc0ODE0NDUzNTcxMSwKICAgICJwYXJrZWQiOiBmYWxzZSwKICAgICJ3YWl0aW5nIjogMCwKICAgICJjeWNsZXMiOiAyLAogICAgImNvbXBsZXRlZE9uY2UiOiAwLAogICAgImFwcGxpZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkTW9kZSI6ICJsb3ciLAogICAgInJlcXVlc3RlZE9uY2UiOiAwLAogICAgImFuZ2xlcyI6IFsKICAgICAgMC45ODcxNzYzNTAxMDQ1ODA1LAogICAgICAwLjk4NzE3NjM1MDEwNDU4MDUKICAgIF0KICB9LAogICJleHRlcmlvckFmdGVyIjogewogICAgInBoYXNlIjogMC40NzU3ODU3MTQyODU3ODEyNiwKICAgICJmcmFjdGlvbiI6IDAuOTk0MjI0MjkyNzE2MzcsCiAgICAicGFya2VkIjogZmFsc2UsCiAgICAid2FpdGluZyI6IDAsCiAgICAiY3ljbGVzIjogMiwKICAgICJjb21wbGV0ZWRPbmNlIjogMCwKICAgICJhcHBsaWVkTW9kZSI6ICJsb3ciLAogICAgInJlcXVlc3RlZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRPbmNlIjogMCwKICAgICJhbmdsZXMiOiBbCiAgICAgIDEuMDc1ODU0MjE5NDk1MTc3LAogICAgICAxLjA3NTg1NDIxOTQ5NTE3NwogICAgXQogIH0sCiAgImNhYmluQmVmb3JlIjogewogICAgInBoYXNlIjogMC40MDczNTcxNDI4NTczNDIzNywKICAgICJmcmFjdGlvbiI6IDAuOTE3NjU3MTExNTA0MzE3NywKICAgICJwYXJrZWQiOiBmYWxzZSwKICAgICJ3YWl0aW5nIjogMCwKICAgICJjeWNsZXMiOiAzLAogICAgImNvbXBsZXRlZE9uY2UiOiAwLAogICAgImFwcGxpZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkTW9kZSI6ICJsb3ciLAogICAgInJlcXVlc3RlZE9uY2UiOiAwLAogICAgImFuZ2xlcyI6IFsKICAgICAgMC45OTMwMDA1NTYwMDU2NDY5LAogICAgICAwLjk5MzAwMDU1NjAwNTY0NjkKICAgIF0KICB9LAogICJjYWJpbkFmdGVyIjogewogICAgInBoYXNlIjogMC40Nzg3MTQyODU3MTQ0MTg3LAogICAgImZyYWN0aW9uIjogMC45OTU1MzQ5MjUwMjcxNzUyLAogICAgInBhcmtlZCI6IGZhbHNlLAogICAgIndhaXRpbmciOiAwLAogICAgImN5Y2xlcyI6IDMsCiAgICAiY29tcGxldGVkT25jZSI6IDAsCiAgICAiYXBwbGllZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkT25jZSI6IDAsCiAgICAiYW5nbGVzIjogWwogICAgICAxLjA3NzI3MjQ2MDEzOTc4NDUsCiAgICAgIDEuMDc3MjcyNDYwMTM5Nzg0NQogICAgXQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-c72e15d9090f6e51ce70",
+          "file": "wipers.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T06:13:09.569Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-screenshot-wiper-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJleHRlcmlvckJlZm9yZSI6IHsKICAgICJwaGFzZSI6IDAuNDI1MzU3MTQyODU3NDc2ODMsCiAgICAiZnJhY3Rpb24iOiAwLjk0NjAxMTUxNjE0ODU4NzQsCiAgICAicGFya2VkIjogZmFsc2UsCiAgICAid2FpdGluZyI6IDAsCiAgICAiY3ljbGVzIjogMiwKICAgICJjb21wbGV0ZWRPbmNlIjogMCwKICAgICJhcHBsaWVkTW9kZSI6ICJsb3ciLAogICAgInJlcXVlc3RlZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRPbmNlIjogMCwKICAgICJhbmdsZXMiOiBbCiAgICAgIDEuMDIzNjgyOTc0NTUxNzM0LAogICAgICAxLjAyMzY4Mjk3NDU1MTczNAogICAgXQogIH0sCiAgImV4dGVyaW9yQWZ0ZXIiOiB7CiAgICAicGhhc2UiOiAwLjQ3NjA3MTQyODU3MTc2MjU0LAogICAgImZyYWN0aW9uIjogMC45OTQzNTk1MzMxMjc2NzA0LAogICAgInBhcmtlZCI6IGZhbHNlLAogICAgIndhaXRpbmciOiAwLAogICAgImN5Y2xlcyI6IDIsCiAgICAiY29tcGxldGVkT25jZSI6IDAsCiAgICAiYXBwbGllZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkT25jZSI6IDAsCiAgICAiYW5nbGVzIjogWwogICAgICAxLjA3NjAwMDU2MzcwMzYzMTYsCiAgICAgIDEuMDc2MDAwNTYzNzAzNjMxNgogICAgXQogIH0sCiAgImNhYmluQmVmb3JlIjogewogICAgInBoYXNlIjogMC40MTk0Mjg1NzE0MjgzNzE4LAogICAgImZyYWN0aW9uIjogMC45MzcyODU2NzU2MTEzNDQ3LAogICAgInBhcmtlZCI6IGZhbHNlLAogICAgIndhaXRpbmciOiAwLAogICAgImN5Y2xlcyI6IDMsCiAgICAiY29tcGxldGVkT25jZSI6IDAsCiAgICAiYXBwbGllZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkT25jZSI6IDAsCiAgICAiYW5nbGVzIjogWwogICAgICAxLjAxNDI0MDcwNjQxNDI0MzgsCiAgICAgIDEuMDE0MjQwNzA2NDE0MjQzOAogICAgXQogIH0sCiAgImNhYmluQWZ0ZXIiOiB7CiAgICAicGhhc2UiOiAwLjQ3NjA3MTQyODU3MTQyODUzLAogICAgImZyYWN0aW9uIjogMC45OTQzNTk1MzMxMjc1MTMyLAogICAgInBhcmtlZCI6IGZhbHNlLAogICAgIndhaXRpbmciOiAwLAogICAgImN5Y2xlcyI6IDMsCiAgICAiY29tcGxldGVkT25jZSI6IDAsCiAgICAiYXBwbGllZE1vZGUiOiAibG93IiwKICAgICJyZXF1ZXN0ZWRNb2RlIjogImxvdyIsCiAgICAicmVxdWVzdGVkT25jZSI6IDAsCiAgICAiYW5nbGVzIjogWwogICAgICAxLjA3NjAwMDU2MzcwMzQ2MTUsCiAgICAgIDEuMDc2MDAwNTYzNzAzNDYxNQogICAgXQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9cddee9bce9e66ba1a63-02a173318b98db79fdda",
+          "file": "wipers.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T06:12:59.545Z",
+    "duration": 17971.056,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

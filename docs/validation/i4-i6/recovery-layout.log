@@ -1,0 +1,9 @@
+
+Running 2 tests using 1 worker
+
+(node:26084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (9.3s)
+  ok 2 [Edge-1366x768] › tests\e2e\speech.spec.ts:92:1 › Mock clarification cancellation clears pending intent after a bulk action (1.0s)
+
+  2 passed (15.4s)

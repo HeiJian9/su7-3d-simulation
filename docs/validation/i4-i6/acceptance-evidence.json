@@ -1,0 +1,62 @@
+{
+  "version": "0.6.0",
+  "date": "2026-10-27",
+  "acceptance": "functional_paths_verified_new_human_microphone_pending",
+  "currentAsset": {
+    "stage": "I6.2",
+    "sha256": "cc08105d6f3850c780a43c8667083c5f07f579942bfb8f5b2574267ca62c9d20",
+    "blendSha256": "f02ce3b946535185b5a4c308ed5686536ee1d15702e6ffd887ab03cc9f640b38",
+    "nodes": 129,
+    "meshes": 117,
+    "triangles": 99580,
+    "materials": 37,
+    "textures": 15
+  },
+  "fullRegression": {
+    "startTime": "2026-10-27T05:51:32.395Z",
+    "duration": 562470.7829999999,
+    "expected": 73,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalMaterialRegression": {
+    "startTime": "2026-10-27T06:08:39.451Z",
+    "duration": 64268.832,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "fixedPoseScreenshots": {
+    "startTime": "2026-10-27T06:12:59.545Z",
+    "duration": 17971.056,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTestsPassed": 71,
+  "realApi": {
+    "mode": "real-api-synthetic-microphone-input",
+    "humanMicrophone": false,
+    "rounds": 21,
+    "requests": 42,
+    "all200": true,
+    "reports": [
+      "live-speech.json",
+      "live-speech-additional.json"
+    ]
+  },
+  "geometry": {
+    "sourceSamplesPerAssembly": 101,
+    "wiperIntersections": 0,
+    "runtimePointsChecked": 89486,
+    "passed": true
+  },
+  "humanMicrophone": {
+    "newComponents": "not_tested_user_currently_unavailable",
+    "historicalI3": "docs/I3_FINAL_VALIDATION.md",
+    "overallAcceptanceComplete": false
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "samplesPerAssembly": 101,
+  "mode": "actual-saved-rig",
+  "source": "saved enhanced Blender source, original windshield and original wiper faces",
+  "minGlassClearanceMeters": 0.0030543523535015993,
+  "maxGlassClearanceMeters": 0.026366152218542993,
+  "intersectionsBetweenWipers": 0,
+  "collisionExamples": [],
+  "records": [
+    {
+      "side": "driver",
+      "fraction": 0.0,
+      "minGlassClearance": 0.004103221835976001,
+      "maxGlassClearance": 0.026000091107562184
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.0,
+      "minGlassClearance": 0.003999978649517288,
+      "maxGlassClearance": 0.026000114216003567
+    },
+    {
+      "fraction": 0.0,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.1,
+      "minGlassClearance": 0.003938661815482192,
+      "maxGlassClearance": 0.026125915755983442
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.1,
+      "minGlassClearance": 0.003965163887187373,
+      "maxGlassClearance": 0.02600087900646031
+    },
+    {
+      "fraction": 0.1,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.2,
+      "minGlassClearance": 0.0041667506247904385,
+      "maxGlassClearance": 0.02631794649641961
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.2,
+      "minGlassClearance": 0.003699580802276614,
+      "maxGlassClearance": 0.02600146783515811
+    },
+    {
+      "fraction": 0.2,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.3,
+      "minGlassClearance": 0.004164562111327541,
+      "maxGlassClearance": 0.026296752912458032
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.3,
+      "minGlassClearance": 0.003918700078429538,
+      "maxGlassClearance": 0.026001695543527603
+    },
+    {
+      "fraction": 0.3,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.4,
+      "minGlassClearance": 0.004045909576234408,
+      "maxGlassClearance": 0.026138883375097066
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.4,
+      "minGlassClearance": 0.00394318985127029,
+      "maxGlassClearance": 0.02600132254883647
+    },
+    {
+      "fraction": 0.4,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.5,
+      "minGlassClearance": 0.004103148028661963,
+      "maxGlassClearance": 0.026000164332799613
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.5,
+      "minGlassClearance": 0.0039999828150030226,
+      "maxGlassClearance": 0.026000216748798266
+    },
+    {
+      "fraction": 0.5,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.6,
+      "minGlassClearance": 0.004145940714806784,
+      "maxGlassClearance": 0.02613559109158814
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.6,
+      "minGlassClearance": 0.003922205036360538,
+      "maxGlassClearance": 0.02600132254883647
+    },
+    {
+      "fraction": 0.6,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.7,
+      "minGlassClearance": 0.00392886941699544,
+      "maxGlassClearance": 0.02613978972658515
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.7,
+      "minGlassClearance": 0.003593485243982286,
+      "maxGlassClearance": 0.026002283906564116
+    },
+    {
+      "fraction": 0.7,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.8,
+      "minGlassClearance": 0.0036651267855631886,
+      "maxGlassClearance": 0.025994099785748404
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.8,
+      "minGlassClearance": 0.003673132483527297,
+      "maxGlassClearance": 0.02600245736539364
+    },
+    {
+      "fraction": 0.8,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 0.9,
+      "minGlassClearance": 0.003778190028242534,
+      "maxGlassClearance": 0.02600640125456266
+    },
+    {
+      "side": "passenger",
+      "fraction": 0.9,
+      "minGlassClearance": 0.003947770070226397,
+      "maxGlassClearance": 0.026001645252108574
+    },
+    {
+      "fraction": 0.9,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    },
+    {
+      "side": "driver",
+      "fraction": 1.0,
+      "minGlassClearance": 0.00410314826422109,
+      "maxGlassClearance": 0.026000118574302178
+    },
+    {
+      "side": "passenger",
+      "fraction": 1.0,
+      "minGlassClearance": 0.003999492972070584,
+      "maxGlassClearance": 0.026000198675319552
+    },
+    {
+      "fraction": 1.0,
+      "candidatePairs": 0,
+      "exactIntersections": 0
+    }
+  ],
+  "passed": true
+}

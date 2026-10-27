@@ -61,7 +61,7 @@ test('manual recording finish works before the silence timeout',async({page})=>{
 test('Mock TTS failure preserves actual action and supports a separate replay',async({page})=>{
   await page.route('**/api/speech/transcribe',r=>transcript(r,'左前窗开一半'));
   let attempts=0;await page.route('**/api/speech/synthesize',r=>++attempts===1?r.fulfill({status:502,json:{code:'AUTH_FAILED',message:'测试 Mock：TTS 认证失败',retryable:false}}):r.fulfill({body:testWave(.2,true),contentType:'audio/wav'}));
-  await ready(page);await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('车窗动作与文字保留',{timeout:12000});expect(await pose(page)).toBe(.5);
+  await ready(page);await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('车辆动作与文字保留',{timeout:12000});expect(await pose(page)).toBe(.5);
   await page.getByRole('button',{name:'重播',exact:true}).click();await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪');expect(attempts).toBe(2);expect(await pose(page)).toBe(.5);
 });
 for(const [name,code] of [['权限拒绝','NotAllowedError'],['无设备','NotFoundError']] as const){
@@ -91,7 +91,7 @@ test('unconfigured local server: WebM recording reaches explicit 503 and manual 
 });
 test('Mock clarification cancellation clears pending intent after a bulk action',async({page},info)=>{
   await ready(page,false);await page.getByRole('button',{name:'全部关闭',exact:true}).click();
-  const input=page.getByRole('textbox',{name:'车窗文字指令'});await input.fill('打开车窗');await input.press('Enter');
+  const input=page.getByRole('textbox',{name:'车辆文字指令'});await input.fill('打开车窗');await input.press('Enter');
   await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
   await page.screenshot({path:`docs/assets/i4-i6/clarification-panel-${info.project.name}.png`});
@@ -113,7 +113,7 @@ for(const mode of ['network','invalid-json'] as const){test(`Mock ${mode} failur
   await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(()=>pose(page)).toBe(.5);
 });}
 test('direction wording from human logs and explicit all-window clarification share actual state',async({page})=>{
-  await ready(page,false);const input=page.getByRole('textbox',{name:'车窗文字指令'});
+  await ready(page,false);const input=page.getByRole('textbox',{name:'车辆文字指令'});
   for(const [text,value] of [['打开右后方的车窗',1],['关闭右后方车窗',0]] as const){await input.fill(text);await input.press('Enter');await expect.poll(()=>pose(page,'rr')).toBe(value);}
   await page.getByRole('button',{name:'新对话',exact:true}).click();await input.fill('打开车窗');await input.press('Enter');await expect(page.getByRole('group',{name:'请选择车窗'})).toBeVisible();
   await input.fill('所有车窗');await input.press('Enter');for(const c of ['fl','fr','rl','rr'])await expect.poll(()=>pose(page,c)).toBe(1);

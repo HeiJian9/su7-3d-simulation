@@ -1,11 +1,13 @@
 # Provider 当前状态与待办
 
-当前 0.3.2。用户选择的阿里云北京地域 Key 仅存本机根 .env，未打印、未写入报告或 Git。I3 当前四窗范围已通过，证据边界见 [I3 最终报告](I3_FINAL_VALIDATION.md)。
+当前 0.6.0，2026-10-27。阿里云 Key 仅存本机根 `.env`，不进入网页、报告或 Git。已安全确认 ASR／TTS 配置存在，未打印凭据。
 
-| 能力 | 当前状态 | 后续边界 |
+| 能力 | 当前证据 | 待办 |
 |---|---|---|
-| ASR | qwen3-asr-flash / dashscope-asr；真实转写、真人自动静音结束和基础指令通过 | 新设备／噪声环境按实际反馈回归 |
-| TTS | cosyvoice-v3-flash / longanyang；真实中文播报、真人停播与新录音先后顺序通过 | 不承诺任意房间声学表现；失败重播已故障注入验证 |
-| Intent | 四窗规则、澄清补全、取消和统一执行器通过 | I7 接 DeepSeek，规则未完整命中才走结构化兜底；当前未调用 |
+| ASR | qwen3-asr-flash / dashscope-asr；I3 真人证据保留，I4–I6 新能力真实音频输入转写通过 | 新部件真人麦克风复验待补；合成音源不称为真人 |
+| TTS | cosyvoice-v3-flash / longanyang；真实 API 音频播放，动作确认后反馈，失败／重播／停播保护 | 新部件真人听感及收音复验另列 |
+| Intent | 门窗、尾箱、灯光、车漆、氛围灯、雨刷规则共用 VehicleLedger | DeepSeek 完整兜底在 I7，未调用；INTENT 配置保留 |
 
-原 Gemini 指定已按服务选择修订，保留原适配，但未声称 Gemini 通过。配置及协议见 [API_CONFIG.md](API_CONFIG.md)。自动回归使用 3003 端口 --test-unconfigured 服务，跳过读取 .env；真实演示在 3000。健康接口只返回配置情况，not-verified 是启动配置标记，真实验收以报告和诊断为准。
+Gemini 原指定已按用户选择修订；适配保留，未声称 Gemini 通过。见 [API_CONFIG.md](API_CONFIG.md)。本机没有缺失的 ASR／TTS Key、模型或音色配置，不要求重新提供 Key。
+
+健康接口的 `not-verified` 是启动配置标记，实际验证以 [当前报告](I4_I6_VALIDATION.md) 和诊断为准。3003 自动回归跳过 `.env`，故障用例明确属于 Mock／注入；3000 演示及 `speech:verify-i4-i6` 显式调用真实接口。后者使用合成语音输入，有明确音源记录，不替代真人验收。

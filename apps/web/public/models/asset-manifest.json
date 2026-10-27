@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "6d61c9019c9d4307162dc586d2e2890d51995d4b02034e2241e38ce220fc5b16",
-  "bytes": 6482628,
+  "sha256": "cc08105d6f3850c780a43c8667083c5f07f579942bfb8f5b2574267ca62c9d20",
+  "bytes": 6665148,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I5.1 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · I6.2 增强资产 · 原车几何与局部补建"
 }

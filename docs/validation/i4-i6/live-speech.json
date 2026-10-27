@@ -1,0 +1,533 @@
+{
+  "at": "2026-10-26T14:28:51.337Z",
+  "mode": "real-api-synthetic-microphone-input",
+  "humanMicrophone": false,
+  "asr": "qwen3-asr-flash",
+  "tts": "cosyvoice-v3-flash",
+  "cases": [
+    {
+      "index": 0,
+      "input": "打开车门。",
+      "transcript": "转写：打开车门。",
+      "feedback": "需要调整哪一扇车门？请选择左前、右前、左后或右后。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 1,
+      "input": "右后那个。",
+      "transcript": "转写：右后那个。",
+      "feedback": "右后车门已完全打开。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 2,
+      "input": "打开左前门。",
+      "transcript": "转写：打开左前门。",
+      "feedback": "左前车门已完全打开。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 3,
+      "input": "后备箱打开一半。",
+      "transcript": "转写：后备箱打开一半。",
+      "feedback": "后备箱已打开到 50%。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 4,
+      "input": "打开近光灯。",
+      "transcript": "转写：打开近光灯。",
+      "feedback": "前灯已设为近光。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 5,
+      "input": "打开双闪。",
+      "transcript": "转写：打开双闪。",
+      "feedback": "转向灯已设为双闪。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 6,
+      "input": "车身换成蓝色。",
+      "transcript": "转写：车身换成蓝色。",
+      "feedback": "车漆颜色已设为 海湾蓝。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 7,
+      "input": "打开氛围灯。",
+      "transcript": "转写：打开氛围灯。",
+      "feedback": "氛围灯已开启。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 8,
+      "input": "氛围灯换成紫色，亮度设为百分之四十。",
+      "transcript": "转写：氛围灯换成紫色，亮度设为40%。",
+      "feedback": "氛围灯颜色已设为 霞光紫，氛围灯亮度已设为 40%。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 9,
+      "input": "打开雨刷。",
+      "transcript": "转写：打开雨刷。",
+      "feedback": "雨刷已设为低速。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "low",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 10,
+      "input": "雨刷调到三档。",
+      "transcript": "转写：雨刷调到三档。",
+      "feedback": "雨刷已设为高速。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "high",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 11,
+      "input": "关闭雨刷。",
+      "transcript": "转写：关闭雨刷。",
+      "feedback": "雨刷已设为关闭。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0
+      }
+    },
+    {
+      "index": 12,
+      "input": "刮一下。",
+      "transcript": "转写：刮一下。",
+      "feedback": "雨刷已完成一次刮刷并归位。",
+      "actual": {
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 1
+      }
+    },
+    {
+      "index": 13,
+      "input": "左前车窗打开一半。",
+      "transcript": "转写：左前车窗打开一半。",
+      "feedback": "左前车窗已打开到 50%。",
+      "actual": {
+        "window:fl:openness": 0.5,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "door:fl:openness": 1,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 1,
+        "trunk:rear:openness": 0.5,
+        "paint:body:color": "#4d80b4",
+        "headlights:front:mode": "low",
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 1
+      }
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "events": [
+    {
+      "input": 0,
+      "ended": true
+    },
+    {
+      "input": 1,
+      "ended": true
+    },
+    {
+      "input": 2,
+      "ended": true
+    },
+    {
+      "input": 3,
+      "ended": true
+    },
+    {
+      "input": 4,
+      "ended": true
+    },
+    {
+      "input": 5,
+      "ended": true
+    },
+    {
+      "input": 6,
+      "ended": true
+    },
+    {
+      "input": 7,
+      "ended": true
+    },
+    {
+      "input": 8,
+      "ended": true
+    },
+    {
+      "input": 9,
+      "ended": true
+    },
+    {
+      "input": 10,
+      "ended": true
+    },
+    {
+      "input": 11,
+      "ended": true
+    },
+    {
+      "input": 12,
+      "ended": true
+    },
+    {
+      "input": 13,
+      "ended": true
+    }
+  ],
+  "diagnostic": "docs/validation/scene-diagnostics-2026-10-26T14-31-02-692Z.json"
+}

@@ -68,7 +68,7 @@ export function describeEffects(effects:Effect[],query=false){return effects.map
 }).join('，')+'。';}
 export class VehicleLedger {
   private requests=new Map<string,{fingerprint:string;execution:Execution}>();
-  apply(state:VehicleState,input:unknown,available:ReadonlySet<string>):{ok:true;state:VehicleState;execution:Execution;duplicate:boolean}|{ok:false;code:string;message:string}{
+  apply(state:VehicleState,input:unknown,available:ReadonlySet<string>=new Set(corners.map(c=>`window:${c}`))):{ok:true;state:VehicleState;execution:Execution;duplicate:boolean}|{ok:false;code:string;message:string}{
     const parsed=vehicleRequestSchema.safeParse(input);if(!parsed.success)return {ok:false,code:'INVALID_COMMAND',message:'指令格式或数值无效，车辆未改变。'};
     const r=parsed.data,fingerprint=JSON.stringify(r),old=this.requests.get(r.requestId);
     if(old)return old.fingerprint===fingerprint?{ok:true,state,execution:old.execution,duplicate:true}:{ok:false,code:'REQUEST_ID_CONFLICT',message:'请求编号冲突，车辆未改变。'};
@@ -89,7 +89,9 @@ export class VehicleLedger {
     }
     if(JSON.stringify(next)!==JSON.stringify(state))next.revision++;
     const list=[...effects].map(([key,value])=>({key,value}));const targets=corners.filter(c=>effects.has(`window:${c}:openness`));const query=r.commands.every(c=>c.operation==='query');
-    const execution:Execution={requestId:r.requestId,status:query?'completed':'accepted',revision:next.revision,origin:r.origin,route:r.route,targets,values:Object.fromEntries(targets.map(c=>[c,next.windows[c].openness])),effects:list,query,boundary,message:describeEffects(list,query)+(boundary?'已到达调节边界。':'')};
+    let message=describeEffects(list,query)+(boundary?'已到达调节边界。':'');
+    if(next.wipers.mode!=='off')message=message.replace('雨刷已完成一次刮刷并归位','雨刷已完成一次往复，继续当前档位');
+    const execution:Execution={requestId:r.requestId,status:query?'completed':'accepted',revision:next.revision,origin:r.origin,route:r.route,targets,values:Object.fromEntries(targets.map(c=>[c,next.windows[c].openness])),effects:list,query,boundary,message};
     this.requests.set(r.requestId,{fingerprint,execution});if(this.requests.size>256)this.requests.delete(this.requests.keys().next().value!);
     return {ok:true,state:next,execution,duplicate:false};
   }
@@ -126,6 +128,15 @@ function accessory(clause:string,component:VehicleCommand['component']):VehicleC
     const relative=/再|增加|降低|减小|提高|一点|一些/.test(cleaned);if(!percent&&!relative)return null;
     return [{component,targets:['cabin'],operation:relative?'adjust':'set',property:'brightness',value:(relative&&/暗|降低|减小/.test(cleaned)?-1:1)*(percent?Number(percent[1])/100:.1)}];
   }
+  if(component==='wiper'){
+    cleaned=cleaned.replace(/雨刮器|雨刷|雨刮/g,'');
+    if(/^(刮一下|刮一次|一次刮刷)$/.test(cleaned))return [{component,targets:['front'],operation:'trigger',action:'swipe_once'}];
+    if(/^(再|调|调整)?(快|慢)(一点|一些|一档)?$/.test(cleaned))return [{component,targets:['front'],operation:'adjust',property:'mode',value:cleaned.includes('慢')?-1:1}];
+    const gear=cleaned.match(/^(?:调到|调至|设为|设置为|调整到)?([零一二两三0-3])(?:档|挡)$/);
+    if(gear){const index:Record<string,number>={零:0,一:1,二:2,两:2,三:3};return [{component,targets:['front'],operation:'set',property:'mode',value:wiperModes[index[gear[1]]??Number(gear[1])]}];}
+    if(/^(打开|开启|开|关闭|关掉|关上|关|间歇|低速|高速|调到间歇|调到低速|调到高速)$/.test(cleaned))return [{component,targets:['front'],operation:'set',property:'mode',value:/关/.test(cleaned)?'off':/间歇/.test(cleaned)?'intermittent':/高速/.test(cleaned)?'high':'low'}];
+    if(/^(查看|查询)?状态$/.test(cleaned))return [{component,targets:['front'],operation:'query',property:'mode'}];
+  }
   return null;
 }
 export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.now()):RuleResult {
@@ -137,14 +148,15 @@ export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.n
     const answer=parseWindowText(text.replace(/车门|门/g,'车窗'),{pending:{commands:pending.commands.filter(c=>c.targets.length===0).map(c=>({...c,component:'window',targets:[]}) as WindowCommand),expiresAt:pending.expiresAt}},now);
     if(answer.kind==='execute'&&/^(?:左前|右前|左后|右后|前左|前右|后左|后右|主驾|副驾|所有|全部|四个|四扇)/.test(text)&&!/(开|关|升|降|设)/.test(text))return {kind:'execute',commands:pending.commands.map(c=>({...c,targets:c.targets.length?c.targets:answer.targets}) as VehicleCommand)};
   }
-  const clauses=text.split(/[，,；;]|然后|接着|并且|同时/).filter(c=>c.trim());const commands:VehicleCommand[]=[];let focus=fresh;let unresolved:VehicleContext['pending'];
+  const normalized=text.replace(/([紫蓝白黑红灰绿黄橙]色|#[0-9a-f]{6})(?=亮度)/gi,'$1，').replace(/((?:打开|开启|关闭)氛围灯)(?=亮度)/g,'$1，');
+  const clauses=normalized.split(/[，,；;]|然后|接着|并且|同时/).filter(c=>c.trim());const commands:VehicleCommand[]=[];let focus=fresh;let unresolved:VehicleContext['pending'];
   for(const clause of clauses){
     if(/先不要|先别|不要|不需要|不用|不想|别/.test(clause)){
       const positive=parseVehicleText(clause.replace(/先不要|先别|不要|不需要|不用|不想|别/g,''),{focus},now);
       if(positive.kind==='unsupported'||positive.kind==='noop')return {kind:'unsupported',message:'否定子句未被完整理解，车辆未改变。请明确部件和动作。'};
       continue;
     }
-    let component:VehicleCommand['component']|undefined=/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|刮一下/.test(clause)?'wiper':focus?.component;
+    let component:VehicleCommand['component']|undefined=/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|雨刮|刮一下|刮一次/.test(clause)?'wiper':focus?.component;
     // Existing I3 accepts directional shorthand without a noun.
     component ??= /左前|右前|左后|右后|主驾|副驾|开|关/.test(clause)?pending?.component??'window':undefined;
     if(component==='window'||component==='door'||component==='trunk'){

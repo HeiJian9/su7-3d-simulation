@@ -1,7 +1,7 @@
 import {test,expect,type Page} from '@playwright/test';
 async function ready(page:Page){await page.goto('/');await expect(page.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled();await page.getByRole('button',{name:'灯光外观',exact:true}).click();}
 const actual=async(p:Page)=>JSON.parse((await p.locator('canvas').getAttribute('data-appearance'))!);
-async function command(page:Page,s:string){await page.getByRole('textbox',{name:'车窗文字指令',exact:true}).fill(s);await page.getByRole('button',{name:'发送',exact:false}).click();}
+async function command(page:Page,s:string){await page.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(s);await page.getByRole('button',{name:'发送',exact:false}).click();}
 test('I5 paint whitelist preserves non-paint materials, seven presets and a custom color',async({page},info)=>{
   await ready(page);await expect.poll(()=>actual(page).then(a=>a.paint)).toBe('e4e6e8');const before=(await actual(page)).protectedMaterials;
   for(const name of ['霞光紫','海湾蓝','珍珠白','曜石黑','熔岩红','雅灰','海绿']){await page.getByRole('button',{name:`车漆：${name}`,exact:true}).click();await expect.poll(()=>actual(page).then(a=>a.protectedMaterials)).toEqual(before);}

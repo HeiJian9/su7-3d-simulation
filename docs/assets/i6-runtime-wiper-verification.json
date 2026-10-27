@@ -1,0 +1,21 @@
+{
+  "source": "actual runtime GLB accessors and morph targets",
+  "pointsChecked": 89486,
+  "minGlassClearanceMeters": 0.003054241636817058,
+  "maxGlassClearanceMeters": 0.02636615556617365,
+  "records": [
+    {
+      "side": "driver",
+      "samples": 101,
+      "minGlassClearanceMeters": 0.003054241636817058,
+      "maxGlassClearanceMeters": 0.02636615556617365
+    },
+    {
+      "side": "passenger",
+      "samples": 101,
+      "minGlassClearanceMeters": 0.0035830712249139947,
+      "maxGlassClearanceMeters": 0.026002581937753694
+    }
+  ],
+  "passed": true
+}

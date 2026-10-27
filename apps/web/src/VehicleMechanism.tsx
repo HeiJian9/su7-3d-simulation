@@ -28,9 +28,10 @@ export function VehicleMechanism({model}:{model:Group}){
     for(const b of bindings.current){const [,corner]=b.key.split(':');const target=b.key.startsWith('door:')?store.state.doors[corner as Corner].openness:store.state.trunk.openness;
       const step=Math.min(delta,.05)*.8;b.value=Math.abs(target-b.value)<=step?target:b.value+Math.sign(target-b.value)*step;b.node.rotation[b.axis]=b.angle*b.value;
       actualValues[b.key]=b.value;gl.domElement.setAttribute(`data-${b.key.replaceAll(':','-')}`,b.value.toFixed(4));
+      b.node.updateMatrixWorld(true);
       gl.domElement.setAttribute(`data-${b.key.split(':').slice(0,2).join('-')}-matrix`,b.node.matrixWorld.toArray().map(v=>v.toFixed(6)).join(','));
     }
     gl.domElement.setAttribute('data-vehicle-actual',JSON.stringify(actualValues));gl.domElement.setAttribute('data-vehicle-state',JSON.stringify(store.state));completeExecutions();
-  });
+  },-2);
   return <>{hotspots.map(h=><Hotspot key={h.part} model={model} {...h} activate={()=>{const state=useVehicle.getState().state;const value=h.corner?state.doors[h.corner].openness:state.trunk.openness;manualCommand(h.corner?[{component:'door',targets:[h.corner],operation:'set',property:'openness',value:value>.01?0:1}]:[{component:'trunk',targets:['rear'],operation:'set',property:'openness',value:value>.01?0:1}]);}}/>)}</>;
 }
