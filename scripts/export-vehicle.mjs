@@ -10,4 +10,5 @@ if(mapping.wipers)checks.push('scripts/verify-wiper-glb.mjs');
 if(mapping.trunk.requiredMovingBadges)checks.push('scripts/verify-trunk-correction.mjs');
 if(mapping.materialRoles.nativeLampSources)checks.push('scripts/verify-native-lamps.mjs');
 if(mapping.materialRoles.ambient.audit)checks.push('scripts/verify-cabin-lighting.mjs');
+if(mapping.cabinLights)checks.push('scripts/verify-dome-tail.mjs');
 for(const script of checks){const r=spawnSync(process.execPath,[script],{stdio:'inherit'});if(r.status!==0)process.exit(r.status??1);}

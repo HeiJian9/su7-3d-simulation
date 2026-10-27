@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 export type CameraMode = 'orbit' | 'free';
-export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lighting';
+export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lighting' | 'roofFront' | 'roofRear';
 export interface Metrics {
   fps: number;
   calls: number;
@@ -52,7 +52,7 @@ export const useScene = create<SceneState>((set) => ({
   gesture: '尚无手势',
   setMode: (mode) => set({ mode, panTool: false }),
   setPan: () => set({ mode: 'orbit', panTool: true }),
-  go: (view) => set((state) => ({ view, panTool: false, mode: view === 'cabin'||view==='ambient' ? 'free' : 'orbit', request: state.request + 1 })),
+  go: (view) => set((state) => ({ view, panTool: false, mode: ['cabin','ambient','roofFront','roofRear'].includes(view) ? 'free' : 'orbit', request: state.request + 1 })),
   setSpeed: (speed) => set({ speed }),
   patch: (state) => set(state),
   record: (metrics) => set((state) => ({ metrics, samples: [...state.samples.slice(-359), metrics] })),

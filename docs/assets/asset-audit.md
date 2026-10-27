@@ -1,5 +1,7 @@
 # 指定 SU7 资产审查 · I0–I6
 
+当前0.6.6增加原生红色后灯环与前后排主灯，最新资产和验收见 [本轮报告](../DOME_TAIL_LIGHTING.md)。
+
 当前0.6.5中控原饰条布局、转向与车内散射追加修正见 [报告](../LIGHTING_FOLLOWUP.md)；下文旧版本数字为历史记录，当前哈希见 `docs/assets/current-geometry.json`。
 
 当前 I4–I6 增强结果见文末及 [修改记录](I4_I6_MODIFICATIONS.md)。下列 I0–I2 数据保留为历史基线，不代表当前机构仍未实现。

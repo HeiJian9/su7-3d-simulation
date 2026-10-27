@@ -1,5 +1,5 @@
 {
-  "stage": "I6.7-native-trim-lighting",
+  "stage": "I6.8-tail-and-dome",
   "source": "actual exported GLB; no proxy animation",
   "doorRecords": [
     {
@@ -203,6 +203,9 @@
     "independentMaterialNames": [
       "AMBIENT_CABIN_WASH",
       "AMBIENT_CABIN_LED",
+      "DOME_HOUSING",
+      "DOME_FRONT_DIFFUSER",
+      "DOME_REAR_DIFFUSER",
       "SU7_PAINT_BODY",
       "Mesh32Mtl",
       "Mesh13Mtl",
@@ -219,6 +222,7 @@
       "Mesh17Mtl",
       "TURN_RIGHT_AMBER",
       "TURN_LEFT_AMBER",
+      "TAIL_RUNNING_RED",
       "Mesh22Mtl",
       "Mesh24Mtl",
       "Mesh60Mtl",

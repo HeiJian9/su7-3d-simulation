@@ -139,5 +139,13 @@
     "browserPassed": 10,
     "realSpeech": false,
     "assetSha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977"
+  },
+  "domeTail": {
+    "version": "0.6.6",
+    "report": "docs/DOME_TAIL_LIGHTING.md",
+    "browserPassed": 14,
+    "realApiSyntheticCases": 6,
+    "humanMicrophone": false,
+    "assetSha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1"
   }
 }

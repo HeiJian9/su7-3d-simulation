@@ -3,6 +3,7 @@ import {manualCommand,useVehicle} from './vehicle';
 import {useScene} from './store';
 export function AppearancePanel(){
   const s=useVehicle(v=>v.state),ready=useVehicle(v=>v.capabilities.includes('paint:body'));
+  const domeReady=useVehicle(v=>v.capabilities.includes('cabinLight:front')&&v.capabilities.includes('cabinLight:rear'));
   const night=useScene(v=>v.night),haze=useScene(v=>v.haze),hazeEnabled=useScene(v=>v.hazeEnabled);
   const send=(c:VehicleCommand)=>manualCommand([c]);
   return <div className="component-content appearance-panel">
@@ -14,6 +15,12 @@ export function AppearancePanel(){
       <div className="component-row"><span>丁达尔光束</span><button className="scene-light-toggle" aria-label="丁达尔光束" aria-pressed={hazeEnabled} onClick={()=>useScene.getState().setHazeEnabled(!hazeEnabled)}>{hazeEnabled?'已开启':'已关闭'}</button></div>
       <label className="component-row" htmlFor="light-haze">空气散射<output>{Math.round(haze*100)}%</output></label>
       <input id="light-haze" aria-label="空气散射强度" type="range" min="0" max="100" value={Math.round(haze*100)} disabled={!hazeEnabled} onChange={e=>useScene.getState().setHaze(Number(e.target.value)/100)}/>
+    </section>
+    <section>
+      <div className="component-row"><strong>车内主灯</strong></div>
+      <div className="mode-buttons">{(['front','rear'] as const).map((target,i)=><button key={target} disabled={!domeReady} aria-label={`${i===0?'前排':'后排'}主灯开关`} aria-pressed={s.cabinLights[target]} onClick={()=>send({component:'cabinLight',targets:[target],property:'enabled',operation:'set',value:!s.cabinLights[target]})}>{i===0?'前排':'后排'} · {s.cabinLights[target]?'开':'关'}</button>)}</div>
+      <div className="mode-buttons"><button onClick={()=>useScene.getState().go('roofFront')}>前排顶灯视角</button><button onClick={()=>useScene.getState().go('roofRear')}>后排顶灯视角</button></div>
+      <p>可点击顶棚灯旁标签，或说“打开前排主灯”“关闭后排顶灯”。后方环形行车灯在本演示启动状态下保持红色常亮。</p>
     </section>
     <section>
       <div className="component-row"><strong>车漆</strong><label className="color-picker">自定义<input type="color" aria-label="自定义车漆颜色" value={s.paint.color} onChange={e=>send({component:'paint',targets:['body'],operation:'set',property:'color',value:e.target.value})}/></label></div>

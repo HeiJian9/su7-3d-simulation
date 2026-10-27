@@ -23,6 +23,6 @@ for(const [side,cfg] of Object.entries(roles.turnSignals)){
   const source=side==='left'?'Mesh20':'Mesh19',parts=members(rear);assert.deepEqual(parts,[{node:source,triangles:6},{node:'TRUNK_'+source,triangles:8}]);checkMaterial(rear,'Mesh19Mtl');
   records.push({side,role:'native front diffuser',members:members(front)},{side,role:'native rear inner modules',members:parts});
 }
-for(const name of ['Mesh21','TRUNK_Mesh21'])assert.ok(nodes.find(n=>n.getName()===name).getMesh().listPrimitives().every(p=>!p.getMaterial().getName().startsWith('TURN_')),'C contour must retain its original material');
+for(const name of ['Mesh21','TRUNK_Mesh21'])assert.ok(nodes.find(n=>n.getName()===name).getMesh().listPrimitives().every(p=>!p.getMaterial().getName().startsWith('TURN_')),'Outer contour must not use a turn-signal material');
 const report={passed:true,addedLampGeometry:false,removedProxyCount:roles.removedProxyNodes.length,projectors:8,records,unlitOriginalMaterialPreserved:true};
 await mkdir('docs/validation/native-lamps',{recursive:true});await writeFile('docs/validation/native-lamps/native-membership.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

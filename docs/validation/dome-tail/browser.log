@@ -1,0 +1,23 @@
+
+Running 14 tests using 1 worker
+
+(node:25260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (7.9s)
+  ok  2 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off (5.4s)
+  ok  3 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (4.3s)
+  ok  4 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (3.4s)
+  ok  5 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (13.7s)
+  ok  6 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.9s)
+  ok  7 [Edge-1920x1080] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.3s)
+(node:28220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (7.9s)
+  ok  9 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off (4.7s)
+  ok 10 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (4.5s)
+  ok 11 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (2.7s)
+  ok 12 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (13.1s)
+  ok 13 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.2s)
+  ok 14 [Edge-1366x768] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.2s)
+
+  14 passed (1.5m)

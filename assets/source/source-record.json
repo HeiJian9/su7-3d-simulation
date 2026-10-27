@@ -15,7 +15,7 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977",
+  "runtimeSha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
@@ -25,12 +25,13 @@
     "I4: source door shells, inner trim, mirrors and split return strips on calibrated hinges; original deck and attached lamp/logo surfaces partitioned into trunk lid; recessed open cavity and inner skin added; all original glazing retained.",
     "I6: split the actual original Mesh24 twin wiper assemblies; calibrated windshield-normal pivots and eight surface-conforming morph corrections; source passenger assembly physically shortened to eliminate driver-pivot crossings; runtime scale remains one; front LED depth refined beneath original lenses; isolated graphite display material improves wiper visibility.",
     "Trunk correction: original complete native panel islands restored from the I3 source, including original positions, UVs and per-corner normals; no arbitrary bisects; rounded original deck/fascia and factory lamp split move as whole parts; exterior hull caps and edge strips removed; inner cover and lining inset behind original outer skin.",
-    "I5: eight original Mesh61 projector surfaces, original Mesh62/73 front diffusers and Mesh19/20 inner rear modules use independent cloned emission materials; C contours retain original material; signals emit yellow only while lit and restore original colours in off half-cycles and when disabled; 14 former tube/rod proxies removed; source positions/UV/normals preserved; physical cabin LEDs remain.",
-    "Cabin lighting: replace the five floating tubes with 12 narrow surface-fitted ribbon diffusers along original door rails, handles, dashboard and console using native trim edge vertices (no broad-surface projection path); footwells use concealed wash light without extra visible glovebox bars; no connectors across native trim gaps; original car geometry untouched; independent primary/wash materials and eight short-range runtime lights, four attached to door hinges."
+    "I5: eight original Mesh61 projector surfaces, original Mesh62/73 front diffusers and Mesh19/20 inner rear modules use independent cloned emission materials; outer contour now has an independent constant-red running material; signals emit yellow only while lit and restore original colours in off half-cycles and when disabled; 14 former tube/rod proxies removed; source positions/UV/normals preserved; physical cabin LEDs remain.",
+    "Cabin lighting: replace the five floating tubes with 12 narrow surface-fitted ribbon diffusers along original door rails, handles, dashboard and console using native trim edge vertices (no broad-surface projection path); footwells use concealed wash light without extra visible glovebox bars; no connectors across native trim gaps; original car geometry untouched; independent primary/wash materials and eight short-range runtime lights, four attached to door hinges.",
+    "Dome/tail: 714 native outermost rear-ring triangles use an independent constant-red running-lamp material, all geometry/UV/normals preserved; two compact ceiling fixtures follow measured front console/rear roof surface normals; independent downward spotlights and manual/rule/ASR-TTS controls."
   ],
-  "enhancedAt": "2026-10-27T14:42:47.874Z",
-  "assetIncrement": "I6.7-native-trim-lighting",
+  "enhancedAt": "2026-10-27T15:21:08.073Z",
+  "assetIncrement": "I6.8-tail-and-dome",
   "windowMapping": "docs/assets/window-mapping.json",
   "vehicleMapping": "docs/assets/vehicle-mapping.json",
-  "enhancedBlendSha256": "6f85f8c765ced5a2b074d4641b632240ee25fdd5af32e368a62378ce6459f45b"
+  "enhancedBlendSha256": "c7fa49d8cb739b0688c4a3b3a4a8428d4fcbe099e0b706728bcae7541fc401b8"
 }

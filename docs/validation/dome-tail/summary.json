@@ -1,0 +1,36 @@
+{
+  "version": "0.6.6",
+  "stageTag": "v0.6.6-dome-tail",
+  "geometry": {
+    "stage": "I6.8-tail-and-dome",
+    "sha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
+    "blendSha256": "c7fa49d8cb739b0688c4a3b3a4a8428d4fcbe099e0b706728bcae7541fc401b8",
+    "nodes": 132,
+    "meshes": 120,
+    "triangles": 96553,
+    "materials": 44,
+    "textures": 15
+  },
+  "browser": {
+    "startTime": "2026-10-27T15:15:13.041Z",
+    "duration": 90213.209,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTestsPassed": 77,
+  "realApiCasesPassed": 6,
+  "asr": "qwen3-asr-flash",
+  "tts": "cosyvoice-v3-flash",
+  "humanMicrophone": false,
+  "audioInput": "explicitly synthesized fixture through browser recording and real provider APIs",
+  "typecheck": "passed",
+  "build": "passed",
+  "lint": "passed",
+  "unmodifiedNodes": 126,
+  "nativeTailGeometryUnchanged": true,
+  "newFixtureNodes": 4,
+  "productionErrors": [],
+  "I7Started": false
+}

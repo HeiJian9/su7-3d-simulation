@@ -1,5 +1,5 @@
 {
-  "version": "I6.7-native-trim-lighting",
+  "version": "I6.8-tail-and-dome",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -573,7 +573,268 @@
       "TURN_RIGHT_REAR_BODY"
     ],
     "nativeLampAudit": "docs/assets/native-lamp-audit.json",
-    "lampNote": "Original Mesh61 projector faces, Mesh62/73 front diffuser, Mesh19/20 inner rear modules per latest user annotation. C contours restored. Yellow only in the on half-cycle; original colours otherwise."
+    "lampNote": "Original Mesh61 projector faces, Mesh62/73 front diffuser, Mesh19/20 inner rear modules per latest user annotation. C contours restored. Yellow only in the on half-cycle; original colours otherwise.",
+    "tailRunning": {
+      "material": "TAIL_RUNNING_RED",
+      "nodes": [
+        "Mesh21",
+        "TRUNK_Mesh21"
+      ],
+      "alwaysOn": true,
+      "color": "#ff1424",
+      "intensity": 1.5,
+      "samples": [
+        {
+          "node": "Mesh21",
+          "position": [
+            -0.7813655734062195,
+            0.7996671795845032,
+            2.2454183101654053
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            -0.6213657259941101,
+            0.7860682606697083,
+            2.363353729248047
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            -0.6310507655143738,
+            0.8556911945343018,
+            2.3108463287353516
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            -0.7521853446960449,
+            0.8304230570793152,
+            2.2516839504241943
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            -0.608848512172699,
+            0.860424816608429,
+            2.3188469409942627
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            0.781571626663208,
+            0.7996671795845032,
+            2.2454185485839844
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            0.6213682293891907,
+            0.7860682606697083,
+            2.363353729248047
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            0.6310541033744812,
+            0.8556911945343018,
+            2.310847282409668
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            0.7523922324180603,
+            0.8304230570793152,
+            2.2516839504241943
+          ]
+        },
+        {
+          "node": "Mesh21",
+          "position": [
+            0.6088510155677795,
+            0.860424816608429,
+            2.3188469409942627
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.48334261775016785,
+            0.8707103133201599,
+            2.3601748943328857
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.5789117813110352,
+            0.8557233214378357,
+            2.3284618854522705
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.5632095336914062,
+            0.8640641570091248,
+            2.3356707096099854
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.03299247846007347,
+            0.7856486439704895,
+            2.4640324115753174
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.16301730275154114,
+            0.7843737006187439,
+            2.4591357707977295
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.2560602128505707,
+            0.7858977317810059,
+            2.4486358165740967
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.4282338619232178,
+            0.7858614921569824,
+            2.4228341579437256
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.5671765208244324,
+            0.7848675847053528,
+            2.386225700378418
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.5671790242195129,
+            0.7848675847053528,
+            2.386225700378418
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.42823636531829834,
+            0.7858614921569824,
+            2.4228341579437256
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.25606271624565125,
+            0.7858977317810059,
+            2.4486358165740967
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.16301991045475006,
+            0.7843737006187439,
+            2.4591357707977295
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.3455643653869629,
+            0.7798299789428711,
+            2.4373276233673096
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.5078313946723938,
+            0.7794998288154602,
+            2.4040825366973877
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            -0.5666360855102539,
+            0.7798908352851868,
+            2.3854894638061523
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.5666385293006897,
+            0.7798908352851868,
+            2.3854894638061523
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.5078339576721191,
+            0.7794998288154602,
+            2.4040825366973877
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.34556689858436584,
+            0.7798299789428711,
+            2.4373276233673096
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.4833468198776245,
+            0.8707103133201599,
+            2.3601748943328857
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.578914225101471,
+            0.8557241559028625,
+            2.3284618854522705
+          ]
+        },
+        {
+          "node": "TRUNK_Mesh21",
+          "position": [
+            0.5632128715515137,
+            0.8640641570091248,
+            2.3356707096099854
+          ]
+        }
+      ],
+      "audit": "docs/assets/dome-tail-audit.json"
+    }
   },
   "cockpitHotspots": {
     "lights": [
@@ -914,5 +1175,69 @@
       }
     ],
     "calibrationNote": "Source passenger sweep crossed the driver pivot. Its source assembly was physically shortened and refitted to the glass (about 38 cm blade, driver about 63 cm), preserving original topology, materials and UV. These are display-rig dimensions, not manufacturer CAD claims."
+  },
+  "cabinLights": {
+    "front": {
+      "housing": "DOME_FRONT_HOUSING",
+      "lens": "DOME_FRONT_LENS",
+      "material": "DOME_FRONT_DIFFUSER",
+      "position": [
+        0.0,
+        1.289884090423584,
+        -0.266671746969223
+      ],
+      "direction": [
+        -0.0,
+        -0.9884902238845825,
+        0.15128447115421295
+      ],
+      "hotspot": [
+        0.0,
+        1.2780221700668335,
+        -0.26485633850097656
+      ],
+      "roofSource": "Mesh53",
+      "roofHit": [
+        0.0,
+        1.3116308450698853,
+        -0.27000001072883606
+      ],
+      "mountGap": 0.0,
+      "color": "#fff3db",
+      "intensity": 12,
+      "distance": 2.1,
+      "angle": 0.95
+    },
+    "rear": {
+      "housing": "DOME_REAR_HOUSING",
+      "lens": "DOME_REAR_LENS",
+      "material": "DOME_REAR_DIFFUSER",
+      "position": [
+        -0.00028986454708501697,
+        1.3978768587112427,
+        0.7980071306228638
+      ],
+      "direction": [
+        -0.01317565981298685,
+        -0.9958016276359558,
+        -0.09058500081300735
+      ],
+      "hotspot": [
+        -0.0004479724448174238,
+        1.3859272003173828,
+        0.796920120716095
+      ],
+      "roofSource": "Mesh63",
+      "roofHit": [
+        0.0,
+        1.419784426689148,
+        0.800000011920929
+      ],
+      "mountGap": 0.0,
+      "color": "#fff3db",
+      "intensity": 12,
+      "distance": 2.1,
+      "angle": 0.95
+    }
   }
 }

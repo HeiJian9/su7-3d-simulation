@@ -1,0 +1,343 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "dome-tail.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "dome-tail.spec.ts",
+      "file": "dome-tail.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:13:29.158Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "running-ring",
+                      "contentType": "application/json",
+                      "body": "eyJvbiI6eyJyZWQiOjE1OTEsIm1lYW4iOjEzLjgxMTAzOTUzNjQxMTY0N30sIm9mZiI6eyJyZWQiOjEwMDEsIm1lYW4iOjE0LjQ0Mjk5Mzc3OTc3NjU1Mn0sInJpbmciOnsiYWx3YXlzT24iOnRydWUsImNvbG9yIjoiZmYxNDI0IiwicG93ZXIiOjEuNX0sImVycm9ycyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-dd672f0f8f17dd01de3b",
+          "file": "dome-tail.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3365,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:13:43.006Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "physical-dome-results",
+                      "contentType": "application/json",
+                      "body": "eyJyZWNvcmRzIjpbW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZW1pc3Npb24iOjIuNCwib3JpZ2luIjpbMCwxLjI4OTg4NDA5MDQyMzU4NCwtMC4yNjY2NzE3NDY5NjkyMjNdLCJkaXJlY3Rpb24iOlswLC0wLjk4ODQ5MDI2NjQyNTM0ODQsMC4xNTEyODQ0Nzc2NjQ5MDY4NV0sImNhc3RzU2hhZG93Ijp0cnVlfSx7InBvc2l0aW9uIjoicmVhciIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6Wy0wLjAwMDI4OTg2NDU0NzA4NTAxNjk3LDEuMzk3ODc2ODU4NzExMjQyNywwLjc5ODAwNzEzMDYyMjg2MzhdLCJkaXJlY3Rpb24iOlstMC4wMTMxNzU2NTkwMDkzNjI0NjMsLTAuOTk1ODAxNTY2ODk4OTIzNiwtMC4wOTA1ODQ5OTUyODc5NDY5OV0sImNhc3RzU2hhZG93Ijp0cnVlfV0sW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjp0cnVlLCJwb3dlciI6MTIsImVtaXNzaW9uIjoyLjQsIm9yaWdpbiI6Wy0wLjAwMDI4OTg2NDU0NzA4NTAxNjk3LDEuMzk3ODc2ODU4NzExMjQyNywwLjc5ODAwNzEzMDYyMjg2MzhdLCJkaXJlY3Rpb24iOlstMC4wMTMxNzU2NTkwMDkzNjI0NjMsLTAuOTk1ODAxNTY2ODk4OTIzNiwtMC4wOTA1ODQ5OTUyODc5NDY5OV0sImNhc3RzU2hhZG93Ijp0cnVlfV1dLCJvZmYiOnsicmVkIjoxNjY3LCJtZWFuIjoxMC4zOTM5OTQzMzM2OTY3NH0sIm9uIjp7InJlZCI6MjI2MywibWVhbiI6MTkuMjM1NDIxNzc5MTMwNDA1fSwiZmluYWwiOlt7InBvc2l0aW9uIjoiZnJvbnQiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImVtaXNzaW9uIjowLCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-889446d2132e9a06b921",
+          "file": "dome-tail.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:13:46.936Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "running-ring",
+                      "contentType": "application/json",
+                      "body": "eyJvbiI6eyJyZWQiOjU3MCwibWVhbiI6MTguMDkwODIyNTYxMDEyNTd9LCJvZmYiOnsicmVkIjozODYsIm1lYW4iOjE4LjY5MTQ4OTQyMzY3NTA5fSwicmluZyI6eyJhbHdheXNPbiI6dHJ1ZSwiY29sb3IiOiJmZjE0MjQiLCJwb3dlciI6MS41fSwiZXJyb3JzIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-1abc81a79341f0626504",
+          "file": "dome-tail.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:13:58.644Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "physical-dome-results",
+                      "contentType": "application/json",
+                      "body": "eyJyZWNvcmRzIjpbW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZW1pc3Npb24iOjIuNCwib3JpZ2luIjpbMCwxLjI4OTg4NDA5MDQyMzU4NCwtMC4yNjY2NzE3NDY5NjkyMjNdLCJkaXJlY3Rpb24iOlswLC0wLjk4ODQ5MDI2NjQyNTM0ODQsMC4xNTEyODQ0Nzc2NjQ5MDY4NV0sImNhc3RzU2hhZG93Ijp0cnVlfSx7InBvc2l0aW9uIjoicmVhciIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6Wy0wLjAwMDI4OTg2NDU0NzA4NTAxNjk3LDEuMzk3ODc2ODU4NzExMjQyNywwLjc5ODAwNzEzMDYyMjg2MzhdLCJkaXJlY3Rpb24iOlstMC4wMTMxNzU2NTkwMDkzNjI0NjMsLTAuOTk1ODAxNTY2ODk4OTIzNiwtMC4wOTA1ODQ5OTUyODc5NDY5OV0sImNhc3RzU2hhZG93Ijp0cnVlfV0sW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjp0cnVlLCJwb3dlciI6MTIsImVtaXNzaW9uIjoyLjQsIm9yaWdpbiI6Wy0wLjAwMDI4OTg2NDU0NzA4NTAxNjk3LDEuMzk3ODc2ODU4NzExMjQyNywwLjc5ODAwNzEzMDYyMjg2MzhdLCJkaXJlY3Rpb24iOlstMC4wMTMxNzU2NTkwMDkzNjI0NjMsLTAuOTk1ODAxNTY2ODk4OTIzNiwtMC4wOTA1ODQ5OTUyODc5NDY5OV0sImNhc3RzU2hhZG93Ijp0cnVlfV1dLCJvZmYiOnsicmVkIjo3MzcsIm1lYW4iOjE1LjI5NDk0MjQwMDI1NTU4Nn0sIm9uIjp7InJlZCI6MTEzNSwibWVhbiI6MjEuNTQ5NTAzODU1MzUzNDA3fSwiZmluYWwiOlt7InBvc2l0aW9uIjoiZnJvbnQiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImVtaXNzaW9uIjowLCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-8e5f345d1bab0e363290",
+          "file": "dome-tail.spec.ts",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T15:13:27.846Z",
+    "duration": 34323.354999999996,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

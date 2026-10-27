@@ -10,7 +10,7 @@ test('front and rear signal air scattering follows actual blink, side selection,
  const records=[];
  for(const mode of ['左转向灯','右转向灯','双闪']){
   await page.getByRole('button',{name:mode,exact:true}).click();let lit=false,dark=false;
-  for(let i=0;i<12;i++){const v=await volume(page);if(v.signalSources.length===6){const on=v.signals.left||v.signals.right;lit||=on;dark||=!on;expect(v.active).toBe(on);for(const source of v.signalSources)expect(source.power).toBe(v.signals[source.side]?1:0);if(mode==='左转向灯')expect(v.signals.right).toBe(false);if(mode==='右转向灯')expect(v.signals.left).toBe(false);}await page.waitForTimeout(80);}
+  for(let i=0;i<12;i++){const v=await volume(page);if(v.signalSources.length===6){const on=v.signals.left||v.signals.right;lit||=on;dark||=!on;expect(v.active).toBe(true);expect(v.tailRunning).toBe(true);for(const source of v.signalSources)expect(source.power).toBe(v.signals[source.side]?1:0);if(mode==='左转向灯')expect(v.signals.right).toBe(false);if(mode==='右转向灯')expect(v.signals.left).toBe(false);}await page.waitForTimeout(80);}
   expect(lit&&dark).toBe(true);records.push(await volume(page));
  }
  const imageStats=[];
@@ -22,7 +22,7 @@ test('front and rear signal air scattering follows actual blink, side selection,
  }
  const before=(await volume(page)).signalSources;await command(page,'后备箱打开一半');await expect.poll(()=>page.locator('canvas').getAttribute('data-trunk-rear-openness').then(Number)).toBe(.5);await page.waitForTimeout(400);const after=(await volume(page)).signalSources;
  expect(after.filter((s:{position:number[]},i:number)=>Math.hypot(...s.position.map((v,j)=>v-before[i].position[j]))>.1)).toHaveLength(2);
- await command(page,'关闭转向灯');await expect.poll(async()=>(await volume(page)).active).toBe(false);expect(errors).toEqual([]);await info.attach('signal-scattering',{body:JSON.stringify({records,imageStats,errors,before,after,realSpeech:false}),contentType:'application/json'});
+ await command(page,'关闭转向灯');await expect.poll(async()=>(await volume(page)).signals).toEqual({left:false,right:false});expect(errors).toEqual([]);await info.attach('signal-scattering',{body:JSON.stringify({records,imageStats,errors,before,after,realSpeech:false}),contentType:'application/json'});
 });
 
 test('cabin illumination and local scattering follow colour, brightness and off state',async({page},info)=>{
@@ -30,6 +30,6 @@ test('cabin illumination and local scattering follow colour, brightness and off 
  await command(page,'氛围灯换成紫色，亮度设为百分之一百');await command(page,'打开氛围灯');await expect.poll(async()=>(await volume(page)).cabinPower).toBe(1);await expect.poll(async()=>(await volume(page)).active).toBe(true);await page.waitForTimeout(300);
  const onImage=await canvas.screenshot({path:`docs/assets/lighting-followup/cabin-on-${info.project.name}.png`}),on=await pixels(page,onImage);
  await page.getByRole('button',{name:'丁达尔光束',exact:true}).click();await expect.poll(async()=>(await volume(page)).active).toBe(false);const noScatter=await pixels(page,await canvas.screenshot());expect(on.mean).toBeGreaterThan(noScatter.mean+.03);expect(noScatter.mean).toBeGreaterThan(off.mean+2);
- await page.getByRole('button',{name:'丁达尔光束',exact:true}).click();await command(page,'氛围灯亮度设为百分之零');await expect.poll(async()=>(await volume(page)).cabinPower).toBe(0);await expect.poll(async()=>(await volume(page)).active).toBe(false);
+ await page.getByRole('button',{name:'丁达尔光束',exact:true}).click();await command(page,'氛围灯亮度设为百分之零');await expect.poll(async()=>(await volume(page)).cabinPower).toBe(0);expect((await volume(page)).tailRunning).toBe(true);
  await info.attach('cabin-scattering',{body:JSON.stringify({off,on,noScatter,state:await volume(page),realSpeech:false}),contentType:'application/json'});
 });

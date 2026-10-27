@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "baseline": "697b314",
+  "unmodifiedNodes": 126,
+  "nativeRing": [
+    {
+      "node": "Mesh21",
+      "triangles": 434,
+      "sourceGeometryUnchanged": true
+    },
+    {
+      "node": "TRUNK_Mesh21",
+      "triangles": 280,
+      "sourceGeometryUnchanged": true
+    }
+  ],
+  "fixtures": [
+    {
+      "position": [
+        0,
+        1.289884090423584,
+        -0.266671746969223
+      ],
+      "housing": "DOME_FRONT_HOUSING",
+      "lens": "DOME_FRONT_LENS",
+      "material": "DOME_FRONT_DIFFUSER",
+      "direction": [
+        0,
+        -0.9884902238845825,
+        0.15128447115421295
+      ],
+      "hotspot": [
+        0,
+        1.2780221700668335,
+        -0.26485633850097656
+      ],
+      "roofSource": "Mesh53",
+      "roofHit": [
+        0,
+        1.3116308450698853,
+        -0.27000001072883606
+      ],
+      "mountGap": 0,
+      "color": "#fff3db",
+      "intensity": 12,
+      "distance": 2.1,
+      "angle": 0.95
+    },
+    {
+      "position": [
+        -0.00028986454708501697,
+        1.3978768587112427,
+        0.7980071306228638
+      ],
+      "housing": "DOME_REAR_HOUSING",
+      "lens": "DOME_REAR_LENS",
+      "material": "DOME_REAR_DIFFUSER",
+      "direction": [
+        -0.01317565981298685,
+        -0.9958016276359558,
+        -0.09058500081300735
+      ],
+      "hotspot": [
+        -0.0004479724448174238,
+        1.3859272003173828,
+        0.796920120716095
+      ],
+      "roofSource": "Mesh63",
+      "roofHit": [
+        0,
+        1.419784426689148,
+        0.800000011920929
+      ],
+      "mountGap": 0,
+      "color": "#fff3db",
+      "intensity": 12,
+      "distance": 2.1,
+      "angle": 0.95
+    }
+  ],
+  "newNodes": 4,
+  "tailSamples": 31
+}

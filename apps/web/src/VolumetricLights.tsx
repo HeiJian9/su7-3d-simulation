@@ -1,6 +1,6 @@
 import {useEffect,useMemo,useRef} from 'react';
 import {useFrame} from '@react-three/fiber';
-import {Box3,Color,DepthTexture,Group,HalfFloatType,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,Vector2,Vector3,WebGLRenderTarget,type PointLight} from 'three';
+import {Box3,Color,DepthTexture,Group,HalfFloatType,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,Vector2,Vector3,WebGLRenderTarget,type PointLight,type SpotLight} from 'three';
 import {FullScreenQuad} from 'three/examples/jsm/postprocessing/Pass.js';
 import {useScene} from './store';
 import {useVehicle} from './vehicle';
@@ -25,6 +25,13 @@ uniform float signalPowers[6];
 uniform vec3 cabinOrigins[8];
 uniform float cabinPowers[8];
 uniform vec3 cabinColor;
+uniform vec3 tailOrigins[32];
+uniform int tailCount;
+uniform vec3 tailMin;
+uniform vec3 tailMax;
+uniform vec3 domeOrigins[2];
+uniform vec3 domeDirections[2];
+uniform float domePowers[2];
 uniform vec3 boundsMin;
 uniform vec3 boundsMax;
 varying vec2 vUv;
@@ -66,6 +73,16 @@ void main(){
       if(headlightsOn>.5)light+=vec3(.72,.86,1.)*(field(p,lamps[0],ray)+field(p,lamps[1],ray))*mix(.65,1.15,highBeam);
       for(int j=0;j<6;j++)if(signalPowers[j]>.0)
         light+=vec3(1.,.63,.0)*signalPowers[j]*signalField(p,signalOrigins[j],signalDirections[j])*1.4;
+      if(all(greaterThan(p,tailMin))&&all(lessThan(p,tailMax))){
+        float red=0.;
+        for(int j=0;j<32;j++){if(j>=tailCount)break;
+          float d=length((p-tailOrigins[j])/vec3(.14,.075,.18));
+          red=max(red,1.-smoothstep(.05,1.,d));
+        }
+        light+=vec3(1.,.007,.013)*red*.8;
+      }
+      for(int j=0;j<2;j++)if(domePowers[j]>.0)
+        light+=vec3(1.,.89,.70)*domePowers[j]*signalField(p,domeOrigins[j],domeDirections[j])*.45;
       // Only localized cabin air around the concealed lights, not a fog overlay.
       if(abs(p.x)<.79&&p.y>.32&&p.y<1.32&&p.z>-.9&&p.z<1.25){
         for(int j=0;j<8;j++)if(cabinPowers[j]>.0){
@@ -108,7 +125,9 @@ export function VolumetricLights({model}:{model:Group}){
     });
     const vectors=(count:number)=>Array.from({length:count},()=>new Vector3());
     const material=new ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{tScene:{value:target.texture},tDepth:{value:target.depthTexture},inverseProjection:{value:new Matrix4()},cameraWorld:{value:new Matrix4()},rootInverse:{value:new Matrix4()},eye:{value:new Vector3()},lamps:{value:Object.values(mapping.materialRoles.headlights).map(c=>new Vector3().fromArray(c.lightPosition).add(new Vector3(0,0,-.025)))},density:{value:.15},highBeam:{value:0},headlightsOn:{value:0},signalOrigins:{value:vectors(6)},signalDirections:{value:vectors(6)},signalPowers:{value:Array(6).fill(0)},cabinOrigins:{value:vectors(8)},cabinPowers:{value:Array(8).fill(0)},cabinColor:{value:new Color()},boundsMin:{value:new Vector3()},boundsMax:{value:new Vector3()}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader});
-    return {target,material,quad:new FullScreenQuad(material),size:new Vector2(),sources};
+    Object.assign(material.uniforms,{tailOrigins:{value:vectors(32)},tailCount:{value:mapping.materialRoles.tailRunning.samples.length},tailMin:{value:new Vector3()},tailMax:{value:new Vector3()},domeOrigins:{value:vectors(2)},domeDirections:{value:vectors(2)},domePowers:{value:[0,0]}});
+    const tailSources=mapping.materialRoles.tailRunning.samples.map(s=>({node:model.getObjectByName(s.node)!,position:new Vector3().fromArray(s.position)}));
+    return {target,material,quad:new FullScreenQuad(material),size:new Vector2(),sources,tailSources,tailBounds:new Box3()};
   },[model]);
   useEffect(()=>()=>{resources.target.dispose();resources.target.depthTexture?.dispose();resources.material.dispose();resources.quad.dispose();},[resources]);
   useFrame(({gl,scene,camera},delta)=>{
@@ -116,7 +135,9 @@ export function VolumetricLights({model}:{model:Group}){
     const root=model.getObjectByName('SU7_ROOT')!;
     const signals=(root.userData.turnSignalPulse??{left:false,right:false}) as {left:boolean;right:boolean};
     const cabin=root.userData.ambientScatter as {power:number;color:Color;lights:PointLight[]}|undefined;
-    const active=hazeEnabled&&haze>0&&(mode!=='off'||signals.left||signals.right||(cabin?.power??0)>0);
+    const domeLights=(root.userData.domeLights??[]) as SpotLight[];
+    // Startup running lamp stays red independently of front lights / indicators.
+    const active=hazeEnabled&&haze>0;
     if(active){
       const {target,material,quad,size}=resources;gl.getDrawingBufferSize(size);
       if(target.width!==size.x||target.height!==size.y)target.setSize(size.x,size.y);
@@ -134,9 +155,11 @@ export function VolumetricLights({model}:{model:Group}){
         u.signalPowers.value[i]=signals[source.side]?1:0;
       });
       if(cabin){u.cabinColor.value.copy(cabin.color);cabin.lights.forEach((light,i)=>{light.getWorldPosition(u.cabinOrigins.value[i]).applyMatrix4(u.rootInverse.value);u.cabinPowers.value[i]=light.intensity;});}
+      resources.tailBounds.makeEmpty();resources.tailSources.forEach((s,i)=>{const point=u.tailOrigins.value[i].copy(s.position).applyMatrix4(s.node.matrixWorld).applyMatrix4(u.rootInverse.value);resources.tailBounds.expandByPoint(point);});resources.tailBounds.expandByVector(new Vector3(.14,.075,.18));u.tailMin.value.copy(resources.tailBounds.min);u.tailMax.value.copy(resources.tailBounds.max);
+      domeLights.forEach((light,i)=>{light.getWorldPosition(u.domeOrigins.value[i]).applyMatrix4(u.rootInverse.value);light.target.getWorldPosition(u.domeDirections.value[i]).applyMatrix4(u.rootInverse.value).sub(u.domeOrigins.value[i]).normalize();u.domePowers.value[i]=light.intensity/12;});
       gl.setRenderTarget(target);gl.render(scene,camera);gl.setRenderTarget(null);quad.render(gl);
     }else{gl.setRenderTarget(null);gl.render(scene,camera);}
-    tick.current+=delta;if(tick.current>.10){tick.current=0;gl.domElement.setAttribute('data-volume',JSON.stringify({enabled:hazeEnabled,active,density:haze,mode,signals,cabinPower:cabin?.power??0,signalSources:resources.sources.map((s,i)=>({side:s.side,rear:s.rear,position:resources.material.uniforms.signalOrigins.value[i].toArray(),power:active&&signals[s.side]?1:0})),sceneDepthOcclusion:true,samples:96,visibleConeGeometry:false}));}
+    tick.current+=delta;if(tick.current>.10){tick.current=0;gl.domElement.setAttribute('data-volume',JSON.stringify({enabled:hazeEnabled,active,density:haze,mode,signals,cabinPower:cabin?.power??0,tailRunning:true,tailSamples:resources.tailSources.length,domePowers:domeLights.map(l=>active?l.intensity/12:0),signalSources:resources.sources.map((s,i)=>({side:s.side,rear:s.rear,position:resources.material.uniforms.signalOrigins.value[i].toArray(),power:active&&signals[s.side]?1:0})),sceneDepthOcclusion:true,samples:96,visibleConeGeometry:false}));}
   },1);
   return null;
 }

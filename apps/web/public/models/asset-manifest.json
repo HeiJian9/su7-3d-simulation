@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977",
-  "bytes": 6567292,
+  "sha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
+  "bytes": 6623648,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I6.7-native-trim-lighting 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · I6.8-tail-and-dome 增强资产 · 原车几何与局部补建"
 }

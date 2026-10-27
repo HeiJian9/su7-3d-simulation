@@ -25,7 +25,7 @@ test('fitted cabin zones share actual brightness and colour, follow doors, and e
  await info.attach('actual-cabin-zone-states',{body:JSON.stringify({records,before,after,sourceProof:'docs/validation/cabin-lighting/geometry.json',realSpeech:false},null,2),contentType:'application/json'});
 });
 
-test('depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off',async({page},info)=>{
+test('depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off',async({page},info)=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  await ready(page);await page.getByRole('button',{name:'柔光展厅',exact:true}).click();await page.getByRole('button',{name:'照射视角',exact:true}).click();
  await page.getByRole('button',{name:'远光灯',exact:true}).click();await page.getByRole('slider',{name:'空气散射强度',exact:true}).fill('80');await expect.poll(async()=>(await volume(page)).density).toBe(.8);
@@ -42,6 +42,6 @@ test('depth-clipped Tyndall volume changes rendered air, has adjustable strength
   return {brighterPixels:bright,roofMeanDifference:roofSum/roofSamples,pixels:a.width*a.height};
  },{on:on.toString('base64'),off:off.toString('base64'),roof:roofPixel});
  expect(diff.brighterPixels).toBeGreaterThan(diff.pixels*.008);expect(diff.roofMeanDifference).toBeLessThan(3);
- await page.getByRole('button',{name:'丁达尔光束',exact:true}).click();await page.getByRole('button',{name:'关闭前灯',exact:true}).click();await expect.poll(async()=>{const v=await volume(page);return {enabled:v.enabled,active:v.active,mode:v.mode};}).toEqual({enabled:true,active:false,mode:'off'});expect((await volume(page)).sceneDepthOcclusion).toBe(true);
+ await page.getByRole('button',{name:'丁达尔光束',exact:true}).click();await page.getByRole('button',{name:'关闭前灯',exact:true}).click();await expect.poll(async()=>{const v=await volume(page);return {enabled:v.enabled,active:v.active,mode:v.mode};}).toEqual({enabled:true,active:true,mode:'off'});expect((await volume(page)).sceneDepthOcclusion).toBe(true);
  expect(errors).toEqual([]);await info.attach('actual-volume-image-comparison',{body:JSON.stringify({diff,roofPixel,errors,state:await volume(page),realSpeech:false},null,2),contentType:'application/json'});
 });
