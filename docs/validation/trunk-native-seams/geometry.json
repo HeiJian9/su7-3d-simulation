@@ -57,13 +57,58 @@
       "name": "Mesh71",
       "triangles": 1490,
       "matchedOriginal": true
+    },
+    {
+      "name": "Mesh61",
+      "triangles": 80,
+      "matchedOriginal": true
+    },
+    {
+      "name": "Mesh68",
+      "triangles": 3640,
+      "matchedOriginal": true
+    },
+    {
+      "name": "Mesh62",
+      "triangles": 91,
+      "matchedOriginal": true
+    },
+    {
+      "name": "Mesh73",
+      "triangles": 91,
+      "matchedOriginal": true
     }
   ],
-  "originalTrianglesMatched": 21308,
+  "originalTrianglesMatched": 25210,
   "maxPositionError": 0,
   "maxUvError": 0,
   "maxNormalError": 0.0006705913409834472,
-  "unrelatedNodesUnchanged": 101,
+  "unrelatedNodesUnchanged": 87,
+  "nativeLampSourcesVerified": [
+    "Mesh61",
+    "Mesh68",
+    "Mesh21",
+    "Mesh62",
+    "Mesh73",
+    "Mesh19",
+    "Mesh20"
+  ],
+  "removedLampProxies": [
+    "HEADLIGHT_LEFT_DRL",
+    "HEADLIGHT_LEFT_PROJECTOR_0",
+    "HEADLIGHT_LEFT_PROJECTOR_1",
+    "HEADLIGHT_LEFT_PROJECTOR_2",
+    "TURN_LEFT_FRONT",
+    "HEADLIGHT_RIGHT_DRL",
+    "HEADLIGHT_RIGHT_PROJECTOR_0",
+    "HEADLIGHT_RIGHT_PROJECTOR_1",
+    "HEADLIGHT_RIGHT_PROJECTOR_2",
+    "TURN_RIGHT_FRONT",
+    "TURN_LEFT_REAR_LID",
+    "TURN_RIGHT_REAR_LID",
+    "TURN_LEFT_REAR_BODY",
+    "TURN_RIGHT_REAR_BODY"
+  ],
   "visibility": [
     {
       "position": [
@@ -76,7 +121,7 @@
         0.95,
         2.2
       ],
-      "originalExteriorSurfaceRays": 6724,
+      "originalExteriorSurfaceRays": 6758,
       "outsideTrunkRegionRays": 4420,
       "exteriorHelperLeaks": 0,
       "leaks": []
@@ -92,7 +137,7 @@
         1,
         2.2
       ],
-      "originalExteriorSurfaceRays": 3506,
+      "originalExteriorSurfaceRays": 3519,
       "outsideTrunkRegionRays": 3425,
       "exteriorHelperLeaks": 0,
       "leaks": []
@@ -108,7 +153,7 @@
         1,
         2.2
       ],
-      "originalExteriorSurfaceRays": 3511,
+      "originalExteriorSurfaceRays": 3524,
       "outsideTrunkRegionRays": 3400,
       "exteriorHelperLeaks": 0,
       "leaks": []
@@ -124,7 +169,7 @@
         1,
         2.15
       ],
-      "originalExteriorSurfaceRays": 4756,
+      "originalExteriorSurfaceRays": 4772,
       "outsideTrunkRegionRays": 2030,
       "exteriorHelperLeaks": 0,
       "leaks": []

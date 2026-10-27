@@ -1,0 +1,1769 @@
+{
+  "url": "http://localhost:3000",
+  "version": "0.6.3",
+  "sha256": "1cdc55cf42a6ba2d860fc2c1616d339ae3184e18bf575d9da1ef0c68111ebbf5",
+  "rearTarget": "Mesh19/20 inner modules; original C contours retained",
+  "yellowOnOriginalOff": true,
+  "realSpeechApiInvoked": false,
+  "speechRequests": [],
+  "records": [
+    {
+      "image": "front-right",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "right",
+        "signals": {
+          "left": false,
+          "right": true
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "front-signal-off",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "right",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "rear-closed",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "rear-hazard",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "hazard",
+        "signals": {
+          "left": true,
+          "right": true
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "rear-blink-off",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "hazard",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "rear-right",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "right",
+        "signals": {
+          "left": false,
+          "right": true
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 2.2,
+                "color": "ffd000",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    },
+    {
+      "image": "rear-disabled",
+      "actual": {
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      }
+    }
+  ],
+  "passed": true
+}

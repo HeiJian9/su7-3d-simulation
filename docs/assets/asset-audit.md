@@ -100,6 +100,8 @@ Blender 几何验证：关闭世界顶点与 I1 基线误差 < 0.00001 米；开
 
 原 Mesh24 实际包含双雨刷。拆出组件后使用原 Mesh69 前挡校准转轴和 8 个贴合修正形态；副驾过长机构已修改真实顶点并重新拟合，避免扫过主驾转轴。101 个位置实测机构间相交为 0，玻璃法向间距约 3–26 mm（包括支臂）。不是代理杆动画。
 
-当前 GLB 135 节点、123 网格、95,149 三角面、39 材质、15 张纹理；Blender 全纹理打包。哈希与角色／热点映射见 [current-geometry.json](current-geometry.json)、[vehicle-mapping.json](vehicle-mapping.json)。原始分组审查见 [i4-original-audit.json](i4-original-audit.json)。
+0.6.3 将车外灯光改回原生面片材质：Mesh61 每侧四个投射灯面，Mesh62／73 前灯面及 Mesh20／19 后灯内侧四段模块，转向亮起黄色、熄灭及关闭恢复原色；C 形轮廓保留原材质。14 个代理细管／短杆删除，原生灯面位置／UV／法线保持一致；尾箱用户已确认通过。见 [灯组件修正](../NATIVE_LAMPS.md)。
+
+当前 GLB 121 节点、109 网格、94,549 三角面、39 材质、15 张纹理；Blender 全纹理打包。哈希与角色／热点映射见 [current-geometry.json](current-geometry.json)、[vehicle-mapping.json](vehicle-mapping.json)。原始分组审查见 [i4-original-audit.json](i4-original-audit.json)。
 
 剩余限制：内饰图集仍为原低分辨率资源；未重建整套实体按键、门锁、气撑杆、雨滴或天气。新增真人语音复验待补，几何及自动接口证据不冒充真人。

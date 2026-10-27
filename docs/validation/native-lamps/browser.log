@@ -1,0 +1,18 @@
+Running 10 tests using 1 worker
+
+(node:27312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.9s)
+  ok  2 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (4.7s)
+  ok  3 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.8s)
+  ok  4 [Edge-1920x1080] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.1s)
+  ok  5 [Edge-1920x1080] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (12.0s)
+(node:25092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.2s)
+  ok  7 [Edge-1366x768] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (5.2s)
+  ok  8 [Edge-1366x768] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.0s)
+  ok  9 [Edge-1366x768] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (5.6s)
+  ok 10 [Edge-1366x768] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (11.7s)
+
+  10 passed (1.0m)

@@ -1,0 +1,9 @@
+Final build verification, 2026-10-27 (selected actual command output)
+> npm run build
+> npm run typecheck && npm run build -w @su7/web && npm run build -w @su7/server
+> tsc --noEmit -p apps/web && tsc --noEmit -p apps/server && tsc --noEmit -p packages/shared
+Vite v7.3.7: 718 modules transformed.
+dist/assets/index-D8bRURkP.js 1,526.49 kB, gzip 435.77 kB
+built in 5.95s
+@su7/server: tsc -p tsconfig.build.json
+Exit code 0. Existing chunk-size and dependency annotation warnings remain.

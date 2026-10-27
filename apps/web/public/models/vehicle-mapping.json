@@ -1,5 +1,5 @@
 {
-  "version": "I6.4-native-trunk-seams",
+  "version": "I6.5-native-lamps",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -258,25 +258,52 @@
     },
     "headlights": {
       "left": {
-        "drlNodes": [
-          "HEADLIGHT_LEFT_DRL"
-        ],
-        "drlMaterial": "LAMP_LEFT_WHITE",
+        "drlNodes": [],
+        "drlMaterial": null,
         "projectors": [
           {
-            "node": "HEADLIGHT_LEFT_PROJECTOR_0",
+            "node": "Mesh61",
             "material": "LAMP_LEFT_PROJECTOR_0",
-            "highOnly": true
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              -0.7720598578453064,
+              0.5815513730049133,
+              -2.1025776863098145
+            ]
           },
           {
-            "node": "HEADLIGHT_LEFT_PROJECTOR_1",
+            "node": "Mesh61",
             "material": "LAMP_LEFT_PROJECTOR_1",
-            "highOnly": false
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              -0.8492661714553833,
+              0.5940477252006531,
+              -2.0275795459747314
+            ]
           },
           {
-            "node": "HEADLIGHT_LEFT_PROJECTOR_2",
+            "node": "Mesh61",
             "material": "LAMP_LEFT_PROJECTOR_2",
-            "highOnly": false
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              -0.771004319190979,
+              0.6661354303359985,
+              -2.0587520599365234
+            ]
+          },
+          {
+            "node": "Mesh61",
+            "material": "LAMP_LEFT_PROJECTOR_3",
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              -0.8484730124473572,
+              0.6833992004394531,
+              -1.9879833459854126
+            ]
           }
         ],
         "lightPosition": [
@@ -286,25 +313,52 @@
         ]
       },
       "right": {
-        "drlNodes": [
-          "HEADLIGHT_RIGHT_DRL"
-        ],
-        "drlMaterial": "LAMP_RIGHT_WHITE",
+        "drlNodes": [],
+        "drlMaterial": null,
         "projectors": [
           {
-            "node": "HEADLIGHT_RIGHT_PROJECTOR_0",
+            "node": "Mesh61",
             "material": "LAMP_RIGHT_PROJECTOR_0",
-            "highOnly": true
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              0.7720507979393005,
+              0.5815518498420715,
+              -2.1025772094726562
+            ]
           },
           {
-            "node": "HEADLIGHT_RIGHT_PROJECTOR_1",
+            "node": "Mesh61",
             "material": "LAMP_RIGHT_PROJECTOR_1",
-            "highOnly": false
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              0.8492574095726013,
+              0.5940478444099426,
+              -2.0275793075561523
+            ]
           },
           {
-            "node": "HEADLIGHT_RIGHT_PROJECTOR_2",
+            "node": "Mesh61",
             "material": "LAMP_RIGHT_PROJECTOR_2",
-            "highOnly": false
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              0.7709952592849731,
+              0.6661353707313538,
+              -2.0587518215179443
+            ]
+          },
+          {
+            "node": "Mesh61",
+            "material": "LAMP_RIGHT_PROJECTOR_3",
+            "highOnly": false,
+            "sourceFaces": 10,
+            "center": [
+              0.8484646081924438,
+              0.6833992600440979,
+              -1.9879834651947021
+            ]
           }
         ],
         "lightPosition": [
@@ -317,18 +371,26 @@
     "turnSignals": {
       "left": {
         "material": "TURN_LEFT_AMBER",
+        "materials": [
+          "TURN_LEFT_FRONT_AMBER",
+          "TURN_LEFT_AMBER"
+        ],
         "nodes": [
-          "TURN_LEFT_FRONT",
-          "TURN_LEFT_REAR_LID",
-          "TURN_LEFT_REAR_BODY"
+          "Mesh73",
+          "Mesh20",
+          "TRUNK_Mesh20"
         ]
       },
       "right": {
         "material": "TURN_RIGHT_AMBER",
+        "materials": [
+          "TURN_RIGHT_FRONT_AMBER",
+          "TURN_RIGHT_AMBER"
+        ],
         "nodes": [
-          "TURN_RIGHT_FRONT",
-          "TURN_RIGHT_REAR_LID",
-          "TURN_RIGHT_REAR_BODY"
+          "Mesh62",
+          "Mesh19",
+          "TRUNK_Mesh19"
         ]
       }
     },
@@ -363,7 +425,34 @@
         "WIPER_PASSENGER_ASSEMBLY"
       ],
       "note": "Isolated graphite improves motion visibility against dark showroom; source geometry and UVs retained."
-    }
+    },
+    "nativeLampSources": [
+      "Mesh61",
+      "Mesh68",
+      "Mesh21",
+      "Mesh62",
+      "Mesh73",
+      "Mesh19",
+      "Mesh20"
+    ],
+    "removedProxyNodes": [
+      "HEADLIGHT_LEFT_DRL",
+      "HEADLIGHT_LEFT_PROJECTOR_0",
+      "HEADLIGHT_LEFT_PROJECTOR_1",
+      "HEADLIGHT_LEFT_PROJECTOR_2",
+      "TURN_LEFT_FRONT",
+      "HEADLIGHT_RIGHT_DRL",
+      "HEADLIGHT_RIGHT_PROJECTOR_0",
+      "HEADLIGHT_RIGHT_PROJECTOR_1",
+      "HEADLIGHT_RIGHT_PROJECTOR_2",
+      "TURN_RIGHT_FRONT",
+      "TURN_LEFT_REAR_LID",
+      "TURN_RIGHT_REAR_LID",
+      "TURN_LEFT_REAR_BODY",
+      "TURN_RIGHT_REAR_BODY"
+    ],
+    "nativeLampAudit": "docs/assets/native-lamp-audit.json",
+    "lampNote": "Original Mesh61 projector faces, Mesh62/73 front diffuser, Mesh19/20 inner rear modules per latest user annotation. C contours restored. Yellow only in the on half-cycle; original colours otherwise."
   },
   "cockpitHotspots": {
     "lights": [

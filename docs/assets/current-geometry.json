@@ -1,10 +1,10 @@
 {
-  "stage": "I6.4-native-trunk-seams",
-  "sha256": "4e2be993e0b2ad99f6f5112be838489260580916e96e45d1e68bb9b823db87ce",
-  "blendSha256": "b56ec2ec49065ba6f91240554798e6134511ccfc1b53b100c642c5a1872dadcb",
-  "nodes": 135,
-  "meshes": 123,
-  "triangles": 95149,
+  "stage": "I6.5-native-lamps",
+  "sha256": "1cdc55cf42a6ba2d860fc2c1616d339ae3184e18bf575d9da1ef0c68111ebbf5",
+  "blendSha256": "4be82f98d96da5f5d59e3eeb5f3a032317f5b50808a1ce5255ffebbc1d3d3c35",
+  "nodes": 121,
+  "meshes": 109,
+  "triangles": 94549,
   "materials": 39,
   "textures": 15
 }

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-27",
+  "version": "0.6.3",
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "typecheckPassed": true,
+    "clientBundle": "index-D8bRURkP.js",
+    "notes": "Final build after adding the missing # to restored CSS hex colours; production asset downloaded and hashed."
+  },
+  "lint": {
+    "command": "npm run lint",
+    "exitCode": 0
+  },
+  "production": {
+    "url": "http://localhost:3000",
+    "healthVersion": "0.6.3",
+    "assetSha256": "1cdc55cf42a6ba2d860fc2c1616d339ae3184e18bf575d9da1ef0c68111ebbf5",
+    "assetBytes": 6524528
+  },
+  "browserReport": "browser.json",
+  "newHumanMicrophone": "pending_user_unavailable"
+}

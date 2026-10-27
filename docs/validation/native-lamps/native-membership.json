@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "addedLampGeometry": false,
+  "removedProxyCount": 14,
+  "projectors": 8,
+  "records": [
+    {
+      "side": "left",
+      "role": "native projector",
+      "material": "LAMP_LEFT_PROJECTOR_0",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "left",
+      "role": "native projector",
+      "material": "LAMP_LEFT_PROJECTOR_1",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "left",
+      "role": "native projector",
+      "material": "LAMP_LEFT_PROJECTOR_2",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "left",
+      "role": "native projector",
+      "material": "LAMP_LEFT_PROJECTOR_3",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native projector",
+      "material": "LAMP_RIGHT_PROJECTOR_0",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native projector",
+      "material": "LAMP_RIGHT_PROJECTOR_1",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native projector",
+      "material": "LAMP_RIGHT_PROJECTOR_2",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native projector",
+      "material": "LAMP_RIGHT_PROJECTOR_3",
+      "members": [
+        {
+          "node": "Mesh61",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "side": "left",
+      "role": "native front diffuser",
+      "members": [
+        {
+          "node": "Mesh73",
+          "triangles": 91
+        }
+      ]
+    },
+    {
+      "side": "left",
+      "role": "native rear inner modules",
+      "members": [
+        {
+          "node": "Mesh20",
+          "triangles": 6
+        },
+        {
+          "node": "TRUNK_Mesh20",
+          "triangles": 8
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native front diffuser",
+      "members": [
+        {
+          "node": "Mesh62",
+          "triangles": 91
+        }
+      ]
+    },
+    {
+      "side": "right",
+      "role": "native rear inner modules",
+      "members": [
+        {
+          "node": "Mesh19",
+          "triangles": 6
+        },
+        {
+          "node": "TRUNK_Mesh19",
+          "triangles": 8
+        }
+      ]
+    }
+  ],
+  "unlitOriginalMaterialPreserved": true
+}

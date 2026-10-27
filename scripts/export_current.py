@@ -1,5 +1,5 @@
 """Re-export the saved enhanced project, without re-importing or re-partitioning."""
-import bpy,json
+import bpy,json,time
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parent.parent
@@ -14,4 +14,14 @@ if mapping.get('wipers'):
         ob=bpy.data.objects[cfg['node']];ob.rotation_mode='XYZ';ob.rotation_euler=(0,0,0)
         for key in bpy.data.objects[cfg['mesh']].data.shape_keys.key_blocks:key.value=0
 bpy.context.view_layer.update();bpy.ops.file.pack_all();bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'assets/source/blender/su7-enhanced.blend'))
-bpy.ops.export_scene.gltf(filepath=str(ROOT/'apps/web/public/models/su7-runtime.glb'),export_format='GLB',export_yup=True,export_animations=False,export_cameras=False,export_lights=False,export_extras=True)
+# Export away from Express' open read handles, then replace the complete file.
+# The browser must never read a partially written GLB during a live repair.
+staged=ROOT/'.tools/export-staging/su7-runtime.glb';target=ROOT/'apps/web/public/models/su7-runtime.glb'
+assert staged.resolve().is_relative_to(ROOT.resolve()) and target.resolve().is_relative_to(ROOT.resolve())
+staged.parent.mkdir(parents=True,exist_ok=True)
+bpy.ops.export_scene.gltf(filepath=str(staged),export_format='GLB',export_yup=True,export_animations=False,export_cameras=False,export_lights=False,export_extras=True)
+for attempt in range(4):
+    try:staged.replace(target);break
+    except OSError:
+        if attempt==3:raise
+        time.sleep(.15)

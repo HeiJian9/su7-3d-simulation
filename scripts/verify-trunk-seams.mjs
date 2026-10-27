@@ -47,7 +47,8 @@ function excludeOriginalWipers(faces){
 const permutations=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
 let maxPositionError=0,maxUvError=0,maxNormalError=0;
 const sourceChecks=[];
-for(const name of Object.keys(audit.panels)){
+const nativeLampSources=mapping.materialRoles.nativeLampSources??[];
+for(const name of new Set([...Object.keys(audit.panels),...nativeLampSources])){
   let expected=triangles(originals.find(n=>n.getName()===name));if(name==='Mesh24')expected=excludeOriginalWipers(expected);
   const actual=[...triangles(nodes.find(n=>n.getName()===name)),...triangles(nodes.find(n=>n.getName()==='TRUNK_'+name))];
   assert.equal(actual.length,expected.length,`No new cuts or missing original triangles: ${name}`);
@@ -69,7 +70,9 @@ for(const name of Object.keys(audit.panels)){
 // The existing four-door, glazing, lighting and real wiper geometry stays exact.
 const baseline=JSON.parse(await readFile('docs/assets/trunk-correction-baseline.json','utf8'));
 function signature(node){const arrays=node.getMesh()?.listPrimitives().map(p=>({positions:[...p.getAttribute('POSITION').getArray()],indices:p.getIndices()?[...p.getIndices().getArray()]:null,uv:p.getAttribute('TEXCOORD_0')?[...p.getAttribute('TEXCOORD_0').getArray()]:null,targets:p.listTargets().map(t=>[...t.getAttribute('POSITION').getArray()])}));return createHash('sha256').update(JSON.stringify({world:node.getWorldMatrix(),arrays,parent:node.getParentNode()?.getName()})).digest('hex');}
-for(const [name,hash] of Object.entries(baseline.untouched))assert.equal(signature(nodes.find(n=>n.getName()===name)),hash,`Unrelated node changed: ${name}`);
+const intentionalLampChanges=new Set([...nativeLampSources,...(mapping.materialRoles.removedProxyNodes??[])]);
+const unchanged=Object.entries(baseline.untouched).filter(([name])=>!intentionalLampChanges.has(name));
+for(const [name,hash] of unchanged)assert.equal(signature(nodes.find(n=>n.getName()===name)),hash,`Unrelated node changed: ${name}`);
 
 const objects=new Map(),helpers=new Set(audit.helpers),scene=new Group(),ray=new Raycaster();ray.firstHitOnly=true;
 function convert(n){
@@ -108,5 +111,5 @@ for(const value of [0,.5,1]){
   }
   motion.push({value,badges});
 }
-const report={passed:true,actualExportedGlb:true,sourceRevision:'v0.3.2-i3-complete',sourceChecks,originalTrianglesMatched:sourceChecks.reduce((s,r)=>s+r.triangles,0),maxPositionError,maxUvError,maxNormalError,unrelatedNodesUnchanged:Object.keys(baseline.untouched).length,visibility,motion,removedIncorrectHelpers:audit.removedIncorrectHelpers};
+const report={passed:true,actualExportedGlb:true,sourceRevision:'v0.3.2-i3-complete',sourceChecks,originalTrianglesMatched:sourceChecks.reduce((s,r)=>s+r.triangles,0),maxPositionError,maxUvError,maxNormalError,unrelatedNodesUnchanged:unchanged.length,nativeLampSourcesVerified:nativeLampSources,removedLampProxies:mapping.materialRoles.removedProxyNodes??[],visibility,motion,removedIncorrectHelpers:audit.removedIncorrectHelpers};
 await mkdir('docs/validation/trunk-native-seams',{recursive:true});await writeFile('docs/validation/trunk-native-seams/geometry.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
