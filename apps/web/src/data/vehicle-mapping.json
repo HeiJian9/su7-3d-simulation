@@ -1,5 +1,5 @@
 {
-  "version": "I6.8-tail-and-dome",
+  "version": "I6.9-native-frunk-wide-dome",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -252,7 +252,8 @@
         "DOOR_FR_RETURNS",
         "DOOR_RL_RETURNS",
         "DOOR_RR_RETURNS",
-        "TRUNK_Paint5"
+        "TRUNK_Paint5",
+        "FRUNK_Paint7"
       ],
       "source": "Paint1Mtl clone; original roughness, metalness and maps retained"
     },
@@ -1206,7 +1207,9 @@
       "color": "#fff3db",
       "intensity": 12,
       "distance": 2.1,
-      "angle": 0.95
+      "angle": 1.25,
+      "fillIntensity": 1.2,
+      "fillDistance": 1.4
     },
     "rear": {
       "housing": "DOME_REAR_HOUSING",
@@ -1237,7 +1240,60 @@
       "color": "#fff3db",
       "intensity": 12,
       "distance": 2.1,
-      "angle": 0.95
+      "angle": 1.25,
+      "fillIntensity": 1.2,
+      "fillDistance": 1.4
     }
+  },
+  "frunk": {
+    "node": "FRUNK_FRONT_ROOT",
+    "hinge": [
+      0,
+      0.935,
+      -1.025
+    ],
+    "axis": [
+      1,
+      0,
+      0
+    ],
+    "maxAngle": 1.1344640137963142,
+    "hotspot": [
+      0,
+      0.795,
+      -2.1
+    ],
+    "nativeSeams": true,
+    "sourceNodes": [
+      "Paint7",
+      "Mesh65"
+    ],
+    "movingNodes": [
+      "FRUNK_Paint7",
+      "Mesh65",
+      "FRUNK_INNER_SKIN",
+      "FRUNK_HINGE_LEFT",
+      "FRUNK_HINGE_RIGHT"
+    ],
+    "newNodes": [
+      "FRUNK_FRONT_ROOT",
+      "FRUNK_Paint7",
+      "FRUNK_INNER_SKIN",
+      "FRUNK_BODY_FLANGE",
+      "FRUNK_BODY_GASKET",
+      "FRUNK_STORAGE_TUB",
+      "FRUNK_HINGE_LEFT",
+      "FRUNK_HINGE_RIGHT"
+    ],
+    "helpers": [
+      "FRUNK_INNER_SKIN",
+      "FRUNK_BODY_FLANGE",
+      "FRUNK_BODY_GASKET",
+      "FRUNK_STORAGE_TUB",
+      "FRUNK_HINGE_LEFT",
+      "FRUNK_HINGE_RIGHT"
+    ],
+    "boundaryVertices": 82,
+    "audit": "docs/assets/frunk-audit.json"
   }
 }

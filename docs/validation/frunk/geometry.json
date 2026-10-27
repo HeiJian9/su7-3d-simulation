@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "baseline": "d1608ab",
+  "unmodifiedNodes": 130,
+  "originalSource": [
+    {
+      "node": "Paint7",
+      "triangles": 5936
+    },
+    {
+      "node": "Mesh65",
+      "triangles": 208
+    }
+  ],
+  "maxPositionError": 0,
+  "maxUvError": 0,
+  "maxNormalError": 0.0004999826196581125,
+  "bisectOperations": 0,
+  "originalBoundaryVertices": 82,
+  "closedExteriorRays": 2875,
+  "helperLeaks": 0,
+  "visibility": [
+    {
+      "position": [
+        0,
+        1.7,
+        -4
+      ],
+      "rays": 2420,
+      "helperLeaks": 0
+    },
+    {
+      "position": [
+        2.8,
+        2.5,
+        -4.2
+      ],
+      "rays": 1566,
+      "helperLeaks": 0
+    },
+    {
+      "position": [
+        -2.8,
+        2.5,
+        -4.2
+      ],
+      "rays": 1555,
+      "helperLeaks": 0
+    },
+    {
+      "position": [
+        0,
+        3,
+        -3
+      ],
+      "rays": 2376,
+      "helperLeaks": 0
+    }
+  ],
+  "openings": [
+    {
+      "value": 0,
+      "hits": [
+        {
+          "name": "FRUNK_Paint7",
+          "height": 0.8453762901740491
+        },
+        {
+          "name": "FRUNK_INNER_SKIN",
+          "height": 0.8280492252886902
+        },
+        {
+          "name": "FRUNK_STORAGE_TUB",
+          "height": 0.4050000011920929
+        },
+        {
+          "name": "Mesh66",
+          "height": 0.13772198329818908
+        }
+      ]
+    },
+    {
+      "value": 0.5,
+      "hits": [
+        {
+          "name": "FRUNK_STORAGE_TUB",
+          "height": 0.5164542336342766
+        },
+        {
+          "name": "Mesh53",
+          "height": 0.4860655877084693
+        },
+        {
+          "name": "Mesh53",
+          "height": 0.21646446834547484
+        },
+        {
+          "name": "Mesh22",
+          "height": 0.12905242943272976
+        }
+      ]
+    },
+    {
+      "value": 1,
+      "hits": [
+        {
+          "name": "FRUNK_STORAGE_TUB",
+          "height": 0.5164542336342766
+        },
+        {
+          "name": "Mesh53",
+          "height": 0.4860655877084693
+        },
+        {
+          "name": "Mesh53",
+          "height": 0.21646446834547484
+        },
+        {
+          "name": "Mesh22",
+          "height": 0.12905242943272976
+        }
+      ]
+    }
+  ]
+}

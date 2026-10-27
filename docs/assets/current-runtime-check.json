@@ -1,9 +1,9 @@
 {
-  "sha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
-  "bytes": 6623648,
-  "nodes": 132,
-  "meshes": 120,
-  "materials": 44,
+  "sha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
+  "bytes": 6714984,
+  "nodes": 140,
+  "meshes": 127,
+  "materials": 46,
   "textures": [
     {
       "name": "Mesh13_diff",
@@ -127,7 +127,7 @@
     }
   ],
   "animations": 0,
-  "triangles": 96553,
+  "triangles": 99445,
   "extensions": [
     "KHR_materials_clearcoat",
     "KHR_materials_emissive_strength",

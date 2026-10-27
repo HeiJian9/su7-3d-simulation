@@ -1,5 +1,7 @@
 # 指定 SU7 资产审查 · I0–I6
 
+当前0.6.7原接缝前备箱与宽角顶灯见 [最新报告](../FRUNK_VALIDATION.md)，下文旧版本数量和哈希保留为历史记录。
+
 当前0.6.6增加原生红色后灯环与前后排主灯，最新资产和验收见 [本轮报告](../DOME_TAIL_LIGHTING.md)。
 
 当前0.6.5中控原饰条布局、转向与车内散射追加修正见 [报告](../LIGHTING_FOLLOWUP.md)；下文旧版本数字为历史记录，当前哈希见 `docs/assets/current-geometry.json`。

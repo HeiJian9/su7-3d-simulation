@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 export type CameraMode = 'orbit' | 'free';
-export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lighting' | 'roofFront' | 'roofRear';
+export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lighting' | 'roofFront' | 'roofRear' | 'frunk';
 export interface Metrics {
   fps: number;
   calls: number;

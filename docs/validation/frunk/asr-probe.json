@@ -1,0 +1,12 @@
+{
+  "input": "前备箱打开一半。",
+  "actualTranscript": {
+    "requestId": "7bba50ed-7ca1-42a6-ac15-3e41e538a2c8",
+    "text": "前辈想打开一半。",
+    "provider": "dashscope-asr",
+    "model": "qwen3-asr-flash",
+    "durationMs": 732
+  },
+  "audio": "synthesized fixture",
+  "humanMicrophone": false
+}

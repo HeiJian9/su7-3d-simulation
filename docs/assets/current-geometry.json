@@ -1,10 +1,10 @@
 {
-  "stage": "I6.8-tail-and-dome",
-  "sha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
-  "blendSha256": "c7fa49d8cb739b0688c4a3b3a4a8428d4fcbe099e0b706728bcae7541fc401b8",
-  "nodes": 132,
-  "meshes": 120,
-  "triangles": 96553,
-  "materials": 44,
+  "stage": "I6.9-native-frunk-wide-dome",
+  "sha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
+  "blendSha256": "514f2189c0581fe7da0928e5a8518dca8783bc247a5e9f44e1820aa43dd03f2f",
+  "nodes": 140,
+  "meshes": 127,
+  "triangles": 99445,
+  "materials": 46,
   "textures": 15
 }

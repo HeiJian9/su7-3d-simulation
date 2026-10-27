@@ -1,0 +1,343 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "frunk.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "frunk.spec.ts",
+      "file": "frunk.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14561,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:40:54.741Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frunk-execution",
+                      "contentType": "application/json",
+                      "body": "eyJzdGFydCI6MC4xMzMyLCJyZXZlcnNlZCI6MC4xNjY0LCJmaW5hbCI6eyJyZXZpc2lvbiI6OSwid2luZG93cyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJkb29ycyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJ0cnVuayI6eyJvcGVubmVzcyI6MH0sImZydW5rIjp7Im9wZW5uZXNzIjowfSwibGlnaHRzIjp7ImhlYWRsaWdodHMiOiJvZmYiLCJ0dXJuU2lnbmFsIjoib2ZmIn0sImNhYmluTGlnaHRzIjp7ImZyb250IjpmYWxzZSwicmVhciI6ZmFsc2V9LCJwYWludCI6eyJjb2xvciI6IiNlNGU2ZTgifSwiYW1iaWVudCI6eyJlbmFibGVkIjpmYWxzZSwiY29sb3IiOiIjOTg2N2ZmIiwiYnJpZ2h0bmVzcyI6MC40fSwid2lwZXJzIjp7Im1vZGUiOiJvZmYiLCJvbmNlU2VxdWVuY2UiOjB9fSwiZXJyb3JzIjpbXSwiZ2VvbWV0cnlFdmlkZW5jZSI6ImRvY3MvdmFsaWRhdGlvbi9mcnVuay9nZW9tZXRyeS5qc29uIiwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-966c112de6a11311003c",
+          "file": "frunk.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2129,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:41:09.498Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wide-dome-lighting",
+                      "contentType": "application/json",
+                      "body": "eyJsZWZ0QW5kUmlnaHRCcmlnaHRuZXNzSW5jcmVhc2UiOlsxNy40MjA1NTE2OTYyMDQwMiw4NS45NjUwMDUzNjg0OTc4NF0sImxpZ2h0cyI6W3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZmlsbFBvd2VyIjowLCJmdWxsQW5nbGVEZWdyZWVzIjoxNDMuMjM5NDQ4NzgyNzA1OCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dLCJyZWFsU3BlZWNoIjpmYWxzZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-398657b172e9c367a9f8",
+          "file": "frunk.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:41:12.138Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frunk-execution",
+                      "contentType": "application/json",
+                      "body": "eyJzdGFydCI6MC4xMjk3LCJyZXZlcnNlZCI6MC4xNTMxLCJmaW5hbCI6eyJyZXZpc2lvbiI6OSwid2luZG93cyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJkb29ycyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJ0cnVuayI6eyJvcGVubmVzcyI6MH0sImZydW5rIjp7Im9wZW5uZXNzIjowfSwibGlnaHRzIjp7ImhlYWRsaWdodHMiOiJvZmYiLCJ0dXJuU2lnbmFsIjoib2ZmIn0sImNhYmluTGlnaHRzIjp7ImZyb250IjpmYWxzZSwicmVhciI6ZmFsc2V9LCJwYWludCI6eyJjb2xvciI6IiNlNGU2ZTgifSwiYW1iaWVudCI6eyJlbmFibGVkIjpmYWxzZSwiY29sb3IiOiIjOTg2N2ZmIiwiYnJpZ2h0bmVzcyI6MC40fSwid2lwZXJzIjp7Im1vZGUiOiJvZmYiLCJvbmNlU2VxdWVuY2UiOjB9fSwiZXJyb3JzIjpbXSwiZ2VvbWV0cnlFdmlkZW5jZSI6ImRvY3MvdmFsaWRhdGlvbi9mcnVuay9nZW9tZXRyeS5qc29uIiwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-e37ce970a8c6dc198510",
+          "file": "frunk.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:41:26.886Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wide-dome-lighting",
+                      "contentType": "application/json",
+                      "body": "eyJsZWZ0QW5kUmlnaHRCcmlnaHRuZXNzSW5jcmVhc2UiOls3LjQ3MzMwMDk3MDg3NDE5Miw1MS41Nzg4ODkwNTU0OTc5MV0sImxpZ2h0cyI6W3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZmlsbFBvd2VyIjowLCJmdWxsQW5nbGVEZWdyZWVzIjoxNDMuMjM5NDQ4NzgyNzA1OCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dLCJyZWFsU3BlZWNoIjpmYWxzZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-35cdc196d2f92fd4b10b",
+          "file": "frunk.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T15:40:53.420Z",
+    "duration": 35965.814999999995,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

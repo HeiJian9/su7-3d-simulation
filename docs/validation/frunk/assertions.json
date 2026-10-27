@@ -1,0 +1,1316 @@
+[
+  {
+    "project": "Edge-1920x1080",
+    "test": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+    "evidence": {
+      "on": {
+        "red": 1591,
+        "mean": 13.894908401446564
+      },
+      "off": {
+        "red": 1001,
+        "mean": 14.527037960076802
+      },
+      "ring": {
+        "alwaysOn": true,
+        "color": "ff1424",
+        "power": 1.5
+      },
+      "errors": []
+    }
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+    "evidence": {
+      "records": [
+        [
+          {
+            "position": "front",
+            "enabled": true,
+            "power": 12,
+            "fillPower": 1.2,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 2.4,
+            "origin": [
+              0,
+              1.289884090423584,
+              -0.266671746969223
+            ],
+            "direction": [
+              0,
+              -0.9884902664253484,
+              0.15128447766490685
+            ],
+            "castsShadow": true
+          },
+          {
+            "position": "rear",
+            "enabled": false,
+            "power": 0,
+            "fillPower": 0,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 0,
+            "origin": [
+              -0.00028986454708501697,
+              1.3978768587112427,
+              0.7980071306228638
+            ],
+            "direction": [
+              -0.013175659009362463,
+              -0.9958015668989236,
+              -0.09058499528794699
+            ],
+            "castsShadow": true
+          }
+        ],
+        [
+          {
+            "position": "front",
+            "enabled": false,
+            "power": 0,
+            "fillPower": 0,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 0,
+            "origin": [
+              0,
+              1.289884090423584,
+              -0.266671746969223
+            ],
+            "direction": [
+              0,
+              -0.9884902664253484,
+              0.15128447766490685
+            ],
+            "castsShadow": true
+          },
+          {
+            "position": "rear",
+            "enabled": true,
+            "power": 12,
+            "fillPower": 1.2,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 2.4,
+            "origin": [
+              -0.00028986454708501697,
+              1.3978768587112427,
+              0.7980071306228638
+            ],
+            "direction": [
+              -0.013175659009362463,
+              -0.9958015668989236,
+              -0.09058499528794699
+            ],
+            "castsShadow": true
+          }
+        ]
+      ],
+      "off": {
+        "red": 1667,
+        "mean": 10.488014868801883
+      },
+      "on": {
+        "red": 4720,
+        "mean": 40.082226269603574
+      },
+      "final": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+    "evidence": {
+      "on": {
+        "red": 570,
+        "mean": 18.26446833886035
+      },
+      "off": {
+        "red": 386,
+        "mean": 18.867387184985795
+      },
+      "ring": {
+        "alwaysOn": true,
+        "color": "ff1424",
+        "power": 1.5
+      },
+      "errors": []
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+    "evidence": {
+      "records": [
+        [
+          {
+            "position": "front",
+            "enabled": true,
+            "power": 12,
+            "fillPower": 1.2,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 2.4,
+            "origin": [
+              0,
+              1.289884090423584,
+              -0.266671746969223
+            ],
+            "direction": [
+              0,
+              -0.9884902664253484,
+              0.15128447766490685
+            ],
+            "castsShadow": true
+          },
+          {
+            "position": "rear",
+            "enabled": false,
+            "power": 0,
+            "fillPower": 0,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 0,
+            "origin": [
+              -0.00028986454708501697,
+              1.3978768587112427,
+              0.7980071306228638
+            ],
+            "direction": [
+              -0.013175659009362463,
+              -0.9958015668989236,
+              -0.09058499528794699
+            ],
+            "castsShadow": true
+          }
+        ],
+        [
+          {
+            "position": "front",
+            "enabled": false,
+            "power": 0,
+            "fillPower": 0,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 0,
+            "origin": [
+              0,
+              1.289884090423584,
+              -0.266671746969223
+            ],
+            "direction": [
+              0,
+              -0.9884902664253484,
+              0.15128447766490685
+            ],
+            "castsShadow": true
+          },
+          {
+            "position": "rear",
+            "enabled": true,
+            "power": 12,
+            "fillPower": 1.2,
+            "fullAngleDegrees": 143.2394487827058,
+            "emission": 2.4,
+            "origin": [
+              -0.00028986454708501697,
+              1.3978768587112427,
+              0.7980071306228638
+            ],
+            "direction": [
+              -0.013175659009362463,
+              -0.9958015668989236,
+              -0.09058499528794699
+            ],
+            "castsShadow": true
+          }
+        ]
+      ],
+      "off": {
+        "red": 737,
+        "mean": 15.485838507265237
+      },
+      "on": {
+        "red": 2084,
+        "mean": 38.52462239739272
+      },
+      "final": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+    "evidence": {
+      "start": 0.1364,
+      "reversed": 0.1666,
+      "final": {
+        "revision": 9,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "errors": [],
+      "geometryEvidence": "docs/validation/frunk/geometry.json",
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+    "evidence": {
+      "leftAndRightBrightnessIncrease": [
+        17.414604189229188,
+        85.96501272262864
+      ],
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+    "evidence": {
+      "start": 0.1533,
+      "reversed": 0.181,
+      "final": {
+        "revision": 9,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "errors": [],
+      "geometryEvidence": "docs/validation/frunk/geometry.json",
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+    "evidence": {
+      "leftAndRightBrightnessIncrease": [
+        7.473300970874192,
+        51.57888905549791
+      ],
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "realSpeech": false
+    }
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+    "evidence": {
+      "records": [
+        {
+          "part": "door:fl",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fl",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,-0.537300,0.000000,0.843391,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fl",
+          "value": 1,
+          "matrix": "0.422618,0.000000,0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,-0.906308,0.000000,0.422618,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,-0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,0.537300,0.000000,0.843391,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 1,
+          "matrix": "0.422618,0.000000,-0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,0.906308,0.000000,0.422618,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,-0.537300,0.000000,0.843391,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 1,
+          "matrix": "0.422618,0.000000,0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,-0.906308,0.000000,0.422618,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,-0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,0.537300,0.000000,0.843391,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 1,
+          "matrix": "0.422618,0.000000,-0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,0.906308,0.000000,0.422618,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,1.100000,1.880000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 0.5,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,0.642788,-0.766044,0.000000,0.000000,0.766044,0.642788,0.000000,0.000000,1.100000,1.880000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 1,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,-0.173648,-0.984808,0.000000,0.000000,0.984808,-0.173648,0.000000,0.000000,1.100000,1.880000,1.000000"
+        }
+      ],
+      "reversal": 0.182
+    }
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+    "evidence": [
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      }
+    ]
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+    "evidence": {
+      "records": [
+        {
+          "part": "door:fl",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fl",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,-0.537300,0.000000,0.843391,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fl",
+          "value": 1,
+          "matrix": "0.422618,0.000000,0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,-0.906308,0.000000,0.422618,0.000000,-0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,-0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,0.537300,0.000000,0.843391,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:fr",
+          "value": 1,
+          "matrix": "0.422618,0.000000,-0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,0.906308,0.000000,0.422618,0.000000,0.895000,0.690000,-0.875000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,-0.537300,0.000000,0.843391,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rl",
+          "value": 1,
+          "matrix": "0.422618,0.000000,0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,-0.906308,0.000000,0.422618,0.000000,-0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 0.5,
+          "matrix": "0.843391,0.000000,-0.537300,0.000000,0.000000,1.000000,0.000000,0.000000,0.537300,0.000000,0.843391,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "door:rr",
+          "value": 1,
+          "matrix": "0.422618,0.000000,-0.906308,0.000000,0.000000,1.000000,0.000000,0.000000,0.906308,0.000000,0.422618,0.000000,0.895000,0.690000,0.260000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 0,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,1.100000,1.880000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 0.5,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,0.642788,-0.766044,0.000000,0.000000,0.766044,0.642788,0.000000,0.000000,1.100000,1.880000,1.000000"
+        },
+        {
+          "part": "trunk:rear",
+          "value": 1,
+          "matrix": "1.000000,0.000000,0.000000,0.000000,0.000000,-0.173648,-0.984808,0.000000,0.000000,0.984808,-0.173648,0.000000,0.000000,1.100000,1.880000,1.000000"
+        }
+      ],
+      "reversal": 0.1716
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+    "evidence": [
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 0,
+        "localPosition": "0.145000,0.313783,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "0.090000,0.099283,0.702487"
+      },
+      {
+        "c": "fl",
+        "door": 1,
+        "win": 1,
+        "localPosition": "0.035000,-0.115217,0.702487"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 0,
+        "localPosition": "-0.145000,0.313790,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.099290,0.702480"
+      },
+      {
+        "c": "fr",
+        "door": 1,
+        "win": 1,
+        "localPosition": "-0.035000,-0.115210,0.702480"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 0,
+        "localPosition": "0.145000,0.347524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "0.090000,0.150524,0.498921"
+      },
+      {
+        "c": "rl",
+        "door": 1,
+        "win": 1,
+        "localPosition": "0.035000,-0.046476,0.498921"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 0.5,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 0,
+        "localPosition": "-0.145000,0.347524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 0.5,
+        "localPosition": "-0.090000,0.150524,0.498922"
+      },
+      {
+        "c": "rr",
+        "door": 1,
+        "win": 1,
+        "localPosition": "-0.035000,-0.046476,0.498922"
+      }
+    ]
+  },
+  {
+    "project": "Edge-1920x1080",
+    "test": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+    "evidence": {
+      "records": [
+        {
+          "value": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        },
+        {
+          "value": 0.5,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.642788,
+            -0.766044,
+            0,
+            0,
+            0.766044,
+            0.642788,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        },
+        {
+          "value": 1,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -0.173648,
+            -0.984808,
+            0,
+            0,
+            0.984808,
+            -0.173648,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        }
+      ],
+      "intermediate": 0.216,
+      "errors": [],
+      "geometryProof": "docs/validation/trunk-native-seams/geometry.json",
+      "microphoneTest": false
+    }
+  },
+  {
+    "project": "Edge-1366x768",
+    "test": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+    "evidence": {
+      "records": [
+        {
+          "value": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        },
+        {
+          "value": 0.5,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.642788,
+            -0.766044,
+            0,
+            0,
+            0.766044,
+            0.642788,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        },
+        {
+          "value": 1,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -0.173648,
+            -0.984808,
+            0,
+            0,
+            0.984808,
+            -0.173648,
+            0,
+            0,
+            1.1,
+            1.88,
+            1
+          ]
+        }
+      ],
+      "intermediate": 0.2118,
+      "errors": [],
+      "geometryProof": "docs/validation/trunk-native-seams/geometry.json",
+      "microphoneTest": false
+    }
+  }
+]

@@ -1,0 +1,838 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "frunk.spec.ts",
+      "mechanical.spec.ts",
+      "dome-tail.spec.ts",
+      "trunk-correction.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "dome-tail.spec.ts",
+      "file": "dome-tail.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11421,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:48:49.150Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "running-ring",
+                      "contentType": "application/json",
+                      "body": "eyJvbiI6eyJyZWQiOjE1OTEsIm1lYW4iOjEzLjg5NDkwODQwMTQ0NjU2NH0sIm9mZiI6eyJyZWQiOjEwMDEsIm1lYW4iOjE0LjUyNzAzNzk2MDA3NjgwMn0sInJpbmciOnsiYWx3YXlzT24iOnRydWUsImNvbG9yIjoiZmYxNDI0IiwicG93ZXIiOjEuNX0sImVycm9ycyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-dd672f0f8f17dd01de3b",
+          "file": "dome-tail.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:49:00.751Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "physical-dome-results",
+                      "contentType": "application/json",
+                      "body": "eyJyZWNvcmRzIjpbW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZmlsbFBvd2VyIjoxLjIsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6Mi40LCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSxbeyJwb3NpdGlvbiI6ImZyb250IiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbMCwxLjI4OTg4NDA5MDQyMzU4NCwtMC4yNjY2NzE3NDY5NjkyMjNdLCJkaXJlY3Rpb24iOlswLC0wLjk4ODQ5MDI2NjQyNTM0ODQsMC4xNTEyODQ0Nzc2NjQ5MDY4NV0sImNhc3RzU2hhZG93Ijp0cnVlfSx7InBvc2l0aW9uIjoicmVhciIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZmlsbFBvd2VyIjoxLjIsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6Mi40LCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dXSwib2ZmIjp7InJlZCI6MTY2NywibWVhbiI6MTAuNDg4MDE0ODY4ODAxODgzfSwib24iOnsicmVkIjo0NzIwLCJtZWFuIjo0MC4wODIyMjYyNjk2MDM1NzR9LCJmaW5hbCI6W3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZmlsbFBvd2VyIjowLCJmdWxsQW5nbGVEZWdyZWVzIjoxNDMuMjM5NDQ4NzgyNzA1OCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dLCJyZWFsU3BlZWNoIjpmYWxzZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-889446d2132e9a06b921",
+          "file": "dome-tail.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:50:39.536Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "running-ring",
+                      "contentType": "application/json",
+                      "body": "eyJvbiI6eyJyZWQiOjU3MCwibWVhbiI6MTguMjY0NDY4MzM4ODYwMzV9LCJvZmYiOnsicmVkIjozODYsIm1lYW4iOjE4Ljg2NzM4NzE4NDk4NTc5NX0sInJpbmciOnsiYWx3YXlzT24iOnRydWUsImNvbG9yIjoiZmYxNDI0IiwicG93ZXIiOjEuNX0sImVycm9ycyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-1abc81a79341f0626504",
+          "file": "dome-tail.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:50:50.814Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "physical-dome-results",
+                      "contentType": "application/json",
+                      "body": "eyJyZWNvcmRzIjpbW3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZmlsbFBvd2VyIjoxLjIsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6Mi40LCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSxbeyJwb3NpdGlvbiI6ImZyb250IiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbMCwxLjI4OTg4NDA5MDQyMzU4NCwtMC4yNjY2NzE3NDY5NjkyMjNdLCJkaXJlY3Rpb24iOlswLC0wLjk4ODQ5MDI2NjQyNTM0ODQsMC4xNTEyODQ0Nzc2NjQ5MDY4NV0sImNhc3RzU2hhZG93Ijp0cnVlfSx7InBvc2l0aW9uIjoicmVhciIsImVuYWJsZWQiOnRydWUsInBvd2VyIjoxMiwiZmlsbFBvd2VyIjoxLjIsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6Mi40LCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dXSwib2ZmIjp7InJlZCI6NzM3LCJtZWFuIjoxNS40ODU4Mzg1MDcyNjUyMzd9LCJvbiI6eyJyZWQiOjIwODQsIm1lYW4iOjM4LjUyNDYyMjM5NzM5MjcyfSwiZmluYWwiOlt7InBvc2l0aW9uIjoiZnJvbnQiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8adcc9db350b0c960638-8e5f345d1bab0e363290",
+          "file": "dome-tail.spec.ts",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "frunk.spec.ts",
+      "file": "frunk.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:49:04.021Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frunk-execution",
+                      "contentType": "application/json",
+                      "body": "eyJzdGFydCI6MC4xMzY0LCJyZXZlcnNlZCI6MC4xNjY2LCJmaW5hbCI6eyJyZXZpc2lvbiI6OSwid2luZG93cyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJkb29ycyI6eyJmbCI6eyJvcGVubmVzcyI6MH0sImZyIjp7Im9wZW5uZXNzIjowfSwicmwiOnsib3Blbm5lc3MiOjB9LCJyciI6eyJvcGVubmVzcyI6MH19LCJ0cnVuayI6eyJvcGVubmVzcyI6MH0sImZydW5rIjp7Im9wZW5uZXNzIjowfSwibGlnaHRzIjp7ImhlYWRsaWdodHMiOiJvZmYiLCJ0dXJuU2lnbmFsIjoib2ZmIn0sImNhYmluTGlnaHRzIjp7ImZyb250IjpmYWxzZSwicmVhciI6ZmFsc2V9LCJwYWludCI6eyJjb2xvciI6IiNlNGU2ZTgifSwiYW1iaWVudCI6eyJlbmFibGVkIjpmYWxzZSwiY29sb3IiOiIjOTg2N2ZmIiwiYnJpZ2h0bmVzcyI6MC40fSwid2lwZXJzIjp7Im1vZGUiOiJvZmYiLCJvbmNlU2VxdWVuY2UiOjB9fSwiZXJyb3JzIjpbXSwiZ2VvbWV0cnlFdmlkZW5jZSI6ImRvY3MvdmFsaWRhdGlvbi9mcnVuay9nZW9tZXRyeS5qc29uIiwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-966c112de6a11311003c",
+          "file": "frunk.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2004,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:49:14.152Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wide-dome-lighting",
+                      "contentType": "application/json",
+                      "body": "eyJsZWZ0QW5kUmlnaHRCcmlnaHRuZXNzSW5jcmVhc2UiOlsxNy40MTQ2MDQxODkyMjkxODgsODUuOTY1MDEyNzIyNjI4NjRdLCJsaWdodHMiOlt7InBvc2l0aW9uIjoiZnJvbnQiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlswLDEuMjg5ODg0MDkwNDIzNTg0LC0wLjI2NjY3MTc0Njk2OTIyM10sImRpcmVjdGlvbiI6WzAsLTAuOTg4NDkwMjY2NDI1MzQ4NCwwLjE1MTI4NDQ3NzY2NDkwNjg1XSwiY2FzdHNTaGFkb3ciOnRydWV9LHsicG9zaXRpb24iOiJyZWFyIiwiZW5hYmxlZCI6ZmFsc2UsInBvd2VyIjowLCJmaWxsUG93ZXIiOjAsImZ1bGxBbmdsZURlZ3JlZXMiOjE0My4yMzk0NDg3ODI3MDU4LCJlbWlzc2lvbiI6MCwib3JpZ2luIjpbLTAuMDAwMjg5ODY0NTQ3MDg1MDE2OTcsMS4zOTc4NzY4NTg3MTEyNDI3LDAuNzk4MDA3MTMwNjIyODYzOF0sImRpcmVjdGlvbiI6Wy0wLjAxMzE3NTY1OTAwOTM2MjQ2MywtMC45OTU4MDE1NjY4OTg5MjM2LC0wLjA5MDU4NDk5NTI4Nzk0Njk5XSwiY2FzdHNTaGFkb3ciOnRydWV9XSwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-398657b172e9c367a9f8",
+          "file": "frunk.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9864,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:50:54.158Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frunk-execution",
+                      "contentType": "application/json",
+                      "body": "eyJzdGFydCI6MC4xNTMzLCJyZXZlcnNlZCI6MC4xODEsImZpbmFsIjp7InJldmlzaW9uIjo5LCJ3aW5kb3dzIjp7ImZsIjp7Im9wZW5uZXNzIjowfSwiZnIiOnsib3Blbm5lc3MiOjB9LCJybCI6eyJvcGVubmVzcyI6MH0sInJyIjp7Im9wZW5uZXNzIjowfX0sImRvb3JzIjp7ImZsIjp7Im9wZW5uZXNzIjowfSwiZnIiOnsib3Blbm5lc3MiOjB9LCJybCI6eyJvcGVubmVzcyI6MH0sInJyIjp7Im9wZW5uZXNzIjowfX0sInRydW5rIjp7Im9wZW5uZXNzIjowfSwiZnJ1bmsiOnsib3Blbm5lc3MiOjB9LCJsaWdodHMiOnsiaGVhZGxpZ2h0cyI6Im9mZiIsInR1cm5TaWduYWwiOiJvZmYifSwiY2FiaW5MaWdodHMiOnsiZnJvbnQiOmZhbHNlLCJyZWFyIjpmYWxzZX0sInBhaW50Ijp7ImNvbG9yIjoiI2U0ZTZlOCJ9LCJhbWJpZW50Ijp7ImVuYWJsZWQiOmZhbHNlLCJjb2xvciI6IiM5ODY3ZmYiLCJicmlnaHRuZXNzIjowLjR9LCJ3aXBlcnMiOnsibW9kZSI6Im9mZiIsIm9uY2VTZXF1ZW5jZSI6MH19LCJlcnJvcnMiOltdLCJnZW9tZXRyeUV2aWRlbmNlIjoiZG9jcy92YWxpZGF0aW9uL2ZydW5rL2dlb21ldHJ5Lmpzb24iLCJyZWFsU3BlZWNoIjpmYWxzZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-e37ce970a8c6dc198510",
+          "file": "frunk.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1753,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:51:04.031Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "wide-dome-lighting",
+                      "contentType": "application/json",
+                      "body": "eyJsZWZ0QW5kUmlnaHRCcmlnaHRuZXNzSW5jcmVhc2UiOls3LjQ3MzMwMDk3MDg3NDE5Miw1MS41Nzg4ODkwNTU0OTc5MV0sImxpZ2h0cyI6W3sicG9zaXRpb24iOiJmcm9udCIsImVuYWJsZWQiOmZhbHNlLCJwb3dlciI6MCwiZmlsbFBvd2VyIjowLCJmdWxsQW5nbGVEZWdyZWVzIjoxNDMuMjM5NDQ4NzgyNzA1OCwiZW1pc3Npb24iOjAsIm9yaWdpbiI6WzAsMS4yODk4ODQwOTA0MjM1ODQsLTAuMjY2NjcxNzQ2OTY5MjIzXSwiZGlyZWN0aW9uIjpbMCwtMC45ODg0OTAyNjY0MjUzNDg0LDAuMTUxMjg0NDc3NjY0OTA2ODVdLCJjYXN0c1NoYWRvdyI6dHJ1ZX0seyJwb3NpdGlvbiI6InJlYXIiLCJlbmFibGVkIjpmYWxzZSwicG93ZXIiOjAsImZpbGxQb3dlciI6MCwiZnVsbEFuZ2xlRGVncmVlcyI6MTQzLjIzOTQ0ODc4MjcwNTgsImVtaXNzaW9uIjowLCJvcmlnaW4iOlstMC4wMDAyODk4NjQ1NDcwODUwMTY5NywxLjM5Nzg3Njg1ODcxMTI0MjcsMC43OTgwMDcxMzA2MjI4NjM4XSwiZGlyZWN0aW9uIjpbLTAuMDEzMTc1NjU5MDA5MzYyNDYzLC0wLjk5NTgwMTU2Njg5ODkyMzYsLTAuMDkwNTg0OTk1Mjg3OTQ2OTldLCJjYXN0c1NoYWRvdyI6dHJ1ZX1dLCJyZWFsU3BlZWNoIjpmYWxzZX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "640905fb7a7a261599dd-35cdc196d2f92fd4b10b",
+          "file": "frunk.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "mechanical.spec.ts",
+      "file": "mechanical.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21609,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:49:16.233Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mechanical-actual-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAicGFydCI6ICJkb29yOmZsIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmbCIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwwLjUzNzMwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsLTAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6ZmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsMC4yNjAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJkb29yOnJyIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cnIiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpyciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAidHJ1bms6cmVhciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4xMDAwMDAsMS44ODAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJ0cnVuazpyZWFyIiwKICAgICAgInZhbHVlIjogMC41LAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNjQyNzg4LC0wLjc2NjA0NCwwLjAwMDAwMCwwLjAwMDAwMCwwLjc2NjA0NCwwLjY0Mjc4OCwwLjAwMDAwMCwwLjAwMDAwMCwxLjEwMDAwMCwxLjg4MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogInRydW5rOnJlYXIiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjE3MzY0OCwtMC45ODQ4MDgsMC4wMDAwMDAsMC4wMDAwMDAsMC45ODQ4MDgsLTAuMTczNjQ4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMTAwMDAwLDEuODgwMDAwLDEuMDAwMDAwIgogICAgfQogIF0sCiAgInJldmVyc2FsIjogMC4xODIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-63d7d2a130625cf0446f",
+          "file": "mechanical.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:49:37.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "door-window-local-frame-combinations",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjMxMzc4MywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMDk5MjgzLDAuNzAyNDg3IgogIH0sCiAgewogICAgImMiOiAiZmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zMTM3OTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4wOTkyOTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjM0NzUyNCwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMTUwNTI0LDAuNDk4OTIxIgogIH0sCiAgewogICAgImMiOiAicmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9Cl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-d66ca51934257c0d6d03",
+          "file": "mechanical.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9777,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:50:16.287Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-f8b2134a4d660d3e064e",
+          "file": "mechanical.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21442,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:51:05.847Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mechanical-actual-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAicGFydCI6ICJkb29yOmZsIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmbCIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwwLjUzNzMwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsLTAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6ZmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsMC4yNjAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJkb29yOnJyIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cnIiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpyciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAidHJ1bms6cmVhciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4xMDAwMDAsMS44ODAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJ0cnVuazpyZWFyIiwKICAgICAgInZhbHVlIjogMC41LAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNjQyNzg4LC0wLjc2NjA0NCwwLjAwMDAwMCwwLjAwMDAwMCwwLjc2NjA0NCwwLjY0Mjc4OCwwLjAwMDAwMCwwLjAwMDAwMCwxLjEwMDAwMCwxLjg4MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogInRydW5rOnJlYXIiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjE3MzY0OCwtMC45ODQ4MDgsMC4wMDAwMDAsMC4wMDAwMDAsMC45ODQ4MDgsLTAuMTczNjQ4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMTAwMDAwLDEuODgwMDAwLDEuMDAwMDAwIgogICAgfQogIF0sCiAgInJldmVyc2FsIjogMC4xNzE2Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-a9862b55a7027609cae4",
+          "file": "mechanical.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37922,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:51:27.296Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "door-window-local-frame-combinations",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjMxMzc4MywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMDk5MjgzLDAuNzAyNDg3IgogIH0sCiAgewogICAgImMiOiAiZmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zMTM3OTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4wOTkyOTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjM0NzUyNCwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMTUwNTI0LDAuNDk4OTIxIgogIH0sCiAgewogICAgImMiOiAicmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9Cl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-49d27b85e0bd997d5996",
+          "file": "mechanical.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:52:05.228Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-6cc1db7bd846c42856c9",
+          "file": "mechanical.spec.ts",
+          "line": 29,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "trunk-correction.spec.ts",
+      "file": "trunk-correction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12593,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:50:26.085Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-trunk-runtime-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogWwogICAgICAgIDEsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAxLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMSwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMS4xLAogICAgICAgIDEuODgsCiAgICAgICAgMQogICAgICBdCiAgICB9LAogICAgewogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiBbCiAgICAgICAgMSwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuNjQyNzg4LAogICAgICAgIC0wLjc2NjA0NCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC43NjYwNDQsCiAgICAgICAgMC42NDI3ODgsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDEuMSwKICAgICAgICAxLjg4LAogICAgICAgIDEKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInZhbHVlIjogMSwKICAgICAgIm1hdHJpeCI6IFsKICAgICAgICAxLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTczNjQ4LAogICAgICAgIC0wLjk4NDgwOCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC45ODQ4MDgsCiAgICAgICAgLTAuMTczNjQ4LAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAxLjEsCiAgICAgICAgMS44OCwKICAgICAgICAxCiAgICAgIF0KICAgIH0KICBdLAogICJpbnRlcm1lZGlhdGUiOiAwLjIxNiwKICAiZXJyb3JzIjogW10sCiAgImdlb21ldHJ5UHJvb2YiOiAiZG9jcy92YWxpZGF0aW9uL3RydW5rLW5hdGl2ZS1zZWFtcy9nZW9tZXRyeS5qc29uIiwKICAibWljcm9waG9uZVRlc3QiOiBmYWxzZQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "647af45158b9d1db149d-42001d0bf15840629a9f",
+          "file": "trunk-correction.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T15:52:14.085Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-trunk-runtime-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogWwogICAgICAgIDEsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAxLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMSwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMS4xLAogICAgICAgIDEuODgsCiAgICAgICAgMQogICAgICBdCiAgICB9LAogICAgewogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiBbCiAgICAgICAgMSwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuNjQyNzg4LAogICAgICAgIC0wLjc2NjA0NCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC43NjYwNDQsCiAgICAgICAgMC42NDI3ODgsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDEuMSwKICAgICAgICAxLjg4LAogICAgICAgIDEKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInZhbHVlIjogMSwKICAgICAgIm1hdHJpeCI6IFsKICAgICAgICAxLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTczNjQ4LAogICAgICAgIC0wLjk4NDgwOCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC45ODQ4MDgsCiAgICAgICAgLTAuMTczNjQ4LAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAxLjEsCiAgICAgICAgMS44OCwKICAgICAgICAxCiAgICAgIF0KICAgIH0KICBdLAogICJpbnRlcm1lZGlhdGUiOiAwLjIxMTgsCiAgImVycm9ycyI6IFtdLAogICJnZW9tZXRyeVByb29mIjogImRvY3MvdmFsaWRhdGlvbi90cnVuay1uYXRpdmUtc2VhbXMvZ2VvbWV0cnkuanNvbiIsCiAgIm1pY3JvcGhvbmVUZXN0IjogZmFsc2UKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "647af45158b9d1db149d-24034e4635aa19465eae",
+          "file": "trunk-correction.spec.ts",
+          "line": 9,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T15:48:47.826Z",
+    "duration": 219246.328,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

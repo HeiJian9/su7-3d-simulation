@@ -51,6 +51,13 @@ float signalField(vec3 p,vec3 origin,vec3 direction){
   return (1.-smoothstep(.35,1.,radial))*smoothstep(0.,.08,along)
     *(1.-smoothstep(.65,1.3,along))/(1.+along*along*2.);
 }
+float domeField(vec3 p,vec3 origin,vec3 direction){
+  vec3 q=p-origin;float along=dot(q,direction);
+  float distance=length(q),radius=.075+max(along,0.)*2.0;
+  float side=length(q-direction*along)/radius;
+  return smoothstep(-.02,.10,along)*(1.-smoothstep(.15,1.,side))
+    *(1.-smoothstep(.75,1.55,distance))/(1.+distance*distance*2.);
+}
 void main(){
   vec3 base=texture2D(tScene,vUv).rgb;
   float depth=texture2D(tDepth,vUv).x;
@@ -82,7 +89,7 @@ void main(){
         light+=vec3(1.,.007,.013)*red*.8;
       }
       for(int j=0;j<2;j++)if(domePowers[j]>.0)
-        light+=vec3(1.,.89,.70)*domePowers[j]*signalField(p,domeOrigins[j],domeDirections[j])*.45;
+        light+=vec3(1.,.89,.70)*domePowers[j]*domeField(p,domeOrigins[j],domeDirections[j])*.22;
       // Only localized cabin air around the concealed lights, not a fog overlay.
       if(abs(p.x)<.79&&p.y>.32&&p.y<1.32&&p.z>-.9&&p.z<1.25){
         for(int j=0;j<8;j++)if(cabinPowers[j]>.0){

@@ -70,7 +70,7 @@ for(const name of new Set([...Object.keys(audit.panels),...nativeLampSources])){
 // The existing four-door, glazing, lighting and real wiper geometry stays exact.
 const baseline=JSON.parse(await readFile('docs/assets/trunk-correction-baseline.json','utf8'));
 function signature(node){const arrays=node.getMesh()?.listPrimitives().map(p=>({positions:[...p.getAttribute('POSITION').getArray()],indices:p.getIndices()?[...p.getIndices().getArray()]:null,uv:p.getAttribute('TEXCOORD_0')?[...p.getAttribute('TEXCOORD_0').getArray()]:null,targets:p.listTargets().map(t=>[...t.getAttribute('POSITION').getArray()])}));return createHash('sha256').update(JSON.stringify({world:node.getWorldMatrix(),arrays,parent:node.getParentNode()?.getName()})).digest('hex');}
-const intentionalLampChanges=new Set([...nativeLampSources,...(mapping.materialRoles.removedProxyNodes??[]),...(mapping.materialRoles.ambient.replacedNodes??[])]);
+const intentionalLampChanges=new Set([...nativeLampSources,...(mapping.materialRoles.removedProxyNodes??[]),...(mapping.materialRoles.ambient.replacedNodes??[]),...(mapping.frunk?.sourceNodes??[])]);
 const unchanged=Object.entries(baseline.untouched).filter(([name])=>!intentionalLampChanges.has(name));
 for(const [name,hash] of unchanged)assert.equal(signature(nodes.find(n=>n.getName()===name)),hash,`Unrelated node changed: ${name}`);
 

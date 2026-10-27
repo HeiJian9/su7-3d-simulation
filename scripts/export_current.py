@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parent.parent
 def bl(v):return Vector((v[0],-v[2],v[1]))
 bpy.context.preferences.filepaths.save_version=0
 mapping=json.loads((ROOT/'docs/assets/vehicle-mapping.json').read_text(encoding='utf8'))
-for cfg in list(mapping['doors'].values())+[mapping['trunk']]:bpy.data.objects[cfg['node']].rotation_euler=(0,0,0)
+for cfg in list(mapping['doors'].values())+[mapping['trunk']]+([mapping['frunk']] if mapping.get('frunk') else []):bpy.data.objects[cfg['node']].rotation_euler=(0,0,0)
 wm=json.loads((ROOT/'docs/assets/window-mapping.json').read_text(encoding='utf8'))
 for cfg in wm['windows'].values():bpy.data.objects[cfg['node']].location=bl(cfg['closedTranslation'])
 if mapping.get('wipers'):

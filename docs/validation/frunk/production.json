@@ -1,0 +1,805 @@
+{
+  "errors": [],
+  "shots": [
+    {
+      "name": "closed",
+      "state": {
+        "revision": 0,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "half",
+      "state": {
+        "revision": 1,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0.5
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "open",
+      "state": {
+        "revision": 2,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 1
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "front-open",
+      "state": {
+        "revision": 2,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 1
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "front-closed",
+      "state": {
+        "revision": 3,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "dome-off",
+      "state": {
+        "revision": 3,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "dome-wide",
+      "state": {
+        "revision": 4,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": true,
+          "rear": true
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    },
+    {
+      "name": "dome-rear-wide",
+      "state": {
+        "revision": 4,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off"
+        },
+        "cabinLights": {
+          "front": true,
+          "rear": true
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": false,
+          "color": "#9867ff",
+          "brightness": 0.4
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "lights": [
+        {
+          "position": "front",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ]
+    }
+  ]
+}

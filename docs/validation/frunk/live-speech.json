@@ -1,0 +1,255 @@
+{
+  "at": "2026-10-27T15:44:05.428Z",
+  "mode": "real-api-synthetic-microphone-input",
+  "humanMicrophone": false,
+  "asr": "qwen3-asr-flash",
+  "tts": "cosyvoice-v3-flash",
+  "cases": [
+    {
+      "index": 0,
+      "input": "前备箱打开一半。",
+      "transcript": "转写：前辈想打开一半。",
+      "feedback": "前备箱已打开到 50%。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0.5,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    },
+    {
+      "index": 1,
+      "input": "再关一点。",
+      "transcript": "转写：再关一点。",
+      "feedback": "前备箱已打开到 40%。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0.4,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    },
+    {
+      "index": 2,
+      "input": "打开前备箱。",
+      "transcript": "转写：打开前备箱。",
+      "feedback": "前备箱已完全打开。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 1,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    },
+    {
+      "index": 3,
+      "input": "关闭前备箱。",
+      "transcript": "转写：关闭前备箱。",
+      "feedback": "前备箱已关闭。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    },
+    {
+      "index": 4,
+      "input": "打开前舱盖。",
+      "transcript": "转写：打开前舱盖。",
+      "feedback": "前备箱已完全打开。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 1,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    },
+    {
+      "index": 5,
+      "input": "关闭引擎盖。",
+      "transcript": "转写：关闭引擎盖。",
+      "feedback": "前备箱已关闭。",
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:rear:enabled": false
+      }
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "events": [
+    {
+      "input": 0,
+      "ended": true
+    },
+    {
+      "input": 1,
+      "ended": true
+    },
+    {
+      "input": 2,
+      "ended": true
+    },
+    {
+      "input": 3,
+      "ended": true
+    },
+    {
+      "input": 4,
+      "ended": true
+    },
+    {
+      "input": 5,
+      "ended": true
+    }
+  ],
+  "diagnostic": "docs/validation/scene-diagnostics-2026-10-27T15-45-05-003Z.json"
+}

@@ -12,7 +12,7 @@ export function Hotspot({model,parent,position,label,part,activate,occlusion=tru
   return createPortal(<group position={position as [number,number,number]}><Html center occlude={occlusion?[modelRef]:false} zIndexRange={[2,0]}><button className={`model-hotspot ${selected?'selected':''}`} aria-label={`模型热点：${label}`} data-part={part} onPointerDown={e=>{e.stopPropagation();down.current={x:e.clientX,y:e.clientY};}} onClick={e=>{e.stopPropagation();if(e.detail!==0&&Math.hypot(e.clientX-down.current.x,e.clientY-down.current.y)>5)return;useVehicle.getState().selectPart(part);activate();}}>{label}<span>↗</span></button></Html></group>,parent);
 }
 export function VehicleMechanism({model}:{model:Group}){
-  const {gl}=useThree();const bindings=useRef<Binding[]>([]);const [hotspots,setHotspots]=useState<Array<{parent:Group;position:number[];label:string;part:string;corner?:Corner}>>([]);
+  const {gl}=useThree();const bindings=useRef<Binding[]>([]);const [hotspots,setHotspots]=useState<Array<{parent:Group;position:number[];label:string;part:string;corner?:Corner;frunk?:boolean}>>([]);
   useEffect(()=>{
     const items:Binding[]=[],points:typeof hotspots=[];
     for(const c of corners){const cfg=mapping.doors[c],node=model.getObjectByName(cfg.node) as Group|undefined;if(!node)continue;
@@ -20,12 +20,14 @@ export function VehicleMechanism({model}:{model:Group}){
     }
     const cfg=mapping.trunk,node=model.getObjectByName(cfg.node) as Group|undefined;
     if(node){items.push({key:'trunk:rear:openness',node,angle:cfg.maxAngle,axis:'x',value:0});points.push({parent:node,position:cfg.hotspot.map((v,i)=>v-cfg.hinge[i]),label:'后备箱',part:'trunk:rear'});}
+    const front=mapping.frunk,frontNode=model.getObjectByName(front.node) as Group|undefined;
+    if(frontNode){items.push({key:'frunk:front:openness',node:frontNode,angle:front.maxAngle,axis:'x',value:0});points.push({parent:frontNode,position:front.hotspot.map((v,i)=>v-front.hinge[i]),label:'前备箱',part:'frunk:front',frunk:true});}
     bindings.current=items;setHotspots(points);useVehicle.getState().registerCapabilities('mechanical',items.map(b=>b.key.split(':').slice(0,2).join(':')));
     return()=>{for(const b of items){b.node.rotation[b.axis]=0;delete actualValues[b.key];}bindings.current=[];useVehicle.getState().registerCapabilities('mechanical',[]);};
   },[model]);
   useFrame((_,delta)=>{
     const store=useVehicle.getState();
-    for(const b of bindings.current){const [,corner]=b.key.split(':');const target=b.key.startsWith('door:')?store.state.doors[corner as Corner].openness:store.state.trunk.openness;
+    for(const b of bindings.current){const [,corner]=b.key.split(':');const target=b.key.startsWith('door:')?store.state.doors[corner as Corner].openness:b.key.startsWith('frunk:')?store.state.frunk.openness:store.state.trunk.openness;
       const step=Math.min(delta,.05)*.8;b.value=Math.abs(target-b.value)<=step?target:b.value+Math.sign(target-b.value)*step;b.node.rotation[b.axis]=b.angle*b.value;
       actualValues[b.key]=b.value;gl.domElement.setAttribute(`data-${b.key.replaceAll(':','-')}`,b.value.toFixed(4));
       b.node.updateMatrixWorld(true);
@@ -33,5 +35,5 @@ export function VehicleMechanism({model}:{model:Group}){
     }
     gl.domElement.setAttribute('data-vehicle-actual',JSON.stringify(actualValues));gl.domElement.setAttribute('data-vehicle-state',JSON.stringify(store.state));completeExecutions();
   },-2);
-  return <>{hotspots.map(h=><Hotspot key={h.part} model={model} {...h} activate={()=>{const state=useVehicle.getState().state;const value=h.corner?state.doors[h.corner].openness:state.trunk.openness;manualCommand(h.corner?[{component:'door',targets:[h.corner],operation:'set',property:'openness',value:value>.01?0:1}]:[{component:'trunk',targets:['rear'],operation:'set',property:'openness',value:value>.01?0:1}]);}}/>)}</>;
+  return <>{hotspots.map(h=><Hotspot key={h.part} model={model} {...h} occlusion={!h.frunk} activate={()=>{const state=useVehicle.getState().state;const value=h.corner?state.doors[h.corner].openness:h.frunk?state.frunk.openness:state.trunk.openness;manualCommand(h.corner?[{component:'door',targets:[h.corner],operation:'set',property:'openness',value:value>.01?0:1}]:h.frunk?[{component:'frunk',targets:['front'],operation:'set',property:'openness',value:value>.01?0:1}]:[{component:'trunk',targets:['rear'],operation:'set',property:'openness',value:value>.01?0:1}]);}}/>)}</>;
 }

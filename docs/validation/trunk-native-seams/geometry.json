@@ -83,7 +83,7 @@
   "maxPositionError": 0,
   "maxUvError": 0,
   "maxNormalError": 0.0006705913409834472,
-  "unrelatedNodesUnchanged": 82,
+  "unrelatedNodesUnchanged": 80,
   "nativeLampSourcesVerified": [
     "Mesh61",
     "Mesh68",

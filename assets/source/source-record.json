@@ -15,7 +15,7 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "9f53ebb07da0193ff9bda5b049abebcb20b85450c4fcab1ba348ea6ffa001bc1",
+  "runtimeSha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
@@ -27,11 +27,12 @@
     "Trunk correction: original complete native panel islands restored from the I3 source, including original positions, UVs and per-corner normals; no arbitrary bisects; rounded original deck/fascia and factory lamp split move as whole parts; exterior hull caps and edge strips removed; inner cover and lining inset behind original outer skin.",
     "I5: eight original Mesh61 projector surfaces, original Mesh62/73 front diffusers and Mesh19/20 inner rear modules use independent cloned emission materials; outer contour now has an independent constant-red running material; signals emit yellow only while lit and restore original colours in off half-cycles and when disabled; 14 former tube/rod proxies removed; source positions/UV/normals preserved; physical cabin LEDs remain.",
     "Cabin lighting: replace the five floating tubes with 12 narrow surface-fitted ribbon diffusers along original door rails, handles, dashboard and console using native trim edge vertices (no broad-surface projection path); footwells use concealed wash light without extra visible glovebox bars; no connectors across native trim gaps; original car geometry untouched; independent primary/wash materials and eight short-range runtime lights, four attached to door hinges.",
-    "Dome/tail: 714 native outermost rear-ring triangles use an independent constant-red running-lamp material, all geometry/UV/normals preserved; two compact ceiling fixtures follow measured front console/rear roof surface normals; independent downward spotlights and manual/rule/ASR-TTS controls."
+    "Dome/tail: 714 native outermost rear-ring triangles use an independent constant-red running-lamp material, all geometry/UV/normals preserved; two compact ceiling fixtures follow measured front console/rear roof surface normals; independent downward spotlights and manual/rule/ASR-TTS controls.",
+    "Frunk: native Paint7 bonnet islands and Mesh65 badge on rear-edge hinge; original 82-vertex seam, UVs and normals preserved with zero bisects; fitted recessed inner skin, storage tub, flange and hinge hardware added; wide diffuse cabin lights use 143-degree soft cones and low-power local fill."
   ],
-  "enhancedAt": "2026-10-27T15:21:08.073Z",
-  "assetIncrement": "I6.8-tail-and-dome",
+  "enhancedAt": "2026-10-27T15:47:21.592Z",
+  "assetIncrement": "I6.9-native-frunk-wide-dome",
   "windowMapping": "docs/assets/window-mapping.json",
   "vehicleMapping": "docs/assets/vehicle-mapping.json",
-  "enhancedBlendSha256": "c7fa49d8cb739b0688c4a3b3a4a8428d4fcbe099e0b706728bcae7541fc401b8"
+  "enhancedBlendSha256": "514f2189c0581fe7da0928e5a8518dca8783bc247a5e9f44e1820aa43dd03f2f"
 }

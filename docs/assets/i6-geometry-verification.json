@@ -1,5 +1,5 @@
 {
-  "stage": "I6.8-tail-and-dome",
+  "stage": "I6.9-native-frunk-wide-dome",
   "source": "actual exported GLB; no proxy animation",
   "doorRecords": [
     {
@@ -191,6 +191,7 @@
       "DOOR_FR_RETURNS",
       "DOOR_RL_RETURNS",
       "DOOR_RR_RETURNS",
+      "FRUNK_Paint7",
       "Paint1",
       "Paint2",
       "Paint3",
@@ -215,6 +216,10 @@
       "Mesh30Mtl",
       "Mesh19Mtl",
       "Mesh26Mtl",
+      "FRUNK_SEAL_RUBBER",
+      "TRUNK_HINGE_FINISH",
+      "FRUNK_FORMED_LINER",
+      "Mesh65Mtl",
       "Mesh1Mtl",
       "Mesh2Mtl",
       "Mesh3Mtl",
@@ -235,14 +240,12 @@
       "LAMP_RIGHT_PROJECTOR_2",
       "LAMP_RIGHT_PROJECTOR_3",
       "TURN_RIGHT_FRONT_AMBER",
-      "Mesh65Mtl",
       "Mesh68Mtl",
       "Mesh71Mtl",
       "Mesh72Mtl",
       "TURN_LEFT_FRONT_AMBER",
       "TRUNK_FLUSH_SEAL",
       "TRUNK_FORMED_CARPET",
-      "TRUNK_HINGE_FINISH",
       "Mesh23Mtl",
       "WIPER_GRAPHITE"
     ]

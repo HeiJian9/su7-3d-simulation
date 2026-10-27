@@ -1,0 +1,25 @@
+
+Running 16 tests using 1 worker
+
+(node:23688) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (11.4s)
+  ok  2 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (3.3s)
+  ok  3 [Edge-1920x1080] › tests\e2e\frunk.spec.ts:8:1 › native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state (10.1s)
+  ok  4 [Edge-1920x1080] › tests\e2e\frunk.spec.ts:17:1 › wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully (2.0s)
+  ok  5 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (21.6s)
+  ok  6 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (38.4s)
+  ok  7 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (9.8s)
+  ok  8 [Edge-1920x1080] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (12.6s)
+(node:27228) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (11.1s)
+  ok 10 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (3.3s)
+  ok 11 [Edge-1366x768] › tests\e2e\frunk.spec.ts:8:1 › native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state (9.9s)
+  ok 12 [Edge-1366x768] › tests\e2e\frunk.spec.ts:17:1 › wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully (1.8s)
+  ok 13 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (21.4s)
+  ok 14 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (37.9s)
+  ok 15 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (8.8s)
+  ok 16 [Edge-1366x768] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (12.3s)
+
+  16 passed (3.7m)

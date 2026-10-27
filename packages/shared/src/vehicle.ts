@@ -20,7 +20,7 @@ function fixed<C extends string,T extends string,P extends string,V extends z.Zo
 const ambientBrightness=z.object({component:z.literal('ambient'),targets:z.tuple([z.literal('cabin')]),property:z.literal('brightness'),operation:z.enum(['set','adjust']),value:z.number().min(-1).max(1)}).strict().refine(c=>c.operation==='adjust'||c.value>=0);
 export const vehicleCommandSchema=z.union([
   z.object({component:z.literal('cabinLight'),targets:z.array(z.enum(['front','rear'])).min(1).max(2),property:z.literal('enabled'),operation:z.literal('set'),value:z.boolean()}).strict(),
-  windowCommandSchema,scalar('door',cornerSchema),scalar('trunk',z.literal('rear')),
+  windowCommandSchema,scalar('door',cornerSchema),scalar('trunk',z.literal('rear')),scalar('frunk',z.literal('front')),
   fixed('headlights','front','mode',z.enum(['off','low','high'])),fixed('turnSignal','vehicle','mode',z.enum(['off','left','right','hazard'])),
   fixed('paint','body','color',colorSchema),fixed('ambient','cabin','color',colorSchema),fixed('ambient','cabin','enabled',z.boolean()),ambientBrightness,
   fixed('wiper','front','mode',z.enum(wiperModes)),
@@ -30,9 +30,9 @@ export const vehicleCommandSchema=z.union([
 export type VehicleCommand=z.infer<typeof vehicleCommandSchema>;
 export const vehicleRequestSchema=z.object({requestId:z.string().min(1).max(128),baseRevision:z.number().int().nonnegative(),origin:z.enum(['manual','text','voice']),route:z.enum(['manual','rules']),commands:z.array(vehicleCommandSchema).min(1).max(16)}).strict().refine(r=>(r.origin==='manual')===(r.route==='manual'));
 export type CommandRequest=z.infer<typeof vehicleRequestSchema>;
-export const vehicleStateSchema=z.object({revision:z.number().int().nonnegative(),windows:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),doors:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),trunk:z.object({openness:z.number().min(0).max(1)}),lights:z.object({headlights:z.enum(['off','low','high']),turnSignal:z.enum(['off','left','right','hazard'])}),cabinLights:z.object({front:z.boolean(),rear:z.boolean()}),paint:z.object({color:colorSchema}),ambient:z.object({enabled:z.boolean(),color:colorSchema,brightness:z.number().min(0).max(1)}),wipers:z.object({mode:z.enum(wiperModes),onceSequence:z.number().int().nonnegative()})});
+export const vehicleStateSchema=z.object({revision:z.number().int().nonnegative(),windows:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),doors:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),trunk:z.object({openness:z.number().min(0).max(1)}),frunk:z.object({openness:z.number().min(0).max(1)}),lights:z.object({headlights:z.enum(['off','low','high']),turnSignal:z.enum(['off','left','right','hazard'])}),cabinLights:z.object({front:z.boolean(),rear:z.boolean()}),paint:z.object({color:colorSchema}),ambient:z.object({enabled:z.boolean(),color:colorSchema,brightness:z.number().min(0).max(1)}),wipers:z.object({mode:z.enum(wiperModes),onceSequence:z.number().int().nonnegative()})});
 export type VehicleState=z.infer<typeof vehicleStateSchema>;
-export function defaultVehicle():VehicleState{return {...defaultWindows(),doors:defaultWindows().windows,trunk:{openness:0},lights:{headlights:'off',turnSignal:'off'},cabinLights:{front:false,rear:false},paint:{color:'#e4e6e8'},ambient:{enabled:false,color:'#9867ff',brightness:.4},wipers:{mode:'off',onceSequence:0}};}
+export function defaultVehicle():VehicleState{return {...defaultWindows(),doors:defaultWindows().windows,trunk:{openness:0},frunk:{openness:0},lights:{headlights:'off',turnSignal:'off'},cabinLights:{front:false,rear:false},paint:{color:'#e4e6e8'},ambient:{enabled:false,color:'#9867ff',brightness:.4},wipers:{mode:'off',onceSequence:0}};}
 export type Value=number|string|boolean;
 export interface Effect {key:string;value:Value}
 export interface Execution {requestId:string;status:'accepted'|'animating'|'completed'|'superseded'|'failed';revision:number;origin:CommandRequest['origin'];route:CommandRequest['route'];targets:Corner[];values:Partial<Record<Corner,number>>;effects:Effect[];query:boolean;boundary:boolean;message:string}
@@ -40,6 +40,7 @@ export function commandKeys(c:VehicleCommand):string[]{return c.targets.map(t=>`
 function read(s:VehicleState,c:VehicleCommand,t:string):Value {
   if(c.component==='window'||c.component==='door')return s[c.component==='window'?'windows':'doors'][t as Corner].openness;
   if(c.component==='cabinLight')return s.cabinLights[t as 'front'|'rear'];
+  if(c.component==='frunk')return s.frunk.openness;
   if(c.component==='trunk')return s.trunk.openness;
   if(c.component==='headlights')return s.lights.headlights;
   if(c.component==='turnSignal')return s.lights.turnSignal;
@@ -50,6 +51,7 @@ function read(s:VehicleState,c:VehicleCommand,t:string):Value {
 function write(s:VehicleState,c:VehicleCommand,t:string,v:Value){
   if(c.component==='window'||c.component==='door')s[c.component==='window'?'windows':'doors'][t as Corner].openness=v as number;
   else if(c.component==='cabinLight')s.cabinLights[t as 'front'|'rear']=v as boolean;
+  else if(c.component==='frunk')s.frunk.openness=v as number;
   else if(c.component==='trunk')s.trunk.openness=v as number;
   else if(c.component==='headlights')s.lights.headlights=v as VehicleState['lights']['headlights'];
   else if(c.component==='turnSignal')s.lights.turnSignal=v as VehicleState['lights']['turnSignal'];
@@ -57,7 +59,7 @@ function write(s:VehicleState,c:VehicleCommand,t:string,v:Value){
   else if(c.component==='paint')s.paint.color=v as string;
   else if(c.property==='brightness')s.ambient.brightness=v as number;else if(c.property==='color')s.ambient.color=v as string;else s.ambient.enabled=v as boolean;
 }
-const labels:Record<string,string>={'cabinLight:front':'前排主灯','cabinLight:rear':'后排主灯','trunk:rear':'后备箱','headlights:front':'前灯','turnSignal:vehicle':'转向灯','paint:body':'车漆','ambient:cabin':'氛围灯','wiper:front':'雨刷'};
+const labels:Record<string,string>={'cabinLight:front':'前排主灯','cabinLight:rear':'后排主灯','frunk:front':'前备箱','trunk:rear':'后备箱','headlights:front':'前灯','turnSignal:vehicle':'转向灯','paint:body':'车漆','ambient:cabin':'氛围灯','wiper:front':'雨刷'};
 export function effectLabel(key:string){const [component,target]=key.split(':');return component==='window'?windowLabels[target as Corner]:component==='door'?doorLabels[target as Corner]:labels[`${component}:${target}`]??key;}
 export function describeEffects(effects:Effect[],query=false){return effects.map(({key,value})=>{
   const label=effectLabel(key);const property=key.split(':')[2];
@@ -149,7 +151,7 @@ function accessory(clause:string,component:VehicleCommand['component'],focusedTa
   return null;
 }
 export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.now()):RuleResult {
-  const text=raw.trim().replace(/(左前|右前|左后|右后|前左|前右|后左|后右)方/g,'$1').replace(/(左前|右前|左后|右后)(?:那个)?[，,](?=开|关|升|降)/g,'$1');
+  const text=raw.trim().replace(/前(?:背箱|辈箱|备厢)/g,'前备箱').replace(/前辈想(?=打开|开启|关闭|关上|开一半|关一点)/g,'前备箱').replace(/(左前|右前|左后|右后|前左|前右|后左|后右)方/g,'$1').replace(/(左前|右前|左后|右后)(?:那个)?[，,](?=开|关|升|降)/g,'$1');
   if(/^(取消|算了|不用了|停止操作|取消这条指令|取消刚才的指令)[。！!]?$/u.test(text))return {kind:'noop',message:'已取消待确认指令，车辆目标保持不变。'};
   const fresh=context.focus&&context.focus.targets.length===1&&now-context.focus.updatedAt<120000?context.focus:undefined;
   const pending=context.pending&&context.pending.expiresAt>now?context.pending:undefined;
@@ -170,15 +172,15 @@ export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.n
       if(positive.kind==='unsupported'||positive.kind==='noop')return {kind:'unsupported',message:'否定子句未被完整理解，车辆未改变。请明确部件和动作。'};
       continue;
     }
-    let component:VehicleCommand['component']|undefined=/主灯|顶灯|阅读灯|车内照明灯|车内灯/.test(clause)?'cabinLight':/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|雨刮|刮一下|刮一次/.test(clause)?'wiper':focus?.component;
+    let component:VehicleCommand['component']|undefined=/前备箱|前舱盖|前机盖|引擎盖|机舱盖/.test(clause)?'frunk':/主灯|顶灯|阅读灯|车内照明灯|车内灯/.test(clause)?'cabinLight':/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|雨刮|刮一下|刮一次/.test(clause)?'wiper':focus?.component;
     // Existing I3 accepts directional shorthand without a noun.
     component ??= /左前|右前|左后|右后|主驾|副驾|开|关/.test(clause)?pending?.component??'window':undefined;
-    if(component==='window'||component==='door'||component==='trunk'){
-      const mapped=component==='door'?clause.replace(/车门|门/g,'车窗'):component==='trunk'?clause.replace(/后备箱|尾箱|行李箱/g,'左前车窗'):clause;
-      const r=parseWindowText(mapped,{focus:focus?.component===component?{targets:focus.targets as Corner[],updatedAt:focus.updatedAt}:undefined},now);
+    if(component==='window'||component==='door'||component==='trunk'||component==='frunk'){
+      const mapped=component==='door'?clause.replace(/车门|门/g,'车窗'):component==='frunk'?clause.replace(/前备箱|前舱盖|前机盖|引擎盖|机舱盖/g,'左前车窗'):component==='trunk'?clause.replace(/后备箱|尾箱|行李箱/g,'左前车窗'):clause;
+      const r=parseWindowText(mapped,{focus:focus?.component===component?{targets:component==='frunk'?['fl']:focus.targets as Corner[],updatedAt:focus.updatedAt}:undefined},now);
       if(r.kind==='unsupported')return {kind:'unsupported',message:'规则未完整理解这条指令，车辆未改变。请明确部件、动作和比例；DeepSeek 兜底保留在 I7。'};
       if(r.kind==='noop')continue;
-      const convert=(c:WindowCommand)=>({...c,component,targets:component==='trunk'?['rear']:c.targets}) as VehicleCommand;
+      const convert=(c:WindowCommand)=>({...c,component,targets:component==='frunk'?['front']:component==='trunk'?['rear']:c.targets}) as VehicleCommand;
       if(r.kind==='clarify'){
         const added=r.pending.commands.map(convert);commands.push(...added);unresolved={commands,component:component==='door'?'door':'window',expiresAt:now+120000};
       }else if(r.kind==='execute'){const added=r.commands.map(convert);commands.push(...added);focus={component,targets:added.at(-1)!.targets,updatedAt:now};}
