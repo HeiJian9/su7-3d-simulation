@@ -12,6 +12,7 @@ import { WindowMechanism } from './WindowMechanism';
 import { VehicleMechanism } from './VehicleMechanism';
 import { AppearanceMechanism } from './AppearanceMechanism';
 import { WiperMechanism } from './WiperMechanism';
+import { VolumetricLights } from './VolumetricLights';
 
 class WebGLErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
   state = { error: false };
@@ -93,7 +94,7 @@ function RuntimeModel({ asset, attempt }: { asset: AssetManifest; attempt: numbe
     void load();
     return () => { disposed = true; abort.abort(); clearTimeout(timer); draco.dispose(); if (scene) disposeScene(scene); };
   }, [asset, attempt]);
-  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/><AppearanceMechanism model={model}/><WiperMechanism model={model}/></> : null;
+  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/><AppearanceMechanism model={model}/><WiperMechanism model={model}/><VolumetricLights model={model}/></> : null;
 }
 
 function Diagnostics() {

@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:5336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (7.8s)
+(node:10812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (7.6s)
+
+  2 passed (17.8s)

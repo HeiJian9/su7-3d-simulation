@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "1cdc55cf42a6ba2d860fc2c1616d339ae3184e18bf575d9da1ef0c68111ebbf5",
-  "bytes": 6524528,
+  "sha256": "1948a0d8098be447e1b89f91b48ee68bbeeff8a0ef32f4893e5582e3ea534446",
+  "bytes": 6568536,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I6.5-native-lamps 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · I6.6-cabin-lighting 增强资产 · 原车几何与局部补建"
 }

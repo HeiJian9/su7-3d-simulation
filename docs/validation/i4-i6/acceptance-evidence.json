@@ -1,15 +1,15 @@
 {
-  "version": "0.6.3",
+  "version": "0.6.4",
   "date": "2026-10-27",
   "acceptance": "functional_paths_verified_new_human_microphone_pending",
   "currentAsset": {
-    "stage": "I6.5-native-lamps",
-    "sha256": "1cdc55cf42a6ba2d860fc2c1616d339ae3184e18bf575d9da1ef0c68111ebbf5",
-    "blendSha256": "4be82f98d96da5f5d59e3eeb5f3a032317f5b50808a1ce5255ffebbc1d3d3c35",
-    "nodes": 121,
-    "meshes": 109,
-    "triangles": 94549,
-    "materials": 39,
+    "stage": "I6.6-cabin-lighting",
+    "sha256": "1948a0d8098be447e1b89f91b48ee68bbeeff8a0ef32f4893e5582e3ea534446",
+    "blendSha256": "02a76184d6c654967ab9fea43f213774ef65573a6a15df549a54b74dd296c4f2",
+    "nodes": 128,
+    "meshes": 116,
+    "triangles": 95793,
+    "materials": 40,
     "textures": 15
   },
   "fullRegression": {
@@ -102,5 +102,35 @@
     "yellowOnOriginalOff": true,
     "production": "docs/validation/native-lamps/production-visual.json"
   },
-  "trunkUserVisualAccepted": true
+  "trunkUserVisualAccepted": true,
+  "cabinLighting": {
+    "report": "docs/CABIN_LIGHTING.md",
+    "related": {
+      "startTime": "2026-10-27T14:14:55.801Z",
+      "duration": 80562.29699999999,
+      "expected": 14,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "camera": {
+      "startTime": "2026-10-27T14:01:15.076Z",
+      "duration": 186129.22999999998,
+      "expected": 9,
+      "skipped": 1,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalVolume": {
+      "startTime": "2026-10-27T14:05:28.542Z",
+      "duration": 17247.470999999998,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "geometry": "docs/validation/cabin-lighting/geometry.json",
+    "realSpeechRevalidated": false,
+    "ribbons": 12
+  }
 }

@@ -1,8 +1,8 @@
 {
-  "openedFile": "D:\\code\\Projects\\3D simulation\\.tools\\portable-check\\su7-enhanced.blend",
+  "openedFile": "D:\\code\\Projects\\3D simulation\\assets\\source\\blender\\su7-enhanced.blend",
   "blender": "4.5.15 LTS",
-  "meshes": 84,
-  "triangles": 92410,
+  "meshes": 116,
+  "triangles": 95793,
   "images": [
     {
       "name": "Mesh13_diff.png",

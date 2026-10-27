@@ -1,0 +1,100 @@
+{
+  "version": "0.6.4",
+  "date": "2026-10-27",
+  "tag": "v0.6.4-cabin-lighting",
+  "asset": {
+    "stage": "I6.6-cabin-lighting",
+    "sha256": "1948a0d8098be447e1b89f91b48ee68bbeeff8a0ef32f4893e5582e3ea534446",
+    "blendSha256": "02a76184d6c654967ab9fea43f213774ef65573a6a15df549a54b74dd296c4f2",
+    "nodes": 128,
+    "meshes": 116,
+    "triangles": 95793,
+    "materials": 40,
+    "textures": 15
+  },
+  "ribbons": 12,
+  "shortRangeLights": 8,
+  "sourceNodesUnchanged": 116,
+  "maximumSampledSurfaceClearanceMm": 0.685,
+  "relatedRegression": {
+    "startTime": "2026-10-27T14:14:55.801Z",
+    "duration": 80562.29699999999,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cameraRegression": {
+    "startTime": "2026-10-27T14:01:15.076Z",
+    "duration": 186129.22999999998,
+    "expected": 9,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalVolumeRegression": {
+    "startTime": "2026-10-27T14:09:36.239Z",
+    "duration": 17828.845,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "pixelComparisons": [
+    {
+      "project": "Edge-1920x1080",
+      "diff": {
+        "brighterPixels": 272631,
+        "roofMeanDifference": 0.01652892561983471,
+        "pixels": 1564800
+      },
+      "roofPixel": [
+        719,
+        225
+      ],
+      "errors": [],
+      "state": {
+        "enabled": true,
+        "active": false,
+        "density": 0.8,
+        "mode": "off",
+        "sceneDepthOcclusion": true,
+        "samples": 64,
+        "visibleConeGeometry": false
+      },
+      "realSpeech": false
+    },
+    {
+      "project": "Edge-1366x768",
+      "diff": {
+        "brighterPixels": 106789,
+        "roofMeanDifference": 0.049586776859504134,
+        "pixels": 687098
+      },
+      "roofPixel": [
+        534,
+        139
+      ],
+      "errors": [],
+      "state": {
+        "enabled": true,
+        "active": false,
+        "density": 0.8,
+        "mode": "off",
+        "sceneDepthOcclusion": true,
+        "samples": 64,
+        "visibleConeGeometry": false
+      },
+      "realSpeech": false
+    }
+  ],
+  "unitTestsPassed": 71,
+  "typecheckPassed": true,
+  "buildPassed": true,
+  "lintPassed": true,
+  "packedTextures": 15,
+  "realSpeechTested": false,
+  "newHumanMicrophone": "pending_user_unavailable",
+  "I7Started": false,
+  "finalRelatedRegressionIncludesVolume": true
+}

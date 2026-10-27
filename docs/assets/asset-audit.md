@@ -102,6 +102,8 @@ Blender 几何验证：关闭世界顶点与 I1 基线误差 < 0.00001 米；开
 
 0.6.3 将车外灯光改回原生面片材质：Mesh61 每侧四个投射灯面，Mesh62／73 前灯面及 Mesh20／19 后灯内侧四段模块，转向亮起黄色、熄灭及关闭恢复原色；C 形轮廓保留原材质。14 个代理细管／短杆删除，原生灯面位置／UV／法线保持一致；尾箱用户已确认通过。见 [灯组件修正](../NATIVE_LAMPS.md)。
 
-当前 GLB 121 节点、109 网格、94,549 三角面、39 材质、15 张纹理；Blender 全纹理打包。哈希与角色／热点映射见 [current-geometry.json](current-geometry.json)、[vehicle-mapping.json](vehicle-mapping.json)。原始分组审查见 [i4-original-audit.json](i4-original-audit.json)。
+0.6.4 将原五段细管替换为 12 个贴合原饰板的窄灯面，仪表台／门板／把手／中控与脚窝照明分层；脚窝使用隐藏局部光源，取消显眼发光条。八个局部光源中四个随门移动。前照灯的丁达尔效果为运行时深度遮挡散射，不写入原生几何。116 个前版节点不变，贴合采样最大间距 0.685 毫米。见 [座舱修正](../CABIN_LIGHTING.md)。
+
+当前 GLB 128 节点、116 网格、95,793 三角面、40 材质、15 张纹理；Blender 全纹理打包。哈希与角色／热点映射见 [current-geometry.json](current-geometry.json)、[vehicle-mapping.json](vehicle-mapping.json)。原始分组审查见 [i4-original-audit.json](i4-original-audit.json)。
 
 剩余限制：内饰图集仍为原低分辨率资源；未重建整套实体按键、门锁、气撑杆、雨滴或天气。新增真人语音复验待补，几何及自动接口证据不冒充真人。

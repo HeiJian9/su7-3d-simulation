@@ -9,4 +9,5 @@ const checks=['scripts/register-vehicle.mjs','scripts/check-assets.mjs','scripts
 if(mapping.wipers)checks.push('scripts/verify-wiper-glb.mjs');
 if(mapping.trunk.requiredMovingBadges)checks.push('scripts/verify-trunk-correction.mjs');
 if(mapping.materialRoles.nativeLampSources)checks.push('scripts/verify-native-lamps.mjs');
+if(mapping.materialRoles.ambient.audit)checks.push('scripts/verify-cabin-lighting.mjs');
 for(const script of checks){const r=spawnSync(process.execPath,[script],{stdio:'inherit'});if(r.status!==0)process.exit(r.status??1);}

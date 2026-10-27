@@ -1,5 +1,5 @@
 {
-  "stage": "I6.5-native-lamps",
+  "stage": "I6.6-cabin-lighting",
   "source": "actual exported GLB; no proxy animation",
   "doorRecords": [
     {
@@ -199,8 +199,9 @@
       "Paint7",
       "TRUNK_Paint5"
     ],
-    "ambientStrips": 5,
+    "ambientStrips": 12,
     "independentMaterialNames": [
+      "AMBIENT_CABIN_WASH",
       "AMBIENT_CABIN_LED",
       "SU7_PAINT_BODY",
       "Mesh32Mtl",

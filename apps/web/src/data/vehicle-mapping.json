@@ -1,5 +1,5 @@
 {
-  "version": "I6.5-native-lamps",
+  "version": "I6.6-cabin-lighting",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -397,26 +397,147 @@
     "ambient": {
       "material": "AMBIENT_CABIN_LED",
       "nodes": [
-        "AMBIENT_DASHBOARD",
         "AMBIENT_DOOR_FL",
+        "AMBIENT_HANDLE_FL",
         "AMBIENT_DOOR_FR",
+        "AMBIENT_HANDLE_FR",
         "AMBIENT_DOOR_RL",
-        "AMBIENT_DOOR_RR"
+        "AMBIENT_HANDLE_RL",
+        "AMBIENT_DOOR_RR",
+        "AMBIENT_HANDLE_RR",
+        "AMBIENT_DASHBOARD",
+        "AMBIENT_CONSOLE_LEFT",
+        "AMBIENT_DASHBOARD_RIGHT",
+        "AMBIENT_CONSOLE_RIGHT"
       ],
       "lightPositions": [
         [
-          -0.45,
-          0.87,
-          -0.55
+          -0.4,
+          0.49,
+          -0.48
         ],
         [
-          0.45,
-          0.87,
-          -0.55
+          0.4,
+          0.49,
+          -0.48
+        ],
+        [
+          0.32,
+          0.91,
+          -0.56
+        ],
+        [
+          0,
+          0.51,
+          -0.06
         ]
       ],
-      "radius": 0.0028,
-      "note": "Physical tubes added along dashboard and existing door trim; each door strip is a child of its door hinge."
+      "radius": null,
+      "note": "12 surface-fitted narrow ribbon diffusers; native door upper rails, handle undersides, dashboard and console. Footwells use concealed local wash illumination, with no visible added glovebox bars. Gaps between original surface islands are not bridged. Eight short-range wash lights; four follow their actual doors. Source car surfaces unchanged.",
+      "materials": [
+        "AMBIENT_CABIN_LED",
+        "AMBIENT_CABIN_WASH"
+      ],
+      "washMaterial": "AMBIENT_CABIN_WASH",
+      "lights": [
+        {
+          "parent": "DOOR_FL_ROOT",
+          "position": [
+            0.15999996662139893,
+            0.2149999737739563,
+            0.6949999928474426
+          ],
+          "distance": 0.42,
+          "gain": 0.2
+        },
+        {
+          "parent": "DOOR_FR_ROOT",
+          "position": [
+            -0.15999996662139893,
+            0.2149999737739563,
+            0.6949999928474426
+          ],
+          "distance": 0.42,
+          "gain": 0.2
+        },
+        {
+          "parent": "DOOR_RL_ROOT",
+          "position": [
+            0.19499999284744263,
+            0.2149999737739563,
+            0.40000003576278687
+          ],
+          "distance": 0.42,
+          "gain": 0.2
+        },
+        {
+          "parent": "DOOR_RR_ROOT",
+          "position": [
+            -0.19499999284744263,
+            0.2149999737739563,
+            0.40000003576278687
+          ],
+          "distance": 0.42,
+          "gain": 0.2
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            -0.4,
+            0.49,
+            -0.48
+          ],
+          "distance": 0.78,
+          "gain": 1.15
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            0.4,
+            0.49,
+            -0.48
+          ],
+          "distance": 0.78,
+          "gain": 1.15
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            0.32,
+            0.91,
+            -0.56
+          ],
+          "distance": 0.6,
+          "gain": 0.16
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            0,
+            0.51,
+            -0.06
+          ],
+          "distance": 0.4,
+          "gain": 0.12
+        }
+      ],
+      "audit": "docs/assets/cabin-lighting-audit.json",
+      "replacedNodes": [
+        "AMBIENT_DOOR_FL",
+        "AMBIENT_HANDLE_FL",
+        "AMBIENT_DOOR_FR",
+        "AMBIENT_HANDLE_FR",
+        "AMBIENT_DOOR_RL",
+        "AMBIENT_HANDLE_RL",
+        "AMBIENT_DOOR_RR",
+        "AMBIENT_HANDLE_RR",
+        "AMBIENT_DASHBOARD",
+        "AMBIENT_CONSOLE_LEFT",
+        "AMBIENT_FOOTWELL_LEFT",
+        "AMBIENT_DASHBOARD_RIGHT",
+        "AMBIENT_CONSOLE_RIGHT",
+        "AMBIENT_FOOTWELL_RIGHT"
+      ]
     },
     "wiper": {
       "material": "WIPER_GRAPHITE",

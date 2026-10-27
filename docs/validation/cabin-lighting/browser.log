@@ -1,0 +1,23 @@
+
+Running 14 tests using 1 worker
+
+(node:12000) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (5.2s)
+  ok  2 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (7.3s)
+  ok  3 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (3.1s)
+  ok  4 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (4.7s)
+  ok  5 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (2.2s)
+  ok  6 [Edge-1920x1080] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.2s)
+  ok  7 [Edge-1920x1080] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (11.9s)
+(node:27372) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (4.3s)
+  ok  9 [Edge-1366x768] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (6.8s)
+  ok 10 [Edge-1366x768] › tests\e2e\appearance.spec.ts:20:1 › I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps (2.5s)
+  ok 11 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (4.2s)
+  ok 12 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (1.7s)
+  ok 13 [Edge-1366x768] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.0s)
+  ok 14 [Edge-1366x768] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (11.8s)
+
+  14 passed (1.3m)
