@@ -1,5 +1,5 @@
 {
-  "version": "I6.6-cabin-lighting",
+  "version": "I6.7-native-trim-lighting",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -406,8 +406,8 @@
         "AMBIENT_DOOR_RR",
         "AMBIENT_HANDLE_RR",
         "AMBIENT_DASHBOARD",
-        "AMBIENT_CONSOLE_LEFT",
         "AMBIENT_DASHBOARD_RIGHT",
+        "AMBIENT_CONSOLE_LEFT",
         "AMBIENT_CONSOLE_RIGHT"
       ],
       "lightPositions": [

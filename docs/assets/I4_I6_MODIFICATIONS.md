@@ -1,5 +1,7 @@
 # 指定 SU7：I4–I6 资产修改记录
 
+当前0.6.5中控原饰条布局、转向与车内散射追加修正见 [报告](../LIGHTING_FOLLOWUP.md)；下文旧版本数字为历史记录，当前哈希见 `docs/assets/current-geometry.json`。
+
 整理日期 2026-10-27。唯一工作工程 `assets/source/blender/su7-enhanced.blend`；历史由 Git 保存。原始只读下载包未修改。
 
 | 资产 | 实际来源与加工 |

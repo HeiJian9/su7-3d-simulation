@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {NodeIO} from '@gltf-transform/core';
 import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
-import {BufferGeometry,Float32BufferAttribute,Matrix4,Vector3} from 'three';
+import {BufferGeometry,Float32BufferAttribute,Line3,Matrix4,Vector3} from 'three';
 import {MeshBVH} from 'three-mesh-bvh/src/index.js';
 const io=new NodeIO().registerExtensions(ALL_EXTENSIONS),doc=await io.read('apps/web/public/models/su7-runtime.glb');
 const original=await io.readBinary(new Uint8Array(execFileSync('git',['show','16cb5b9:apps/web/public/models/su7-runtime.glb'],{maxBuffer:20*1024*1024})));
@@ -18,7 +18,14 @@ for(const r of audit.records){
  for(const p of pts)vertexMax=Math.max(vertexMax,bvh.closestPointToPoint(p,{}).distance);
  for(let i=0;i<pts.length;i+=3){const p=pts[i].clone().add(pts[i+1]).add(pts[i+2]).multiplyScalar(1/3);centroidMax=Math.max(centroidMax,bvh.closestPointToPoint(p,{}).distance);}
  assert.ok(vertexMax<.0015,`Floating vertex ${r.node}: ${vertexMax}`);assert.ok(centroidMax<.0015,`Floating connector ${r.node}: ${centroidMax}`);
- records.push({node:r.node,source:r.source,parent:r.parent,triangles:pts.length/3,maxVertexClearanceMm:vertexMax*1000,maxTriangleCenterClearanceMm:centroidMax*1000,trimmedGapFaces:r.trimmedGapFaces});
+ let edgeDeviation=null;
+ if(r.trimEdgePath){
+  const path=r.trimEdgePath.map(p=>new Vector3().fromArray(p)),segments=path.slice(1).map((p,i)=>new Line3(path[i],p));
+  edgeDeviation=Math.max(...pts.map(p=>Math.min(...segments.map(s=>s.closestPointToPoint(p,true,new Vector3()).distanceTo(p)))));
+  assert.ok(edgeDeviation<.0016,`Misaligned trim ${r.node}: ${edgeDeviation}`);
+  assert.equal(r.trimmedGapFaces,0,`Broken trim ${r.node}`);
+ }
+ records.push({node:r.node,source:r.source,parent:r.parent,triangles:pts.length/3,maxVertexClearanceMm:vertexMax*1000,maxTriangleCenterClearanceMm:centroidMax*1000,trimmedGapFaces:r.trimmedGapFaces,maxNativeEdgeDeviationMm:edgeDeviation===null?null:edgeDeviation*1000});
 }
 function signature(node){return createHash('sha256').update(JSON.stringify({world:node.getWorldMatrix(),parent:node.getParentNode()?.getName(),primitives:node.getMesh()?.listPrimitives().map(p=>({attributes:p.listSemantics().map(s=>[s,[...p.getAttribute(s).getArray()]]),indices:p.getIndices()?[...p.getIndices().getArray()]:null,material:p.getMaterial()?.getName(),targets:p.listTargets().map(t=>[...t.getAttribute('POSITION').getArray()])}))})).digest('hex');}
 const unchanged=original.getRoot().listNodes().filter(n=>!audit.oldNodesReplaced.includes(n.getName()));for(const n of unchanged)assert.equal(signature(nodes.find(v=>v.getName()===n.getName())),signature(n),'Source car changed: '+n.getName());

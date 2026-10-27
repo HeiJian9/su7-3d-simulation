@@ -13,7 +13,8 @@
       "triangles": 214,
       "maxVertexClearanceMm": 0.5500672228478779,
       "maxTriangleCenterClearanceMm": 0.5798805941923765,
-      "trimmedGapFaces": 0
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_HANDLE_FL",
@@ -22,7 +23,8 @@
       "triangles": 94,
       "maxVertexClearanceMm": 0.5500672062519271,
       "maxTriangleCenterClearanceMm": 0.5612209195938344,
-      "trimmedGapFaces": 1
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_DOOR_FR",
@@ -31,7 +33,8 @@
       "triangles": 214,
       "maxVertexClearanceMm": 0.5500695900631605,
       "maxTriangleCenterClearanceMm": 0.5861093804012545,
-      "trimmedGapFaces": 0
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_HANDLE_FR",
@@ -40,7 +43,8 @@
       "triangles": 62,
       "maxVertexClearanceMm": 0.5500649130520019,
       "maxTriangleCenterClearanceMm": 0.5646664472462056,
-      "trimmedGapFaces": 1
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_DOOR_RL",
@@ -49,7 +53,8 @@
       "triangles": 136,
       "maxVertexClearanceMm": 0.5500592008682582,
       "maxTriangleCenterClearanceMm": 0.5827978269942512,
-      "trimmedGapFaces": 0
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_HANDLE_RL",
@@ -58,7 +63,8 @@
       "triangles": 72,
       "maxVertexClearanceMm": 0.5500475343976663,
       "maxTriangleCenterClearanceMm": 0.634278247763371,
-      "trimmedGapFaces": 2
+      "trimmedGapFaces": 2,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_DOOR_RR",
@@ -67,7 +73,8 @@
       "triangles": 130,
       "maxVertexClearanceMm": 0.5500576163164652,
       "maxTriangleCenterClearanceMm": 0.5697925895685233,
-      "trimmedGapFaces": 0
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_HANDLE_RR",
@@ -76,43 +83,48 @@
       "triangles": 72,
       "maxVertexClearanceMm": 0.5500691038259218,
       "maxTriangleCenterClearanceMm": 0.5599227632746427,
-      "trimmedGapFaces": 2
+      "trimmedGapFaces": 2,
+      "maxNativeEdgeDeviationMm": null
     },
     {
       "node": "AMBIENT_DASHBOARD",
       "source": "Mesh53",
       "parent": "SU7_ROOT",
-      "triangles": 130,
-      "maxVertexClearanceMm": 0.5500629902551133,
-      "maxTriangleCenterClearanceMm": 0.5640783018601293,
-      "trimmedGapFaces": 5
-    },
-    {
-      "node": "AMBIENT_CONSOLE_LEFT",
-      "source": "Mesh53",
-      "parent": "SU7_ROOT",
-      "triangles": 120,
-      "maxVertexClearanceMm": 0.5500520216041025,
-      "maxTriangleCenterClearanceMm": 0.680415120028179,
-      "trimmedGapFaces": 6
+      "triangles": 50,
+      "maxVertexClearanceMm": 0.5500536649726373,
+      "maxTriangleCenterClearanceMm": 0.5500504102462399,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.3200918301764517
     },
     {
       "node": "AMBIENT_DASHBOARD_RIGHT",
       "source": "Mesh53",
       "parent": "SU7_ROOT",
-      "triangles": 140,
-      "maxVertexClearanceMm": 0.5500781472310841,
-      "maxTriangleCenterClearanceMm": 0.57322813796518,
-      "trimmedGapFaces": 0
+      "triangles": 256,
+      "maxVertexClearanceMm": 0.5500469267991084,
+      "maxTriangleCenterClearanceMm": 0.5500395442421924,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.3200890225397404
+    },
+    {
+      "node": "AMBIENT_CONSOLE_LEFT",
+      "source": "Mesh59",
+      "parent": "SU7_ROOT",
+      "triangles": 106,
+      "maxVertexClearanceMm": 0.550028598922316,
+      "maxTriangleCenterClearanceMm": 0.5791718961341441,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.1858437583394645
     },
     {
       "node": "AMBIENT_CONSOLE_RIGHT",
-      "source": "Mesh53",
+      "source": "Mesh59",
       "parent": "SU7_ROOT",
-      "triangles": 120,
-      "maxVertexClearanceMm": 0.5500644581851634,
-      "maxTriangleCenterClearanceMm": 0.6843960069313441,
-      "trimmedGapFaces": 6
+      "triangles": 106,
+      "maxVertexClearanceMm": 0.5500382056763435,
+      "maxTriangleCenterClearanceMm": 0.571628012720734,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.1858569590712218
     }
   ]
 }

@@ -78,9 +78,22 @@ for c in ['fl','fr','rl','rr']:
  pocket=[(sign*.744,.682,.08),(sign*.744,.682,-.13),(sign*.772,.695,-.31)] if front else [(sign*.697,.707,.85),(sign*.706,.704,.67),(sign*.711,.753,.54)]
  ribbon('AMBIENT_HANDLE_'+c.upper(),handle,pocket,parent,width=.004,dim=True,preferred=(-sign,0,0))
 
-for side,sign in [('LEFT',-1),('RIGHT',1)]:
- ribbon('AMBIENT_DASHBOARD' if sign<0 else 'AMBIENT_DASHBOARD_RIGHT','Mesh53',[(sign*.77,.94,-.64),(sign*.65,.94,-.63),(sign*.43,.94,-.63),(sign*.20,.93,-.63)],preferred=(0,0,1))
- ribbon('AMBIENT_CONSOLE_'+side,'Mesh53',[(sign*.18,.56,-.43),(sign*.18,.52,-.25),(sign*.18,.49,-.05),(sign*.18,.48,.10)],width=.003,dim=True,preferred=(sign,0,0))
+# Use the original continuous trim edge, not nearest points from a guessed line
+# across the broad dashboard skin. The instrument aperture remains a real gap.
+for name,indices in [('AMBIENT_DASHBOARD',[8712,8710,8707]),('AMBIENT_DASHBOARD_RIGHT',[8728,8726,8723,8721,8719,8717,8713,8714])]:
+ ob=bpy.data.objects['Mesh53'];path=[rt(ob.matrix_world@ob.data.vertices[i].co) for i in indices]
+ path=[[p[0],p[1]-.00214,p[2]] for p in path]
+ ribbon(name,'Mesh53',path,width=.0024,preferred=(0,0,1))
+ records[-1]['sourceEdgeVertices']=indices
+ records[-1]['trimEdgePath']=path
+ assert records[-1]['seedMaxProjection']<.001,name
+# Centre-console side rails follow the original raised trim around the tray.
+for side,indices in [('LEFT',[12,15,17,18,20]),('RIGHT',[40,39,41,42,44])]:
+ ob=bpy.data.objects['Mesh59'];path=[rt(ob.matrix_world@ob.data.vertices[i].co) for i in indices]
+ ribbon('AMBIENT_CONSOLE_'+side,'Mesh59',path,width=.002,dim=True,preferred=(0,1,0))
+ records[-1]['sourceEdgeVertices']=indices
+ records[-1]['trimEdgePath']=path
+ assert records[-1]['seedMaxProjection']<.001,side
 
 lights=[]
 for c in ['fl','fr','rl','rr']:
@@ -90,7 +103,7 @@ for sign in [-1,1]:lights.append({'parent':'SU7_ROOT','position':[sign*.4,.49,-.
 lights.append({'parent':'SU7_ROOT','position':[.32,.91,-.56],'distance':.6,'gain':.16})
 lights.append({'parent':'SU7_ROOT','position':[0,.51,-.06],'distance':.4,'gain':.12})
 mapping['materialRoles']['ambient'].update({'materials':[led.name,wash.name],'washMaterial':wash.name,'nodes':nodes,'replacedNodes':old_nodes,'lights':lights,'lightPositions':[p['position'] for p in lights if p['parent']=='SU7_ROOT'],'radius':None,'note':'12 surface-fitted narrow ribbon diffusers; native door upper rails, handle undersides, dashboard and console. Footwells use concealed local wash illumination, with no visible added glovebox bars. Gaps between original surface islands are not bridged. Eight short-range wash lights; four follow their actual doors. Source car surfaces unchanged.','audit':'docs/assets/cabin-lighting-audit.json'})
-mapping['version']='I6.6-cabin-lighting';root['cabin_lighting_version']='surface_fitted_ribbons_v1';root['increment']='I6 cabin lighting refinement'
+mapping['version']='I6.7-native-trim-lighting';root['cabin_lighting_version']='native_trim_edges_v2';root['increment']='I6 native cabin trim and signal scattering'
 report={'sourceRevision':'16cb5b9','oldNodesReplaced':old_nodes,'sourceGeometryModified':False,'ribbonCount':len(nodes),'lights':lights,'records':records}
 (ROOT/'docs/assets/cabin-lighting-audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
 for file in ['docs/assets/vehicle-mapping.json','apps/web/public/models/vehicle-mapping.json']:(ROOT/file).write_text(json.dumps(mapping,indent=2)+'\n',encoding='utf8')

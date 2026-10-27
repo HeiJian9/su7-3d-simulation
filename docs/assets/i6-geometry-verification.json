@@ -1,5 +1,5 @@
 {
-  "stage": "I6.6-cabin-lighting",
+  "stage": "I6.7-native-trim-lighting",
   "source": "actual exported GLB; no proxy animation",
   "doorRecords": [
     {

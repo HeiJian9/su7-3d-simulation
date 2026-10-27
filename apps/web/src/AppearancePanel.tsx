@@ -8,7 +8,7 @@ export function AppearancePanel(){
   return <div className="component-content appearance-panel">
     <section>
       <div className="component-row"><strong>车灯</strong><button className="scene-light-toggle" aria-pressed={night} onClick={()=>useScene.getState().setNight(!night)}>{night?'夜间观察':'柔光展厅'}</button></div>
-      <p>切换夜间观察，比较近远光与空气中的光束。<button className="scene-light-toggle" onClick={()=>useScene.getState().go('lighting')}>照射视角</button></p>
+      <p>切换夜间观察，查看前灯、转向灯与氛围灯的空气散射。<button className="scene-light-toggle" onClick={()=>useScene.getState().go('lighting')}>照射视角</button></p>
       <div className="mode-buttons">{(['off','low','high'] as const).map((mode,i)=><button key={mode} disabled={!ready} aria-pressed={s.lights.headlights===mode} onClick={()=>send({component:'headlights',targets:['front'],operation:'set',property:'mode',value:mode})}>{['关闭前灯','近光灯','远光灯'][i]}</button>)}</div>
       <div className="mode-buttons">{(['off','left','right','hazard'] as const).map((mode,i)=><button key={mode} disabled={!ready} aria-pressed={s.lights.turnSignal===mode} onClick={()=>send({component:'turnSignal',targets:['vehicle'],operation:'set',property:'mode',value:mode})}>{['关闭转向','左转向灯','右转向灯','双闪'][i]}</button>)}</div>
       <div className="component-row"><span>丁达尔光束</span><button className="scene-light-toggle" aria-label="丁达尔光束" aria-pressed={hazeEnabled} onClick={()=>useScene.getState().setHazeEnabled(!hazeEnabled)}>{hazeEnabled?'已开启':'已关闭'}</button></div>

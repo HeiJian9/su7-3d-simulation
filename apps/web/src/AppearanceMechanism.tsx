@@ -32,12 +32,15 @@ export function AppearanceMechanism({model}:{model:Group}){
     actualValues['headlights:front:mode']=state.lights.headlights;
     if(blink.current.mode!==state.lights.turnSignal)blink.current={mode:state.lights.turnSignal,time:0};else blink.current.time+=Math.min(delta,.1);
     const pulse=blink.current.time%.72<.36;const signals={left:pulse&&(state.lights.turnSignal==='left'||state.lights.turnSignal==='hazard'),right:pulse&&(state.lights.turnSignal==='right'||state.lights.turnSignal==='hazard')};
+    // The volume pass consumes this very frame's pulse; no second blink clock.
+    b.root.userData.turnSignalPulse=signals;
     for(const side of ['left','right'] as const)for(const name of roles.turnSignals[side].materials){const mat=b.materials.get(name)!;mat.emissive.set('#ffd000');mat.emissiveIntensity=signals[side]?2.2:0;mat.color.set(signals[side]?'#ffd000':`#${b.offColors.get(name)!}`);}
     actualValues['turnSignal:vehicle:mode']=state.lights.turnSignal;
     const target=state.ambient.brightness;brightness.current=Math.abs(brightness.current-target)<delta*1.5?target:brightness.current+Math.sign(target-brightness.current)*delta*1.5;
     const power=state.ambient.enabled?brightness.current:0,ambient=b.materials.get(roles.ambient.material)!;
     for(const name of roles.ambient.materials){const mat=b.materials.get(name)!;mat.emissive.set(state.ambient.color);mat.emissiveIntensity=power*(name===roles.ambient.washMaterial ? .6 : 1.5);mat.color.set(power>0?state.ambient.color:'#08090c');}
-    b.ambientLights.forEach(light=>{light.color.set(state.ambient.color);light.intensity=power*Number(light.userData.gain);});
+    b.ambientLights.forEach(light=>{light.color.set(state.ambient.color);light.intensity=power*Number(light.userData.gain)*2.4;});
+    b.root.userData.ambientScatter={power,color:ambient.emissive,lights:b.ambientLights};
     actualValues['ambient:cabin:enabled']=state.ambient.enabled;actualValues['ambient:cabin:color']=state.ambient.color;actualValues['ambient:cabin:brightness']=brightness.current;
     completeExecutions();interval.current+=delta;
     if(interval.current>.10){interval.current=0;setCabin(camera.position.distanceTo(new Vector3(0,1,0).applyMatrix4(model.matrixWorld))<2.2);

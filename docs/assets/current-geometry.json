@@ -1,10 +1,10 @@
 {
-  "stage": "I6.6-cabin-lighting",
-  "sha256": "1948a0d8098be447e1b89f91b48ee68bbeeff8a0ef32f4893e5582e3ea534446",
-  "blendSha256": "02a76184d6c654967ab9fea43f213774ef65573a6a15df549a54b74dd296c4f2",
+  "stage": "I6.7-native-trim-lighting",
+  "sha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977",
+  "blendSha256": "6f85f8c765ced5a2b074d4641b632240ee25fdd5af32e368a62378ce6459f45b",
   "nodes": 128,
   "meshes": 116,
-  "triangles": 95793,
+  "triangles": 95801,
   "materials": 40,
   "textures": 15
 }

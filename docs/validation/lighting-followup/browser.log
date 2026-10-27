@@ -1,0 +1,19 @@
+
+Running 10 tests using 1 worker
+
+(node:25924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (9.9s)
+  ok  2 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (2.6s)
+  ok  3 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (13.8s)
+  ok  4 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.5s)
+  ok  5 [Edge-1920x1080] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (6.1s)
+(node:24584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (10.0s)
+  ok  7 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and disappears with headlights off (2.4s)
+  ok  8 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (11.6s)
+  ok  9 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.1s)
+  ok 10 [Edge-1366x768] › tests\e2e\native-lamps.spec.ts:11:1 › native projector and inner rear modules emit yellow, restore original colours and follow the real trunk (5.7s)
+
+  10 passed (1.2m)

@@ -1,0 +1,37 @@
+{
+  "version": "0.6.5",
+  "stageTag": "v0.6.5-lighting-followup",
+  "asset": {
+    "stage": "I6.7-native-trim-lighting",
+    "sha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977",
+    "blendSha256": "6f85f8c765ced5a2b074d4641b632240ee25fdd5af32e368a62378ce6459f45b",
+    "nodes": 128,
+    "meshes": 116,
+    "triangles": 95801,
+    "materials": 40,
+    "textures": 15
+  },
+  "browser": {
+    "startTime": "2026-10-27T14:47:20.845Z",
+    "duration": 71452.207,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTests": 71,
+  "typecheck": "passed",
+  "build": "passed",
+  "lint": "passed",
+  "actualRenderedPixelComparisons": true,
+  "sourceNodesUnchanged": 116,
+  "dashboardAndConsoleEdgeVerification": "4 continuous ribbons; actual exported vertices within 1.321mm of native trim path",
+  "productionErrors": [],
+  "productionFpsHud": [
+    "240\nFPS\nWEBGL 2",
+    "240\nFPS\nWEBGL 2",
+    "240\nFPS\nWEBGL 2"
+  ],
+  "realSpeechTestedThisTurn": false,
+  "I7Started": false
+}

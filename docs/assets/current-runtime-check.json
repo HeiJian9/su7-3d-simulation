@@ -1,6 +1,6 @@
 {
-  "sha256": "1948a0d8098be447e1b89f91b48ee68bbeeff8a0ef32f4893e5582e3ea534446",
-  "bytes": 6568536,
+  "sha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977",
+  "bytes": 6567292,
   "nodes": 128,
   "meshes": 116,
   "materials": 40,
@@ -127,7 +127,7 @@
     }
   ],
   "animations": 0,
-  "triangles": 95793,
+  "triangles": 95801,
   "extensions": [
     "KHR_materials_clearcoat",
     "KHR_materials_specular"

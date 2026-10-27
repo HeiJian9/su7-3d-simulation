@@ -132,5 +132,12 @@
     "geometry": "docs/validation/cabin-lighting/geometry.json",
     "realSpeechRevalidated": false,
     "ribbons": 12
+  },
+  "lightingFollowup": {
+    "version": "0.6.5",
+    "report": "docs/LIGHTING_FOLLOWUP.md",
+    "browserPassed": 10,
+    "realSpeech": false,
+    "assetSha256": "670075ff0bd823c76bfb13d32c56feaca6697e5c2a7f8d28bb456c02873c0977"
   }
 }
