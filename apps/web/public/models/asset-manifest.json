@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
-  "bytes": 6966520,
+  "sha256": "4e2be993e0b2ad99f6f5112be838489260580916e96e45d1e68bb9b823db87ce",
+  "bytes": 6547164,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I6.3-trunk-correction 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · I6.4-native-trunk-seams 增强资产 · 原车几何与局部补建"
 }

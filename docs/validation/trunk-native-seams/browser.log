@@ -1,0 +1,23 @@
+
+Running 14 tests using 1 worker
+
+(node:9536) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (4.2s)
+  ok  2 [Edge-1920x1080] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (5.1s)
+  ok  3 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (20.9s)
+  ok  4 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (36.5s)
+  ok  5 [Edge-1920x1080] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (9.1s)
+  ok  6 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (7.5s)
+  ok  7 [Edge-1920x1080] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (11.8s)
+(node:13704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [Edge-1366x768] › tests\e2e\appearance.spec.ts:5:1 › I5 paint whitelist preserves non-paint materials, seven presets and a custom color (3.9s)
+  ok  9 [Edge-1366x768] › tests\e2e\appearance.spec.ts:12:1 › I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes (4.9s)
+  ok 10 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:6:1 › I4 four independent original doors and trunk reach zero half full, reverse and stay isolated (20.9s)
+  ok 11 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:18:1 › I4 every window keeps its local travel at all three door angles; rules and clarify use the same state (38.0s)
+  ok 12 [Edge-1366x768] › tests\e2e\mechanical.spec.ts:29:1 › I4 labelled model hotspots act on real parts; canvas drag cannot activate a part (9.2s)
+  ok 13 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (7.1s)
+  ok 14 [Edge-1366x768] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (12.0s)
+
+  14 passed (3.2m)

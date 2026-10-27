@@ -6,7 +6,7 @@ const mapping=JSON.parse(readFileSync(new URL('../../apps/web/src/data/vehicle-m
 const pose=(page:Page)=>page.locator('canvas').getAttribute('data-trunk-rear-openness').then(Number);
 async function command(page:Page,text:string){await page.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(text);await page.getByRole('button',{name:'发送',exact:false}).click();}
 
-test('corrected complete trunk lid: fixed rear close-ups, actual angles, hotspot and interruption',async({page},info)=>{
+test('native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption',async({page},info)=>{
   const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
   await mkdir('docs/assets/trunk-correction',{recursive:true});
   await page.goto('/');await expect(page.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled();
@@ -24,6 +24,16 @@ test('corrected complete trunk lid: fixed rear close-ups, actual angles, hotspot
     expect(matrix[6]).toBeCloseTo(Math.sin(mapping.trunk.maxAngle*value),5);
     records.push({value,matrix});
     await page.screenshot({path:`docs/assets/trunk-correction/browser-${label}-${info.project.name}.png`});
+    if(value===0){
+      await page.mouse.move(box.x+box.width*.55,box.y+box.height*.45);
+      for(let i=0;i<2;i++){await page.mouse.wheel(0,-260);await page.waitForTimeout(80);}
+      // Aim at the lower panel too, keeping its whole original rounded seam
+      // above the toolbar on the short viewport.
+      await page.mouse.down();await page.mouse.move(box.x+box.width*.55,box.y+box.height*.45+55,{steps:8});await page.mouse.up();
+      await page.screenshot({path:`docs/assets/trunk-correction/browser-closed-close-${info.project.name}.png`});
+      await page.mouse.down();await page.mouse.move(box.x+box.width*.55,box.y+box.height*.45,{steps:8});await page.mouse.up();
+      for(let i=0;i<2;i++){await page.mouse.wheel(0,260);await page.waitForTimeout(80);}
+    }
   }
   // A closer look into the actual cargo opening, without replacing model data.
   await page.mouse.move(box.x+box.width*.55,box.y+box.height*.45);await page.mouse.wheel(0,-150);await page.waitForTimeout(150);
@@ -37,5 +47,5 @@ test('corrected complete trunk lid: fixed rear close-ups, actual angles, hotspot
   await command(page,'后备箱关闭');await expect.poll(()=>pose(page)).toBe(0);
   await page.mouse.move(box.x+box.width*.55,box.y+box.height*.45);await page.mouse.down();await page.mouse.move(box.x+box.width*.65,box.y+box.height*.47,{steps:10});await page.mouse.up();expect(await pose(page)).toBe(0);
   expect(errors).toEqual([]);
-  await info.attach('corrected-trunk-runtime-poses',{body:JSON.stringify({records,intermediate,errors,geometryProof:'docs/validation/trunk-correction/geometry.json',microphoneTest:false},null,2),contentType:'application/json'});
+  await info.attach('native-trunk-runtime-poses',{body:JSON.stringify({records,intermediate,errors,geometryProof:'docs/validation/trunk-native-seams/geometry.json',microphoneTest:false},null,2),contentType:'application/json'});
 });

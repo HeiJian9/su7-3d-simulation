@@ -180,47 +180,47 @@
   "afterSourceArea": {
     "Paint5": {
       "area": 3.6818602730970538,
-      "delta": -3.31098051198353e-08
+      "delta": -3.31098051198353e-8
     },
     "Mesh17": {
       "area": 0.006424760059232426,
-      "delta": 2.8092443926652777e-09
+      "delta": 2.8092443926652777e-9
     },
     "Mesh18": {
       "area": 0.1040628739287115,
-      "delta": -2.173702995378335e-09
+      "delta": -2.173702995378335e-9
     },
     "Mesh19": {
       "area": 0.0024269677812185364,
-      "delta": 2.0588117877196055e-09
+      "delta": 2.0588117877196055e-9
     },
     "Mesh20": {
       "area": 0.0024259734516363096,
-      "delta": -3.868308340315707e-09
+      "delta": -3.868308340315707e-9
     },
     "Mesh21": {
       "area": 0.07842964799940662,
-      "delta": 1.7667103335838874e-08
+      "delta": 1.7667103335838874e-8
     },
     "Mesh23": {
       "area": 0.00044947787864657585,
-      "delta": 0.0
+      "delta": 0
     },
     "Mesh24": {
       "area": 3.3877605501772585,
-      "delta": -1.3369249796113536e-07
+      "delta": -1.3369249796113536e-7
     },
     "Mesh25": {
       "area": 2.0874381394134485,
-      "delta": 1.597928633856327e-08
+      "delta": 1.597928633856327e-8
     },
     "Mesh58": {
       "area": 0.004310251644710661,
-      "delta": 0.0
+      "delta": 0
     },
     "Mesh71": {
       "area": 0.22348805991489273,
-      "delta": -7.155304571071497e-08
+      "delta": -7.155304571071497e-8
     }
   },
   "parts": [
@@ -282,7 +282,7 @@
       1.9800000190734863
     ],
     [
-      5.71538203075761e-06,
+      0.00000571538203075761,
       1.1009578704833984,
       1.9791451692581177
     ],
@@ -327,7 +327,7 @@
       2.471325159072876
     ],
     [
-      -6.146728992462158e-07,
+      -6.146728992462158e-7,
       0.6299999952316284,
       2.489943265914917
     ],
@@ -365,7 +365,7 @@
   "trunk": {
     "node": "TRUNK_REAR_ROOT",
     "hinge": [
-      0.0,
+      0,
       1.0750000476837158,
       1.965000033378601
     ],
@@ -450,5 +450,8 @@
     "flushFlange": "TRUNK_BODY_FLANGE",
     "repairNote": "Complete deck and badged rear fascia travel together. Previous raised wire ring / shallow box removed; formed underside, edge returns and deep carpet-lined opening added.",
     "reference": "https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_12_2.jpg"
-  }
+  },
+  "historicalAssetVersion": "0.6.1",
+  "seamAppearanceConclusionWithdrawn": true,
+  "supersededBy": "docs/TRUNK_CORRECTION.md"
 }

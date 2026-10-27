@@ -1,0 +1,11 @@
+{
+  "reference": "Original native source panels, helpers hidden, same camera and lighting",
+  "actual": "Current restored model with inset helper geometry",
+  "rgbMeanAbsoluteDifference": 0.0013043290043290043,
+  "largeNewBlackPixels": 0,
+  "pixelThreshold": {
+    "referenceMeanGreaterThan": 100,
+    "actualMeanLessThan": 40
+  },
+  "supplementalOnly": "Actual GLB original-triangle matching and exterior first-hit checks are separate requirements"
+}

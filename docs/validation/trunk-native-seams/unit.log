@@ -1,0 +1,12 @@
+
+> su7-interaction-lab@0.6.2 test
+> vitest run
+
+
+ RUN  v4.1.12 D:/code/Projects/3D simulation
+
+
+ Test Files  7 passed (7)
+      Tests  71 passed (71)
+   Start at  15:58:21
+   Duration  711ms (transform 555ms, setup 0ms, import 1.78s, tests 396ms, environment 1ms)

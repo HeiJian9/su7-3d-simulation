@@ -39,5 +39,8 @@
   "developmentHarnessCorrections": [
     "Standalone test JSON import changed to fs parsing for Node ESM compatibility",
     "Production smoke request context explicitly given localhost baseURL"
-  ]
+  ],
+  "historicalAssetVersion": "0.6.1",
+  "seamAppearanceConclusionWithdrawn": true,
+  "supersededBy": "docs/TRUNK_CORRECTION.md"
 }

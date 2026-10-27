@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:10084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (14.7s)
+(node:16924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\trunk-correction.spec.ts:9:1 › native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption (14.3s)
+
+  2 passed (31.6s)

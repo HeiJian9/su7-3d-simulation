@@ -1,5 +1,5 @@
 {
-  "stage": "I6.3-trunk-correction",
+  "stage": "I6.4-native-trunk-seams",
   "source": "actual exported GLB; no proxy animation",
   "doorRecords": [
     {
@@ -163,11 +163,11 @@
       },
       {
         "name": "TRUNK_INNER_SKIN",
-        "y": 0.8263037309516379
+        "y": 0.8297081193616727
       },
       {
         "name": "TRUNK_INNER_CAVITY",
-        "y": 0.36500000953674305
+        "y": 0.4082602231311624
       },
       {
         "name": "Mesh22",
@@ -177,7 +177,7 @@
     "open": [
       {
         "name": "TRUNK_INNER_CAVITY",
-        "y": 0.36500000953674305
+        "y": 0.4082602231311624
       },
       {
         "name": "Mesh22",
@@ -202,7 +202,6 @@
     "ambientStrips": 5,
     "independentMaterialNames": [
       "AMBIENT_CABIN_LED",
-      "TRUNK_FLUSH_SEAL",
       "SU7_PAINT_BODY",
       "Mesh32Mtl",
       "Mesh13Mtl",
@@ -234,6 +233,7 @@
       "Mesh68Mtl",
       "Mesh71Mtl",
       "Mesh72Mtl",
+      "TRUNK_FLUSH_SEAL",
       "TRUNK_FORMED_CARPET",
       "TRUNK_HINGE_FINISH",
       "Mesh23Mtl",

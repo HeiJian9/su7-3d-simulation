@@ -1,0 +1,9 @@
+{
+  "sourceRevision": "fbd609b",
+  "assetVersion": "0.6.1",
+  "check": "Original uncut Paint5 triangle count",
+  "originalTriangles": 8314,
+  "previousAssetTriangles": 15020,
+  "correctlyRejected": true,
+  "modelCopySaved": false
+}

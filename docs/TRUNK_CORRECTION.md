@@ -1,52 +1,47 @@
-# SU7 后备箱盖板与内腔修正
+# SU7 后备箱：恢复原生接缝
 
-2026-10-27，版本 0.6.1；基于 `b19870f` / `v0.6.0-i4-i6-functional` 原地修正。没有替换指定 SU7，也没有复制旧工程。历史版本只由 Git 保存。
+2026-10-27，当前版本 **0.6.2**，基于 `fbd609b` 修正。0.6.1 的尾箱接缝外观结论撤回；当时开度和状态测试通过，不能证明分件符合原车模。历史源码、模型及报告通过 Git 保存，没有复制旧工程。
 
-用户指出的问题成立。旧分件将统一高度 `Y ≥ 0.812 m` 当作尾盖下边界，只抬起上方盖板；带“北京小米 / SU7 Max”的下方外板与三个铭牌留在固定车身。补建的密封圈没有依附实际开口，浅盒内腔的后壁又高到 `Y=0.805 m`，形成外露线框和矩形挡板。旧中心射线只证明某条射线可以进入内腔，没有证明完整盖板、边界和外观正确。原尾箱外观通过结论撤回，I4 历史报告与验收清单已明确更正。
+## 根因与修改
 
-## 实际修改
+用户指出的黑色尖片、底部黑斑和错误分界确实存在。前两次使用人为设定的空间截面切割 Paint5 和灯组，破坏了原组件边界，又以凸包封面／外伸内衬回边补切口。部分补面穿出原车身表面，形成与原有接缝不一致的黑线。原模型本来已有完整的面片岛，之前没有正确利用。
 
-1. 将旧 `TRUNK_*` 原始分片与对应静态分片在关闭姿态重新合并，保留原 UV／材质，再按三维盖板范围切开。保留原上盖、下方铭牌面板、中央灯条与相关饰件，统一归入 `TRUNK_REAR_ROOT`。
-2. `Mesh52`（SU7）、`Mesh55`（北京小米）、`Mesh56`（Max）及原 `TRUNK_Mesh58`（xiaomi）随盖板移动。两侧灯翼和保险杠保持固定。新切开的灯壳补端面，转向段重新贴合各自灯罩。
-3. 删除旧 `TRUNK_SEAL` 和旧内皮／浅盒。重新补建盖内覆盖板、回边、向后排座椅下方延伸的开放内腔、贴合车身的法兰／密封边及两侧弯臂。原扰流板机构保留，内侧覆盖板位于其下方。
-4. 展示铰链位置约 `(0, 1.075, 1.965) m`，最大转角校准为 100°；手动、文字和既有语音仍驱动同一真实盖板状态。更新了模型内热点。
+本次从 Git 的原始 I3 导入资产恢复尾部 11 个源网格，按**完整原生面片岛**归组，切面操作为零。保留其顶点、UV 和角点法线；恢复 Paint5 原有圆角下沿及灯组天然分界。原生下方铭牌面板、中央灯组、上盖和相关饰件共同抬起，两侧灯翼／保险杠／后挡玻璃固定。门窗及已校准的双雨刷保留。
 
-外观参考为用户红线及 [小米 SU7 官方后备箱图片](https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_12_2.jpg)。内衬、弯臂和角度为本项目展示拟合，仍是简化结构，不声称厂商 CAD 或内饰细节完全复刻。
+移除 `TRUNK_LID_EDGE_RETURNS`、两侧 `TRUNK_LAMP_END_*` 及 `BODY_REAR_LAMP_END_*` 等外露补面。内盖由原生底板轮廓向内收缩，内腔／密封边退入原外壳内部。删除旧人为切割修补脚本，使用 `scripts/repair_trunk_seams.py`；它已烘焙并有重复执行保护。恢复期间临时读取的旧 Blender 文件已自动删除，唯一工作工程仍为 `su7-enhanced.blend`。
 
-## 实际验证
+## 实际证据
 
-| 验证 | 结果与证据 |
+| 检查 | 实际结果 |
 |---|---|
-| 完整下沿／铭牌运动 | 实际导出 GLB 的三条后向射线，关闭时先命中盖板或铭牌；全开后先命中前方深内腔，约 `Z=1.24–1.29 m`，原下方面板没有留在车身。四个铭牌半开位移 0.42–0.54 m，全开位移 0.76–0.99 m。 |
-| 固定车身与其他机构 | 101 个无关节点的顶点、索引、UV、雨刷形态、世界矩阵及父层级签名与修正前一致；打开盖板时固定部件世界位置不变；保险杠射线仍命中固定 Paint5。 |
-| 开口与密封边 | 旧悬空环不存在。替换密封圈所有导出顶点到支撑法兰最大距离约 4.44 mm；内腔最低约 0.365 m，向前延伸至 Z≈1.17 m。新旧原始表面总面积差最大约 `1.34e−7 m²`，未用删除外壳或重叠外壳冒充开口。 |
-| 浏览器专项 | Edge 1920×1080、1366×768，2 项通过：固定镜头 0／50／100%、实际旋转矩阵、真实热点点击、中途改向及镜头拖动隔离。 |
-| 功能回归 | 两分辨率 18 项通过：四门、36 种门窗组合、规则澄清、灯光、车漆保护、氛围灯、模型哈希、旋转／平移／缩放／自由移动／座舱／重置。 |
-| 工程 | 71 项单元测试通过；类型检查、构建、ESLint 通过。实际运行雨刷顶点／形态扫掠复核通过，15 张 Blender 打包纹理均可脱离原路径解码。 |
+| 原始面片一致性 | 导出的固定／活动尾部合计 **21,308 个三角面**与原始 I3 GLB 逐面匹配；顶点位置和 UV 最大误差均为 0；法线方向最大差约 0.039°，在 Blender 自定义法线编码精度内。原停放雨刷 536 个源面被排除，没有恢复到当前雨刷下面。 |
+| 原生边界 | Paint5 的 8,314 个原始三角面完整保留，未加入人为切线；圆角铭牌板、上盖及灯组按完整岛移动。原生归属和源面记录见审查 JSON。 |
+| 关闭外表面 | 正后、左右后和后上四个视角，共 **18,497 条命中原尾箱外表面的射线**，没有被新增内衬／密封片抢先遮住。检查区域 Y≥0.60 m、Z≥1.90 m；其他车身和穿过原有间隙的远处内侧命中另计，不冒充尾箱外表面。 |
+| 关闭图对照 | 相同镜头、相同照明，比较原生面片与加入内衬的模型，RGB 平均绝对差约 0.0013/255；原图均值>100 而修后<40 的新增黑色像素为 0。该图像检查仅为补充，另有实际 GLB 几何和射线检查。 |
+| 其他部件 | **101 个无关节点**的顶点、索引、UV、世界矩阵、父层级及雨刷形态数据签名不变；运行雨刷扫掠检查继续通过。 |
+| 浏览器 | Edge 1920×1080、1366×768 共 **14 项通过**：原生尾箱关闭近看／半开／全开、真实热点、中途改向、拖动隔离、四门及 36 种门窗组合、车漆保护、灯光及实际资产加载。近看图另复拍两项通过，完整下沿避开了工具栏遮挡。 |
+| 工程 | **71 项单元测试**、类型检查、构建、ESLint 通过；当前 Blender 工程的 15 张打包纹理解码通过。 |
 
-实际数值见 [导出几何检查](validation/trunk-correction/geometry.json)、[原表面分件记录](assets/trunk-correction-audit.json)、[未改部件签名](assets/trunk-correction-baseline.json)、[专项浏览器报告](validation/trunk-correction/browser.json)、[18 项回归](validation/trunk-correction/regression.json)、[Blender 打包检查](validation/trunk-correction/blend-portability.json)。没有用状态值或截图单独替代几何检查。
+结果：[实际 GLB 与原始资产对照](validation/trunk-native-seams/geometry.json)、[完整原生岛归属](assets/trunk-native-seams.json)、[14 项浏览器验证](validation/trunk-native-seams/browser.json)、[近看复拍](validation/trunk-native-seams/closeups.json)、[关闭图比较](validation/trunk-native-seams/closed-image-comparison.json)、[Blender 可携带性](validation/trunk-native-seams/blend-portability.json)、[正式服务检查](validation/trunk-native-seams/production.json)。
 
-正式 3000 服务另已检查 0.6.1 版本、下载资源哈希及三种实际开度：[正式服务检查](validation/trunk-correction/production.json)。现有 ASR／TTS 配置存在；为避免本次模型复核产生播报请求，检查时关闭了语音反馈，实际语音请求为零。正式画面：[关闭](assets/trunk-correction/production-closed.png)、[半开](assets/trunk-correction/production-half.png)、[全开](assets/trunk-correction/production-full.png)。
+另以 Git 中实际 0.6.1 资产作反例：其 Paint5 已被人为截面增面，不能通过当前原始完整三角面检查。该反例被正确拒绝，见 [negative-control.json](validation/trunk-native-seams/negative-control.json)。没有另存旧模型副本。
 
-本次没有调用或重新验证真实语音 API；没有使用预写转写或 Mock 宣称语音通过。新增部件的真人麦克风复验仍待用户方便时完成。I7 未启动。
+本次没有调用真实 ASR／TTS，正式服务检查只读取配置状态，并关闭播报反馈。新增部件的真人麦克风待验项保持未勾选，未推进 I7。
 
-## 画面证据
+## 画面
 
-修正前为用户原始问题截图：[关闭及红线](assets/trunk-correction/user-before-closed.png)、[半开及红线](assets/trunk-correction/user-before-half.png)、[外露框架](assets/trunk-correction/user-before-cargo.png)。这些图片不是修正后同机位的自动截图，不声称前后相机完全相同。
+用户问题图：[关闭时的黑片](assets/trunk-correction/user-before-closed.png)、[红线与原有轮廓](assets/trunk-correction/user-seam-guide.png)、[打开后的边界](assets/trunk-correction/user-before-half.png)。问题图与修正图的相机不同；修正后的三个开度使用固定镜头。
 
-修正后同一浏览器镜头的三个开度：
+正式浏览器：[关闭近看](assets/trunk-correction/production-closed-detail.png)、[关闭全图](assets/trunk-correction/production-closed-close.png)、[半开近看](assets/trunk-correction/production-half-detail.png)、[半开全图](assets/trunk-correction/production-half.png)、[全开](assets/trunk-correction/production-full.png)。这是实际网页截图，近看图直接使用浏览器截取区域，没有涂除黑线或修改图片内容。
 
-- 1080p：[关闭](assets/trunk-correction/browser-closed-Edge-1920x1080.png)、[半开](assets/trunk-correction/browser-half-Edge-1920x1080.png)、[全开](assets/trunk-correction/browser-full-Edge-1920x1080.png)、[内腔近看](assets/trunk-correction/browser-cargo-Edge-1920x1080.png)。
-- 1366×768：[关闭](assets/trunk-correction/browser-closed-Edge-1366x768.png)、[半开](assets/trunk-correction/browser-half-Edge-1366x768.png)、[全开](assets/trunk-correction/browser-full-Edge-1366x768.png)、[内腔近看](assets/trunk-correction/browser-cargo-Edge-1366x768.png)。
-- Blender 结构检查渲染：[关闭](assets/trunk-correction/render-closed.png)、[半开](assets/trunk-correction/render-half.png)、[全开内侧](assets/trunk-correction/render-full.png)、[内腔](assets/trunk-correction/render-cargo.png)、[侧后方](assets/trunk-correction/render-side.png)。渲染使用检查照明，与浏览器展厅照明不同。
+两种分辨率近看：[1920×1080](assets/trunk-correction/browser-closed-close-Edge-1920x1080.png)、[1366×768](assets/trunk-correction/browser-closed-close-Edge-1366x768.png)。Blender 结构检查：[原生关闭参考](assets/trunk-correction/render-closed-native-reference.png)、[关闭](assets/trunk-correction/render-closed.png)、[半开](assets/trunk-correction/render-half.png)、[全开](assets/trunk-correction/render-full.png)、[侧后](assets/trunk-correction/render-side.png)。
 
-## 资产、版本与复现
+## 当前资产与复现
 
-- 唯一 Blender 工程：`assets/source/blender/su7-enhanced.blend`，SHA-256 `ab59b98f7c0006d68d6838d9e90ecfc48e5b2396fbd65192cb3d45a4953283af`。
-- 运行 GLB：`apps/web/public/models/su7-runtime.glb`，6,966,520 字节，SHA-256 `79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520`；导出副本位于 `assets/derived/`。
-- 当前 140 节点、128 网格、110,056 三角面、39 材质、15 张纹理；机构映射在 [vehicle-mapping.json](assets/vehicle-mapping.json)，三份运行映射已同步。
-- Git 阶段标签：`v0.6.1-trunk-correction`；本轮汇总见 [summary.json](validation/trunk-correction/summary.json)。没有建立新版／旧版目录副本。
-- 修补脚本 `scripts/repair_trunk.py` 已烘焙，存在一次性保护，不能在当前工程重复运行。日常重新导出使用 `npm run asset:export`，它包含完整尾箱和无关节点保护检查。
-- 运行 `node scripts/verify-trunk-correction.mjs` 复核当前 GLB；`npx playwright test tests/e2e/trunk-correction.spec.ts` 复核浏览器。测试服务 3003 不读取本机凭据，画面中“ASR/TTS 待配置”是隔离测试环境的真实状态。
+- `.blend`：`assets/source/blender/su7-enhanced.blend`，SHA-256 `b56ec2ec49065ba6f91240554798e6134511ccfc1b53b100c642c5a1872dadcb`。
+- GLB：`apps/web/public/models/su7-runtime.glb`，6,547,164 字节，SHA-256 `4e2be993e0b2ad99f6f5112be838489260580916e96e45d1e68bb9b823db87ce`；`assets/derived/` 同步。
+- 当前 **135 节点、123 网格、95,149 三角面、39 材质、15 张纹理**。三份机构映射已同步，标记 `I6.4-native-trunk-seams`。
+- Git 阶段标签：`v0.6.2-native-trunk-seams`。日常导出只运行 `npm run asset:export`，不重复运行一次性修补脚本。导出包含原始三角面、UV／法线和外表面遮挡检查；Blender Python 错误会返回失败退出码。
+- 单独复核使用 `node scripts/verify-trunk-seams.mjs` 或原入口 `node scripts/verify-trunk-correction.mjs`；原始对照从 Git 标签 `v0.3.2-i3-complete` 读取，不额外保留旧模型副本。
 
-演示 [http://localhost:3000](http://localhost:3000)：刷新后选择“后方视角”，在“门与尾箱”页切换关闭／半开／全开；也可输入“后备箱打开一半”或点击盖板热点。等待用户体验，保留真人待验与 I7 边界。
+演示：[http://localhost:3000](http://localhost:3000)。刷新至页脚 `v0.6.2`，选择后方视角，检查关闭／半开／全开。原生外形和接缝已恢复；内衬、内腔和弯臂仍为简化展示结构，未声称原厂 CAD 精度。

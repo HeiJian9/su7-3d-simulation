@@ -1,0 +1,51 @@
+{
+  "version": "0.6.2",
+  "tag": "v0.6.2-native-trunk-seams",
+  "report": "docs/TRUNK_CORRECTION.md",
+  "previousSeamAppearanceConclusionWithdrawn": true,
+  "asset": {
+    "stage": "I6.4-native-trunk-seams",
+    "sha256": "4e2be993e0b2ad99f6f5112be838489260580916e96e45d1e68bb9b823db87ce",
+    "blendSha256": "b56ec2ec49065ba6f91240554798e6134511ccfc1b53b100c642c5a1872dadcb",
+    "nodes": 135,
+    "meshes": 123,
+    "triangles": 95149,
+    "materials": 39,
+    "textures": 15
+  },
+  "geometry": {
+    "passed": true,
+    "originalTrianglesMatched": 21308,
+    "maxPositionError": 0,
+    "maxUvError": 0,
+    "maxNormalError": 0.0006705913409834472,
+    "unrelatedNodesUnchanged": 101,
+    "exteriorSurfaceRays": 18497,
+    "exteriorHelperLeaks": 0
+  },
+  "negativeControlCorrectlyRejectsPreviousAsset": true,
+  "browser": {
+    "startTime": "2026-10-27T07:58:11.126Z",
+    "duration": 194602.417,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "closeups": {
+    "startTime": "2026-10-27T08:05:30.140Z",
+    "duration": 31594.637,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTestsPassed": 71,
+  "typecheckPassed": true,
+  "buildPassed": true,
+  "lintPassed": true,
+  "blenderPackedTextures": 15,
+  "realSpeechRevalidated": false,
+  "humanNewComponents": "pending_user_unavailable",
+  "I7Started": false
+}

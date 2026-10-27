@@ -1,5 +1,5 @@
 {
-  "version": "I6.3-trunk-correction",
+  "version": "I6.4-native-trunk-seams",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -118,7 +118,7 @@
     "hinge": [
       0.0,
       1.0750000476837158,
-      1.965000033378601
+      1.8799999952316284
     ],
     "axis": [
       1,
@@ -142,54 +142,14 @@
       "Mesh55",
       "Mesh56"
     ],
-    "footprint": [
-      [
-        -0.56,
-        1.98
-      ],
-      [
-        0.56,
-        1.98
-      ],
-      [
-        0.66,
-        2.14
-      ],
-      [
-        0.66,
-        2.27
-      ],
-      [
-        0.61,
-        2.45
-      ],
-      [
-        0.59,
-        2.52
-      ],
-      [
-        -0.59,
-        2.52
-      ],
-      [
-        -0.61,
-        2.45
-      ],
-      [
-        -0.66,
-        2.27
-      ],
-      [
-        -0.66,
-        2.14
-      ]
-    ],
     "hotspot": [
       0,
       0.86,
       2.47
     ],
-    "rearFasciaMinimumY": 0.63,
+    "nativeSeams": true,
+    "nativeSourceRevision": "v0.3.2-i3-complete",
+    "nativeSourceAudit": "docs/assets/trunk-native-seams.json",
     "requiredMovingBadges": [
       "Mesh52",
       "Mesh55",
@@ -199,8 +159,7 @@
     "liner": "TRUNK_INNER_SKIN",
     "cavity": "TRUNK_INNER_CAVITY",
     "flushFlange": "TRUNK_BODY_FLANGE",
-    "repairNote": "Complete deck and badged rear fascia travel together. Previous raised wire ring / shallow box removed; formed underside, edge returns and deep carpet-lined opening added.",
-    "reference": "https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_12_2.jpg"
+    "repairNote": "Original complete panel islands and per-corner normals/UV restored. No invented bisect planes, hull lamp caps or exterior cover-edge strips. Original rounded lower fascia and lamp splits define the moving boundary."
   },
   "changes": [
     {

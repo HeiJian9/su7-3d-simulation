@@ -1,14 +1,14 @@
 {
-  "version": "0.6.1",
+  "version": "0.6.2",
   "date": "2026-10-27",
   "acceptance": "functional_paths_verified_new_human_microphone_pending",
   "currentAsset": {
-    "stage": "I6.3-trunk-correction",
-    "sha256": "79a90cfc87317a6598406409e2abf7770d2037007f527563f426f8144ede3520",
-    "blendSha256": "ab59b98f7c0006d68d6838d9e90ecfc48e5b2396fbd65192cb3d45a4953283af",
-    "nodes": 140,
-    "meshes": 128,
-    "triangles": 110056,
+    "stage": "I6.4-native-trunk-seams",
+    "sha256": "4e2be993e0b2ad99f6f5112be838489260580916e96e45d1e68bb9b823db87ce",
+    "blendSha256": "b56ec2ec49065ba6f91240554798e6134511ccfc1b53b100c642c5a1872dadcb",
+    "nodes": 135,
+    "meshes": 123,
+    "triangles": 95149,
     "materials": 39,
     "textures": 15
   },
@@ -61,27 +61,27 @@
   },
   "historicalValidationVersion": "0.6.0",
   "trunkCorrection": {
-    "version": "0.6.1",
+    "version": "0.6.2",
     "previousAppearanceConclusionWithdrawn": true,
     "report": "docs/TRUNK_CORRECTION.md",
-    "geometry": "docs/validation/trunk-correction/geometry.json",
+    "geometry": "docs/validation/trunk-native-seams/geometry.json",
     "browser": {
-      "startTime": "2026-10-27T07:14:49.280Z",
-      "duration": 29887.597999999998,
+      "startTime": "2026-10-27T07:58:11.126Z",
+      "duration": 194602.417,
+      "expected": 14,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "closeups": {
+      "startTime": "2026-10-27T08:05:30.140Z",
+      "duration": 31594.637,
       "expected": 2,
       "skipped": 0,
       "unexpected": 0,
       "flaky": 0
     },
-    "regression": {
-      "startTime": "2026-10-27T07:06:20.617Z",
-      "duration": 212167.769,
-      "expected": 18,
-      "skipped": 0,
-      "unexpected": 0,
-      "flaky": 0
-    },
-    "production": "docs/validation/trunk-correction/production.json",
+    "production": "docs/validation/trunk-native-seams/production.json",
     "realSpeechRevalidated": false
   }
 }
