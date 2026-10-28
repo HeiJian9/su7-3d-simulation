@@ -13,4 +13,4 @@ for(const file of new Set(files)){
   try{const bytes=await readFile(file);checked++;if(credentials.some(value=>bytes.includes(Buffer.from(value))))leaks.push(file);}catch(error){if(error.code!=='ENOENT')throw Error(`Cannot inspect deliverable ${file}`);}
 }
 const report={at:new Date().toISOString(),scope:'Git tracked and nonignored untracked deliverables plus production web/server builds; local .env excluded',checked,credentialValuesPrinted:false,leakFiles:leaks,passed:leaks.length===0};
-await writeFile('docs/validation/final-polish/secret-scan.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({checked,leakFiles:leaks,passed:report.passed}));if(!report.passed)process.exitCode=1;
+await writeFile('docs/validation/physical-fixes/secret-scan.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({checked,leakFiles:leaks,passed:report.passed}));if(!report.passed)process.exitCode=1;

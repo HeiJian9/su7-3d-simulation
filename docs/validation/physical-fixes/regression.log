@@ -1,0 +1,37 @@
+
+Running 28 tests using 1 worker
+
+(node:10468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (12.7s)
+  ok  2 [Edge-1920x1080] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off (9.2s)
+  ok  3 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (4.9s)
+  ok  4 [Edge-1920x1080] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (3.6s)
+  ok  5 [Edge-1920x1080] › tests\e2e\frunk.spec.ts:8:1 › native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state (10.1s)
+  ok  6 [Edge-1920x1080] › tests\e2e\frunk.spec.ts:17:1 › wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully (2.0s)
+  ok  7 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (14.7s)
+  ok  8 [Edge-1920x1080] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.8s)
+  ok  9 [Edge-1920x1080] › tests\e2e\physical-fixes.spec.ts:5:1 › night displays remain legible and footwell illumination does not spill through the chassis (2.8s)
+  ok 10 [Edge-1920x1080] › tests\e2e\physical-fixes.spec.ts:27:1 › formed luggage liners stay visible through half and full opening without changing native panels (6.1s)
+  ok 11 [Edge-1920x1080] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (6.7s)
+  ok 12 [Edge-1920x1080] › tests\e2e\scene.spec.ts:48:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (7.6s)
+  ok 13 [Edge-1920x1080] › tests\e2e\scene.spec.ts:73:1 › cabin, free movement, look, focused input isolation and keyboard return (11.7s)
+  ok 14 [Edge-1920x1080] › tests\e2e\scene.spec.ts:113:1 › corrupt model fails visibly, then retry loads the actual asset (998ms)
+(node:16800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 15 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:9:1 › fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely (12.0s)
+  ok 16 [Edge-1366x768] › tests\e2e\cabin-lighting.spec.ts:28:1 › depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off (8.6s)
+  ok 17 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:9:1 › native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter (4.7s)
+  ok 18 [Edge-1366x768] › tests\e2e\dome-tail.spec.ts:18:1 › two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle (3.3s)
+  ok 19 [Edge-1366x768] › tests\e2e\frunk.spec.ts:8:1 › native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state (10.0s)
+  ok 20 [Edge-1366x768] › tests\e2e\frunk.spec.ts:17:1 › wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully (1.8s)
+  ok 21 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:8:1 › front and rear signal air scattering follows actual blink, side selection, trunk and master switch (14.0s)
+  ok 22 [Edge-1366x768] › tests\e2e\lighting-followup.spec.ts:28:1 › cabin illumination and local scattering follow colour, brightness and off state (3.4s)
+  ok 23 [Edge-1366x768] › tests\e2e\physical-fixes.spec.ts:5:1 › night displays remain legible and footwell illumination does not spill through the chassis (2.6s)
+  ok 24 [Edge-1366x768] › tests\e2e\physical-fixes.spec.ts:27:1 › formed luggage liners stay visible through half and full opening without changing native panels (5.5s)
+  ok 25 [Edge-1366x768] › tests\e2e\scene.spec.ts:18:1 › actual GLB, health, visible controls and responsive layout (6.7s)
+  ok 26 [Edge-1366x768] › tests\e2e\scene.spec.ts:48:1 › orbit rotation, actual right-button pan, wheel zoom and exact reset (7.6s)
+  ok 27 [Edge-1366x768] › tests\e2e\scene.spec.ts:73:1 › cabin, free movement, look, focused input isolation and keyboard return (11.7s)
+  ok 28 [Edge-1366x768] › tests\e2e\scene.spec.ts:113:1 › corrupt model fails visibly, then retry loads the actual asset (1.2s)
+
+  28 passed (3.2m)

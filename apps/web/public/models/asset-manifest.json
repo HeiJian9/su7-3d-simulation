@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18",
-  "bytes": 6816056,
+  "sha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
+  "bytes": 6963176,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · 0.7.1-layered-cabin 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · 0.7.2-enclosed-cabin 增强资产 · 原车几何与局部补建"
 }

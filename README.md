@@ -1,6 +1,8 @@
-# SU7 智能座舱 · 0.7.1
+# SU7 智能座舱 · 0.7.2
 
-本轮完成环绕式氛围灯与产品界面收尾：25 个贴合灯面、16 处局部照明、六种配色及全舱／后排视角。主界面收起开发信息，诊断移至“操作帮助 → 连接与诊断”。[本轮设计与验收](docs/FINAL_POLISH.md)包含两分辨率截图、42 项浏览器回归及 99 项单元测试结果。
+0.7.2 修正：中控与仪表独立背光、脚窝光真实遮挡、前备箱避让车轮及加厚内衬、后备箱缩短内腔并连接尾盖内外壁。见 [本轮修正与证据](docs/PHYSICAL_FIXES.md)。
+
+0.7.1 完成环绕式氛围灯与产品界面收尾：25 个贴合灯面、16 处局部照明、六种配色及全舱／后排视角。主界面收起开发信息，诊断移至“操作帮助 → 连接与诊断”。[本轮设计与验收](docs/FINAL_POLISH.md)包含两分辨率截图、42 项浏览器回归及 99 项单元测试结果。
 
 已有车载智能助手、全能力真实 DeepSeek Function Calling、前灯和前后排顶灯亮度、统一空气散射／夜间观察，以及可开关的本地“小爱同学”关键词唤醒。18 项控制工具由共享 Schema 生成，真实执行到位后逐 ID 回传结果，再用原 CosyVoice 回应。
 
@@ -12,7 +14,7 @@
 
 交付索引：[I7–I9 报告](docs/I7_I9_VALIDATION.md)、[工具与参数](docs/LLM_TOOLS.md)、[能力证据矩阵](docs/CAPABILITY_COVERAGE.md)、[R01–R19](docs/REQUIREMENTS_TRACEABILITY.md)、[过程与录像索引](docs/SESSION_LOG.md)。真实 API 固定音源与真人分别记录，尚未将整轮标为全部通过。
 
-本地交付包：`deliverables/SU7-0.7.1.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
+本地交付包：`deliverables/SU7-0.7.2.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
 
 本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮浏览器报告目录为 `docs/validation/final-polish/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
 

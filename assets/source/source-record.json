@@ -15,7 +15,7 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18",
+  "runtimeSha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
@@ -28,11 +28,12 @@
     "I5: eight original Mesh61 projector surfaces, original Mesh62/73 front diffusers and Mesh19/20 inner rear modules use independent cloned emission materials; outer contour now has an independent constant-red running material; signals emit yellow only while lit and restore original colours in off half-cycles and when disabled; 14 former tube/rod proxies removed; source positions/UV/normals preserved; physical cabin LEDs remain.",
     "Cabin lighting: 25 surface-fitted ribbon diffusers on native upper trim, door inlays, handles, speaker outlines, dashboard crown, central tunnel and rear console. 16 short-range lights include front/rear footwell and door-pocket wash, eight attached to the four door hinges. All 140 baseline nodes preserved; additive design on the existing enhanced Blender project.",
     "Dome/tail: 714 native outermost rear-ring triangles use an independent constant-red running-lamp material, all geometry/UV/normals preserved; two compact ceiling fixtures follow measured front console/rear roof surface normals; independent downward spotlights and manual/rule/ASR-TTS controls.",
-    "Frunk: native Paint7 bonnet islands and Mesh65 badge on rear-edge hinge; original 82-vertex seam, UVs and normals preserved with zero bisects; fitted recessed inner skin, storage tub, flange and hinge hardware added; wide diffuse cabin lights use 143-degree soft cones and low-power local fill."
+    "Frunk: native Paint7 bonnet islands and Mesh65 badge on rear-edge hinge; original 82-vertex seam, UVs and normals preserved with zero bisects; fitted recessed inner skin, storage tub, flange and hinge hardware added; wide diffuse cabin lights use 143-degree soft cones and low-power local fill.",
+    "Enclosure repair: 0.7.2 rebuilds only three helper liners with formed thickness, wheel clearance, shorter cargo space and a continuous native-surface-fitted lid liner with edge returns; adds an opaque cabin floor backing. Other 150 baseline nodes remain exact. Four downward shadowed footwell lights replace unoccluded point lights; source display atlas has selective runtime backlighting."
   ],
-  "enhancedAt": "2026-10-28T10:00:09.863Z",
-  "assetIncrement": "0.7.1-layered-cabin",
+  "enhancedAt": "2026-10-28T11:01:07.609Z",
+  "assetIncrement": "0.7.2-enclosed-cabin",
   "windowMapping": "docs/assets/window-mapping.json",
   "vehicleMapping": "docs/assets/vehicle-mapping.json",
-  "enhancedBlendSha256": "6e5203ab83d748039cde3cd0aaf4ffa4e1b0338eb5e7e48988c4b2fb268e4c03"
+  "enhancedBlendSha256": "f22c6333ae0269b320247da3f61e067f38d97fe6ae5b2e29cfee515aaacca68d"
 }

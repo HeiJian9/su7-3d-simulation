@@ -1,8 +1,8 @@
 {
-  "sha256": "ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18",
-  "bytes": 6816056,
-  "nodes": 153,
-  "meshes": 140,
+  "sha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
+  "bytes": 6963176,
+  "nodes": 154,
+  "meshes": 141,
   "materials": 46,
   "textures": [
     {
@@ -127,7 +127,7 @@
     }
   ],
   "animations": 0,
-  "triangles": 102731,
+  "triangles": 104976,
   "extensions": [
     "KHR_materials_clearcoat",
     "KHR_materials_emissive_strength",

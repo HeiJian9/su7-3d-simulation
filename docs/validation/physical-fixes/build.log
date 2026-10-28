@@ -1,0 +1,56 @@
+
+> su7-interaction-lab@0.7.2 prebuild
+> npm run wake:prepare
+
+
+> su7-interaction-lab@0.7.2 wake:prepare
+> node scripts/prepare-wake.mjs
+
+Verified local keyword model: 5025604 bytes
+
+> su7-interaction-lab@0.7.2 build
+> npm run typecheck && npm run build -w @su7/web && npm run build -w @su7/server
+
+
+> su7-interaction-lab@0.7.2 typecheck
+> tsc --noEmit -p apps/web && tsc --noEmit -p apps/server && tsc --noEmit -p packages/shared
+
+
+> @su7/web@0.7.2 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+../../node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 730 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.52 kB │ gzip:   0.35 kB
+dist/assets/draco_wasm_wrapper-fZCQGLGb.js     58.46 kB
+dist/assets/draco_wasm_wrapper-DxJM36Ib.js     58.76 kB
+dist/assets/draco_decoder-Z1_iN-Ht.wasm       192.42 kB │ gzip:  63.46 kB
+dist/assets/draco_decoder-C32yEggz.wasm       285.75 kB │ gzip:  88.64 kB
+dist/assets/draco_decoder-fzg4nYZr.js         719.41 kB
+dist/assets/index-CVvDARhU.css                 43.72 kB │ gzip:   9.61 kB
+dist/assets/index-C4crb0UN.js               1,575.34 kB │ gzip: 450.72 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.99s
+
+> @su7/server@0.7.2 build
+> tsc -p tsconfig.build.json
+

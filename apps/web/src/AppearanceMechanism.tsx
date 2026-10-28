@@ -4,7 +4,7 @@ import {Group,Mesh,MeshStandardMaterial,PointLight,SpotLight,Vector3,type Materi
 import mapping from './data/vehicle-mapping.json';
 import {actualValues,completeExecutions,manualCommand,useVehicle} from './vehicle';
 import {Hotspot} from './VehicleMechanism';
-type Binding={materials:Map<string,MeshStandardMaterial>;offColors:Map<string,string>;spots:SpotLight[];ambientLights:PointLight[];protectedMaterials:Map<string,MeshStandardMaterial>;root:Group};
+type Binding={materials:Map<string,MeshStandardMaterial>;offColors:Map<string,string>;spots:SpotLight[];ambientLights:Array<PointLight|SpotLight>;protectedMaterials:Map<string,MeshStandardMaterial>;root:Group};
 export function AppearanceMechanism({model}:{model:Group}){
   const {gl,camera}=useThree();const binding=useRef<Binding|null>(null),blink=useRef({mode:'off',time:0}),brightness=useRef(.4);const [cabin,setCabin]=useState(false);const interval=useRef(0);
   useEffect(()=>{
@@ -15,11 +15,18 @@ export function AppearanceMechanism({model}:{model:Group}){
       if(next.some((m,i)=>m!==list[i])){restore.push({mesh:o,material:original});o.material=Array.isArray(original)?next:next[0];}
     });
     const spots=Object.values(roles.headlights).map(cfg=>{const light=new SpotLight('#d9efff',0,22,.28,.5,2);light.position.fromArray(cfg.lightPosition).add(new Vector3(0,0,-.025));light.target.position.set(light.position.x,.025,-6);root.add(light,light.target);light.castShadow=true;light.shadow.mapSize.set(512,512);light.shadow.bias=-.00015;return light;});
-    const ambientLights=roles.ambient.lights.map(cfg=>{const light=new PointLight('#9867ff',0,cfg.distance,2);light.position.fromArray(cfg.position);light.userData.gain=cfg.gain;(root.getObjectByName(cfg.parent)??root).add(light);return light;});
+    const ambientLights=roles.ambient.lights.map(cfg=>{
+      const occluded='occludedFootwell' in cfg&&cfg.occludedFootwell;
+      const light=occluded?new SpotLight('#9867ff',0,cfg.distance,1.12,.85,2):new PointLight('#9867ff',0,cfg.distance,2);
+      light.position.fromArray(cfg.position);light.userData.gain=cfg.gain;
+      const parent=root.getObjectByName(cfg.parent)??root;parent.add(light);
+      if(light instanceof SpotLight){light.target.position.copy(light.position).add(new Vector3(0,-1,0));parent.add(light.target);light.castShadow=true;light.shadow.mapSize.set(512,512);light.shadow.camera.near=.015;light.shadow.bias=-.00002;light.shadow.normalBias=.001;}
+      return light;
+    });
     binding.current={materials,offColors:new Map([...materials].map(([name,material])=>[name,material.color.getHexString()])),spots,ambientLights,protectedMaterials,root};
     const required=[roles.paint.material,roles.tailRunning.material,...roles.ambient.materials,...Object.values(roles.turnSignals).flatMap(r=>r.materials),...Object.values(roles.headlights).flatMap(r=>r.projectors.map(p=>p.material))];
     useVehicle.getState().registerCapabilities('appearance',required.every(m=>materials.has(m))?['paint:body','ambient:cabin','headlights:front','turnSignal:vehicle']:[]);
-    return()=>{binding.current=null;useVehicle.getState().registerCapabilities('appearance',[]);for(const r of restore)r.mesh.material=r.material;materials.forEach(m=>m.dispose());for(const light of spots){light.target.removeFromParent();light.removeFromParent();light.dispose();}for(const light of ambientLights){light.removeFromParent();light.dispose();}};
+    return()=>{binding.current=null;useVehicle.getState().registerCapabilities('appearance',[]);for(const r of restore)r.mesh.material=r.material;materials.forEach(m=>m.dispose());for(const light of spots){light.target.removeFromParent();light.removeFromParent();light.dispose();}for(const light of ambientLights){if(light instanceof SpotLight)light.target.removeFromParent();light.removeFromParent();light.dispose();}};
   },[model]);
   useFrame((_,delta)=>{
     const b=binding.current;if(!b)return;const state=useVehicle.getState().state,roles=mapping.materialRoles;
@@ -45,7 +52,7 @@ export function AppearanceMechanism({model}:{model:Group}){
     actualValues['ambient:cabin:enabled']=state.ambient.enabled;actualValues['ambient:cabin:color']=state.ambient.color;actualValues['ambient:cabin:brightness']=brightness.current;
     completeExecutions();interval.current+=delta;
     if(interval.current>.10){interval.current=0;setCabin(camera.position.distanceTo(new Vector3(0,1,0).applyMatrix4(model.matrixWorld))<2.2);
-      gl.domElement.setAttribute('data-appearance',JSON.stringify({tailRunning:{alwaysOn:true,color:tail.emissive.getHexString(),power:tail.emissiveIntensity},headlights:state.lights.headlights,headlightPower:b.spots.map(l=>l.intensity),turnSignal:state.lights.turnSignal,signals,nativeLamps:{projectors:Object.fromEntries(Object.entries(roles.headlights).map(([side,cfg])=>[side,cfg.projectors.map(p=>({node:p.node,material:p.material,power:b.materials.get(p.material)!.emissiveIntensity}))])),signals:Object.fromEntries(Object.entries(roles.turnSignals).map(([side,cfg])=>[side,cfg.materials.map(name=>({material:name,power:b.materials.get(name)!.emissiveIntensity,color:b.materials.get(name)!.color.getHexString(),offColor:b.offColors.get(name)!}))]))},ambient:{power,color:ambient.emissive.getHexString(),brightness:brightness.current,zones:roles.ambient.nodes.length,emission:roles.ambient.materials.map(name=>({name,power:b.materials.get(name)!.emissiveIntensity})),localLights:b.ambientLights.map(l=>({parent:l.parent?.name,power:l.intensity,position:l.getWorldPosition(new Vector3()).toArray()}))},paint:b.materials.get(roles.paint.material)!.color.getHexString(),protectedMaterials:[...b.protectedMaterials].map(([name,m])=>({name,color:m.color.getHexString(),roughness:m.roughness,metalness:m.metalness}))}));
+      gl.domElement.setAttribute('data-appearance',JSON.stringify({tailRunning:{alwaysOn:true,color:tail.emissive.getHexString(),power:tail.emissiveIntensity},headlights:state.lights.headlights,headlightPower:b.spots.map(l=>l.intensity),turnSignal:state.lights.turnSignal,signals,nativeLamps:{projectors:Object.fromEntries(Object.entries(roles.headlights).map(([side,cfg])=>[side,cfg.projectors.map(p=>({node:p.node,material:p.material,power:b.materials.get(p.material)!.emissiveIntensity}))])),signals:Object.fromEntries(Object.entries(roles.turnSignals).map(([side,cfg])=>[side,cfg.materials.map(name=>({material:name,power:b.materials.get(name)!.emissiveIntensity,color:b.materials.get(name)!.color.getHexString(),offColor:b.offColors.get(name)!}))]))},ambient:{power,color:ambient.emissive.getHexString(),brightness:brightness.current,zones:roles.ambient.nodes.length,emission:roles.ambient.materials.map(name=>({name,power:b.materials.get(name)!.emissiveIntensity})),localLights:b.ambientLights.map(l=>({parent:l.parent?.name,power:l.intensity,castsShadow:l.castShadow,kind:l.type,position:l.getWorldPosition(new Vector3()).toArray()}))},paint:b.materials.get(roles.paint.material)!.color.getHexString(),protectedMaterials:[...b.protectedMaterials].map(([name,m])=>({name,color:m.color.getHexString(),roughness:m.roughness,metalness:m.metalness}))}));
     }
   });
   const root=model.getObjectByName('SU7_ROOT') as Group;

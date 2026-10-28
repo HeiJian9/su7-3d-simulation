@@ -1,5 +1,5 @@
 {
-  "version": "0.7.1-layered-cabin",
+  "version": "0.7.2-enclosed-cabin",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -522,7 +522,8 @@
             -0.48
           ],
           "distance": 0.78,
-          "gain": 1.15
+          "gain": 1.15,
+          "occludedFootwell": true
         },
         {
           "parent": "SU7_ROOT",
@@ -532,7 +533,8 @@
             -0.48
           ],
           "distance": 0.78,
-          "gain": 1.15
+          "gain": 1.15,
+          "occludedFootwell": true
         },
         {
           "parent": "SU7_ROOT",
@@ -602,7 +604,8 @@
             0.67
           ],
           "distance": 0.67,
-          "gain": 0.58
+          "gain": 0.58,
+          "occludedFootwell": true
         },
         {
           "parent": "SU7_ROOT",
@@ -612,7 +615,8 @@
             0.67
           ],
           "distance": 0.67,
-          "gain": 0.58
+          "gain": 0.58,
+          "occludedFootwell": true
         },
         {
           "parent": "SU7_ROOT",
@@ -1424,5 +1428,19 @@
     ],
     "boundaryVertices": 82,
     "audit": "docs/assets/frunk-audit.json"
+  },
+  "enclosureRepair": {
+    "baseline": "1b83988",
+    "modifiedNodes": [
+      "FRUNK_STORAGE_TUB",
+      "TRUNK_INNER_CAVITY",
+      "TRUNK_INNER_SKIN"
+    ],
+    "addedNodes": [
+      "CABIN_FLOOR_BACKING"
+    ],
+    "wallThickness": 0.012,
+    "lidReturnEdges": 136,
+    "maxLidReturnSpan": 0.04477532566434002
   }
 }

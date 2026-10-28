@@ -13,6 +13,7 @@ export const presets = {
   roofFront: {position:[.22,1.04,.08],target:[0,1.29,-.27]},
   roofRear: {position:[.22,1.08,.35],target:[0,1.40,.8]},
   frunk: {position:[2.8,2.5,-4.2],target:[0,.9,-1.7]},
+  cargo: {position:[0,1.55,3.65],target:[0,.88,2.05]},
   lighting: { position: [7, 5.5, -12], target: [0, .3, -4.5] },
 } as const;
 

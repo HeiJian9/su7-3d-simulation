@@ -2,7 +2,7 @@ import {useVehicle} from './vehicle';
 import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Environment, Lightformer } from '@react-three/drei';
-import { ACESFilmicToneMapping, Box3, Group, Mesh, Texture, Vector3 } from 'three';
+import { ACESFilmicToneMapping, Box3, Group, Mesh, MeshStandardMaterial, Texture, Vector3 } from 'three';
 import { GLTFLoader, type GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
@@ -83,6 +83,16 @@ function RuntimeModel({ asset, attempt }: { asset: AssetManifest; attempt: numbe
           const materials = Array.isArray(object.material) ? object.material : [object.material];
           object.castShadow = materials.some((m) => !m.transparent && m.opacity >= 1);
           object.receiveShadow = true;
+          // The source Mesh57 contains the display faces and backlit switch legends.
+          // Clone only this mesh: its atlas is shared with non-luminous cabin trim.
+          if(object.name==='Mesh57'){
+            const backlight=(m:typeof materials[number])=>{
+              if(!(m instanceof MeshStandardMaterial))return m;
+              const lit=m.clone();lit.emissiveMap=m.map;lit.emissive.set('#ffffff');lit.emissiveIntensity=.75;lit.roughness=.65;return lit;
+            };
+            object.material=Array.isArray(object.material)?object.material.map(backlight):backlight(object.material);
+            object.userData.displayBacklight=true;
+          }
           object.onAfterRender = () => {
             if (firstFrame) { firstFrame = false; useScene.getState().patch({ loadMs: Math.round(performance.now()) }); }
           };
