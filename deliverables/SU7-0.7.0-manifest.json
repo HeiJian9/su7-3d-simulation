@@ -1,8 +1,8 @@
 {
   "version": "0.7.0",
   "archive": "deliverables\\SU7-0.7.0.zip",
-  "bytes": 176193755,
-  "sha256": "823724e13e6a288a3e2c473d5a121e21472fffcbb899eff438e2aab55c385174",
+  "bytes": 176194083,
+  "sha256": "e1f2f2016a39bce89c8f09cb30a961a216a4c4c92003ecb30d748e0871c0936e",
   "files": 958,
   "credentialsExcluded": true,
   "crcPassed": true

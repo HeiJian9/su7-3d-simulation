@@ -67,7 +67,6 @@
     }
   },
   "pending": [
-    "更多距离和噪声的声学统计，不声称工厂级唤醒率",
     "录像原文件及偏移归档"
   ],
   "excludedSyntheticDiagnostic": "docs/validation/scene-diagnostics-2026-10-28T04-58-46-221Z.json",
@@ -326,5 +325,15 @@
     "humanObserved": "Capability introduction TTS timed out after a long response",
     "fix": "Capability summary shortened; TTS provider timeout 25s and browser timeout 30s; real 102-character audio successfully synthesized in 12.8s and played to completion.",
     "evidence": "docs/validation/i7-i9/assistant-chat-tts.json"
+  },
+  "scopeRevision": {
+    "date": "2026-10-28",
+    "authority": "Explicit user instruction",
+    "excluded": [
+      "Expanded human wake-word statistics across distances/noise",
+      "Distance simulation"
+    ],
+    "status": "Excluded from acceptance scope; not recorded as passed",
+    "retained": "Existing genuine keyword and human microphone evidence"
   }
 }

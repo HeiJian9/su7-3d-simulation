@@ -83,10 +83,6 @@
     {
       "item": "Video original and timeline offsets",
       "condition": "User supplies or archives the existing recording and its offsets; SESSION_LOG supplies wall-clock references only."
-    },
-    {
-      "item": "Broader human acoustic acceptance",
-      "condition": "Measure misses and false wakes across more distances, noise and speaker echo conditions; current representative human and fixed-audio evidence is retained."
     }
   ],
   "knownLimits": [
@@ -96,5 +92,15 @@
   "evidenceRules": [
     "Fixed/synthetic microphone inputs are not human acceptance.",
     "Failed/interrupted API reports retained; coverage counts only passed cases."
-  ]
+  ],
+  "scopeRevision": {
+    "date": "2026-10-28",
+    "authority": "Explicit user instruction",
+    "excluded": [
+      "Expanded human wake-word statistics across distances/noise",
+      "Distance simulation"
+    ],
+    "status": "Excluded from acceptance scope; not recorded as passed",
+    "retained": "Existing genuine keyword and human microphone evidence"
+  }
 }
