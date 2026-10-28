@@ -1,0 +1,185 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/native-ambient.spec.ts",
+      "--project=Edge-1920x1080",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "native-ambient.spec.ts",
+      "file": "native-ambient.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native cabin trim follows original surfaces, dims and moves with both rear doors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T23:26:10.625Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-surfaces",
+                      "contentType": "application/json",
+                      "body": "eyJ6b25lcyI6W3sibm9kZSI6Ik1lc2g0NyIsInZlcnRpY2VzIjo4NCwicm91dGVzIjpbImZyb250LXVwcGVyLWxlZnQiLCJmcm9udC1hcm1yZXN0LWxlZnQiLCJmcm9udC1oYW5kbGUtbGVmdCIsImZyb250LXNwZWFrZXItbGVmdCJdfSx7Im5vZGUiOiJNZXNoNDkiLCJ2ZXJ0aWNlcyI6MjUxLCJyb3V0ZXMiOlsiZnJvbnQtaW5sYXktbGVmdCJdfSx7Im5vZGUiOiJNZXNoMzQiLCJ2ZXJ0aWNlcyI6ODEsInJvdXRlcyI6WyJmcm9udC11cHBlci1yaWdodCIsImZyb250LWFybXJlc3QtcmlnaHQiLCJmcm9udC1oYW5kbGUtcmlnaHQiLCJmcm9udC1zcGVha2VyLXJpZ2h0Il19LHsibm9kZSI6Ik1lc2gzNiIsInZlcnRpY2VzIjoyOTAsInJvdXRlcyI6WyJmcm9udC1pbmxheS1yaWdodCJdfSx7Im5vZGUiOiJNZXNoNDAiLCJ2ZXJ0aWNlcyI6MjksInJvdXRlcyI6WyJyZWFyLWFybXJlc3QtbGVmdCIsInJlYXItaGFuZGxlLWxlZnQiLCJyZWFyLXNwZWFrZXItbGVmdCJdfSx7Im5vZGUiOiJNZXNoNDMiLCJ2ZXJ0aWNlcyI6OSwicm91dGVzIjpbInJlYXItdXBwZXItbGVmdCIsInJlYXItaW5sYXktbGVmdCJdfSx7Im5vZGUiOiJNZXNoMjciLCJ2ZXJ0aWNlcyI6MjksInJvdXRlcyI6WyJyZWFyLWFybXJlc3QtcmlnaHQiLCJyZWFyLWhhbmRsZS1yaWdodCIsInJlYXItc3BlYWtlci1yaWdodCJdfSx7Im5vZGUiOiJNZXNoMzAiLCJ2ZXJ0aWNlcyI6OSwicm91dGVzIjpbInJlYXItdXBwZXItcmlnaHQiLCJyZWFyLWlubGF5LXJpZ2h0Il19LHsibm9kZSI6Ik1lc2g1MyIsInZlcnRpY2VzIjo1MTgsInJvdXRlcyI6WyJjZW50cmUtYm94LWxlZnQiLCJjZW50cmUtYm94LXJpZ2h0IiwiY2VudHJlLWJveC1yZWFyIl19LHsibm9kZSI6Ik1lc2g1OSIsInZlcnRpY2VzIjo2MCwicm91dGVzIjpbImNvbnNvbGUtcGVyaW1ldGVyIl19XSwicm91dGVDb3VudCI6MjQsInJlcGxhY2VkIjpbIkFNQklFTlRfQ09OU09MRV9MRUZUIiwiQU1CSUVOVF9DT05TT0xFX1JJR0hUIiwiQU1CSUVOVF9SRUFSX0NPTlNPTEUiLCJBTUJJRU5UX1RVTk5FTF9MRUZUIiwiQU1CSUVOVF9UVU5ORUxfUklHSFQiLCJBTUJJRU5UX0RPT1JfRkwiLCJBTUJJRU5UX0hBTkRMRV9GTCIsIkFNQklFTlRfSU5MQVlfRkwiLCJBTUJJRU5UX1NQRUFLRVJfRkwiLCJBTUJJRU5UX0RPT1JfRlIiLCJBTUJJRU5UX0hBTkRMRV9GUiIsIkFNQklFTlRfSU5MQVlfRlIiLCJBTUJJRU5UX1NQRUFLRVJfRlIiLCJBTUJJRU5UX0RPT1JfUkwiLCJBTUJJRU5UX0hBTkRMRV9STCIsIkFNQklFTlRfSU5MQVlfUkwiLCJBTUJJRU5UX1NQRUFLRVJfUkwiLCJBTUJJRU5UX0RPT1JfUlIiLCJBTUJJRU5UX0hBTkRMRV9SUiIsIkFNQklFTlRfSU5MQVlfUlIiLCJBTUJJRU5UX1NQRUFLRVJfUlIiXSwib3JpZ2luYWxTdXJmYWNlcyI6dHJ1ZSwicG93ZXIiOjAuNjUsImVtaXNzaW9uIjoxLjE3MDAwMDAwMDAwMDAwMDJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17f1a6ecbaff4464f816-20e43f23feb14e54f178",
+          "file": "native-ambient.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-28T23:26:09.328Z",
+    "duration": 19062.39,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

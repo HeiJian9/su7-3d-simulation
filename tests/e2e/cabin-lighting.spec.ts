@@ -4,14 +4,14 @@ import {PerspectiveCamera,Vector3} from 'three';
 const appearance=async(p:Page)=>JSON.parse((await p.locator('canvas').getAttribute('data-appearance'))!);
 const volume=async(p:Page)=>JSON.parse((await p.locator('canvas').getAttribute('data-volume'))!);
 async function command(p:Page,text:string){await p.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(text);await p.getByRole('button',{name:'发送',exact:false}).click();}
-async function ready(p:Page){await p.goto('/');await expect(p.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled();await p.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await p.getByRole('button',{name:'灯光外观',exact:true}).click();await mkdir('docs/assets/cabin-lighting',{recursive:true});}
+async function ready(p:Page){await p.goto('/');await expect(p.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled({timeout:25000});await p.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await p.getByRole('button',{name:'灯光外观',exact:true}).click();await mkdir('docs/assets/cabin-lighting',{recursive:true});}
 
 test('fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely',async({page},info)=>{
  await ready(page);await page.getByRole('button',{name:'门板视角',exact:true}).click();
  const records=[];await command(page,'打开氛围灯');
  for(const percent of [0,50,100]){
   await command(page,`氛围灯亮度设为百分之${percent}`);await expect.poll(async()=>(await appearance(page)).ambient.power).toBe(percent/100);
-  const a=(await appearance(page)).ambient;expect(a.zones).toBe(25);expect(a.localLights).toHaveLength(16);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
+  const a=(await appearance(page)).ambient;expect(a.zones).toBe(31);expect(a.localLights).toHaveLength(16);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
   await page.screenshot({path:`docs/assets/cabin-lighting/door-${percent}-${info.project.name}.png`});
  }
  await command(page,'氛围灯换成蓝色，亮度设为百分之四十');await expect.poll(async()=>(await appearance(page)).ambient.color).toBe('4d80b4');

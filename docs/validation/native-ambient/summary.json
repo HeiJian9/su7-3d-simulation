@@ -1,0 +1,68 @@
+{
+  "version": "0.7.4",
+  "date": "2026-10-29",
+  "baseline": "9e3c272",
+  "capabilities": {
+    "nativeSurfaces": 10,
+    "nativeRoutes": 27,
+    "retainedDashboardRoutes": 4,
+    "localLights": 16,
+    "frontAndRearCoverage": true,
+    "windowSelectionUnchanged": true
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "assets": "passed",
+    "unit": {
+      "numTotalTests": 105,
+      "numPassedTests": 105,
+      "numFailedTests": 0
+    },
+    "browser": {
+      "startTime": "2026-10-28T23:30:13.185Z",
+      "duration": 133877.79700000002,
+      "expected": 24,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "evidence": {
+    "screenshots": "docs/assets/native-ambient/",
+    "browser": "playwright-results.json",
+    "unit": "unit.json",
+    "geometry": "Unit test reads the actual GLB, checks every path against original triangle edges, mirrored counterparts, unchanged vertex/index buffers, door parents and disposal restoration."
+  },
+  "attempts": [
+    {
+      "file": "sparse-first-run.json",
+      "result": "23 passed / 1 failed at initial 10 second asset-ready wait; sparse lighting rejected by user."
+    },
+    {
+      "file": "native-first-restored.json",
+      "result": "Intermediate restoration preview; superseded by final 27 native route run."
+    },
+    {
+      "file": "playwright-results.json",
+      "result": "Final full targeted run, 24 passed. Asset-ready wait matches the application 25 second model loading window; shared uniform shader paths reduce separate compilation."
+    }
+  ],
+  "newRealApiEvidence": false,
+  "newHumanEvidence": false,
+  "limits": [
+    "User subjective appearance confirmation is not inferred from browser screenshots.",
+    "Existing recording file/time offset remains unarchived; no distance/noise simulation required."
+  ],
+  "assetFiles": {
+    "assets/source/blender/su7-enhanced.blend": {
+      "sha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
+      "unchanged": true
+    },
+    "apps/web/public/models/su7-runtime.glb": {
+      "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+      "unchanged": true
+    }
+  }
+}
