@@ -1,18 +1,20 @@
-# SU7 交互实验室 · 0.7.0 / I7–I9
+# SU7 智能座舱 · 0.7.1
 
-当前新增车载智能助手、全能力真实 DeepSeek Function Calling、前灯和前后排顶灯亮度、统一空气散射／夜间观察，以及可开关的本地“小爱同学”关键词唤醒。18 项控制工具由共享 Schema 生成，真实执行到位后逐 ID 回传结果，再用原 CosyVoice 回应。
+本轮完成环绕式氛围灯与产品界面收尾：25 个贴合灯面、16 处局部照明、六种配色及全舱／后排视角。主界面收起开发信息，诊断移至“操作帮助 → 连接与诊断”。[本轮设计与验收](docs/FINAL_POLISH.md)包含两分辨率截图、42 项浏览器回归及 99 项单元测试结果。
+
+已有车载智能助手、全能力真实 DeepSeek Function Calling、前灯和前后排顶灯亮度、统一空气散射／夜间观察，以及可开关的本地“小爱同学”关键词唤醒。18 项控制工具由共享 Schema 生成，真实执行到位后逐 ID 回传结果，再用原 CosyVoice 回应。
 
 当前服务：北京百炼 `qwen3-asr-flash`、`deepseek-v4.1-flash-1017`、`cosyvoice-v3-flash` / `longanyang`，本机 `.env` 已按用户授权复用现有 Key。无需重新提供，不切回 Gemini。
 
-语音：点击麦克风或先勾选唤醒；显示“正在本地监听”后说“小爱同学”，听到提示音再说命令，无需再点麦克风。开口前可准备 **15 秒**，说话后静音 **1.5 秒**提交，单轮最长 **30 秒**。未唤醒音频只送本机识别 Worker；录音／执行／播报时暂停关键词采集，关闭／隐藏／卸载释放资源。当前不承诺唤醒词与命令连说、锁屏后台常驻。
+语音：点击麦克风或先勾选唤醒；显示“正在监听”后说“小爱同学”，听到提示音再说命令，无需再点麦克风。开口前可准备 **15 秒**，说话后静音 **1.5 秒**提交，单轮最长 **30 秒**。未唤醒音频只送本机识别 Worker；录音／执行／播报时暂停关键词采集，关闭／隐藏／卸载释放资源。当前不承诺唤醒词与命令连说、锁屏后台常驻。
 
-“调试记录”中可选“自动路由／强制 LLM 验证”。例如“前备箱开到三成”“前灯再暗一点”“前排顶灯调亮一些”“打开氛围灯 → 换成蓝色 → 再暗一点”“打开雨刷 → 再快一档 → 关掉”。规则未完整理解会进入助手，歧义先追问，不能擅自选择全部。
+“操作帮助 → 连接与诊断”中可选“自动路由／强制 LLM 验证”。例如“前备箱开到三成”“前灯再暗一点”“前排顶灯调亮一些”“打开氛围灯 → 换成蓝色 → 再暗一点”“打开雨刷 → 再快一档 → 关掉”。规则未完整理解会进入助手，歧义先追问，不能擅自选择全部。
 
 交付索引：[I7–I9 报告](docs/I7_I9_VALIDATION.md)、[工具与参数](docs/LLM_TOOLS.md)、[能力证据矩阵](docs/CAPABILITY_COVERAGE.md)、[R01–R19](docs/REQUIREMENTS_TRACEABILITY.md)、[过程与录像索引](docs/SESSION_LOG.md)。真实 API 固定音源与真人分别记录，尚未将整轮标为全部通过。
 
-本地交付包：`deliverables/SU7-0.7.0.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
+本地交付包：`deliverables/SU7-0.7.1.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
 
-本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。浏览器报告目录现为 `docs/validation/i7-i9/`。
+本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮浏览器报告目录为 `docs/validation/final-polish/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
 
 **以下 I4–I6 段落是历史说明；与上文冲突的阶段限制已被本轮用户要求替代。**
 
@@ -49,7 +51,7 @@ npm start
 | 外观 | 七种展示漆色及自定义颜色；灯带开关、颜色、0–100% 亮度 |
 | 雨刷 | 0 关闭、1 间歇、2 低速、3 高速；刮一下；停止后回程归位 |
 | 语音 | 点麦克风说话，停顿自动结束；支持手动结束、取消、重录和打断播报 |
-| 调试 | 保存诊断 JSON 到 `docs/validation/`，包含相机、车辆及语音阶段 |
+| 连接与诊断 | 从右上角操作帮助进入；保存诊断 JSON 到 `docs/validation/`，包含相机、车辆及语音阶段 |
 
 示例：“右后门开一半”“后备箱再关一点”“打开近光灯”“打开双闪”“车身换成蓝色”“打开氛围灯”“氛围灯换成紫色，亮度设为百分之四十”“雨刷调到二档”“雨刷再快一点”“关闭雨刷”“刮一下”。“打开雨刷”默认低速。缺少具体门窗会追问，规则未完整命中会交给 DeepSeek；工具整轮校验后才执行。
 

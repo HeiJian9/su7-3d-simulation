@@ -25,7 +25,7 @@ page.on('response',async r=>{try{if(r.url().endsWith('/api/assistant/plan'))plan
 page.on('request',r=>{if(r.url().endsWith('/api/assistant/finish'))receipts.push(r.postDataJSON());});
 const actual=async()=>JSON.parse(await page.locator('canvas').getAttribute('data-vehicle-actual'));
 try{
- await page.goto(process.env.DEMO_URL??'http://localhost:3000');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
+ await page.goto(process.env.DEMO_URL??'http://localhost:3000');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
  for(const [index,c]of cases.entries()){
   const before=await actual();plans=[];receipts=[];finals=[];const start=Date.now();const textbox=page.getByRole('textbox',{name:'车辆文字指令',exact:true});await textbox.fill(c.text);await page.getByRole('button',{name:'发送',exact:false}).click();
   if(c.text==='取消'){await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪');expect(await actual()).toEqual(before);report.cases.push({index,input:c.text,route:'rules-cancellation',passed:true,actual:await actual()});continue;}

@@ -1,0 +1,148 @@
+
+> su7-interaction-lab@0.7.1 asset:export
+> node scripts/export-vehicle.mjs
+
+{"sha256":"ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18","blendSha256":"6e5203ab83d748039cde3cd0aaf4ffa4e1b0338eb5e7e48988c4b2fb268e4c03","bytes":6816056,"nodes":153,"meshes":140,"triangles":102731,"materials":46,"textures":15}
+{
+  "sha256": "ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18",
+  "bytes": 6816056,
+  "nodes": 153,
+  "meshes": 140,
+  "materials": 46,
+  "textures": [
+    {
+      "name": "Mesh13_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 185651
+    },
+    {
+      "name": "Mesh16_diff",
+      "size": [
+        256,
+        128
+      ],
+      "bytes": 793
+    },
+    {
+      "name": "Mesh25_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 61166
+    },
+    {
+      "name": "Mesh30_diff",
+      "size": [
+        512,
+        256
+      ],
+      "bytes": 87414
+    },
+    {
+      "name": "Mesh1_diff",
+      "size": [
+        512,
+        256
+      ],
+      "bytes": 51834
+    },
+    {
+      "name": "Mesh2_diff",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 29702
+    },
+    {
+      "name": "Mesh3_diff",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 17705
+    },
+    {
+      "name": "Mesh4_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 69204
+    },
+    {
+      "name": "Mesh17_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 161007
+    },
+    {
+      "name": "Mesh22_diff",
+      "size": [
+        4,
+        4
+      ],
+      "bytes": 94
+    },
+    {
+      "name": "Mesh60_diff",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 13025
+    },
+    {
+      "name": "Mesh61_nmap",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 303625
+    },
+    {
+      "name": "Mesh61_diff",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 438727
+    },
+    {
+      "name": "Mesh61_spec",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 578826
+    },
+    {
+      "name": "Mesh23_diff",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 26118
+    }
+  ],
+  "animations": 0,
+  "triangles": 102731,
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular"
+  ]
+}
+{"stage":"0.7.1-layered-cabin","source":"actual exported GLB; no proxy animation","doorRecords":[{"corner":"fl","closed":[{"name":"Paint4","x":-0.9498324961530054,"distance":0.6501675038469947},{"name":"Mesh49","x":-0.8181427117862714,"distance":0.7818572882137287},{"name":"Mesh49","x":-0.7728754684805661,"distance":0.827124531519434}],"open":[{"name":"Mesh57","x":-0.0801480135573891,"distance":1.519851986442611},{"name":"Mesh53","x":-0.06225904115390257,"distance":1.5377409588460975},{"name":"Mesh53","x":-0.04258519489578405,"distance":1.557414805104216}],"doorWindowCombinations":9},{"corner":"fr","closed":[{"name":"Paint2","x":0.9498299477877897,"distance":0.6501700522122104},{"name":"Mesh36","x":0.8181388768221661,"distance":0.781861123177834},{"name":"Mesh36","x":0.7728698054625048,"distance":0.8271301945374953}],"open":[{"name":"Mesh53","x":-0.015890950256260306,"distance":1.6158909502562604},{"name":"Mesh59","x":-0.037401609617113474,"distance":1.6374016096171136},{"name":"Mesh53","x":-0.038037714750495555,"distance":1.6380377147504956}],"doorWindowCombinations":9},{"corner":"rl","closed":[{"name":"Paint3","x":-0.9524582781327221,"distance":0.647541721867278},{"name":"Mesh41","x":-0.679674631897554,"distance":0.9203253681024461},{"name":"Mesh28","x":0.6796689691152626,"distance":2.2796689691152627}],"open":[{"name":"Mesh41","x":-1.3158222513163227,"distance":0.2841777486836774},{"name":"Mesh28","x":0.6796689691152626,"distance":2.2796689691152627},{"name":"Paint1","x":0.9524467512071135,"distance":2.5524467512071136}],"doorWindowCombinations":9},{"corner":"rr","closed":[{"name":"Paint1","x":0.9524467512071132,"distance":0.6475532487928869},{"name":"Mesh28","x":0.6796689691152623,"distance":0.9203310308847378},{"name":"Mesh41","x":-0.6796746318975542,"distance":2.2796746318975543}],"open":[{"name":"Mesh28","x":1.3158104926736882,"distance":0.2841895073263119},{"name":"Mesh41","x":-0.6796746318975542,"distance":2.2796746318975543},{"name":"Paint3","x":-0.9524582781327218,"distance":2.552458278132722}],"doorWindowCombinations":9}],"trunk":{"closed":[{"name":"TRUNK_Paint5","y":0.8357801588059711},{"name":"TRUNK_INNER_SKIN","y":0.8297081193616727},{"name":"TRUNK_INNER_CAVITY","y":0.4082602231311624},{"name":"Mesh22","y":0.1282047537727039}],"open":[{"name":"TRUNK_INNER_CAVITY","y":0.4082602231311624},{"name":"Mesh22","y":0.1282047537727039}]},"materialRoles":{"paintNodes":["DOOR_FL_RETURNS","DOOR_FR_RETURNS","DOOR_RL_RETURNS","DOOR_RR_RETURNS","FRUNK_Paint7","Paint1","Paint2","Paint3","Paint4","Paint5","Paint7","TRUNK_Paint5"],"ambientStrips":25,"independentMaterialNames":["AMBIENT_CABIN_WASH","AMBIENT_CABIN_LED","DOME_HOUSING","DOME_FRONT_DIFFUSER","DOME_REAR_DIFFUSER","SU7_PAINT_BODY","Mesh32Mtl","Mesh13Mtl","Mesh35Mtl","Mesh16Mtl","Mesh25Mtl","Mesh30Mtl","Mesh19Mtl","Mesh26Mtl","FRUNK_SEAL_RUBBER","TRUNK_HINGE_FINISH","FRUNK_FORMED_LINER","Mesh65Mtl","Mesh1Mtl","Mesh2Mtl","Mesh3Mtl","Mesh4Mtl","Mesh17Mtl","TURN_RIGHT_AMBER","TURN_LEFT_AMBER","TAIL_RUNNING_RED","Mesh22Mtl","Mesh24Mtl","Mesh60Mtl","LAMP_LEFT_PROJECTOR_0","LAMP_LEFT_PROJECTOR_1","LAMP_LEFT_PROJECTOR_2","LAMP_LEFT_PROJECTOR_3","LAMP_RIGHT_PROJECTOR_0","LAMP_RIGHT_PROJECTOR_1","LAMP_RIGHT_PROJECTOR_2","LAMP_RIGHT_PROJECTOR_3","TURN_RIGHT_FRONT_AMBER","Mesh68Mtl","Mesh71Mtl","Mesh72Mtl","TURN_LEFT_FRONT_AMBER","TRUNK_FLUSH_SEAL","TRUNK_FORMED_CARPET","Mesh23Mtl","WIPER_GRAPHITE"]},"passed":true}
+{"source":"actual runtime GLB accessors and morph targets","pointsChecked":89486,"minGlassClearanceMeters":0.003054241636817058,"maxGlassClearanceMeters":0.02636615556617365,"records":[{"side":"driver","samples":101,"minGlassClearanceMeters":0.003054241636817058,"maxGlassClearanceMeters":0.02636615556617365},{"side":"passenger","samples":101,"minGlassClearanceMeters":0.0035830712249139947,"maxGlassClearanceMeters":0.026002581937753694}],"passed":true}
+{"passed":true,"actualExportedGlb":true,"sourceRevision":"v0.3.2-i3-complete","sourceChecks":[{"name":"Paint5","triangles":8314,"matchedOriginal":true},{"name":"Mesh17","triangles":72,"matchedOriginal":true},{"name":"Mesh18","triangles":492,"matchedOriginal":true},{"name":"Mesh19","triangles":14,"matchedOriginal":true},{"name":"Mesh20","triangles":14,"matchedOriginal":true},{"name":"Mesh21","triangles":1088,"matchedOriginal":true},{"name":"Mesh23","triangles":8,"matchedOriginal":true},{"name":"Mesh24","triangles":3422,"matchedOriginal":true},{"name":"Mesh25","triangles":6012,"matchedOriginal":true},{"name":"Mesh58","triangles":382,"matchedOriginal":true},{"name":"Mesh71","triangles":1490,"matchedOriginal":true},{"name":"Mesh61","triangles":80,"matchedOriginal":true},{"name":"Mesh68","triangles":3640,"matchedOriginal":true},{"name":"Mesh62","triangles":91,"matchedOriginal":true},{"name":"Mesh73","triangles":91,"matchedOriginal":true}],"originalTrianglesMatched":25210,"maxPositionError":0,"maxUvError":0,"maxNormalError":0.0006705913409834472,"unrelatedNodesUnchanged":80,"nativeLampSourcesVerified":["Mesh61","Mesh68","Mesh21","Mesh62","Mesh73","Mesh19","Mesh20"],"removedLampProxies":["HEADLIGHT_LEFT_DRL","HEADLIGHT_LEFT_PROJECTOR_0","HEADLIGHT_LEFT_PROJECTOR_1","HEADLIGHT_LEFT_PROJECTOR_2","TURN_LEFT_FRONT","HEADLIGHT_RIGHT_DRL","HEADLIGHT_RIGHT_PROJECTOR_0","HEADLIGHT_RIGHT_PROJECTOR_1","HEADLIGHT_RIGHT_PROJECTOR_2","TURN_RIGHT_FRONT","TURN_LEFT_REAR_LID","TURN_RIGHT_REAR_LID","TURN_LEFT_REAR_BODY","TURN_RIGHT_REAR_BODY"],"visibility":[{"position":[0,1.25,4.2],"target":[0,0.95,2.2],"originalExteriorSurfaceRays":6758,"outsideTrunkRegionRays":4420,"exteriorHelperLeaks":0,"leaks":[]},{"position":[-2,1.6,4.1],"target":[0,1,2.2],"originalExteriorSurfaceRays":3519,"outsideTrunkRegionRays":3425,"exteriorHelperLeaks":0,"leaks":[]},{"position":[2,1.6,4.1],"target":[0,1,2.2],"originalExteriorSurfaceRays":3524,"outsideTrunkRegionRays":3400,"exteriorHelperLeaks":0,"leaks":[]},{"position":[0,3,3.8],"target":[0,1,2.15],"originalExteriorSurfaceRays":4772,"outsideTrunkRegionRays":2030,"exteriorHelperLeaks":0,"leaks":[]}],"motion":[{"value":0,"badges":{"Mesh52":{"position":[0.37710851435835285,0.6825032266811352,2.4751881185060314],"travel":0},"Mesh55":{"position":[-0.4113443416994323,0.6838231146085687,2.4689908677427024],"travel":0},"Mesh56":{"position":[0.47415319651198784,0.6804763066480057,2.4564393379168803],"travel":0},"TRUNK_Mesh58":{"position":[0.0104273141785988,0.8722161422329215,2.418947547518146],"travel":0}}},{"value":0.5,"badges":{"Mesh52":{"position":[0.37710851435835285,1.2786485087466712,2.56324955497589],"travel":0.6026143160613864},"Mesh55":{"position":[-0.4113443416994323,1.2747495468427372,2.5582549461587516],"travel":0.5976304242660927},"Mesh56":{"position":[0.47415319651198784,1.262983230477974,2.5527507819444777],"travel":0.5904152865234211},"TRUNK_Mesh58":{"position":[0.0104273141785988,1.3575108433777603,2.3817702880368357],"travel":0.48671664814530335}}},{"value":1,"badges":{"Mesh52":{"position":[0.37710851435835285,1.729302283692295,2.1631805746120145],"travel":1.0923080944523988},"Mesh55":{"position":[-0.4113443416994323,1.7229699869598845,2.1629568800495678],"travel":1.0832742145647534},"Mesh56":{"position":[0.47415319651198784,1.711190310178604,2.1684323927581595],"travel":1.0701959435233028},"TRUNK_Mesh58":{"position":[0.0104273141785988,1.6409728312841443,1.9861158971930588],"travel":0.8822301765889313}}}],"removedIncorrectHelpers":["TRUNK_LID_EDGE_RETURNS","TRUNK_LAMP_END_LEFT","TRUNK_LAMP_END_RIGHT","BODY_REAR_LAMP_END_LEFT","BODY_REAR_LAMP_END_RIGHT"]}
+{"passed":true,"addedLampGeometry":false,"removedProxyCount":14,"projectors":8,"records":[{"side":"left","role":"native projector","material":"LAMP_LEFT_PROJECTOR_0","members":[{"node":"Mesh61","triangles":10}]},{"side":"left","role":"native projector","material":"LAMP_LEFT_PROJECTOR_1","members":[{"node":"Mesh61","triangles":10}]},{"side":"left","role":"native projector","material":"LAMP_LEFT_PROJECTOR_2","members":[{"node":"Mesh61","triangles":10}]},{"side":"left","role":"native projector","material":"LAMP_LEFT_PROJECTOR_3","members":[{"node":"Mesh61","triangles":10}]},{"side":"right","role":"native projector","material":"LAMP_RIGHT_PROJECTOR_0","members":[{"node":"Mesh61","triangles":10}]},{"side":"right","role":"native projector","material":"LAMP_RIGHT_PROJECTOR_1","members":[{"node":"Mesh61","triangles":10}]},{"side":"right","role":"native projector","material":"LAMP_RIGHT_PROJECTOR_2","members":[{"node":"Mesh61","triangles":10}]},{"side":"right","role":"native projector","material":"LAMP_RIGHT_PROJECTOR_3","members":[{"node":"Mesh61","triangles":10}]},{"side":"left","role":"native front diffuser","members":[{"node":"Mesh73","triangles":91}]},{"side":"left","role":"native rear inner modules","members":[{"node":"Mesh20","triangles":6},{"node":"TRUNK_Mesh20","triangles":8}]},{"side":"right","role":"native front diffuser","members":[{"node":"Mesh62","triangles":91}]},{"side":"right","role":"native rear inner modules","members":[{"node":"Mesh19","triangles":6},{"node":"TRUNK_Mesh19","triangles":8}]}],"unlitOriginalMaterialPreserved":true}
+{"passed":true,"reference":"16cb5b9","actualExportedGlb":true,"sourceNodesUnchanged":112,"ribbons":25,"shortRangeLights":16,"additiveNodesPreserved":140,"records":[{"node":"AMBIENT_DOOR_FL","source":"Mesh47","parent":"DOOR_FL_ROOT","triangles":214,"maxVertexClearanceMm":0.5500672228478779,"maxTriangleCenterClearanceMm":0.5798805941923765,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_HANDLE_FL","source":"Mesh47","parent":"DOOR_FL_ROOT","triangles":94,"maxVertexClearanceMm":0.5500672062519271,"maxTriangleCenterClearanceMm":0.5612209195938344,"trimmedGapFaces":1,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DOOR_FR","source":"Mesh34","parent":"DOOR_FR_ROOT","triangles":214,"maxVertexClearanceMm":0.5500695900631605,"maxTriangleCenterClearanceMm":0.5861093804012545,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_HANDLE_FR","source":"Mesh34","parent":"DOOR_FR_ROOT","triangles":62,"maxVertexClearanceMm":0.5500649130520019,"maxTriangleCenterClearanceMm":0.5646664472462056,"trimmedGapFaces":1,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DOOR_RL","source":"Mesh43","parent":"DOOR_RL_ROOT","triangles":136,"maxVertexClearanceMm":0.5500592008682582,"maxTriangleCenterClearanceMm":0.5827978269942512,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_HANDLE_RL","source":"Mesh40","parent":"DOOR_RL_ROOT","triangles":72,"maxVertexClearanceMm":0.5500475343976663,"maxTriangleCenterClearanceMm":0.634278247763371,"trimmedGapFaces":2,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DOOR_RR","source":"Mesh30","parent":"DOOR_RR_ROOT","triangles":130,"maxVertexClearanceMm":0.5500576163164652,"maxTriangleCenterClearanceMm":0.5697925895685233,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_HANDLE_RR","source":"Mesh27","parent":"DOOR_RR_ROOT","triangles":72,"maxVertexClearanceMm":0.5500691038259218,"maxTriangleCenterClearanceMm":0.5599227632746427,"trimmedGapFaces":2,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DASHBOARD","source":"Mesh53","parent":"SU7_ROOT","triangles":50,"maxVertexClearanceMm":0.5500536649726373,"maxTriangleCenterClearanceMm":0.5500504102462399,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":1.3200918301764517},{"node":"AMBIENT_DASHBOARD_RIGHT","source":"Mesh53","parent":"SU7_ROOT","triangles":256,"maxVertexClearanceMm":0.5500469267991084,"maxTriangleCenterClearanceMm":0.5500395442421924,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":1.3200890225397404},{"node":"AMBIENT_CONSOLE_LEFT","source":"Mesh59","parent":"SU7_ROOT","triangles":106,"maxVertexClearanceMm":0.550028598922316,"maxTriangleCenterClearanceMm":0.5791718961341441,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":1.1858437583394645},{"node":"AMBIENT_CONSOLE_RIGHT","source":"Mesh59","parent":"SU7_ROOT","triangles":106,"maxVertexClearanceMm":0.5500382056763435,"maxTriangleCenterClearanceMm":0.571628012720734,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":1.1858569590712218},{"node":"AMBIENT_INLAY_FL","source":"Mesh49","parent":"DOOR_FL_ROOT","triangles":280,"maxVertexClearanceMm":0.6000677258304292,"maxTriangleCenterClearanceMm":0.6522517195684187,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_SPEAKER_FL","source":"Mesh47","parent":"DOOR_FL_ROOT","triangles":316,"maxVertexClearanceMm":0.600061541482121,"maxTriangleCenterClearanceMm":0.6040408805462735,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_INLAY_FR","source":"Mesh36","parent":"DOOR_FR_ROOT","triangles":280,"maxVertexClearanceMm":0.6000655981350733,"maxTriangleCenterClearanceMm":0.8956444670870273,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_SPEAKER_FR","source":"Mesh34","parent":"DOOR_FR_ROOT","triangles":316,"maxVertexClearanceMm":0.6000518855337296,"maxTriangleCenterClearanceMm":0.6041530260081011,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_INLAY_RL","source":"Mesh41","parent":"DOOR_RL_ROOT","triangles":228,"maxVertexClearanceMm":0.6000773507768107,"maxTriangleCenterClearanceMm":0.703215651558443,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_SPEAKER_RL","source":"Mesh40","parent":"DOOR_RL_ROOT","triangles":316,"maxVertexClearanceMm":0.6000439640348605,"maxTriangleCenterClearanceMm":0.6000667093096553,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_INLAY_RR","source":"Mesh28","parent":"DOOR_RR_ROOT","triangles":228,"maxVertexClearanceMm":0.6000737345314527,"maxTriangleCenterClearanceMm":0.7229711485326777,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_SPEAKER_RR","source":"Mesh27","parent":"DOOR_RR_ROOT","triangles":316,"maxVertexClearanceMm":0.6000414321524971,"maxTriangleCenterClearanceMm":0.6000312246185847,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DASH_CROWN_LEFT","source":"Mesh53","parent":"SU7_ROOT","triangles":178,"maxVertexClearanceMm":0.6000669172594242,"maxTriangleCenterClearanceMm":0.6306324552201155,"trimmedGapFaces":1,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_DASH_CROWN_RIGHT","source":"Mesh53","parent":"SU7_ROOT","triangles":368,"maxVertexClearanceMm":0.6000723715309669,"maxTriangleCenterClearanceMm":1.1382500739636645,"trimmedGapFaces":2,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_TUNNEL_LEFT","source":"Mesh53","parent":"SU7_ROOT","triangles":180,"maxVertexClearanceMm":0.600019829724657,"maxTriangleCenterClearanceMm":0.6000079932498877,"trimmedGapFaces":1,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_TUNNEL_RIGHT","source":"Mesh53","parent":"SU7_ROOT","triangles":180,"maxVertexClearanceMm":0.6000088747299758,"maxTriangleCenterClearanceMm":0.6000027060508728,"trimmedGapFaces":1,"maxNativeEdgeDeviationMm":null},{"node":"AMBIENT_REAR_CONSOLE","source":"Mesh53","parent":"SU7_ROOT","triangles":100,"maxVertexClearanceMm":0.6000311884998868,"maxTriangleCenterClearanceMm":0.5529485424971106,"trimmedGapFaces":0,"maxNativeEdgeDeviationMm":null}]}
+{"passed":true,"unchanged":124,"newNodes":4,"tailTriangles":714}
+{"passed":true,"baseline":"d1608ab","unmodifiedNodes":130,"originalSource":[{"node":"Paint7","triangles":5936},{"node":"Mesh65","triangles":208}],"maxPositionError":0,"maxUvError":0,"maxNormalError":0.0004999826196581125,"bisectOperations":0,"originalBoundaryVertices":82,"closedExteriorRays":2875,"helperLeaks":0,"visibility":[{"position":[0,1.7,-4],"rays":2420,"helperLeaks":0},{"position":[2.8,2.5,-4.2],"rays":1566,"helperLeaks":0},{"position":[-2.8,2.5,-4.2],"rays":1555,"helperLeaks":0},{"position":[0,3,-3],"rays":2376,"helperLeaks":0}],"openings":[{"value":0,"hits":[{"name":"FRUNK_Paint7","height":0.8453762901740491},{"name":"FRUNK_INNER_SKIN","height":0.8280492252886902},{"name":"FRUNK_STORAGE_TUB","height":0.4050000011920929},{"name":"Mesh66","height":0.13772198329818908}]},{"value":0.5,"hits":[{"name":"FRUNK_STORAGE_TUB","height":0.5164542336342766},{"name":"Mesh53","height":0.4860655877084693},{"name":"Mesh53","height":0.21646446834547484},{"name":"Mesh22","height":0.12905242943272976}]},{"value":1,"hits":[{"name":"FRUNK_STORAGE_TUB","height":0.5164542336342766},{"name":"Mesh53","height":0.4860655877084693},{"name":"Mesh53","height":0.21646446834547484},{"name":"Mesh22","height":0.12905242943272976}]}]}

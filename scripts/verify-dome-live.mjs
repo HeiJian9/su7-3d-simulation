@@ -37,7 +37,7 @@ try{
     await writeFile(`docs/validation/dome-tail/${stem}-progress.json`,JSON.stringify(report,null,2)+'\n');
   }
   report.events=await page.evaluate(()=>window.__vehicleLiveEvents);expect(report.events).toHaveLength(cases.length);expect(report.events.every(e=>e.ended)).toBe(true);expect(report.requests.every(r=>r.status===200)).toBe(true);
-  await page.getByRole('button',{name:'调试记录',exact:false}).click();const response=page.waitForResponse(r=>r.url().endsWith('/api/diagnostics')&&r.request().method()==='POST');await page.getByRole('button',{name:'保存场景诊断 JSON',exact:true}).click();const saved=await response;expect(saved.ok()).toBe(true);report.diagnostic=(await saved.json()).saved;
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();const response=page.waitForResponse(r=>r.url().endsWith('/api/diagnostics')&&r.request().method()==='POST');await page.getByRole('button',{name:'保存场景诊断 JSON',exact:true}).click();const saved=await response;expect(saved.ok()).toBe(true);report.diagnostic=(await saved.json()).saved;
   await page.screenshot({path:`docs/assets/dome-tail/${additional?'live-additional':'live-all-capabilities'}.png`});report.passed=true;
 }catch(e){report.error=String(e.message).slice(0,800);process.exitCode=1;}
 finally{await browser.close();await writeFile(`docs/validation/dome-tail/${stem}.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:report.passed,cases:report.cases.length,requests:report.requests.length,diagnostic:report.diagnostic,error:report.error}));}

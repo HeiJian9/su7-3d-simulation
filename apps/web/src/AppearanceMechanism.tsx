@@ -39,7 +39,7 @@ export function AppearanceMechanism({model}:{model:Group}){
     actualValues['turnSignal:vehicle:mode']=state.lights.turnSignal;
     const target=state.ambient.brightness;brightness.current=Math.abs(brightness.current-target)<delta*1.5?target:brightness.current+Math.sign(target-brightness.current)*delta*1.5;
     const power=state.ambient.enabled?brightness.current:0,ambient=b.materials.get(roles.ambient.material)!;
-    for(const name of roles.ambient.materials){const mat=b.materials.get(name)!;mat.emissive.set(state.ambient.color);mat.emissiveIntensity=power*(name===roles.ambient.washMaterial ? .6 : 1.5);mat.color.set(power>0?state.ambient.color:'#08090c');}
+    for(const name of roles.ambient.materials){const mat=b.materials.get(name)!;mat.emissive.set(state.ambient.color);mat.emissiveIntensity=power*(name===roles.ambient.washMaterial ? 1.05 : 2.3);mat.color.set(power>0?state.ambient.color:'#08090c');}
     b.ambientLights.forEach(light=>{light.color.set(state.ambient.color);light.intensity=power*Number(light.userData.gain)*2.4;});
     b.root.userData.ambientScatter={power,color:ambient.emissive,lights:b.ambientLights};
     actualValues['ambient:cabin:enabled']=state.ambient.enabled;actualValues['ambient:cabin:color']=state.ambient.color;actualValues['ambient:cabin:brightness']=brightness.current;

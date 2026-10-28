@@ -11,14 +11,14 @@ test('fitted cabin zones share actual brightness and colour, follow doors, and e
  const records=[];await command(page,'打开氛围灯');
  for(const percent of [0,50,100]){
   await command(page,`氛围灯亮度设为百分之${percent}`);await expect.poll(async()=>(await appearance(page)).ambient.power).toBe(percent/100);
-  const a=(await appearance(page)).ambient;expect(a.zones).toBe(12);expect(a.localLights).toHaveLength(8);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
+  const a=(await appearance(page)).ambient;expect(a.zones).toBe(25);expect(a.localLights).toHaveLength(16);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
   await page.screenshot({path:`docs/assets/cabin-lighting/door-${percent}-${info.project.name}.png`});
  }
  await command(page,'氛围灯换成蓝色，亮度设为百分之四十');await expect.poll(async()=>(await appearance(page)).ambient.color).toBe('4d80b4');
  const before=(await appearance(page)).ambient.localLights;await command(page,'右前门打开一半');await expect.poll(()=>page.locator('canvas').getAttribute('data-door-fr-openness').then(Number)).toBe(.5);
  const after=(await appearance(page)).ambient.localLights;const index=before.findIndex((l:{parent:string})=>l.parent==='DOOR_FR_ROOT');
  expect(Math.hypot(...after[index].position.map((v:number,i:number)=>v-before[index].position[i]))).toBeGreaterThan(.1);
- for(let i=0;i<before.length;i++)if(i!==index)expect(after[i].position).toEqual(before[i].position);
+ for(let i=0;i<before.length;i++)if(before[i].parent!=='DOOR_FR_ROOT')expect(after[i].position).toEqual(before[i].position);
  await page.screenshot({path:`docs/assets/cabin-lighting/door-open-${info.project.name}.png`});
  await command(page,'关闭右前门');await page.getByRole('button',{name:'关闭氛围灯',exact:true}).click();await expect.poll(async()=>(await appearance(page)).ambient.emission.every((m:{power:number})=>m.power===0)).toBe(true);
  expect((await appearance(page)).ambient.localLights.every((l:{power:number})=>l.power===0)).toBe(true);

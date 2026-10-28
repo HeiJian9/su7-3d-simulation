@@ -8,6 +8,8 @@ export const presets = {
   right: { position: [7.8, 1.7, 0], target: [0, 0.8, 0] },
   cabin: { position: [-0.4, 1.15, -0.05], target: [-0.3, 0.93, -1.6] },
   ambient: { position: [-.08, 1.05, -.35], target: [.78,.85,-.14] },
+  lounge: { position: [0, 1.22, .32], target: [0,.86,-.68] },
+  rearCabin: { position: [-.12,1.12,.45], target: [.72,.77,.79] },
   roofFront: {position:[.22,1.04,.08],target:[0,1.29,-.27]},
   roofRear: {position:[.22,1.08,.35],target:[0,1.40,.8]},
   frunk: {position:[2.8,2.5,-4.2],target:[0,.9,-1.7]},

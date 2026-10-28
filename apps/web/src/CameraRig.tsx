@@ -119,7 +119,7 @@ export function CameraRig() {
     camera.position.set(preset.position[0], preset.position[1], preset.position[2]);
     camera.lookAt(new Vector3(...preset.target));
     (camera as PerspectiveCamera).zoom = 1;
-    (camera as PerspectiveCamera).fov = ['cabin','ambient','roofFront','roofRear'].includes(useScene.getState().view) ? 68 : 42;
+    (camera as PerspectiveCamera).fov = ['cabin','ambient','lounge','rearCabin','roofFront','roofRear'].includes(useScene.getState().view) ? 68 : 42;
     camera.updateProjectionMatrix();
     if (controls.current) {
       controls.current.target.set(preset.target[0], preset.target[1], preset.target[2]);

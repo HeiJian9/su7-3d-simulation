@@ -54,7 +54,7 @@ try{
   for(const n of [1,2]){const capture=report.events.find(e=>e.kind==='get-media'&&e.index===n),stop=realStops[n-1];expect(capture.time-stop.time).toBeGreaterThanOrEqual(170);}
   expect(report.events.filter(e=>e.kind==='track-ended'&&e.ended)).toHaveLength(5);
   expect(report.requests.filter(r=>r.endpoint.endsWith('/transcribe'))).toHaveLength(4);expect(report.requests.every(r=>r.status===200)).toBe(true);
-  await page.getByRole('button',{name:'调试记录',exact:false}).click();const saved=page.waitForResponse(r=>r.url().endsWith('/api/diagnostics')&&r.request().method()==='POST');
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();const saved=page.waitForResponse(r=>r.url().endsWith('/api/diagnostics')&&r.request().method()==='POST');
   await page.getByRole('button',{name:'保存场景诊断 JSON',exact:true}).click();const response=await saved;expect(response.ok()).toBe(true);report.diagnostic=(await response.json()).saved;
   await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();await page.screenshot({path:'docs/assets/i3-final/live-interruption-result.png'});report.passed=true;
 }catch(error){report.error=String(error.message).slice(0,600);process.exitCode=1;}

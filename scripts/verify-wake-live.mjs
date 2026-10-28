@@ -20,11 +20,11 @@ await page.addInitScript(fixtures=>{
 },fixtures);
 page.on('response',async r=>{if(r.url().includes('/api/assistant/')||r.url().includes('/api/speech/')){const record={path:new URL(r.url()).pathname,status:r.status()};if(r.url().endsWith('/plan')||r.url().endsWith('/finish'))try{record.body=await r.json();}catch{/* canceled */}report.requests.push(record);}});
 try{
- await page.goto(process.env.DEMO_URL??'http://localhost:3000');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
- await page.getByRole('checkbox',{name:'小爱同学唤醒',exact:true}).check();await expect(page.getByTestId('wake-status')).toContainText('正在本地监听',{timeout:25000});
+ await page.goto(process.env.DEMO_URL??'http://localhost:3000');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
+ await page.getByRole('checkbox',{name:'小爱同学唤醒',exact:true}).check();await expect(page.getByTestId('wake-status')).toContainText('正在监听',{timeout:25000});
  await expect(page.getByTestId('transcript')).toContainText(/百分之三十五|35%/,{timeout:30000});await expect.poll(()=>page.locator('canvas').getAttribute('data-window-fl-openness').then(Number),{timeout:30000}).toBe(.35);
  await expect(page.getByTestId('speech-phase')).toHaveText('正在播报',{timeout:30000});report.duringSpeech=await page.evaluate(()=>window.__wakeStreams);expect(report.duringSpeech.every(s=>s.ended)).toBe(true);
- await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪',{timeout:30000});await expect(page.getByTestId('wake-status')).toContainText('正在本地监听',{timeout:10000});await page.waitForTimeout(7000);
+ await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪',{timeout:30000});await expect(page.getByTestId('wake-status')).toContainText('正在监听',{timeout:10000});await page.waitForTimeout(7000);
  report.streams=await page.evaluate(()=>window.__wakeStreams);expect(report.streams).toHaveLength(3);expect(report.requests.filter(r=>r.path.endsWith('/transcribe'))).toHaveLength(1);expect(report.requests.filter(r=>r.path.endsWith('/plan'))).toHaveLength(1);expect(report.requests.every(r=>r.status===200)).toBe(true);
  await page.getByRole('checkbox',{name:'小爱同学唤醒',exact:true}).uncheck();await expect(page.getByTestId('wake-status')).toContainText('已关闭');await expect.poll(()=>page.evaluate(()=>window.__wakeStreams.every(s=>s.ended))).toBe(true);
  await expect.poll(async()=>page.request.get((process.env.DEMO_URL??'http://localhost:3000')+'/api/wake/status').then(r=>r.json()).then(j=>j.connections)).toBe(0);

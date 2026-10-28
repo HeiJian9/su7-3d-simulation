@@ -137,10 +137,10 @@ export function Scene({ asset, attempt }: { asset: AssetManifest | null; attempt
     gl={{ antialias: true, toneMapping: ACESFilmicToneMapping }}>
     <color attach="background" args={['#0b1014']} />
     <fog attach="fog" args={['#0b1014', 16, 48]} />
-    <hemisphereLight args={['#c4e1ec', '#253139', night?.08:0.7]} />
+    <hemisphereLight args={['#c4e1ec', '#253139', night?.18:0.7]} />
     <directionalLight position={[4, 7, -3]} intensity={night?.12:2} color="#e6f2f6" castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0001} shadow-camera-left={-5} shadow-camera-right={5} shadow-camera-top={5} shadow-camera-bottom={-5} />
-    <directionalLight position={[-4, 3, 5]} intensity={night?.04:1.2} color="#81c5be" />
-    <Environment key={String(night)} resolution={128} frames={1} environmentIntensity={night?.1:1}>
+    <directionalLight position={[-4, 3, 5]} intensity={night?.08:1.2} color="#81c5be" />
+    <Environment key={String(night)} resolution={128} frames={1} environmentIntensity={night?.22:1}>
       <Lightformer position={[0, 6, 0]} rotation={[Math.PI / 2, 0, 0]} scale={[10, 3, 1]} intensity={4} />
       <Lightformer position={[-5, 3, 1]} rotation={[0, Math.PI / 2, 0]} scale={[8, 2, 1]} intensity={3} />
       <Lightformer position={[5, 2, -2]} rotation={[0, -Math.PI / 2, 0]} scale={[6, 1, 1]} intensity={2} color="#a0e2d6" />
@@ -148,7 +148,6 @@ export function Scene({ asset, attempt }: { asset: AssetManifest | null; attempt
     <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow position={[0, -0.015, 0]}>
       <planeGeometry args={[160, 160]} /><meshStandardMaterial color="#080e14" roughness={0.8} metalness={0.05} envMapIntensity={0.15} />
     </mesh>
-    <gridHelper args={[36, 36, '#233a41', '#18282e']} position={[0, -0.008, 0]} material-transparent material-opacity={0.25} />
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}><ringGeometry args={[3.69, 3.7, 128]} /><meshBasicMaterial color="#37544f" transparent opacity={0.5} /></mesh>
     {asset?.status === 'ready' && <RuntimeModel asset={asset} attempt={attempt} />}
     <CameraRig /><Diagnostics />

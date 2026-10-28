@@ -1,0 +1,164 @@
+/* Product surface: quiet graphite, generous control targets and one cool accent. */
+:root{--mint:#b0ddd8;--muted:#a0aaa9;--line:rgba(213,225,222,.12);color:#f0f1ed;background:#101415}
+.polished-app{min-height:600px}
+.polished-app .header{height:76px;padding:0 30px;background:#141819;border-bottom:1px solid #ffffff0d;gap:24px}
+.polished-app .brand{gap:18px;flex-shrink:0}
+.brand-wordmark{font:italic 600 37px/1 Bahnschrift,sans-serif;letter-spacing:-2px;color:#f0f2ee}
+.brand-wordmark>span{font-weight:300;color:#b0ddd8}
+.brand-divider{height:30px;width:1px;background:var(--line)}
+.polished-app .brand-cn{font-size:15px;letter-spacing:3px;font-weight:500}
+.polished-app .brand small{font:8px/1.4 Bahnschrift,sans-serif;letter-spacing:1.7px;color:#84918f;margin-top:7px}
+.experience-nav{display:flex;align-items:center;gap:6px;padding:4px;border:1px solid #ffffff0d;border-radius:30px;background:#ffffff03}
+.experience-nav button{font-size:12px;letter-spacing:1px;padding:11px 24px;border-radius:24px;color:#9da7a6;white-space:nowrap}
+.experience-nav button:hover{color:#fff;background:#ffffff05}
+.experience-nav button[aria-pressed=true]{background:#303b3b;color:#e7f3ef}
+.experience-nav button>span{font-size:12px;margin-left:12px;color:#b0ddd8}
+.polished-app .header-actions{gap:20px}
+.polished-app .service{font-size:11px;color:#a9b5b1;white-space:nowrap}
+.polished-app .service i{background:#a3cdb0;box-shadow:0 0 8px #a3cdb02a}
+.polished-app .service.disconnected i{background:#dc9c81}
+.polished-app .icon-button{width:34px;height:34px;color:#b7c0bd;background:#ffffff03;border-color:#ffffff12}
+.scene-context{position:absolute;top:28px;right:30px;display:flex;align-items:flex-start;gap:12px;pointer-events:none;text-align:right}
+.scene-context-line{width:24px;height:1px;background:#a6bfbb;margin-top:13px;order:2}
+.scene-context h1{font-size:16px!important;font-weight:400;letter-spacing:3px;line-height:1.5}
+.scene-context p{font-size:10px;color:#93a09e;letter-spacing:1px;margin:8px 0 0}
+.polished-app .vehicle-controls,.polished-app:has(.clarification) .vehicle-controls{left:24px;top:24px;width:288px;max-height:calc(100% - 48px);background:linear-gradient(145deg,#202727f5,#171e20f5);border:1px solid #d2dfd51a;border-radius:16px;box-shadow:0 16px 48px #0003;backdrop-filter:blur(24px);overflow:hidden}
+.polished-app .controls-top{padding:15px 18px;border-bottom:0;font-size:12px;color:#f0f1ed;letter-spacing:2px}
+.polished-app .controls-top>span{font:500 13px 'Microsoft YaHei UI',sans-serif;letter-spacing:2px}
+.polished-app .controls-top button{font-size:21px;font-weight:300;line-height:22px;color:#a8b8b4;padding:2px 4px}
+.polished-app .vehicle-controls nav{margin:0 12px;padding:0 0 8px;border-bottom:1px solid var(--line);display:flex;gap:2px}
+.polished-app .vehicle-controls nav button{flex:1;padding:9px 3px;font-size:11px;border:0;border-radius:6px;white-space:nowrap;color:#a4b0ac}
+.polished-app .vehicle-controls nav button[aria-pressed=true]{background:#b0ddd814;color:#d7eee7;border:0}
+.polished-app .controls-scroll{scrollbar-width:thin;scrollbar-color:#4a5b57 transparent;min-height:0;overflow-y:auto;padding-bottom:6px}
+.polished-app .window-panel-heading{padding:17px 18px 10px;border-bottom:0}
+.polished-app .window-panel-heading strong{font-size:14px;letter-spacing:1px;font-weight:500}
+.polished-app .window-panel-heading>span:last-child{font-size:17px;color:#93a29f}
+.polished-app .window-panel-content{padding:6px 18px 14px}
+.polished-app .all-window-actions{gap:8px;margin-bottom:11px}
+.polished-app .all-window-actions button{padding:9px 6px;background:#ffffff04;border:1px solid #ffffff13;color:#cdded8;border-radius:6px;font-size:11px}
+.polished-app .window-control{padding:9px 0 11px;border-color:#ffffff0d}
+.polished-app .window-control:last-child{border-bottom:0}
+.polished-app .window-select{font-size:12px;font-weight:400}
+.polished-app .window-select>span{display:none}
+.polished-app .window-control output{font:22px/1.1 Bahnschrift,sans-serif;font-weight:300;color:#f0f1ed}
+.polished-app .window-control input{height:5px;margin:10px 0 9px;display:block;accent-color:#b0ddd8}
+.polished-app .window-meta{font-size:9px;color:#8d9e99;line-height:17px}
+.polished-app .window-meta button{border:0;background:#ffffff06;color:#b3c4be;font-size:10px;padding:3px 7px;border-radius:4px;line-height:14px}
+.polished-app .component-panel summary{padding:16px 18px 10px;font-size:14px}
+.polished-app .component-panel summary>span{display:none}
+.polished-app .component-content{padding:4px 18px 14px}
+.polished-app .component-content section{border-color:#ffffff0e;padding:16px 0}
+.polished-app .component-row{font-size:12px;gap:10px}
+.polished-app .component-row strong{font-weight:500;font-size:14px;color:#e5ece7}
+.polished-app .component-row output{font:20px Bahnschrift,sans-serif;color:#dce6df}
+.polished-app .component-content input[type=range]{accent-color:#b0ddd8;cursor:pointer;height:5px;margin:15px 0 12px}
+.polished-app .component-content p{font-size:10px;line-height:1.8;color:#92a39d;margin:9px 0 0}
+.polished-app .part-presets button,.polished-app .mode-buttons button,.polished-app .scene-light-toggle,.polished-app .part-toggle{border-color:#ffffff18;color:#bbcfc7;border-radius:5px;font-size:10px;padding:8px 9px;background:#ffffff03}
+.polished-app .mode-buttons button[aria-pressed=true],.polished-app .part-toggle[aria-pressed=true]{background:#b0ddd81c;border-color:#b0ddd844;color:#d9f2e9}
+.polished-app .mode-buttons{gap:6px;margin-top:12px}
+.polished-app .mode-buttons button{flex:1;white-space:nowrap}
+.polished-app .paint-swatches{gap:10px;margin:16px 1px 8px}
+.polished-app .paint-swatches button{width:24px;height:24px;border:2px solid #ffffff30}
+.polished-app .paint-swatches button[aria-pressed=true]{box-shadow:0 0 0 2px #c5ded4}
+.polished-app .color-picker{color:#9eafa7;font-size:11px}
+.polished-app .color-picker input{width:32px;height:28px;border-radius:6px;border-color:#ffffff22}
+.ambient-presets{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:15px 0 13px}
+.ambient-presets button{display:flex;align-items:center;gap:7px;border:1px solid #ffffff10;border-radius:7px;padding:10px 6px;color:#b9c7c0;font-size:10px;text-align:left}
+.ambient-presets button[aria-pressed=true]{border-color:#c6dbd255;background:#b0ddd80c;color:#edf5ee}
+.ambient-presets i{width:11px;height:11px;flex-shrink:0;background:var(--swatch);box-shadow:0 0 9px color-mix(in srgb,var(--swatch) 30%,transparent)}
+.ambient-diagram{margin-top:14px;border-radius:12px;background:radial-gradient(ellipse at 50% 50%,color-mix(in srgb,var(--ambient-color) 10%,transparent),transparent 68%),#101818;padding:8px 20px;overflow:hidden}
+.ambient-diagram svg{display:block;width:100%;height:132px}
+.ambient-diagram .shell{fill:#ffffff02;stroke:#75948b55;stroke-width:1}
+.ambient-diagram .seat{fill:#26342f;stroke:#8aa29833;stroke-width:.8}
+.ambient-diagram .light-path{fill:none;stroke:var(--ambient-color);stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6;opacity:var(--ambient-level)}
+.ambient-diagram .light-wash{fill:var(--ambient-color);opacity:calc(var(--ambient-level)*.13)}
+.ambient-diagram-caption{display:flex;align-items:center;justify-content:space-between;margin-top:9px;font-size:10px;color:#96aaa0}
+.ambient-diagram-caption>span:last-child{color:#c4d6cc}
+.polished-app .wiper-gears button{border-color:#ffffff18;border-radius:8px;padding:15px 12px}
+.polished-app .wiper-gears button[aria-pressed=true]{background:#b0ddd816;border-color:#b0ddd855;color:#d6ece3}
+.polished-app .wiper-gears button span{color:#a2c6b8;font-weight:300}
+.polished-app .once-wipe{border-color:#98b9ab55;border-radius:7px;color:#c7e4d8}
+.polished-app .view-toolbar{left:calc(50% + 115px);bottom:43px;gap:10px;padding:6px 8px;border:1px solid #d2dfd51c;background:#1a2324ed;border-radius:12px;box-shadow:0 12px 32px #0003;backdrop-filter:blur(18px)}
+.polished-app .view-toolbar button{font-size:11px;padding:10px 11px;gap:7px;border-radius:7px;color:#aabcb6}
+.polished-app .mode-switch button[aria-pressed=true]{background:#b0ddd818;color:#d2e9df}
+.polished-app .view-toolbar .reset-button{border:0;background:#ffffff04;padding:10px}
+.polished-app .toolbar-divider{background:#ffffff12;height:18px}
+.polished-app .input-hints{left:calc(50% + 115px);bottom:15px;gap:19px;font-size:9px;color:#95a8a0}
+.polished-app .input-hints em{color:#82968d}
+.polished-app kbd{border-color:#ffffff19;color:#b9cec3;background:#19232080}
+.polished-app .speed-control{left:auto;right:27px;bottom:114px;width:140px}
+.polished-app .speed-control label{font-size:9px;color:#96a9a0}
+.polished-app .model-hotspot{border:1px solid #c3d7cf45;background:#182723e8;color:#cee7dd;border-radius:18px;padding:7px 12px;font-size:10px;box-shadow:0 4px 12px #0002}
+.polished-app .control-console{padding:15px 28px 13px;background:#171e1f;border-top:1px solid #ffffff10;box-shadow:0 -10px 35px #0001}
+.polished-app .console-main{gap:18px}
+.polished-app .voice-entry{gap:12px;min-width:181px}
+.polished-app .mic-button{height:43px;width:43px;background:#b0ddd818;color:#d1eee3;border:1px solid #b0ddd83c}
+.polished-app .mic-button:hover{background:#b0ddd82a}
+.polished-app .mic-button.recording{background:#7e5144;color:#fff;border-color:#dda088;box-shadow:0 0 0 5px #d6a59112}
+.polished-app .voice-entry strong{font-size:12px;font-weight:500;letter-spacing:1px}
+.polished-app .voice-entry small{font-size:10px;color:#98ada3;margin-top:6px}
+.polished-app .audio-meter{height:26px;background:#b0ddd815}
+.polished-app .command-form{border-color:#ffffff17;background:#11191a;border-radius:9px;transition:border-color .2s}
+.polished-app .command-form:focus-within{border-color:#b0ddd860}
+.polished-app .command-form input{padding:13px 16px;font-size:12px;color:#e9f2ec}
+.polished-app .command-form input::placeholder{color:#7b9388}
+.polished-app .command-form button{color:#c1d9cb;font-size:11px}
+.polished-app .history-button,.polished-app .new-chat{font-size:11px;color:#9eb3a8}
+.polished-app .console-feedback{font-size:11px;line-height:1.65;margin:10px 0 0 55px;color:#bfd0c7}
+.polished-app .speech-status-row{margin:6px 0 0 55px;gap:13px;font-size:10px;flex-wrap:wrap;color:#7f978a}
+.polished-app .speech-status-row>span:nth-child(2){font-size:10px}
+.polished-app .tts-toggle,.polished-app .tts-replay,.polished-app .wake-control{font-size:10px;color:#a2b7aa}
+.polished-app .wake-control{margin-left:4px;gap:7px}
+.polished-app .wake-control span{color:#809789;font-size:10px}
+.polished-app .wake-control[data-listening=true] span{color:#c4e7cc}
+.polished-app .provider-badge{font-size:9px;border-color:#a18b6050;background:#a18b600a;color:#c7b18e}
+.polished-app .provider-badge.mock-mode{border-color:#cc936c66;color:#dfb897}
+.polished-app .speech-error{color:#e5aa96}
+.polished-app .command-history{background:#1b2724f8;border-color:#d2dfd526;border-radius:12px;padding:20px;bottom:calc(100% + 12px)}
+.polished-app .conversation-row>span{font:9px 'Microsoft YaHei UI',sans-serif;color:#8da99b}
+.polished-app .debug-panel{top:88px;bottom:20px;right:18px;width:350px;max-height:calc(100dvh - 108px);border-radius:12px;background:#182323f8;border-color:#d2dfd526}
+.polished-app .debug-panel .performance{position:static;margin:18px 0;font-size:12px}
+.polished-app .help-modal{width:510px;border-radius:18px;background:#1c2525;border-color:#d2dfd526;padding:29px 32px}
+.polished-app .help-modal h2{font-size:24px;font-weight:400;color:#edf0e9;letter-spacing:2px;margin:23px 0}
+.polished-app .help-row{padding:15px 0}
+.polished-app .help-row p,.polished-app .help-note{font-size:11px;color:#9eafa6}
+.polished-app .help-row h3{font-size:13px;color:#d9e5dc}
+.about-credits{margin-top:12px;padding:17px 0;border-top:1px solid var(--line);color:#9bb2a4;font-size:10px;line-height:1.9}
+.about-credits strong{color:#d4e4d9;font-size:12px;font-weight:500}
+.about-credits p{margin:6px 0}
+.about-credits a{text-decoration:underline;text-underline-offset:3px;color:#c5dfd0}
+.about-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:#6f8b7a;font-size:10px}
+.about-meta button{border:1px solid #b0ddd828;border-radius:5px;padding:6px 9px;color:#9cb8a7}
+.polished-app .primary-button{background:#b0ddd81a;border-color:#b0ddd84a;color:#d4ebdf;border-radius:7px;font-size:12px}
+.polished-app .loading-card{border-radius:14px;background:#1a2525ed;border-color:#d2dfd526}
+.polished-app .clarification{justify-content:flex-start;margin-left:55px;border-color:#ffffff10;flex-wrap:wrap}
+@media(max-width:1500px){
+ .polished-app .header{height:66px;padding:0 23px;gap:18px}
+ .brand-wordmark{font-size:32px}.polished-app .brand-cn{font-size:13px}
+ .experience-nav button{padding:9px 17px;font-size:11px}
+ .polished-app .vehicle-controls,.polished-app:has(.clarification) .vehicle-controls{left:18px;top:18px;width:266px;max-height:calc(100% - 36px)}
+ .polished-app .view-toolbar{left:calc(50% + 110px);gap:5px;padding:5px 7px}
+ .polished-app .view-toolbar button{padding:9px 8px;font-size:10px;gap:5px}.polished-app .view-toolbar svg{width:16px;height:16px}
+ .polished-app .input-hints{left:calc(50% + 110px);gap:15px;font-size:8px}
+ .polished-app .control-console{padding:13px 23px 11px}.polished-app .console-main{gap:13px}.polished-app .voice-entry{min-width:160px}
+ .polished-app .speech-status-row{gap:9px}.polished-app .scene-context{top:23px;right:23px}
+}
+@media(max-height:850px){
+ .polished-app .window-panel-heading{padding:12px 18px 8px}.polished-app .window-control{padding:7px 0 8px}
+ .polished-app .window-control input{margin:8px 0}.polished-app .all-window-actions button{padding:8px 6px}
+ .polished-app .window-panel-content{padding-bottom:10px}.polished-app .component-content section{padding:13px 0}
+ .polished-app .controls-top{padding:12px 18px}.polished-app .controls-scroll{padding-bottom:0}
+ .polished-app .control-console{padding-top:11px;padding-bottom:10px}.polished-app .console-feedback{margin-top:7px}
+ .polished-app .speech-status-row{margin-top:4px}.polished-app .scene-context p{display:none}
+}
+@media(max-width:1000px){
+ .polished-app .brand small,.polished-app .service{display:none}.experience-nav button{padding:9px 11px}
+ .polished-app .scene-context{display:none}.polished-app .view-toolbar{left:auto;right:18px;transform:none;max-width:calc(100% - 315px);flex-wrap:wrap;justify-content:center;bottom:45px}
+ .polished-app .view-presets,.polished-app .toolbar-divider{display:none}.polished-app .input-hints{left:auto;right:15px;transform:none;width:calc(100% - 315px);white-space:normal;flex-wrap:wrap;justify-content:center;bottom:10px;gap:8px}
+ .polished-app .voice-entry{min-width:45px}.polished-app .voice-entry>div:not(.audio-meter){display:none}.polished-app .voice-entry .audio-meter{display:none}
+ .polished-app .speech-status-row,.polished-app .console-feedback{margin-left:0}.polished-app .wake-control{margin-left:auto}.polished-app .speech-status-row .transcript{display:none}
+ .polished-app .clarification{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){.polished-app *{transition:none!important;scroll-behavior:auto!important}}
+
+.polished-app .view-toolbar .hotspot-toggle{padding-left:10px;border-left:1px solid #ffffff12;border-radius:0;gap:6px}.hotspot-toggle[aria-pressed=true] span{color:#b0ddd8}.hotspot-toggle span{font-size:9px}

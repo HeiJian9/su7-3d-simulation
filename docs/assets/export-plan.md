@@ -1,3 +1,5 @@
+> 0.7.1 当前资产：153 节点／140 网格／102,731 三角面／46 材质／15 纹理；25 个氛围灯面、16 处运行时补光。原 140 节点完整保留。唯一 Blender、GLB 与哈希见 current-geometry.json。`design-cabin-lighting.py --apply` 已执行并烘焙，不重复运行。正常导出仍只用 `npm run asset:export`；下文 0.7.0 是历史。
+
 > 0.7.0 最新约定：当前资产为 140 节点／127 网格／99,445 三角面／46 材质／15 贴图。继续使用唯一 `assets/source/blender/su7-enhanced.blend`；正常导出只运行 `npm run asset:export`，再 `npm run asset:check` 和 `npm run build`。**下面早期导入步骤是历史，不能重跑覆盖已确认修复。** 原生尾箱、前盖、灯面、贴合灯带和雨刷均已烘焙。I7–I9 未修改模型文件。
 
 # SU7 导出约定与后续增强计划

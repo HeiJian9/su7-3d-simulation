@@ -7,9 +7,9 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
-  "bytes": 6714984,
+  "sha256": "ef4f619b42341ed5709e443d53358144b6e833ab97255eb241f3e307fa1e1d18",
+  "bytes": 6816056,
   "rotationY": 0,
   "scale": 1,
-  "message": "指定 SU7 · I6.9-native-frunk-wide-dome 增强资产 · 原车几何与局部补建"
+  "message": "指定 SU7 · 0.7.1-layered-cabin 增强资产 · 原车几何与局部补建"
 }

@@ -88,7 +88,7 @@ export class SpeechCoordinator {
     this.transcribingGeneration = generation;
     const requestId = this.currentId;
     this.request = new AbortController();
-    useSpeech.setState({ phase: 'transcribing', message: '麦克风已释放，正在转写…', rms: 0, durationMs: audio.durationMs });
+    useSpeech.setState({ phase: 'transcribing', message: '正在识别你的话…', rms: 0, durationMs: audio.durationMs });
     this.trace('transcribing', `${audio.mimeType}; ${audio.durationMs} ms; ${audio.reason}`);
     try {
       const form = new FormData(); form.append('audio', audio.blob, audio.mimeType === 'audio/wav' ? 'command.wav' : 'command.webm'); form.append('requestId', requestId); form.append('durationMs', String(audio.durationMs));
@@ -98,7 +98,7 @@ export class SpeechCoordinator {
       if (!this.valid(generation)) return;
       if (transcript.requestId !== requestId) throw new SpeechFailure('REQUEST_ID_MISMATCH', '转写响应编号不匹配，已丢弃。');
       if (transcript.model !== useSpeech.getState().health.asr.model) throw new SpeechFailure('MODEL_MISMATCH', '转写响应模型与当前配置不一致，已丢弃。');
-      useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '转写完成，智能助手正在处理…' });
+      useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '正在理解你的意思…' });
       this.trace('transcript',transcript.text);
       this.trace('asr-completed', `${transcript.model}; ${transcript.durationMs} ms`);
       const result = await this.resolve(transcript.text,'voice',generation,{...this.base,requestId});
@@ -129,7 +129,7 @@ export class SpeechCoordinator {
     const focus=current.context.focus&&Date.now()-current.context.focus.updatedAt<120000?current.context.focus:undefined;
     const pending=store.context.assistantPending&&store.context.assistantPending.expiresAt>Date.now()?store.context.assistantPending:undefined;
     this.request=new AbortController();const signal=this.request.signal;
-    useSpeech.setState({phase:'resolving',message:'智能助手正在理解并选择工具…'});this.trace('route','llm / real function calling');
+    useSpeech.setState({phase:'resolving',message:'正在理解你的意思…'});this.trace('route','llm / real function calling');
     const response=await this.fetcher('/api/assistant/plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestId:base.requestId,text:input,state:current.state,actual:current.actualParts,available:[...new Set([...current.available.map(c=>`window:${c}`),...current.capabilities])],context:{focus,pending,history:current.messages.slice(-8).map(m=>({input:m.input,output:m.output}))}}),signal:AbortSignal.any([signal,AbortSignal.timeout(35000)])});
     if(!response.ok)await responseError(response);const plan=assistantPlanSchema.parse(await response.json());
     if(!fresh())return {kind:'stale',message:'车辆状态已改变，旧模型回复已丢弃。'};
@@ -145,7 +145,7 @@ export class SpeechCoordinator {
       if(!check.ok)throw new SpeechFailure(check.code,check.message);
       execution=useVehicle.getState().submit({requestId:base.requestId,baseRevision:base.revision,origin,route:'llm',commands});
       if(!execution)throw new SpeechFailure('EXECUTION_FAILED',useVehicle.getState().feedback);
-      useSpeech.setState({phase:'executing',message:'正在执行助手工具…'});execution=await waitForVehicleExecution(execution);
+      useSpeech.setState({phase:'executing',message:'正在调整车辆…'});execution=await waitForVehicleExecution(execution);
       if(!this.valid(generation))return {kind:'stale',message:'本轮助手已取消。'};
       message=execution.message;kind=execution.status==='completed'?'execute':'failed';
     }else{

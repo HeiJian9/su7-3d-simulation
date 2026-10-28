@@ -24,7 +24,7 @@ try{
   for(const c of ['fl','fr','rl','rr'])report.poses[c]=Number(await page.locator('canvas').getAttribute(`data-window-${c}-openness`));
   expect(report.requests).toEqual([{endpoint:'/api/speech/transcribe',status:200},{endpoint:'/api/speech/synthesize',status:200}]);
   expect(report.poses).toEqual({fl:.5,fr:0,rl:0,rr:0});
-  await page.getByRole('button',{name:'调试记录',exact:false}).click();
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();
   const saved=page.waitForResponse(r=>r.url().endsWith('/api/diagnostics')&&r.request().method()==='POST');
   await page.getByRole('button',{name:'保存场景诊断 JSON',exact:true}).click();expect((await saved).ok()).toBe(true);
   await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();await page.getByRole('button',{name:'左方视角',exact:true}).click();

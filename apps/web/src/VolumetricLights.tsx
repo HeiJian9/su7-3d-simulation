@@ -7,6 +7,7 @@ import mapping from './data/vehicle-mapping.json';
 
 // Integrate scattering only between the camera and the actual scene depth.
 // This is a volume integral through soft cones, with no visible cone mesh.
+const cabinLightCount=mapping.materialRoles.ambient.lights.length;
 const fragmentShader=`
 uniform sampler2D tScene;
 uniform sampler2D tDepth;
@@ -21,8 +22,8 @@ uniform float headlightsOn;
 uniform vec3 signalOrigins[6];
 uniform vec3 signalDirections[6];
 uniform float signalPowers[6];
-uniform vec3 cabinOrigins[8];
-uniform float cabinPowers[8];
+uniform vec3 cabinOrigins[${cabinLightCount}];
+uniform float cabinPowers[${cabinLightCount}];
 uniform vec3 cabinColor;
 uniform vec3 tailOrigins[32];
 uniform int tailCount;
@@ -91,9 +92,9 @@ void main(){
         light+=vec3(1.,.89,.70)*domePowers[j]*domeField(p,domeOrigins[j],domeDirections[j])*.22;
       // Only localized cabin air around the concealed lights, not a fog overlay.
       if(abs(p.x)<.79&&p.y>.32&&p.y<1.32&&p.z>-.9&&p.z<1.25){
-        for(int j=0;j<8;j++)if(cabinPowers[j]>.0){
+        for(int j=0;j<${cabinLightCount};j++)if(cabinPowers[j]>.0){
           float d=length(p-cabinOrigins[j]);
-          light+=cabinColor*cabinPowers[j]*(1.-smoothstep(.03,.48,d))*.22;
+          light+=cabinColor*cabinPowers[j]*(1.-smoothstep(.03,.40,d))*.10;
         }
       }
       scatter+=light*density*stepLength*exp(-density*t*.12);
@@ -130,7 +131,7 @@ export function VolumetricLights({model}:{model:Group}){
       }
     });
     const vectors=(count:number)=>Array.from({length:count},()=>new Vector3());
-    const material=new ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{tScene:{value:target.texture},tDepth:{value:target.depthTexture},inverseProjection:{value:new Matrix4()},cameraWorld:{value:new Matrix4()},rootInverse:{value:new Matrix4()},eye:{value:new Vector3()},lamps:{value:Object.values(mapping.materialRoles.headlights).map(c=>new Vector3().fromArray(c.lightPosition).add(new Vector3(0,0,-.025)))},density:{value:.15},highBeam:{value:0},headlightsOn:{value:0},signalOrigins:{value:vectors(6)},signalDirections:{value:vectors(6)},signalPowers:{value:Array(6).fill(0)},cabinOrigins:{value:vectors(8)},cabinPowers:{value:Array(8).fill(0)},cabinColor:{value:new Color()},boundsMin:{value:new Vector3()},boundsMax:{value:new Vector3()}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader});
+    const material=new ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{tScene:{value:target.texture},tDepth:{value:target.depthTexture},inverseProjection:{value:new Matrix4()},cameraWorld:{value:new Matrix4()},rootInverse:{value:new Matrix4()},eye:{value:new Vector3()},lamps:{value:Object.values(mapping.materialRoles.headlights).map(c=>new Vector3().fromArray(c.lightPosition).add(new Vector3(0,0,-.025)))},density:{value:.15},highBeam:{value:0},headlightsOn:{value:0},signalOrigins:{value:vectors(6)},signalDirections:{value:vectors(6)},signalPowers:{value:Array(6).fill(0)},cabinOrigins:{value:vectors(cabinLightCount)},cabinPowers:{value:Array(cabinLightCount).fill(0)},cabinColor:{value:new Color()},boundsMin:{value:new Vector3()},boundsMax:{value:new Vector3()}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader});
     Object.assign(material.uniforms,{tailOrigins:{value:vectors(32)},tailCount:{value:mapping.materialRoles.tailRunning.samples.length},tailMin:{value:new Vector3()},tailMax:{value:new Vector3()},domeOrigins:{value:vectors(2)},domeDirections:{value:vectors(2)},domePowers:{value:[0,0]}});
     const tailSources=mapping.materialRoles.tailRunning.samples.map(s=>({node:model.getObjectByName(s.node)!,position:new Vector3().fromArray(s.position)}));
     return {target,material,quad:new FullScreenQuad(material),size:new Vector2(),sources,tailSources,tailBounds:new Box3()};

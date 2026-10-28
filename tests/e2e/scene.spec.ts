@@ -6,7 +6,7 @@ const rotation = async (page: Page) => (await page.getByTestId('camera-rotation'
 const distance = (a: number[], b: number[]) => Math.hypot(...a.map((n, i) => n - b[i]));
 async function ready(page: Page) {
   await page.goto('/');
-  await page.getByRole('button', { name: '调试记录', exact: false }).click();
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button', { name: '调试记录', exact: false }).click();
   await expect(page.getByTestId('asset-status')).toContainText('ready');
   await expect.poll(() => position(page)).toEqual([5.4, 2.65, -6.1]);
 }
@@ -76,7 +76,7 @@ test('cabin, free movement, look, focused input isolation and keyboard return', 
   await expect.poll(() => position(page)).toEqual([-0.4, 1.15, -0.05]);
   await page.getByRole('button', { name: '关闭调试记录', exact: true }).click();
   await page.screenshot({ path: `docs/assets/i4-i6/su7-cabin-${testInfo.project.name}.png` });
-  await page.getByRole('button', { name: '调试记录', exact: false }).click();
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button', { name: '调试记录', exact: false }).click();
   await page.locator('canvas').click({ position: { x: 700, y: 350 } });
   await page.keyboard.down('w');
   await page.waitForTimeout(2600);
@@ -117,7 +117,7 @@ test('corrupt model fails visibly, then retry loads the actual asset', async ({ 
   await expect(page.getByText('模型文件大小与资产记录不一致，请重新导入或重试。', { exact: true })).toBeVisible();
   await page.unroute('**/models/su7-runtime.glb?*');
   await page.getByRole('button', { name: '重新加载', exact: true }).click();
-  await page.getByRole('button', { name: '调试记录', exact: false }).click();
+  await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button', { name: '调试记录', exact: false }).click();
   await expect(page.getByTestId('asset-status')).toContainText('ready');
   await expect(page.getByRole('heading', { name: '模型加载未完成' })).toHaveCount(0);
 });

@@ -10,7 +10,7 @@ export class WakeListener{
  private pagehide=()=>this.disable();
  private record(stage:string,detail:string){useWake.setState(s=>({events:[...s.events.slice(-99),{time:new Date().toISOString(),stage,detail}]}));}
  async enable(){
-  this.disable();const generation=this.generation;useWake.setState({enabled:true,status:'loading',message:'加载本地中文唤醒模型…'});
+  this.disable();const generation=this.generation;useWake.setState({enabled:true,status:'loading',message:'正在准备唤醒…'});
   this.worker=new Worker('/audio/wake-worker.js');this.loadTimer=setTimeout(()=>this.failure(generation,'本地唤醒服务加载超时，请重试。'),20000);
   this.worker.onerror=()=>this.failure(generation,'本地关键词引擎启动失败，请重试。');
   this.worker.onmessage=({data})=>{
@@ -28,7 +28,7 @@ export class WakeListener{
   if(!this.canListen()){
    clearTimeout(this.resumeTimer);this.resumeTimer=undefined;
    if(this.active||this.stream||this.context){this.releaseCapture();this.worker?.postMessage({type:'reset'});}
-   if(useWake.getState().status!=='paused')useWake.setState({status:'paused',message:'指令或播报期间暂停唤醒'});
+   if(useWake.getState().status!=='paused')useWake.setState({status:'paused',message:'正在处理本次对话'});
   }else if(!this.busy&&!this.active&&!this.resumeTimer){
    // Echo tail settling follows real playback completion. It never triggers a wake.
    this.resumeTimer=setTimeout(()=>{this.resumeTimer=undefined;if(generation===this.generation&&this.canListen())void this.capture(generation);},650);
@@ -50,7 +50,7 @@ export class WakeListener{
     if(this.samples.length>=1600){const chunk=Float32Array.from(this.samples);const rms=Math.sqrt(chunk.reduce((sum,n)=>sum+n*n,0)/chunk.length);useWake.setState({rms:Math.min(1,rms)});this.samples=[];this.worker?.postMessage({type:'samples',samples:chunk.buffer},[chunk.buffer]);}
    };
    this.source.connect(this.worklet);const mute=context.createGain();mute.gain.value=0;this.worklet.connect(mute).connect(context.destination);
-   this.active=true;this.record('listening','关键词采集已连接；仅等待小爱同学');useWake.setState({status:'listening',message:'正在本地监听“小爱同学” · 唤醒后等提示再说指令'});
+   this.active=true;this.record('listening','关键词采集已连接；仅等待小爱同学');useWake.setState({status:'listening',message:'正在监听“小爱同学” · 提示音后说指令'});
   }catch{if(generation===this.generation)this.failure(generation,'无法监听麦克风，请检查权限或设备后重试。');}
   finally{this.busy=false;if(generation===this.generation&&useWake.getState().enabled&&!this.active&&this.canListen())this.sync(generation);}
  }

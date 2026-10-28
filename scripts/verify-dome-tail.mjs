@@ -18,5 +18,5 @@ const fixtures=[];
 for(const [position,cfg] of Object.entries(mapping.cabinLights)){
  assert.ok(nodes.find(n=>n.getName()===cfg.housing));assert.ok(nodes.find(n=>n.getName()===cfg.lens));assert.ok(cfg.direction[1]<-.98);assert.ok(Math.abs(cfg.position[0])<.002);assert.ok(cfg.roofHit[1]-cfg.position[1]>.018&&cfg.roofHit[1]-cfg.position[1]<.025);fixtures.push({position,...cfg});
 }
-assert.equal(nodes.length,base.getRoot().listNodes().length+4+(mapping.frunk?.newNodes.length??0));
+assert.equal(nodes.length,base.getRoot().listNodes().length+4+(mapping.frunk?.newNodes.length??0)+(mapping.materialRoles.ambient.addedNodes?.length??0));
 const report={passed:true,baseline:'697b314',unmodifiedNodes:unchanged,nativeRing:ring,fixtures,newNodes:4,tailSamples:mapping.materialRoles.tailRunning.samples.length};await mkdir('docs/validation/dome-tail',{recursive:true});await writeFile('docs/validation/dome-tail/geometry.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:true,unchanged,newNodes:4,tailTriangles:714}));

@@ -3,12 +3,14 @@ import {createPortal,useFrame,useThree} from '@react-three/fiber';
 import {Html} from '@react-three/drei';
 import {Group} from 'three';
 import mapping from './data/vehicle-mapping.json';
+import {useScene} from './store';
 import {actualValues,completeExecutions,manualCommand,useVehicle} from './vehicle';
 import {corners,doorLabels,type Corner} from '../../../packages/shared/src/vehicle';
 interface Binding {key:string;node:Group;angle:number;axis:'x'|'y';value:number}
 export function Hotspot({model,parent,position,label,part,activate,occlusion=true}:{model:Group;parent:Group;position:number[];label:string;part:string;activate:()=>void;occlusion?:boolean}){
-  const selected=useVehicle(s=>s.selectedPart===part);const modelRef=useRef(model);
+  const showHotspots=useScene(s=>s.showHotspots);const selected=useVehicle(s=>s.selectedPart===part);const modelRef=useRef(model);
   const down=useRef({x:0,y:0});
+  if(!showHotspots)return null;
   return createPortal(<group position={position as [number,number,number]}><Html center occlude={occlusion?[modelRef]:false} zIndexRange={[2,0]}><button className={`model-hotspot ${selected?'selected':''}`} aria-label={`模型热点：${label}`} data-part={part} onPointerDown={e=>{e.stopPropagation();down.current={x:e.clientX,y:e.clientY};}} onClick={e=>{e.stopPropagation();if(e.detail!==0&&Math.hypot(e.clientX-down.current.x,e.clientY-down.current.y)>5)return;useVehicle.getState().selectPart(part);activate();}}>{label}<span>↗</span></button></Html></group>,parent);
 }
 export function VehicleMechanism({model}:{model:Group}){

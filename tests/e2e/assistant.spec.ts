@@ -3,7 +3,7 @@ import {testWave} from './global-setup';
 const command=(value=.5)=>({component:'window',targets:['fl'],property:'openness',operation:'set',value});
 async function ready(page:Page){
  await page.route('**/api/health',r=>r.fulfill({json:{providers:{mode:'test-mock',asr:{configured:true,model:'qwen3-asr-flash',protocol:'test-mock',audioFormats:['audio/wav'],missing:[],probe:'test-mock'},tts:{configured:true,model:'mock-tts',voice:'mock',protocol:'test-mock',missing:[],probe:'test-mock'},intent:{configured:true,model:'deepseek-mock',protocol:'test-mock',missing:[],probe:'test-mock'}}}}));
- await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
+ await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
 }
 async function send(page:Page,text:string){await page.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(text);await page.getByRole('button',{name:'发送',exact:false}).click();}
 const pose=(page:Page)=>page.locator('canvas').getAttribute('data-window-fl-openness').then(Number);

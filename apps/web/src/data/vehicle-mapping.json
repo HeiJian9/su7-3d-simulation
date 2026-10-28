@@ -1,5 +1,5 @@
 {
-  "version": "I6.9-native-frunk-wide-dome",
+  "version": "0.7.1-layered-cabin",
   "coordinates": "Y up, front -Z, left -X",
   "doors": {
     "fl": {
@@ -409,7 +409,20 @@
         "AMBIENT_DASHBOARD",
         "AMBIENT_DASHBOARD_RIGHT",
         "AMBIENT_CONSOLE_LEFT",
-        "AMBIENT_CONSOLE_RIGHT"
+        "AMBIENT_CONSOLE_RIGHT",
+        "AMBIENT_INLAY_FL",
+        "AMBIENT_SPEAKER_FL",
+        "AMBIENT_INLAY_FR",
+        "AMBIENT_SPEAKER_FR",
+        "AMBIENT_INLAY_RL",
+        "AMBIENT_SPEAKER_RL",
+        "AMBIENT_INLAY_RR",
+        "AMBIENT_SPEAKER_RR",
+        "AMBIENT_DASH_CROWN_LEFT",
+        "AMBIENT_DASH_CROWN_RIGHT",
+        "AMBIENT_TUNNEL_LEFT",
+        "AMBIENT_TUNNEL_RIGHT",
+        "AMBIENT_REAR_CONSOLE"
       ],
       "lightPositions": [
         [
@@ -431,10 +444,30 @@
           0,
           0.51,
           -0.06
+        ],
+        [
+          -0.4,
+          0.3,
+          0.67
+        ],
+        [
+          0.4,
+          0.3,
+          0.67
+        ],
+        [
+          -0.47,
+          0.91,
+          -0.53
+        ],
+        [
+          0,
+          0.46,
+          0.4
         ]
       ],
       "radius": null,
-      "note": "12 surface-fitted narrow ribbon diffusers; native door upper rails, handle undersides, dashboard and console. Footwells use concealed local wash illumination, with no visible added glovebox bars. Gaps between original surface islands are not bridged. Eight short-range wash lights; four follow their actual doors. Source car surfaces unchanged.",
+      "note": "Layered ring: 25 surface-fitted diffusers covering original upper rails, door inlays, handle recesses, speaker contours and door pockets, dashboard seams, centre tunnel and rear console. 16 concealed short-range wash lights include front/rear footwells; eight follow the four doors. Existing 140 nodes preserved.",
       "materials": [
         "AMBIENT_CABIN_LED",
         "AMBIENT_CABIN_WASH"
@@ -520,6 +553,86 @@
           ],
           "distance": 0.4,
           "gain": 0.12
+        },
+        {
+          "parent": "DOOR_FL_ROOT",
+          "position": [
+            0.2149999737739563,
+            -0.10500001907348633,
+            0.7150000333786011
+          ],
+          "distance": 0.4,
+          "gain": 0.16
+        },
+        {
+          "parent": "DOOR_FR_ROOT",
+          "position": [
+            -0.2149999737739563,
+            -0.10500001907348633,
+            0.7150000333786011
+          ],
+          "distance": 0.4,
+          "gain": 0.16
+        },
+        {
+          "parent": "DOOR_RL_ROOT",
+          "position": [
+            0.2149999737739563,
+            -0.10500001907348633,
+            0.46000003814697266
+          ],
+          "distance": 0.4,
+          "gain": 0.16
+        },
+        {
+          "parent": "DOOR_RR_ROOT",
+          "position": [
+            -0.2149999737739563,
+            -0.10500001907348633,
+            0.46000003814697266
+          ],
+          "distance": 0.4,
+          "gain": 0.16
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            -0.4,
+            0.3,
+            0.67
+          ],
+          "distance": 0.67,
+          "gain": 0.58
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            0.4,
+            0.3,
+            0.67
+          ],
+          "distance": 0.67,
+          "gain": 0.58
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            -0.47,
+            0.91,
+            -0.53
+          ],
+          "distance": 0.42,
+          "gain": 0.15
+        },
+        {
+          "parent": "SU7_ROOT",
+          "position": [
+            0,
+            0.46,
+            0.4
+          ],
+          "distance": 0.42,
+          "gain": 0.2
         }
       ],
       "audit": "docs/assets/cabin-lighting-audit.json",
@@ -538,6 +651,22 @@
         "AMBIENT_DASHBOARD_RIGHT",
         "AMBIENT_CONSOLE_RIGHT",
         "AMBIENT_FOOTWELL_RIGHT"
+      ],
+      "design": "layered_cabin_v1",
+      "addedNodes": [
+        "AMBIENT_INLAY_FL",
+        "AMBIENT_SPEAKER_FL",
+        "AMBIENT_INLAY_FR",
+        "AMBIENT_SPEAKER_FR",
+        "AMBIENT_INLAY_RL",
+        "AMBIENT_SPEAKER_RL",
+        "AMBIENT_INLAY_RR",
+        "AMBIENT_SPEAKER_RR",
+        "AMBIENT_DASH_CROWN_LEFT",
+        "AMBIENT_DASH_CROWN_RIGHT",
+        "AMBIENT_TUNNEL_LEFT",
+        "AMBIENT_TUNNEL_RIGHT",
+        "AMBIENT_REAR_CONSOLE"
       ]
     },
     "wiper": {
