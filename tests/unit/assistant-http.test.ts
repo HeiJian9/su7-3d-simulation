@@ -2,7 +2,7 @@ import express from 'express';
 import type {Server} from 'node:http';
 import {afterEach,expect,it} from 'vitest';
 import {assistantRoutes} from '../../apps/server/src/assistant';
-import {defaultVehicle} from '../../packages/shared/src/vehicle';
+import {defaultVehicle,VehicleLedger} from '../../packages/shared/src/vehicle';
 const servers:Server[]=[];
 async function serve(fetcher:typeof fetch){const app=express();app.use(express.json());app.use(assistantRoutes({baseUrl:'https://mock.invalid',apiKey:'mock-secret',model:'deepseek-mock',timeoutMs:1000},fetcher));const server=app.listen(0,'127.0.0.1');servers.push(server);await new Promise<void>(r=>server.once('listening',r));const a=server.address();if(!a||typeof a==='string')throw Error();return async(path:string,body:unknown)=>fetch(`http://127.0.0.1:${a.port}${path}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});}
 afterEach(async()=>{await Promise.all(servers.splice(0).map(s=>new Promise<void>((r,j)=>s.close(e=>e?j(e):r()))));});
@@ -23,4 +23,17 @@ it('Mock HTTP: ambiguous target calls are rejected without execution and repaire
   expect(JSON.parse(body.messages.at(-1).content)).toMatchObject({status:'rejected',executed:false,code:'AMBIGUOUS_TARGET'});
   return model([tool('assistant_reply',{kind:'clarify',message:'前排还是后排顶灯？'},'clarification')]);});
  const response=await post('/plan',{...input,text:'打开顶灯',available:['cabinLight:front','cabinLight:rear']});expect(response.status).toBe(200);const plan=await response.json();expect(plan.commands).toEqual([]);expect(plan.validationRepairs).toBe(1);expect(plan.calls[0].id).toBe('clarification');expect(plan.reply.kind).toBe('clarify');expect(input.state.cabinLights).toEqual({front:false,rear:false});
+});
+it('Mock HTTP: rules wording requires a verified completed receipt, dedupes and cannot call tools',async()=>{
+ let requests=0;const post=await serve(async(_url,init)=>{requests++;const body=JSON.parse(init!.body as string);expect(body.tool_choice).toBe('none');expect(body.temperature).toBe(.55);expect(JSON.parse(body.messages.at(-1).content).result).toMatchObject({status:'completed',effects:[{key:'window:fl:openness',value:.35}]});return Response.json({choices:[{finish_reason:'stop',message:{role:'assistant',content:'左前窗开到35%啦，留一点微风。'}}]});});
+ const prediction=new VehicleLedger().apply(input.state,{requestId:input.requestId,baseRevision:0,origin:'text',route:'rules',commands:[command]},new Set(input.available));if(!prediction.ok)throw Error();
+ const body={input,commands:[command],result:{status:'completed',revision:prediction.execution.revision,effects:prediction.execution.effects,boundary:prediction.execution.boundary}};
+ expect((await post('/feedback',{...body,result:{...body.result,effects:[]}})).status).toBe(409);expect(requests).toBe(0);
+ expect((await post('/feedback',{...body,result:{...body.result,status:'animating'}})).status).toBe(400);
+ expect((await post('/feedback',body)).status).toBe(200);expect((await post('/feedback',body)).status).toBe(200);expect(requests).toBe(1);
+ expect((await post('/feedback',{...body,input:{...input,text:'换一个说法'}})).status).toBe(409);
+});
+it('Mock HTTP: a model dropping an unsupported second operation cannot execute the supported first half',async()=>{
+ let requests=0;const post=await serve(async(_url,init)=>{requests++;if(requests===1)return model([tool('vehicle_windows',{actions:[command]},'partial')]);const body=JSON.parse(init!.body as string);expect(JSON.parse(body.messages.at(-1).content)).toMatchObject({executed:false,code:'UNSUPPORTED_REQUEST_PART'});return model([tool('assistant_reply',{kind:'unsupported',message:'暂不支持该功能。'},'rejected-whole-turn')]);});
+ const response=await post('/plan',{...input,text:'左前窗打开百分之三十五，再打开空调'});expect(response.status).toBe(200);const plan=await response.json();expect(plan.commands).toEqual([]);expect(plan.reply.kind).toBe('unsupported');expect(plan.validationRepairs).toBe(1);expect(requests).toBe(2);
 });

@@ -1,4 +1,15 @@
 import type {VehicleCommand} from './vehicle.js';
+// Known unimplemented vehicle controls must never disappear from a compound
+// request. This guard vetoes partial execution; unmatched language still goes
+// through the LLM. Negated clauses do not request an unsupported operation.
+export function unsupportedRequestPart(text:string):string|undefined{
+ const controls=/(?:空调|空氣調節|温控|暖风|制冷|除霜|天窗|遮阳帘|座椅(?:加热|通风|按摩|位置)|(?:加热|通风|按摩)座椅|方向盘加热|后视镜(?:折叠|加热|调节)|鸣笛|喇叭|导航|播放音乐|自动驾驶|车速)/u;
+ for(const clause of text.split(/[，,；;。]|然后|接着|并且|同时|再(?=打开|开启|关闭|启动|把|让)/u)){
+  if(/不要|不用|不必|别|取消|不需要|无需|不能/u.test(clause))continue;
+  const match=clause.match(controls);if(match&&/(?:开|关|调|设|启|停|加|减|升|降|切换|播放|导航|鸣笛|刹车|充电)/u.test(clause))return match[0];
+ }
+ return undefined;
+}
 // A model may interpret semantics, but it may not invent a target or expand an
 // ambiguous singular instruction to all parts. This guard is shared by both ends.
 export function targetScopeError(text:string,commands:VehicleCommand[],focus?:{component:string;targets:string[]}):string|undefined{

@@ -1,10 +1,10 @@
 {
   "stage": "0.7.2-enclosed-cabin",
-  "sha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
-  "blendSha256": "f22c6333ae0269b320247da3f61e067f38d97fe6ae5b2e29cfee515aaacca68d",
+  "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+  "blendSha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
   "nodes": 154,
   "meshes": 141,
-  "triangles": 104976,
+  "triangles": 105548,
   "materials": 46,
   "textures": 15
 }

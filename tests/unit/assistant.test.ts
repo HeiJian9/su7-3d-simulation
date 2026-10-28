@@ -4,12 +4,19 @@ import {registeredTools,validateTool} from '../../packages/shared/src/capabiliti
 import {defaultVehicle,VehicleLedger,type VehicleCommand} from '../../packages/shared/src/vehicle';
 import {SpeechCoordinator,useSpeech} from '../../apps/web/src/speech';
 import {useVehicle} from '../../apps/web/src/vehicle';
+import {unsupportedRequestPart} from '../../packages/shared/src/tool-policy';
 const cmd={component:'door',targets:['fl'],property:'openness',operation:'set',value:.5} as const;
 const command={...cmd,targets:[...cmd.targets]} as VehicleCommand;
 const call=(name='vehicle_doors',actions:unknown[]=[command],id='call-1')=>({id,type:'function' as const,function:{name,arguments:JSON.stringify({actions})}});
 const input={requestId:'test-assistant',text:'左前门开一半',state:defaultVehicle(),actual:{},available:['door:fl'],context:{history:[]}};
 const config={baseUrl:'https://unit.invalid/v1',apiKey:'unit-secret-do-not-reflect',model:'deepseek-test',timeoutMs:30};
 describe('shared registered tool authority',()=>{
+ it('keeps unsupported compound requests atomic while preserving negation',()=>{
+  expect(unsupportedRequestPart('左前门开一半，再打开空调')).toBe('空调');
+  expect(()=>validateCalls([call()],{...input,text:'左前门开一半，再打开空调'})).toThrow('尚未实现');
+  expect(unsupportedRequestPart('别打开空调，左前门开一半')).toBeUndefined();expect(validateCalls([call()],{...input,text:'别打开空调，左前门开一半'}).commands).toHaveLength(1);
+  expect(unsupportedRequestPart('雨刷加速一档')).toBeUndefined();
+ });
  it('generates strict tools and rejects scripts, unknown fields, range violations and nonintegral wiper gears',()=>{
   const tools=registeredTools();expect(new Set(tools.map(t=>t.function.name)).size).toBe(tools.length);
   expect(()=>validateTool('eval',{code:'any'})).toThrow();expect(()=>validateTool('vehicle_doors',{actions:[{...command,path:'scene'}]})).toThrow();

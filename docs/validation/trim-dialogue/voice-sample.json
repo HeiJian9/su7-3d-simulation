@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-28T16:01:08.035Z",
+  "human": false,
+  "mode": "real-CosyVoice-API",
+  "voice": "longanhuan",
+  "model": "cosyvoice-v3-flash",
+  "text": "氛围灯换成蓝色啦，亮度调到四成。左前窗也开到一半了，留一点微风刚刚好。",
+  "bytes": 347564,
+  "durationMs": 7240,
+  "passed": true
+}

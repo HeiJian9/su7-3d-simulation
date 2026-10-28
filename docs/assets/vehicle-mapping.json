@@ -1442,5 +1442,21 @@
     "wallThickness": 0.012,
     "lidReturnEdges": 136,
     "maxLidReturnSpan": 0.04477532566434002
+  },
+  "dashTrimRepair": {
+    "baseline": "e221e9c",
+    "modifiedNodes": [
+      "AMBIENT_DASH_CROWN_LEFT",
+      "AMBIENT_DASH_CROWN_RIGHT"
+    ],
+    "source": "Mesh53",
+    "continuousJoin": [
+      [
+        -0.320651650428772,
+        0.9594177007675171,
+        -0.6511522531509399
+      ]
+    ],
+    "nativeEdgeOnly": true
   }
 }

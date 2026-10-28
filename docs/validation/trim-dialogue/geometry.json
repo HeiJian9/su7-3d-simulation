@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "reference": "16cb5b9",
+  "actualExportedGlb": true,
+  "sourceNodesUnchanged": 110,
+  "ribbons": 25,
+  "shortRangeLights": 16,
+  "additiveNodesPreserved": 137,
+  "records": [
+    {
+      "node": "AMBIENT_DOOR_FL",
+      "source": "Mesh47",
+      "parent": "DOOR_FL_ROOT",
+      "triangles": 214,
+      "maxVertexClearanceMm": 0.5500672228478779,
+      "maxTriangleCenterClearanceMm": 0.5798805941923765,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_HANDLE_FL",
+      "source": "Mesh47",
+      "parent": "DOOR_FL_ROOT",
+      "triangles": 94,
+      "maxVertexClearanceMm": 0.5500672062519271,
+      "maxTriangleCenterClearanceMm": 0.5612209195938344,
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_DOOR_FR",
+      "source": "Mesh34",
+      "parent": "DOOR_FR_ROOT",
+      "triangles": 214,
+      "maxVertexClearanceMm": 0.5500695900631605,
+      "maxTriangleCenterClearanceMm": 0.5861093804012545,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_HANDLE_FR",
+      "source": "Mesh34",
+      "parent": "DOOR_FR_ROOT",
+      "triangles": 62,
+      "maxVertexClearanceMm": 0.5500649130520019,
+      "maxTriangleCenterClearanceMm": 0.5646664472462056,
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_DOOR_RL",
+      "source": "Mesh43",
+      "parent": "DOOR_RL_ROOT",
+      "triangles": 136,
+      "maxVertexClearanceMm": 0.5500592008682582,
+      "maxTriangleCenterClearanceMm": 0.5827978269942512,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_HANDLE_RL",
+      "source": "Mesh40",
+      "parent": "DOOR_RL_ROOT",
+      "triangles": 72,
+      "maxVertexClearanceMm": 0.5500475343976663,
+      "maxTriangleCenterClearanceMm": 0.634278247763371,
+      "trimmedGapFaces": 2,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_DOOR_RR",
+      "source": "Mesh30",
+      "parent": "DOOR_RR_ROOT",
+      "triangles": 130,
+      "maxVertexClearanceMm": 0.5500576163164652,
+      "maxTriangleCenterClearanceMm": 0.5697925895685233,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_HANDLE_RR",
+      "source": "Mesh27",
+      "parent": "DOOR_RR_ROOT",
+      "triangles": 72,
+      "maxVertexClearanceMm": 0.5500691038259218,
+      "maxTriangleCenterClearanceMm": 0.5599227632746427,
+      "trimmedGapFaces": 2,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_DASHBOARD",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 50,
+      "maxVertexClearanceMm": 0.5500536649726373,
+      "maxTriangleCenterClearanceMm": 0.5500504102462399,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.3200918301764517
+    },
+    {
+      "node": "AMBIENT_DASHBOARD_RIGHT",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 256,
+      "maxVertexClearanceMm": 0.5500469267991084,
+      "maxTriangleCenterClearanceMm": 0.5500395442421924,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.3200890225397404
+    },
+    {
+      "node": "AMBIENT_CONSOLE_LEFT",
+      "source": "Mesh59",
+      "parent": "SU7_ROOT",
+      "triangles": 106,
+      "maxVertexClearanceMm": 0.550028598922316,
+      "maxTriangleCenterClearanceMm": 0.5791718961341441,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.1858437583394645
+    },
+    {
+      "node": "AMBIENT_CONSOLE_RIGHT",
+      "source": "Mesh59",
+      "parent": "SU7_ROOT",
+      "triangles": 106,
+      "maxVertexClearanceMm": 0.5500382056763435,
+      "maxTriangleCenterClearanceMm": 0.571628012720734,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.1858569590712218
+    },
+    {
+      "node": "AMBIENT_INLAY_FL",
+      "source": "Mesh49",
+      "parent": "DOOR_FL_ROOT",
+      "triangles": 280,
+      "maxVertexClearanceMm": 0.6000677258304292,
+      "maxTriangleCenterClearanceMm": 0.6522517195684187,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_SPEAKER_FL",
+      "source": "Mesh47",
+      "parent": "DOOR_FL_ROOT",
+      "triangles": 316,
+      "maxVertexClearanceMm": 0.600061541482121,
+      "maxTriangleCenterClearanceMm": 0.6040408805462735,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_INLAY_FR",
+      "source": "Mesh36",
+      "parent": "DOOR_FR_ROOT",
+      "triangles": 280,
+      "maxVertexClearanceMm": 0.6000655981350733,
+      "maxTriangleCenterClearanceMm": 0.8956444670870273,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_SPEAKER_FR",
+      "source": "Mesh34",
+      "parent": "DOOR_FR_ROOT",
+      "triangles": 316,
+      "maxVertexClearanceMm": 0.6000518855337296,
+      "maxTriangleCenterClearanceMm": 0.6041530260081011,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_INLAY_RL",
+      "source": "Mesh41",
+      "parent": "DOOR_RL_ROOT",
+      "triangles": 228,
+      "maxVertexClearanceMm": 0.6000773507768107,
+      "maxTriangleCenterClearanceMm": 0.703215651558443,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_SPEAKER_RL",
+      "source": "Mesh40",
+      "parent": "DOOR_RL_ROOT",
+      "triangles": 316,
+      "maxVertexClearanceMm": 0.6000439640348605,
+      "maxTriangleCenterClearanceMm": 0.6000667093096553,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_INLAY_RR",
+      "source": "Mesh28",
+      "parent": "DOOR_RR_ROOT",
+      "triangles": 228,
+      "maxVertexClearanceMm": 0.6000737345314527,
+      "maxTriangleCenterClearanceMm": 0.7229711485326777,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_SPEAKER_RR",
+      "source": "Mesh27",
+      "parent": "DOOR_RR_ROOT",
+      "triangles": 316,
+      "maxVertexClearanceMm": 0.6000414321524971,
+      "maxTriangleCenterClearanceMm": 0.6000312246185847,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_DASH_CROWN_LEFT",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 322,
+      "maxVertexClearanceMm": 0.5499914602406512,
+      "maxTriangleCenterClearanceMm": 0.6478484665629209,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.4122802786262256
+    },
+    {
+      "node": "AMBIENT_DASH_CROWN_RIGHT",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 796,
+      "maxVertexClearanceMm": 0.5500085066967786,
+      "maxTriangleCenterClearanceMm": 0.5786750587308895,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": 1.4117679948462845
+    },
+    {
+      "node": "AMBIENT_TUNNEL_LEFT",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 180,
+      "maxVertexClearanceMm": 0.600019829724657,
+      "maxTriangleCenterClearanceMm": 0.6000079932498877,
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_TUNNEL_RIGHT",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 180,
+      "maxVertexClearanceMm": 0.6000088747299758,
+      "maxTriangleCenterClearanceMm": 0.6000027060508728,
+      "trimmedGapFaces": 1,
+      "maxNativeEdgeDeviationMm": null
+    },
+    {
+      "node": "AMBIENT_REAR_CONSOLE",
+      "source": "Mesh53",
+      "parent": "SU7_ROOT",
+      "triangles": 100,
+      "maxVertexClearanceMm": 0.6000311884998868,
+      "maxTriangleCenterClearanceMm": 0.5529485424971106,
+      "trimmedGapFaces": 0,
+      "maxNativeEdgeDeviationMm": null
+    }
+  ]
+}

@@ -7,8 +7,8 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "runtimeUrl": "/models/su7-runtime.glb",
-  "sha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
-  "bytes": 6963176,
+  "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+  "bytes": 6980252,
   "rotationY": 0,
   "scale": 1,
   "message": "指定 SU7 · 0.7.2-enclosed-cabin 增强资产 · 原车几何与局部补建"

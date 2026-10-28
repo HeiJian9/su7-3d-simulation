@@ -4,9 +4,9 @@ import { VoiceRecorder, type RecordedAudio } from './audio/recorder';
 import { ApiAudioPlayer, type PlaybackStop } from './audio/player';
 import { useVehicle, waitForVehicleExecution } from './vehicle';
 import {parseVehicleText,VehicleLedger,commandKeys} from '../../../packages/shared/src/vehicle';
-import {assistantPlanSchema, type ToolCall} from '../../../packages/shared/src/assistant';
+import {assistantPlanSchema, type ToolCall, type AssistantInput} from '../../../packages/shared/src/assistant';
 import {validateTool} from '../../../packages/shared/src/capabilities';
-import {targetScopeError} from '../../../packages/shared/src/tool-policy';
+import {targetScopeError,unsupportedRequestPart} from '../../../packages/shared/src/tool-policy';
 
 export type SpeechPhase = 'idle' | 'requesting' | 'recording' | 'transcribing' | 'resolving' | 'executing' | 'clarifying' | 'synthesizing' | 'speaking' | 'error';
 interface SpeechState {
@@ -44,6 +44,7 @@ export class SpeechCoordinator {
   private currentId = '';
   private transcribingGeneration = -1;
   private base = { revision: 0, epoch: 0 };
+  private ruleFeedback?: {input:AssistantInput;commands:import('../../../packages/shared/src/vehicle').VehicleCommand[]};
   private unsubscribe: () => void;
   constructor(private recorder: RecorderPort = new VoiceRecorder(), private player: PlayerPort = new ApiAudioPlayer(), private fetcher: typeof fetch = (...args) => fetch(...args)) {
     this.unsubscribe = useVehicle.subscribe((state, previous) => { if (state.epoch !== previous.epoch && useSpeech.getState().phase !== 'idle') this.cancel('已优先处理新的手动或文字操作。'); });
@@ -55,7 +56,7 @@ export class SpeechCoordinator {
   private valid(generation: number) { return generation === this.generation; }
   cancel(message = '此次语音已取消；已接受的车辆动作不回滚。') {
     const phase=useSpeech.getState().phase;
-    this.generation++; this.request?.abort(); this.request = undefined; this.recorder.cancel(); const playback=this.player.stop();
+    this.generation++; this.request?.abort(); this.request = undefined; this.ruleFeedback=undefined; this.recorder.cancel(); const playback=this.player.stop();
     if(playback?.wasPlaying)this.trace('tts-stopped',`paused; position ${playback.positionMs} ms`);
     if(!['idle','error'].includes(phase))this.trace('cancelled',`${phase}; ${message}`);
     useSpeech.setState({ phase: 'idle', message, rms: 0, errorCode: '', hasSpeech: false });
@@ -120,7 +121,12 @@ export class SpeechCoordinator {
     const store=useVehicle.getState(),rules=parseVehicleText(input,store.context);
     const cancellation=/^(取消|算了|不用了|停止操作|取消这条指令|取消刚才的指令)[。！!]?$/u.test(input.trim());
     if(cancellation||(useSpeech.getState().routing==='auto'&&rules.kind!=='unsupported'&&!store.context.assistantPending)){
-      this.trace('route','rules');const result=store.text(input,origin,guard);if(result.execution)useSpeech.setState({phase:'executing',message:'正在调整车辆部件…'});return result;
+      const before=structuredClone(store.state),context=structuredClone(store.context),history=store.messages.slice(-8).map(m=>({input:m.input,output:m.output}));
+      this.trace('route','rules');const result=store.text(input,origin,guard);
+      if(result.execution){
+        if(rules.kind==='execute'&&useSpeech.getState().health.intent?.configured)this.ruleFeedback={input:{requestId:result.execution.requestId,text:input,state:before,actual:{...store.actualParts},available:[...new Set([...store.available.map(c=>`window:${c}`),...store.capabilities])],context:{focus:context.focus,history}},commands:rules.commands};
+        useSpeech.setState({phase:'executing',message:'正在调整车辆部件…'});
+      }return result;
     }
     if(origin==='text')store.beginManual();
     const current=useVehicle.getState(),base=guard??{revision:current.state.revision,epoch:current.epoch,requestId:this.currentId};
@@ -138,6 +144,7 @@ export class SpeechCoordinator {
     const commands=plan.calls.flatMap(c=>validateTool(c.function.name,JSON.parse(c.function.arguments)).commands??[]);
     if(JSON.stringify(commands)!==JSON.stringify(plan.commands)||new Set(plan.calls.map(c=>c.id)).size!==plan.calls.length)throw new SpeechFailure('INVALID_TOOLS','工具调用未通过浏览器校验，车辆未改变。');
     const scopeError=targetScopeError(pending?`${pending.text}；补充：${input}`:input,commands,current.context.focus);if(scopeError)throw new SpeechFailure('AMBIGUOUS_TARGET',scopeError);
+    if(commands.length&&unsupportedRequestPart(pending?`${pending.text}；补充：${input}`:input))throw new SpeechFailure('UNSUPPORTED_REQUEST_PART','本轮包含尚未实现的功能，所有动作均未执行。');
     for(const c of plan.calls)this.trace('tool-call',JSON.stringify(c));
     let message:string,kind:string,execution:ReturnType<ReturnType<typeof useVehicle.getState>['submit']>|undefined;
     if(plan.commands.length){
@@ -177,6 +184,19 @@ export class SpeechCoordinator {
       if (!this.valid(generation)) return;
       if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
       message = execution.route==='llm'?result.message:execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
+      const wording=this.ruleFeedback;
+      if(execution.route==='rules'&&wording?.input.requestId===execution.requestId){
+        const revision=useVehicle.getState().state.revision,epoch=useVehicle.getState().epoch;
+        this.request=new AbortController();useSpeech.setState({phase:'resolving',message:'正在准备回复…'});
+        try{
+          const response=await this.fetcher('/api/assistant/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...wording,result:{status:'completed',revision:execution.revision,effects:execution.effects,boundary:execution.boundary}}),signal:AbortSignal.any([this.request.signal,AbortSignal.timeout(12000)])});
+          if(!response.ok)await responseError(response);const answer=await response.json() as {requestId:string;text:string};
+          if(!this.valid(generation)||useVehicle.getState().state.revision!==revision||useVehicle.getState().epoch!==epoch)return;
+          if(answer.requestId!==execution.requestId||typeof answer.text!=='string'||!answer.text.trim()||answer.text.length>500)throw new SpeechFailure('INVALID_FINAL_REPLY','助手回复格式无效。');
+          message=answer.text;this.trace('assistant-feedback',message);useVehicle.getState().say(message);useVehicle.setState(s=>({messages:s.messages.map(m=>m.id===execution.requestId?{...m,output:message}:m)}));
+        }catch{if(!this.valid(generation)||useVehicle.getState().state.revision!==revision||useVehicle.getState().epoch!==epoch)return;this.trace('feedback-fallback','动作已确认完成；自然回复服务未返回，使用真实执行结果播报。');}
+        this.ruleFeedback=undefined;
+      }
     }
     if (!this.valid(generation)) return;
     useSpeech.setState({ phase: result.kind === 'clarify' ? 'clarifying' : 'idle', message, lastFeedback: message });

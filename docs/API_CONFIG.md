@@ -1,6 +1,6 @@
 # API 配置 · 0.7.0
 
-2026-10-28：当前使用北京百炼 `qwen3-asr-flash` ASR、`deepseek-v4.1-flash-1017` 车载智能助手、`cosyvoice-v3-flash` / `longanyang` TTS。用户明确授权复用现有阿里云 Key；已在本机 `.env` 配好，**无需重新提供**。以下旧 I3 记录保留用于协议说明。
+2026-10-29：当前使用北京百炼 `qwen3-asr-flash` ASR、`deepseek-v4.1-flash-1017` 车载智能助手、`cosyvoice-v3-flash` / `longanhuan` TTS。用户明确授权复用现有阿里云 Key；已在本机 `.env` 配好，**无需重新提供**。以下旧 I3 记录保留用于协议说明。
 
 ## DeepSeek Function Calling
 
@@ -43,7 +43,7 @@ ASR_AUTH_HEADER=bearer
 ASR_AUDIO_FORMATS=audio/wav
 TTS_BASE_URL=https://dashscope.aliyuncs.com/api/v1
 TTS_MODEL=cosyvoice-v3-flash
-TTS_VOICE=longanyang
+TTS_VOICE=longanhuan
 TTS_PROTOCOL=dashscope-cosyvoice
 ```
 
@@ -91,3 +91,9 @@ TTS_PROTOCOL=dashscope-cosyvoice
 真实平台协议、中文音频探针和 API 合成音源浏览器动作已验证，见 `docs/validation/aliyun/`。仍需真人说“左前车窗打开一半”、确认文字／动作／实际播报，以及真实设备澄清、打断、取消复验。保存实际证据后才可完成 I3 / A10。自动 Mock 回归仍单独标记，不计真实 API 通过。
 
 Gemini 原生音频协议参考：[Google 音频理解文档](https://ai.google.dev/gemini-api/docs/audio)。中转站实际支持情况需由其文档和真实探针另行确认。
+
+## 0.7.3 自然回复与女声
+
+当前 `TTS_VOICE=longanhuan`，为官方龙安欢元气女声，模型／协议与 Key 不变。修改本机音色后重启服务器生效；无需下载语音包，也不要将环境文件放入交付。官方列表：https://help.aliyun.com/zh/model-studio/cosyvoice-voice-list 。
+
+复杂控车走 `/api/assistant/plan` 与 `/finish` 的真实 function calling；自动规则完成后 `/api/assistant/feedback` 只负责用 LLM 组织自然语言，先用共享 Ledger 校验完成版本、属性值和边界，不能产生控车动作。回复故障回退为真实执行结果；规划仍保持零温度。

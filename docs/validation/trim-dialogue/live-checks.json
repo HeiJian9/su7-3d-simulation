@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "human": false,
+  "voice": "longanhuan",
+  "checks": [
+    {
+      "input": "把左前车窗开到百分之三十五，前备箱开到三成，打开氛围灯换成蓝色并调到四成，最后打开雨刷。",
+      "feedback": "左前车窗已开到35%，前备箱打开到三成；氛围灯已开启并调成蓝色、亮度40%；雨刷也已打开到低速档。",
+      "actualConfirmed": true,
+      "toolCalls": 6,
+      "rulesNaturalFeedback": false
+    },
+    {
+      "input": "左前门先开到一半，再开大一点，同时打开后排顶灯。",
+      "feedback": "左前门先开到一半，再开大一点，现在到60%了；后排顶灯也亮起来啦。",
+      "actualConfirmed": true,
+      "toolCalls": 2,
+      "rulesNaturalFeedback": false
+    },
+    {
+      "input": "右后车窗打开一半。",
+      "feedback": "右后车窗已经打开一半啦。",
+      "actualConfirmed": true,
+      "toolCalls": 0,
+      "rulesNaturalFeedback": true
+    },
+    {
+      "input": "把右前车窗打开，再打开空调。",
+      "feedback": "暂不支持该功能。",
+      "actualConfirmed": true,
+      "toolCalls": 1,
+      "rulesNaturalFeedback": false
+    },
+    {
+      "input": "雨刷刮一下，然后关闭。",
+      "feedback": "雨刷已经刮了一下并归位，现在也关好了。",
+      "actualConfirmed": true,
+      "toolCalls": 2,
+      "rulesNaturalFeedback": false
+    }
+  ]
+}

@@ -160,5 +160,12 @@
  .polished-app .clarification{margin-left:0}
 }
 @media(prefers-reduced-motion:reduce){.polished-app *{transition:none!important;scroll-behavior:auto!important}}
+/* Keep all four window presets visible when a clarification expands the dock. */
+@media(max-height:850px){
+ .polished-app:has(.clarification) .window-panel-heading{padding:8px 18px 6px}
+ .polished-app:has(.clarification) .window-control{padding:4px 0 5px}
+ .polished-app:has(.clarification) .window-control input{margin:5px 0}
+ .polished-app:has(.clarification) .all-window-actions button{padding:6px}
+}
 
 .polished-app .view-toolbar .hotspot-toggle{padding-left:10px;border-left:1px solid #ffffff12;border-radius:0;gap:6px}.hotspot-toggle[aria-pressed=true] span{color:#b0ddd8}.hotspot-toggle span{font-size:9px}

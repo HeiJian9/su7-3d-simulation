@@ -2,7 +2,7 @@
 
 # Provider 当前状态与待办 · 0.7.0
 
-2026-10-28：当前北京百炼 ASR `qwen3-asr-flash`、DeepSeek `deepseek-v4.1-flash-1017` / `openai-chat-tools`、TTS `cosyvoice-v3-flash` / `longanyang`。用户授权复用已有阿里云 Key，根 `.env` 已配置；没有缺失凭据，不重新索取。
+2026-10-29：当前北京百炼 ASR `qwen3-asr-flash`、DeepSeek `deepseek-v4.1-flash-1017` / `openai-chat-tools`、TTS `cosyvoice-v3-flash` / `longanhuan`。用户授权复用已有阿里云 Key，根 `.env` 已配置；没有缺失凭据，不重新索取。
 
 真实工具调用覆盖、18 条 ASR→DeepSeek→渲染→TTS 固定音源闭环、本地关键词固定正负样本与真实周期均已记录。真人点击入口、真实关键词→后备箱→播报→恢复监听，以及前备箱／车漆／后排顶灯／一次刮刷四工具补验均有独立诊断证据。固定音源与真人分开记录。详见 [本轮报告](I7_I9_VALIDATION.md) 和 [参数](LLM_TOOLS.md)。
 
@@ -15,7 +15,7 @@
 | 能力 | 当前证据 | 待办 |
 |---|---|---|
 | ASR | qwen3-asr-flash / dashscope-asr；I3 真人证据保留，I4–I6 新能力真实音频输入转写通过 | 新部件真人麦克风复验待补；合成音源不称为真人 |
-| TTS | cosyvoice-v3-flash / longanyang；真实 API 音频播放，动作确认后反馈，失败／重播／停播保护 | 新部件真人听感及收音复验另列 |
+| TTS | cosyvoice-v3-flash / longanhuan；真实 API 音频播放，动作确认后反馈，失败／重播／停播保护 | 新部件真人听感及收音复验另列 |
 | Intent | 门窗、尾箱、灯光、车漆、氛围灯、雨刷规则共用 VehicleLedger | DeepSeek 完整兜底在 I7，未调用；INTENT 配置保留 |
 
 Gemini 原指定已按用户选择修订；适配保留，未声称 Gemini 通过。见 [API_CONFIG.md](API_CONFIG.md)。本机没有缺失的 ASR／TTS Key、模型或音色配置，不要求重新提供 Key。

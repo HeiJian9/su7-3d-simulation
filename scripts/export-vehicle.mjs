@@ -2,7 +2,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {spawnSync} from 'node:child_process';
 const install=JSON.parse((await readFile('.tools/blender-install.json','utf8')).replace(/^\uFEFF/,''));
 const result=spawnSync(install.executable,['--background','assets/source/blender/su7-enhanced.blend','--python-exit-code','1','--python','scripts/export_current.py'],{encoding:'utf8',maxBuffer:8*1024*1024});
-await mkdir('docs/validation/physical-fixes',{recursive:true});await writeFile('docs/validation/physical-fixes/blender-export.log',`${result.stdout}\n${result.stderr}`);
+const reportDir='docs/validation/trim-dialogue';await mkdir(reportDir,{recursive:true});await writeFile(reportDir+'/blender-export.log',`${result.stdout}\n${result.stderr}`);
 if(result.status!==0)throw Error('Enhanced Blender export failed.');
 const mapping=JSON.parse(await readFile('docs/assets/vehicle-mapping.json','utf8'));
 const checks=['scripts/register-vehicle.mjs','scripts/check-assets.mjs','scripts/verify-vehicle-geometry.mjs'];

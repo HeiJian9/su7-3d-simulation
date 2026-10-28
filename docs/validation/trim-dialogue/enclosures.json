@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "baseline": "e221e9c",
+  "unchangedNodes": 152,
+  "modifiedNodes": [
+    "FRUNK_STORAGE_TUB",
+    "TRUNK_INNER_CAVITY",
+    "TRUNK_INNER_SKIN"
+  ],
+  "nativePanelsUnchanged": true,
+  "wheelIntersections": [
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh1",
+      "intersects": false
+    },
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh3",
+      "intersects": false
+    },
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh4",
+      "intersects": false
+    },
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh74",
+      "intersects": false
+    },
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh76",
+      "intersects": false
+    },
+    {
+      "liner": "FRUNK_STORAGE_TUB",
+      "wheel": "Mesh77",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh5",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh7",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh8",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh9",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh11",
+      "intersects": false
+    },
+    {
+      "liner": "TRUNK_INNER_CAVITY",
+      "wheel": "Mesh12",
+      "intersects": false
+    }
+  ],
+  "closedTubWalls": true,
+  "wallThicknessMetres": 0.012,
+  "footwellFloorOcclusion": [
+    {
+      "origin": [
+        -0.4,
+        0.49,
+        -0.48
+      ],
+      "hitY": 0.1960000097751618
+    },
+    {
+      "origin": [
+        0.4,
+        0.49,
+        -0.48
+      ],
+      "hitY": 0.19600000977516174
+    },
+    {
+      "origin": [
+        -0.4,
+        0.3,
+        0.67
+      ],
+      "hitY": 0.19600000977516174
+    },
+    {
+      "origin": [
+        0.4,
+        0.3,
+        0.67
+      ],
+      "hitY": 0.19600000977516174
+    }
+  ],
+  "lidReturnEdges": 136,
+  "rearCavityBounds": {
+    "min": [
+      -0.6014135479927063,
+      0.47999998927116394,
+      1.9364272356033325
+    ],
+    "max": [
+      0.6014077067375183,
+      1.04756760597229,
+      2.434377670288086
+    ]
+  }
+}

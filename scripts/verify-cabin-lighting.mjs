@@ -24,6 +24,12 @@ for(const r of audit.records){
   edgeDeviation=Math.max(...pts.map(p=>Math.min(...segments.map(s=>s.closestPointToPoint(p,true,new Vector3()).distanceTo(p)))));
   assert.ok(edgeDeviation<.0016,`Misaligned trim ${r.node}: ${edgeDeviation}`);
   assert.equal(r.trimmedGapFaces,0,`Broken trim ${r.node}`);
+  if(r.routeRevision==='continuous_native_edge_v2'){
+   const adjacency=new Map(),key=p=>p.toArray().map(v=>Math.round(v*1e6)).join(',');
+   for(let i=0;i<pts.length;i+=3){const vs=pts.slice(i,i+3).map(key);for(const a of vs){if(!adjacency.has(a))adjacency.set(a,new Set());for(const b of vs)adjacency.get(a).add(b);}}
+   const seen=new Set(),queue=[adjacency.keys().next().value];while(queue.length){const a=queue.pop();if(seen.has(a))continue;seen.add(a);queue.push(...adjacency.get(a));}
+   assert.equal(seen.size,adjacency.size,`Disconnected crown ${r.node}`);
+  }
  }
  records.push({node:r.node,source:r.source,parent:r.parent,triangles:pts.length/3,maxVertexClearanceMm:vertexMax*1000,maxTriangleCenterClearanceMm:centroidMax*1000,trimmedGapFaces:r.trimmedGapFaces,maxNativeEdgeDeviationMm:edgeDeviation===null?null:edgeDeviation*1000});
 }
@@ -33,4 +39,5 @@ assert.equal(records.length,audit.designRevision==='layered_cabin_v1'?25:12);ass
 let additiveNodesPreserved=0;
 if(audit.additiveBaseline){const baseline=await io.readBinary(new Uint8Array(execFileSync('git',['show',audit.additiveBaseline+':apps/web/public/models/su7-runtime.glb'],{maxBuffer:20*1024*1024})));for(const n of baseline.getRoot().listNodes()){if((mapping.enclosureRepair?.modifiedNodes??[]).includes(n.getName()))continue;assert.equal(signature(nodes.find(v=>v.getName()===n.getName())),signature(n),'Additive baseline changed: '+n.getName());additiveNodesPreserved++;}}
 const result={passed:true,reference:'16cb5b9',actualExportedGlb:true,sourceNodesUnchanged:unchanged.length,ribbons:records.length,shortRangeLights:mapping.materialRoles.ambient.lights.length,additiveNodesPreserved,records};
-const reportDir=mapping.enclosureRepair?'docs/validation/physical-fixes':audit.designRevision?'docs/validation/final-polish':'docs/validation/cabin-lighting';await mkdir(reportDir,{recursive:true});await writeFile(reportDir+'/geometry.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+if(mapping.dashTrimRepair){const left=audit.records.find(r=>r.node==='AMBIENT_DASH_CROWN_LEFT'),right=audit.records.find(r=>r.node==='AMBIENT_DASH_CROWN_RIGHT');assert.deepEqual(left.trimEdgePath.at(-1),right.trimEdgePath[0],'Dashboard crown must join at the same native vertex');}
+const reportDir=mapping.dashTrimRepair?'docs/validation/trim-dialogue':mapping.enclosureRepair?'docs/validation/physical-fixes':audit.designRevision?'docs/validation/final-polish':'docs/validation/cabin-lighting';await mkdir(reportDir,{recursive:true});await writeFile(reportDir+'/geometry.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

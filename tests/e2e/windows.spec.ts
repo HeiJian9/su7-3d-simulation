@@ -49,13 +49,13 @@ test('3D window selection works for open apertures; camera dragging never operat
   const rect=(await page.locator('canvas').boundingBox())!;
   const point=async()=>{const [x,y]=(await page.locator('canvas').getAttribute('data-window-fl-hitpoint'))!.split(',').map(Number);return {x:x+rect.x,y:y+rect.y};};
   let p=await point();await page.mouse.click(p.x,p.y);
-  await expect(page.getByRole('button',{name:'左前车窗 FL',exact:true})).toHaveAttribute('aria-pressed','true');
+  await expect(page.getByRole('button',{name:'左前车窗',exact:true})).toHaveAttribute('aria-pressed','true');
   await page.getByRole('button',{name:'完全打开左前车窗',exact:true}).click();await expect.poll(()=>pose(page,'fl')).toBe(1);
-  await page.getByRole('button',{name:'右后车窗 RR',exact:true}).click();
-  p=await point();await page.mouse.click(p.x,p.y);await expect(page.getByRole('button',{name:'左前车窗 FL',exact:true})).toHaveAttribute('aria-pressed','true');
-  const before=await targets(page);await page.getByRole('button',{name:'右后车窗 RR',exact:true}).click();p=await point();
+  await page.getByRole('button',{name:'右后车窗',exact:true}).click();
+  p=await point();await page.mouse.click(p.x,p.y);await expect(page.getByRole('button',{name:'左前车窗',exact:true})).toHaveAttribute('aria-pressed','true');
+  const before=await targets(page);await page.getByRole('button',{name:'右后车窗',exact:true}).click();p=await point();
   await page.mouse.move(p.x,p.y);await page.mouse.down();await page.mouse.move(p.x+150,p.y+15,{steps:12});await page.mouse.up();
-  await expect(page.getByRole('button',{name:'右后车窗 RR',exact:true})).toHaveAttribute('aria-pressed','true');expect(await targets(page)).toEqual(before);
+  await expect(page.getByRole('button',{name:'右后车窗',exact:true})).toHaveAttribute('aria-pressed','true');expect(await targets(page)).toEqual(before);
 });
 test('reverses an active animation and preserves a real intermediate pose', async ({ page }) => {
   await ready(page);await page.getByRole('button',{name:'完全打开左前车窗',exact:true}).click();

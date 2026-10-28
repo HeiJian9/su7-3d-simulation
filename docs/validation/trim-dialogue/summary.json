@@ -1,0 +1,775 @@
+{
+  "at": "2026-10-28T16:27:32.747148+00:00",
+  "version": "0.7.3",
+  "unit": {
+    "passed": 104,
+    "failed": 0
+  },
+  "browser": {
+    "firstFullRun": {
+      "startTime": "2026-10-28T16:05:09.889Z",
+      "duration": 969316.7069999999,
+      "expected": 114,
+      "skipped": 1,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "targetedFinalBuildRecheck": {
+      "startTime": "2026-10-28T16:24:10.794Z",
+      "duration": 72558.58499999999,
+      "expected": 22,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "latestPerProjectFileTitle": {
+      "passed": 119,
+      "failed": 0,
+      "skipped": 1,
+      "timedOut": 0
+    },
+    "totalUniqueCases": 120,
+    "selectionRule": "Latest result by project + file + test title. Initial failures retained; no assertion relaxed.",
+    "cases": [
+      {
+        "key": "appearance.spec.ts|I5 paint whitelist preserves non-paint materials, seven presets and a custom color|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I5 paint whitelist preserves non-paint materials, seven presets and a custom color",
+        "status": "passed"
+      },
+      {
+        "key": "appearance.spec.ts|I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes",
+        "status": "passed"
+      },
+      {
+        "key": "appearance.spec.ts|I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps",
+        "status": "passed"
+      },
+      {
+        "key": "appearance.spec.ts|I5 paint whitelist preserves non-paint materials, seven presets and a custom color|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I5 paint whitelist preserves non-paint materials, seven presets and a custom color",
+        "status": "passed"
+      },
+      {
+        "key": "appearance.spec.ts|I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I5 actual lights, floor illumination powers, blink cadence and exclusive side/hazard modes",
+        "status": "passed"
+      },
+      {
+        "key": "appearance.spec.ts|I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I5 cabin physical strips change color and brightness; actual cockpit hotspots toggle lamps",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock model failure is voiced as service failure; late model reply after manual preemption does nothing|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|new shared brightness values change actual light sources and scattering independently|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "new shared brightness values change actual light sources and scattering independently",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock model failure is voiced as service failure; late model reply after manual preemption does nothing|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|new shared brightness values change actual light sources and scattering independently|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "new shared brightness values change actual light sources and scattering independently",
+        "status": "passed"
+      },
+      {
+        "key": "assistant.spec.ts|fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+        "status": "passed"
+      },
+      {
+        "key": "cabin-lighting.spec.ts|fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely",
+        "status": "passed"
+      },
+      {
+        "key": "cabin-lighting.spec.ts|depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off",
+        "status": "passed"
+      },
+      {
+        "key": "cabin-lighting.spec.ts|fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "fitted cabin zones share actual brightness and colour, follow doors, and extinguish completely",
+        "status": "passed"
+      },
+      {
+        "key": "cabin-lighting.spec.ts|depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "depth-clipped Tyndall volume changes rendered air, has adjustable strength, and preserves the independent running lamp with headlights off",
+        "status": "passed"
+      },
+      {
+        "key": "dome-tail.spec.ts|native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+        "status": "passed"
+      },
+      {
+        "key": "dome-tail.spec.ts|two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+        "status": "passed"
+      },
+      {
+        "key": "dome-tail.spec.ts|native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "native running ring is red by default, stays lit with indicators/headlights off and has independently switchable scatter",
+        "status": "passed"
+      },
+      {
+        "key": "dome-tail.spec.ts|two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "two fitted downward lights share physical state across hotspots panel and rules; drag does not toggle",
+        "status": "passed"
+      },
+      {
+        "key": "final-polish.spec.ts|product layout keeps all main controls reachable and moves attribution and diagnostics into help|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "product layout keeps all main controls reachable and moves attribution and diagnostics into help",
+        "status": "passed"
+      },
+      {
+        "key": "final-polish.spec.ts|curated cabin palettes drive every emitter and light; front and rear views remain usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "curated cabin palettes drive every emitter and light; front and rear views remain usable",
+        "status": "passed"
+      },
+      {
+        "key": "final-polish.spec.ts|product layout keeps all main controls reachable and moves attribution and diagnostics into help|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "product layout keeps all main controls reachable and moves attribution and diagnostics into help",
+        "status": "passed"
+      },
+      {
+        "key": "final-polish.spec.ts|curated cabin palettes drive every emitter and light; front and rear views remain usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "curated cabin palettes drive every emitter and light; front and rear views remain usable",
+        "status": "passed"
+      },
+      {
+        "key": "frunk.spec.ts|native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+        "status": "passed"
+      },
+      {
+        "key": "frunk.spec.ts|wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+        "status": "passed"
+      },
+      {
+        "key": "frunk.spec.ts|native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "native bonnet supports closed half full, hotspot and panel, continuous reversal and isolated rule state",
+        "status": "passed"
+      },
+      {
+        "key": "frunk.spec.ts|wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "wide cabin main light illuminates both sides with soft fill, and each channel extinguishes fully",
+        "status": "passed"
+      },
+      {
+        "key": "lighting-followup.spec.ts|front and rear signal air scattering follows actual blink, side selection, trunk and master switch|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "front and rear signal air scattering follows actual blink, side selection, trunk and master switch",
+        "status": "passed"
+      },
+      {
+        "key": "lighting-followup.spec.ts|cabin illumination and local scattering follow colour, brightness and off state|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "cabin illumination and local scattering follow colour, brightness and off state",
+        "status": "passed"
+      },
+      {
+        "key": "lighting-followup.spec.ts|front and rear signal air scattering follows actual blink, side selection, trunk and master switch|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "front and rear signal air scattering follows actual blink, side selection, trunk and master switch",
+        "status": "passed"
+      },
+      {
+        "key": "lighting-followup.spec.ts|cabin illumination and local scattering follow colour, brightness and off state|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "cabin illumination and local scattering follow colour, brightness and off state",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 four independent original doors and trunk reach zero half full, reverse and stay isolated|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 every window keeps its local travel at all three door angles; rules and clarify use the same state|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 labelled model hotspots act on real parts; canvas drag cannot activate a part|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 four independent original doors and trunk reach zero half full, reverse and stay isolated|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 every window keeps its local travel at all three door angles; rules and clarify use the same state|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+        "status": "passed"
+      },
+      {
+        "key": "mechanical.spec.ts|I4 labelled model hotspots act on real parts; canvas drag cannot activate a part|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+        "status": "passed"
+      },
+      {
+        "key": "native-lamps.spec.ts|native projector and inner rear modules emit yellow, restore original colours and follow the real trunk|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "native projector and inner rear modules emit yellow, restore original colours and follow the real trunk",
+        "status": "passed"
+      },
+      {
+        "key": "native-lamps.spec.ts|native projector and inner rear modules emit yellow, restore original colours and follow the real trunk|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "native projector and inner rear modules emit yellow, restore original colours and follow the real trunk",
+        "status": "passed"
+      },
+      {
+        "key": "physical-fixes.spec.ts|night displays remain legible and footwell illumination does not spill through the chassis|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "night displays remain legible and footwell illumination does not spill through the chassis",
+        "status": "passed"
+      },
+      {
+        "key": "physical-fixes.spec.ts|formed luggage liners stay visible through half and full opening without changing native panels|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "formed luggage liners stay visible through half and full opening without changing native panels",
+        "status": "passed"
+      },
+      {
+        "key": "physical-fixes.spec.ts|night displays remain legible and footwell illumination does not spill through the chassis|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "night displays remain legible and footwell illumination does not spill through the chassis",
+        "status": "passed"
+      },
+      {
+        "key": "physical-fixes.spec.ts|formed luggage liners stay visible through half and full opening without changing native panels|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "formed luggage liners stay visible through half and full opening without changing native panels",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|actual GLB, health, visible controls and responsive layout|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "actual GLB, health, visible controls and responsive layout",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|orbit rotation, actual right-button pan, wheel zoom and exact reset|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|cabin, free movement, look, focused input isolation and keyboard return|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "cabin, free movement, look, focused input isolation and keyboard return",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|corrupt model fails visibly, then retry loads the actual asset|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "corrupt model fails visibly, then retry loads the actual asset",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|two minutes of continuous camera operations remain responsive|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "two minutes of continuous camera operations remain responsive",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|actual GLB, health, visible controls and responsive layout|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "actual GLB, health, visible controls and responsive layout",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|orbit rotation, actual right-button pan, wheel zoom and exact reset|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "orbit rotation, actual right-button pan, wheel zoom and exact reset",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|cabin, free movement, look, focused input isolation and keyboard return|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "cabin, free movement, look, focused input isolation and keyboard return",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|corrupt model fails visibly, then retry loads the actual asset|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "corrupt model fails visibly, then retry loads the actual asset",
+        "status": "passed"
+      },
+      {
+        "key": "scene.spec.ts|two minutes of continuous camera operations remain responsive|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "two minutes of continuous camera operations remain responsive",
+        "status": "skipped"
+      },
+      {
+        "key": "speech.spec.ts|Mock-only microphone VAD → transcript → real geometry → API audio playback|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock clarification chooses one window and new recording stops old API playback|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock clarification chooses one window and new recording stops old API playback",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock late ASR reply cannot override even an unchanged manual target|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock late ASR reply cannot override even an unchanged manual target",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|cancelling actual browser capture releases tracks and sends no audio|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "cancelling actual browser capture releases tracks and sends no audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|manual recording finish works before the silence timeout|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "manual recording finish works before the silence timeout",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock TTS failure preserves actual action and supports a separate replay|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock TTS failure preserves actual action and supports a separate replay",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock microphone error: 权限拒绝; manual control survives|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock microphone error: 权限拒绝; manual control survives",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock microphone error: 无设备; manual control survives|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock microphone error: 无设备; manual control survives",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock silence never uploads audio|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock silence never uploads audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|thinking before speaking for seven seconds does not end the recording prematurely|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "thinking before speaking for seven seconds does not end the recording prematurely",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 401: manual path remains usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock ASR error 401: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 429: manual path remains usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock ASR error 429: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 504: manual path remains usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock ASR error 504: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 415: manual path remains usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock ASR error 415: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|unconfigured local server: WebM recording reaches explicit 503 and manual controls recover|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock clarification cancellation clears pending intent after a bulk action|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock clarification cancellation clears pending intent after a bulk action",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock cancelling native WebM finalization permits immediate re-record without uploading old audio|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock cancelling native WebM finalization permits immediate re-record without uploading old audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock network failure is explicit and manual recovery remains available|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock network failure is explicit and manual recovery remains available",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock invalid-json failure is explicit and manual recovery remains available|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "Mock invalid-json failure is explicit and manual recovery remains available",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|direction wording from human logs and explicit all-window clarification share actual state|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "direction wording from human logs and explicit all-window clarification share actual state",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock-only microphone VAD → transcript → real geometry → API audio playback|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock-only microphone VAD → transcript → real geometry → API audio playback",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock clarification chooses one window and new recording stops old API playback|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock clarification chooses one window and new recording stops old API playback",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock late ASR reply cannot override even an unchanged manual target|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock late ASR reply cannot override even an unchanged manual target",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|cancelling actual browser capture releases tracks and sends no audio|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "cancelling actual browser capture releases tracks and sends no audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|manual recording finish works before the silence timeout|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "manual recording finish works before the silence timeout",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock TTS failure preserves actual action and supports a separate replay|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock TTS failure preserves actual action and supports a separate replay",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock microphone error: 权限拒绝; manual control survives|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock microphone error: 权限拒绝; manual control survives",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock microphone error: 无设备; manual control survives|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock microphone error: 无设备; manual control survives",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock silence never uploads audio|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock silence never uploads audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|thinking before speaking for seven seconds does not end the recording prematurely|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "thinking before speaking for seven seconds does not end the recording prematurely",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 401: manual path remains usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock ASR error 401: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 429: manual path remains usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock ASR error 429: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 504: manual path remains usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock ASR error 504: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock ASR error 415: manual path remains usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock ASR error 415: manual path remains usable",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|unconfigured local server: WebM recording reaches explicit 503 and manual controls recover|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "unconfigured local server: WebM recording reaches explicit 503 and manual controls recover",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock clarification cancellation clears pending intent after a bulk action|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock clarification cancellation clears pending intent after a bulk action",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock cancelling native WebM finalization permits immediate re-record without uploading old audio|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock cancelling native WebM finalization permits immediate re-record without uploading old audio",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock network failure is explicit and manual recovery remains available|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock network failure is explicit and manual recovery remains available",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|Mock invalid-json failure is explicit and manual recovery remains available|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "Mock invalid-json failure is explicit and manual recovery remains available",
+        "status": "passed"
+      },
+      {
+        "key": "speech.spec.ts|direction wording from human logs and explicit all-window clarification share actual state|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "direction wording from human logs and explicit all-window clarification share actual state",
+        "status": "passed"
+      },
+      {
+        "key": "trim-dialogue.spec.ts|dashboard crown follows continuous native trim at cabin and windshield viewpoints|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "dashboard crown follows continuous native trim at cabin and windshield viewpoints",
+        "status": "passed"
+      },
+      {
+        "key": "trim-dialogue.spec.ts|dashboard crown follows continuous native trim at cabin and windshield viewpoints|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "dashboard crown follows continuous native trim at cabin and windshield viewpoints",
+        "status": "passed"
+      },
+      {
+        "key": "trunk-correction.spec.ts|native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+        "status": "passed"
+      },
+      {
+        "key": "trunk-correction.spec.ts|native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "native SU7 trunk seams: closed close-up, fixed poses, hotspot and interruption",
+        "status": "passed"
+      },
+      {
+        "key": "wake.spec.ts|local KWS keeps a real connection through sustained loud PCM, then releases tracks and worker on disable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "local KWS keeps a real connection through sustained loud PCM, then releases tracks and worker on disable",
+        "status": "passed"
+      },
+      {
+        "key": "wake.spec.ts|local KWS keeps a real connection through sustained loud PCM, then releases tracks and worker on disable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "local KWS keeps a real connection through sustained loud PCM, then releases tracks and worker on disable",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|each real window independently reaches 0, 50, 100 and continuous slider positions|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|text rules, ambiguity, relative operations, negation and unknown clauses share state|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|3D window selection works for open apertures; camera dragging never operates a window|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "3D window selection works for open apertures; camera dragging never operates a window",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|reverses an active animation and preserves a real intermediate pose|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "reverses an active animation and preserves a real intermediate pose",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|fixed-view actual openings at zero half and full|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "fixed-view actual openings at zero half and full",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|each real window independently reaches 0, 50, 100 and continuous slider positions|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "each real window independently reaches 0, 50, 100 and continuous slider positions",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|text rules, ambiguity, relative operations, negation and unknown clauses share state|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "text rules, ambiguity, relative operations, negation and unknown clauses share state",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|3D window selection works for open apertures; camera dragging never operates a window|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "3D window selection works for open apertures; camera dragging never operates a window",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|reverses an active animation and preserves a real intermediate pose|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "reverses an active animation and preserves a real intermediate pose",
+        "status": "passed"
+      },
+      {
+        "key": "windows.spec.ts|fixed-view actual openings at zero half and full|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "fixed-view actual openings at zero half and full",
+        "status": "passed"
+      },
+      {
+        "key": "wipers.spec.ts|I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+        "status": "passed"
+      },
+      {
+        "key": "wipers.spec.ts|I6 rules and labelled cabin entry work while camera and other components remain usable|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+        "status": "passed"
+      },
+      {
+        "key": "wipers.spec.ts|I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+        "status": "passed"
+      },
+      {
+        "key": "wipers.spec.ts|I6 rules and labelled cabin entry work while camera and other components remain usable|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+        "status": "passed"
+      },
+      {
+        "key": "trim-dialogue.spec.ts|browser independently refuses a partial plan that silently omitted an unsupported operation|Edge-1920x1080",
+        "project": "Edge-1920x1080",
+        "title": "browser independently refuses a partial plan that silently omitted an unsupported operation",
+        "status": "passed"
+      },
+      {
+        "key": "trim-dialogue.spec.ts|browser independently refuses a partial plan that silently omitted an unsupported operation|Edge-1366x768",
+        "project": "Edge-1366x768",
+        "title": "browser independently refuses a partial plan that silently omitted an unsupported operation",
+        "status": "passed"
+      }
+    ]
+  },
+  "liveSpeech": {
+    "passed": 5,
+    "human": false,
+    "voice": "longanhuan",
+    "firstFailureRetained": true
+  },
+  "geometry": {
+    "preservedNodes": 152,
+    "nativeEdgeCrownContinuous": true
+  },
+  "checks": {
+    "typecheck": true,
+    "lint": true,
+    "assetExport": true,
+    "productionBuild": true,
+    "demoProductionHealth": true
+  },
+  "humanNewVoiceTaste": "not-claimed",
+  "passed": true
+}

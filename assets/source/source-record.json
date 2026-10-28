@@ -15,7 +15,7 @@
     "sha256": "52dd02fd74877fa08e74b67d7854cf32468a232c02aaa19b6844c91285574f8d",
     "executable": "D:\\code\\Projects\\3D simulation\\.tools\\blender-4.5.15-windows-x64\\blender.exe"
   },
-  "runtimeSha256": "978b8e43ca0c18a885dd77d3179bc04c89f1f4a103fe85e6c766e403e8e39889",
+  "runtimeSha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
   "modifications": [
     "OBJ/MTL import with all 84 groups",
     "Uniform meter scale, Y-up / front -Z",
@@ -31,9 +31,9 @@
     "Frunk: native Paint7 bonnet islands and Mesh65 badge on rear-edge hinge; original 82-vertex seam, UVs and normals preserved with zero bisects; fitted recessed inner skin, storage tub, flange and hinge hardware added; wide diffuse cabin lights use 143-degree soft cones and low-power local fill.",
     "Enclosure repair: 0.7.2 rebuilds only three helper liners with formed thickness, wheel clearance, shorter cargo space and a continuous native-surface-fitted lid liner with edge returns; adds an opaque cabin floor backing. Other 150 baseline nodes remain exact. Four downward shadowed footwell lights replace unoccluded point lights; source display atlas has selective runtime backlighting."
   ],
-  "enhancedAt": "2026-10-28T11:01:07.609Z",
+  "enhancedAt": "2026-10-28T15:59:52.416Z",
   "assetIncrement": "0.7.2-enclosed-cabin",
   "windowMapping": "docs/assets/window-mapping.json",
   "vehicleMapping": "docs/assets/vehicle-mapping.json",
-  "enhancedBlendSha256": "f22c6333ae0269b320247da3f61e067f38d97fe6ae5b2e29cfee515aaacca68d"
+  "enhancedBlendSha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17"
 }

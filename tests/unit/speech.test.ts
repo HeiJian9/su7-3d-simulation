@@ -126,4 +126,20 @@ describe('voice orchestration race protection (explicit test Mock)',()=>{
     await coordinator.text('打开车窗');expect(useVehicle.getState().context.pending).toBeDefined();
     coordinator.cancelClarification();expect(useVehicle.getState().context.pending).toBeUndefined();expect(useVehicle.getState().state.revision).toBe(0);
   });
+  it('rules complete before LLM wording and a manual override drops a late reply',async()=>{
+    useSpeech.setState(s=>({routing:'auto',health:{...s.health,intent:{configured:true,model:'deepseek-mock',protocol:'openai-chat-tools',missing:[],probe:'mock'}}}));
+    let finishWording!:(r:Response)=>void;const calls:string[]=[];
+    coordinator=new SpeechCoordinator(recorder,player,async url=>{calls.push(String(url));return new Promise(r=>{finishWording=r;});});
+    const task=coordinator.text('左前窗开一半');expect(calls).toEqual([]);
+    useVehicle.getState().finish(useVehicle.getState().executions.at(-1)!.requestId,'completed');
+    await vi.waitFor(()=>expect(calls).toEqual(['/api/assistant/feedback']));manualWindow(['rr'],.3);
+    finishWording(Response.json({requestId:'late',text:'这条旧回复不得播放'}));await task;
+    expect(useVehicle.getState().state.windows.fl.openness).toBe(.5);expect(useVehicle.getState().state.windows.rr.openness).toBe(.3);expect(calls).toHaveLength(1);expect(useSpeech.getState().lastFeedback).not.toContain('旧回复');
+  });
+  it('wording service failure falls back to completed facts and still speaks once',async()=>{
+    useSpeech.setState(s=>({routing:'auto',health:{...s.health,intent:{configured:true,model:'deepseek-mock',protocol:'openai-chat-tools',missing:[],probe:'mock'}}}));
+    const calls:string[]=[];coordinator=new SpeechCoordinator(recorder,player,async url=>{calls.push(String(url));return String(url).endsWith('/feedback')?new Response('',{status:503}):new Response(new Uint8Array([1]),{headers:{'Content-Type':'audio/wav'}});});
+    const task=coordinator.text('左前窗开一半');useVehicle.getState().finish(useVehicle.getState().executions.at(-1)!.requestId,'completed');await task;
+    expect(calls).toEqual(['/api/assistant/feedback','/api/speech/synthesize']);expect(useSpeech.getState().lastFeedback).toContain('50%');expect(useSpeech.getState().errorCode).toBe('');expect(useSpeech.getState().traces.some(t=>t.stage==='feedback-fallback')).toBe(true);
+  });
 });

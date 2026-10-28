@@ -1,0 +1,471 @@
+{
+  "voice": "longanhuan",
+  "at": "2026-10-28T16:04:46.162Z",
+  "mode": "real-Qwen-ASR+DeepSeek-tools+actual-renderer+CosyVoice-with-synthetic-microphone",
+  "human": false,
+  "cases": [
+    {
+      "index": 0,
+      "input": "把左前车窗开到百分之三十五，前备箱开到三成，打开氛围灯换成蓝色并调到四成，最后打开雨刷。",
+      "transcript": "听到：把左前车窗开到35%，前备箱开到三成，打开氛围灯换成蓝色并调到四成，最后打开雨刷。",
+      "feedback": "左前车窗已开到35%，前备箱开到三成，氛围灯已亮起并调成蓝色、亮度四成，雨刷也切到低速档了。",
+      "plans": [
+        {
+          "requestId": "dd3018e7-1f6a-4ba4-89cb-9f1c81c44828",
+          "turnId": "fb3ad44a-77e7-46dd-b09a-f0264cd503f2",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_8735b4f267b74bb18716e611",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_windows",
+                "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.35}]}"
+              }
+            },
+            {
+              "id": "call_5bdb11c7e3db478e96ae6521",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_frunk",
+                "arguments": "{\"actions\": [{\"component\": \"frunk\", \"targets\": [\"front\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.3}]}"
+              }
+            },
+            {
+              "id": "call_7e6727d00fc14984b36e2dbc",
+              "index": 2,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_switch",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            },
+            {
+              "id": "call_550a1d53037942658735a843",
+              "index": 3,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_color",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"color\", \"operation\": \"set\", \"value\": \"#0000ff\"}]}"
+              }
+            },
+            {
+              "id": "call_95ad03a39343429697965933",
+              "index": 4,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.4}]}"
+              }
+            },
+            {
+              "id": "call_31df8f8959b34ef3ae8bd264",
+              "index": 5,
+              "type": "function",
+              "function": {
+                "name": "vehicle_wiper_mode",
+                "arguments": "{\"actions\": [{\"component\": \"wiper\", \"targets\": [\"front\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"low\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "window",
+              "targets": [
+                "fl"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.35
+            },
+            {
+              "component": "frunk",
+              "targets": [
+                "front"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.3
+            },
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            },
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "color",
+              "operation": "set",
+              "value": "#0000ff"
+            },
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.4
+            },
+            {
+              "component": "wiper",
+              "targets": [
+                "front"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "low"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 0,
+          "durationMs": 2411
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "dd3018e7-1f6a-4ba4-89cb-9f1c81c44828",
+          "text": "左前车窗已开到35%，前备箱开到三成，氛围灯已亮起并调成蓝色、亮度四成，雨刷也切到低速档了。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_8735b4f267b74bb18716e611",
+            "call_5bdb11c7e3db478e96ae6521",
+            "call_7e6727d00fc14984b36e2dbc",
+            "call_550a1d53037942658735a843",
+            "call_95ad03a39343429697965933",
+            "call_31df8f8959b34ef3ae8bd264"
+          ]
+        }
+      ],
+      "wordings": [],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "low",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 30122,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "input": "左前门先开到一半，再开大一点，同时打开后排顶灯。",
+      "transcript": "听到：左前门先开到一半，再开大一点，同时打开后排顶灯。",
+      "feedback": "左前门先开到一半，再开大一点，现在到60%了；后排顶灯也给你打开了。",
+      "plans": [
+        {
+          "requestId": "00955608-0c84-4ca3-ba16-f562f8c345c2",
+          "turnId": "f35e3f7f-deb8-4a65-8ba6-e8e0f0fdad56",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_c3c6eddf744044f5aa4d3c21",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_doors",
+                "arguments": "{\"actions\": [{\"component\": \"door\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.5}, {\"component\": \"door\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"adjust\", \"value\": 0.1}]}"
+              }
+            },
+            {
+              "id": "call_59aa1b0cc52349979c258f1a",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_cabin_light_switch",
+                "arguments": "{\"actions\": [{\"component\": \"cabinLight\", \"targets\": [\"rear\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "door",
+              "targets": [
+                "fl"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.5
+            },
+            {
+              "component": "door",
+              "targets": [
+                "fl"
+              ],
+              "property": "openness",
+              "operation": "adjust",
+              "value": 0.1
+            },
+            {
+              "component": "cabinLight",
+              "targets": [
+                "rear"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 1,
+          "durationMs": 1642
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "00955608-0c84-4ca3-ba16-f562f8c345c2",
+          "text": "左前门先开到一半，再开大一点，现在到60%了；后排顶灯也给你打开了。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_c3c6eddf744044f5aa4d3c21",
+            "call_59aa1b0cc52349979c258f1a"
+          ]
+        }
+      ],
+      "wordings": [],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.6,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "low",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 20105,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "input": "右后车窗打开一半。",
+      "transcript": "听到：右后车窗打开一半。",
+      "feedback": "右后车窗已经打开一半啦。",
+      "plans": [],
+      "finishes": [],
+      "wordings": [
+        {
+          "requestId": "bcd5df92-8796-4413-a09c-ff04869ffbcb",
+          "text": "右后车窗已经打开一半啦。",
+          "model": "deepseek-v4.1-flash-1017"
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.6,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "low",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 9960,
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/feedback",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": false,
+  "error": "expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 1\n\n@@ -18,11 +18,11 @@\n    \"scatter:scene:enabled\": true,\n    \"scatter:scene:strength\": 0.35,\n    \"trunk:rear:openness\": 0,\n    \"turnSignal:vehicle:mode\": \"off\",\n    \"window:fl:openness\": 0.35,\n-   \"window:fr:openness\": 0,\n+   \"window:fr:openness\": 1,\n    \"window:rl:openness\": 0,\n    \"window:rr:openness\": 0.5,\n    \"wiper:front:mode\": \"low\",\n    \"wiper:front:swipe\": 0,\n  }",
+  "failed": {
+    "plans": [
+      {
+        "requestId": "3029713a-3376-4207-9002-deecd08b64e1",
+        "turnId": "736d65f6-bdc0-4270-96de-3cad0d60b8a9",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_fc69539b9aac4259b2bd2932",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_windows",
+              "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fr\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 1}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "window",
+            "targets": [
+              "fr"
+            ],
+            "property": "openness",
+            "operation": "set",
+            "value": 1
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 3,
+        "durationMs": 1406
+      }
+    ],
+    "finishes": [
+      {
+        "requestId": "3029713a-3376-4207-9002-deecd08b64e1",
+        "text": "右前车窗已经完全打开啦。不过空调不在我能控制的功能里，这次没能帮你打开。",
+        "model": "deepseek-v4.1-flash-1017",
+        "toolCallIds": [
+          "call_fc69539b9aac4259b2bd2932"
+        ]
+      }
+    ],
+    "actual": {
+      "scatter:scene:enabled": true,
+      "scatter:scene:strength": 0.35,
+      "observation:scene:night": false,
+      "door:fl:openness": 0.6,
+      "door:fr:openness": 0,
+      "door:rl:openness": 0,
+      "door:rr:openness": 0,
+      "trunk:rear:openness": 0,
+      "frunk:front:openness": 0.3,
+      "window:fl:openness": 0.35,
+      "window:fr:openness": 1,
+      "window:rl:openness": 0,
+      "window:rr:openness": 0.5,
+      "paint:body:color": "#e4e6e8",
+      "headlights:front:mode": "off",
+      "headlights:front:brightness": 1,
+      "turnSignal:vehicle:mode": "off",
+      "ambient:cabin:enabled": true,
+      "ambient:cabin:color": "#0000ff",
+      "ambient:cabin:brightness": 0.4,
+      "wiper:front:mode": "low",
+      "wiper:front:swipe": 0,
+      "cabinLight:front:enabled": false,
+      "cabinLight:front:brightness": 1,
+      "cabinLight:rear:enabled": true,
+      "cabinLight:rear:brightness": 1
+    },
+    "feedback": "右前车窗已经完全打开啦。不过空调不在我能控制的功能里，这次没能帮你打开。"
+  }
+}
