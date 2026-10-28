@@ -1,0 +1,1673 @@
+{
+  "exportedAt": "2026-10-28T05:11:54.410Z",
+  "increment": "I7–I9",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+  "asset": {
+    "modelId": "ca2cda599f5341068c992c9f44551bf9",
+    "status": "ready",
+    "title": "Xiaomi SU7",
+    "author": "Mona x Supercars",
+    "sourceUrl": "https://sketchfab.com/3d-models/xiaomi-su7-ca2cda599f5341068c992c9f44551bf9",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "runtimeUrl": "/models/su7-runtime.glb",
+    "sha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
+    "bytes": 6714984,
+    "rotationY": 0,
+    "scale": 1,
+    "message": "指定 SU7 · I6.9-native-frunk-wide-dome 增强资产 · 原车几何与局部补建"
+  },
+  "loadMs": 78882,
+  "mode": "orbit",
+  "gesture": "相机拖动（已抑制部件点击）",
+  "microphone": {
+    "status": "unverified",
+    "peakRms": 0,
+    "samples": 0,
+    "durationMs": 0,
+    "message": "尚未检测"
+  },
+  "samples": [
+    {
+      "fps": 178,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 1,
+      "focused": true,
+      "viewport": [
+        2267,
+        1080
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 2,
+      "focused": true,
+      "viewport": [
+        2267,
+        1080
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 3,
+      "focused": true,
+      "viewport": [
+        2267,
+        1080
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 4,
+      "focused": true,
+      "viewport": [
+        2267,
+        1080
+      ]
+    },
+    {
+      "fps": 234,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 5,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 6,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 7,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 8,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 9,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 10,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 11,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 237,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.4,
+        2.65,
+        -6.1
+      ],
+      "rotation": [
+        -2.84,
+        0.702,
+        2.943
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 12,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        5.427,
+        2.65,
+        -6.076
+      ],
+      "rotation": [
+        -2.839,
+        0.706,
+        2.941
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 13,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 106,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        6.843,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 14,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 238,
+      "calls": 509,
+      "triangles": 413513,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 15,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 505,
+      "triangles": 413061,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 16,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 484,
+      "triangles": 408474,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 17,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 18,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 19,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 20,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 21,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 236,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 22,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 240,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 23,
+      "focused": true,
+      "viewport": [
+        2267,
+        1133
+      ]
+    },
+    {
+      "fps": 1,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 74,
+      "focused": false,
+      "viewport": [
+        2267,
+        1126
+      ]
+    },
+    {
+      "fps": 177,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 75,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 208,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 76,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 211,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 77,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 223,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 78,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 226,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 79,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 220,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 80,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 226,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 81,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 224,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 82,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 225,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 83,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 226,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 84,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 226,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 85,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 222,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 86,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 219,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 87,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 222,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 88,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 225,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 89,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 231,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 90,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 224,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 91,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 222,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 92,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 228,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 93,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 211,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 94,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 203,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 95,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 220,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 96,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 219,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 97,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 214,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 98,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 209,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 99,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 208,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 100,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 218,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 101,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 218,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 102,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 221,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 103,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 215,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 104,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 220,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 105,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 217,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 106,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 212,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 107,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 212,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 108,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 211,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 109,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 221,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 110,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 220,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 111,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 223,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 112,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    },
+    {
+      "fps": 219,
+      "calls": 483,
+      "triangles": 406717,
+      "position": [
+        6.842,
+        3.93,
+        3.612
+      ],
+      "rotation": [
+        -0.722,
+        0.958,
+        0.624
+      ],
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "elapsed": 113,
+      "focused": true,
+      "viewport": [
+        2267,
+        1082
+      ]
+    }
+  ],
+  "voice": {
+    "phase": "idle",
+    "transcript": "打开后备箱。",
+    "message": "后备箱已完全打开。",
+    "errorCode": "",
+    "asrModel": "qwen3-asr-flash",
+    "ttsModel": "cosyvoice-v3-flash",
+    "mode": "configured-unverified",
+    "traces": [
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:12.602Z",
+        "stage": "recording-request",
+        "detail": "真实本地关键词唤醒",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:12.602Z",
+        "stage": "capture-starting",
+        "detail": "旧音频已停止；请求音频输入",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:16.570Z",
+        "stage": "microphone-released",
+        "detail": "1 tracks; all ended: true",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:16.570Z",
+        "stage": "transcribing",
+        "detail": "audio/wav; 3921 ms; silence-end",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:17.197Z",
+        "stage": "transcript",
+        "detail": "打开后备箱。",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:17.197Z",
+        "stage": "asr-completed",
+        "detail": "qwen3-asr-flash; 621 ms",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:17.197Z",
+        "stage": "route",
+        "detail": "rules",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:18.448Z",
+        "stage": "completed",
+        "detail": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a; revision 1; [{\"key\":\"trunk:rear:openness\",\"value\":1}]",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:18.448Z",
+        "stage": "tts-request",
+        "detail": "API TTS feedback",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:19.701Z",
+        "stage": "tts-started",
+        "detail": "正在播放实际 API 音频",
+        "mock": false
+      },
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:22.006Z",
+        "stage": "tts-ended",
+        "detail": "API audio playback ended",
+        "mock": false
+      }
+    ]
+  },
+  "vehicle": {
+    "revision": 1,
+    "targets": {
+      "fl": {
+        "openness": 0
+      },
+      "fr": {
+        "openness": 0
+      },
+      "rl": {
+        "openness": 0
+      },
+      "rr": {
+        "openness": 0
+      }
+    },
+    "actual": {
+      "fl": 0,
+      "fr": 0,
+      "rl": 0,
+      "rr": 0
+    }
+  },
+  "wake": {
+    "enabled": true,
+    "status": "listening",
+    "message": "正在本地监听“小爱同学” · 唤醒后等提示再说指令",
+    "detections": 1,
+    "audioSeconds": 47.84,
+    "decodeMs": 1410.1609999993234,
+    "rssBytes": 187904000,
+    "rms": 0.0046495233822803905,
+    "events": [
+      {
+        "time": "2026-10-28T05:10:03.837Z",
+        "stage": "disabled",
+        "detail": "关闭关键词采集与本地连接"
+      },
+      {
+        "time": "2026-10-28T05:10:03.837Z",
+        "stage": "enabled",
+        "detail": "用户主动开启本地关键词监听"
+      },
+      {
+        "time": "2026-10-28T05:10:04.826Z",
+        "stage": "engine-ready",
+        "detail": "真实本地KWS模型已加载"
+      },
+      {
+        "time": "2026-10-28T05:10:05.527Z",
+        "stage": "listening",
+        "detail": "关键词采集已连接；仅等待小爱同学"
+      },
+      {
+        "time": "2026-10-28T05:10:12.497Z",
+        "stage": "keyword-detected",
+        "detail": "真实本地KWS返回小爱同学"
+      },
+      {
+        "time": "2026-10-28T05:10:22.716Z",
+        "stage": "listening",
+        "detail": "关键词采集已连接；仅等待小爱同学"
+      },
+      {
+        "time": "2026-10-28T05:11:15.370Z",
+        "stage": "listening",
+        "detail": "关键词采集已连接；仅等待小爱同学"
+      }
+    ]
+  },
+  "fullState": {
+    "revision": 1,
+    "windows": {
+      "fl": {
+        "openness": 0
+      },
+      "fr": {
+        "openness": 0
+      },
+      "rl": {
+        "openness": 0
+      },
+      "rr": {
+        "openness": 0
+      }
+    },
+    "doors": {
+      "fl": {
+        "openness": 0
+      },
+      "fr": {
+        "openness": 0
+      },
+      "rl": {
+        "openness": 0
+      },
+      "rr": {
+        "openness": 0
+      }
+    },
+    "trunk": {
+      "openness": 1
+    },
+    "frunk": {
+      "openness": 0
+    },
+    "lights": {
+      "headlights": "off",
+      "turnSignal": "off",
+      "brightness": 1
+    },
+    "cabinBrightness": {
+      "front": 1,
+      "rear": 1
+    },
+    "scatter": {
+      "enabled": true,
+      "strength": 0.35
+    },
+    "observation": {
+      "night": false
+    },
+    "cabinLights": {
+      "front": false,
+      "rear": false
+    },
+    "paint": {
+      "color": "#e4e6e8"
+    },
+    "ambient": {
+      "enabled": false,
+      "color": "#9867ff",
+      "brightness": 0.4
+    },
+    "wipers": {
+      "mode": "off",
+      "onceSequence": 0
+    }
+  },
+  "actualParts": {
+    "scatter:scene:enabled": true,
+    "scatter:scene:strength": 0.35,
+    "observation:scene:night": false,
+    "door:fl:openness": 0,
+    "door:fr:openness": 0,
+    "door:rl:openness": 0,
+    "door:rr:openness": 0,
+    "trunk:rear:openness": 1,
+    "frunk:front:openness": 0,
+    "window:fl:openness": 0,
+    "window:fr:openness": 0,
+    "window:rl:openness": 0,
+    "window:rr:openness": 0,
+    "paint:body:color": "#e4e6e8",
+    "headlights:front:mode": "off",
+    "headlights:front:brightness": 1,
+    "turnSignal:vehicle:mode": "off",
+    "ambient:cabin:enabled": false,
+    "ambient:cabin:color": "#9867ff",
+    "ambient:cabin:brightness": 0.4,
+    "wiper:front:mode": "off",
+    "wiper:front:swipe": 0,
+    "cabinLight:front:enabled": false,
+    "cabinLight:front:brightness": 1,
+    "cabinLight:rear:enabled": false,
+    "cabinLight:rear:brightness": 1
+  }
+}

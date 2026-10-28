@@ -1,0 +1,340 @@
+{
+  "at": "2026-10-28T05:47:04.211Z",
+  "mode": "real-manual-controls+real-DeepSeek-tools+actual-renderer",
+  "human": false,
+  "cases": [
+    {
+      "text": "再暗一点",
+      "before": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.7,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false
+      },
+      "submittedState": {
+        "revision": 2,
+        "windows": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off",
+          "brightness": 1
+        },
+        "cabinBrightness": {
+          "front": 1,
+          "rear": 1
+        },
+        "scatter": {
+          "enabled": true,
+          "strength": 0.35
+        },
+        "observation": {
+          "night": false
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": true,
+          "color": "#9867ff",
+          "brightness": 0.7
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "focus": {
+        "component": "ambient",
+        "targets": [
+          "cabin"
+        ],
+        "updatedAt": 1793166428503
+      },
+      "plan": {
+        "requestId": "58e01b5d-e840-402e-b083-f3092bba212b",
+        "turnId": "6c2941e3-cec3-439b-91f5-42c945ebd080",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_e82c95e3ee384b6591525297",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_ambient_brightness",
+              "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"brightness\", \"operation\": \"adjust\", \"value\": -0.1}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "ambient",
+            "targets": [
+              "cabin"
+            ],
+            "property": "brightness",
+            "operation": "adjust",
+            "value": -0.1
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 2,
+        "durationMs": 1219
+      },
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.6,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false
+      },
+      "passed": true
+    },
+    {
+      "text": "再开大一点",
+      "before": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0.5,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.6,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false
+      },
+      "submittedState": {
+        "revision": 4,
+        "windows": {
+          "fl": {
+            "openness": 0.5
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "doors": {
+          "fl": {
+            "openness": 0
+          },
+          "fr": {
+            "openness": 0
+          },
+          "rl": {
+            "openness": 0
+          },
+          "rr": {
+            "openness": 0
+          }
+        },
+        "trunk": {
+          "openness": 0
+        },
+        "frunk": {
+          "openness": 0
+        },
+        "lights": {
+          "headlights": "off",
+          "turnSignal": "off",
+          "brightness": 1
+        },
+        "cabinBrightness": {
+          "front": 1,
+          "rear": 1
+        },
+        "scatter": {
+          "enabled": true,
+          "strength": 0.35
+        },
+        "observation": {
+          "night": false
+        },
+        "cabinLights": {
+          "front": false,
+          "rear": false
+        },
+        "paint": {
+          "color": "#e4e6e8"
+        },
+        "ambient": {
+          "enabled": true,
+          "color": "#9867ff",
+          "brightness": 0.6
+        },
+        "wipers": {
+          "mode": "off",
+          "onceSequence": 0
+        }
+      },
+      "focus": {
+        "component": "window",
+        "targets": [
+          "fl"
+        ],
+        "updatedAt": 1793166430914
+      },
+      "plan": {
+        "requestId": "642a8e9e-86ac-4af2-ba58-3d5bd58bd976",
+        "turnId": "d58c6a3b-f4ba-45cd-92b3-8a9ea5150d42",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_d2545a2a0b374444a2743f0c",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_windows",
+              "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"adjust\", \"value\": 0.1}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "window",
+            "targets": [
+              "fl"
+            ],
+            "property": "openness",
+            "operation": "adjust",
+            "value": 0.1
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 4,
+        "durationMs": 1013
+      },
+      "actual": {
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0.6,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.6,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -14,12 +14,6 @@ export interface Metrics {
   viewport: number[];
 }
 interface SceneState {
-  hazeEnabled:boolean;
-  haze:number;
-  setHaze:(haze:number)=>void;
-  setHazeEnabled:(enabled:boolean)=>void;
-  night:boolean;
-  setNight:(night:boolean)=>void;
   mode: CameraMode;
   panTool: boolean;
   view: View;
@@ -42,8 +36,6 @@ interface SceneState {
   record: (metrics: Metrics) => void;
 }
 export const useScene = create<SceneState>((set) => ({
-  hazeEnabled:true,haze:.35,setHaze:(haze)=>set({haze:Math.max(0,Math.min(1,haze))}),setHazeEnabled:(hazeEnabled)=>set({hazeEnabled}),
-  night:false,setNight:(night)=>set({night}),
   mode: 'orbit', panTool: false, view: 'overview', request: 0, speed: 1.4, loaded: false, progress: 0, loadError: null,
   metrics: { fps: 0, calls: 0, triangles: 0, position: [], rotation: [], renderer: '检测中', elapsed: 0, focused: false, viewport: [] },
   samples: [], loadMs: null,

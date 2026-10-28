@@ -1,0 +1,330 @@
+{
+  "at": "2026-10-28T05:17:54.393Z",
+  "tier": "human-microphone",
+  "source": "User said completed; later explicitly confirmed initial test used click; native Edge then observed real KWS event and corresponding recording source.",
+  "initial": {
+    "diagnostic": "docs/validation/scene-diagnostics-2026-10-28T04-46-44-970Z.json",
+    "transcripts": [
+      "打开雨刷，这是快速档。",
+      "，打开所有的门。",
+      "关闭左后方的门。",
+      "，关闭说了吗？",
+      "关闭所有门。",
+      "，打开右转向灯。"
+    ],
+    "wakeClaim": false
+  },
+  "wake": {
+    "diagnostic": "docs/validation/scene-diagnostics-2026-10-28T05-11-54-422Z.json",
+    "keywordEvents": [
+      {
+        "time": "2026-10-28T05:10:12.497Z",
+        "stage": "keyword-detected",
+        "detail": "真实本地KWS返回小爱同学"
+      }
+    ],
+    "recording": [
+      {
+        "requestId": "0a0e9942-d7b9-4b0c-bb61-970d0dfaf77a",
+        "time": "2026-10-28T05:10:12.602Z",
+        "stage": "recording-request",
+        "detail": "真实本地关键词唤醒",
+        "mock": false
+      }
+    ],
+    "transcript": "打开后备箱。",
+    "detections": 1,
+    "observationAudioSeconds": 47.84,
+    "decodeMs": 1410.1609999993234,
+    "returnedToListening": true,
+    "actual": {
+      "scatter:scene:enabled": true,
+      "scatter:scene:strength": 0.35,
+      "observation:scene:night": false,
+      "door:fl:openness": 0,
+      "door:fr:openness": 0,
+      "door:rl:openness": 0,
+      "door:rr:openness": 0,
+      "trunk:rear:openness": 1,
+      "frunk:front:openness": 0,
+      "window:fl:openness": 0,
+      "window:fr:openness": 0,
+      "window:rl:openness": 0,
+      "window:rr:openness": 0,
+      "paint:body:color": "#e4e6e8",
+      "headlights:front:mode": "off",
+      "headlights:front:brightness": 1,
+      "turnSignal:vehicle:mode": "off",
+      "ambient:cabin:enabled": false,
+      "ambient:cabin:color": "#9867ff",
+      "ambient:cabin:brightness": 0.4,
+      "wiper:front:mode": "off",
+      "wiper:front:swipe": 0,
+      "cabinLight:front:enabled": false,
+      "cabinLight:front:brightness": 1,
+      "cabinLight:rear:enabled": false,
+      "cabinLight:rear:brightness": 1
+    }
+  },
+  "pending": [
+    "更多距离和噪声的声学统计，不声称工厂级唤醒率",
+    "录像原文件及偏移归档"
+  ],
+  "excludedSyntheticDiagnostic": "docs/validation/scene-diagnostics-2026-10-28T04-58-46-221Z.json",
+  "followup": {
+    "diagnostic": "docs/validation/scene-diagnostics-2026-10-28T05-39-11-376Z.json",
+    "source": "User answered ok after requested live test; separate KWS/not-understood and click-microphone multi-tool cases are retained.",
+    "wake": {
+      "enabled": true,
+      "status": "listening",
+      "message": "正在本地监听“小爱同学” · 唤醒后等提示再说指令",
+      "detections": 1,
+      "audioSeconds": 57.616,
+      "decodeMs": 4257.210299999686,
+      "rssBytes": 194822144,
+      "rms": 0.0010178429135060702,
+      "events": [
+        {
+          "time": "2026-10-28T05:37:14.260Z",
+          "stage": "disabled",
+          "detail": "关闭关键词采集与本地连接"
+        },
+        {
+          "time": "2026-10-28T05:37:14.260Z",
+          "stage": "enabled",
+          "detail": "用户主动开启本地关键词监听"
+        },
+        {
+          "time": "2026-10-28T05:37:16.133Z",
+          "stage": "engine-ready",
+          "detail": "真实本地KWS模型已加载"
+        },
+        {
+          "time": "2026-10-28T05:37:16.899Z",
+          "stage": "listening",
+          "detail": "关键词采集已连接；仅等待小爱同学"
+        },
+        {
+          "time": "2026-10-28T05:37:38.532Z",
+          "stage": "keyword-detected",
+          "detail": "真实本地KWS返回小爱同学"
+        },
+        {
+          "time": "2026-10-28T05:37:49.321Z",
+          "stage": "listening",
+          "detail": "关键词采集已连接；仅等待小爱同学"
+        },
+        {
+          "time": "2026-10-28T05:38:29.061Z",
+          "stage": "listening",
+          "detail": "关键词采集已连接；仅等待小爱同学"
+        },
+        {
+          "time": "2026-10-28T05:38:57.987Z",
+          "stage": "listening",
+          "detail": "关键词采集已连接；仅等待小爱同学"
+        }
+      ]
+    },
+    "transcripts": [
+      {
+        "requestId": "4de2dd6c-bf30-4a6e-88ce-62cd5bd13135",
+        "time": "2026-10-28T05:37:42.299Z",
+        "stage": "transcript",
+        "detail": "嗯。",
+        "mock": false
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "time": "2026-10-28T05:38:11.476Z",
+        "stage": "transcript",
+        "detail": "前备箱打开一半，车漆换成红色，打开后排顶灯，让雨刮刮一下。",
+        "mock": false
+      },
+      {
+        "requestId": "4e6dd3a6-5194-478b-88c2-28cc48284548",
+        "time": "2026-10-28T05:38:44.846Z",
+        "stage": "transcript",
+        "detail": "嗯，你有什么功能？",
+        "mock": false
+      }
+    ],
+    "toolResults": [
+      {
+        "requestId": "4de2dd6c-bf30-4a6e-88ce-62cd5bd13135",
+        "result": {
+          "tool_call_id": "call_739216140f9f47348f5b53d4",
+          "status": "completed",
+          "message": "我没听清，请再说一遍。",
+          "revision": 0,
+          "effects": [],
+          "observations": []
+        }
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "result": {
+          "tool_call_id": "call_5fb9b04b41184b67b1d5d021",
+          "status": "completed",
+          "message": "前备箱已打开到 50%，车漆颜色已设为 自定义颜色，后排主灯已开启，雨刷已完成一次刮刷并归位。",
+          "revision": 1,
+          "effects": [
+            {
+              "key": "frunk:front:openness",
+              "value": 0.5
+            }
+          ],
+          "observations": [
+            {
+              "index": 0,
+              "effects": [
+                {
+                  "key": "frunk:front:openness",
+                  "value": 0.5
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "result": {
+          "tool_call_id": "call_768b54b209254c0ea4ebf02f",
+          "status": "completed",
+          "message": "前备箱已打开到 50%，车漆颜色已设为 自定义颜色，后排主灯已开启，雨刷已完成一次刮刷并归位。",
+          "revision": 1,
+          "effects": [
+            {
+              "key": "paint:body:color",
+              "value": "#ff0000"
+            }
+          ],
+          "observations": [
+            {
+              "index": 1,
+              "effects": [
+                {
+                  "key": "paint:body:color",
+                  "value": "#ff0000"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "result": {
+          "tool_call_id": "call_de3bdbe4e30243f1b510cf22",
+          "status": "completed",
+          "message": "前备箱已打开到 50%，车漆颜色已设为 自定义颜色，后排主灯已开启，雨刷已完成一次刮刷并归位。",
+          "revision": 1,
+          "effects": [
+            {
+              "key": "cabinLight:rear:enabled",
+              "value": true
+            }
+          ],
+          "observations": [
+            {
+              "index": 2,
+              "effects": [
+                {
+                  "key": "cabinLight:rear:enabled",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "result": {
+          "tool_call_id": "call_a1c8c60fb932473c9dd034bf",
+          "status": "completed",
+          "message": "前备箱已打开到 50%，车漆颜色已设为 自定义颜色，后排主灯已开启，雨刷已完成一次刮刷并归位。",
+          "revision": 1,
+          "effects": [
+            {
+              "key": "wiper:front:swipe",
+              "value": 1
+            }
+          ],
+          "observations": [
+            {
+              "index": 3,
+              "effects": [
+                {
+                  "key": "wiper:front:swipe",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "requestId": "4e6dd3a6-5194-478b-88c2-28cc48284548",
+        "result": {
+          "tool_call_id": "call_c2fa0e7669ba4279bf498c9f",
+          "status": "completed",
+          "message": "我可以帮你控制车窗、车门、前备箱和后备箱，调节前大灯模式与亮度、转向灯和双闪，开关前后排顶灯及亮度，设置氛围灯颜色和亮度，切换雨刷档位或刮刷一次，还能调整空气散射效果和展厅夜间观察模式。需要我操作哪一项？",
+          "revision": 1,
+          "effects": [],
+          "observations": []
+        }
+      }
+    ],
+    "actual": {
+      "scatter:scene:enabled": true,
+      "scatter:scene:strength": 0.35,
+      "observation:scene:night": false,
+      "door:fl:openness": 0,
+      "door:fr:openness": 0,
+      "door:rl:openness": 0,
+      "door:rr:openness": 0,
+      "trunk:rear:openness": 0,
+      "frunk:front:openness": 0.5,
+      "window:fl:openness": 0,
+      "window:fr:openness": 0,
+      "window:rl:openness": 0,
+      "window:rr:openness": 0,
+      "paint:body:color": "#ff0000",
+      "headlights:front:mode": "off",
+      "headlights:front:brightness": 1,
+      "turnSignal:vehicle:mode": "off",
+      "ambient:cabin:enabled": false,
+      "ambient:cabin:color": "#9867ff",
+      "ambient:cabin:brightness": 0.4,
+      "wiper:front:mode": "off",
+      "wiper:front:swipe": 1,
+      "cabinLight:front:enabled": false,
+      "cabinLight:front:brightness": 1,
+      "cabinLight:rear:enabled": true,
+      "cabinLight:rear:brightness": 1
+    },
+    "ttsEnded": [
+      {
+        "requestId": "4de2dd6c-bf30-4a6e-88ce-62cd5bd13135",
+        "time": "2026-10-28T05:37:48.589Z",
+        "stage": "tts-ended",
+        "detail": "API audio playback ended",
+        "mock": false
+      },
+      {
+        "requestId": "5859629c-2adc-423e-b594-7803a23aaf81",
+        "time": "2026-10-28T05:38:28.271Z",
+        "stage": "tts-ended",
+        "detail": "API audio playback ended",
+        "mock": false
+      }
+    ]
+  },
+  "newIssue": {
+    "humanObserved": "Capability introduction TTS timed out after a long response",
+    "fix": "Capability summary shortened; TTS provider timeout 25s and browser timeout 30s; real 102-character audio successfully synthesized in 12.8s and played to completion.",
+    "evidence": "docs/validation/i7-i9/assistant-chat-tts.json"
+  }
+}

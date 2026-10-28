@@ -74,7 +74,12 @@ for(const [name,code] of [['权限拒绝','NotAllowedError'],['无设备','NotFo
 test('Mock silence never uploads audio',async({page})=>{
   await page.addInitScript(()=>{AnalyserNode.prototype.getFloatTimeDomainData=function(array:Float32Array<ArrayBuffer>){array.fill(0);};});
   let sent=0;await page.route('**/api/speech/transcribe',r=>{sent++;return transcript(r,'左前窗打开');});await ready(page,false);
-  await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('没有检测到有效语音',{timeout:10000});expect(sent).toBe(0);await expect.poll(()=>tracksStopped(page)).toBe(true);
+  await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect(page.getByTestId('speech-message')).toContainText('我没听清，请再说一遍',{timeout:20000});expect(sent).toBe(0);await expect.poll(()=>tracksStopped(page)).toBe(true);
+});
+test('thinking before speaking for seven seconds does not end the recording prematurely',async({page})=>{
+ await page.addInitScript(()=>{navigator.mediaDevices.getUserMedia=async()=>{const context=new AudioContext(),destination=context.createMediaStreamDestination(),source=context.createOscillator(),gain=context.createGain();gain.gain.value=.2;source.connect(gain).connect(destination);source.start(context.currentTime+7);source.stop(context.currentTime+8.3);for(const t of destination.stream.getTracks()){const stop=t.stop.bind(t);t.stop=()=>{stop();void context.close();};}return destination.stream;};});
+ let duration=0;await page.route('**/api/speech/transcribe',async route=>{const body=route.request().postDataBuffer()!.toString('latin1');duration=Number(body.match(/name="durationMs"\r\n\r\n([^\r\n]+)/)![1]);await transcript(route,'左前车窗打开一半');});
+ await ready(page,false);await page.getByRole('button',{name:'开始录音',exact:true}).click();await expect.poll(()=>pose(page),{timeout:18000}).toBe(.5);expect(duration).toBeGreaterThan(9000);await expect.poll(()=>tracksStopped(page)).toBe(true);
 });
 for(const [status,code,message] of [[401,'AUTH_FAILED','认证失败'],[429,'RATE_LIMITED','请求过于频繁'],[504,'TIMEOUT','响应超时'],[415,'AUDIO_FORMAT_UNSUPPORTED','格式不兼容']] as const){
   test(`Mock ASR error ${status}: manual path remains usable`,async({page})=>{
@@ -96,7 +101,7 @@ test('Mock clarification cancellation clears pending intent after a bulk action'
   await expect(page.getByRole('button',{name:'完全打开右后车窗',exact:true})).toBeInViewport({ratio:1});
   await page.screenshot({path:`docs/assets/i4-i6/clarification-panel-${info.project.name}.png`});
   await page.getByRole('button',{name:'取消这条指令',exact:true}).click();await expect(page.getByRole('group',{name:'请选择车窗'})).toHaveCount(0);
-  await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('未改变');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
+  await input.fill('左后那个');await input.press('Enter');await expect(page.getByTestId('console-feedback')).toContainText('智能助手尚未配置');for(const c of ['fl','fr','rl','rr'])expect(await pose(page,c)).toBe(0);
 });
 test('Mock cancelling native WebM finalization permits immediate re-record without uploading old audio',async({page})=>{
   await page.addInitScript(()=>{const stop=MediaRecorder.prototype.stop;MediaRecorder.prototype.stop=function(){const handler=this.onstop;this.onstop=e=>setTimeout(()=>handler?.call(this,e),300);return stop.call(this);};});

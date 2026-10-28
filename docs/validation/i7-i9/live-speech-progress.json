@@ -1,0 +1,1778 @@
+{
+  "at": "2026-10-28T04:54:51.873Z",
+  "mode": "real-Qwen-ASR+DeepSeek-tools+actual-renderer+CosyVoice-with-synthetic-microphone",
+  "human": false,
+  "cases": [
+    {
+      "index": 0,
+      "input": "左前车窗打开百分之三十五，右前车窗打开百分之四十五，左后车窗打开一半，右后车窗打开一半。",
+      "transcript": "转写：左前车窗打开35%，右前车窗打开45%，左后车窗打开一半，右后车窗打开一半。",
+      "feedback": "四个车窗已按要求打开：左前35%、右前45%、左后50%、右后50%。",
+      "plans": [
+        {
+          "requestId": "a0c1a9af-608b-49af-8def-265046f604ab",
+          "turnId": "6fef1b80-df10-4c01-be50-49c5516a22f2",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_86351ac6979241a58efd3606",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_windows",
+                "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.35}, {\"component\": \"window\", \"targets\": [\"fr\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.45}, {\"component\": \"window\", \"targets\": [\"rl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.5}, {\"component\": \"window\", \"targets\": [\"rr\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.5}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "window",
+              "targets": [
+                "fl"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.35
+            },
+            {
+              "component": "window",
+              "targets": [
+                "fr"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.45
+            },
+            {
+              "component": "window",
+              "targets": [
+                "rl"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.5
+            },
+            {
+              "component": "window",
+              "targets": [
+                "rr"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.5
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 0,
+          "durationMs": 1596
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "a0c1a9af-608b-49af-8def-265046f604ab",
+          "text": "四个车窗已按要求打开：左前35%、右前45%、左后50%、右后50%。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_86351ac6979241a58efd3606"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 31015,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "input": "四个车门打开一半。",
+      "transcript": "转写：四个车门打开一半。",
+      "feedback": "四个车门都已打开到一半（50%）。",
+      "plans": [
+        {
+          "requestId": "0ada9cda-4666-4686-a727-671c192784a8",
+          "turnId": "6043735b-bf6b-420a-8cae-7fdf6eef0ed7",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_946e911a3f3a4681b38b231c",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_doors",
+                "arguments": "{\"actions\": [{\"component\": \"door\", \"targets\": [\"fl\", \"fr\", \"rl\", \"rr\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.5}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "door",
+              "targets": [
+                "fl",
+                "fr",
+                "rl",
+                "rr"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.5
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 1,
+          "durationMs": 3096
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "0ada9cda-4666-4686-a727-671c192784a8",
+          "text": "四个车门都已打开到一半（50%）。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_946e911a3f3a4681b38b231c"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 15896,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "input": "前备箱开到三成，同时后备箱开一半。",
+      "transcript": "转写：前备箱开到三成，同时后备箱开一半。",
+      "feedback": "前备箱已打开到三成（30%），后备箱已打开到一半（50%）。",
+      "plans": [
+        {
+          "requestId": "04e2cbf1-0b0e-4199-b5c5-4ea45d44f10d",
+          "turnId": "6bf5f974-e3dc-4322-9270-0d375f40223d",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_0f501e77f4dd4afebd4413d5",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_frunk",
+                "arguments": "{\"actions\": [{\"component\": \"frunk\", \"targets\": [\"front\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.3}]}"
+              }
+            },
+            {
+              "id": "call_5f318f7f64f6452e8cf9258e",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_trunk",
+                "arguments": "{\"actions\": [{\"component\": \"trunk\", \"targets\": [\"rear\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.5}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "frunk",
+              "targets": [
+                "front"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.3
+            },
+            {
+              "component": "trunk",
+              "targets": [
+                "rear"
+              ],
+              "property": "openness",
+              "operation": "set",
+              "value": 0.5
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 2,
+          "durationMs": 2282
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "04e2cbf1-0b0e-4199-b5c5-4ea45d44f10d",
+          "text": "前备箱已打开到三成（30%），后备箱已打开到一半（50%）。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_0f501e77f4dd4afebd4413d5",
+            "call_5f318f7f64f6452e8cf9258e"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 19903,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "input": "打开近光灯，前灯亮度设为百分之四十。",
+      "transcript": "转写：打开近光灯，前灯亮度设为40%。",
+      "feedback": "近光灯已打开，前灯亮度已设为40%。",
+      "plans": [
+        {
+          "requestId": "83bc7fd7-0773-448a-a02c-e816cc7f9263",
+          "turnId": "0fa42784-965f-43f1-9fad-fe9f98daa536",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_b12f32add7544eee901308d6",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_headlight_mode",
+                "arguments": "{\"actions\": [{\"component\": \"headlights\", \"targets\": [\"front\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"low\"}]}"
+              }
+            },
+            {
+              "id": "call_0fb1915e3ceb4392bf573b1d",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_headlight_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"headlights\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.4}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "headlights",
+              "targets": [
+                "front"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "low"
+            },
+            {
+              "component": "headlights",
+              "targets": [
+                "front"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.4
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 3,
+          "durationMs": 1452
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "83bc7fd7-0773-448a-a02c-e816cc7f9263",
+          "text": "近光灯已打开，前灯亮度已设为40%。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_b12f32add7544eee901308d6",
+            "call_0fb1915e3ceb4392bf573b1d"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 16841,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "input": "打开左转向灯。",
+      "transcript": "转写：打开左转向灯。",
+      "feedback": "左转向灯已打开。",
+      "plans": [
+        {
+          "requestId": "fda9b5f3-3afa-4925-9c33-926a92f6bf67",
+          "turnId": "72f841e4-9315-4a52-9e86-5c47272acd9c",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_e69da1d3312a47149d5ee2ad",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_turn_signals",
+                "arguments": "{\"actions\": [{\"component\": \"turnSignal\", \"targets\": [\"vehicle\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"left\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "turnSignal",
+              "targets": [
+                "vehicle"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "left"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 4,
+          "durationMs": 1298
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "fda9b5f3-3afa-4925-9c33-926a92f6bf67",
+          "text": "左转向灯已打开。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_e69da1d3312a47149d5ee2ad"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "left",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 9809,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "input": "打开右转向灯。",
+      "transcript": "转写：打开右转向灯。",
+      "feedback": "右转向灯已打开。",
+      "plans": [
+        {
+          "requestId": "b87f8174-1a9a-4ce5-9855-f570d3476fd0",
+          "turnId": "aca094a6-7999-4891-a820-a5dd46ae1a6b",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_7d240cf24cfb45258307c428",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_turn_signals",
+                "arguments": "{\"actions\": [{\"component\": \"turnSignal\", \"targets\": [\"vehicle\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"right\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "turnSignal",
+              "targets": [
+                "vehicle"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "right"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 5,
+          "durationMs": 913
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "b87f8174-1a9a-4ce5-9855-f570d3476fd0",
+          "text": "右转向灯已打开。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_7d240cf24cfb45258307c428"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "right",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 9840,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "input": "打开双闪。",
+      "transcript": "转写：打开双闪。",
+      "feedback": "双闪已打开。",
+      "plans": [
+        {
+          "requestId": "c76f85b5-06f0-49ee-8586-874e67a920f4",
+          "turnId": "4866ea1d-6d43-4b8f-b2b0-ead8a13ff73b",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_540138f740804d1bb5a38a7c",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_turn_signals",
+                "arguments": "{\"actions\": [{\"component\": \"turnSignal\", \"targets\": [\"vehicle\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"hazard\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "turnSignal",
+              "targets": [
+                "vehicle"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "hazard"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 6,
+          "durationMs": 1058
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "c76f85b5-06f0-49ee-8586-874e67a920f4",
+          "text": "双闪已打开。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_540138f740804d1bb5a38a7c"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "elapsedMs": 8840,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "input": "打开前后排顶灯，亮度都设为百分之四十。",
+      "transcript": "转写：打开前后排顶灯，亮度都设为40%。",
+      "feedback": "前后排顶灯已打开，亮度都设为40%。",
+      "plans": [
+        {
+          "requestId": "f0d491df-6130-4cb6-8679-31c2d13182d8",
+          "turnId": "3ed39a12-416d-46f7-b6c2-f4ec9b23184e",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_7c05326d225648e889c7c733",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_cabin_light_switch",
+                "arguments": "{\"actions\": [{\"component\": \"cabinLight\", \"targets\": [\"front\", \"rear\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            },
+            {
+              "id": "call_7e2c8809937140a48f379803",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_cabin_light_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"cabinLight\", \"targets\": [\"front\", \"rear\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.4}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "cabinLight",
+              "targets": [
+                "front",
+                "rear"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            },
+            {
+              "component": "cabinLight",
+              "targets": [
+                "front",
+                "rear"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.4
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 7,
+          "durationMs": 1199
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "f0d491df-6130-4cb6-8679-31c2d13182d8",
+          "text": "前后排顶灯已打开，亮度都设为40%。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_7c05326d225648e889c7c733",
+            "call_7e2c8809937140a48f379803"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 15846,
+      "passed": true
+    },
+    {
+      "index": 8,
+      "input": "打开氛围灯。",
+      "transcript": "转写：打开氛围灯。",
+      "feedback": "氛围灯已打开。",
+      "plans": [
+        {
+          "requestId": "5da2ecd3-e600-4b2f-8775-187411f5f09c",
+          "turnId": "6482c81f-608e-4219-b5b3-52c5087eaa8f",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_56bada493fa74f189aac75f9",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_switch",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 8,
+          "durationMs": 895
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "5da2ecd3-e600-4b2f-8775-187411f5f09c",
+          "text": "氛围灯已打开。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_56bada493fa74f189aac75f9"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 7812,
+      "passed": true
+    },
+    {
+      "index": 9,
+      "input": "换成蓝色。",
+      "transcript": "转写：换成蓝色。",
+      "feedback": "氛围灯颜色已换成蓝色。",
+      "plans": [
+        {
+          "requestId": "862a43f5-e498-4df4-87cb-090e763c0921",
+          "turnId": "e869361c-e058-4664-9315-bf1aa5f1a9cb",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_96a5254d1c6143ba804d1993",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_color",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"color\", \"operation\": \"set\", \"value\": \"#0000ff\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "color",
+              "operation": "set",
+              "value": "#0000ff"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 9,
+          "durationMs": 1132
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "862a43f5-e498-4df4-87cb-090e763c0921",
+          "text": "氛围灯颜色已换成蓝色。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_96a5254d1c6143ba804d1993"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 9804,
+      "passed": true
+    },
+    {
+      "index": 10,
+      "input": "再暗一点。",
+      "transcript": "转写：再暗一点儿。",
+      "feedback": "氛围灯已调暗至30%，已到可调下限。",
+      "plans": [
+        {
+          "requestId": "395c6db3-5ab6-4440-90ff-dbebcb5652bb",
+          "turnId": "d706df47-31ef-4972-8b2b-d86a9d642e9a",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_c389bb96397b45308f88ba28",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_ambient_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"ambient\", \"targets\": [\"cabin\"], \"property\": \"brightness\", \"operation\": \"adjust\", \"value\": -0.1}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "ambient",
+              "targets": [
+                "cabin"
+              ],
+              "property": "brightness",
+              "operation": "adjust",
+              "value": -0.1
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 10,
+          "durationMs": 926
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "395c6db3-5ab6-4440-90ff-dbebcb5652bb",
+          "text": "氛围灯已调暗至30%，已到可调下限。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_c389bb96397b45308f88ba28"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 11828,
+      "passed": true
+    },
+    {
+      "index": 11,
+      "input": "车漆换成红色。",
+      "transcript": "转写：车漆换成红色。",
+      "feedback": "车漆已换成红色。",
+      "plans": [
+        {
+          "requestId": "f322a14e-ac33-4a07-ac07-a4a7679b0219",
+          "turnId": "d8276d62-b3b1-4c89-9db0-9d6d7f753f41",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_db0a41ffc993418f832a9729",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_paint",
+                "arguments": "{\"actions\": [{\"component\": \"paint\", \"targets\": [\"body\"], \"property\": \"color\", \"operation\": \"set\", \"value\": \"#ff0000\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "paint",
+              "targets": [
+                "body"
+              ],
+              "property": "color",
+              "operation": "set",
+              "value": "#ff0000"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 11,
+          "durationMs": 1084
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "f322a14e-ac33-4a07-ac07-a4a7679b0219",
+          "text": "车漆已换成红色。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_db0a41ffc993418f832a9729"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 9867,
+      "passed": true
+    },
+    {
+      "index": 12,
+      "input": "打开雨刷。",
+      "transcript": "转写：打开雨刷。",
+      "feedback": "雨刷已打开，当前为低速档。",
+      "plans": [
+        {
+          "requestId": "b85eeb02-f7d2-4435-9135-6e786cca7963",
+          "turnId": "5347ad96-f7e4-4287-8497-504412da42c3",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_b0fc1f298e8d44deb6d3e49e",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_wiper_mode",
+                "arguments": "{\"actions\": [{\"component\": \"wiper\", \"targets\": [\"front\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"low\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "wiper",
+              "targets": [
+                "front"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "low"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 12,
+          "durationMs": 1074
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "b85eeb02-f7d2-4435-9135-6e786cca7963",
+          "text": "雨刷已打开，当前为低速档。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_b0fc1f298e8d44deb6d3e49e"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "low",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 9883,
+      "passed": true
+    },
+    {
+      "index": 13,
+      "input": "再快一档。",
+      "transcript": "转写：再快一档。",
+      "feedback": "雨刷已调快一档，现在是高速档。",
+      "plans": [
+        {
+          "requestId": "d4752903-2cc7-4f8c-a596-3b0880710c70",
+          "turnId": "6210a4a3-54ff-4379-abca-930a10569db2",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_2d44f174cbcc4efc8a57e133",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_wiper_mode",
+                "arguments": "{\"actions\": [{\"component\": \"wiper\", \"targets\": [\"front\"], \"property\": \"mode\", \"operation\": \"adjust\", \"value\": 1}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "wiper",
+              "targets": [
+                "front"
+              ],
+              "property": "mode",
+              "operation": "adjust",
+              "value": 1
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 13,
+          "durationMs": 1141
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "d4752903-2cc7-4f8c-a596-3b0880710c70",
+          "text": "雨刷已调快一档，现在是高速档。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_2d44f174cbcc4efc8a57e133"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "high",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 10898,
+      "passed": true
+    },
+    {
+      "index": 14,
+      "input": "关掉。",
+      "transcript": "转写：关掉。",
+      "feedback": "雨刷已关闭。",
+      "plans": [
+        {
+          "requestId": "0b1a6b7a-ad34-4abf-9f59-b9b11e31e6d2",
+          "turnId": "d8a1e726-c1d7-4f94-81c7-c219c44d489d",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_51c8b8933f784823b5cebaf7",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_wiper_mode",
+                "arguments": "{\"actions\": [{\"component\": \"wiper\", \"targets\": [\"front\"], \"property\": \"mode\", \"operation\": \"set\", \"value\": \"off\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "wiper",
+              "targets": [
+                "front"
+              ],
+              "property": "mode",
+              "operation": "set",
+              "value": "off"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 14,
+          "durationMs": 1049
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "0b1a6b7a-ad34-4abf-9f59-b9b11e31e6d2",
+          "text": "雨刷已关闭。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_51c8b8933f784823b5cebaf7"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 8812,
+      "passed": true
+    },
+    {
+      "index": 15,
+      "input": "雨刷刮一下。",
+      "transcript": "转写：雨刷刮一下。",
+      "feedback": "雨刷已刮一下并归位。",
+      "plans": [
+        {
+          "requestId": "7483d13e-578c-45c5-bc15-dd52aa9324e9",
+          "turnId": "20275e59-a5af-4f68-a301-cab99fd844f4",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_7272b31a53a2478583c6483c",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_wiper_once",
+                "arguments": "{\"actions\": [{\"component\": \"wiper\", \"targets\": [\"front\"], \"operation\": \"trigger\", \"action\": \"swipe_once\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "wiper",
+              "targets": [
+                "front"
+              ],
+              "operation": "trigger",
+              "action": "swipe_once"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 15,
+          "durationMs": 900
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "7483d13e-578c-45c5-bc15-dd52aa9324e9",
+          "text": "雨刷已刮一下并归位。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_7272b31a53a2478583c6483c"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 1,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 10830,
+      "passed": true
+    },
+    {
+      "index": 16,
+      "input": "打开空调。",
+      "transcript": "转写：打开空调。",
+      "feedback": "暂不支持该功能。",
+      "plans": [
+        {
+          "requestId": "e2b9acbd-bfca-487d-9b51-60372597f50b",
+          "turnId": "a4496d9f-3cb0-4be9-9541-68952b3b8f95",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_876f91f841374147aaef7d76",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "assistant_reply",
+                "arguments": "{\"kind\": \"unsupported\", \"message\": \"抱歉，当前车辆不支持空调控制功能。\"}"
+              }
+            }
+          ],
+          "commands": [],
+          "reply": {
+            "kind": "unsupported",
+            "message": "抱歉，当前车辆不支持空调控制功能。"
+          },
+          "validationRepairs": 0,
+          "baseRevision": 16,
+          "durationMs": 1237
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "e2b9acbd-bfca-487d-9b51-60372597f50b",
+          "text": "抱歉，当前车辆暂不支持空调控制功能。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_876f91f841374147aaef7d76"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 1,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 9770,
+      "passed": true
+    },
+    {
+      "index": 17,
+      "input": "那个，嗯啊。",
+      "transcript": "转写：那个，嗯。",
+      "feedback": "我没听清，请再说一遍。",
+      "plans": [
+        {
+          "requestId": "4fd4245d-acf2-42bf-839f-6a43a39b293f",
+          "turnId": "ecd5ded6-a711-4bf9-ba19-611f4e9995b9",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_2bc285c1a5584e36bef79d6d",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "assistant_reply",
+                "arguments": "{\"kind\": \"not_understood\", \"message\": \"没听清您要做什么，请再说一遍具体想调节哪个功能。\"}"
+              }
+            }
+          ],
+          "commands": [],
+          "reply": {
+            "kind": "not_understood",
+            "message": "没听清您要做什么，请再说一遍具体想调节哪个功能。"
+          },
+          "validationRepairs": 0,
+          "baseRevision": 16,
+          "durationMs": 1067
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "4fd4245d-acf2-42bf-839f-6a43a39b293f",
+          "text": "没听清，请再说一遍您想调节哪个功能。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_2bc285c1a5584e36bef79d6d"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0.5,
+        "frunk:front:openness": 0.3,
+        "window:fl:openness": 0.35,
+        "window:fr:openness": 0.45,
+        "window:rl:openness": 0.5,
+        "window:rr:openness": 0.5,
+        "paint:body:color": "#ff0000",
+        "headlights:front:mode": "low",
+        "headlights:front:brightness": 0.4,
+        "turnSignal:vehicle:mode": "hazard",
+        "ambient:cabin:enabled": true,
+        "ambient:cabin:color": "#0000ff",
+        "ambient:cabin:brightness": 0.3,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 1,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 0.4,
+        "cabinLight:rear:enabled": true,
+        "cabinLight:rear:brightness": 0.4
+      },
+      "elapsedMs": 9784,
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": false
+}

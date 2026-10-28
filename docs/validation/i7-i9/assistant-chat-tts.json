@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-28T05:44:34.454Z",
+  "mode": "real-DeepSeek-assistant-chat+real-CosyVoice-playback",
+  "human": false,
+  "passed": true,
+  "reply": "我可以帮你控制车窗、车门、前后备箱、灯光、车漆、雨刷，也能查询和调整车内氛围灯、空气散射等场景设置。想做什么直接说就行。",
+  "currentState": {
+    "revision": 0,
+    "windows": {
+      "fl": {
+        "openness": 0
+      },
+      "fr": {
+        "openness": 0
+      },
+      "rl": {
+        "openness": 0
+      },
+      "rr": {
+        "openness": 0
+      }
+    },
+    "doors": {
+      "fl": {
+        "openness": 0
+      },
+      "fr": {
+        "openness": 0
+      },
+      "rl": {
+        "openness": 0
+      },
+      "rr": {
+        "openness": 0
+      }
+    },
+    "trunk": {
+      "openness": 0
+    },
+    "frunk": {
+      "openness": 0
+    },
+    "lights": {
+      "headlights": "off",
+      "turnSignal": "off",
+      "brightness": 1
+    },
+    "cabinBrightness": {
+      "front": 1,
+      "rear": 1
+    },
+    "scatter": {
+      "enabled": true,
+      "strength": 0.35
+    },
+    "observation": {
+      "night": false
+    },
+    "cabinLights": {
+      "front": false,
+      "rear": false
+    },
+    "paint": {
+      "color": "#e4e6e8"
+    },
+    "ambient": {
+      "enabled": false,
+      "color": "#9867ff",
+      "brightness": 0.4
+    },
+    "wipers": {
+      "mode": "off",
+      "onceSequence": 0
+    }
+  },
+  "longReply": {
+    "characters": 102,
+    "elapsedMs": 12805,
+    "bytes": 1086764,
+    "contentType": "audio/wav",
+    "playback": {
+      "ended": true,
+      "durationSeconds": 22.64
+    }
+  }
+}

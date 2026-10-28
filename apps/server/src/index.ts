@@ -1,3 +1,5 @@
+import {intentConfig,assistantRoutes} from './assistant.js';
+import {attachWake} from './wake.js';
 import express, { type ErrorRequestHandler } from 'express';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -20,11 +22,15 @@ const app = express();
 const testUnconfigured = process.argv.includes('--test-unconfigured');
 if (!testUnconfigured) loadProjectEnv(root);
 const providers = providerConfig(testUnconfigured ? {} : process.env);
+const intent=intentConfig(testUnconfigured?{}:process.env);
+app.use('/api/assistant',express.json({limit:'128kb'}),assistantRoutes(intent.config));
 app.disable('x-powered-by');
+let wakeConnections=()=>0,wakeDiagnostics:()=>unknown=()=>[];
+app.get('/api/wake/status',(_req,res)=>res.set('Cache-Control','no-store').json({engine:'sherpa-onnx',runtime:'local-node-worker',keyword:'小爱同学',connections:wakeConnections(),cloudAudio:false,recent:wakeDiagnostics()}));
 app.get('/api/health', (_req, res) => {
-  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I6-cabin-lighting', version: '0.6.7', providers: {
+  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I7–I9', version: '0.7.0', providers: {
     ...providers.health,
-    intent: { configured: false, probe: 'pending-I7' },
+    intent: intent.health,
   } });
 });
 app.use('/api/speech', express.json({ limit: '16kb' }), speechRoutes(providers));
@@ -41,16 +47,17 @@ app.get('/api/asset', async (_req, res) => {
   }
 });
 const diagnosticSchema = z.object({
-  exportedAt: z.string().max(50), increment: z.enum(['I0–I1', 'I2–I3-framework', 'I3-aliyun','I4','I5','I6']), userAgent: z.string().max(500),
+  exportedAt: z.string().max(50), increment: z.enum(['I0–I1', 'I2–I3-framework', 'I3-aliyun','I4','I5','I6','I7–I9']), userAgent: z.string().max(500),
   asset: assetSchema.nullable(), loadMs: z.number().nonnegative().nullable(), mode: z.enum(['free', 'orbit']), gesture: z.string().max(200),
   microphone: z.object({ status: z.string().max(40), peakRms: z.number().nonnegative().max(1), samples: z.number().int().nonnegative(), durationMs: z.number().nonnegative(), message: z.string().max(500) }),
   samples: z.array(z.object({ fps: z.number().nonnegative(), calls: z.number().int().nonnegative(), triangles: z.number().nonnegative(), position: z.array(z.number()).length(3), rotation: z.array(z.number()).length(3), renderer: z.string().max(500), elapsed: z.number().nonnegative(), focused: z.boolean(), viewport: z.array(z.number()).length(2) })).max(360),
-  voice: z.object({phase:z.string().max(40),transcript:z.string().max(2000),message:z.string().max(2000),errorCode:z.string().max(100),asrModel:z.string().max(100),ttsModel:z.string().max(100),mode:z.string().max(40),traces:z.array(z.object({requestId:z.string().max(200),time:z.string().max(50),stage:z.string().max(50),detail:z.string().max(500),mock:z.boolean()})).max(80)}).optional(),
+  voice: z.object({phase:z.string().max(40),transcript:z.string().max(2000),message:z.string().max(2000),errorCode:z.string().max(100),asrModel:z.string().max(100),ttsModel:z.string().max(100),mode:z.string().max(40),traces:z.array(z.object({requestId:z.string().max(200),time:z.string().max(50),stage:z.string().max(50),detail:z.string().max(2000),mock:z.boolean()})).max(400)}).optional(),
   vehicle: z.object({revision:z.number().int().nonnegative(),targets:z.record(z.enum(['fl','fr','rl','rr']),z.object({openness:z.number().min(0).max(1)})),actual:z.record(z.enum(['fl','fr','rl','rr']),z.number().min(0).max(1))}).optional(),
+  wake:z.object({enabled:z.boolean(),status:z.string().max(30),message:z.string().max(200),detections:z.number().int().nonnegative(),audioSeconds:z.number().nonnegative(),decodeMs:z.number().nonnegative(),rssBytes:z.number().nonnegative(),rms:z.number().min(0).max(1),events:z.array(z.object({time:z.string(),stage:z.string(),detail:z.string().max(500)})).max(100)}).optional(),
   fullState: vehicleStateSchema.optional(),
   actualParts: z.record(z.string().max(100),z.union([z.number().finite(),z.string().max(100),z.boolean()])).optional(),
 });
-app.post('/api/diagnostics', express.json({ limit: '512kb' }), async (req, res) => {
+app.post('/api/diagnostics', express.json({ limit: '2mb' }), async (req, res) => {
   const parsed = diagnosticSchema.safeParse(req.body);
   if (!parsed.success) { res.status(400).json({ code: 'INVALID_DIAGNOSTIC', message: '场景诊断格式错误。' }); return; }
   try {
@@ -80,5 +87,6 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, _next) => {
   if (!res.headersSent) res.status(error?.status === 413 ? 413 : 400).json({ code: 'INVALID_REQUEST', message: '请求内容或大小不符合接口要求。', retryable: false });
 };
 app.use(errorHandler);
-const server = app.listen(port, '127.0.0.1', () => console.log(`SU7 I4–I6: http://localhost:${port}`));
+const server = app.listen(port, '127.0.0.1', () => console.log(`SU7 I7–I9: http://localhost:${port}`));
+const wakeService=attachWake(server,root);wakeConnections=()=>wakeService.clients.size;wakeDiagnostics=()=>wakeService.diagnostics();
 server.on('error', (error) => { console.error(error.message); process.exitCode = 1; });

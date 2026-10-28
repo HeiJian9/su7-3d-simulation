@@ -30,7 +30,7 @@ export function providerConfig(env: NodeJS.ProcessEnv = process.env): ProviderCo
   if (!['openai-speech','dashscope-cosyvoice'].includes(env.TTS_PROTOCOL ?? '')) ttsMissing.push('TTS_PROTOCOL');
   if (env.TTS_PROTOCOL === 'dashscope-cosyvoice' && !['cosyvoice-v3.5-plus','cosyvoice-v3.5-flash','cosyvoice-v3-plus','cosyvoice-v3-flash','cosyvoice-v2'].includes(env.TTS_MODEL ?? '')) ttsMissing.push('TTS_MODEL');
   const asr = asrMissing.length ? null : { baseUrl: asrUrl, apiKey: env.ASR_API_KEY!, model: env.ASR_MODEL as AsrConfig['model'], protocol: env.ASR_PROTOCOL as AsrConfig['protocol'], auth: env.ASR_AUTH_HEADER === 'bearer' || env.ASR_PROTOCOL !== 'gemini-native' ? 'bearer' as const : 'x-goog-api-key' as const, formats, timeoutMs: 20000 };
-  const tts = ttsMissing.length ? null : { baseUrl: ttsUrl, apiKey: env.TTS_API_KEY!, model: env.TTS_MODEL!, voice: env.TTS_VOICE!, protocol: env.TTS_PROTOCOL as TtsConfig['protocol'], timeoutMs: 10000 };
+  const tts = ttsMissing.length ? null : { baseUrl: ttsUrl, apiKey: env.TTS_API_KEY!, model: env.TTS_MODEL!, voice: env.TTS_VOICE!, protocol: env.TTS_PROTOCOL as TtsConfig['protocol'], timeoutMs: 25000 };
   return { asr, tts, health: {
     mode: asr && tts ? 'configured-unverified' : 'unconfigured',
     asr: { configured: !!asr, model: env.ASR_MODEL === 'qwen3-asr-flash' ? env.ASR_MODEL : 'gemini-3.8-flash', protocol: env.ASR_PROTOCOL && protocols.includes(env.ASR_PROTOCOL) ? env.ASR_PROTOCOL : 'unconfigured', audioFormats: formats.length ? formats : ['audio/wav'], missing: asrMissing, probe: 'not-verified' },

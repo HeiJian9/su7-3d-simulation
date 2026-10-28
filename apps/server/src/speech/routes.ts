@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { speechRequestId, synthesizeSchema } from '../../../../packages/shared/src/speech.js';
 import { SpeechServiceError, synthesize, transcribe } from './providers.js';
 import type { ProviderConfig } from './config.js';
+import {audioTiming} from '../../../../packages/shared/src/audio-settings.js';
 
 export function speechRoutes(config: ProviderConfig) {
   const router = Router();
@@ -22,7 +23,7 @@ export function speechRoutes(config: ProviderConfig) {
       let id: string | undefined;
       try {
         if (error) throw error;
-        const metadata = z.object({ requestId: speechRequestId, durationMs: z.coerce.number().positive().max(15000) }).safeParse(req.body);
+        const metadata = z.object({ requestId: speechRequestId, durationMs: z.coerce.number().positive().max(audioTiming.maxRecordingMs) }).safeParse(req.body);
         if (!metadata.success) throw new SpeechServiceError('INVALID_AUDIO_REQUEST', '录音请求编号或时长无效。', 400);
         id = metadata.data.requestId;
         const durationMs = metadata.data.durationMs;

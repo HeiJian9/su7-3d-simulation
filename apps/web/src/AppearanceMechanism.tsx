@@ -26,10 +26,10 @@ export function AppearanceMechanism({model}:{model:Group}){
     b.materials.get(roles.paint.material)!.color.set(state.paint.color);actualValues['paint:body:color']=state.paint.color;
     const high=state.lights.headlights==='high',on=state.lights.headlights!=='off';
     for(const cfg of Object.values(roles.headlights)){
-      for(const p of cfg.projectors){const mat=b.materials.get(p.material)!;mat.emissive.set('#d8f0ff');mat.emissiveIntensity=on&&(!p.highOnly||high)?high?10:4:0;}
+      for(const p of cfg.projectors){const mat=b.materials.get(p.material)!;mat.emissive.set('#d8f0ff');mat.emissiveIntensity=on&&(!p.highOnly||high)?(high?10:4)*state.lights.brightness:0;}
     }
-    b.spots.forEach(light=>{light.intensity=on?high?6500:1200:0;light.angle=high?.24:.42;light.distance=high?32:14;light.target.position.set(light.position.x,.025,high?-14:-5.3);});
-    actualValues['headlights:front:mode']=state.lights.headlights;
+    b.spots.forEach(light=>{light.intensity=on?(high?6500:1200)*state.lights.brightness:0;light.angle=high?.24:.42;light.distance=high?32:14;light.target.position.set(light.position.x,.025,high?-14:-5.3);});
+    actualValues['headlights:front:mode']=state.lights.headlights;actualValues['headlights:front:brightness']=state.lights.brightness;
     const tail=b.materials.get(roles.tailRunning.material)!;tail.color.set('#8a0710');tail.emissive.set(roles.tailRunning.color);tail.emissiveIntensity=roles.tailRunning.intensity;
     if(blink.current.mode!==state.lights.turnSignal)blink.current={mode:state.lights.turnSignal,time:0};else blink.current.time+=Math.min(delta,.1);
     const pulse=blink.current.time%.72<.36;const signals={left:pulse&&(state.lights.turnSignal==='left'||state.lights.turnSignal==='hazard'),right:pulse&&(state.lights.turnSignal==='right'||state.lights.turnSignal==='hazard')};

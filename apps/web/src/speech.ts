@@ -3,9 +3,14 @@ import { transcriptSchema, type SpeechHealth } from '../../../packages/shared/sr
 import { VoiceRecorder, type RecordedAudio } from './audio/recorder';
 import { ApiAudioPlayer, type PlaybackStop } from './audio/player';
 import { useVehicle, waitForVehicleExecution } from './vehicle';
+import {parseVehicleText,VehicleLedger,commandKeys} from '../../../packages/shared/src/vehicle';
+import {assistantPlanSchema, type ToolCall} from '../../../packages/shared/src/assistant';
+import {validateTool} from '../../../packages/shared/src/capabilities';
+import {targetScopeError} from '../../../packages/shared/src/tool-policy';
 
 export type SpeechPhase = 'idle' | 'requesting' | 'recording' | 'transcribing' | 'resolving' | 'executing' | 'clarifying' | 'synthesizing' | 'speaking' | 'error';
 interface SpeechState {
+  routing: 'auto'|'llm';
   phase: SpeechPhase;
   message: string;
   transcript: string;
@@ -23,7 +28,7 @@ const initialHealth: SpeechHealth = {
   asr: { configured: false, model: 'gemini-3.8-flash', protocol: 'unconfigured', audioFormats: ['audio/webm','audio/wav'], missing: [], probe: 'not-verified' },
   tts: { configured: false, model: '', voice: '', protocol: 'unconfigured', missing: [], probe: 'not-verified' },
 };
-export const useSpeech = create<SpeechState>(() => ({ phase: 'idle', message: '点击开始，说完自动结束。', transcript: '', rms: 0, durationMs: 0, hasSpeech: false, errorCode: '', lastFeedback: '', enabled: true, health: initialHealth, traces: [] }));
+export const useSpeech = create<SpeechState>(() => ({ routing:'auto', phase: 'idle', message: '点击开始，说完自动结束。', transcript: '', rms: 0, durationMs: 0, hasSpeech: false, errorCode: '', lastFeedback: '', enabled: true, health: initialHealth, traces: [] }));
 export function configureSpeech(health: SpeechHealth) { useSpeech.setState({ health }); }
 class SpeechFailure extends Error { constructor(public code: string, message: string) { super(message); } }
 async function responseError(response: Response): Promise<never> {
@@ -45,7 +50,7 @@ export class SpeechCoordinator {
   }
   destroy() { this.cancel(); this.unsubscribe(); }
   private trace(stage: string, detail: string, requestId = this.currentId) {
-    useSpeech.setState((s) => ({ traces: [...s.traces.slice(-79), { requestId, time: new Date().toISOString(), stage, detail: detail.slice(0,500), mock: s.health.mode === 'test-mock' }] }));
+    useSpeech.setState((s) => ({ traces: [...s.traces.slice(-399), { requestId, time: new Date().toISOString(), stage, detail: detail.slice(0,2000), mock: s.health.mode === 'test-mock' }] }));
   }
   private valid(generation: number) { return generation === this.generation; }
   cancel(message = '此次语音已取消；已接受的车辆动作不回滚。') {
@@ -56,24 +61,28 @@ export class SpeechCoordinator {
     useSpeech.setState({ phase: 'idle', message, rms: 0, errorCode: '', hasSpeech: false });
     return playback;
   }
-  async start() {
+  async start(source:'click'|'wake'='click') {
     const playback=this.cancel('准备录音。');
     const generation = this.generation;
     this.currentId = crypto.randomUUID(); this.base = { revision: useVehicle.getState().state.revision, epoch: useVehicle.getState().epoch };
     const requestId=this.currentId;
     useSpeech.setState({ phase: 'requesting', message: playback?.wasPlaying ? '已停止播报，正在准备麦克风…' : '等待麦克风权限…', transcript: '', durationMs: 0, errorCode: '' });
-    this.trace('recording-request', '用户点击开始');
+    this.trace('recording-request',source==='wake'?'真实本地关键词唤醒':'用户点击开始');
     if(playback?.wasPlaying){await new Promise(resolve=>setTimeout(resolve,180));if(!this.valid(generation))return;}
     this.trace('capture-starting','旧音频已停止；请求音频输入');
     await this.recorder.start(useSpeech.getState().health.asr.audioFormats, {
-      meter: (rms, durationMs, hasSpeech) => { if (this.valid(generation)) useSpeech.setState({ phase: 'recording', message: hasSpeech ? '正在聆听，停顿后自动结束。' : '请说一句车窗指令。', rms, durationMs, hasSpeech }); },
+      meter: (rms, durationMs, hasSpeech) => { if (this.valid(generation)) useSpeech.setState({ phase: 'recording', message: hasSpeech ? '正在聆听，停顿后自动结束。' : '请说出指令，开口前可准备15秒。', rms, durationMs, hasSpeech }); },
       done: (audio) => { if (this.valid(generation)) void this.transcribe(audio, generation); },
-      error: (error) => { if (this.valid(generation)) this.fail(error.code, error.message); },
+      error: (error) => { if (this.valid(generation)) void this.notifyFailure(error.code, ['NO_SPEECH','EMPTY_AUDIO'].includes(error.code)?'我没听清，请再说一遍。':error.message,generation); },
       released: (tracks,allEnded) => this.trace('microphone-released',`${tracks} tracks; all ended: ${allEnded}`,requestId),
     });
   }
   async stopRecording() { await this.recorder.stop(); }
   private fail(code: string, message: string) { useSpeech.setState({ phase: 'error', errorCode: code, message, rms: 0 }); this.trace('error', code); }
+  private async notifyFailure(code:string,message:string,generation:number){
+    this.fail(code,message);useVehicle.getState().say(message);useSpeech.setState({lastFeedback:message});
+    if(useSpeech.getState().enabled&&useSpeech.getState().health.tts.configured){useSpeech.setState({errorCode:''});await this.speak(message,generation,false);if(this.valid(generation)&&!useSpeech.getState().errorCode)this.fail(code,message);}
+  }
   private async transcribe(audio: RecordedAudio, generation: number) {
     if (!this.valid(generation) || this.transcribingGeneration === generation) return;
     this.transcribingGeneration = generation;
@@ -89,23 +98,76 @@ export class SpeechCoordinator {
       if (!this.valid(generation)) return;
       if (transcript.requestId !== requestId) throw new SpeechFailure('REQUEST_ID_MISMATCH', '转写响应编号不匹配，已丢弃。');
       if (transcript.model !== useSpeech.getState().health.asr.model) throw new SpeechFailure('MODEL_MISMATCH', '转写响应模型与当前配置不一致，已丢弃。');
-      useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '转写完成，正在解析四窗规则…' });
+      useSpeech.setState({ phase: 'resolving', transcript: transcript.text, message: '转写完成，智能助手正在处理…' });
       this.trace('transcript',transcript.text);
-      this.trace('rules', `${transcript.model}; ${transcript.durationMs} ms`);
-      const result = useVehicle.getState().text(transcript.text, 'voice', { ...this.base, requestId });
+      this.trace('asr-completed', `${transcript.model}; ${transcript.durationMs} ms`);
+      const result = await this.resolve(transcript.text,'voice',generation,{...this.base,requestId});
+      if(!this.valid(generation))return;
       if (result.kind === 'stale') { this.fail('STALE_RESPONSE', result.message); return; }
       await this.feedback(result, generation);
     } catch (error) {
       if (!this.valid(generation)) return;
-      this.fail(error instanceof SpeechFailure ? error.code : error instanceof Error && error.name === 'TimeoutError' ? 'TIMEOUT' : 'TRANSCRIBE_FAILED', error instanceof SpeechFailure ? error.message : error instanceof Error && error.name === 'TimeoutError' ? '转写超时，请重试。' : '语音转写失败，请检查接口配置或重试。');
+      await this.notifyFailure(error instanceof SpeechFailure ? error.code : error instanceof Error && error.name === 'TimeoutError' ? 'TIMEOUT' : 'TRANSCRIBE_FAILED', error instanceof SpeechFailure ? error.code==='EMPTY_TRANSCRIPT'?'我没听清，请再说一遍。':error.message : error instanceof Error && error.name === 'TimeoutError' ? '转写超时，请重试。' : '语音转写失败，请检查接口配置或重试。',generation);
     }
   }
   async text(input: string) {
     this.cancel('正在处理文字指令。');
-    const result = useVehicle.getState().text(input);
     const generation = this.generation;
-    this.currentId = result.execution?.requestId ?? crypto.randomUUID();
-    await this.feedback(result, generation);
+    this.currentId=crypto.randomUUID();
+    try{const result=await this.resolve(input,'text',generation);if(this.valid(generation))await this.feedback(result,generation);}catch(error){if(this.valid(generation))await this.notifyFailure(error instanceof SpeechFailure?error.code:'ASSISTANT_FAILED',error instanceof SpeechFailure?error.message:'智能助手服务暂时不可用，请稍后重试。',generation);}
+  }
+  private async resolve(input:string,origin:'text'|'voice',generation:number,guard?:{revision:number;epoch:number;requestId:string}):Promise<ReturnType<ReturnType<typeof useVehicle.getState>['text']>>{
+    const store=useVehicle.getState(),rules=parseVehicleText(input,store.context);
+    const cancellation=/^(取消|算了|不用了|停止操作|取消这条指令|取消刚才的指令)[。！!]?$/u.test(input.trim());
+    if(cancellation||(useSpeech.getState().routing==='auto'&&rules.kind!=='unsupported'&&!store.context.assistantPending)){
+      this.trace('route','rules');const result=store.text(input,origin,guard);if(result.execution)useSpeech.setState({phase:'executing',message:'正在调整车辆部件…'});return result;
+    }
+    if(origin==='text')store.beginManual();
+    const current=useVehicle.getState(),base=guard??{revision:current.state.revision,epoch:current.epoch,requestId:this.currentId};
+    const fresh=()=>this.valid(generation)&&useVehicle.getState().state.revision===base.revision&&useVehicle.getState().epoch===base.epoch;
+    if(!fresh())return {kind:'stale',message:'车辆状态已改变，旧助手请求已丢弃。'};
+    const focus=current.context.focus&&Date.now()-current.context.focus.updatedAt<120000?current.context.focus:undefined;
+    const pending=store.context.assistantPending&&store.context.assistantPending.expiresAt>Date.now()?store.context.assistantPending:undefined;
+    this.request=new AbortController();const signal=this.request.signal;
+    useSpeech.setState({phase:'resolving',message:'智能助手正在理解并选择工具…'});this.trace('route','llm / real function calling');
+    const response=await this.fetcher('/api/assistant/plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestId:base.requestId,text:input,state:current.state,actual:current.actualParts,available:[...new Set([...current.available.map(c=>`window:${c}`),...current.capabilities])],context:{focus,pending,history:current.messages.slice(-8).map(m=>({input:m.input,output:m.output}))}}),signal:AbortSignal.any([signal,AbortSignal.timeout(35000)])});
+    if(!response.ok)await responseError(response);const plan=assistantPlanSchema.parse(await response.json());
+    if(!fresh())return {kind:'stale',message:'车辆状态已改变，旧模型回复已丢弃。'};
+    if(plan.requestId!==base.requestId||plan.baseRevision!==base.revision)throw new SpeechFailure('REQUEST_ID_MISMATCH','模型响应编号或版本不一致，车辆未改变。');
+    // Independently validate all calls in the browser before any mutation.
+    const commands=plan.calls.flatMap(c=>validateTool(c.function.name,JSON.parse(c.function.arguments)).commands??[]);
+    if(JSON.stringify(commands)!==JSON.stringify(plan.commands)||new Set(plan.calls.map(c=>c.id)).size!==plan.calls.length)throw new SpeechFailure('INVALID_TOOLS','工具调用未通过浏览器校验，车辆未改变。');
+    const scopeError=targetScopeError(pending?`${pending.text}；补充：${input}`:input,commands,current.context.focus);if(scopeError)throw new SpeechFailure('AMBIGUOUS_TARGET',scopeError);
+    for(const c of plan.calls)this.trace('tool-call',JSON.stringify(c));
+    let message:string,kind:string,execution:ReturnType<ReturnType<typeof useVehicle.getState>['submit']>|undefined;
+    if(plan.commands.length){
+      const check=new VehicleLedger().apply(current.state,{requestId:base.requestId,baseRevision:base.revision,origin,route:'llm',commands},new Set([...current.available.map(c=>`window:${c}`),...current.capabilities]));
+      if(!check.ok)throw new SpeechFailure(check.code,check.message);
+      execution=useVehicle.getState().submit({requestId:base.requestId,baseRevision:base.revision,origin,route:'llm',commands});
+      if(!execution)throw new SpeechFailure('EXECUTION_FAILED',useVehicle.getState().feedback);
+      useSpeech.setState({phase:'executing',message:'正在执行助手工具…'});execution=await waitForVehicleExecution(execution);
+      if(!this.valid(generation))return {kind:'stale',message:'本轮助手已取消。'};
+      message=execution.message;kind=execution.status==='completed'?'execute':'failed';
+    }else{
+      const reply=validateTool(plan.calls[0].function.name,JSON.parse(plan.calls[0].function.arguments)).reply;
+      if(!reply||JSON.stringify(reply)!==JSON.stringify(plan.reply))throw new SpeechFailure('INVALID_REPLY','助手回复与工具不一致。');
+      kind=reply.kind;message=kind==='unsupported'?'暂不支持该功能。':kind==='not_understood'?'我没听清，请再说一遍。':kind==='noop'?'已取消或保留否定要求，车辆未改变。':reply.message;
+      useVehicle.setState(s=>({context:{focus:s.context.focus,...(kind==='clarify'?{assistantPending:{text:pending?`${pending.text}；补充：${input}`:input,question:message,expiresAt:Date.now()+120000}}:{})}}));
+    }
+    const result={kind,message,execution:execution??undefined};
+    useVehicle.setState(s=>({feedback:message,messages:[...s.messages.slice(-19),{id:base.requestId,input,output:message,origin,status:kind}]}));
+    const appliedRevision=useVehicle.getState().state.revision,appliedEpoch=useVehicle.getState().epoch;
+    let observationIndex=0;
+    const receipts=plan.calls.map((call:ToolCall)=>{const own=validateTool(call.function.name,JSON.parse(call.function.arguments)).commands??[],keys=new Set(own.flatMap(commandKeys)),start=observationIndex;observationIndex+=own.length;return {tool_call_id:call.id,status:execution?.status==='completed'||!execution?'completed':execution.status==='superseded'?'superseded':'failed',message,revision:appliedRevision,effects:execution?.effects.filter(e=>keys.has(e.key))??[],observations:execution?.observations.slice(start,observationIndex)??[]};});
+    for(const receipt of receipts)this.trace('tool-result',JSON.stringify(receipt));
+    const finish=await this.fetcher('/api/assistant/finish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({turnId:plan.turnId,requestId:base.requestId,results:receipts}),signal:AbortSignal.any([signal,AbortSignal.timeout(35000)])});
+    if(!finish.ok)await responseError(finish);const answer=await finish.json() as {requestId:string;text:string};
+    if(!this.valid(generation)||useVehicle.getState().state.revision!==appliedRevision||useVehicle.getState().epoch!==appliedEpoch)return {kind:'stale',message:'车辆状态已改变，旧助手反馈已丢弃。'};
+    if(answer.requestId!==base.requestId||typeof answer.text!=='string')throw new SpeechFailure('INVALID_FINAL_REPLY','助手反馈响应无效。');
+    this.trace('assistant-feedback',answer.text);
+    // Execution status and capability failure wording remain authoritative.
+    if(!['unsupported','not_understood','noop'].includes(kind)&&kind!=='failed'){result.message=answer.text;useVehicle.getState().say(answer.text);useVehicle.setState(s=>({messages:s.messages.map(m=>m.id===base.requestId?{...m,output:answer.text}:m)}));}
+    return result;
   }
   private async feedback(result: ReturnType<ReturnType<typeof useVehicle.getState>['text']>, generation: number) {
     let message = result.message;
@@ -114,7 +176,7 @@ export class SpeechCoordinator {
       const execution = await waitForVehicleExecution(result.execution);
       if (!this.valid(generation)) return;
       if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
-      message = execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
+      message = execution.route==='llm'?result.message:execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
     }
     if (!this.valid(generation)) return;
     useSpeech.setState({ phase: result.kind === 'clarify' ? 'clarifying' : 'idle', message, lastFeedback: message });
@@ -134,7 +196,7 @@ export class SpeechCoordinator {
     useSpeech.setState({ phase: 'synthesizing', message: '动作与文字已确认，正在生成语音…', lastFeedback: text });
     this.trace('tts-request', 'API TTS feedback');
     try {
-      const response = await this.fetcher('/api/speech/synthesize', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ requestId: `${this.currentId}-tts`, text }), signal: AbortSignal.any([this.request.signal, AbortSignal.timeout(13000)]) });
+      const response = await this.fetcher('/api/speech/synthesize', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ requestId: `${this.currentId}-tts`, text }), signal: AbortSignal.any([this.request.signal, AbortSignal.timeout(30000)]) });
       if (!response.ok) await responseError(response);
       const blob = await response.blob();
       if (!this.valid(generation)) return;

@@ -1,0 +1,15 @@
+
+> su7-interaction-lab@0.7.0 test:e2e
+> playwright test --grep fine light brightness
+
+
+Running 2 tests using 1 worker
+
+(node:9100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\assistant.spec.ts:38:1 › fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras (7.4s)
+(node:4840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [Edge-1366x768] › tests\e2e\assistant.spec.ts:38:1 › fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras (7.1s)
+
+  2 passed (17.0s)

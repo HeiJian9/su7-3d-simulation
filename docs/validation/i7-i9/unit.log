@@ -1,0 +1,5 @@
+
+> su7-interaction-lab@0.7.0 test
+> vitest run --reporter=json --outputFile=docs/validation/i7-i9/unit-results.json
+
+JSON report written to D:/code/Projects/3D simulation/docs/validation/i7-i9/unit-results.json

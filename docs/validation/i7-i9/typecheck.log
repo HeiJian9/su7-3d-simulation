@@ -1,0 +1,4 @@
+
+> su7-interaction-lab@0.7.0 typecheck
+> tsc --noEmit -p apps/web && tsc --noEmit -p apps/server && tsc --noEmit -p packages/shared
+

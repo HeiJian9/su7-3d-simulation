@@ -29,7 +29,7 @@ async function request(url: string, init: RequestInit, timeoutMs: number, signal
 }
 export function validateAudio(input: AudioInput, accepted: string[]) {
   if (!input.bytes.length) throw new SpeechServiceError('EMPTY_AUDIO', '没有录到有效音频，请重新录音。', 400);
-  if (input.bytes.length > 6 * 1024 * 1024 || input.durationMs <= 0 || input.durationMs > 15000) throw new SpeechServiceError('AUDIO_LIMIT', '单次录音应不超过 15 秒和 6 MB。', 400);
+  if (input.bytes.length > 6 * 1024 * 1024 || input.durationMs <= 0 || input.durationMs > audioTiming.maxRecordingMs) throw new SpeechServiceError('AUDIO_LIMIT', '单次录音应不超过 30 秒和 6 MB。', 400);
   const mime = input.mimeType.split(';')[0];
   if (!accepted.includes(mime)) throw new SpeechServiceError('AUDIO_FORMAT_UNSUPPORTED', '当前音频格式不在接口配置的允许列表中。', 415);
   const b = input.bytes;
@@ -97,3 +97,4 @@ export async function synthesize(config: TtsConfig | null, input: { text: string
   if(aliyun){try{bytes=completeWav(bytes).bytes;}catch{throw new SpeechServiceError('INVALID_TTS_AUDIO','阿里云播报未返回有效的完整 WAV 音频。');}}
   return { bytes, contentType: aliyun ? 'audio/wav' : type, provider: config.protocol, model: config.model, voice: config.voice, requestId: input.requestId };
 }
+import {audioTiming} from '../../../../packages/shared/src/audio-settings.js';

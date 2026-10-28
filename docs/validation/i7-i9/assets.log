@@ -1,0 +1,140 @@
+
+> su7-interaction-lab@0.7.0 asset:check
+> node scripts/check-assets.mjs
+
+{
+  "sha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412",
+  "bytes": 6714984,
+  "nodes": 140,
+  "meshes": 127,
+  "materials": 46,
+  "textures": [
+    {
+      "name": "Mesh13_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 185651
+    },
+    {
+      "name": "Mesh16_diff",
+      "size": [
+        256,
+        128
+      ],
+      "bytes": 793
+    },
+    {
+      "name": "Mesh25_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 61166
+    },
+    {
+      "name": "Mesh30_diff",
+      "size": [
+        512,
+        256
+      ],
+      "bytes": 87414
+    },
+    {
+      "name": "Mesh1_diff",
+      "size": [
+        512,
+        256
+      ],
+      "bytes": 51834
+    },
+    {
+      "name": "Mesh2_diff",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 29702
+    },
+    {
+      "name": "Mesh3_diff",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 17705
+    },
+    {
+      "name": "Mesh4_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 69204
+    },
+    {
+      "name": "Mesh17_diff",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 161007
+    },
+    {
+      "name": "Mesh22_diff",
+      "size": [
+        4,
+        4
+      ],
+      "bytes": 94
+    },
+    {
+      "name": "Mesh60_diff",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 13025
+    },
+    {
+      "name": "Mesh61_nmap",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 303625
+    },
+    {
+      "name": "Mesh61_diff",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 438727
+    },
+    {
+      "name": "Mesh61_spec",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 578826
+    },
+    {
+      "name": "Mesh23_diff",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 26118
+    }
+  ],
+  "animations": 0,
+  "triangles": 99445,
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular"
+  ]
+}

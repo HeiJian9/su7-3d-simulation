@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import {adjustmentSteps} from './tuning.js';
 
 export const corners = ['fl', 'fr', 'rl', 'rr'] as const;
 export type Corner = typeof corners[number];
@@ -73,7 +74,7 @@ export function parseWindowText(raw: string, context: WindowContext = {}, now = 
       const closing = /关|升|上升/.test(cleaned);
       const opening = /开|降|下降/.test(cleaned);
       if (!closing && !opening && !/设为|设置为/.test(cleaned)) return { kind: 'unsupported', message: '请明确打开、关闭或设置开度。' };
-      if (relative) { operation = 'adjust'; value = (closing ? -1 : 1) * (percent ? Number(percent[1]) / 100 : 0.1); }
+      if (relative) { operation = 'adjust'; value = (closing ? -1 : 1) * (percent ? Number(percent[1]) / 100 : adjustmentSteps.openness); }
       else if (/一半|半/.test(cleaned)) value = 0.5;
       else value = percent ? Number(percent[1]) / 100 : closing ? 0 : 1;
     } else return { kind: 'unsupported', message: '这条表达尚未被四窗规则完整覆盖，车辆未改变。可说“左前车窗打开一半”。' };

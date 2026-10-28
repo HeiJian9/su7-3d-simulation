@@ -1,7 +1,7 @@
 {
   "name": "su7-interaction-lab",
   "private": true,
-  "version": "0.6.7",
+  "version": "0.7.0",
   "type": "module",
   "workspaces": [
     "apps/*",
@@ -24,7 +24,15 @@
     "start:test": "node apps/server/dist/apps/server/src/index.js --test-unconfigured",
     "speech:probe": "node --import tsx scripts/probe-speech.ts",
     "speech:verify-i3": "node --import tsx scripts/verify-i3-live.mjs",
-    "speech:verify-i4-i6": "node --import tsx scripts/verify-i4-i6-live.mjs"
+    "speech:verify-i4-i6": "node --import tsx scripts/verify-i4-i6-live.mjs",
+    "wake:prepare": "node scripts/prepare-wake.mjs",
+    "prebuild": "npm run wake:prepare",
+    "predev": "npm run wake:prepare",
+    "assistant:probe": "node --import tsx scripts/probe-assistant.ts",
+    "assistant:verify-live": "node scripts/verify-assistant-live.mjs",
+    "wake:verify": "node --import tsx scripts/verify-wake.mjs",
+    "wake:verify-live": "node --import tsx scripts/verify-wake-live.mjs",
+    "secrets:check": "node --import tsx scripts/check-secrets.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -37,6 +45,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@types/three": "0.186.0",
+    "@types/ws": "8.18.1",
     "@vitejs/plugin-react": "5.0.4",
     "concurrently": "10.0.6",
     "eslint": "10.13.0",

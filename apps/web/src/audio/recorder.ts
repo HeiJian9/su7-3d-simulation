@@ -1,4 +1,5 @@
 import { encodeWav, newVad, stepVad, type VadDecision } from './vad';
+import {audioTiming} from '../../../../packages/shared/src/audio-settings';
 
 export class RecordingError extends Error { constructor(public code: string, message: string) { super(message); } }
 export interface RecordedAudio { blob: Blob; mimeType: string; durationMs: number; reason: VadDecision | 'manual'; peakRms: number }
@@ -66,7 +67,7 @@ export class VoiceRecorder {
     if (this.stopping || !this.stream) return;
     this.stopping = true; clearInterval(this.timer);
     const generation = this.generation, callbacks = this.callbacks;
-    const durationMs = Math.min(15000, Math.max(1, Math.round(performance.now() - this.vad.started)));
+    const durationMs = Math.min(audioTiming.maxRecordingMs, Math.max(1, Math.round(performance.now() - this.vad.started)));
     let blob: Blob;
     try {
       if (this.recorder?.state === 'recording') {

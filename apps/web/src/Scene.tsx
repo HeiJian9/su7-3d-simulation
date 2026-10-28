@@ -1,3 +1,4 @@
+import {useVehicle} from './vehicle';
 import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Environment, Lightformer } from '@react-three/drei';
@@ -131,7 +132,7 @@ function Diagnostics() {
 }
 
 export function Scene({ asset, attempt }: { asset: AssetManifest | null; attempt: number }) {
-  const night=useScene(s=>s.night);
+  const night=useVehicle(s=>s.state.observation.night);
   return <WebGLErrorBoundary><Canvas shadows dpr={[1, 1.5]} camera={{ position: [6.4, 3.15, -7.2], fov: 42, near: 0.01, far: 120 }}
     gl={{ antialias: true, toneMapping: ACESFilmicToneMapping }}>
     <color attach="background" args={['#0b1014']} />

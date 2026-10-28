@@ -1,0 +1,153 @@
+{
+  "at": "2026-10-28T06:01:19.370Z",
+  "mode": "real-KWS+real-Qwen-ASR+real-DeepSeek-tools+actual-renderer+real-CosyVoice-with-synthetic-microphone",
+  "human": false,
+  "inputs": [
+    "小爱同学",
+    "左前车窗打开百分之三十五",
+    "今天的天气很好"
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200,
+      "body": {
+        "requestId": "a906ef2b-6669-42de-b333-a9fdc99a3ff9",
+        "turnId": "1749781a-bc08-4d1b-8b48-45107f25247e",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_1ee4d22a62764221977579cb",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_windows",
+              "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.35}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "window",
+            "targets": [
+              "fl"
+            ],
+            "property": "openness",
+            "operation": "set",
+            "value": 0.35
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 0,
+        "durationMs": 1296
+      }
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200,
+      "body": {
+        "requestId": "a906ef2b-6669-42de-b333-a9fdc99a3ff9",
+        "text": "左前车窗已打开到35%。",
+        "model": "deepseek-v4.1-flash-1017",
+        "toolCallIds": [
+          "call_1ee4d22a62764221977579cb"
+        ]
+      }
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "duringSpeech": [
+    {
+      "id": 0,
+      "created": 1793167285994,
+      "ended": true,
+      "stopped": 1793167288119
+    },
+    {
+      "id": 1,
+      "created": 1793167288237,
+      "ended": true,
+      "stopped": 1793167292658
+    }
+  ],
+  "streams": [
+    {
+      "id": 0,
+      "created": 1793167285994,
+      "ended": true,
+      "stopped": 1793167288119
+    },
+    {
+      "id": 1,
+      "created": 1793167288237,
+      "ended": true,
+      "stopped": 1793167292658
+    },
+    {
+      "id": 2,
+      "created": 1793167301353,
+      "ended": false
+    }
+  ],
+  "resourcesReleased": {
+    "allTracksEnded": true,
+    "streams": [
+      {
+        "id": 0,
+        "created": 1793167285994,
+        "ended": true,
+        "stopped": 1793167288119
+      },
+      {
+        "id": 1,
+        "created": 1793167288237,
+        "ended": true,
+        "stopped": 1793167292658
+      },
+      {
+        "id": 2,
+        "created": 1793167301353,
+        "ended": true,
+        "stopped": 1793167308574
+      }
+    ],
+    "connections": 0
+  },
+  "feedback": "左前车窗已打开到35%。",
+  "actual": {
+    "scatter:scene:enabled": true,
+    "scatter:scene:strength": 0.35,
+    "observation:scene:night": false,
+    "door:fl:openness": 0,
+    "door:fr:openness": 0,
+    "door:rl:openness": 0,
+    "door:rr:openness": 0,
+    "trunk:rear:openness": 0,
+    "frunk:front:openness": 0,
+    "window:fl:openness": 0.35,
+    "window:fr:openness": 0,
+    "window:rl:openness": 0,
+    "window:rr:openness": 0,
+    "paint:body:color": "#e4e6e8",
+    "headlights:front:mode": "off",
+    "headlights:front:brightness": 1,
+    "turnSignal:vehicle:mode": "off",
+    "ambient:cabin:enabled": false,
+    "ambient:cabin:color": "#9867ff",
+    "ambient:cabin:brightness": 0.4,
+    "wiper:front:mode": "off",
+    "wiper:front:swipe": 0,
+    "cabinLight:front:enabled": false,
+    "cabinLight:front:brightness": 1,
+    "cabinLight:rear:enabled": false,
+    "cabinLight:rear:brightness": 1
+  }
+}

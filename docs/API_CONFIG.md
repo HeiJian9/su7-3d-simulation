@@ -1,3 +1,30 @@
+# API 配置 · 0.7.0
+
+2026-10-28：当前使用北京百炼 `qwen3-asr-flash` ASR、`deepseek-v4.1-flash-1017` 车载智能助手、`cosyvoice-v3-flash` / `longanyang` TTS。用户明确授权复用现有阿里云 Key；已在本机 `.env` 配好，**无需重新提供**。以下旧 I3 记录保留用于协议说明。
+
+## DeepSeek Function Calling
+
+本机配置位置：`D:\code\Projects\3D simulation\.env`，仅服务端读取：
+
+```dotenv
+INTENT_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+INTENT_MODEL=deepseek-v4.1-flash-1017
+INTENT_PROTOCOL=openai-chat-tools
+# INTENT_API_KEY 只在本机填入，当前复用已确认的百炼凭据。
+```
+
+`/models` 已返回该模型；真实 `/chat/completions` 工具选择及 `tool_call_id` 结果回传已通过。不要只凭模型列表或 JSON 输出判断 function calling。请求不启用思考输出；保留平台返回的协议消息供后续工具回合使用，不在 UI 或日志展示推理内容。
+
+浏览器只访问本机 `/api/assistant/plan` 与 `/api/assistant/finish`。服务端保存完整 assistant 工具消息；浏览器整轮校验后执行并等待实际动画，回传对应 ID、状态、属性效果与顺序观察。服务端再核对结果、调用模型生成短答。不接受任意 JS、路径、未注册工具，不做 JSON-mode 静默回退。
+
+缺配置：健康接口只列缺失字段；认证、网络、模型／协议失败均明确反馈。修改 `.env` 后重启服务。工具与参数见 [LLM_TOOLS.md](LLM_TOOLS.md)，真实协议记录在 `docs/validation/i7-i9/`。
+
+唤醒使用本地 sherpa-onnx Worker，不需要额外云服务 Key；模型来源与许可见 `assets/wake/README.md`。浏览器音频通过同源 WebSocket `/api/wake` 送到本机服务，未唤醒时不调用云端 ASR。
+
+官方依据：[百炼 Function Calling](https://help.aliyun.com/zh/model-studio/qwen-function-calling)、[百炼 DeepSeek 接口](https://help.aliyun.com/zh/model-studio/deepseek-api)。
+
+---
+
 # API 填写位置与协议约定
 
 0.3.2：当前 I3 四窗验收见 [I3_FINAL_VALIDATION.md](I3_FINAL_VALIDATION.md)。普通自动测试的最新报告在 docs/validation/i3-final；`npm run speech:verify-i3` 为显式真实 API 的澄清／停播复测，使用合成音源，不替代真人。
@@ -45,7 +72,7 @@ TTS_PROTOCOL=dashscope-cosyvoice
 | TTS_PROTOCOL | 当前 `dashscope-cosyvoice`；另保留 `openai-speech` |
 | TTS_MODEL | 平台真实可调用的 TTS 模型 ID，没有默认值 |
 | TTS_VOICE | 该模型实际支持的普通话音色 ID，没有默认值 |
-| INTENT_* | I7 DeepSeek 预留，本轮不填写、不调用 |
+| INTENT_* | 当前 DeepSeek 工具调用配置，见本文顶部 |
 
 ## 已实现的服务端协议
 
@@ -55,7 +82,7 @@ TTS_PROTOCOL=dashscope-cosyvoice
 
 服务端模块在 `apps/server/src/speech/`。浏览器只请求本机 `/api/speech/transcribe`（multipart）和 `/api/speech/synthesize`（JSON），不会收到上游密钥。上游地址必须 HTTPS（本机协议测试允许 localhost HTTP）。响应和音频不落盘，错误不回显上游响应体。
 
-浏览器优先 WebM/Opus；需要 WAV 时通过 AudioWorklet 采集，编码为 16kHz 单声道 PCM16。连续有效音量后静音 1.2 秒结束；无语音 5 秒退出，单次上限 15 秒 / 6 MB。此处是本地音量断句，复杂噪声环境仍需真人复验。
+浏览器优先 WebM/Opus；需要 WAV 时通过 AudioWorklet 采集，编码为 16kHz 单声道 PCM16。连续有效音量后静音 1.5 秒结束；开口前可准备 15 秒，单次上限 30 秒 / 6 MB。此处是本地音量断句，复杂噪声环境仍需真人复验。
 
 ## 配置之后的真实验收
 

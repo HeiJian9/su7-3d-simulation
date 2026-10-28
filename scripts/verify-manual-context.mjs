@@ -1,0 +1,12 @@
+import {chromium,expect} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({channel:'msedge',headless:true}),page=await browser.newPage();const report={at:new Date().toISOString(),mode:'real-manual-controls+real-DeepSeek-tools+actual-renderer',human:false,cases:[],passed:false};
+const actual=async()=>JSON.parse(await page.locator('canvas').getAttribute('data-vehicle-actual'));
+try{
+ await page.goto(process.env.DEMO_URL??'http://localhost:3000');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
+ await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'打开氛围灯',exact:true}).click();await page.getByRole('slider',{name:'氛围灯亮度',exact:true}).fill('70');await expect.poll(async()=>(await actual())['ambient:cabin:brightness']).toBe(.7);
+ async function send(text,key,value){const request=page.waitForRequest(r=>r.url().endsWith('/api/assistant/plan')),plan=page.waitForResponse(r=>r.url().endsWith('/api/assistant/plan')),finish=page.waitForResponse(r=>r.url().endsWith('/api/assistant/finish'));const before=await actual();await page.getByRole('textbox',{name:'车辆文字指令'}).fill(text);await page.getByRole('button',{name:'发送',exact:false}).click();const req=(await request).postDataJSON(),p=await (await plan).json(),f=await finish;expect(f.ok()).toBe(true);await expect.poll(async()=>(await actual())[key]).toBe(value);report.cases.push({text,before,submittedState:req.state,focus:req.context.focus,plan:p,actual:await actual(),passed:true});}
+ await send('再暗一点','ambient:cabin:brightness',.6);
+ await page.getByRole('button',{name:'四窗',exact:true}).click();await page.getByRole('button',{name:'左前车窗打开一半',exact:true}).click();await expect.poll(async()=>(await actual())['window:fl:openness']).toBe(.5);await send('再开大一点','window:fl:openness',.6);expect((await actual())['window:fr:openness']).toBe(0);report.passed=true;
+}catch(error){report.error=String(error.message).slice(0,1200);process.exitCode=1;}
+finally{await browser.close();await writeFile('docs/validation/i7-i9/manual-context-real-api.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:report.passed,cases:report.cases.length,error:report.error}));}

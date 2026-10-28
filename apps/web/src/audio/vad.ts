@@ -7,16 +7,16 @@ export function stepVad(state: VadState, rms: number, now: number, threshold = .
     state.voicedFrames++; if (state.voicedFrames >= 3) state.hasSpeech = true;
     state.lastSpeech = now;
   } else state.voicedFrames = 0;
-  if (now - state.started >= 15000) return state.hasSpeech ? 'max-duration' : 'no-speech';
-  if (!state.hasSpeech && now - state.started >= 5000) return 'no-speech';
-  if (state.hasSpeech && now - state.lastSpeech >= 1200) return 'silence-end';
+  if (now - state.started >= audioTiming.maxRecordingMs) return state.hasSpeech ? 'max-duration' : 'no-speech';
+  if (!state.hasSpeech && now - state.started >= audioTiming.initialSilenceMs) return 'no-speech';
+  if (state.hasSpeech && now - state.lastSpeech >= audioTiming.endSilenceMs) return 'silence-end';
   return 'continue';
 }
 export function encodeWav(chunks: Float32Array[], sourceRate: number, targetRate = 16000): Blob {
   const length = chunks.reduce((sum, c) => sum + c.length, 0);
   const samples = new Float32Array(length); let offset = 0;
   for (const chunk of chunks) { samples.set(chunk, offset); offset += chunk.length; }
-  const count = Math.min(targetRate * 15, Math.floor(length * targetRate / sourceRate));
+  const count = Math.min(targetRate * audioTiming.maxRecordingMs/1000, Math.floor(length * targetRate / sourceRate));
   const buffer = new ArrayBuffer(44 + count * 2), view = new DataView(buffer);
   const str = (at: number, text: string) => [...text].forEach((s, i) => view.setUint8(at + i, s.charCodeAt(0)));
   str(0, 'RIFF'); view.setUint32(4, 36 + count * 2, true); str(8, 'WAVE'); str(12, 'fmt ');
@@ -31,3 +31,4 @@ export function encodeWav(chunks: Float32Array[], sourceRate: number, targetRate
   }
   return new Blob([buffer], { type: 'audio/wav' });
 }
+import {audioTiming} from '../../../../packages/shared/src/audio-settings';

@@ -1,0 +1,100 @@
+{
+  "version": "0.7.0",
+  "at": "2026-10-28T06:02:52.355Z",
+  "demo": "http://localhost:3000",
+  "softwareDelivered": true,
+  "allRequestedAcceptanceComplete": false,
+  "unit": {
+    "passed": 99,
+    "total": 99,
+    "success": true,
+    "source": "unit-results.json"
+  },
+  "browser": {
+    "full": {
+      "passed": 107,
+      "skipped": 1,
+      "failed": 0,
+      "source": "browser-final-full.log",
+      "evidenceFormat": "derived summary of retained console log; latest Playwright JSON is a targeted rerun, not the full run"
+    },
+    "afterTtsFix": {
+      "passed": 8,
+      "source": "browser-tts-final.log"
+    },
+    "lightPixelChecks": {
+      "passed": 2,
+      "source": "browser-lighting-pixels.json",
+      "actualNumericResults": "lighting-pixel-differences.json"
+    }
+  },
+  "realApi": {
+    "passedTextCases": 99,
+    "llmRounds": 98,
+    "controlTools": 18,
+    "properties": 26,
+    "fixedAudioCases": 18,
+    "fixedAudioPassed": true,
+    "manualContextCases": 2,
+    "chatAndLongTtsPassed": true
+  },
+  "wake": {
+    "fixedAudioPassed": true,
+    "latestCyclePassed": true,
+    "resourcesReleased": {
+      "allTracksEnded": true,
+      "streams": [
+        {
+          "id": 0,
+          "created": 1793167285994,
+          "ended": true,
+          "stopped": 1793167288119
+        },
+        {
+          "id": 1,
+          "created": 1793167288237,
+          "ended": true,
+          "stopped": 1793167292658
+        },
+        {
+          "id": 2,
+          "created": 1793167301353,
+          "ended": true,
+          "stopped": 1793167308574
+        }
+      ],
+      "connections": 0
+    },
+    "humanEvidence": "human-evidence.json"
+  },
+  "checks": {
+    "cleanNpmCi": true,
+    "typecheck": true,
+    "lint": true,
+    "productionBuild": true,
+    "assetValidation": true,
+    "secretScan": true
+  },
+  "assetsUnchanged": {
+    "blendSha256": "514f2189c0581fe7da0928e5a8518dca8783bc247a5e9f44e1820aa43dd03f2f",
+    "glbSha256": "4eaefca9e430666c6c6f2bd712008b4f8c719e0a548ed94f29fe50d85cb8a412"
+  },
+  "remaining": [
+    {
+      "item": "Video original and timeline offsets",
+      "condition": "User supplies or archives the existing recording and its offsets; SESSION_LOG supplies wall-clock references only."
+    },
+    {
+      "item": "Broader human acoustic acceptance",
+      "condition": "Measure misses and false wakes across more distances, noise and speaker echo conditions; current representative human and fixed-audio evidence is retained."
+    }
+  ],
+  "knownLimits": [
+    "Wake phrase then command in two steps; combined phrase/command continuity unverified.",
+    "Foreground browser listening; no lock-screen/background-always-on claim."
+  ],
+  "evidenceRules": [
+    "Fixed/synthetic microphone inputs are not human acceptance.",
+    "Failed/interrupted API reports retained; coverage counts only passed cases."
+  ]
+}

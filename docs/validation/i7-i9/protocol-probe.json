@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-27T16:17:36.328Z",
+  "mode": "real-api-protocol-domain-only",
+  "platform": "Aliyun Bailian",
+  "model": "deepseek-v4.1-flash-1017",
+  "calls": [
+    {
+      "id": "call_87b68e853e384fd1be7335da",
+      "index": 0,
+      "type": "function",
+      "function": {
+        "name": "vehicle_windows",
+        "arguments": "{\"actions\": [{\"component\": \"window\", \"targets\": [\"fl\"], \"property\": \"openness\", \"operation\": \"set\", \"value\": 0.35}]}"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "component": "window",
+      "targets": [
+        "fl"
+      ],
+      "property": "openness",
+      "operation": "set",
+      "value": 0.35
+    }
+  ],
+  "toolCallIds": [
+    "call_87b68e853e384fd1be7335da"
+  ],
+  "final": "左前车窗已按指令设置为打开 35%。\n\n- 执行结果：指令已被接受，左前车窗开度目标值设为 **0.35（35%）**\n- 说明：工具参数与领域执行均已通过，但渲染与动画效果尚未验证，实际视觉状态可能需要稍后确认。",
+  "elapsedMs": 2259,
+  "rendered": false,
+  "human": false
+}

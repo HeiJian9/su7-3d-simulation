@@ -23,3 +23,9 @@ Blender **4.5.15 LTS** 由官方站点下载，ZIP SHA-256 已比对官方校验
 ## 字体与光照
 
 未分发字体文件。界面使用用户系统已安装的 Noto Sans SC／微软雅黑、Bahnschrift 及后备字体。展厅反射由程序生成的 Lightformer 提供，未引入第三方 HDRI、照片或背景素材。
+
+## 本地关键词唤醒（0.7.0）
+
+使用 sherpa-onnx 2.0.1（Apache-2.0）与发行包实际 ONNX Runtime 1.28.2 / WASM（MIT 及其第三方声明）；许可副本见 `licenses/Sherpa-onnx-APACHE-2.0.txt`、`licenses/ONNXRuntime-MIT.txt`、`licenses/ONNXRuntime-ThirdPartyNotices.txt`。WebSocket 使用 ws 8.22.0（MIT），许可副本 `licenses/ws-MIT.txt`。版本由 package-lock.json 锁定，npm audit 当前无已知漏洞。
+
+中文关键词模型来自 pkufool / k2-fsa 发布的 sherpa-onnx-kws-zipformer-wenetspeech-3.3M-2024-01-01，归档模型卡声明 Apache License 2.0；来源、原卡、选用权重与 SHA-256 见 `assets/wake/`。语音运行资产与 CC BY 4.0 车模许可分别记录。

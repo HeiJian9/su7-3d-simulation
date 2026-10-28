@@ -2,8 +2,7 @@ import {useEffect,useMemo,useRef} from 'react';
 import {useFrame} from '@react-three/fiber';
 import {Box3,Color,DepthTexture,Group,HalfFloatType,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,Vector2,Vector3,WebGLRenderTarget,type PointLight,type SpotLight} from 'three';
 import {FullScreenQuad} from 'three/examples/jsm/postprocessing/Pass.js';
-import {useScene} from './store';
-import {useVehicle} from './vehicle';
+import {useVehicle,actualValues,completeExecutions} from './vehicle';
 import mapping from './data/vehicle-mapping.json';
 
 // Integrate scattering only between the camera and the actual scene depth.
@@ -77,7 +76,7 @@ void main(){
     for(int i=0;i<96;i++){
       float t=begin+(float(i)+jitter)*stepLength;vec3 p=eye+ray*t;
       vec3 light=vec3(0.);
-      if(headlightsOn>.5)light+=vec3(.72,.86,1.)*(field(p,lamps[0],ray)+field(p,lamps[1],ray))*mix(.65,1.15,highBeam);
+      if(headlightsOn>.0)light+=vec3(.72,.86,1.)*(field(p,lamps[0],ray)+field(p,lamps[1],ray))*mix(.65,1.15,highBeam)*headlightsOn;
       for(int j=0;j<6;j++)if(signalPowers[j]>.0)
         light+=vec3(1.,.63,.0)*signalPowers[j]*signalField(p,signalOrigins[j],signalDirections[j])*1.4;
       if(all(greaterThan(p,tailMin))&&all(lessThan(p,tailMax))){
@@ -136,9 +135,9 @@ export function VolumetricLights({model}:{model:Group}){
     const tailSources=mapping.materialRoles.tailRunning.samples.map(s=>({node:model.getObjectByName(s.node)!,position:new Vector3().fromArray(s.position)}));
     return {target,material,quad:new FullScreenQuad(material),size:new Vector2(),sources,tailSources,tailBounds:new Box3()};
   },[model]);
-  useEffect(()=>()=>{resources.target.dispose();resources.target.depthTexture?.dispose();resources.material.dispose();resources.quad.dispose();},[resources]);
+  useEffect(()=>{useVehicle.getState().registerCapabilities('sceneLighting',['scatter:scene','observation:scene']);return()=>{useVehicle.getState().registerCapabilities('sceneLighting',[]);resources.target.dispose();resources.target.depthTexture?.dispose();resources.material.dispose();resources.quad.dispose();};},[resources]);
   useFrame(({gl,scene,camera},delta)=>{
-    const {hazeEnabled,haze}=useScene.getState(),state=useVehicle.getState().state,mode=state.lights.headlights;
+    const state=useVehicle.getState().state,{enabled:hazeEnabled,strength:haze}=state.scatter,mode=state.lights.headlights;actualValues['scatter:scene:enabled']=hazeEnabled;actualValues['scatter:scene:strength']=haze;actualValues['observation:scene:night']=state.observation.night;completeExecutions();
     const root=model.getObjectByName('SU7_ROOT')!;
     const signals=(root.userData.turnSignalPulse??{left:false,right:false}) as {left:boolean;right:boolean};
     const cabin=root.userData.ambientScatter as {power:number;color:Color;lights:PointLight[]}|undefined;
@@ -154,7 +153,7 @@ export function VolumetricLights({model}:{model:Group}){
       material.uniforms.inverseProjection.value.copy(camera.projectionMatrixInverse);
       material.uniforms.eye.value.copy(camera.position).applyMatrix4(material.uniforms.rootInverse.value);
       material.uniforms.density.value=haze*.45;material.uniforms.highBeam.value=mode==='high'?1:0;
-      const u=material.uniforms;u.headlightsOn.value=mode==='off'?0:1;
+      const u=material.uniforms;u.headlightsOn.value=mode==='off'?0:state.lights.brightness;
       u.boundsMin.value.set(-5,0,mode==='off'?-4.5:-15);u.boundsMax.value.set(5,3,5);
       resources.sources.forEach((source,i)=>{
         u.signalOrigins.value[i].copy(source.center).applyMatrix4(source.mesh.matrixWorld).applyMatrix4(u.rootInverse.value);

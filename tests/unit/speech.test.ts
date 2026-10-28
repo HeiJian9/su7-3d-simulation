@@ -17,12 +17,16 @@ describe('audio format and VAD safeguards', () => {
     expect(()=>validateAudio({...input,bytes:new Uint8Array()},['audio/wav'])).toThrow();
     expect(()=>validateAudio({...input,mimeType:'audio/webm'},['audio/webm'])).toThrow();
   });
+  it('preserves a command longer than fifteen seconds and accepts it at the server audio guard',async()=>{
+    const blob=encodeWav([new Float32Array(16000*20).fill(.1)],16000),bytes=new Uint8Array(await blob.arrayBuffer());
+    expect(new DataView(bytes.buffer).getUint32(40,true)).toBe(16000*20*2);expect(()=>validateAudio({bytes,mimeType:'audio/wav',durationMs:20000,requestId:'long-command'},['audio/wav'])).not.toThrow();
+  });
   it('ends after actual speech and silence, rejects silence and isolated spikes', () => {
-    const silence=newVad(0);expect(stepVad(silence,0,5000)).toBe('no-speech');
+    const silence=newVad(0);expect(stepVad(silence,0,5000)).toBe('continue');expect(stepVad(silence,0,14999)).toBe('continue');expect(stepVad(silence,0,15000)).toBe('no-speech');
     const s=newVad(0);stepVad(s,.1,100);stepVad(s,0,140);stepVad(s,.1,200);expect(s.hasSpeech).toBe(false);
     for(const now of [240,280,320])stepVad(s,.1,now);
-    expect(s.hasSpeech).toBe(true);expect(stepVad(s,0,1519)).toBe('continue');expect(stepVad(s,0,1520)).toBe('silence-end');
-    expect(stepVad(s,.1,15000)).toBe('max-duration');
+    expect(s.hasSpeech).toBe(true);expect(stepVad(s,0,1819)).toBe('continue');expect(stepVad(s,0,1820)).toBe('silence-end');
+    expect(stepVad(s,.1,30000)).toBe('max-duration');
   });
 });
 describe('server protocol adapters (explicit test Mock, no external requests)', () => {
@@ -104,7 +108,7 @@ describe('voice orchestration race protection (explicit test Mock)',()=>{
   it('rejects a transcript from a different configured model before changing the vehicle',async()=>{
     coordinator=new SpeechCoordinator(recorder,player,async(_url,init)=>Response.json({requestId:(init?.body as FormData).get('requestId'),text:'左前窗开一半',provider:'test-mock',model:'qwen3-asr-flash',durationMs:1,mock:true}));
     await coordinator.start();const input=await audio();callbacks.done({blob:new Blob([input.bytes],{type:'audio/wav'}),mimeType:'audio/wav',durationMs:1000,peakRms:.1,reason:'silence-end'});
-    await vi.waitFor(()=>expect(useSpeech.getState().errorCode).toBe('MODEL_MISMATCH'));expect(useVehicle.getState().state.windows.fl.openness).toBe(0);
+    await vi.waitFor(()=>expect(useSpeech.getState().traces.some(t=>t.stage==='error'&&t.detail==='MODEL_MISMATCH')).toBe(true));expect(useVehicle.getState().state.windows.fl.openness).toBe(0);
   });
   it('stops playback before capture and cancellation during the settling delay cannot acquire a microphone',async()=>{
     vi.useFakeTimers();

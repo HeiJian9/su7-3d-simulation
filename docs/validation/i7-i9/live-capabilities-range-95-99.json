@@ -1,0 +1,1804 @@
+{
+  "at": "2026-10-28T04:44:14.622Z",
+  "mode": "real-DeepSeek-function-calling+actual-WebGL-renderer-text-input",
+  "human": false,
+  "cases": [
+    {
+      "index": 0,
+      "input": "打开顶灯",
+      "plan": {
+        "http": 200,
+        "requestId": "fe06909f-4f40-4586-8e16-2dd253d92925",
+        "turnId": "2452b78c-f8a5-4a64-a314-8c8ec0737311",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_3d6a8b9147d742d8839ab957",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "assistant_reply",
+              "arguments": "{\"kind\": \"clarify\", \"message\": \"请问要打开前排顶灯还是后排顶灯？\"}"
+            }
+          }
+        ],
+        "commands": [],
+        "reply": {
+          "kind": "clarify",
+          "message": "请问要打开前排顶灯还是后排顶灯？"
+        },
+        "validationRepairs": 0,
+        "baseRevision": 0,
+        "durationMs": 1294
+      },
+      "receipts": {
+        "turnId": "2452b78c-f8a5-4a64-a314-8c8ec0737311",
+        "requestId": "fe06909f-4f40-4586-8e16-2dd253d92925",
+        "results": [
+          {
+            "tool_call_id": "call_3d6a8b9147d742d8839ab957",
+            "status": "completed",
+            "message": "请问要打开前排顶灯还是后排顶灯？",
+            "revision": 0,
+            "effects": [],
+            "observations": []
+          }
+        ]
+      },
+      "final": {
+        "http": 200,
+        "requestId": "fe06909f-4f40-4586-8e16-2dd253d92925",
+        "text": "请问要打开前排顶灯还是后排顶灯？",
+        "model": "deepseek-v4.1-flash-1017",
+        "toolCallIds": [
+          "call_3d6a8b9147d742d8839ab957"
+        ]
+      },
+      "feedback": "请问要打开前排顶灯还是后排顶灯？",
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "appearance": {
+        "tailRunning": {
+          "alwaysOn": true,
+          "color": "ff1424",
+          "power": 1.5
+        },
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4,
+          "zones": 12,
+          "emission": [
+            {
+              "name": "AMBIENT_CABIN_LED",
+              "power": 0
+            },
+            {
+              "name": "AMBIENT_CABIN_WASH",
+              "power": 0
+            }
+          ],
+          "localLights": [
+            {
+              "parent": "DOOR_FL_ROOT",
+              "power": 0,
+              "position": [
+                -0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_FR_ROOT",
+              "power": 0,
+              "position": [
+                0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_RL_ROOT",
+              "power": 0,
+              "position": [
+                -0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "DOOR_RR_ROOT",
+              "power": 0,
+              "position": [
+                0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                -0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.32,
+                0.9349999728030425,
+                -0.56
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0,
+                0.5349999728030425,
+                -0.06
+              ]
+            }
+          ]
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "DOME_HOUSING",
+            "color": "2d3135",
+            "roughness": 0.6499999761581421,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_FRONT_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_REAR_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "FRUNK_SEAL_RUBBER",
+            "color": "181d1f",
+            "roughness": 0.800000011920929,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "FRUNK_FORMED_LINER",
+            "color": "24292c",
+            "roughness": 0.8700000047683716,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      },
+      "cabin": [
+        {
+          "position": "front",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "volume": {
+        "enabled": true,
+        "active": true,
+        "density": 0.35,
+        "mode": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "cabinPower": 0,
+        "tailRunning": true,
+        "tailSamples": 31,
+        "domePowers": [
+          0,
+          0
+        ],
+        "signalSources": [
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.6513915657997131,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.6513193547725677,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": false,
+            "position": [
+              0.7228062450885773,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": false,
+            "position": [
+              -0.7228037118911743,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.5014732033014297,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.5014782696962357,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          }
+        ],
+        "sceneDepthOcclusion": true,
+        "samples": 96,
+        "visibleConeGeometry": false
+      },
+      "elapsedMs": 2378,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "input": "前排",
+      "plan": {
+        "http": 200,
+        "requestId": "a09a8727-6627-4d60-876f-2c0cec0f523e",
+        "turnId": "67bb91b2-efc1-4dc5-a210-349bb968a46d",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_a85a41e27a7c495eb95b35ff",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_cabin_light_switch",
+              "arguments": "{\"actions\": [{\"component\": \"cabinLight\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "cabinLight",
+            "targets": [
+              "front"
+            ],
+            "property": "enabled",
+            "operation": "set",
+            "value": true
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 0,
+        "durationMs": 1313
+      },
+      "receipts": {
+        "turnId": "67bb91b2-efc1-4dc5-a210-349bb968a46d",
+        "requestId": "a09a8727-6627-4d60-876f-2c0cec0f523e",
+        "results": [
+          {
+            "tool_call_id": "call_a85a41e27a7c495eb95b35ff",
+            "status": "completed",
+            "message": "前排主灯已开启。",
+            "revision": 1,
+            "effects": [
+              {
+                "key": "cabinLight:front:enabled",
+                "value": true
+              }
+            ],
+            "observations": [
+              {
+                "index": 0,
+                "effects": [
+                  {
+                    "key": "cabinLight:front:enabled",
+                    "value": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "final": {
+        "http": 200,
+        "requestId": "a09a8727-6627-4d60-876f-2c0cec0f523e",
+        "text": "前排顶灯已打开。",
+        "model": "deepseek-v4.1-flash-1017",
+        "toolCallIds": [
+          "call_a85a41e27a7c495eb95b35ff"
+        ]
+      },
+      "feedback": "前排顶灯已打开。",
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "appearance": {
+        "tailRunning": {
+          "alwaysOn": true,
+          "color": "ff1424",
+          "power": 1.5
+        },
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4,
+          "zones": 12,
+          "emission": [
+            {
+              "name": "AMBIENT_CABIN_LED",
+              "power": 0
+            },
+            {
+              "name": "AMBIENT_CABIN_WASH",
+              "power": 0
+            }
+          ],
+          "localLights": [
+            {
+              "parent": "DOOR_FL_ROOT",
+              "power": 0,
+              "position": [
+                -0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_FR_ROOT",
+              "power": 0,
+              "position": [
+                0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_RL_ROOT",
+              "power": 0,
+              "position": [
+                -0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "DOOR_RR_ROOT",
+              "power": 0,
+              "position": [
+                0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                -0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.32,
+                0.9349999728030425,
+                -0.56
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0,
+                0.5349999728030425,
+                -0.06
+              ]
+            }
+          ]
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "DOME_HOUSING",
+            "color": "2d3135",
+            "roughness": 0.6499999761581421,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_FRONT_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_REAR_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "FRUNK_SEAL_RUBBER",
+            "color": "181d1f",
+            "roughness": 0.800000011920929,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "FRUNK_FORMED_LINER",
+            "color": "24292c",
+            "roughness": 0.8700000047683716,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      },
+      "cabin": [
+        {
+          "position": "front",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "volume": {
+        "enabled": true,
+        "active": true,
+        "density": 0.35,
+        "mode": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "cabinPower": 0,
+        "tailRunning": true,
+        "tailSamples": 31,
+        "domePowers": [
+          1,
+          0
+        ],
+        "signalSources": [
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.6513915657997131,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.6513193547725677,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": false,
+            "position": [
+              0.7228062450885773,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": false,
+            "position": [
+              -0.7228037118911743,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.5014732033014297,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.5014782696962357,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          }
+        ],
+        "sceneDepthOcclusion": true,
+        "samples": 96,
+        "visibleConeGeometry": false
+      },
+      "elapsedMs": 2086,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "input": "把灯调亮",
+      "plan": {
+        "http": 200,
+        "requestId": "9ee420bb-de7a-4b49-a665-0a65ccb43e42",
+        "turnId": "531dae2f-5bcf-4621-8e7c-7383598a528a",
+        "model": "deepseek-v4.1-flash-1017",
+        "calls": [
+          {
+            "id": "call_734d3ed6e93f4b958609ec92",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "vehicle_cabin_light_brightness",
+              "arguments": "{\"actions\": [{\"component\": \"cabinLight\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"adjust\", \"value\": 0.1}]}"
+            }
+          }
+        ],
+        "commands": [
+          {
+            "component": "cabinLight",
+            "targets": [
+              "front"
+            ],
+            "property": "brightness",
+            "operation": "adjust",
+            "value": 0.1
+          }
+        ],
+        "validationRepairs": 0,
+        "baseRevision": 1,
+        "durationMs": 972
+      },
+      "receipts": {
+        "turnId": "531dae2f-5bcf-4621-8e7c-7383598a528a",
+        "requestId": "9ee420bb-de7a-4b49-a665-0a65ccb43e42",
+        "results": [
+          {
+            "tool_call_id": "call_734d3ed6e93f4b958609ec92",
+            "status": "completed",
+            "message": "前排主灯亮度已设为 100%。已到达调节边界。",
+            "revision": 1,
+            "effects": [
+              {
+                "key": "cabinLight:front:brightness",
+                "value": 1
+              }
+            ],
+            "observations": [
+              {
+                "index": 0,
+                "effects": [
+                  {
+                    "key": "cabinLight:front:brightness",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "final": {
+        "http": 200,
+        "requestId": "9ee420bb-de7a-4b49-a665-0a65ccb43e42",
+        "text": "前排顶灯亮度已调到最高，当前为100%，已到上限。",
+        "model": "deepseek-v4.1-flash-1017",
+        "toolCallIds": [
+          "call_734d3ed6e93f4b958609ec92"
+        ]
+      },
+      "feedback": "前排顶灯亮度已调到最高，当前为100%，已到上限。",
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "appearance": {
+        "tailRunning": {
+          "alwaysOn": true,
+          "color": "ff1424",
+          "power": 1.5
+        },
+        "headlights": "off",
+        "headlightPower": [
+          0,
+          0
+        ],
+        "turnSignal": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "nativeLamps": {
+          "projectors": {
+            "left": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_LEFT_PROJECTOR_3",
+                "power": 0
+              }
+            ],
+            "right": [
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_0",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_1",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_2",
+                "power": 0
+              },
+              {
+                "node": "Mesh61",
+                "material": "LAMP_RIGHT_PROJECTOR_3",
+                "power": 0
+              }
+            ]
+          },
+          "signals": {
+            "left": [
+              {
+                "material": "TURN_LEFT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_LEFT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ],
+            "right": [
+              {
+                "material": "TURN_RIGHT_FRONT_AMBER",
+                "power": 0,
+                "color": "ffffff",
+                "offColor": "ffffff"
+              },
+              {
+                "material": "TURN_RIGHT_AMBER",
+                "power": 0,
+                "color": "a4a3a6",
+                "offColor": "a4a3a6"
+              }
+            ]
+          }
+        },
+        "ambient": {
+          "power": 0,
+          "color": "9867ff",
+          "brightness": 0.4,
+          "zones": 12,
+          "emission": [
+            {
+              "name": "AMBIENT_CABIN_LED",
+              "power": 0
+            },
+            {
+              "name": "AMBIENT_CABIN_WASH",
+              "power": 0
+            }
+          ],
+          "localLights": [
+            {
+              "parent": "DOOR_FL_ROOT",
+              "power": 0,
+              "position": [
+                -0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_FR_ROOT",
+              "power": 0,
+              "position": [
+                0.7350000143051147,
+                0.9049999680346709,
+                -0.18000000715255737
+              ]
+            },
+            {
+              "parent": "DOOR_RL_ROOT",
+              "power": 0,
+              "position": [
+                -0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "DOOR_RR_ROOT",
+              "power": 0,
+              "position": [
+                0.699999988079071,
+                0.9049999680346709,
+                0.6600000262260437
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                -0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.4,
+                0.5149999728030424,
+                -0.48
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0.32,
+                0.9349999728030425,
+                -0.56
+              ]
+            },
+            {
+              "parent": "SU7_ROOT",
+              "power": 0,
+              "position": [
+                0,
+                0.5349999728030425,
+                -0.06
+              ]
+            }
+          ]
+        },
+        "paint": "e4e6e8",
+        "protectedMaterials": [
+          {
+            "name": "DOME_HOUSING",
+            "color": "2d3135",
+            "roughness": 0.6499999761581421,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_FRONT_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "DOME_REAR_DIFFUSER",
+            "color": "d3d1c8",
+            "roughness": 0.44999998807907104,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh32Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh13Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh35Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh16Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh25Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh30Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh19Mtl",
+            "color": "a4a3a6",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh26Mtl",
+            "color": "090909",
+            "roughness": 0.11999999731779099,
+            "metalness": 0.05000000074505806
+          },
+          {
+            "name": "FRUNK_SEAL_RUBBER",
+            "color": "181d1f",
+            "roughness": 0.800000011920929,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_HINGE_FINISH",
+            "color": "35393c",
+            "roughness": 0.6000000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "FRUNK_FORMED_LINER",
+            "color": "24292c",
+            "roughness": 0.8700000047683716,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh65Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh1Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh2Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh3Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh4Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh17Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh22Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh24Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh60Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh68Mtl",
+            "color": "ffffff",
+            "roughness": 0.49502474069595337,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh71Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh72Mtl",
+            "color": "090909",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FLUSH_SEAL",
+            "color": "181d1f",
+            "roughness": 0.8500000238418579,
+            "metalness": 0
+          },
+          {
+            "name": "TRUNK_FORMED_CARPET",
+            "color": "292e32",
+            "roughness": 0.9200000166893005,
+            "metalness": 0
+          },
+          {
+            "name": "Mesh23Mtl",
+            "color": "ffffff",
+            "roughness": 0.7200000286102295,
+            "metalness": 0
+          },
+          {
+            "name": "WIPER_GRAPHITE",
+            "color": "50595f",
+            "roughness": 0.6000000238418579,
+            "metalness": 0.3499999940395355
+          }
+        ]
+      },
+      "cabin": [
+        {
+          "position": "front",
+          "enabled": true,
+          "power": 12,
+          "fillPower": 1.2,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 2.4,
+          "origin": [
+            0,
+            1.289884090423584,
+            -0.266671746969223
+          ],
+          "direction": [
+            0,
+            -0.9884902664253484,
+            0.15128447766490685
+          ],
+          "castsShadow": true
+        },
+        {
+          "position": "rear",
+          "enabled": false,
+          "power": 0,
+          "fillPower": 0,
+          "fullAngleDegrees": 143.2394487827058,
+          "emission": 0,
+          "origin": [
+            -0.00028986454708501697,
+            1.3978768587112427,
+            0.7980071306228638
+          ],
+          "direction": [
+            -0.013175659009362463,
+            -0.9958015668989236,
+            -0.09058499528794699
+          ],
+          "castsShadow": true
+        }
+      ],
+      "volume": {
+        "enabled": true,
+        "active": true,
+        "density": 0.35,
+        "mode": "off",
+        "signals": {
+          "left": false,
+          "right": false
+        },
+        "cabinPower": 0,
+        "tailRunning": true,
+        "tailSamples": 31,
+        "domePowers": [
+          1,
+          0
+        ],
+        "signalSources": [
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.6513915657997131,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.6513193547725677,
+              0.8185961246490479,
+              2.312427282333374
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": false,
+            "position": [
+              0.7228062450885773,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": false,
+            "position": [
+              -0.7228037118911743,
+              0.6204955577850342,
+              -2.1989256143569946
+            ],
+            "power": 0
+          },
+          {
+            "side": "right",
+            "rear": true,
+            "position": [
+              0.5014732033014297,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          },
+          {
+            "side": "left",
+            "rear": true,
+            "position": [
+              -0.5014782696962357,
+              0.8201603591442107,
+              2.367102861404419
+            ],
+            "power": 0
+          }
+        ],
+        "sceneDepthOcclusion": true,
+        "samples": 96,
+        "visibleConeGeometry": false
+      },
+      "elapsedMs": 1988,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "input": "取消",
+      "route": "rules-cancellation",
+      "passed": true,
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": true,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,21 @@
+
+> su7-interaction-lab@0.7.0 test:e2e
+> playwright test --grep Mock TTS failure|Mock protocol|Mock model|Mock unsupported
+
+
+Running 8 tests using 1 worker
+
+(node:16672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [Edge-1920x1080] › tests\e2e\assistant.spec.ts:10:1 › Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback (6.7s)
+  ok 2 [Edge-1920x1080] › tests\e2e\assistant.spec.ts:17:1 › Mock model failure is voiced as service failure; late model reply after manual preemption does nothing (1.8s)
+  ok 3 [Edge-1920x1080] › tests\e2e\assistant.spec.ts:24:1 › Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation (1.6s)
+  ok 4 [Edge-1920x1080] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (5.0s)
+(node:8588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [Edge-1366x768] › tests\e2e\assistant.spec.ts:10:1 › Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback (6.0s)
+  ok 6 [Edge-1366x768] › tests\e2e\assistant.spec.ts:17:1 › Mock model failure is voiced as service failure; late model reply after manual preemption does nothing (2.0s)
+  ok 7 [Edge-1366x768] › tests\e2e\assistant.spec.ts:24:1 › Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation (1.5s)
+  ok 8 [Edge-1366x768] › tests\e2e\speech.spec.ts:61:1 › Mock TTS failure preserves actual action and supports a separate replay (5.0s)
+
+  8 passed (32.5s)

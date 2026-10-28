@@ -1,3 +1,4 @@
+import {useWake} from './audio/wake';
 import { useEffect, useState, type ReactNode } from 'react';
 import { assetSchema, type AssetManifest, MODEL_URL } from '../../../packages/shared/src/asset';
 import { Scene } from './Scene';
@@ -5,6 +6,7 @@ import { MicrophoneProbe } from './MicrophoneProbe';
 import { VehicleControls } from './VehicleControls';
 import { ControlConsole } from './ControlConsole';
 import { configureSpeech, useSpeech } from './speech';
+import {AssistantDiagnostics} from './AssistantDiagnostics';
 import type { SpeechHealth } from '../../../packages/shared/src/speech';
 import { useScene, type View } from './store';
 import { actualValues, useVehicle, windowPoses } from './vehicle';
@@ -72,10 +74,10 @@ export function App() {
   const exportDiagnostics = async () => {
     const state = useScene.getState();
     const voice = useSpeech.getState(), vehicle = useVehicle.getState();
-    const data = { exportedAt: new Date().toISOString(), increment: 'I6', userAgent: navigator.userAgent, asset,
+    const data = { exportedAt: new Date().toISOString(), increment: 'I7–I9', userAgent: navigator.userAgent, asset,
       loadMs: state.loadMs, mode: state.mode, gesture: state.gesture, microphone: state.microphone, samples: state.samples,
       voice: { phase: voice.phase, transcript: voice.transcript, message: voice.message, errorCode: voice.errorCode, asrModel: voice.health.asr.model, ttsModel: voice.health.tts.model, mode: voice.health.mode, traces: voice.traces },
-      vehicle: { revision: vehicle.state.revision, targets: vehicle.state.windows, actual: { ...windowPoses } },fullState:vehicle.state,actualParts:{...actualValues} };
+      vehicle: { revision: vehicle.state.revision, targets: vehicle.state.windows, actual: { ...windowPoses } },wake:useWake.getState(),fullState:vehicle.state,actualParts:{...actualValues} };
     try {
       const response = await fetch('/api/diagnostics', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), signal: AbortSignal.timeout(8000) });
       if (!response.ok) throw new Error('报告写入失败，请重试。');
@@ -87,7 +89,7 @@ export function App() {
   return <main className="app current-increment">
     <header className="header">
       <a className="brand" href="/" aria-label="SU7 交互实验室首页"><span className="brand-mark">S<span>7</span></span><span>SU7 <span className="brand-cn">交互实验室</span><small>INTERACTION LAB</small></span></a>
-      <div className="chapter"><span className="chapter-line" /> I4—I6 <span className="chapter-label">部件与语音</span></div>
+      <div className="chapter"><span className="chapter-line" /> I7—I9 <span className="chapter-label">车载智能助手</span></div>
       <div className="header-actions"><span className="service"><i />{health}</span><button className="icon-button" onClick={() => setHelp(true)} aria-label="操作帮助"><Icon name="info" /></button></div>
     </header>
 
@@ -115,8 +117,8 @@ export function App() {
     </section>
 
     <ControlConsole />
-    <footer className="footer"><div><span className="footer-tag">VEHICLE INTERACTION</span><span className="footer-caption">本轮 · 门窗、灯光、车漆、氛围灯与雨刷</span></div><button className="debug-toggle" aria-expanded={debug} onClick={() => setDebug(!debug)}><span className="debug-symbol">⌘</span>{debug ? '收起记录' : '调试记录'}<span>{debug ? '−' : '+'}</span></button><span className="footer-version">v0.6.7 <span>/ LOCAL</span></span></footer>
-    {debug && <aside className="debug-panel" aria-label="调试记录"><div className="panel-top"><strong>场景诊断</strong><button onClick={() => setDebug(false)} aria-label="关闭调试记录">×</button></div><dl><dt>资产状态</dt><dd data-testid="asset-status">{loaded ? 'ready / 实际 GLB 已加载' : asset?.status ?? 'connecting'}</dd><dt>SHA-256</dt><dd className="hash">{asset?.sha256 ?? '尚无运行资源'}</dd><dt>相机位置</dt><dd data-testid="camera-position">{metrics.position.join(', ')}</dd><dt>相机朝向</dt><dd data-testid="camera-rotation">{metrics.rotation.join(', ')}</dd><dt>渲染</dt><dd>{metrics.calls} calls · {metrics.triangles.toLocaleString()} triangles</dd><dt>GPU</dt><dd>{metrics.renderer}</dd><dt>手势</dt><dd data-testid="gesture">{gesture}</dd><dt>首帧模型</dt><dd>{useScene.getState().loadMs ?? "—"} ms / 页面导航起</dd><dt>累计运行</dt><dd>{metrics.elapsed}s</dd><dt>语音 / 控车</dt><dd>{providers.asr.configured && providers.tts.configured ? '车辆部件已接入 · 语音 API 已配置' : '车辆部件已接入 · 语音待配置'}</dd></dl><button className="primary-button" onClick={exportDiagnostics}>保存场景诊断 JSON <Icon name="arrow" /></button><p className="saved-report" role="status">{savedReport}</p><MicrophoneProbe /></aside>}
+    <footer className="footer"><div><span className="footer-tag">VEHICLE INTERACTION</span><span className="footer-caption">自然语言控车 · 小爱同学唤醒</span></div><button className="debug-toggle" aria-expanded={debug} onClick={() => setDebug(!debug)}><span className="debug-symbol">⌘</span>{debug ? '收起记录' : '调试记录'}<span>{debug ? '−' : '+'}</span></button><span className="footer-version">v0.7.0 <span>/ LOCAL</span></span></footer>
+    {debug && <aside className="debug-panel" aria-label="调试记录"><div className="panel-top"><strong>场景诊断</strong><button onClick={() => setDebug(false)} aria-label="关闭调试记录">×</button></div><AssistantDiagnostics/><dl><dt>资产状态</dt><dd data-testid="asset-status">{loaded ? 'ready / 实际 GLB 已加载' : asset?.status ?? 'connecting'}</dd><dt>SHA-256</dt><dd className="hash">{asset?.sha256 ?? '尚无运行资源'}</dd><dt>相机位置</dt><dd data-testid="camera-position">{metrics.position.join(', ')}</dd><dt>相机朝向</dt><dd data-testid="camera-rotation">{metrics.rotation.join(', ')}</dd><dt>渲染</dt><dd>{metrics.calls} calls · {metrics.triangles.toLocaleString()} triangles</dd><dt>GPU</dt><dd>{metrics.renderer}</dd><dt>手势</dt><dd data-testid="gesture">{gesture}</dd><dt>首帧模型</dt><dd>{useScene.getState().loadMs ?? "—"} ms / 页面导航起</dd><dt>累计运行</dt><dd>{metrics.elapsed}s</dd><dt>语音 / 控车</dt><dd>{providers.asr.configured && providers.tts.configured ? '车辆部件已接入 · 语音 API 已配置' : '车辆部件已接入 · 语音待配置'}</dd></dl><button className="primary-button" onClick={exportDiagnostics}>保存场景诊断 JSON <Icon name="arrow" /></button><p className="saved-report" role="status">{savedReport}</p><MicrophoneProbe /></aside>}
     {help && <div className="modal-backdrop" onClick={() => setHelp(false)}><section className="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title" onClick={(e) => e.stopPropagation()}><div className="panel-top"><span>HOW TO EXPLORE</span><button autoFocus onClick={() => setHelp(false)} aria-label="关闭帮助">×</button></div><h2 id="help-title">把视角交给自己。</h2><div className="help-row"><Icon name="orbit" /><div><h3>外观环绕</h3><p>左键旋转，右键平移，滚轮缩放。也可选择工具栏“平移”后用左键拖动。使用前、后、左、右按钮快速定位。</p></div></div><div className="help-row"><Icon name="move" /><div><h3>自由观察</h3><p>点击场景获得焦点。WASD 或方向键移动，Q/E 升降；左键拖动转头，右键拖动平移，滚轮向前或向后。可穿过车身进入座舱。</p></div></div><div className="help-row"><Icon name="reset" /><div><h3>随时返回</h3><p>点击“回到车辆”或在场景中按 R 恢复初始视角。座舱按钮自动切换为自由观察。</p></div></div><p className="help-note">点击 3D 车窗可选中；左侧滑块、开关和下方文字指令共用状态。点击麦克风开始录音，说完自动结束；可取消、手动结束或重新录音。</p><button className="primary-button" onClick={() => setHelp(false)}>开始探索 <Icon name="arrow" /></button></section></div>}
   </main>;
 }

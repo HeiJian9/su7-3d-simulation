@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T05:35:31.334Z",
+  "mode": "real-ASR-API+padded-fixed-synthetic-input",
+  "human": false,
+  "durationMs": 20000,
+  "initialSilenceMs": 12000,
+  "model": "qwen3-asr-flash",
+  "transcript": "左前车窗打开35%。",
+  "passed": true
+}

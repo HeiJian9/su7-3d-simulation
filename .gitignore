@@ -13,3 +13,6 @@ playwright-report/
 assets/source/original/*
 !assets/source/original/README.md
 
+
+apps/web/public/wake/
+deliverables/*.zip

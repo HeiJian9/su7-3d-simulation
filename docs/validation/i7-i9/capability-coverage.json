@@ -1,0 +1,1363 @@
+{
+  "at": "2026-10-28T05:10:46.631Z",
+  "mode": "real-API+actual-WebGL-text-input",
+  "human": false,
+  "passedCases": 99,
+  "llmRounds": 98,
+  "registeredControlTools": 18,
+  "coveredTools": 18,
+  "runs": [
+    {
+      "file": "live-capabilities-segment-0-39.json",
+      "recordedPassedCases": 40,
+      "runPassed": false,
+      "interrupted": true
+    },
+    {
+      "file": "live-capabilities-range-40-99.json",
+      "recordedPassedCases": 55,
+      "runPassed": false,
+      "interrupted": false,
+      "error": "expect(received).toEqual(expected) // deep equality\n\n- Expected  - 2\n+ Received  + 2\n\n@@ -1,13 +1,13 @@\n  Object {\n    \"ambient:cabin:brightness\": 0.4,\n    \"ambient:cabin:color\": \"#0000ff\",\n    \"ambient:cabin:enabled\": false,\n    \"cabinLight:front:brightness\": 0.5,\n-   \"cabinLight:front:enabled\": false,\n+   \"cabinLight:front:enabled\": true,\n    \"cabinLight:rear:brightness\": 0.5,\n-   \"cabinLight:rear:enabled\": false,\n+   \"cabinLight:rear:enabled\": true,\n    \"door:fl:openness\": 0,\n    \"door:fr:openness\": 0,\n    \"door:rl:openness\": 0,\n    \"door:rr:openness\": 0,\n    \"frunk:front:openness\": 0,"
+    },
+    {
+      "file": "live-capabilities-range-95-99.json",
+      "recordedPassedCases": 4,
+      "runPassed": true,
+      "interrupted": false
+    }
+  ],
+  "coverage": [
+    {
+      "key": "ambient:cabin:brightness",
+      "tool": "vehicle_ambient_brightness",
+      "operations": [
+        "adjust",
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "ambient:cabin:brightness",
+          "tool": "vehicle_ambient_brightness",
+          "operation": "adjust",
+          "value": -0.1,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[26]",
+          "tool_call_id": "call_d8596e9f991b47159718af5c",
+          "input": "再暗一点"
+        },
+        {
+          "key": "ambient:cabin:brightness",
+          "tool": "vehicle_ambient_brightness",
+          "operation": "set",
+          "value": 0.4,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[27]",
+          "tool_call_id": "call_70a7a196eca648c59affb7f1",
+          "input": "氛围灯亮度设为百分之四十"
+        },
+        {
+          "key": "ambient:cabin:brightness",
+          "tool": "vehicle_ambient_brightness",
+          "operation": "query",
+          "value": null,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[28]",
+          "tool_call_id": "call_89ae6fcfbbf94f399e3a6f18",
+          "input": "查询氛围灯亮度"
+        }
+      ]
+    },
+    {
+      "key": "ambient:cabin:color",
+      "tool": "vehicle_ambient_color",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "ambient:cabin:color",
+          "tool": "vehicle_ambient_color",
+          "operation": "set",
+          "value": "#0000ff",
+          "actual": "#0000ff",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[25]",
+          "tool_call_id": "call_eb2658d1298e41e8a2adc184",
+          "input": "换成蓝色"
+        },
+        {
+          "key": "ambient:cabin:color",
+          "tool": "vehicle_ambient_color",
+          "operation": "query",
+          "value": null,
+          "actual": "#0000ff",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[29]",
+          "tool_call_id": "call_0fb7590018664425a00bd565",
+          "input": "查询氛围灯颜色"
+        }
+      ]
+    },
+    {
+      "key": "ambient:cabin:enabled",
+      "tool": "vehicle_ambient_switch",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "ambient:cabin:enabled",
+          "tool": "vehicle_ambient_switch",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[24]",
+          "tool_call_id": "call_40ffc158bf734a3189422e8e",
+          "input": "打开氛围灯"
+        },
+        {
+          "key": "ambient:cabin:enabled",
+          "tool": "vehicle_ambient_switch",
+          "operation": "query",
+          "value": null,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[30]",
+          "tool_call_id": "call_d0cf59467cfb4a79b8f56474",
+          "input": "查询氛围灯开关"
+        },
+        {
+          "key": "ambient:cabin:enabled",
+          "tool": "vehicle_ambient_switch",
+          "operation": "set",
+          "value": false,
+          "actual": false,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[31]",
+          "tool_call_id": "call_d7559575a09e4a7ab22e909d",
+          "input": "关闭氛围灯"
+        }
+      ]
+    },
+    {
+      "key": "cabinLight:front:brightness",
+      "tool": "vehicle_cabin_light_brightness",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "cabinLight:front:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "set",
+          "value": 0.4,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[13]",
+          "tool_call_id": "call_e28f18304e5b49f2999e93dc",
+          "input": "前排顶灯亮度设为百分之四十"
+        },
+        {
+          "key": "cabinLight:front:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[14]",
+          "tool_call_id": "call_5fa344dbb7d54c36a92c3b50",
+          "input": "前排顶灯再亮一点"
+        },
+        {
+          "key": "cabinLight:front:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "query",
+          "value": null,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[15]",
+          "tool_call_id": "call_cbd3b96cbbaa4ca08fb87f6b",
+          "input": "查询前排顶灯亮度"
+        },
+        {
+          "key": "cabinLight:front:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 1,
+          "status": "completed",
+          "evidence": "live-capabilities-range-95-99.json#cases[2]",
+          "tool_call_id": "call_734d3ed6e93f4b958609ec92",
+          "input": "把灯调亮"
+        }
+      ]
+    },
+    {
+      "key": "cabinLight:front:enabled",
+      "tool": "vehicle_cabin_light_switch",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "cabinLight:front:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[12]",
+          "tool_call_id": "call_376ce71791044091aac94114",
+          "input": "打开前排顶灯"
+        },
+        {
+          "key": "cabinLight:front:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "query",
+          "value": null,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[16]",
+          "tool_call_id": "call_c2dd9560f73c46648c27fcf0",
+          "input": "查询前排顶灯开关状态"
+        },
+        {
+          "key": "cabinLight:front:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "set",
+          "value": false,
+          "actual": false,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[17]",
+          "tool_call_id": "call_d7baeade276347bd953ed353",
+          "input": "关闭前排顶灯"
+        },
+        {
+          "key": "cabinLight:front:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-95-99.json#cases[1]",
+          "tool_call_id": "call_a85a41e27a7c495eb95b35ff",
+          "input": "前排"
+        }
+      ]
+    },
+    {
+      "key": "cabinLight:rear:brightness",
+      "tool": "vehicle_cabin_light_brightness",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "cabinLight:rear:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "set",
+          "value": 0.4,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[19]",
+          "tool_call_id": "call_a8d4362ff9164da6a4b3e2d3",
+          "input": "后排顶灯亮度设为百分之四十"
+        },
+        {
+          "key": "cabinLight:rear:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[20]",
+          "tool_call_id": "call_3378e17256044ed9b7a242fe",
+          "input": "后排顶灯再亮一点"
+        },
+        {
+          "key": "cabinLight:rear:brightness",
+          "tool": "vehicle_cabin_light_brightness",
+          "operation": "query",
+          "value": null,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[21]",
+          "tool_call_id": "call_084637b569bf473ea08da7aa",
+          "input": "查询后排顶灯亮度"
+        }
+      ]
+    },
+    {
+      "key": "cabinLight:rear:enabled",
+      "tool": "vehicle_cabin_light_switch",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "cabinLight:rear:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[18]",
+          "tool_call_id": "call_c36dc201567342249910e722",
+          "input": "打开后排顶灯"
+        },
+        {
+          "key": "cabinLight:rear:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "query",
+          "value": null,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[22]",
+          "tool_call_id": "call_0108a9bf3d834adaaaf63677",
+          "input": "查询后排顶灯开关状态"
+        },
+        {
+          "key": "cabinLight:rear:enabled",
+          "tool": "vehicle_cabin_light_switch",
+          "operation": "set",
+          "value": false,
+          "actual": false,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[23]",
+          "tool_call_id": "call_b8726dfdc70145518d1ca161",
+          "input": "关闭后排顶灯"
+        }
+      ]
+    },
+    {
+      "key": "door:fl:openness",
+      "tool": "vehicle_doors",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "door:fl:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[4]",
+          "tool_call_id": "call_009ac2c0a4994590a6c08c71",
+          "input": "左前车门打开百分之三十五"
+        },
+        {
+          "key": "door:fl:openness",
+          "tool": "vehicle_doors",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[5]",
+          "tool_call_id": "call_dd22fe6412b74336a5bbf590",
+          "input": "再开大一点"
+        },
+        {
+          "key": "door:fl:openness",
+          "tool": "vehicle_doors",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[6]",
+          "tool_call_id": "call_afb06d4f5b3e4e80bcbce58f",
+          "input": "查询左前车门开度"
+        },
+        {
+          "key": "door:fl:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[7]",
+          "tool_call_id": "call_08e03edf784449969b6b75c2",
+          "input": "关闭左前车门"
+        }
+      ]
+    },
+    {
+      "key": "door:fr:openness",
+      "tool": "vehicle_doors",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "door:fr:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[12]",
+          "tool_call_id": "call_5b97d27062fe45aa823abcf5",
+          "input": "右前车门打开百分之三十五"
+        },
+        {
+          "key": "door:fr:openness",
+          "tool": "vehicle_doors",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[13]",
+          "tool_call_id": "call_1aa6df3bf072486eb702c8f5",
+          "input": "再开大一点"
+        },
+        {
+          "key": "door:fr:openness",
+          "tool": "vehicle_doors",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[14]",
+          "tool_call_id": "call_21b3347d4ee04002bc8d4c3f",
+          "input": "查询右前车门开度"
+        },
+        {
+          "key": "door:fr:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[15]",
+          "tool_call_id": "call_4c7d5cd33a4f471bb8f5f49b",
+          "input": "关闭右前车门"
+        }
+      ]
+    },
+    {
+      "key": "door:rl:openness",
+      "tool": "vehicle_doors",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "door:rl:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[20]",
+          "tool_call_id": "call_34ebc6f79f4648309fc1422b",
+          "input": "左后车门打开百分之三十五"
+        },
+        {
+          "key": "door:rl:openness",
+          "tool": "vehicle_doors",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[21]",
+          "tool_call_id": "call_9c540df354fd4a8193aa2e6b",
+          "input": "再开大一点"
+        },
+        {
+          "key": "door:rl:openness",
+          "tool": "vehicle_doors",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[22]",
+          "tool_call_id": "call_96ea514ba0754125b0ce6574",
+          "input": "查询左后车门开度"
+        },
+        {
+          "key": "door:rl:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[23]",
+          "tool_call_id": "call_fae91f10d462424cbac7f280",
+          "input": "关闭左后车门"
+        }
+      ]
+    },
+    {
+      "key": "door:rr:openness",
+      "tool": "vehicle_doors",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "door:rr:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[28]",
+          "tool_call_id": "call_b37ef7f141264002ba39fddb",
+          "input": "右后车门打开百分之三十五"
+        },
+        {
+          "key": "door:rr:openness",
+          "tool": "vehicle_doors",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[29]",
+          "tool_call_id": "call_b73fbd1a49174a559c1567b6",
+          "input": "再开大一点"
+        },
+        {
+          "key": "door:rr:openness",
+          "tool": "vehicle_doors",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[30]",
+          "tool_call_id": "call_1c878ea9c7334167a0ba2dbf",
+          "input": "查询右后车门开度"
+        },
+        {
+          "key": "door:rr:openness",
+          "tool": "vehicle_doors",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[31]",
+          "tool_call_id": "call_b7e18699be8a4bdebdfc011c",
+          "input": "关闭右后车门"
+        }
+      ]
+    },
+    {
+      "key": "frunk:front:openness",
+      "tool": "vehicle_frunk",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "frunk:front:openness",
+          "tool": "vehicle_frunk",
+          "operation": "set",
+          "value": 0.3,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[36]",
+          "tool_call_id": "call_f47c2b9ab3f249e8b6d25049",
+          "input": "前备箱开到三成"
+        },
+        {
+          "key": "frunk:front:openness",
+          "tool": "vehicle_frunk",
+          "operation": "adjust",
+          "value": -0.1,
+          "actual": 0.2,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[37]",
+          "tool_call_id": "call_d7bae6fae8b040edafb18bbd",
+          "input": "再关小一点"
+        },
+        {
+          "key": "frunk:front:openness",
+          "tool": "vehicle_frunk",
+          "operation": "query",
+          "value": null,
+          "actual": 0.2,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[38]",
+          "tool_call_id": "call_0d539167a82d496c9d4467c4",
+          "input": "查询前备箱开度"
+        },
+        {
+          "key": "frunk:front:openness",
+          "tool": "vehicle_frunk",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[39]",
+          "tool_call_id": "call_31d4fda5070d43399611bc24",
+          "input": "关闭前备箱"
+        }
+      ]
+    },
+    {
+      "key": "headlights:front:brightness",
+      "tool": "vehicle_headlight_brightness",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "headlights:front:brightness",
+          "tool": "vehicle_headlight_brightness",
+          "operation": "set",
+          "value": 0.4,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[1]",
+          "tool_call_id": "call_a535a3c4f23c4d738daeef71",
+          "input": "前灯亮度设为百分之四十"
+        },
+        {
+          "key": "headlights:front:brightness",
+          "tool": "vehicle_headlight_brightness",
+          "operation": "adjust",
+          "value": -0.1,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[2]",
+          "tool_call_id": "call_20275644f9e74c2491da95eb",
+          "input": "前灯再暗一点"
+        },
+        {
+          "key": "headlights:front:brightness",
+          "tool": "vehicle_headlight_brightness",
+          "operation": "query",
+          "value": null,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[3]",
+          "tool_call_id": "call_e0a9895219b04f6c9ba29de7",
+          "input": "查询前灯亮度"
+        }
+      ]
+    },
+    {
+      "key": "headlights:front:mode",
+      "tool": "vehicle_headlight_mode",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "headlights:front:mode",
+          "tool": "vehicle_headlight_mode",
+          "operation": "set",
+          "value": "low",
+          "actual": "low",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[0]",
+          "tool_call_id": "call_0d7df85b1ea54a4a920e5b28",
+          "input": "打开近光灯"
+        },
+        {
+          "key": "headlights:front:mode",
+          "tool": "vehicle_headlight_mode",
+          "operation": "set",
+          "value": "high",
+          "actual": "high",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[4]",
+          "tool_call_id": "call_df45862353154732a1e73d34",
+          "input": "打开远光灯"
+        },
+        {
+          "key": "headlights:front:mode",
+          "tool": "vehicle_headlight_mode",
+          "operation": "query",
+          "value": null,
+          "actual": "high",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[5]",
+          "tool_call_id": "call_7b17f07578e1427f8c18e964",
+          "input": "查询前灯模式"
+        },
+        {
+          "key": "headlights:front:mode",
+          "tool": "vehicle_headlight_mode",
+          "operation": "set",
+          "value": "off",
+          "actual": "off",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[6]",
+          "tool_call_id": "call_a669bcbf0b654f8580bfe641",
+          "input": "关闭前灯"
+        }
+      ]
+    },
+    {
+      "key": "observation:scene:night",
+      "tool": "vehicle_observation",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "observation:scene:night",
+          "tool": "vehicle_observation",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[47]",
+          "tool_call_id": "call_8040cd194fb144febaa112eb",
+          "input": "打开夜间观察"
+        },
+        {
+          "key": "observation:scene:night",
+          "tool": "vehicle_observation",
+          "operation": "query",
+          "value": null,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[48]",
+          "tool_call_id": "call_3064f884f73d41a4b4229b9b",
+          "input": "查询夜间观察状态"
+        },
+        {
+          "key": "observation:scene:night",
+          "tool": "vehicle_observation",
+          "operation": "set",
+          "value": false,
+          "actual": false,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[49]",
+          "tool_call_id": "call_601b9e6fee2b4f32bf0dec4d",
+          "input": "关闭夜间观察"
+        }
+      ]
+    },
+    {
+      "key": "paint:body:color",
+      "tool": "vehicle_paint",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "paint:body:color",
+          "tool": "vehicle_paint",
+          "operation": "set",
+          "value": "#b13f47",
+          "actual": "#b13f47",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[32]",
+          "tool_call_id": "call_234d66d62d0d4ea5b8faa228",
+          "input": "车漆换成#b13f47"
+        },
+        {
+          "key": "paint:body:color",
+          "tool": "vehicle_paint",
+          "operation": "query",
+          "value": null,
+          "actual": "#b13f47",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[33]",
+          "tool_call_id": "call_3f71ebf125ed40e4963a17c1",
+          "input": "查询车漆颜色"
+        }
+      ]
+    },
+    {
+      "key": "scatter:scene:enabled",
+      "tool": "vehicle_scatter_switch",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "scatter:scene:enabled",
+          "tool": "vehicle_scatter_switch",
+          "operation": "set",
+          "value": false,
+          "actual": false,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[41]",
+          "tool_call_id": "call_649c4698f29c44ecb99d430f",
+          "input": "关闭丁达尔光束"
+        },
+        {
+          "key": "scatter:scene:enabled",
+          "tool": "vehicle_scatter_switch",
+          "operation": "set",
+          "value": true,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[42]",
+          "tool_call_id": "call_4cdaefefb19542d697faff10",
+          "input": "打开丁达尔光束"
+        },
+        {
+          "key": "scatter:scene:enabled",
+          "tool": "vehicle_scatter_switch",
+          "operation": "query",
+          "value": null,
+          "actual": true,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[46]",
+          "tool_call_id": "call_ba35bead1024418b92c78b9f",
+          "input": "查询丁达尔光束开关"
+        }
+      ]
+    },
+    {
+      "key": "scatter:scene:strength",
+      "tool": "vehicle_scatter_strength",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "scatter:scene:strength",
+          "tool": "vehicle_scatter_strength",
+          "operation": "set",
+          "value": 0.4,
+          "actual": 0.4,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[43]",
+          "tool_call_id": "call_73f71ad638c84fcd93a5e80a",
+          "input": "空气散射强度设为百分之四十"
+        },
+        {
+          "key": "scatter:scene:strength",
+          "tool": "vehicle_scatter_strength",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[44]",
+          "tool_call_id": "call_99b75a0bded440caaae600a8",
+          "input": "空气散射再增强一点"
+        },
+        {
+          "key": "scatter:scene:strength",
+          "tool": "vehicle_scatter_strength",
+          "operation": "query",
+          "value": null,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[45]",
+          "tool_call_id": "call_3cec1371d6e043549f02224f",
+          "input": "查询空气散射强度"
+        }
+      ]
+    },
+    {
+      "key": "trunk:rear:openness",
+      "tool": "vehicle_trunk",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "trunk:rear:openness",
+          "tool": "vehicle_trunk",
+          "operation": "set",
+          "value": 0.3,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[32]",
+          "tool_call_id": "call_08ab353e68334485b06e8daf",
+          "input": "后备箱开到三成"
+        },
+        {
+          "key": "trunk:rear:openness",
+          "tool": "vehicle_trunk",
+          "operation": "adjust",
+          "value": -0.1,
+          "actual": 0.2,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[33]",
+          "tool_call_id": "call_986be68acbc84969a5094c0e",
+          "input": "再关小一点"
+        },
+        {
+          "key": "trunk:rear:openness",
+          "tool": "vehicle_trunk",
+          "operation": "query",
+          "value": null,
+          "actual": 0.2,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[34]",
+          "tool_call_id": "call_4b341bc3f627432cabb38113",
+          "input": "查询后备箱开度"
+        },
+        {
+          "key": "trunk:rear:openness",
+          "tool": "vehicle_trunk",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[35]",
+          "tool_call_id": "call_c8df5cad3ea544be90377a73",
+          "input": "关闭后备箱"
+        },
+        {
+          "key": "trunk:rear:openness",
+          "tool": "vehicle_trunk",
+          "operation": "set",
+          "value": 1,
+          "actual": 1,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[50]",
+          "tool_call_id": "call_217958363fff4a558ddb420f",
+          "input": "把左前窗开一半，同时把后备箱打开"
+        }
+      ]
+    },
+    {
+      "key": "turnSignal:vehicle:mode",
+      "tool": "vehicle_turn_signals",
+      "operations": [
+        "set",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "turnSignal:vehicle:mode",
+          "tool": "vehicle_turn_signals",
+          "operation": "set",
+          "value": "left",
+          "actual": "left",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[7]",
+          "tool_call_id": "call_4b8d657c419a4ac3a8ea6046",
+          "input": "打开左转向灯"
+        },
+        {
+          "key": "turnSignal:vehicle:mode",
+          "tool": "vehicle_turn_signals",
+          "operation": "set",
+          "value": "right",
+          "actual": "right",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[8]",
+          "tool_call_id": "call_bbd6160245fd40918c677268",
+          "input": "打开右转向灯"
+        },
+        {
+          "key": "turnSignal:vehicle:mode",
+          "tool": "vehicle_turn_signals",
+          "operation": "set",
+          "value": "hazard",
+          "actual": "hazard",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[9]",
+          "tool_call_id": "call_8a5b35f8f5914867bdf5acf2",
+          "input": "打开双闪"
+        },
+        {
+          "key": "turnSignal:vehicle:mode",
+          "tool": "vehicle_turn_signals",
+          "operation": "query",
+          "value": null,
+          "actual": "hazard",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[10]",
+          "tool_call_id": "call_11299f8e3e044480b8b9e854",
+          "input": "查询转向灯模式"
+        },
+        {
+          "key": "turnSignal:vehicle:mode",
+          "tool": "vehicle_turn_signals",
+          "operation": "set",
+          "value": "off",
+          "actual": "off",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[11]",
+          "tool_call_id": "call_2d348fb88e91409da92d7996",
+          "input": "关闭转向灯"
+        }
+      ]
+    },
+    {
+      "key": "window:fl:openness",
+      "tool": "vehicle_windows",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[0]",
+          "tool_call_id": "call_b91e2a0f570e4deea6329199",
+          "input": "左前车窗打开百分之三十五"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[1]",
+          "tool_call_id": "call_15e6f6e458eb44059795bb50",
+          "input": "再开大一点"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[2]",
+          "tool_call_id": "call_312672885a314bf3939c97db",
+          "input": "查询左前车窗开度"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[3]",
+          "tool_call_id": "call_ad74b0ecc879459ba047dfde",
+          "input": "关闭左前车窗"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.5,
+          "actual": 0.5,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[50]",
+          "tool_call_id": "call_9e7ca801a1da42899715ea8c",
+          "input": "把左前窗开一半，同时把后备箱打开"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.2,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[51]",
+          "tool_call_id": "call_54b41976142640d7bf9a5d45",
+          "input": "左前窗先开到百分之二十，然后再开大十个百分点"
+        },
+        {
+          "key": "window:fl:openness",
+          "tool": "vehicle_windows",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.3,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[51]",
+          "tool_call_id": "call_54b41976142640d7bf9a5d45",
+          "input": "左前窗先开到百分之二十，然后再开大十个百分点"
+        }
+      ]
+    },
+    {
+      "key": "window:fr:openness",
+      "tool": "vehicle_windows",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "window:fr:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[8]",
+          "tool_call_id": "call_1f80db6ff6da4402869f43fc",
+          "input": "右前车窗打开百分之三十五"
+        },
+        {
+          "key": "window:fr:openness",
+          "tool": "vehicle_windows",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[9]",
+          "tool_call_id": "call_f7bfdb0189014efaba416df9",
+          "input": "再开大一点"
+        },
+        {
+          "key": "window:fr:openness",
+          "tool": "vehicle_windows",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[10]",
+          "tool_call_id": "call_b707ffc25d1a4c3eafa066a1",
+          "input": "查询右前车窗开度"
+        },
+        {
+          "key": "window:fr:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[11]",
+          "tool_call_id": "call_a417a67f09b4475585db5504",
+          "input": "关闭右前车窗"
+        }
+      ]
+    },
+    {
+      "key": "window:rl:openness",
+      "tool": "vehicle_windows",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "window:rl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[16]",
+          "tool_call_id": "call_def841d90da64e03a8017195",
+          "input": "左后车窗打开百分之三十五"
+        },
+        {
+          "key": "window:rl:openness",
+          "tool": "vehicle_windows",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[17]",
+          "tool_call_id": "call_301fe98dce5a454a8c6dd78c",
+          "input": "再开大一点"
+        },
+        {
+          "key": "window:rl:openness",
+          "tool": "vehicle_windows",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[18]",
+          "tool_call_id": "call_a5c4c16261774e0ca19c8050",
+          "input": "查询左后车窗开度"
+        },
+        {
+          "key": "window:rl:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[19]",
+          "tool_call_id": "call_27eccf11cb234335a4039e48",
+          "input": "关闭左后车窗"
+        }
+      ]
+    },
+    {
+      "key": "window:rr:openness",
+      "tool": "vehicle_windows",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "window:rr:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0.35,
+          "actual": 0.35,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[24]",
+          "tool_call_id": "call_b3d349688f844e188f87ea49",
+          "input": "右后车窗打开百分之三十五"
+        },
+        {
+          "key": "window:rr:openness",
+          "tool": "vehicle_windows",
+          "operation": "adjust",
+          "value": 0.1,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[25]",
+          "tool_call_id": "call_5b4b3cff7dd34d11be62b479",
+          "input": "再开大一点"
+        },
+        {
+          "key": "window:rr:openness",
+          "tool": "vehicle_windows",
+          "operation": "query",
+          "value": null,
+          "actual": 0.45,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[26]",
+          "tool_call_id": "call_5f1cd5efaa2f429d8e5bfe81",
+          "input": "查询右后车窗开度"
+        },
+        {
+          "key": "window:rr:openness",
+          "tool": "vehicle_windows",
+          "operation": "set",
+          "value": 0,
+          "actual": 0,
+          "status": "completed",
+          "evidence": "live-capabilities-segment-0-39.json#cases[27]",
+          "tool_call_id": "call_4d3788daba23493c9dea95c3",
+          "input": "关闭右后车窗"
+        }
+      ]
+    },
+    {
+      "key": "wiper:front:mode",
+      "tool": "vehicle_wiper_mode",
+      "operations": [
+        "set",
+        "adjust",
+        "query"
+      ],
+      "evidence": [
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "set",
+          "value": "low",
+          "actual": "low",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[34]",
+          "tool_call_id": "call_781bfb2593cc4447ae484c5c",
+          "input": "打开雨刷"
+        },
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "adjust",
+          "value": 1,
+          "actual": "high",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[35]",
+          "tool_call_id": "call_2b46b8fbb7464f38a850daaa",
+          "input": "再快一档"
+        },
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "query",
+          "value": null,
+          "actual": "high",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[36]",
+          "tool_call_id": "call_9d68ca4c48ed4256ba3a9521",
+          "input": "查询雨刷档位"
+        },
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "adjust",
+          "value": -1,
+          "actual": "low",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[37]",
+          "tool_call_id": "call_692654e20d924a8b8e796e70",
+          "input": "再慢一档"
+        },
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "set",
+          "value": "intermittent",
+          "actual": "intermittent",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[38]",
+          "tool_call_id": "call_c953153da9464f93ad67ff91",
+          "input": "雨刷设为间歇档"
+        },
+        {
+          "key": "wiper:front:mode",
+          "tool": "vehicle_wiper_mode",
+          "operation": "set",
+          "value": "off",
+          "actual": "off",
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[40]",
+          "tool_call_id": "call_fb622900c8aa4350b788ee55",
+          "input": "关掉"
+        }
+      ]
+    },
+    {
+      "key": "wiper:front:swipe",
+      "tool": "vehicle_wiper_once",
+      "operations": [
+        "trigger"
+      ],
+      "evidence": [
+        {
+          "key": "wiper:front:swipe",
+          "tool": "vehicle_wiper_once",
+          "operation": "trigger",
+          "value": "swipe_once",
+          "actual": 1,
+          "status": "completed",
+          "evidence": "live-capabilities-range-40-99.json#cases[39]",
+          "tool_call_id": "call_2dd83513873a4da8867398e6",
+          "input": "雨刷刮一下"
+        }
+      ]
+    }
+  ]
+}

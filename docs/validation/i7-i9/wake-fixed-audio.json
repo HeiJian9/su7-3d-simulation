@@ -1,0 +1,94 @@
+{
+  "at": "2026-10-28T05:25:40.894Z",
+  "mode": "real-local-kws-model+real-CosyVoice-fixed-input",
+  "human": false,
+  "errors": [],
+  "outputs": [
+    {
+      "text": "小爱同学",
+      "seconds": 1.52,
+      "keywords": [
+        {
+          "type": "keyword",
+          "keyword": "小爱同学",
+          "atSample": 24000
+        }
+      ],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 2.6,
+        "decodeMs": 137.94209999999657,
+        "rssBytes": 158121984
+      }
+    },
+    {
+      "text": "小爱同学",
+      "seconds": 1.52,
+      "keywords": [
+        {
+          "type": "keyword",
+          "keyword": "小爱同学",
+          "atSample": 65600
+        }
+      ],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 5.2,
+        "decodeMs": 223.95510000000286,
+        "rssBytes": 160489472
+      }
+    },
+    {
+      "text": "打开左前车窗",
+      "seconds": 2,
+      "keywords": [],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 8.2,
+        "decodeMs": 310.6212000000123,
+        "rssBytes": 166211584
+      }
+    },
+    {
+      "text": "我今天想去学校",
+      "seconds": 1.88,
+      "keywords": [],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 11.1,
+        "decodeMs": 398.3358000000262,
+        "rssBytes": 166457344
+      }
+    },
+    {
+      "text": "小王同学",
+      "seconds": 1.48,
+      "keywords": [],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 13.6,
+        "decodeMs": 475.74930000001405,
+        "rssBytes": 148766720
+      }
+    },
+    {
+      "text": "小爱同学，请打开车窗",
+      "seconds": 2.88,
+      "keywords": [
+        {
+          "type": "keyword",
+          "keyword": "小爱同学",
+          "atSample": 241600
+        }
+      ],
+      "metrics": {
+        "type": "metrics",
+        "audioSeconds": 17.5,
+        "decodeMs": 586.2649000000056,
+        "rssBytes": 148520960
+      }
+    }
+  ],
+  "workerTerminated": true,
+  "passed": true
+}

@@ -1,0 +1,29 @@
+{
+  "source": "Playwright actual rendered pixel comparison; viewport order follows browser-lighting-pixels.json",
+  "results": [
+    [
+      {
+        "target": "front",
+        "changed": 316680,
+        "meanDifference": 8.396380368093444
+      },
+      {
+        "target": "cabin",
+        "changed": 651866,
+        "meanDifference": 14.930222179664792
+      }
+    ],
+    [
+      {
+        "target": "front",
+        "changed": 106618,
+        "meanDifference": 6.565125110731423
+      },
+      {
+        "target": "cabin",
+        "changed": 225060,
+        "meanDifference": 12.62247646381379
+      }
+    ]
+  ]
+}

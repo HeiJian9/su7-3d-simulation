@@ -1,0 +1,410 @@
+[
+  {
+    "original": "docs/assets/cabin-lighting/door-0-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-0-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-0-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-0-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-100-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-100-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-100-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-100-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-50-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-50-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-50-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-50-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-open-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-open-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/door-open-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/door-open-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/volume-off-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/volume-off-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/volume-off-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/volume-off-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/volume-on-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/volume-on-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/cabin-lighting/volume-on-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/cabin-lighting/volume-on-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/dome-0-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/dome-0-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/dome-0-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/dome-0-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/dome-1-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/dome-1-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/dome-1-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/dome-1-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/ring-scatter-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/ring-scatter-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/ring-scatter-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/ring-scatter-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/ring-trunk-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/ring-trunk-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/ring-trunk-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/ring-trunk-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/seats-lit-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/seats-lit-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/dome-tail/seats-lit-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/dome-tail/seats-lit-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-0-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-0-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-0-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-0-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-0.5-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-0.5-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-0.5-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-0.5-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-1-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-1-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/frunk/bonnet-1-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/bonnet-1-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/frunk/wide-lighting-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/wide-lighting-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/frunk/wide-lighting-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/frunk/wide-lighting-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-door-closed-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-door-closed-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-door-closed-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-door-closed-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-door-open-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-door-open-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-door-open-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-door-open-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-closed-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-closed-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-closed-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-closed-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-full-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-full-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-full-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-full-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-half-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-half-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-trunk-half-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-trunk-half-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-blue-paint-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-blue-paint-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-blue-paint-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-blue-paint-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-cabin-blue100-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-cabin-blue100-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-cabin-blue100-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-cabin-blue100-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-cabin-purple40-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-cabin-purple40-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-cabin-purple40-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-cabin-purple40-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-high-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-high-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-high-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-high-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-low-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-low-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-low-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-low-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-off-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-off-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I5-lamp-off-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I5-lamp-off-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I6-cabin-sweep-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I6-cabin-sweep-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I6-cabin-sweep-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I6-cabin-sweep-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I6-exterior-sweep-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I6-exterior-sweep-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I6-exterior-sweep-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I6-exterior-sweep-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/clarification-panel-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/clarification-panel-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/clarification-panel-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/clarification-panel-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/speech-MOCK-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/speech-MOCK-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/speech-MOCK-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/speech-MOCK-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/su7-cabin-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/su7-cabin-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/su7-cabin-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/su7-cabin-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/su7-exterior-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/su7-exterior-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/su7-exterior-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/su7-exterior-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/lighting-followup/cabin-on-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/lighting-followup/cabin-on-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/lighting-followup/cabin-on-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/lighting-followup/cabin-on-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/front-low-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/front-low-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/front-low-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/front-low-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/front-turn-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/front-turn-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/front-turn-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/front-turn-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-hazard-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-hazard-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-hazard-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-hazard-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-open-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-open-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-open-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-open-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-right-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-right-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/native-lamps/rear-right-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/native-lamps/rear-right-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-cargo-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-cargo-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-cargo-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-cargo-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-closed-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-closed-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-closed-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-closed-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-closed-close-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-closed-close-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-closed-close-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-closed-close-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-full-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-full-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-full-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-full-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-half-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-half-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/trunk-correction/browser-half-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/trunk-correction/browser-half-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-all-doors-half-右-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-all-doors-half-右-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-all-doors-half-右-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-all-doors-half-右-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-all-doors-half-左-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-all-doors-half-左-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/I4-all-doors-half-左-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/I4-all-doors-half-左-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-0-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-0-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-0-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-0-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-100-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-100-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-100-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-100-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-50-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-50-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-右-50-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-右-50-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-0-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-0-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-0-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-0-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-100-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-100-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-100-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-100-Edge-1920x1080.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-50-Edge-1366x768.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-50-Edge-1366x768.png"
+  },
+  {
+    "original": "docs/assets/i4-i6/windows-左-50-Edge-1920x1080.png",
+    "currentEvidence": "docs/assets/i7-i9/regression/i4-i6/windows-左-50-Edge-1920x1080.png"
+  }
+]
