@@ -1,8 +1,7 @@
-import {Box3,Data3DTexture,Float32BufferAttribute,Group,LinearFilter,Matrix4,Mesh,Object3D,RedFormat,UnsignedByteType,Vector3} from 'three';
+import {Box3,Data3DTexture,Group,LinearFilter,Matrix4,Mesh,Object3D,RedFormat,UnsignedByteType,Vector3} from 'three';
 import paths from './data/native-ambient-paths.json';
-import dashboardProfile from './data/dashboard-profile.json';
 
-export type AmbientRoute={name:string;points:number[][];radius:number;gain:number};
+export type AmbientRoute={name:string;points:number[][];radius:number;gain:number;fill?:number};
 export const nativeRoutes:Record<string,AmbientRoute[]>=paths;
 export function ambientParent(object:Object3D,root:Object3D){
  let parent:Object3D|null=object;
@@ -23,12 +22,11 @@ export function groupedAmbientRoutes(model:Group){
 export function createCabinLightFields(model:Group){
  const root=model.getObjectByName('SU7_ROOT')!;model.updateMatrixWorld(true);
  const groups=groupedAmbientRoutes(model);
- // Dashboard diffusers retain their verified geometry; include their actual
- // surface samples in the same field, rather than estimated point positions.
+ // The two lower dashboard diffusers remain. The crown is already represented
+ // by the original Mesh54 surface routes, so never sample its hidden overlays.
  model.traverse(o=>{
-  if(!(o instanceof Mesh)||!/^AMBIENT_DASH/.test(o.name))return;
-  const fitted=dashboardProfile.meshes.find(m=>m.node===o.name);
-  const p=fitted?new Float32BufferAttribute(fitted.centreline,3):o.geometry.getAttribute('position'),matrix=new Matrix4().copy(root.matrixWorld).invert().multiply(o.matrixWorld);
+  if(!(o instanceof Mesh)||!/^AMBIENT_DASHBOARD/.test(o.name))return;
+  const p=o.geometry.getAttribute('position'),matrix=new Matrix4().copy(root.matrixWorld).invert().multiply(o.matrixWorld);
   const points:number[][]=[];const v=new Vector3();
   for(let i=0;i<p.count;i+=Math.max(1,Math.floor(p.count/40)))points.push(v.fromBufferAttribute(p,i).applyMatrix4(matrix).toArray());
   groups.get(root)!.push({name:o.name,points,radius:.003,gain:1});

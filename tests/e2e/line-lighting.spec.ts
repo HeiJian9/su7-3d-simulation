@@ -7,7 +7,7 @@ test('front inlay upper edges and current line fields share intensity, colour an
  await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();
  await page.getByRole('button',{name:'氛围空间',exact:true}).click();await page.getByRole('button',{name:'氛围配色：暮光紫',exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();
  const canvas=page.locator('canvas'),read=async(name:string)=>JSON.parse((await canvas.getAttribute(name))!);
- await expect.poll(async()=>(await read('data-native-ambient')).routeCount).toBe(29);
+ await expect.poll(async()=>(await read('data-native-ambient')).routeCount).toBe(31);
  const native=await read('data-native-ambient');for(const suffix of ['left','right'])expect(native.zones.flatMap((z:{routes:string[]})=>z.routes)).toContain('front-inlay-upper-'+suffix);
  await expect.poll(async()=>(await read('data-volume')).cabinFields.reduce((n:number,f:{routes:number})=>n+f.routes,0)).toBe(33);
  await page.screenshot({path:`docs/assets/line-lighting/front-night-${info.project.name}.png`});

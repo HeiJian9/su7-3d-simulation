@@ -1,0 +1,39 @@
+{
+  "version": "0.7.8",
+  "date": "2026-10-29",
+  "change": "Original visible Mesh54 trim emission; no crown overlay geometry",
+  "unit": {
+    "passed": 106,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-10-29T01:24:04.973Z",
+    "duration": 152321.218,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "assetCheck": "passed",
+  "sourceBlenderSha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
+  "runtimeGlbSha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+  "nativeRoutes": 31,
+  "sourceMeshes": 11,
+  "totalAmbientZones": 33,
+  "hiddenAddedDiffusers": 23,
+  "doorEndpointToleranceMetres": 5e-05,
+  "positionsNormalsUvsIndicesUnmodified": true,
+  "newRealApiEvidence": false,
+  "newHumanEvidence": false,
+  "secretScan": {
+    "at": "2026-10-29T01:24:45.659Z",
+    "scope": "Git tracked and nonignored untracked deliverables plus production web/server builds; local .env excluded",
+    "checked": 1306,
+    "credentialValuesPrinted": false,
+    "leakFiles": [],
+    "passed": true
+  }
+}

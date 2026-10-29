@@ -14,6 +14,7 @@ beforeAll(async()=>{
   const primitive=node.getMesh()?.listPrimitives()[0];let object:Group|Mesh;
   if(primitive){
    const geometry=new BufferGeometry();geometry.setAttribute('position',new Float32BufferAttribute(primitive.getAttribute('POSITION')!.getArray()!,3));
+   for(const [semantic,name,size]of [['NORMAL','normal',3],['TEXCOORD_0','uv',2]]as const){const attr=primitive.getAttribute(semantic);if(attr)geometry.setAttribute(name,new Float32BufferAttribute(attr.getArray()!,size));}
    if(primitive.getIndices())geometry.setIndex(Array.from(primitive.getIndices()!.getArray()!));
    object=new Mesh(geometry,new MeshStandardMaterial());
   }else object=new Group();
@@ -40,11 +41,12 @@ describe('native ambient trim on actual runtime asset',()=>{
   const original=new Map<Mesh,{geometry:BufferGeometry;material:Mesh['material'];visible:boolean}>();
   model.traverse(o=>{if(o instanceof Mesh)original.set(o,{geometry:o.geometry,material:o.material,visible:o.visible});});
   const b=bindNativeAmbient(model);
-  expect(b.zones).toHaveLength(10);expect(b.replaced).toHaveLength(21);expect(b.routeCount).toBe(29);
+  expect(b.zones).toHaveLength(11);expect(b.replaced).toHaveLength(23);expect(b.routeCount).toBe(31);
   for(const {node,vertices} of b.zones){
    expect(vertices).toBeGreaterThan(0);const mesh=model.getObjectByName(node) as Mesh;
    const g=mesh.geometry,p=g.getAttribute('position');
    expect(Array.from(p.array)).toEqual(Array.from(original.get(mesh)!.geometry.getAttribute('position').array));
+   for(const name of ['normal','uv'])if(g.getAttribute(name))expect(g.getAttribute(name).array).toEqual(original.get(mesh)!.geometry.getAttribute(name).array);
    expect(g.index?.array).toEqual(original.get(mesh)!.geometry.index?.array);
    const idx=g.index,edges:Array<[Vector3,Vector3]>=[];
    const at=(i:number)=>new Vector3().fromBufferAttribute(p,idx?idx.getX(i):i).applyMatrix4(mesh.matrixWorld);
@@ -64,7 +66,23 @@ describe('native ambient trim on actual runtime asset',()=>{
    for(const p of a){const mirrored=new Vector3(-p.x,p.y,p.z);expect(Math.min(...b.map(q=>q.distanceTo(mirrored))),`${left}/${right}: ${p.toArray()}`).toBeLessThan(.0002);}
   }
   for(const name of b.replaced)expect(model.getObjectByName(name)!.visible).toBe(false);
-  expect(model.getObjectByName('AMBIENT_DASH_CROWN_LEFT')?.visible??true).toBe(true);
+  for(const side of ['LEFT','RIGHT'])expect(model.getObjectByName(`AMBIENT_DASH_CROWN_${side}`)?.visible).toBe(false);
+  expect(model.getObjectByName('AMBIENT_DASHBOARD')?.visible).toBe(true);
+  // The visible dashboard trim and door trim share the actual source surface
+  // height; do not accept a fitted, raised cap merely near the same centreline.
+  for(const [route,door]of [[paths.Mesh54[0],paths.Mesh47[0]],[paths.Mesh54[1],paths.Mesh34[0]]]){
+   const endpoint=route.points[route.name.endsWith('left')?0:route.points.length-1];
+   expect(new Vector3(...endpoint).distanceTo(new Vector3(...door.points[0]))).toBeLessThan(.00005);
+   const crown=model.getObjectByName('Mesh54') as Mesh,trim=model.getObjectByName(route.name.endsWith('left')?'Mesh47':'Mesh34') as Mesh;
+   const points=(mesh:Mesh)=>{const p=mesh.geometry.getAttribute('position');return Array.from({length:p.count},(_,i)=>new Vector3().fromBufferAttribute(p,i).applyMatrix4(mesh.matrixWorld));};
+   const doorPoints=points(trim),cap=points(crown).filter(p=>p.distanceTo(new Vector3(...endpoint))<.008);
+   expect(cap.length).toBeGreaterThanOrEqual(2);
+   // Compare the entire real trim cross-section, including its inner border.
+   // Matching only the centreline previously allowed a raised cap to pass.
+   for(const p of cap)expect(Math.min(...doorPoints.map(q=>q.distanceTo(p)))).toBeLessThan(.00005);
+  }
+  const crown=model.getObjectByName('Mesh54') as Mesh;
+  expect(crown.visible).toBe(true);expect((crown.material as MeshStandardMaterial).name).toBe('NATIVE_AMBIENT_Mesh54');
   // Door trim remains under its animated door parent, never attached to glass.
   for(const name of ['Mesh43','Mesh30','Mesh47','Mesh34','Mesh40','Mesh27']){
    let parent=model.getObjectByName(name)!.parent;while(parent&&!parent.name.startsWith('DOOR_'))parent=parent.parent;

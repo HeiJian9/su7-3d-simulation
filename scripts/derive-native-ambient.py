@@ -10,18 +10,23 @@ from pathlib import Path
 root = Path(__file__).resolve().parent.parent
 paths = {}
 
-def route(mesh, name, source, indices, radius=.0032, gain=1, mirror=False):
+def route(mesh, name, source, indices, radius=.0032, gain=1, mirror=False, fill=.22):
     ob = bpy.data.objects[source]
     points = []
     for i in indices:
         p = ob.matrix_world @ ob.data.vertices[i].co
         points.append([round(-p.x if mirror else p.x, 7), round(p.z, 7), round(-p.y, 7)])
-    paths.setdefault(mesh, []).append(dict(name=name, points=points, radius=radius, gain=gain))
+    paths.setdefault(mesh, []).append(dict(name=name, points=points, radius=radius, gain=gain, fill=fill))
 
 route('Mesh59', 'console-perimeter', 'Mesh59', [0,1,2,4,8,11,13,12,15,17,18,20,62,59,57,55,54,44,42,41,39,0], gain=1.15)
+# Mesh54 is the visible original textured trim, sitting over the structural
+# Mesh53 edge. Illuminating Mesh53 alone is occluded by this trim; adding a
+# diffuser above it introduced a height step. Use the actual visible faces.
+route('Mesh54', 'dashboard-crown-left', 'Mesh54', [778,775,773,772,770,768,766,764,761,759,757,756], radius=.0085, fill=.9)
+route('Mesh54', 'dashboard-crown-right', 'Mesh54', [756,754,669,667,666,663,661,660,658,591,590,593,595,632,635,637,640], radius=.0085, fill=.9)
 for mirror, front, rear, upper, inlay in [(False,'Mesh47','Mesh40','Mesh43','Mesh49'),(True,'Mesh34','Mesh27','Mesh30','Mesh36')]:
     side = 'right' if mirror else 'left'
-    route(front, 'front-upper-'+side, 'Mesh47', [0,1,4,6,8,14,10,11], mirror=mirror)
+    route(front, 'front-upper-'+side, 'Mesh47', [0,1,4,6,8,14,10,11], radius=.0085, fill=.9, mirror=mirror)
     route(front, 'front-armrest-'+side, 'Mesh47', [18,20,21,23,24,22,19,18], gain=.9, mirror=mirror)
     route(front, 'front-handle-'+side, 'Mesh47', [37,39,41,43,45], gain=.85, mirror=mirror)
     route(front, 'front-speaker-'+side, 'Mesh47', [58,56,60,61,62,63,65,76,78,79,77,74,73,72,71,70,69,68,67,64,57,58], radius=.0028, gain=.8, mirror=mirror)
