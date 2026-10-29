@@ -1,4 +1,6 @@
-# SU7 智能座舱 · 0.7.6
+# SU7 智能座舱 · 0.7.7
+
+0.7.7：补齐仪表台左右端各约 3.4 cm 的原生饰边路径，使其接到前门上沿起点。
 
 0.7.6：仪表台上沿沿原走线适度加宽，统一发光倍率，左右接头共享截面，改善前方偏浅和接点粗细不一致。见 [本轮报告](docs/CROWN_PROFILE.md)。
 
@@ -22,7 +24,7 @@
 
 交付索引：[I7–I9 报告](docs/I7_I9_VALIDATION.md)、[工具与参数](docs/LLM_TOOLS.md)、[能力证据矩阵](docs/CAPABILITY_COVERAGE.md)、[R01–R19](docs/REQUIREMENTS_TRACEABILITY.md)、[过程与录像索引](docs/SESSION_LOG.md)。真实 API 固定音源与真人分别记录，尚未将整轮标为全部通过。
 
-本地交付包：`deliverables/SU7-0.7.6.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
+本地交付包：`deliverables/SU7-0.7.7.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
 
 本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮视觉报告目录为 `docs/validation/crown-profile/`，0.7.5 光场证据保存在 `docs/validation/line-lighting/`，0.7.4 原生饰边证据保存在 `docs/validation/native-ambient/`，0.7.3 浏览器与真实 API 报告目录为 `docs/validation/trim-dialogue/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
 

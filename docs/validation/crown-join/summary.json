@@ -1,0 +1,29 @@
+{
+  "version": "0.7.7",
+  "date": "2026-10-29",
+  "fix": "Extend both crown ends along existing Mesh53 edges to the front-door upper-rail origins",
+  "endpointDifference": {
+    "leftMm": 0.03521949744111843,
+    "rightMm": 0.035124141270710375
+  },
+  "limitMm": 0.05,
+  "unit": {
+    "numTotalTests": 107,
+    "numPassedTests": 107,
+    "numFailedTests": 0
+  },
+  "browser": {
+    "startTime": "2026-10-29T00:43:35.262Z",
+    "duration": 24767.391,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "sourceAssetsUnchanged": true,
+  "newHumanEvidence": false,
+  "newRealApiEvidence": false
+}

@@ -10,8 +10,8 @@ root=Path(__file__).resolve().parent.parent
 source=bpy.data.objects['Mesh53'];points=[source.matrix_world@v.co for v in source.data.vertices]
 source.data.calc_loop_triangles()
 tree=BVHTree.FromPolygons(points,[list(p.vertices) for p in source.data.loop_triangles],all_triangles=True)
-routes={'AMBIENT_DASH_CROWN_LEFT':[6793,6791,6773,5948,5943,5942,5940,5939,5937,5936,5934],
-        'AMBIENT_DASH_CROWN_RIGHT':[8300,8302,8304,8305,8307,8309,8311,8312,7704,8206,8208,7699,7227,6869,6794,6795]}
+routes={'AMBIENT_DASH_CROWN_LEFT':[7702,6793,6791,6773,5948,5943,5942,5940,5939,5937,5936,5934],
+        'AMBIENT_DASH_CROWN_RIGHT':[8300,8302,8304,8305,8307,8309,8311,8312,7704,8206,8208,7699,7227,6869,6794,6795,9850]}
 records=[];width=.0048;offset=.00055;up=Vector((0,0,1));pieces=[];columns=9
 for name,indices in routes.items():
     anchors=[points[i] for i in indices];centres=[]
