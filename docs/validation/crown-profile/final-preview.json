@@ -1,0 +1,185 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/crown-profile.spec.ts",
+      "--project=Edge-1920x1080",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "crown-profile.spec.ts",
+      "file": "crown-profile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "dashboard crown remains continuous and legible at low brightness and close viewpoints",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-29T00:22:37.303Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "crown-profile",
+                      "contentType": "application/json",
+                      "body": "eyJuYXRpdmUiOnsiem9uZXMiOlt7Im5vZGUiOiJNZXNoNDciLCJ2ZXJ0aWNlcyI6MTAzLCJyb3V0ZXMiOlsiZnJvbnQtdXBwZXItbGVmdCIsImZyb250LWFybXJlc3QtbGVmdCIsImZyb250LWhhbmRsZS1sZWZ0IiwiZnJvbnQtc3BlYWtlci1sZWZ0Il19LHsibm9kZSI6Ik1lc2g0OSIsInZlcnRpY2VzIjoyMDMyLCJyb3V0ZXMiOlsiZnJvbnQtaW5sYXktbGVmdCIsImZyb250LWlubGF5LXVwcGVyLWxlZnQiXX0seyJub2RlIjoiTWVzaDM0IiwidmVydGljZXMiOjk5LCJyb3V0ZXMiOlsiZnJvbnQtdXBwZXItcmlnaHQiLCJmcm9udC1hcm1yZXN0LXJpZ2h0IiwiZnJvbnQtaGFuZGxlLXJpZ2h0IiwiZnJvbnQtc3BlYWtlci1yaWdodCJdfSx7Im5vZGUiOiJNZXNoMzYiLCJ2ZXJ0aWNlcyI6MjM0Niwicm91dGVzIjpbImZyb250LWlubGF5LXJpZ2h0IiwiZnJvbnQtaW5sYXktdXBwZXItcmlnaHQiXX0seyJub2RlIjoiTWVzaDQwIiwidmVydGljZXMiOjI5LCJyb3V0ZXMiOlsicmVhci1hcm1yZXN0LWxlZnQiLCJyZWFyLWhhbmRsZS1sZWZ0IiwicmVhci1zcGVha2VyLWxlZnQiXX0seyJub2RlIjoiTWVzaDQzIiwidmVydGljZXMiOjksInJvdXRlcyI6WyJyZWFyLXVwcGVyLWxlZnQiLCJyZWFyLWlubGF5LWxlZnQiXX0seyJub2RlIjoiTWVzaDI3IiwidmVydGljZXMiOjI5LCJyb3V0ZXMiOlsicmVhci1hcm1yZXN0LXJpZ2h0IiwicmVhci1oYW5kbGUtcmlnaHQiLCJyZWFyLXNwZWFrZXItcmlnaHQiXX0seyJub2RlIjoiTWVzaDMwIiwidmVydGljZXMiOjksInJvdXRlcyI6WyJyZWFyLXVwcGVyLXJpZ2h0IiwicmVhci1pbmxheS1yaWdodCJdfSx7Im5vZGUiOiJNZXNoNTMiLCJ2ZXJ0aWNlcyI6NDI0OCwicm91dGVzIjpbImNlbnRyZS1ib3gtbGVmdCIsImNlbnRyZS1ib3gtdG9wLWxlZnQiLCJjZW50cmUtYm94LXJpZ2h0IiwiY2VudHJlLWJveC10b3AtcmlnaHQiLCJjZW50cmUtYm94LXJlYXIiLCJjZW50cmUtYm94LXRvcC1yZWFyIl19LHsibm9kZSI6Ik1lc2g1OSIsInZlcnRpY2VzIjo2NCwicm91dGVzIjpbImNvbnNvbGUtcGVyaW1ldGVyIl19XSwicm91dGVDb3VudCI6MjksInJlcGxhY2VkIjpbIkFNQklFTlRfQ09OU09MRV9MRUZUIiwiQU1CSUVOVF9DT05TT0xFX1JJR0hUIiwiQU1CSUVOVF9SRUFSX0NPTlNPTEUiLCJBTUJJRU5UX1RVTk5FTF9MRUZUIiwiQU1CSUVOVF9UVU5ORUxfUklHSFQiLCJBTUJJRU5UX0RPT1JfRkwiLCJBTUJJRU5UX0hBTkRMRV9GTCIsIkFNQklFTlRfSU5MQVlfRkwiLCJBTUJJRU5UX1NQRUFLRVJfRkwiLCJBTUJJRU5UX0RPT1JfRlIiLCJBTUJJRU5UX0hBTkRMRV9GUiIsIkFNQklFTlRfSU5MQVlfRlIiLCJBTUJJRU5UX1NQRUFLRVJfRlIiLCJBTUJJRU5UX0RPT1JfUkwiLCJBTUJJRU5UX0hBTkRMRV9STCIsIkFNQklFTlRfSU5MQVlfUkwiLCJBTUJJRU5UX1NQRUFLRVJfUkwiLCJBTUJJRU5UX0RPT1JfUlIiLCJBTUJJRU5UX0hBTkRMRV9SUiIsIkFNQklFTlRfSU5MQVlfUlIiLCJBTUJJRU5UX1NQRUFLRVJfUlIiXSwib3JpZ2luYWxTdXJmYWNlcyI6dHJ1ZSwicG93ZXIiOjAsImVtaXNzaW9uIjowfSwiZXJyb3JzIjpbXSwicmVhbFNwZWVjaCI6ZmFsc2V9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f87b50e9ac39c64d0ca2-f47bd9dde40316be9ef2",
+          "file": "crown-profile.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-29T00:22:36.062Z",
+    "duration": 13060.358,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

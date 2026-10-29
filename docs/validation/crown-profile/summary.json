@@ -1,0 +1,57 @@
+{
+  "version": "0.7.6",
+  "date": "2026-10-29",
+  "profile": {
+    "width": 0.0048,
+    "columns": 9,
+    "surfaceOffset": 0.00055,
+    "diffuserRise": 0.0014,
+    "emission": 1.8
+  },
+  "sections": 561,
+  "triangles": 8956,
+  "checks": {
+    "unit": {
+      "numTotalTests": 107,
+      "numPassedTests": 107,
+      "numFailedTests": 0
+    },
+    "browser": {
+      "startTime": "2026-10-29T00:33:57.398Z",
+      "duration": 122436.77900000001,
+      "expected": 22,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "assets": "passed",
+    "surfaceDistanceLimitMm": 1.5,
+    "sharedSectionCoincidenceLimitMm": 0.001
+  },
+  "prototypeEvidence": {
+    "preview.json": "Rejected native-surface-only preview: the trim lip occluded the emission.",
+    "fitted-preview.json": "Intermediate flat fitted profile, superseded.",
+    "final-preview.json": "Intermediate wider flat profile, superseded.",
+    "flat-profile-regression.json": "22 passing functional regressions before the rounded final section.",
+    "rounded-preview.json": "One rounded preview, followed by final full regression."
+  },
+  "newHumanEvidence": false,
+  "newRealApiEvidence": false,
+  "limitations": [
+    "Perspective still changes apparent pixel thickness.",
+    "Only the two crown diffusers are replaced at runtime; baseline Blender and GLB files remain unchanged."
+  ],
+  "files": {
+    "assets/source/blender/su7-enhanced.blend": {
+      "sha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
+      "unchanged": true
+    },
+    "apps/web/public/models/su7-runtime.glb": {
+      "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+      "unchanged": true
+    }
+  }
+}
