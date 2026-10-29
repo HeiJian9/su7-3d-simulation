@@ -11,7 +11,7 @@ test('product layout keeps all main controls reachable and moves attribution and
  for(const name of ['开始录音','进入座舱','回到车辆','氛围空间'])await expect(page.getByRole('button',{name,exact:true})).toBeInViewport();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:`docs/assets/final-polish/exterior-${info.project.name}.png`});
- await page.getByRole('button',{name:'操作帮助',exact:true}).click();await expect(page.getByRole('link',{name:'Xiaomi SU7 — Mona x Supercars'})).toBeVisible();await expect(page.getByRole('link',{name:'CC BY 4.0'})).toBeVisible();
+ await page.getByRole('button',{name:'操作帮助',exact:true}).click();await expect(page.getByRole('link',{name:'Xiaomi SU7 — Mona x Supercars'})).toBeVisible();await expect(page.getByRole('link',{name:'CC BY 4.0'})).toHaveCount(0);await expect(page.getByRole('dialog')).not.toContainText('原作来源 Sketchfab');
  await page.getByRole('button',{name:'调试记录',exact:true}).click();await expect(page.getByRole('combobox',{name:'助手路由'})).toBeVisible();await expect(page.getByTestId('asset-status')).toContainText('ready');
  await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();await expect(page.getByTestId('performance')).toHaveCount(0);
 });
