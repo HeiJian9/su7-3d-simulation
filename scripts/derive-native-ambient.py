@@ -26,6 +26,7 @@ for mirror, front, rear, upper, inlay in [(False,'Mesh47','Mesh40','Mesh43','Mes
     route(front, 'front-handle-'+side, 'Mesh47', [37,39,41,43,45], gain=.85, mirror=mirror)
     route(front, 'front-speaker-'+side, 'Mesh47', [58,56,60,61,62,63,65,76,78,79,77,74,73,72,71,70,69,68,67,64,57,58], radius=.0028, gain=.8, mirror=mirror)
     route(inlay, 'front-inlay-'+side, 'Mesh49', [433,436,438,439,442,444], radius=.0034, mirror=mirror)
+    route(inlay, 'front-inlay-upper-'+side, 'Mesh49', [668,664,660,658,657,654,652], radius=.0034, mirror=mirror)
     route(upper, 'rear-upper-'+side, 'Mesh43', [2,3,5,6,8], mirror=mirror)
     route(upper, 'rear-inlay-'+side, 'Mesh43', [1,0,4,7,8], radius=.0034, mirror=mirror)
     route(rear, 'rear-armrest-'+side, 'Mesh40', [8,7,5,6], gain=.9, mirror=mirror)

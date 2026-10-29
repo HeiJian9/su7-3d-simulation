@@ -1,0 +1,132 @@
+{
+  "version": "0.7.5",
+  "date": "2026-10-29",
+  "baseline": "8f76808",
+  "current": {
+    "nativeRoutes": 29,
+    "dashboardRoutes": 4,
+    "lightFields": 5,
+    "voxelDataBytes": 245760,
+    "physicalLights": 16,
+    "footwellShadowLights": 4,
+    "frontUpperInlayBothSides": true,
+    "allExistingCoverageRetained": true
+  },
+  "checks": {
+    "unit": {
+      "numTotalTests": 106,
+      "numPassedTests": 106,
+      "numFailedTests": 0
+    },
+    "browser": {
+      "startTime": "2026-10-28T23:58:34.144Z",
+      "duration": 170760.961,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "assets": "passed"
+  },
+  "renderEvidence": [
+    {
+      "imageChanges": [
+        {
+          "mean": 1.2692226938265139,
+          "brighter": 432366
+        },
+        {
+          "mean": 2.5029184513304616,
+          "brighter": 476162
+        }
+      ],
+      "fields": [
+        {
+          "parent": "SU7_ROOT",
+          "routes": 11,
+          "nonzero": 12733
+        },
+        {
+          "parent": "DOOR_FL_ROOT",
+          "routes": 6,
+          "nonzero": 10751
+        },
+        {
+          "parent": "DOOR_RL_ROOT",
+          "routes": 5,
+          "nonzero": 12881
+        },
+        {
+          "parent": "DOOR_FR_ROOT",
+          "routes": 6,
+          "nonzero": 10751
+        },
+        {
+          "parent": "DOOR_RR_ROOT",
+          "routes": 5,
+          "nonzero": 12881
+        }
+      ],
+      "errors": []
+    },
+    {
+      "imageChanges": [
+        {
+          "mean": 1.3760766449303452,
+          "brighter": 204367
+        },
+        {
+          "mean": 2.6680167049251504,
+          "brighter": 224973
+        }
+      ],
+      "fields": [
+        {
+          "parent": "SU7_ROOT",
+          "routes": 11,
+          "nonzero": 12733
+        },
+        {
+          "parent": "DOOR_FL_ROOT",
+          "routes": 6,
+          "nonzero": 10751
+        },
+        {
+          "parent": "DOOR_RL_ROOT",
+          "routes": 5,
+          "nonzero": 12881
+        },
+        {
+          "parent": "DOOR_FR_ROOT",
+          "routes": 6,
+          "nonzero": 10751
+        },
+        {
+          "parent": "DOOR_RR_ROOT",
+          "routes": 5,
+          "nonzero": 12881
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "newHumanEvidence": false,
+  "newRealApiEvidence": false,
+  "limitations": [
+    "Localized material irradiance and air scattering approximations, not full global illumination or multi-scattering.",
+    "No new subjective human appearance acceptance inferred from automated screenshots."
+  ],
+  "files": {
+    "assets/source/blender/su7-enhanced.blend": {
+      "sha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
+      "unchanged": true
+    },
+    "apps/web/public/models/su7-runtime.glb": {
+      "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+      "unchanged": true
+    }
+  }
+}

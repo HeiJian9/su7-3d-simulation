@@ -1,13 +1,14 @@
 import {useEffect,useMemo,useRef} from 'react';
 import {useFrame} from '@react-three/fiber';
-import {Box3,Color,DepthTexture,Group,HalfFloatType,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,Vector2,Vector3,WebGLRenderTarget,type PointLight,type SpotLight} from 'three';
+import {Box3,Color,DepthTexture,Group,HalfFloatType,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,Vector2,Vector3,WebGLRenderTarget,type SpotLight} from 'three';
 import {FullScreenQuad} from 'three/examples/jsm/postprocessing/Pass.js';
 import {useVehicle,actualValues,completeExecutions} from './vehicle';
 import mapping from './data/vehicle-mapping.json';
+import {createCabinLightFields} from './ambientLighting';
 
 // Integrate scattering only between the camera and the actual scene depth.
 // This is a volume integral through soft cones, with no visible cone mesh.
-const cabinLightCount=mapping.materialRoles.ambient.lights.length;
+const cabinFieldCount=5;
 const fragmentShader=`
 uniform sampler2D tScene;
 uniform sampler2D tDepth;
@@ -22,8 +23,11 @@ uniform float headlightsOn;
 uniform vec3 signalOrigins[6];
 uniform vec3 signalDirections[6];
 uniform float signalPowers[6];
-uniform vec3 cabinOrigins[${cabinLightCount}];
-uniform float cabinPowers[${cabinLightCount}];
+${Array.from({length:cabinFieldCount},(_,i)=>`uniform highp sampler3D cabinMap${i};`).join('\n')}
+uniform mat4 cabinToField[${cabinFieldCount}];
+uniform vec3 cabinMin[${cabinFieldCount}];
+uniform vec3 cabinSize[${cabinFieldCount}];
+uniform float cabinPower;
 uniform vec3 cabinColor;
 uniform vec3 tailOrigins[32];
 uniform int tailCount;
@@ -35,6 +39,13 @@ uniform float domePowers[2];
 uniform vec3 boundsMin;
 uniform vec3 boundsMax;
 varying vec2 vUv;
+float cabinField(vec3 p){float result=0.;
+${Array.from({length:cabinFieldCount},(_,i)=>`{
+vec3 q=(cabinToField[${i}]*vec4(p,1.)).xyz;
+vec3 uv=(q-cabinMin[${i}])/cabinSize[${i}];
+if(all(greaterThan(uv,vec3(0.)))&&all(lessThan(uv,vec3(1.))))result=max(result,texture(cabinMap${i},uv).r);
+}`).join('\n')}
+return result;}
 float field(vec3 p,vec3 lamp,vec3 ray){
   vec3 direction=normalize(vec3(lamp.x,.025,mix(-5.3,-14.,highBeam))-lamp);
   vec3 q=p-lamp;float along=dot(q,direction);
@@ -90,13 +101,11 @@ void main(){
       }
       for(int j=0;j<2;j++)if(domePowers[j]>.0)
         light+=vec3(1.,.89,.70)*domePowers[j]*domeField(p,domeOrigins[j],domeDirections[j])*.22;
-      // Only localized cabin air around the concealed lights, not a fog overlay.
-      if(abs(p.x)<.79&&p.y>.32&&p.y<1.32&&p.z>-.9&&p.z<1.25){
-        for(int j=0;j<${cabinLightCount};j++)if(cabinPowers[j]>.0){
-          float d=length(p-cabinOrigins[j]);
-          light+=cabinColor*cabinPowers[j]*(1.-smoothstep(.03,.40,d))*.10;
-        }
-      }
+      // The volume follows every current emitting line; each door's sampling
+      // matrix moves its field with the actual animated door. Exterior-side
+      // cells and cells below the cabin floor contain no light.
+      if(cabinPower>0.&&p.y>.32&&p.y<1.32&&p.z>-.98&&p.z<1.35)
+        light+=cabinColor*cabinPower*cabinField(p)*.65;
       scatter+=light*density*stepLength*exp(-density*t*.12);
     }
   }
@@ -114,6 +123,7 @@ export function VolumetricLights({model}:{model:Group}){
     const target=new WebGLRenderTarget(1,1,{type:HalfFloatType,depthBuffer:true,samples:4});
     target.depthTexture=new DepthTexture(1,1);
     const root=model.getObjectByName('SU7_ROOT')!;model.updateWorldMatrix(true,true);
+    const cabinFields=createCabinLightFields(model);
     const inverse=new Matrix4().copy(root.matrixWorld).invert();
     const sources:Array<{mesh:Mesh;center:Vector3;direction:Vector3;side:'left'|'right';rear:boolean}>=[];
     model.traverse(object=>{
@@ -131,17 +141,18 @@ export function VolumetricLights({model}:{model:Group}){
       }
     });
     const vectors=(count:number)=>Array.from({length:count},()=>new Vector3());
-    const material=new ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{tScene:{value:target.texture},tDepth:{value:target.depthTexture},inverseProjection:{value:new Matrix4()},cameraWorld:{value:new Matrix4()},rootInverse:{value:new Matrix4()},eye:{value:new Vector3()},lamps:{value:Object.values(mapping.materialRoles.headlights).map(c=>new Vector3().fromArray(c.lightPosition).add(new Vector3(0,0,-.025)))},density:{value:.15},highBeam:{value:0},headlightsOn:{value:0},signalOrigins:{value:vectors(6)},signalDirections:{value:vectors(6)},signalPowers:{value:Array(6).fill(0)},cabinOrigins:{value:vectors(cabinLightCount)},cabinPowers:{value:Array(cabinLightCount).fill(0)},cabinColor:{value:new Color()},boundsMin:{value:new Vector3()},boundsMax:{value:new Vector3()}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader});
+    const material=new ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{tScene:{value:target.texture},tDepth:{value:target.depthTexture},inverseProjection:{value:new Matrix4()},cameraWorld:{value:new Matrix4()},rootInverse:{value:new Matrix4()},eye:{value:new Vector3()},lamps:{value:Object.values(mapping.materialRoles.headlights).map(c=>new Vector3().fromArray(c.lightPosition).add(new Vector3(0,0,-.025)))},density:{value:.15},highBeam:{value:0},headlightsOn:{value:0},signalOrigins:{value:vectors(6)},signalDirections:{value:vectors(6)},signalPowers:{value:Array(6).fill(0)},cabinPower:{value:0},cabinToField:{value:cabinFields.fields.map(()=>new Matrix4())},cabinMin:{value:cabinFields.fields.map(f=>f.bounds.min)},cabinSize:{value:cabinFields.fields.map(f=>f.bounds.getSize(new Vector3()))},cabinColor:{value:new Color()},boundsMin:{value:new Vector3()},boundsMax:{value:new Vector3()}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader});
+    cabinFields.fields.forEach((f,i)=>{material.uniforms[`cabinMap${i}`]={value:f.texture};});
     Object.assign(material.uniforms,{tailOrigins:{value:vectors(32)},tailCount:{value:mapping.materialRoles.tailRunning.samples.length},tailMin:{value:new Vector3()},tailMax:{value:new Vector3()},domeOrigins:{value:vectors(2)},domeDirections:{value:vectors(2)},domePowers:{value:[0,0]}});
     const tailSources=mapping.materialRoles.tailRunning.samples.map(s=>({node:model.getObjectByName(s.node)!,position:new Vector3().fromArray(s.position)}));
-    return {target,material,quad:new FullScreenQuad(material),size:new Vector2(),sources,tailSources,tailBounds:new Box3()};
+    return {target,material,cabinFields,quad:new FullScreenQuad(material),size:new Vector2(),sources,tailSources,tailBounds:new Box3(),inverseParent:new Matrix4()};
   },[model]);
-  useEffect(()=>{useVehicle.getState().registerCapabilities('sceneLighting',['scatter:scene','observation:scene']);return()=>{useVehicle.getState().registerCapabilities('sceneLighting',[]);resources.target.dispose();resources.target.depthTexture?.dispose();resources.material.dispose();resources.quad.dispose();};},[resources]);
+  useEffect(()=>{useVehicle.getState().registerCapabilities('sceneLighting',['scatter:scene','observation:scene']);return()=>{useVehicle.getState().registerCapabilities('sceneLighting',[]);resources.cabinFields.dispose();resources.target.dispose();resources.target.depthTexture?.dispose();resources.material.dispose();resources.quad.dispose();};},[resources]);
   useFrame(({gl,scene,camera},delta)=>{
     const state=useVehicle.getState().state,{enabled:hazeEnabled,strength:haze}=state.scatter,mode=state.lights.headlights;actualValues['scatter:scene:enabled']=hazeEnabled;actualValues['scatter:scene:strength']=haze;actualValues['observation:scene:night']=state.observation.night;completeExecutions();
     const root=model.getObjectByName('SU7_ROOT')!;
     const signals=(root.userData.turnSignalPulse??{left:false,right:false}) as {left:boolean;right:boolean};
-    const cabin=root.userData.ambientScatter as {power:number;color:Color;lights:PointLight[]}|undefined;
+    const cabin=root.userData.ambientScatter as {power:number;color:Color}|undefined;
     const domeLights=(root.userData.domeLights??[]) as SpotLight[];
     // Startup running lamp stays red independently of front lights / indicators.
     const active=hazeEnabled&&haze>0;
@@ -161,12 +172,16 @@ export function VolumetricLights({model}:{model:Group}){
         u.signalDirections.value[i].copy(source.direction).transformDirection(source.mesh.matrixWorld).transformDirection(u.rootInverse.value);
         u.signalPowers.value[i]=signals[source.side]?1:0;
       });
-      if(cabin){u.cabinColor.value.copy(cabin.color);cabin.lights.forEach((light,i)=>{light.getWorldPosition(u.cabinOrigins.value[i]).applyMatrix4(u.rootInverse.value);u.cabinPowers.value[i]=light.intensity;});}
+      u.cabinPower.value=cabin?.power??0;if(cabin)u.cabinColor.value.copy(cabin.color);
+      resources.cabinFields.fields.forEach((f,i)=>{
+        resources.inverseParent.copy(f.parent.matrixWorld).invert();
+        u.cabinToField.value[i].copy(f.fromRoot).invert().multiply(resources.inverseParent).multiply(root.matrixWorld);
+      });
       resources.tailBounds.makeEmpty();resources.tailSources.forEach((s,i)=>{const point=u.tailOrigins.value[i].copy(s.position).applyMatrix4(s.node.matrixWorld).applyMatrix4(u.rootInverse.value);resources.tailBounds.expandByPoint(point);});resources.tailBounds.expandByVector(new Vector3(.14,.075,.18));u.tailMin.value.copy(resources.tailBounds.min);u.tailMax.value.copy(resources.tailBounds.max);
       domeLights.forEach((light,i)=>{light.getWorldPosition(u.domeOrigins.value[i]).applyMatrix4(u.rootInverse.value);light.target.getWorldPosition(u.domeDirections.value[i]).applyMatrix4(u.rootInverse.value).sub(u.domeOrigins.value[i]).normalize();u.domePowers.value[i]=light.intensity/12;});
       gl.setRenderTarget(target);gl.render(scene,camera);gl.setRenderTarget(null);quad.render(gl);
     }else{gl.setRenderTarget(null);gl.render(scene,camera);}
-    tick.current+=delta;if(tick.current>.10){tick.current=0;gl.domElement.setAttribute('data-volume',JSON.stringify({enabled:hazeEnabled,active,density:haze,mode,signals,cabinPower:cabin?.power??0,tailRunning:true,tailSamples:resources.tailSources.length,domePowers:domeLights.map(l=>active?l.intensity/12:0),signalSources:resources.sources.map((s,i)=>({side:s.side,rear:s.rear,position:resources.material.uniforms.signalOrigins.value[i].toArray(),power:active&&signals[s.side]?1:0})),sceneDepthOcclusion:true,samples:96,visibleConeGeometry:false}));}
+    tick.current+=delta;if(tick.current>.10){tick.current=0;gl.domElement.setAttribute('data-volume',JSON.stringify({enabled:hazeEnabled,active,density:haze,mode,signals,cabinPower:cabin?.power??0,cabinColor:cabin?.color.getHexString(),cabinLineField:true,cabinFields:resources.cabinFields.fields.map((f,i)=>({parent:f.parent.name,routes:f.routeCount,nonzero:f.nonzero,matrix:resources.material.uniforms.cabinToField.value[i].elements})),tailRunning:true,tailSamples:resources.tailSources.length,domePowers:domeLights.map(l=>active?l.intensity/12:0),signalSources:resources.sources.map((s,i)=>({side:s.side,rear:s.rear,position:resources.material.uniforms.signalOrigins.value[i].toArray(),power:active&&signals[s.side]?1:0})),sceneDepthOcclusion:true,samples:96,visibleConeGeometry:false}));}
   },1);
   return null;
 }

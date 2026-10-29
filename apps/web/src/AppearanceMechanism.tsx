@@ -1,10 +1,11 @@
 import {useEffect,useRef,useState} from 'react';
 import {useFrame,useThree} from '@react-three/fiber';
-import {Group,Mesh,MeshStandardMaterial,PointLight,SpotLight,Vector3,type Material} from 'three';
+import {Group,Matrix4,Mesh,MeshStandardMaterial,PointLight,SpotLight,Vector3,type Material} from 'three';
 import mapping from './data/vehicle-mapping.json';
 import {actualValues,completeExecutions,manualCommand,useVehicle} from './vehicle';
 import {Hotspot} from './VehicleMechanism';
 import {bindNativeAmbient} from './nativeAmbient';
+import {groupedAmbientRoutes} from './ambientLighting';
 type Binding={materials:Map<string,MeshStandardMaterial>;offColors:Map<string,string>;spots:SpotLight[];ambientLights:Array<PointLight|SpotLight>;protectedMaterials:Map<string,MeshStandardMaterial>;root:Group};
 export function AppearanceMechanism({model}:{model:Group}){
   const {gl,camera}=useThree();const native=useRef<ReturnType<typeof bindNativeAmbient>|null>(null);const binding=useRef<Binding|null>(null),blink=useRef({mode:'off',time:0}),brightness=useRef(.4);const [cabin,setCabin]=useState(false);const interval=useRef(0);
@@ -16,11 +17,21 @@ export function AppearanceMechanism({model}:{model:Group}){
       if(next.some((m,i)=>m!==list[i])){restore.push({mesh:o,material:original});o.material=Array.isArray(original)?next:next[0];}
     });
     const spots=Object.values(roles.headlights).map(cfg=>{const light=new SpotLight('#d9efff',0,22,.28,.5,2);light.position.fromArray(cfg.lightPosition).add(new Vector3(0,0,-.025));light.target.position.set(light.position.x,.025,-6);root.add(light,light.target);light.castShadow=true;light.shadow.mapSize.set(512,512);light.shadow.bias=-.00015;return light;});
-    const ambientLights=roles.ambient.lights.map(cfg=>{
+    model.updateMatrixWorld(true);const routeGroups=groupedAmbientRoutes(model);const doorLightIndex=new Map<string,number>();
+    const ambientLights=roles.ambient.lights.map((cfg,index)=>{
       const occluded='occludedFootwell' in cfg&&cfg.occludedFootwell;
       const light=occluded?new SpotLight('#9867ff',0,cfg.distance,1.12,.85,2):new PointLight('#9867ff',0,cfg.distance,2);
       light.position.fromArray(cfg.position);light.userData.gain=cfg.gain;
       const parent=root.getObjectByName(cfg.parent)??root;parent.add(light);
+      if(!occluded&&cfg.parent.startsWith('DOOR_')){
+        const lower=(doorLightIndex.get(cfg.parent)??0)>0;doorLightIndex.set(cfg.parent,1);
+        const routes=routeGroups.get(parent)??[];
+        const route=routes.find(r=>r.name.startsWith(lower?(cfg.parent.includes('_F')?'front-handle-':'rear-armrest-'):(cfg.parent.includes('_F')?'front-inlay-upper-':'rear-inlay-')))!;
+        const center=route.points.reduce((p,q)=>p.add(new Vector3(...q)),new Vector3()).multiplyScalar(1/route.points.length);
+        center.x+=cfg.parent.includes('_FL_')||cfg.parent.includes('_RL_')?.10:-.10;center.y+=lower?.025:-.025;
+        const toParent=new Matrix4().copy(parent.matrixWorld).invert().multiply(root.matrixWorld);light.position.copy(center.applyMatrix4(toParent));
+        light.distance=lower?.60:.70;light.userData.gain=lower?.07:.09;light.userData.route=route.name;
+      }else if(index===7||index===15){light.position.set(0,index===7?.78:.73,index===7?-.4:.27);light.distance=.60;light.userData.gain=.08;light.userData.route='centre-box';}
       if(light instanceof SpotLight){light.target.position.copy(light.position).add(new Vector3(0,-1,0));parent.add(light.target);light.castShadow=true;light.shadow.mapSize.set(512,512);light.shadow.camera.near=.015;light.shadow.bias=-.00002;light.shadow.normalBias=.001;}
       return light;
     });

@@ -8,7 +8,7 @@ test('native cabin trim follows original surfaces, dims and moves with both rear
  await page.getByRole('button',{name:'氛围空间',exact:true}).click();await page.getByRole('button',{name:'氛围配色：极光青',exact:true}).click();
  const canvas=page.locator('canvas');const native=async()=>JSON.parse((await canvas.getAttribute('data-native-ambient'))!);
  await expect.poll(async()=>(await native()).zones.length).toBe(10);
- expect((await native()).routeCount).toBe(27);
+ expect((await native()).routeCount).toBe(29);
  expect((await native()).replaced).toHaveLength(21);
  for(const level of [100,40,0,65]){
   await page.getByRole('slider',{name:'氛围灯亮度',exact:true}).fill(String(level));await expect.poll(async()=>(await native()).power).toBe(level/100);

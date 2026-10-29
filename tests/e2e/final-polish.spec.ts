@@ -22,7 +22,7 @@ test('curated cabin palettes drive every emitter and light; front and rear views
  const records=[];const paint=(await visual(page)).paint;
  for(const [name,color,power] of [['冰川蓝','72c9ff',.65],['暖琥珀','ffc38a',.55],['暮光紫','ad87ff',.65]] as const){
   await page.getByRole('button',{name:`氛围配色：${name}`,exact:true}).click();await expect.poll(async()=>(await visual(page)).ambient.power).toBe(power);const state=await visual(page);
-  expect(state.ambient.zones).toBe(31);expect(state.ambient.localLights).toHaveLength(16);expect(state.ambient.color).toBe(color);expect(state.ambient.localLights.every((l:{power:number})=>l.power>0)).toBe(true);expect(state.paint).toBe(paint);records.push({name,state:state.ambient});
+  expect(state.ambient.zones).toBe(33);expect(state.ambient.localLights).toHaveLength(16);expect(state.ambient.color).toBe(color);expect(state.ambient.localLights.every((l:{power:number})=>l.power>0)).toBe(true);expect(state.paint).toBe(paint);records.push({name,state:state.ambient});
  }
  await page.getByRole('button',{name:'氛围配色：冰川蓝',exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();await page.getByRole('button',{name:'全舱视角',exact:true}).click();await page.getByRole('button',{name:'氛围配色：冰川蓝',exact:true}).scrollIntoViewIfNeeded();await page.waitForTimeout(400);
  await page.screenshot({path:`docs/assets/final-polish/cabin-blue-${info.project.name}.png`});

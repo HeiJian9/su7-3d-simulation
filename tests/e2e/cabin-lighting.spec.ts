@@ -11,7 +11,7 @@ test('fitted cabin zones share actual brightness and colour, follow doors, and e
  const records=[];await command(page,'打开氛围灯');
  for(const percent of [0,50,100]){
   await command(page,`氛围灯亮度设为百分之${percent}`);await expect.poll(async()=>(await appearance(page)).ambient.power).toBe(percent/100);
-  const a=(await appearance(page)).ambient;expect(a.zones).toBe(31);expect(a.localLights).toHaveLength(16);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
+  const a=(await appearance(page)).ambient;expect(a.zones).toBe(33);expect(a.localLights).toHaveLength(16);expect(a.emission.every((e:{power:number})=>percent===0?e.power===0:e.power>0)).toBe(true);records.push(a);
   await page.screenshot({path:`docs/assets/cabin-lighting/door-${percent}-${info.project.name}.png`});
  }
  await command(page,'氛围灯换成蓝色，亮度设为百分之四十');await expect.poll(async()=>(await appearance(page)).ambient.color).toBe('4d80b4');

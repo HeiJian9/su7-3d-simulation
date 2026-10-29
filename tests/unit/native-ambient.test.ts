@@ -4,6 +4,7 @@ import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
 import {BufferGeometry,Float32BufferAttribute,Group,Mesh,MeshStandardMaterial,Vector3} from 'three';
 import {bindNativeAmbient} from '../../apps/web/src/nativeAmbient';
 import paths from '../../apps/web/src/data/native-ambient-paths.json';
+import {createCabinLightFields} from '../../apps/web/src/ambientLighting';
 
 // Load actual shipped geometry and hierarchy, without needing a DOM to decode textures.
 let model:Group;
@@ -23,11 +24,23 @@ beforeAll(async()=>{
 });
 
 describe('native ambient trim on actual runtime asset',()=>{
+ it('derives all five moving air fields from current emitters and leaves exterior and floor cells dark',()=>{
+  const baked=createCabinLightFields(model);expect(baked.fields).toHaveLength(5);
+  expect(baked.fields.reduce((n,f)=>n+f.routeCount,0)).toBe(33);
+  for(const field of baked.fields){
+   expect(field.nonzero).toBeGreaterThan(50);const image=field.texture.image,size=field.bounds.getSize(new Vector3());
+   const sample=(p:Vector3)=>{const q=p.clone().sub(field.bounds.min).divide(size);if(q.toArray().some(n=>n<0||n>=1))return 0;return image.data[(Math.floor(q.z*image.depth)*image.height+Math.floor(q.y*image.height))*image.width+Math.floor(q.x*image.width)];};
+   expect(sample(new Vector3(0,.05,0))).toBe(0);
+   if(field.parent.name.includes('_FL_')||field.parent.name.includes('_RL_'))expect(sample(new Vector3(-.82,.85,.65))).toBe(0);
+   if(field.parent.name.includes('_FR_')||field.parent.name.includes('_RR_'))expect(sample(new Vector3(.82,.85,.65))).toBe(0);
+  }
+  baked.dispose();
+ });
  it('restores all front and rear zones on original trim faces, matches opposite sides and does not move or duplicate geometry',()=>{
   const original=new Map<Mesh,{geometry:BufferGeometry;material:Mesh['material'];visible:boolean}>();
   model.traverse(o=>{if(o instanceof Mesh)original.set(o,{geometry:o.geometry,material:o.material,visible:o.visible});});
   const b=bindNativeAmbient(model);
-  expect(b.zones).toHaveLength(10);expect(b.replaced).toHaveLength(21);expect(b.routeCount).toBe(27);
+  expect(b.zones).toHaveLength(10);expect(b.replaced).toHaveLength(21);expect(b.routeCount).toBe(29);
   for(const {node,vertices} of b.zones){
    expect(vertices).toBeGreaterThan(0);const mesh=model.getObjectByName(node) as Mesh;
    const g=mesh.geometry,p=g.getAttribute('position');
