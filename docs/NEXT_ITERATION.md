@@ -1,3 +1,9 @@
+# 当前交接 · 0.8.1 / 持续流星雨、mi 光晕与语音
+
+见 [WELCOME_CORRECTION.md](WELCOME_CORRECTION.md)。用户指出 0.8.0 只有灯内扫描、外部流星不足、SU7 图案与位置不符。本轮修正为两路真实地面 gobo＋84 个空气等宽矩形光条；手动持续开关、独立亮度、保持视角，自动解锁仍播放一轮。四门 mi 投影移至踏板外侧，圆形柔光、可见灯口及深度遮挡散射。新增 welcomeRain 统一状态和两个真实 LLM 工具；面板／语音／LLM 经 VehicleLedger，HTTP/SSE 确认后才完成，失败不播报成功。远程修改同步最新上下文。
+
+原 .blend／GLB、转向与门窗雨刷机构代码保持；不运行导入／分件。运行时新增效果不烘焙进基础资产。真实 API 固定音频与 Mock、真人证据严格分开；本轮未新增真人验收。演示 http://localhost:3000。下列为历史交接。
+
 # 当前交接 · 0.8.0 / 流星雨迎宾与四门投影
 
 见 [WELCOME_LIGHTING.md](WELCOME_LIGHTING.md)。新增 8 个原灯腔内矩阵／96 单元和四个底部 gobo 投影器，运行时从真实原网格衍生，不改基础 .blend／GLB。转向灯及 AppearanceMechanism、VolumetricLights、车门机构代码保持；三份 mapping 只改高灯专用标志，模组 0/1 近光、2/3 远光，远光保留近光。已有原生灯带和接缝修正继续保护。

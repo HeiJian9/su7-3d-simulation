@@ -1,0 +1,403 @@
+{
+  "version": "0.8.1",
+  "at": "2026-10-30T11:47:04.454670+00:00",
+  "checks": {
+    "typecheck": true,
+    "lint": true,
+    "unit": {
+      "passed": 114,
+      "files": 14
+    },
+    "productionBuild": true,
+    "assetCheck": true,
+    "protectedBaseline": true,
+    "secretScan": true
+  },
+  "browser": {
+    "uniqueCases": 40,
+    "passed": 40,
+    "allLatestResultsPassed": true,
+    "runs": [
+      {
+        "file": "browser-final.json",
+        "stats": {
+          "startTime": "2026-10-30T11:15:30.829Z",
+          "duration": 216156.334,
+          "expected": 14,
+          "skipped": 0,
+          "unexpected": 2,
+          "flaky": 0
+        }
+      },
+      {
+        "file": "regression-final.json",
+        "stats": {
+          "startTime": "2026-10-30T11:31:28.042Z",
+          "duration": 376129.189,
+          "expected": 17,
+          "skipped": 0,
+          "unexpected": 7,
+          "flaky": 0
+        }
+      },
+      {
+        "file": "readiness-recheck.json",
+        "stats": {
+          "startTime": "2026-10-30T11:38:50.107Z",
+          "duration": 144923.921,
+          "expected": 7,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      },
+      {
+        "file": "correction-final.json",
+        "stats": {
+          "startTime": "2026-10-30T11:43:38.356Z",
+          "duration": 108195.34700000001,
+          "expected": 14,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    ],
+    "cases": [
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 6,
+        "project": "Edge-1920x1080",
+        "title": "welcome visibly projects moving ground rain and airborne trails outside the original headlamps",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 21,
+        "project": "Edge-1920x1080",
+        "title": "mi badges are projected at the entry sill with an illuminated door-mounted aperture",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 32,
+        "project": "Edge-1920x1080",
+        "title": "Mock speech uses registered rain tools, acknowledges real light state, speaks results and retains the camera",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 46,
+        "project": "Edge-1920x1080",
+        "title": "rain control voices a real transport failure and does not retry forever or claim success",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 6,
+        "project": "Edge-1366x768",
+        "title": "welcome visibly projects moving ground rain and airborne trails outside the original headlamps",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 21,
+        "project": "Edge-1366x768",
+        "title": "mi badges are projected at the entry sill with an illuminated door-mounted aperture",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 32,
+        "project": "Edge-1366x768",
+        "title": "Mock speech uses registered rain tools, acknowledges real light state, speaks results and retains the camera",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome-correction.spec.ts",
+        "line": 46,
+        "project": "Edge-1366x768",
+        "title": "rain control voices a real transport failure and does not retry forever or claim success",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 7,
+        "project": "Edge-1920x1080",
+        "title": "real remote events animate independent pixels, preserve indicators and project four door gobos",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 40,
+        "project": "Edge-1920x1080",
+        "title": "each door projects visible ground pixels independently and the footprint follows its real hinge",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 66,
+        "project": "Edge-1920x1080",
+        "title": "normal low/high beams survive welcome, mid-animation controls and expired event reconnects",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 80,
+        "project": "Edge-1920x1080",
+        "title": "paired remote works on actual private-address HTTP without secure-context crypto",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 7,
+        "project": "Edge-1366x768",
+        "title": "real remote events animate independent pixels, preserve indicators and project four door gobos",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 40,
+        "project": "Edge-1366x768",
+        "title": "each door projects visible ground pixels independently and the footprint follows its real hinge",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 66,
+        "project": "Edge-1366x768",
+        "title": "normal low/high beams survive welcome, mid-animation controls and expired event reconnects",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "welcome.spec.ts",
+        "line": 80,
+        "project": "Edge-1366x768",
+        "title": "paired remote works on actual private-address HTTP without secure-context crypto",
+        "status": "passed",
+        "evidence": "browser-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 30,
+        "project": "Edge-1920x1080",
+        "title": "new shared brightness values change actual light sources and scattering independently",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 38,
+        "project": "Edge-1920x1080",
+        "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 30,
+        "project": "Edge-1366x768",
+        "title": "new shared brightness values change actual light sources and scattering independently",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 38,
+        "project": "Edge-1366x768",
+        "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 6,
+        "project": "Edge-1920x1080",
+        "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 18,
+        "project": "Edge-1920x1080",
+        "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 29,
+        "project": "Edge-1920x1080",
+        "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+        "status": "passed",
+        "evidence": "readiness-recheck.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 6,
+        "project": "Edge-1366x768",
+        "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 18,
+        "project": "Edge-1366x768",
+        "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "mechanical.spec.ts",
+        "line": 29,
+        "project": "Edge-1366x768",
+        "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "native-lamps.spec.ts",
+        "line": 11,
+        "project": "Edge-1920x1080",
+        "title": "native projector and inner rear modules emit yellow, restore original colours and follow the real trunk",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "native-lamps.spec.ts",
+        "line": 11,
+        "project": "Edge-1366x768",
+        "title": "native projector and inner rear modules emit yellow, restore original colours and follow the real trunk",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "physical-fixes.spec.ts",
+        "line": 27,
+        "project": "Edge-1920x1080",
+        "title": "formed luggage liners stay visible through half and full opening without changing native panels",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "physical-fixes.spec.ts",
+        "line": 27,
+        "project": "Edge-1366x768",
+        "title": "formed luggage liners stay visible through half and full opening without changing native panels",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "wipers.spec.ts",
+        "line": 5,
+        "project": "Edge-1920x1080",
+        "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "wipers.spec.ts",
+        "line": 14,
+        "project": "Edge-1920x1080",
+        "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "wipers.spec.ts",
+        "line": 5,
+        "project": "Edge-1366x768",
+        "title": "I6 genuine twin wipers single sweep, continuous gears, phase change and stop parking",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "wipers.spec.ts",
+        "line": 14,
+        "project": "Edge-1366x768",
+        "title": "I6 rules and labelled cabin entry work while camera and other components remain usable",
+        "status": "passed",
+        "evidence": "regression-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 10,
+        "project": "Edge-1920x1080",
+        "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 17,
+        "project": "Edge-1920x1080",
+        "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 24,
+        "project": "Edge-1920x1080",
+        "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 10,
+        "project": "Edge-1366x768",
+        "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 17,
+        "project": "Edge-1366x768",
+        "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      },
+      {
+        "file": "assistant.spec.ts",
+        "line": 24,
+        "project": "Edge-1366x768",
+        "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+        "status": "passed",
+        "evidence": "correction-final.json"
+      }
+    ],
+    "note": "Runs are incremental, not one clean suite. Earlier startup timeouts and camera-sampling test races are retained; latest case evidence determines current result. Transport-failure case now also verifies actual mock audio playback."
+  },
+  "realApiSyntheticAudio": {
+    "passed": true,
+    "cases": 6,
+    "report": "live-speech.json",
+    "human": false
+  },
+  "humanNewAcceptance": false,
+  "limitations": [
+    "Scattering is a depth-occluded real-time approximation.",
+    "Performance samples are from this workstation, not all devices.",
+    "No new human microphone or physical-phone acceptance claimed.",
+    "Video offset not provided; no recording tool operated."
+  ]
+}

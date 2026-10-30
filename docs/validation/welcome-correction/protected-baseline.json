@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "baseline": "a03a4cd",
+  "protectedFiles": [
+    {
+      "file": "assets/source/blender/su7-enhanced.blend",
+      "sha256": "72bad381118a8d8ff96ad0230f9d4ada375ce8e030efe50e28ad2ca8ea7d6b17",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/public/models/su7-runtime.glb",
+      "sha256": "05f7301a57afd0e0f4abbadab5cc57d6300f9d900ceb065d4a779d6134ad826a",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/src/AppearanceMechanism.tsx",
+      "sha256": "4818661c59eee6b88a7df8ea6598dfd44212c5b06310381771c39d4bd2682da3",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/src/VehicleMechanism.tsx",
+      "sha256": "ef706d37336abe573f9f5a61bc36f94baeb63c152a2abb0b31491d2ae1cef75f",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/src/WindowMechanism.tsx",
+      "sha256": "6aff23722da0f9bd65f830f0aa96ffc7c74877d43406053205a58f5635811f4a",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/src/WiperMechanism.tsx",
+      "sha256": "8faa15a6b38d87e78d125506e1513c7431b778a2342ae2ecfbebb38f7d716ba8",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/src/VolumetricLights.tsx",
+      "sha256": "53ca79435573f21c28f5198c8206364058e3e898e8a1cb0c8959d5a702461557",
+      "unchanged": true
+    }
+  ],
+  "indicatorGeometryAndLogicUnmodified": true,
+  "mappingChangeOnly": "projectors 2/3 are high-only; high retains low projectors",
+  "runtimeFixtures": "8 original aperture-local collimators / 96 independent LED instances; 4 actual underside-mounted gobo projectors"
+}

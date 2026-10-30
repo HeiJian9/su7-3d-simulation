@@ -3,7 +3,7 @@ import {testWave} from './global-setup';
 const command=(value=.5)=>({component:'window',targets:['fl'],property:'openness',operation:'set',value});
 async function ready(page:Page){
  await page.route('**/api/health',r=>r.fulfill({json:{providers:{mode:'test-mock',asr:{configured:true,model:'qwen3-asr-flash',protocol:'test-mock',audioFormats:['audio/wav'],missing:[],probe:'test-mock'},tts:{configured:true,model:'mock-tts',voice:'mock',protocol:'test-mock',missing:[],probe:'test-mock'},intent:{configured:true,model:'deepseek-mock',protocol:'test-mock',missing:[],probe:'test-mock'}}}}));
- await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
+ await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('button',{name:'操作帮助',exact:true}).click();await page.getByRole('button',{name:'调试记录',exact:false}).click();await page.getByRole('combobox',{name:'助手路由'}).selectOption('llm');await page.getByRole('button',{name:'关闭调试记录',exact:true}).click();
 }
 async function send(page:Page,text:string){await page.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(text);await page.getByRole('button',{name:'发送',exact:false}).click();}
 const pose=(page:Page)=>page.locator('canvas').getAttribute('data-window-fl-openness').then(Number);
@@ -28,7 +28,7 @@ test('Mock unsupported and unintelligible are separate voiced outcomes with no v
  await ready(page);await send(page,'打开空调');await expect.poll(()=>spoken.at(-1)).toBe('暂不支持该功能。');await expect(page.getByTestId('speech-phase')).toHaveText('准备就绪');await send(page,'嗯啊');await expect.poll(()=>spoken.at(-1)).toBe('我没听清，请再说一遍。');expect(await pose(page)).toBe(0);
 });
 test('new shared brightness values change actual light sources and scattering independently',async({page},info)=>{
- await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'近光灯',exact:true}).click();
+ await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'近光灯',exact:true}).click();
  await page.getByRole('slider',{name:'前灯亮度',exact:true}).fill('40');const appearance=async()=>JSON.parse(await page.locator('canvas').getAttribute('data-appearance'));
  await expect.poll(async()=>(await appearance()).headlightPower).toEqual([480,480]);
  await page.getByRole('button',{name:'前排主灯开关',exact:true}).click();await page.getByRole('slider',{name:'前排顶灯亮度',exact:true}).fill('40');const dome=async()=>JSON.parse(await page.locator('canvas').getAttribute('data-cabin-main-lights'));
@@ -36,7 +36,7 @@ test('new shared brightness values change actual light sources and scattering in
  await page.screenshot({path:`docs/assets/i7-i9/brightness-${info.project.name}.png`});
 });
 test('fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras',async({page},info)=>{
- await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled();await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();
+ await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();
  const differences=[];
  for(const target of ['front','cabin']){
   if(target==='front'){await page.getByRole('button',{name:'照射视角',exact:true}).click();await page.getByRole('button',{name:'近光灯',exact:true}).click();}

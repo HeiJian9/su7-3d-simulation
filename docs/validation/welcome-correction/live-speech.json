@@ -1,0 +1,2294 @@
+{
+  "at": "2026-10-30T11:26:56.290Z",
+  "mode": "real-Qwen-ASR+DeepSeek-tools+actual-renderer+CosyVoice-with-synthetic-microphone",
+  "human": false,
+  "cases": [
+    {
+      "index": 0,
+      "input": "打开流星雨大灯。",
+      "transcript": "听到：打开流星雨大灯。",
+      "feedback": "流星雨大灯已经打开啦，等会儿上车就能看到那片星光效果。",
+      "plans": [
+        {
+          "requestId": "6f08a7a3-d526-4643-93c1-b0d5970ec8d3",
+          "turnId": "6218df33-b5d9-4f68-83b6-98c9264c5981",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_8b98d58c6ee146a1bba60a70",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 0,
+          "durationMs": 971
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "6218df33-b5d9-4f68-83b6-98c9264c5981",
+          "requestId": "6f08a7a3-d526-4643-93c1-b0d5970ec8d3",
+          "results": [
+            {
+              "tool_call_id": "call_8b98d58c6ee146a1bba60a70",
+              "status": "completed",
+              "message": "流星雨大灯已开启。",
+              "revision": 1,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:enabled",
+                  "value": true
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:enabled",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "6f08a7a3-d526-4643-93c1-b0d5970ec8d3",
+          "text": "流星雨大灯已经打开啦，等会儿上车就能看到那片星光效果。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_8b98d58c6ee146a1bba60a70"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 1,
+        "envelope": 1,
+        "eventId": "5d455fcb-8f3d-46e0-a327-320c3444641d",
+        "elapsedMs": 9534,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ],
+          [
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916,
+            0.007495804799999916
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 15309,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "input": "流星雨亮度设为百分之四十。",
+      "transcript": "听到：流星雨亮度设为40%。",
+      "feedback": "流星雨大灯亮度调到40%了，柔和一点，氛围刚刚好。",
+      "plans": [
+        {
+          "requestId": "1e3cdec6-6bcc-4972-9108-57bb31fd3c9c",
+          "turnId": "93d990d6-7cad-4e7e-b57d-a9e4e5cbea42",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_4c922ec05e804407b49d947b",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.4}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.4
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 1,
+          "durationMs": 1106
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "93d990d6-7cad-4e7e-b57d-a9e4e5cbea42",
+          "requestId": "1e3cdec6-6bcc-4972-9108-57bb31fd3c9c",
+          "results": [
+            {
+              "tool_call_id": "call_4c922ec05e804407b49d947b",
+              "status": "completed",
+              "message": "流星雨大灯亮度已设为 40%。",
+              "revision": 2,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:brightness",
+                  "value": 0.4
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:brightness",
+                      "value": 0.4
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "1e3cdec6-6bcc-4972-9108-57bb31fd3c9c",
+          "text": "流星雨大灯亮度调到40%了，柔和一点，氛围刚刚好。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_4c922ec05e804407b49d947b"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 0.4,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 0.4,
+        "envelope": 0.4,
+        "eventId": "5d455fcb-8f3d-46e0-a327-320c3444641d",
+        "elapsedMs": 25398,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.000017705962676384247,
+            0.023714650659990923
+          ],
+          [
+            0,
+            0,
+            0,
+            0.013364969276285922,
+            0,
+            0,
+            0.020882294037323713,
+            0.07782485776058277,
+            0.000629221665908064,
+            0.029843633363677836,
+            0.09227806099226243,
+            0.1735307635411928
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.000017705962676384247,
+            0.023714650659990923
+          ],
+          [
+            0,
+            0,
+            0,
+            0.013364969276285922,
+            0,
+            0,
+            0.020882294037323713,
+            0.07782485776058277,
+            0.000629221665908064,
+            0.029843633363677836,
+            0.09227806099226243,
+            0.1735307635411928
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 15446,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "input": "再暗一点。",
+      "transcript": "听到：再暗一点。",
+      "feedback": "流星雨大灯亮度已经调暗到30%啦，这基本是最低档了，再暗就到底了。",
+      "plans": [
+        {
+          "requestId": "6b8e48d8-8fcd-4cde-b3d3-14bfdd4b11a8",
+          "turnId": "66f617be-4bfd-4047-bc40-7906051eabcd",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_94afa4fa4f7543f2b3b50f82",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"adjust\", \"value\": -0.1}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "brightness",
+              "operation": "adjust",
+              "value": -0.1
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 2,
+          "durationMs": 1407
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "66f617be-4bfd-4047-bc40-7906051eabcd",
+          "requestId": "6b8e48d8-8fcd-4cde-b3d3-14bfdd4b11a8",
+          "results": [
+            {
+              "tool_call_id": "call_94afa4fa4f7543f2b3b50f82",
+              "status": "completed",
+              "message": "流星雨大灯亮度已设为 30%。已到达调节边界。",
+              "revision": 3,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:brightness",
+                  "value": 0.3
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:brightness",
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "6b8e48d8-8fcd-4cde-b3d3-14bfdd4b11a8",
+          "text": "流星雨大灯亮度已经调暗到30%啦，这基本是最低档了，再暗就到底了。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_94afa4fa4f7543f2b3b50f82"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 0.3,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 0.3,
+        "envelope": 0.3,
+        "eventId": "5d455fcb-8f3d-46e0-a327-320c3444641d",
+        "elapsedMs": 44909,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0.010536328125000079,
+            0.3,
+            0.29730488592398724,
+            0,
+            0,
+            0,
+            0.28454414062500005,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0.010536328125000079,
+            0.3,
+            0.29730488592398724,
+            0,
+            0,
+            0,
+            0.28454414062500005,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 19481,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "input": "查询流星雨亮度。",
+      "transcript": "听到：查询流星雨亮度。",
+      "feedback": "流星雨大灯当前亮度是30%，属于比较柔和的最低档。",
+      "plans": [
+        {
+          "requestId": "6cfff8d4-9a21-4d14-aacf-5d2f02deac4f",
+          "turnId": "96fa6d93-1468-47e8-a6b0-08241821de59",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_fc0ff59edf614201b0a36a03",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"query\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "brightness",
+              "operation": "query"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 3,
+          "durationMs": 772
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "96fa6d93-1468-47e8-a6b0-08241821de59",
+          "requestId": "6cfff8d4-9a21-4d14-aacf-5d2f02deac4f",
+          "results": [
+            {
+              "tool_call_id": "call_fc0ff59edf614201b0a36a03",
+              "status": "completed",
+              "message": "流星雨大灯亮度目标为 30%。",
+              "revision": 3,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:brightness",
+                  "value": 0.3
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:brightness",
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "6cfff8d4-9a21-4d14-aacf-5d2f02deac4f",
+          "text": "流星雨大灯当前亮度是30%，属于比较柔和的最低档。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_fc0ff59edf614201b0a36a03"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 0.3,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 0.3,
+        "envelope": 0.3,
+        "eventId": "5d455fcb-8f3d-46e0-a327-320c3444641d",
+        "elapsedMs": 58229,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0.04117156491807009,
+            0.09573400091033225,
+            0.1595135511492945,
+            0.2217089098771051,
+            0.10809818360263992,
+            0.17242499999999997,
+            0.23300736373463812,
+            0.2790439690487027,
+            0.18518667074419662,
+            0.2437239872553482,
+            0.2855552841943559,
+            0.3
+          ],
+          [
+            0.16813355854574422,
+            0.2293015930814747,
+            0.27664395624715515,
+            0.299359342284934,
+            0.24022176120846608,
+            0.2835028334091943,
+            0.3,
+            0.22553437500000023,
+            0.2892902210400546,
+            0.3,
+            0.14437617187500018,
+            0
+          ],
+          [
+            0.28133132823167956,
+            0.29994701866181156,
+            0.24883710937500023,
+            0,
+            0.3,
+            0.17242500000000022,
+            0,
+            0,
+            0.08968476562500013,
+            0,
+            0,
+            0
+          ],
+          [
+            0.1997707031250002,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0.04117156491807009,
+            0.09573400091033225,
+            0.1595135511492945,
+            0.2217089098771051,
+            0.10809818360263992,
+            0.17242499999999997,
+            0.23300736373463812,
+            0.2790439690487027,
+            0.18518667074419662,
+            0.2437239872553482,
+            0.2855552841943559,
+            0.3
+          ],
+          [
+            0.16813355854574422,
+            0.2293015930814747,
+            0.27664395624715515,
+            0.299359342284934,
+            0.24022176120846608,
+            0.2835028334091943,
+            0.3,
+            0.22553437500000023,
+            0.2892902210400546,
+            0.3,
+            0.14437617187500018,
+            0
+          ],
+          [
+            0.28133132823167956,
+            0.29994701866181156,
+            0.24883710937500023,
+            0,
+            0.3,
+            0.17242500000000022,
+            0,
+            0,
+            0.08968476562500013,
+            0,
+            0,
+            0
+          ],
+          [
+            0.1997707031250002,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 13262,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "input": "查询流星雨开关。",
+      "transcript": "听到：查询流星雨开关。",
+      "feedback": "流星雨大灯现在是开启状态，亮度30%。",
+      "plans": [
+        {
+          "requestId": "ed71ff45-e2d9-43e5-810d-1ddbcd0e3576",
+          "turnId": "9cb8fd81-60ad-43e4-9b5a-770c2ec0ae14",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_07a11535b24e44648373b37d",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"query\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "enabled",
+              "operation": "query"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 3,
+          "durationMs": 1148
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "9cb8fd81-60ad-43e4-9b5a-770c2ec0ae14",
+          "requestId": "ed71ff45-e2d9-43e5-810d-1ddbcd0e3576",
+          "results": [
+            {
+              "tool_call_id": "call_07a11535b24e44648373b37d",
+              "status": "completed",
+              "message": "流星雨大灯已开启。",
+              "revision": 3,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:enabled",
+                  "value": true
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:enabled",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "ed71ff45-e2d9-43e5-810d-1ddbcd0e3576",
+          "text": "流星雨大灯现在是开启状态，亮度30%。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_07a11535b24e44648373b37d"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 0.3,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 0.3,
+        "envelope": 0.3,
+        "eventId": "5d455fcb-8f3d-46e0-a327-320c3444641d",
+        "elapsedMs": 71485,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ],
+          [
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999,
+            0.0940487849999999
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 13256,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "input": "关闭流星雨。",
+      "transcript": "听到：关闭流星雨。",
+      "feedback": "流星雨大灯已经关掉啦，下次想用随时叫我。",
+      "plans": [
+        {
+          "requestId": "30a7210f-ddd2-4fd3-83aa-99d869bcae4d",
+          "turnId": "cb846d92-533b-433a-a6d9-c3c32a580bf3",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_4362cd3c3d884440bc436850",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": false}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": false
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 3,
+          "durationMs": 988
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "cb846d92-533b-433a-a6d9-c3c32a580bf3",
+          "requestId": "30a7210f-ddd2-4fd3-83aa-99d869bcae4d",
+          "results": [
+            {
+              "tool_call_id": "call_4362cd3c3d884440bc436850",
+              "status": "completed",
+              "message": "流星雨大灯已关闭。",
+              "revision": 4,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:enabled",
+                  "value": false
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:enabled",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "30a7210f-ddd2-4fd3-83aa-99d869bcae4d",
+          "text": "流星雨大灯已经关掉啦，下次想用随时叫我。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_4362cd3c3d884440bc436850"
+          ]
+        }
+      ],
+      "actual": {
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 0.3,
+        "door:fl:openness": 0,
+        "door:fr:openness": 0,
+        "door:rl:openness": 0,
+        "door:rr:openness": 0,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 0.3,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.28590777042158755,
+              -0.27
+            ],
+            "ground": [
+              -1.1203245588483388,
+              -0.015000000000000013,
+              -0.2499667119129909
+            ],
+            "entry": [
+              -1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              0.13192304923907558,
+              -0.17755060751272717,
+              0.9979638705990418
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2859072944678016,
+              -0.27
+            ],
+            "ground": [
+              1.1203245593625573,
+              -0.015000000000000013,
+              -0.24996671186025055
+            ],
+            "entry": [
+              1.12,
+              0,
+              -0.25
+            ],
+            "ndc": [
+              -0.10515504255717859,
+              -0.32630764737011614,
+              0.997546499025617
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "source": [
+              -0.925,
+              0.29231557808832836,
+              0.8
+            ],
+            "ground": [
+              -1.1203177804745363,
+              -0.015000000000000013,
+              0.7399022213924504
+            ],
+            "entry": [
+              -1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              0.04238670102976458,
+              -0.11973559280850773,
+              0.998126083719697
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "source": [
+              0.925,
+              0.2922971583341838,
+              0.8
+            ],
+            "ground": [
+              1.1203177995537164,
+              -0.015000000000000013,
+              0.7399022155219335
+            ],
+            "entry": [
+              1.12,
+              0,
+              0.74
+            ],
+            "ndc": [
+              -0.18970855446224444,
+              -0.2456331080910418,
+              0.9977728497208616
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 13179,
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "resources": {
+    "streams": [
+      {
+        "id": 0,
+        "ended": true
+      },
+      {
+        "id": 1,
+        "ended": true
+      },
+      {
+        "id": 2,
+        "ended": true
+      },
+      {
+        "id": 3,
+        "ended": true
+      },
+      {
+        "id": 4,
+        "ended": true
+      },
+      {
+        "id": 5,
+        "ended": true
+      }
+    ],
+    "plays": [
+      {
+        "started": 1793359638110,
+        "ended": true,
+        "finished": 1793359643864
+      },
+      {
+        "started": 1793359654554,
+        "ended": true,
+        "finished": 1793359660163
+      },
+      {
+        "started": 1793359672225,
+        "ended": true,
+        "finished": 1793359679201
+      },
+      {
+        "started": 1793359687703,
+        "ended": true,
+        "finished": 1793359693118
+      },
+      {
+        "started": 1793359701105,
+        "ended": true,
+        "finished": 1793359705729
+      },
+      {
+        "started": 1793359714000,
+        "ended": true,
+        "finished": 1793359718781
+      }
+    ]
+  },
+  "diagnostic": "docs/validation/scene-diagnostics-2026-10-30T11-28-39-867Z.json"
+}

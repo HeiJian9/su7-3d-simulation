@@ -15,10 +15,12 @@ export const presets = {
   frunk: {position:[2.8,2.5,-4.2],target:[0,.9,-1.7]},
   cargo: {position:[0,1.55,3.65],target:[0,.88,2.05]},
   lighting: { position: [7, 5.5, -12], target: [0, .3, -4.5] },
-  welcome: {position:[0,.88,-3.45],target:[0,.64,-2.02]},
+  welcome: {position:[5.4,3.5,-8.6],target:[0,.15,-3.7]},
   welcomeDetail: {position:[1.16,.72,-2.66],target:[.81,.64,-2.02]},
-  puddle: {position:[3.6,3.2,3.2],target:[.65,.05,.1]},
-  puddleLeft: {position:[-3.6,3.2,3.2],target:[-.65,.05,.1]},
+  welcomeAir: {position:[3.5,.65,-6.5],target:[0,.4,-4.2]},
+  puddle: {position:[2.6,6.5,.5],target:[.8,.02,.45]},
+  puddleLeft: {position:[-2.6,6.5,.5],target:[-.8,.02,.45]},
+  puddleSource: {position:[1.85,.12,-.96],target:[1.455,.285,-.65]},
 } as const;
 
 export function isCameraDrag(start: [number, number], end: [number, number], maxDistance = 0) {

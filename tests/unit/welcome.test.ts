@@ -2,9 +2,38 @@ import {describe,it,expect} from 'vitest';
 import {Matrix4,Ray,Triangle,Vector2,Vector3} from 'three';
 import {NodeIO} from '@gltf-transform/core';
 import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
-import {WelcomeController,meteorPower,welcomeActionSchema,welcomeDurationMs} from '../../packages/shared/src/welcome';
+import {WelcomeController,meteorPower,welcomeActionSchema,welcomeDurationMs,welcomePlayback} from '../../packages/shared/src/welcome';
+import {defaultVehicle,parseVehicleText,VehicleLedger} from '../../packages/shared/src/vehicle';
+import {rainCount,rainSample} from '../../apps/web/src/welcomeOptics';
 import data from '../../apps/web/src/data/welcome-lenses.json';
 describe('welcome event semantics and original lens fit',()=>{
+ it('keeps manual rain and brightness across reconnects until explicitly disabled',()=>{
+  const c=new WelcomeController();c.apply({requestId:'start',action:'rain',enabled:true,brightness:.4},100);
+  expect(welcomePlayback(c.snapshot(60100),60100)).toMatchObject({active:true,persistent:true,envelope:1});
+  c.apply({requestId:'dim',action:'rain',enabled:true,brightness:.3},90000);
+  expect(c.snapshot().rain?.startedAt).toBe(100);expect(c.snapshot().brightness).toBe(.3);
+  c.apply({requestId:'stop',action:'rain',enabled:false},91000);expect(welcomePlayback(c.snapshot(),92000).active).toBe(false);
+  c.apply({requestId:'l',action:'lock'},93000);c.apply({requestId:'u',action:'unlock'},94000);
+  expect(welcomePlayback(c.snapshot(),94500)).toMatchObject({active:true,persistent:false});expect(welcomePlayback(c.snapshot(),100000).active).toBe(false);
+  expect(welcomeActionSchema.safeParse({requestId:'bad',action:'rain',enabled:true,brightness:1.1}).success).toBe(false);
+ });
+ it('routes spoken rain switch, percent, context, queries and multi-actions through the ledger',()=>{
+  let state=defaultVehicle();const ledger=new VehicleLedger(),available=new Set(['welcomeRain:front','window:fl']);
+  for(const [i,text]of ['打开流星雨大灯','流星雨亮度设为百分之四十','再暗一点','查询流星雨亮度','关闭流星雨','打开流星雨，同时左前车窗开一半'].entries()){
+   const plan=parseVehicleText(text,{focus:{component:'welcomeRain',targets:['front'],updatedAt:Date.now()}});expect(plan.kind,text).toBe('execute');
+   if(plan.kind!=='execute')throw Error();const result=ledger.apply(state,{requestId:String(i),baseRevision:state.revision,origin:'voice',route:'rules',commands:plan.commands},available);
+   expect(result.ok).toBe(true);if(!result.ok)throw Error();state=result.state;
+   if(i===2||i===3)expect(state.welcomeRain.brightness).toBe(.3);if(i===4)expect(state.welcomeRain.enabled).toBe(false);
+  }
+  expect(state.welcomeRain.enabled).toBe(true);expect(state.windows.fl.openness).toBe(.5);
+ });
+ it('spreads rain lanes independently and keeps looping particles bounded after a long run',()=>{
+  for(const t of [0,100,1000,5000,3600000])for(let i=0;i<rainCount;i++){
+   const l=rainSample(t,i,-1,true),r=rainSample(t,i,1,true);expect(l.x).toBe(-r.x);expect(l.z).toBe(r.z);expect(r.z).toBeGreaterThanOrEqual(-8.25);expect(r.z).toBeLessThanOrEqual(-2.85);expect(r.power).toBeGreaterThanOrEqual(0);expect(r.power).toBeLessThanOrEqual(1);
+  }
+  expect(rainSample(6000,3,1).power).toBe(0);expect(rainSample(6000,3,1,true).power).toBeGreaterThan(0);
+  expect(new Set(Array.from({length:rainCount},(_,i)=>rainSample(1000,i,1).x)).size).toBe(rainCount);
+ });
  it('plays once for unlock transitions, respects auto preference and deduplicates remote retries',()=>{
   const c=new WelcomeController();c.apply({requestId:'l',action:'lock'},100);
   const a=c.apply({requestId:'u',action:'unlock'},200);expect(a.snapshot.event).toMatchObject({id:'u',startedAt:200,source:'unlock'});

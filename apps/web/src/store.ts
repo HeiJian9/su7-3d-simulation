@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 export type CameraMode = 'orbit' | 'free';
-export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lounge' | 'rearCabin' | 'lighting' | 'roofFront' | 'roofRear' | 'frunk' | 'cargo' | 'welcome' | 'welcomeDetail' | 'puddle' | 'puddleLeft';
+export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lounge' | 'rearCabin' | 'lighting' | 'roofFront' | 'roofRear' | 'frunk' | 'cargo' | 'welcome' | 'welcomeDetail' | 'welcomeAir' | 'puddle' | 'puddleLeft' | 'puddleSource';
 export interface Metrics {
   fps: number;
   calls: number;
@@ -46,7 +46,7 @@ export const useScene = create<SceneState>((set) => ({
   gesture: '尚无手势',
   setMode: (mode) => set({ mode, panTool: false }),
   setPan: () => set({ mode: 'orbit', panTool: true }),
-  go: (view) => set((state) => ({ view, panTool: false, mode: ['cabin','ambient','lounge','rearCabin','roofFront','roofRear'].includes(view) ? 'free' : 'orbit', request: state.request + 1 })),
+  go: (view) => set((state) => ({ view, panTool: false, mode: ['cabin','ambient','lounge','rearCabin','roofFront','roofRear','puddleSource'].includes(view) ? 'free' : 'orbit', request: state.request + 1 })),
   setSpeed: (speed) => set({ speed }),
   patch: (state) => set(state),
   record: (metrics) => set((state) => ({ metrics, samples: [...state.samples.slice(-359), metrics] })),

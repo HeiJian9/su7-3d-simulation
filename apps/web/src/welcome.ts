@@ -17,12 +17,12 @@ export function useWelcomeConnection(){
   return()=>{disposed=true;events.onmessage=events.onerror=null;events.close();useWelcome.setState({connected:false});};
  },[]);
 }
-export async function welcomeAction(action:WelcomeAction['action'],enabled?:boolean){
+export async function welcomeAction(action:WelcomeAction['action'],enabled?:boolean,brightness?:number){
  try{
   // The lightweight paired remote also works on private-LAN HTTP, where
   // randomUUID is unavailable. getRandomValues remains available there.
   const requestId=typeof crypto.randomUUID==='function'?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');
-  const response=await fetch('/api/welcome/action',{method:'POST',headers:{'Content-Type':'application/json',...(token()?{Authorization:`Bearer ${token()}`}:{})},body:JSON.stringify({requestId,action,...(enabled===undefined?{}:{enabled})}),signal:AbortSignal.timeout(6000)});
-  if(!response.ok)throw Error();useWelcome.getState().apply(await response.json());
- }catch{useWelcome.setState({error:'迎宾操作未确认，请检查连接后重试。'});}
+  const response=await fetch('/api/welcome/action',{method:'POST',headers:{'Content-Type':'application/json',...(token()?{Authorization:`Bearer ${token()}`}:{})},body:JSON.stringify({requestId,action,...(enabled===undefined?{}:{enabled}),...(brightness===undefined?{}:{brightness})}),signal:AbortSignal.timeout(6000)});
+  if(!response.ok)throw Error();const snapshot:WelcomeSnapshot=await response.json();useWelcome.getState().apply(snapshot);return snapshot;
+ }catch{useWelcome.setState({error:'迎宾操作未确认，请检查连接后重试。'});return null;}
 }

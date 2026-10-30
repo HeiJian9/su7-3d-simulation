@@ -182,7 +182,7 @@ export class SpeechCoordinator {
       useSpeech.setState({ phase: 'executing', message: '正在调整车辆部件…' });
       const execution = await waitForVehicleExecution(result.execution);
       if (!this.valid(generation)) return;
-      if (execution.status !== 'completed') { this.fail(execution.status.toUpperCase(), execution.message); return; }
+      if (execution.status !== 'completed') { await this.notifyFailure(execution.status.toUpperCase(), execution.message, generation); return; }
       message = execution.route==='llm'?result.message:execution.message; this.trace('completed', `${execution.requestId}; revision ${execution.revision}; ${JSON.stringify(execution.effects)}`);
       const wording=this.ruleFeedback;
       if(execution.route==='rules'&&wording?.input.requestId===execution.requestId){

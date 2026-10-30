@@ -1,3 +1,4 @@
+import {WelcomeVehicleBridge} from './WelcomeVehicleBridge';
 import {useVehicle} from './vehicle';
 import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
@@ -17,6 +18,8 @@ import {CabinMainLights} from './CabinMainLights';
 import { VolumetricLights } from './VolumetricLights';
 import {WelcomeLights} from './WelcomeLights';
 import {WelcomeBloom} from './WelcomeBloom';
+import {WelcomeRain} from './WelcomeRain';
+import {WelcomeAtmosphere} from './WelcomeAtmosphere';
 
 class WebGLErrorBoundary extends Component<{ children: ReactNode }, { error: boolean }> {
   state = { error: false };
@@ -108,7 +111,7 @@ function RuntimeModel({ asset, attempt }: { asset: AssetManifest; attempt: numbe
     void load();
     return () => { disposed = true; abort.abort(); clearTimeout(timer); draco.dispose(); if (scene) disposeScene(scene); };
   }, [asset, attempt]);
-  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/><AppearanceMechanism model={model}/><WiperMechanism model={model}/><CabinMainLights model={model}/><WelcomeLights model={model}/><VolumetricLights model={model}/><WelcomeBloom model={model}/></> : null;
+  return model ? <><primitive object={model} dispose={null} /><WindowMechanism model={model} /><VehicleMechanism model={model}/><AppearanceMechanism model={model}/><WiperMechanism model={model}/><CabinMainLights model={model}/><WelcomeVehicleBridge/><WelcomeLights model={model}/><WelcomeRain model={model}/><VolumetricLights model={model}/><WelcomeAtmosphere model={model}/><WelcomeBloom model={model}/></> : null;
 }
 
 function Diagnostics() {

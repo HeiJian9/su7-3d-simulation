@@ -1,0 +1,706 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/welcome-correction.spec.ts",
+      "tests/e2e/assistant.spec.ts",
+      "-g",
+      "welcome visibly|mi badges|Mock speech|rain control|Mock protocol|Mock model failure|Mock unsupported",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "assistant.spec.ts",
+      "file": "assistant.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14923,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:43:39.683Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-ce335bd02442453b1725",
+          "file": "assistant.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3021,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:43:54.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-e3d518cc02b44d760b9d",
+          "file": "assistant.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:43:57.843Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-c25d800d8d7f9be324c9",
+          "file": "assistant.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "Mock protocol: real renderer completion precedes corresponding tool receipts, then actual audio playback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14498,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:33.767Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-bcbc3cb575a73cb9ed91",
+          "file": "assistant.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "Mock model failure is voiced as service failure; late model reply after manual preemption does nothing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2685,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:48.463Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-72f41e87d87fd493d969",
+          "file": "assistant.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Mock unsupported and unintelligible are separate voiced outcomes with no vehicle mutation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2184,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:51.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-e18ab8a91a33574a222c",
+          "file": "assistant.spec.ts",
+          "line": 24,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "welcome-correction.spec.ts",
+      "file": "welcome-correction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "welcome visibly projects moving ground rain and airborne trails outside the original headlamps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8069,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:00.228Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "external-rain",
+                      "contentType": "application/json",
+                      "body": "eyJmaXJzdCI6eyJhY3RpdmUiOnRydWUsImFpclBhcnRpY2xlcyI6ODQsImdyb3VuZFByb2plY3RvcnMiOjIsInNhbXBsZXMiOlt7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0wLjc1MTA0NjQ4MjIxNzU5MDYsMC41ODE1MDEyNzg0ODEyMTk2LC0yLjMyNTIxMzY2Mzg1NDczNTRdLCJuZGMiOlstMC4wNjY1NDc5NDM3MTk4NzkyOCwwLjI5MzA5NDAwMjA2OTYxMDYsMC45OTc5ODc1Njc5MDM5OTUxXSwiZ3JvdW5kIjpbLTAuOTM3MzY1MzU0MDM1MDYxNywtMi45MjExNzczMDc5MjM3NzFdLCJncm91bmROZGMiOlswLjAwNjg4MDkzMDA0Nzc3MzgwMzUsMC4xMDkzNDMxMzIzNzAwNzg5MiwwLjk5Nzk4OTU2MDk5NDQzNTNdLCJwb3dlciI6MC4yMzg1ODIyMzE1Nzc0OTA2NH0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMS41MDMxNTkwODU2ODA3NzQ0LDAuMDk2OTI5NTYyNzUwMTg3MTYsLTYuNDYyNDYyNDcyNTk4MTI1XSwibmRjIjpbMC40OTM5MTk0MzgyOTg2ODc1LC0wLjExODgyNzkzOTQzMTY1MDcyLDAuOTk3NDQ5Mzk2NTc1OTgwMV0sImdyb3VuZCI6Wy0xLjY1NDU0NjU1NTk4NTIxMDgsLTcuMjg2NjczNzk3MzkyMTc2XSwiZ3JvdW5kTmRjIjpbMC42NDAwMzkwMjU3ODM2MTk5LC0wLjIyOTYxMjAzMDcxMDM1OTUsMC45OTczMTA5ODQ1Njk4MDM1XSwicG93ZXIiOjAuNzUyNDg1NzYyMDI2MDA3OH0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMS4yNDUzNDgyNTY3NjAzOCwwLjEzMzYwMzEwNDUxMTQ2ODczLC01LjkyMjIxNDEyMjQyNTg2M10sIm5kYyI6WzAuMzkzNzA1NjY4MjY1NjA3NDMsLTAuMDgwMDY5NDcxNTIxNjAyLDAuOTk3NTAwNTAwODExNTMxN10sImdyb3VuZCI6Wy0xLjM5MDQ0NjMzNzk5NjAyNjMsLTYuOTU2MjgyNjIzODcxNjE1Nl0sImdyb3VuZE5kYyI6WzAuNTY2Mzg5NDUzMzE5NTUxNywtMC4yMjQ3MzYyMDA1ODAxNzIzLDAuOTk3MzIwNzQ1ODExODExOF0sInBvd2VyIjowLjg0MjY2NDYyNTkzMjUxNjV9LHsic2lkZSI6LTEsInBvc2l0aW9uIjpbLTAuNjc2MTM3MTY0NDM0MjQ1NSwwLjAzNzQxMDIwODA4ODQzNDg3LC03LjQxODQyNjM4NzMwMTc5OF0sIm5kYyI6WzAuNjExMTI1NjI4MjY2NDg4MiwtMC4zODExMjM2NjkyMDk0ODU4NywwLjk5Njk2NDA5NTMzMzk4ODFdLCJncm91bmQiOlstMC42NzE3NDIxMzkwNDQzNzg1LC03LjgyMjg4MjQyMzI2OTgxXSwiZ3JvdW5kTmRjIjpbMC42OTMxNjMzOTI2NTU1MTM3LC0wLjQ2NDA4OTQ1NzAxNjcxOTEsMC45OTY4NDE1Njg5MzMzNjk3XSwicG93ZXIiOjAuNTMxOTUwNTQzMjMwMjQ2OX0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC43NTEzNjkzNTQzNDc1ODY2LDAuMzUzMDQzMTQ5NDc2NTE0NCwtMy40NjY3MTA2NTgxOTA4M10sIm5kYyI6WzAuMDQ2MDcxMDgzNjI3MTA4NDgsMC4xNTMzNjUzODY4MzM4MTM5LDAuOTk3ODM0NzY5NzAyNzA2NV0sImdyb3VuZCI6Wy0wLjc3NTU2OTEzMjk1NTI3MzUsLTQuOTc5MzUxODMxNDk0NDg0XSwiZ3JvdW5kTmRjIjpbMC4yMjMzOTA4MzI3ODczODk1OCwtMC4wODA1MzU2MTgwMzM3NDM0MSwwLjk5NzYwOTQzMDM1Mjk5MTJdLCJwb3dlciI6MC45NzUwNDgzMjAzMDc1NDY3fSx7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0wLjY2MjA3MDQ3MjUxNDQ2ODcsMC40MjYzOTAyMzI5OTkwNzc2MywtMi45NDI5MTQ4MDA1OTUyMTNdLCJuZGMiOlstMC4wMTU2MzkyNDkxMDkxNDQ2NiwwLjIwNDM5MjMwMjE4NjkwNDc3LDAuOTk3ODk1NDQyNjcwMzA0OV0sImdyb3VuZCI6Wy0wLjUxOTkzNzY0ODAwMDMwNzcsLTQuMzE4NTY5NDg0NDUzMzZdLCJncm91bmROZGMiOlswLjExOTI5NTY2NDA4MDg4NDUsLTAuMDQzODE5OTc2MzA0NzIzMzIsMC45OTc2ODI5MzM3ODgyNzE4XSwicG93ZXIiOjAuODgwNzYzNzUxNzM3NTg4OX0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzAuNzUxMDQ0ODA0Njk5Nzk3MSwwLjU4MTUwMDc5MTQ1OTkyNDcsLTIuMzI1MjEyMTQ4Njc3MzczNl0sIm5kYyI6Wy0wLjIyMTgwOTg1MTIyNjM5NjcsMC4xODEyNTMwODExOTY0MzQzNSwwLjk5NzcxNzg5NTc3MDU0NzRdLCJncm91bmQiOlswLjkzNzM2NTM1NDAzNTA2MTcsLTIuOTIxMTc3MzA3OTIzNzcxXSwiZ3JvdW5kTmRjIjpbLTAuMTgxMTM1Njg5MTk3MjAzMzgsLTAuMDYzNzYwNzEwNjcwNTEzOTYsMC45OTc2NDMwMTMxMzI5NjNdLCJwb3dlciI6MC4yMzg1ODIyMzE1Nzc0OTA2NH0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzEuNTAzMTU4NzgyNDI0ODg4NCwwLjA5NjkyOTQ3NDcwODE1NTcyLC02LjQ2MjQ2MjE5ODY4OTU4MjVdLCJuZGMiOlswLjIzMDgzNjQ2OTM2MzIyNzc0LC0wLjYxNzQ3MTcwODQyNDc3MzIsMC45OTY0MTk1MzAwMzE0MDc3XSwiZ3JvdW5kIjpbMS42NTQ1NDY1NTU5ODUyMTA4LC03LjI4NjY3Mzc5NzM5MjE3Nl0sImdyb3VuZE5kYyI6WzAuMzg0NTkzNzU1MjM1NDY3MiwtMC44OTQ1MTMyMTQ1MDQ1NDIxLDAuOTk1OTc5ODc1NTcwMjE3XSwicG93ZXIiOjAuNzUyNDg1NzYyMDI2MDA3OH0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzEuMjQ1MzQ3ODQ5NDk3MDc5LDAuMTMzNjAyOTg2MjczNzM2MjQsLTUuOTIyMjEzNzU0NTc1MTM5XSwibmRjIjpbMC4xNjUxNzM2NDk1NDI5MzAxOCwtMC40NDc0MjkxNjM3MTA1Mzc1LDAuOTk2NzMzNDUyNTk0NTQ3OV0sImdyb3VuZCI6WzEuMzkwNDQ2MzM3OTk2MDI2MywtNi45NTYyODI2MjM4NzE2MTU2XSwiZ3JvdW5kTmRjIjpbMC4zNDA3ODg0MDEzOTE3MjE4NCwtMC43NDA2MTc4NzU0NTc3MzU3LDAuOTk2Mjg3OTY4Njc2MDY4OF0sInBvd2VyIjowLjg0MjY2NDYyNTkzMjUxNjV9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjY3NjEzNzAyOTk3NzI3ODksMC4wMzc0MTAxNjkwNTI1NDEzNSwtNy40MTg0MjYyNjU4NTY3OTZdLCJuZGMiOlswLjUxMjcyNjAzNDg2Nzc3MDUsLTAuNjUwMjU0Mjg5MDYxODQ1MywwLjk5NjQxNzg3NDQyMjQxMzRdLCJncm91bmQiOlswLjY3MTc0MjEzOTA0NDM3ODUsLTcuODIyODgyNDIzMjY5ODFdLCJncm91bmROZGMiOlswLjYwNTYyNTc3NDAzOTY5NzUsLTAuNzU3ODc1NDE0MDE5ODMyNCwwLjk5NjI1MzQxOTY4NTI1NTRdLCJwb3dlciI6MC41MzE5NTA1NDMyMzAyNDY5fSx7InNpZGUiOjEsInBvc2l0aW9uIjpbMC43NTEzNjgzMjQ3NDQ4MzYzLDAuMzUzMDQyODUwNTU5NTg2OSwtMy40NjY3MDk3MjgyMjcwNTU0XSwibmRjIjpbLTAuMTA2NTYxNjc4MjAzODAyOTgsMC4wMTM5MDAyNjM0NDc3Mzk3OTMsMC45OTc1MjMwOTc3OTMwMzU1XSwiZ3JvdW5kIjpbMC43NzU1NjkxMzI5NTUyNzM1LC00Ljk3OTM1MTgzMTQ5NDQ4NF0sImdyb3VuZE5kYyI6WzAuMDc0ODI0NTY2NDE5ODA2NTcsLTAuMjc3MjYwMzk3MjQwMzkxMiwwLjk5NzIxNTU5NDIwMDQ1M10sInBvd2VyIjowLjk3NTA0ODMyMDMwNzU0Njd9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjY2MjA2OTIzNDg5Njg4ODcsMC40MjYzODk4NzM2OTA3NDgsLTIuOTQyOTEzNjgyNzQ3MDc2XSwibmRjIjpbLTAuMTUxMTQzNDc3Nzk2OTAxMDQsMC4wOTI2Njk5MjQ3NDYyNzkwMywwLjk5NzYzOTc2MjQ1NTkxMjddLCJncm91bmQiOlswLjUxOTkzNzY0ODAwMDMwNzcsLTQuMzE4NTY5NDg0NDUzMzZdLCJncm91bmROZGMiOlswLjAxNzU4NjYxNDM4ODg2NjcxLC0wLjE2MTg4NzA4NzgxNDk2MDQyLDAuOTk3NDQ2NTY3NTQ1NDEyMl0sInBvd2VyIjowLjg4MDc2Mzc1MTczNzU4ODl9XX0sInNlY29uZCI6eyJhY3RpdmUiOnRydWUsImFpclBhcnRpY2xlcyI6ODQsImdyb3VuZFByb2plY3RvcnMiOjIsInNhbXBsZXMiOlt7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0xLjI1NDg3Mjk4ODY3OTYyMiwwLjA4OTMyMDMxOTg3MTUzOTQzLC02LjU3OTIxNTY5ODU5MDY5OF0sIm5kYyI6WzAuNDk2ODAxMTQ4MzY3Mzg4NjUsLTAuMTY1MzE1MzcxNTY2NDgwMywwLjk5NzM1OTcwNzI1ODQwNDNdLCJncm91bmQiOlstMS4zNDg4OTI3MTc5MDk5MzU3LC03LjM1NTIyNTMwNzkyMzc3M10sImdyb3VuZE5kYyI6WzAuNjM2MjYwNTQxMDQ4NjU3MywtMC4yODE4NzM4NTY1MDA0MjI0LDAuOTk3MjA2MzU4MjE1NzgzNF0sInBvd2VyIjowLjczMDMwNDI5MjM1NTM5OX0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMS4yNzcxODg1NjIyMDY5MDg4LDAuMjA0MTUwNTg5OTc2NTM2LC00Ljk4NzU1MzA4NjQ2OTg0NV0sIm5kYyI6WzAuMjY3Mjc5NTA4ODI4ODI0NDUsMC4wMzQxMDM3ODAzNTEyMzI2NywwLjk5NzY4NjUzMTE0NjYwMzddLCJncm91bmQiOlstMS41NDQwNjAxNzc3ODEzNzYzLC02LjMyMDcyMTc5NzM5MjE3Nl0sImdyb3VuZE5kYyI6WzAuNDcxMjM1Mjc0OTI2NjQ3NjMsLTAuMTMxODI1NTA1MTk3NzIwOCwwLjk5NzUwNjc0OTc4NjIzMDZdLCJwb3dlciI6MC45NTQyNDEwMTk2MzQ5Nzg2fSx7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0xLjA3ODU3MTQxMzc1MjM2MSwwLjI0MDgyNDEzMTczNzgxNzU4LC00LjU1NjA0OTQyMjgzNzIwMl0sIm5kYyI6WzAuMTk3NjQxMDk1MzY3Njk1MjIsMC4wNjMyMzgwNzY1NjMyNzk0NCwwLjk5NzcyMTI1NzA1OTY5MTZdLCJncm91bmQiOlstMS4yOTU0MjU1ODg4NTM3NDU4LC01Ljk5MDMzMDYyMzg3MTYxNl0sImdyb3VuZE5kYyI6WzAuNDA0MjM3NDQyOTkzODY3NzcsLTAuMTI1NzY5NTY3MDI3NzIxNjMsMC45OTc1MTg4NzM1NjM0MTA1XSwicG93ZXIiOjAuOTg1MTgwODY4NTM0NjcwNX0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC42NTMwODg2OTkwNzkzMDg2LDAuMTQ0NjMxMjM1MzE0NzgzODMsLTUuNzY3MDI5NzIzMDE5MDUzNV0sIm5kYyI6WzAuMzI1NzUzOTU4NzY2ODIzNDUsLTAuMTMwNDE2OTEyMzgxODg3MDcsMC45OTczODYxOTgzMTk2NjU5XSwiZ3JvdW5kIjpbLTAuNjI4NDg4Mjg3MTc3NTc3MiwtNi44NTY5MzA0MjMyNjk4MDldLCJncm91bmROZGMiOlswLjQ5OTM3OTgyMjE0ODExOTksLTAuMzIyNDY0NzUzNDY0MDYwOTUsMC45OTcxMjUwOTY2NTQ1NjczXSwicG93ZXIiOjAuODY1MDU2NTAyMzc5MzI0M30seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC43MjcwNzkxNjk0MDY5MDI5LDAuNDYwMjY0MTc2NzAyODYzMzUsLTIuNzUxMjMxMzc4MDYwNTQzNV0sIm5kYyI6Wy0wLjAyODQ0MTM4NjEyMDIwODgyLDAuMjMxNDk1MjMwMTY3NzAxMDcsMC45OTc5MzI2NDU2NzgwMTg1XSwiZ3JvdW5kIjpbLTAuNzEzOTQ5ODQ2NTc3ODc2OSwtNC4wMTMzOTk4MzE0OTQ0ODRdLCJncm91bmROZGMiOlswLjEwMTE4NjY4OTEzOTg2MTA5LDAuMDAzMTU0MDA5MTk2OTk5NDY0LDAuOTk3Nzc2OTc0MDcwMzA0M10sInBvd2VyIjowLjgxMDE0MzUyMTExMDMzMjR9LHsic2lkZSI6LTEsInBvc2l0aW9uIjpbLTAuNjg5NzU3MTUwNzMxNTk5MywwLjUzMzYxMTI2MDIyNTQyNjUsLTIuNDQ0OTI0ODkzNTQ0MTY1XSwibmRjIjpbLTAuMDYxMDIyNTYwODExNDE1MjQsMC4yNjg1OTQ3NDY1MDYzMTk0LDAuOTk3OTY0OTM1Nzg3Nzg0MV0sImdyb3VuZCI6Wy0wLjQ3NjI1NDE5NTMyNjI0MTE0LC0zLjM1MjYxNzQ4NDQ1MzM2MDVdLCJncm91bmROZGMiOlswLjAwODY3MTU1MjQ3MzQ5MTM2NywwLjAzNjkwNDM4NTc5NzE4MTE3LDAuOTk3ODQ0NTQxMTQ4MTMwMV0sInBvd2VyIjowLjU3MTM1MjUwNTUzNDMyODd9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjI1NDg3MjcwNzAwMzgwODYsMC4wODkzMjAyMzgwOTQ2OTAyNSwtNi41NzkyMTU0NDQxNzM4MzNdLCJuZGMiOlswLjI4MjA2NjI1MzM0ODA2NzEsLTAuNTg4NDU4NjE1Nzk1NjM5NiwwLjk5NjQ4NzczODc1ODg1MTRdLCJncm91bmQiOlsxLjM0ODg5MjcxNzkwOTkzNTcsLTcuMzU1MjI1MzA3OTIzNzczXSwiZ3JvdW5kTmRjIjpbMC40MzM1MjE3MjA5MjQ3MjAzLC0wLjgyNTE3MzA4NjUwNjczNDksMC45OTYxMTg2OTIwOTAxMTVdLCJwb3dlciI6MC43MzAzMDQyOTIzNTUzOTl9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjI3NzE4Nzk1NDg2ODUzNCwwLjIwNDE1MDQxMzY1MjQ5MTcsLTQuOTg3NTUyNTM3OTA2MTUxXSwibmRjIjpbMC4wMTc4NTg1MjkzMzYwNDUsLTAuMjgwODU2OTMzODM3ODMyOTQsMC45OTcwMTQ3MDc5MDcwMDkxXSwiZ3JvdW5kIjpbMS41NDQwNjAxNzc3ODEzNzYzLC02LjMyMDcyMTc5NzM5MjE3Nl0sImdyb3VuZE5kYyI6WzAuMTk3NDc5MTIzNTYwMjU2OSwtMC42MzkyNDMwMzM3MzMzMzg3LDAuOTk2NDkwOTE3NTc2NTA2N10sInBvd2VyIjowLjk1NDI0MTAxOTYzNDk3ODZ9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjA3ODU3MDcwMjQwNjU3MTQsMC4yNDA4MjM5MjUyMTgwNzIyMiwtNC41NTYwNDg3ODAzMzEzMjddLCJuZGMiOlstMC4wMTYwNjMyODQwMDc5NzYxNzYsLTAuMTgxMzYwMTI3NzA5MTE2NDcsMC45OTcxOTM2MDM2MjI1OTNdLCJncm91bmQiOlsxLjI5NTQyNTU4ODg1Mzc0NTgsLTUuOTkwMzMwNjIzODcxNjE2XSwiZ3JvdW5kTmRjIjpbMC4xNjkwNDgyMjcxODAyODkwNiwtMC41MjI2MjI5OTAyNTA1MTU3LDAuOTk2NzI0Mzg2ODM5NjAyOF0sInBvd2VyIjowLjk4NTE4MDg2ODUzNDY3MDV9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjY1MzA4ODI2MDUzOTg1MjksMC4xNDQ2MzExMDc5OTY4NzczNCwtNS43NjcwMjkzMjY5MTg5MDFdLCJuZGMiOlswLjIwNTcyMzMyNDkzOTc0MTE2LC0wLjMxNTE2Njc5NTA3NDU5MzgzLDAuOTk2OTk5MTYyNjM2OTg5NV0sImdyb3VuZCI6WzAuNjI4NDg4Mjg3MTc3NTc3MiwtNi44NTY5MzA0MjMyNjk4MDldLCJncm91bmROZGMiOlswLjM5NzcxOTc2ODIzMDkzMjM2LC0wLjU0NjczNzY1NzI1OTQ3MzgsMC45OTY2NzYxMTAxMTY1OTVdLCJwb3dlciI6MC44NjUwNTY1MDIzNzkzMjQzfSx7InNpZGUiOjEsInBvc2l0aW9uIjpbMC43MjcwNzc4MzU3MjE2NjM2LDAuNDYwMjYzNzg5NTAzOTIyOTQsLTIuNzUxMjMwMTczNDQxNjE4XSwibmRjIjpbLTAuMTc3NzE3Nzc2NzkyMDAzMjMsMC4xMTMwMzg4MTA3OTcxODk0MywwLjk5NzY1ODUwODM4MjIwODRdLCJncm91bmQiOlswLjcxMzk0OTg0NjU3Nzg3NjksLTQuMDEzMzk5ODMxNDk0NDg0XSwiZ3JvdW5kTmRjIjpbLTAuMDM5NzcxNTgwNzk3MjE2MDgsLTAuMTUxNjU2NDA0MjY3NjQ2NjUsMC45OTc0NjcwNDkwMTczNTY1XSwicG93ZXIiOjAuODEwMTQzNTIxMTEwMzMyNH0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzAuNjg5NzU1NjA5MDMxNTMwMywwLjUzMzYxMDgxMjYzNTA4MzksLTIuNDQ0OTIzNTAxMDQwODc3XSwibmRjIjpbLTAuMjAzMTkyNzc5MjE0NTY3MjIsMC4xNjI5NDI3NDMwMjQ5Mjg2LDAuOTk3NzE0MzM0MTE4MTgwMl0sImdyb3VuZCI6WzAuNDc2MjU0MTk1MzI2MjQxMTQsLTMuMzUyNjE3NDg0NDUzMzYwNV0sImdyb3VuZE5kYyI6Wy0wLjA4NjE1MDEzMjI0MTg0OTE3LC0wLjA1NjM1Mjk1MzQ3NDM1NzYxLDAuOTk3NjU3ODQzMjA0NzI1NV0sInBvd2VyIjowLjU3MTM1MjUwNTUzNDMyODd9XX0sInBpeGVscyI6MTgwOTIsImVycm9ycyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-2baf27aba7a395d9c95c",
+          "file": "welcome-correction.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "mi badges are projected at the entry sill with an illuminated door-mounted aperture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3903,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:08.326Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mi-entry",
+                      "contentType": "application/json",
+                      "body": "W3siY29ybmVyIjoiZmwiLCJwb3dlciI6MC45OTkwMTI3NjA3MTk0MzY3LCJzb3VyY2UiOlstMS40MDc4MjU3ODM5OTc5NjY0LDAuMjg1OTA3NzcwNDIxNTg3NTUsLTAuNTUyNjEwOTU0MjA1MTI2N10sImdyb3VuZCI6Wy0xLjEzMjIzNTY2ODc5NTc4OSwtMC4wMTUwMDAwMDAwMDAwMDAwMTMsLTAuMjM2NzgxNjA1NzI4NDc3ODRdLCJlbnRyeSI6Wy0xLjEzMjY5MzU5OTk5OTc4NTYsMCwtMC4yMzczMDY0MDAwMDAyMTQ1OF0sIm5kYyI6WzAuMTAzNDA0Nzk4OTEzMDQyNCwwLjY2OTAxNzg0MjY4ODY2OCwwLjk5NzQxOTc2NjkzNzg3MzVdLCJwYXJlbnQiOiJET09SX0ZMX1JPT1QiLCJnb2JvIjp0cnVlLCJjYXN0c1NoYWRvdyI6dHJ1ZSwibWFyayI6Im1pIiwic291cmNlRW1pc3Npb24iOjcuOTkyMTAyMDg1NzU1NDkzfSx7ImNvcm5lciI6ImZyIiwicG93ZXIiOjAuOTk5MDEyNzYwNzE5NDM2Nywic291cmNlIjpbMS40MDc4MjU3ODM5OTc5NjY0LDAuMjg1OTA3Mjk0NDY3ODAxNiwtMC41NTI2MTA5NTQyMDUxMjY3XSwiZ3JvdW5kIjpbMS4xMzIyMzU2NjgwNzAyNjAzLC0wLjAxNTAwMDAwMDAwMDAwMDAxMywtMC4yMzY3ODE2MDQ4OTcwMTM5NF0sImVudHJ5IjpbMS4xMzI2OTM1OTk5OTk3ODU2LDAsLTAuMjM3MzA2NDAwMDAwMjE0NThdLCJuZGMiOlswLjEyMzk5OTIxNzYwMzEyNDQzLC0wLjEyMTM1OTY2NjU2MDQ2NDE3LDAuOTk3MTcwMzc4MzY5NDQyOV0sInBhcmVudCI6IkRPT1JfRlJfUk9PVCIsImdvYm8iOnRydWUsImNhc3RzU2hhZG93Ijp0cnVlLCJtYXJrIjoibWkiLCJzb3VyY2VFbWlzc2lvbiI6Ny45OTIxMDIwODU3NTU0OTN9LHsiY29ybmVyIjoicmwiLCJwb3dlciI6MC45OTkwMTI3NjA3MTk0MzY3LCJzb3VyY2UiOlstMS4zNTQ1NzcyNjUyNTY0NjIzLDAuMjkyMzE1NTc4MDg4MzI4MzYsMC41NDUxMTE3Nzc2MTM0OTM0XSwiZ3JvdW5kIjpbLTEuMTMyMzMyMDA4NzM2MDA1NiwtMC4wMTUwMDAwMDAwMDAwMDAwMTMsMC43NTMwMzE4ODQzNTg4Nzc4XSwiZW50cnkiOlstMS4xMzI2OTM1OTk5OTk3ODU2LDAsMC43NTI2OTM1OTk5OTk3ODU1XSwibmRjIjpbLTAuMDU4MzE5MzYzMjQ4MzEyMDUsMC42NjAyNDE5NTI2OTI5NzA4LDAuOTk3NDE2OTk3ODcyOTQyOV0sInBhcmVudCI6IkRPT1JfUkxfUk9PVCIsImdvYm8iOnRydWUsImNhc3RzU2hhZG93Ijp0cnVlLCJtYXJrIjoibWkiLCJzb3VyY2VFbWlzc2lvbiI6Ny45OTIxMDIwODU3NTU0OTN9LHsiY29ybmVyIjoicnIiLCJwb3dlciI6MC45OTkwMTI3NjA3MTk0MzY3LCJzb3VyY2UiOlsxLjM1NDU3NzI2NTI1NjQ2MjMsMC4yOTIyOTcxNTgzMzQxODM4LDAuNTQ1MTExNzc3NjEzNDkzNF0sImdyb3VuZCI6WzEuMTMyMzMxOTg3MDI2NDc1NCwtMC4wMTUwMDAwMDAwMDAwMDAwMTMsMC43NTMwMzE5MDQ2NjkwODc4XSwiZW50cnkiOlsxLjEzMjY5MzU5OTk5OTc4NTYsMCwwLjc1MjY5MzU5OTk5OTc4NTVdLCJuZGMiOlstMC4wNTI0MDA2MTU0NjQ4NDYzOCwtMC4xMzE4NzU4NjIzMTIyMTAzNSwwLjk5NzE2NzA2MDE4NDE3OTJdLCJwYXJlbnQiOiJET09SX1JSX1JPT1QiLCJnb2JvIjp0cnVlLCJjYXN0c1NoYWRvdyI6dHJ1ZSwibWFyayI6Im1pIiwic291cmNlRW1pc3Npb24iOjcuOTkyMTAyMDg1NzU1NDkzfV0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-ca4d40f4fb271df24f19",
+          "file": "welcome-correction.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Mock speech uses registered rain tools, acknowledges real light state, speaks results and retains the camera",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:12.256Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mock-speech-receipts",
+                      "contentType": "application/json",
+                      "body": "eyJ0cmFuc2NyaXB0cyI6WyLmiZPlvIDmtYHmmJ/pm6jlpKfnga8iLCLmtYHmmJ/pm6jkuq7luqborr7kuLrnmb7liIbkuYvlm5vljYEiLCLlho3mmpfkuIDngrkiLCLlhbPpl63mtYHmmJ/pm6giXSwicmVjZWlwdHMiOlt7InR1cm5JZCI6InJhaW4tMSIsInJlcXVlc3RJZCI6IjQ3NDNiYjM3LWNlNDgtNDY5ZS1hMWFhLWUyMWEwMzk5Y2JlNSIsInJlc3VsdHMiOlt7InRvb2xfY2FsbF9pZCI6ImNhbGwtMSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsIm1lc3NhZ2UiOiLmtYHmmJ/pm6jlpKfnga/lt7LlvIDlkK/jgIIiLCJyZXZpc2lvbiI6MSwiZWZmZWN0cyI6W3sia2V5Ijoid2VsY29tZVJhaW46ZnJvbnQ6ZW5hYmxlZCIsInZhbHVlIjp0cnVlfV0sIm9ic2VydmF0aW9ucyI6W3siaW5kZXgiOjAsImVmZmVjdHMiOlt7ImtleSI6IndlbGNvbWVSYWluOmZyb250OmVuYWJsZWQiLCJ2YWx1ZSI6dHJ1ZX1dfV19XX0seyJ0dXJuSWQiOiJyYWluLTIiLCJyZXF1ZXN0SWQiOiI4ZmNkM2U4MC0yMGE5LTRiMmUtOWRiNi05NGQ2YTBjNzQyYjUiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTIiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5Lqu5bqm5bey6K6+5Li6IDQwJeOAgiIsInJldmlzaW9uIjoyLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuNH1dLCJvYnNlcnZhdGlvbnMiOlt7ImluZGV4IjowLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuNH1dfV19XX0seyJ0dXJuSWQiOiJyYWluLTMiLCJyZXF1ZXN0SWQiOiJiNjlhYmQ4Ny0zYzdjLTRjNWQtOTE1Mi1kMzgyZjIxNTQ3NjUiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTMiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5Lqu5bqm5bey6K6+5Li6IDMwJeOAguW3suWIsOi+vuiwg+iKgui+ueeVjOOAgiIsInJldmlzaW9uIjozLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuM31dLCJvYnNlcnZhdGlvbnMiOlt7ImluZGV4IjowLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuM31dfV19XX0seyJ0dXJuSWQiOiJyYWluLTQiLCJyZXF1ZXN0SWQiOiIxNTU1Nzg4YS0zOGNjLTRmZDktYjdmZS02OTlhYzY4YTVlZjYiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5bey5YWz6Zet44CCIiwicmV2aXNpb24iOjQsImVmZmVjdHMiOlt7ImtleSI6IndlbGNvbWVSYWluOmZyb250OmVuYWJsZWQiLCJ2YWx1ZSI6ZmFsc2V9XSwib2JzZXJ2YXRpb25zIjpbeyJpbmRleCI6MCwiZWZmZWN0cyI6W3sia2V5Ijoid2VsY29tZVJhaW46ZnJvbnQ6ZW5hYmxlZCIsInZhbHVlIjpmYWxzZX1dfV19XX1dLCJzcG9rZW4iOjQsImNhbWVyYVVuY2hhbmdlZCI6dHJ1ZSwiaHVtYW4iOmZhbHNlfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-29ef584edaeca7040514",
+          "file": "welcome-correction.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "rain control voices a real transport failure and does not retry forever or claim success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:30.880Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-2ceeafb0e2369ac48d7f",
+          "file": "welcome-correction.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "welcome visibly projects moving ground rain and airborne trails outside the original headlamps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7883,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:44:53.407Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "external-rain",
+                      "contentType": "application/json",
+                      "body": "eyJmaXJzdCI6eyJhY3RpdmUiOnRydWUsImFpclBhcnRpY2xlcyI6ODQsImdyb3VuZFByb2plY3RvcnMiOjIsInNhbXBsZXMiOlt7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0wLjc0OTg1NTQ3NTA5NzYyNjIsMC41ODQ1NzAyMTY2NDg3MDAxLC0yLjMxOTcwNDY5Mjc1MDkwMDRdLCJuZGMiOlstMC4wNjMxODgzNzEyMTQyNDg4OCwwLjI5NDE3ODU0MDM3MzU5OSwwLjk5Nzk4Nzg3MjA0NDc3MTddLCJncm91bmQiOlstMC45MzQ3OTkzMjIxNDgwNzg4LC0yLjg5MzUyOTMwNzkyMzc3MV0sImdyb3VuZE5kYyI6WzAuMDAzNzYyMzg4ODg5MzUzODgwMiwwLjExMTEzNDE4NTQ2MDUwMTkxLDAuOTk3OTkzMTQ2NjIwMzA4XSwicG93ZXIiOjAuMTkxMjM2NjYxODQ3ODE2NjJ9LHsic2lkZSI6LTEsInBvc2l0aW9uIjpbLTEuNDk2MTg1Njk2NDE0MTAwMywwLjA5OTk5ODUwMDkxNzY2NzQ5LC02LjQxNTgyNzAzMjE2NjMwNV0sIm5kYyI6WzAuNDU3MjcyMTk5OTQzOTcsLTAuMTEzNjI2NDQxODU4Mzg2OTMsMC45OTc0NTc2NzgzMTU4MTc4XSwiZ3JvdW5kIjpbLTEuNjUxMzg0MTU1MTc3OTQ1NiwtNy4yNTkwMjU3OTczOTIxNzddLCJncm91bmROZGMiOlswLjU5NzIyMDE3MTE3MjEwMDcsLTAuMjI2NjEzNDU1NjU2MDAwMDgsMC45OTczMTY5ODc2MTI1NjgzXSwicG93ZXIiOjAuNzYxMDYwODg0MTc4OTQyMX0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMS4yNDAxMzk5MDUxNjI1NDY0LDAuMTM2NjcyMDQyNjc4OTQ5MTcsLTUuODc4NjkxMjMxMTYxNTQ1XSwibmRjIjpbMC4zNjM5NzQwNzE2NzIxMDMxNiwtMC4wNzUyMDE5MjkzMTA3MDYzMiwwLjk5NzUwODIyMjU3MDU4MTZdLCJncm91bmQiOlstMS4zODc3MjY2MDI3NzkwNzM4LC02LjkyODYzNDYyMzg3MTYxNDZdLCJncm91bmROZGMiOlswLjUyODEyNDE0OTg1Mzc5NDIsLTAuMjIxNjk4MDcwMDIwNDA3NywwLjk5NzMyNjgyODA0MzMyMDNdLCJwb3dlciI6MC44NDkwOTc3NzI1MDI2MzkxfSx7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0wLjY3NTI3OTU0NzUwMzY5LDAuMDQwNDc5MTQ2MjU1OTE1NTMsLTcuMzY2NzM5NDMyNjQ3MzA5XSwibmRjIjpbMC41NjUyMzk2MTczOTg3ODQxLC0wLjM3MjI1MjQwMDI3NzIxMzI0LDAuOTk2OTc5MjU0NjQzMjc2N10sImdyb3VuZCI6Wy0wLjY3MDUwNDEwMzkyODMzNCwtNy43OTUyMzQ0MjMyNjk4MDldLCJncm91bmROZGMiOlswLjY0NjM3NTEyMzI0MTI3NTksLTAuNDU5NjY5NzIwMTUxMzk1NDYsMC45OTY4NTA0MTcwOTI1NTU4XSwicG93ZXIiOjAuNTQ2ODM4ODEwMTE4MTAwOH0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC43NTAzOTIxNjM3OTk3MzU1LDAuMzU2MTEyMDg3NjQzOTk0OCwtMy40NDE4MTIwMzY1MzUzMzk3XSwibmRjIjpbMC4wNDA3ODQ3MDQyMzI2MTY2MiwwLjE1NjAwMDgwNDE2NDc5NTYxLDAuOTk3ODM4MzcwNDc4OTI0Ml0sImdyb3VuZCI6Wy0wLjc3MzgwNTQzMjQ1MDczMjYsLTQuOTUxNzAzODMxNDk0NDg0XSwiZ3JvdW5kTmRjIjpbMC4yMDY2MzE0MDExMDA5NjE1NiwtMC4wNzc5NzczOTg0MjQ0ODI0NCwwLjk5NzYxNDU1MTgxOTUwMDRdLCJwb3dlciI6MC45NzI1NTQ2NTcxMzI4ODc3fSx7InNpZGUiOi0xLCJwb3NpdGlvbiI6Wy0wLjY2MjY2MzA1ODYwMTYwNzYsMC40Mjk0NTkxNzExNjY1NTgyLC0yLjkyNDI0MTI3NzI3NDcyOF0sIm5kYyI6Wy0wLjAxNjM5OTIzNjA3NjIzNDA3LDAuMjA2NTc0MzIxMDMxMzgxMjQsMC45OTc4OTgxNTI2NDEwMTEyXSwiZ3JvdW5kIjpbLTAuNTE4Njg3MzE2NjE3ODY1NywtNC4yOTA5MjE0ODQ0NTMzNl0sImdyb3VuZE5kYyI6WzAuMTA5MDQyNzY4NDI5OTkwMiwtMC4wNDEzNTM1NTMxNzA2OTk5MzUsMC45OTc2ODc4NzE0ODE0MzY1XSwicG93ZXIiOjAuODc1MTM5NjEwOTg3ODUxMn0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzAuNzQ5ODUzNzg4ODc2MjE5MywwLjU4NDU2OTcyNzEwMDU0OTcsLTIuMzE5NzAzMTY5NzEyMjEwNl0sIm5kYyI6Wy0wLjIwOTAzMzczNDcwODUwMjk1LDAuMTgyNjg4MzQ4MDM5MTc3MzYsMC45OTc3MTg3NjAxNjY2MDk5XSwiZ3JvdW5kIjpbMC45MzQ3OTkzMjIxNDgwNzg4LC0yLjg5MzUyOTMwNzkyMzc3MV0sImdyb3VuZE5kYyI6Wy0wLjE3MjYzODE3Mjc2MzgzMTY0LC0wLjA2MDgwNzc1MDUzODY3NDA0LDAuOTk3NjQ4OTI0ODU2MjQyN10sInBvd2VyIjowLjE5MTIzNjY2MTg0NzgxNjYyfSx7InNpZGUiOjEsInBvc2l0aW9uIjpbMS40OTYxODUzODQ0NTQ2MDE0LDAuMDk5OTk4NDEwMzQ4NzgwNjUsLTYuNDE1ODI2NzUwMzk2NDM2XSwibmRjIjpbMC4yMDk2Mzg0MzY0OTc5Mzc2NywtMC42MDUwNTg4MjcxMDM2ODA0LDAuOTk2NDQxNzgyNzcwMzczN10sImdyb3VuZCI6WzEuNjUxMzg0MTU1MTc3OTQ1NiwtNy4yNTkwMjU3OTczOTIxNzddLCJncm91bmROZGMiOlswLjM1NjA3NDM5NDUyMTk5MiwtMC44ODYyMjM4OTg1NTM0NzIzLDAuOTk1OTk2NDcwNDkxODg2NF0sInBvd2VyIjowLjc2MTA2MDg4NDE3ODk0MjF9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjI0MDEzOTQ4OTE5NTYzMjUsMC4xMzY2NzE5MjE5MTQzNjEyOCwtNS44Nzg2OTA4NTU0NDk0OTRdLCJuZGMiOlswLjE0OTEyMzQyNjU2NTQ1NzIsLTAuNDM3ODM4MDQxNTc1NDAyNywwLjk5Njc1MDM0MTEyMzY4Nl0sImdyb3VuZCI6WzEuMzg3NzI2NjAyNzc5MDczOCwtNi45Mjg2MzQ2MjM4NzE2MTQ2XSwiZ3JvdW5kTmRjIjpbMC4zMTUzOTA2MjAzMzg4ODA2LC0wLjczMzYxMjY2ODY3NDQ2LDAuOTk2MzAxOTkyODU1OTMyN10sInBvd2VyIjowLjg0OTA5Nzc3MjUwMjYzOTF9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjY3NTI3OTQwNDM0MzExMDEsMC4wNDA0NzkxMDQ2OTMxNjY1MSwtNy4zNjY3MzkzMDMzNDA5OF0sIm5kYyI6WzAuNDcxNjg4OTA1OTg0NDk4LC0wLjYzNzk5MzYxMzQyMzU3MjEsMC45OTY0Mzk0MzA4NTkxNjE1XSwiZ3JvdW5kIjpbMC42NzA1MDQxMDM5MjgzMzQsLTcuNzk1MjM0NDIzMjY5ODA5XSwiZ3JvdW5kTmRjIjpbMC41NjM0NjI1NjU5MjYxNzAzLC0wLjc1MTEyMzcwMzg2MzM3OSwwLjk5NjI2NjkzNjM3MzcwNjFdLCJwb3dlciI6MC41NDY4Mzg4MTAxMTgxMDA4fSx7InNpZGUiOjEsInBvc2l0aW9uIjpbMC43NTAzOTExMjU0OTMzNzIsMC4zNTYxMTE3ODYyMDAyMTE5LC0zLjQ0MTgxMTA5ODcxMDIzN10sIm5kYyI6Wy0wLjEwMjY3NTkwMTMxNzc5MzM2LDAuMDE3MzM2MDU0NzI1MDg4Mjk1LDAuOTk3NTI4MTgyMzAwNDAxNF0sImdyb3VuZCI6WzAuNzczODA1NDMyNDUwNzMyNiwtNC45NTE3MDM4MzE0OTQ0ODRdLCJncm91bmROZGMiOlswLjA2NzAyNDA0OTg2NjAxNDgsLTAuMjczMzQwODc4NDc2MzIzNywwLjk5NzIyMzQ0MDk0MDQzMThdLCJwb3dlciI6MC45NzI1NTQ2NTcxMzI4ODc3fSx7InNpZGUiOjEsInBvc2l0aW9uIjpbMC42NjI2NjE4MTIyODA0MTQ0LDAuNDI5NDU4ODA5MzMxMzczMDQsLTIuOTI0MjQwMTUxNTY1MjYyN10sIm5kYyI6Wy0wLjE0NDAxNjUzNTQ3MTA0NjUsMC4wOTUxMzQ2ODY1MDM4ODA2NywwLjk5NzY0Mjg2MjUwMjgxNl0sImdyb3VuZCI6WzAuNTE4Njg3MzE2NjE3ODY1NywtNC4yOTA5MjE0ODQ0NTMzNl0sImdyb3VuZE5kYyI6WzAuMDEzNTIyNzY2MzA1NzY5NDY2LC0wLjE1ODYxOTkzMDc0NjkyODg0LDAuOTk3NDUzMTA4MjgwMDA5XSwicG93ZXIiOjAuODc1MTM5NjEwOTg3ODUxMn1dfSwic2Vjb25kIjp7ImFjdGl2ZSI6dHJ1ZSwiYWlyUGFydGljbGVzIjo4NCwiZ3JvdW5kUHJvamVjdG9ycyI6Miwic2FtcGxlcyI6W3sic2lkZSI6LTEsInBvc2l0aW9uIjpbLTEuMDE2NzQyNTkzNzUyMTM4NiwwLjI1NDI3NTc0NjM3MzYxNDY2LC00LjQwNzEwMDEzMTU4MzU1N10sIm5kYyI6WzAuMTY0MjY1NDA1OTc4NTg1MjQsMC4wNzM5NTY0MDk1OTQ5MTc4NSwwLjk5NzczNDI2MTk4OTI1MjVdLCJncm91bmQiOlstMS4yMTA5Njg1MDM5ODQ2MDc2LC01Ljg2OTE0NTMwNzkyMzc3MV0sImdyb3VuZE5kYyI6WzAuMzU3NzUxMjAzNTQ1MzExODcsLTAuMTIyNzcxMDUzNTc3NTA5NDMsMC45OTc1MjQ4NzY0ODI4NDYzXSwicG93ZXIiOjAuOTkyMjI4NzY3ODE1Njg5NX0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMS4wMDA1NTA5NjAzMTcyOTA0LDAuMzY5MTA2MDE2NDc4NjExMjQsLTMuMzM5Mjc2OTkzMDgzNTY4Nl0sIm5kYyI6WzAuMDUxNDQyMjkwMzMyOTU5MzgsMC4xODY4NTE5ODYzNTUzNjc1NywwLjk5Nzg5NzkzMTQ3MjE0NThdLCJncm91bmQiOlstMS4zNzQwODExMzQzOTA4NjE5LC00LjgzNDY0MTc5NzM5MjE3Nl0sImdyb3VuZE5kYyI6WzAuMjM3NDUxMzY0OTU3MjE2MDgsLTAuMDA1MDY2NDkyNDU5OTQzNjgsMC45OTc3NjA1MTY5MTI0NTM3XSwicG93ZXIiOjAuOTYwNjQ0NDg4MTg0NTg2NH0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC44ODMwNjEyODYwOTIxNTQ4LDAuNDA1Nzc5NTU4MjM5ODkyOCwtMy4wNzUwNzI4NDcyMDQxODU1XSwibmRjIjpbMC4wMTY0NTU5NjgwNjM3MTcxMjMsMC4yMDYzMDA1MzY5ODkyMTY1OCwwLjk5NzkxNTAzMjQwMzY5NjFdLCJncm91bmQiOlstMS4xNDkyMzk4MjA5NDI1NDUyLC00LjUwNDI1MDYyMzg3MTYxNV0sImdyb3VuZE5kYyI6WzAuMTgzMDU1ODAwMjUzNTIzNjcsMC4wMDIxODI3ODY4NTE1MjE0MjY2LDAuOTk3Nzc1MDI5NzE3MDEzN10sInBvd2VyIjowLjkxNDg1MzQ4MjkyODk1MjN9LHsic2lkZSI6LTEsInBvc2l0aW9uIjpbLTAuNjQ1NDI4Njc5MDQyODI1NCwwLjMwOTU4NjY2MTgxNjg1OTA3LC0zLjg0NzIzNDc0MDE2NDM3M10sIm5kYyI6WzAuMDczMjU4ODExODIyMzY2NDcsMC4xMDI0MTEzMzU4OTYxMzI1NSwwLjk5Nzc1NDQ3NjIyNjAzOTZdLCJncm91bmQiOlstMC41NjE5NDM4OTk2OTAxOTA3LC01LjM3MDg1MDQyMzI2OTgwOV0sImdyb3VuZE5kYyI6WzAuMjQyOTgyODY1ODIxMDE2OTQsLTAuMTQ2MjcyNjA2Nzk3NTU3MjEsMC45OTc0Nzc4MjcxOTIyNzgxXSwicG93ZXIiOjAuOTk3NTU0NDE2MDY3NDE1OH0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC45NTA4OTc4Mzc2NjczNDk2LDAuMDI1ODE3NjE3MzY4OTA5NDE4LC03LjYxNjAxODYxNTk4OTg2Ml0sIm5kYyI6WzAuNjI3MjYxNjgwNDA4NDI4MywtMC4zNjkxMjM5NzkxODA5NTcsMC45OTY5OTkxMzE1NDQzMzE4XSwiZ3JvdW5kIjpbLTAuOTYzNjIzNjk5MjUxOTQzNSwtNy45MjczMTk4MzE0OTQ0ODVdLCJncm91bmROZGMiOlswLjY4Nzc4MTEwNjQ5MjgxNzcsLTAuNDI4MjU0MTM4NDI3NDI2MywwLjk5NjkxMzMwOTk5MjQwMjFdLCJwb3dlciI6MC40Njk4Mjc2MDE5Mzk3OTYwNn0seyJzaWRlIjotMSwicG9zaXRpb24iOlstMC42NjY0NzE3Mjk2MDg4NzQxLDAuMDk5MTY0NzAwODkxNDcyODksLTYuNDI4NDcxNjQ4NDI0MzMzXSwibmRjIjpbMC40MDUyMjM4NDAzODUzNDM2NSwtMC4yMjI3MTY5NTg0MjkyMTA5NiwwLjk5NzIzMjg4OTcyODg4MDddLCJncm91bmQiOlstMC42NTMyNTQyMzE2NTMxODM1LC03LjI2NjUzNzQ4NDQ1MzM1OV0sImdyb3VuZE5kYyI6WzAuNTQzNTIzOTI2MDg2NzQ3OCwtMC4zNzgzODU1NTk5MjI1MzkzLDAuOTk3MDEzMTQ1MTQ4NzU2N10sInBvd2VyIjowLjc1ODc1MTUzMDEzOTQyOTF9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjAxNjc0MTg0NDI1NzExMTIsMC4yNTQyNzU1Mjg3NzgyODQxLC00LjQwNzA5OTQ1NDYyMDMwNl0sIm5kYyI6Wy0wLjAyNjA1NzU5OTExNDA2NjUzOCwtMC4xNTAyMTAyNzQ2MDU1NjMwNSwwLjk5NzI0ODY2NDI2NDExNDVdLCJncm91bmQiOlsxLjIxMDk2ODUwMzk4NDYwNzYsLTUuODY5MTQ1MzA3OTIzNzcxXSwiZ3JvdW5kTmRjIjpbMC4xNDkzMDg1NTMxNDM0MjQ3MywtMC40ODQ3NTkyNjk5NDAxMjc2LDAuOTk2ODAwMTg4Njg4MTk1NF0sInBvd2VyIjowLjk5MjIyODc2NzgxNTY4OTV9LHsic2lkZSI6MSwicG9zaXRpb24iOlsxLjAwMDU0OTg4NTE1OTcwMTcsMC4zNjkxMDU3MDQzMzYwODU0NywtMy4zMzkyNzYwMjE5NzM0ODg3XSwibmRjIjpbLTAuMTQwNzY5MDc0MDA1MDI5MTcsMC4wMDQ3NzA5Mzc4ODczNjEyNzMsMC45OTc0ODg5MTg0NTcwMDk0XSwiZ3JvdW5kIjpbMS4zNzQwODExMzQzOTA4NjE5LC00LjgzNDY0MTc5NzM5MjE3Nl0sImdyb3VuZE5kYyI6Wy0wLjAxNDM4OTMwODEyMDE3NzQ1NSwtMC4zNDg5NjUzMDE4NTMxNDI3LDAuOTk3MDcyMDQzNDgwMTc5Ml0sInBvd2VyIjowLjk2MDY0NDQ4ODE4NDU4NjR9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjg4MzA2MDEwNjkyNzE1MTMsMC40MDU3NzkyMTU5MDE2NjYsLTMuMDc1MDcxNzgyMTUxOTI0XSwibmRjIjpbLTAuMTUzNjI2NTE0ODM1MTcyMjYsMC4wNTMzMDUxNjU4NzY4ODg5OCwwLjk5NzU2NzI0ODc2ODM1NThdLCJncm91bmQiOlsxLjE0OTIzOTgyMDk0MjU0NTIsLTQuNTA0MjUwNjIzODcxNjE1XSwiZ3JvdW5kTmRjIjpbLTAuMDI5MDA5Njc4NDY0MDQzMjM1LC0wLjI2ODkwMTI5OTIzMDk5NjcsMC45OTcyMzIzMjg4MjMzNzEyXSwicG93ZXIiOjAuOTE0ODUzNDgyOTI4OTUyM30seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzAuNjQ1NDI3NzcyNjg0MTU1OSwwLjMwOTU4NjM5ODY4MDQ3MTE2LC0zLjg0NzIzMzkyMTUxNzgzM10sIm5kYyI6Wy0wLjA0ODk1MjgyNTc4NzE5MjcyLC0wLjAyNTY1ODk3OTcyNzA0MTUxNiwwLjk5NzQ3MjE5ODI0NDgyNTldLCJncm91bmQiOlswLjU2MTk0Mzg5OTY5MDE5MDcsLTUuMzcwODUwNDIzMjY5ODA5XSwiZ3JvdW5kTmRjIjpbMC4xNDM5OTI5OTIxODA0NTQ2LC0wLjI5ODI4Mzc4MjU0OTY5Njg0LDAuOTk3MTczNTA2MTE1NjgzM10sInBvd2VyIjowLjk5NzU1NDQxNjA2NzQxNTh9LHsic2lkZSI6MSwicG9zaXRpb24iOlswLjk1MDg5NzczNjA4NzM2NTUsMC4wMjU4MTc1ODc4Nzc5NDYzMDIsLTcuNjE2MDE4NTI0MjQwMl0sIm5kYyI6WzAuNTAyNjE3ODE3NzkxMjc3NSwtMC43NjcxNzcxOTQzNTgzNjU3LDAuOTk2MTkzOTY3NzE4ODg4Nl0sImdyb3VuZCI6WzAuOTYzNjIzNjk5MjUxOTQzNSwtNy45MjczMTk4MzE0OTQ0ODVdLCJncm91bmROZGMiOlswLjU3Mjg2NTY4NjkyMDQ4MzUsLTAuODYyNzE4MTQwNzE5NDMxMiwwLjk5NjA0MzUyODE5OTk0NTNdLCJwb3dlciI6MC40Njk4Mjc2MDE5Mzk3OTYwNn0seyJzaWRlIjoxLCJwb3NpdGlvbiI6WzAuNjY2NDcxNDIwMDE0MDYwMywwLjA5OTE2NDYxMTAwOTEwNzU2LC02LjQyODQ3MTM2ODc5MDMwN10sIm5kYyI6WzAuMjk3Mjk1ODI0MTI3OTMyNCwtMC40Mzc3ODAxMTc1NzA1MzI3LDAuOTk2Nzg4NDE4MTY3MjczNF0sImdyb3VuZCI6WzAuNjUzMjU0MjMxNjUzMTgzNSwtNy4yNjY1Mzc0ODQ0NTMzNTldLCJncm91bmROZGMiOlswLjQ1MTEzODA1NDc1NDM3MjYsLTAuNjMxODc4MTc0ODE1MTI2NiwwLjk5NjUwNTY2MTc2NzQxMTZdLCJwb3dlciI6MC43NTg3NTE1MzAxMzk0MjkxfV19LCJwaXhlbHMiOjc2NjYsImVycm9ycyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-2024867a1f96d5a84a1c",
+          "file": "welcome-correction.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "mi badges are projected at the entry sill with an illuminated door-mounted aperture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3538,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:45:01.308Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mi-entry",
+                      "contentType": "application/json",
+                      "body": "W3siY29ybmVyIjoiZmwiLCJwb3dlciI6MC45OTkyNjkyMDY5NjQ5MDI0LCJzb3VyY2UiOlstMS40MTgwODM0OTExNjUyMzQ1LDAuMjg1OTA3NzcwNDIxNTg3NTUsLTAuNTY5NTM1MzY2MjY4NDUzN10sImdyb3VuZCI6Wy0xLjEzMjY1MTMxNDg0NjM5MTcsLTAuMDE1MDAwMDAwMDAwMDAwMDEzLC0wLjIzNjMyMDcxNzY0MDM3MzE2XSwiZW50cnkiOlstMS4xMzMxMjU2MDAwMDAxNDMsMCwtMC4yMzY4NzQzOTk5OTk4NTY5M10sIm5kYyI6WzAuMDk3MTk5NjQ4MjMzMjk4MTYsMC42NjkxNDY3NDM5NTM1MDk3LDAuOTk3NDE5ODA3NjEwMjEyNF0sInBhcmVudCI6IkRPT1JfRkxfUk9PVCIsImdvYm8iOnRydWUsImNhc3RzU2hhZG93Ijp0cnVlLCJtYXJrIjoibWkiLCJzb3VyY2VFbWlzc2lvbiI6Ny45OTQxNTM2NTU3MTkyMTl9LHsiY29ybmVyIjoiZnIiLCJwb3dlciI6MC45OTkyNjkyMDY5NjQ5MDI0LCJzb3VyY2UiOlsxLjQxODA4MzQ5MTE2NTIzNDUsMC4yODU5MDcyOTQ0Njc4MDE2LC0wLjU2OTUzNTM2NjI2ODQ1MzddLCJncm91bmQiOlsxLjEzMjY1MTMxNDA5NDk1MjMsLTAuMDE1MDAwMDAwMDAwMDAwMDEzLC0wLjIzNjMyMDcxNjc2MzE0MDA0XSwiZW50cnkiOlsxLjEzMzEyNTYwMDAwMDE0MywwLC0wLjIzNjg3NDM5OTk5OTg1NjkzXSwibmRjIjpbMC4xMTY1NzM2OTQ4MjU4NDQwOSwtMC4xMjE1MjI3ODkyNjUyMTg0LDAuOTk3MTcwMzI2ODk5MTgwNF0sInBhcmVudCI6IkRPT1JfRlJfUk9PVCIsImdvYm8iOnRydWUsImNhc3RzU2hhZG93Ijp0cnVlLCJtYXJrIjoibWkiLCJzb3VyY2VFbWlzc2lvbiI6Ny45OTQxNTM2NTU3MTkyMTl9LHsiY29ybmVyIjoicmwiLCJwb3dlciI6MC45OTkyNjkyMDY5NjQ5MDI0LCJzb3VyY2UiOlstMS4zNjM2NDU2NjQyNzIyNzg1LDAuMjkyMzE1NTc4MDg4MzI4MzYsMC41Mjk5NDY3MTY1NTA5Njc1XSwiZ3JvdW5kIjpbLTEuMTMyNzQ5OTM0NDg1MTk2OCwtMC4wMTUwMDAwMDAwMDAwMDAwMTMsMC43NTM0ODkzMDIwMDc3Nzg2XSwiZW50cnkiOlstMS4xMzMxMjU2MDAwMDAxNDMsMCwwLjc1MzEyNTYwMDAwMDE0MzFdLCJuZGMiOlstMC4wNTQ5MzI3ODE5Nzg5MTY3LDAuNjYwMzcxODc1NzkxMjU4MSwwLjk5NzQxNzAzODg2NzcwMThdLCJwYXJlbnQiOiJET09SX1JMX1JPT1QiLCJnb2JvIjp0cnVlLCJjYXN0c1NoYWRvdyI6dHJ1ZSwibWFyayI6Im1pIiwic291cmNlRW1pc3Npb24iOjcuOTk0MTUzNjU1NzE5MjE5fSx7ImNvcm5lciI6InJyIiwicG93ZXIiOjAuOTk5MjY5MjA2OTY0OTAyNCwic291cmNlIjpbMS4zNjM2NDU2NjQyNzIyNzg1LDAuMjkyMjk3MTU4MzM0MTgzOCwwLjUyOTk0NjcxNjU1MDk2NzVdLCJncm91bmQiOlsxLjEzMjc0OTkxMTkzMDY2NDUsLTAuMDE1MDAwMDAwMDAwMDAwMDEzLDAuNzUzNDg5MzIzODQ0MDM1NF0sImVudHJ5IjpbMS4xMzMxMjU2MDAwMDAxNDMsMCwwLjc1MzEyNTYwMDAwMDE0MzFdLCJuZGMiOlstMC4wNDkzNjkzMDUyOTE4NzAzOSwtMC4xMzIwNDAxNzkzMTcwODkwMywwLjk5NzE2NzAwODMzNzA3ODJdLCJwYXJlbnQiOiJET09SX1JSX1JPT1QiLCJnb2JvIjp0cnVlLCJjYXN0c1NoYWRvdyI6dHJ1ZSwibWFyayI6Im1pIiwic291cmNlRW1pc3Npb24iOjcuOTk0MTUzNjU1NzE5MjE5fV0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-3d07e417373b45e0c635",
+          "file": "welcome-correction.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Mock speech uses registered rain tools, acknowledges real light state, speaks results and retains the camera",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18484,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:45:04.864Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mock-speech-receipts",
+                      "contentType": "application/json",
+                      "body": "eyJ0cmFuc2NyaXB0cyI6WyLmiZPlvIDmtYHmmJ/pm6jlpKfnga8iLCLmtYHmmJ/pm6jkuq7luqborr7kuLrnmb7liIbkuYvlm5vljYEiLCLlho3mmpfkuIDngrkiLCLlhbPpl63mtYHmmJ/pm6giXSwicmVjZWlwdHMiOlt7InR1cm5JZCI6InJhaW4tMSIsInJlcXVlc3RJZCI6IjZmYzc3NGU1LTlhNjQtNGU2My04NzljLTViM2NjZGMyODY0MCIsInJlc3VsdHMiOlt7InRvb2xfY2FsbF9pZCI6ImNhbGwtMSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsIm1lc3NhZ2UiOiLmtYHmmJ/pm6jlpKfnga/lt7LlvIDlkK/jgIIiLCJyZXZpc2lvbiI6MSwiZWZmZWN0cyI6W3sia2V5Ijoid2VsY29tZVJhaW46ZnJvbnQ6ZW5hYmxlZCIsInZhbHVlIjp0cnVlfV0sIm9ic2VydmF0aW9ucyI6W3siaW5kZXgiOjAsImVmZmVjdHMiOlt7ImtleSI6IndlbGNvbWVSYWluOmZyb250OmVuYWJsZWQiLCJ2YWx1ZSI6dHJ1ZX1dfV19XX0seyJ0dXJuSWQiOiJyYWluLTIiLCJyZXF1ZXN0SWQiOiJmODhkODBlNS0xMTM0LTQyNjMtODM1Zi05YTg0YzRlZjI0YWIiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTIiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5Lqu5bqm5bey6K6+5Li6IDQwJeOAgiIsInJldmlzaW9uIjoyLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuNH1dLCJvYnNlcnZhdGlvbnMiOlt7ImluZGV4IjowLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuNH1dfV19XX0seyJ0dXJuSWQiOiJyYWluLTMiLCJyZXF1ZXN0SWQiOiI2NTI4MTdjOS03YmY4LTQ5YjctYmQwOS1kM2NiZWU0MjM2YjUiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTMiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5Lqu5bqm5bey6K6+5Li6IDMwJeOAguW3suWIsOi+vuiwg+iKgui+ueeVjOOAgiIsInJldmlzaW9uIjozLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuM31dLCJvYnNlcnZhdGlvbnMiOlt7ImluZGV4IjowLCJlZmZlY3RzIjpbeyJrZXkiOiJ3ZWxjb21lUmFpbjpmcm9udDpicmlnaHRuZXNzIiwidmFsdWUiOjAuM31dfV19XX0seyJ0dXJuSWQiOiJyYWluLTQiLCJyZXF1ZXN0SWQiOiIxNmI1NWM3Yy1hYjFmLTQyMzctOTk1Ni05NTkyMjQzMWEzYWUiLCJyZXN1bHRzIjpbeyJ0b29sX2NhbGxfaWQiOiJjYWxsLTQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJtZXNzYWdlIjoi5rWB5pif6Zuo5aSn54Gv5bey5YWz6Zet44CCIiwicmV2aXNpb24iOjQsImVmZmVjdHMiOlt7ImtleSI6IndlbGNvbWVSYWluOmZyb250OmVuYWJsZWQiLCJ2YWx1ZSI6ZmFsc2V9XSwib2JzZXJ2YXRpb25zIjpbeyJpbmRleCI6MCwiZWZmZWN0cyI6W3sia2V5Ijoid2VsY29tZVJhaW46ZnJvbnQ6ZW5hYmxlZCIsInZhbHVlIjpmYWxzZX1dfV19XX1dLCJzcG9rZW4iOjQsImNhbWVyYVVuY2hhbmdlZCI6dHJ1ZSwiaHVtYW4iOmZhbHNlfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-cffdc6bdc8e21fb07397",
+          "file": "welcome-correction.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "rain control voices a real transport failure and does not retry forever or claim success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2388,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:45:23.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1320c1d9011f3fc22f2f-11063ad4570437fe45d2",
+          "file": "welcome-correction.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-30T11:43:38.356Z",
+    "duration": 108195.34700000001,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

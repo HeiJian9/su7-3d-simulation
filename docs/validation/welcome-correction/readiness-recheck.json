@@ -1,0 +1,453 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--last-failed",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "assistant.spec.ts",
+      "file": "assistant.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "new shared brightness values change actual light sources and scattering independently",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:38:52.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-d35781b5c41be38d604e",
+          "file": "assistant.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5121,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:39:06.718Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-brightness-pixel-differences",
+                      "contentType": "application/json",
+                      "body": "W3sidGFyZ2V0IjoiZnJvbnQiLCJjaGFuZ2VkIjozNzA1MzMsIm1lYW5EaWZmZXJlbmNlIjo4LjgyODUyNDY4MTY3MjY5N30seyJ0YXJnZXQiOiJjYWJpbiIsImNoYW5nZWQiOjc1NzU4NSwibWVhbkRpZmZlcmVuY2UiOjE1LjY5ODAxMzY2NzI0MTQyOH1d"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-db240bad76074b57190e",
+          "file": "assistant.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "new shared brightness values change actual light sources and scattering independently",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:40:55.447Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-0b9e1ab0ce26efb137b1",
+          "file": "assistant.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "fine light brightness changes actual rendered pixels at fixed exterior and cabin cameras",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4328,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:41:10.020Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-brightness-pixel-differences",
+                      "contentType": "application/json",
+                      "body": "W3sidGFyZ2V0IjoiZnJvbnQiLCJjaGFuZ2VkIjoxNjA5ODcsIm1lYW5EaWZmZXJlbmNlIjo4LjA4NTk5MTU4NzcwMjk2NH0seyJ0YXJnZXQiOiJjYWJpbiIsImNoYW5nZWQiOjMyNDEzMywibWVhbkRpZmZlcmVuY2UiOjE0LjU2NDEzMTUwMzg1NzcwNH1d"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b892f05db9a15b76833-f857c62ff5b407f719be",
+          "file": "assistant.spec.ts",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "mechanical.spec.ts",
+      "file": "mechanical.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I4 four independent original doors and trunk reach zero half full, reverse and stay isolated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:39:12.032Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "mechanical-actual-poses",
+                      "contentType": "application/json",
+                      "body": "ewogICJyZWNvcmRzIjogWwogICAgewogICAgICAicGFydCI6ICJkb29yOmZsIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmbCIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwwLjUzNzMwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsLTAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6ZmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDAuNSwKICAgICAgIm1hdHJpeCI6ICIwLjg0MzM5MSwwLjAwMDAwMCwtMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC44NDMzOTEsMC4wMDAwMDAsMC44OTUwMDAsMC42OTAwMDAsLTAuODc1MDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpmciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLC0wLjg3NTAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsMC41MzczMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLC0wLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cmwiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjAuNDIyNjE4LDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjkwNjMwOCwwLjAwMDAwMCwwLjQyMjYxOCwwLjAwMDAwMCwtMC44OTUwMDAsMC42OTAwMDAsMC4yNjAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJkb29yOnJyIiwKICAgICAgInZhbHVlIjogMCwKICAgICAgIm1hdHJpeCI6ICIxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwwLjAwMDAwMCwxLjAwMDAwMCwwLjAwMDAwMCwwLjg5NTAwMCwwLjY5MDAwMCwwLjI2MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogImRvb3I6cnIiLAogICAgICAidmFsdWUiOiAwLjUsCiAgICAgICJtYXRyaXgiOiAiMC44NDMzOTEsMC4wMDAwMDAsLTAuNTM3MzAwLDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNTM3MzAwLDAuMDAwMDAwLDAuODQzMzkxLDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAiZG9vcjpyciIsCiAgICAgICJ2YWx1ZSI6IDEsCiAgICAgICJtYXRyaXgiOiAiMC40MjI2MTgsMC4wMDAwMDAsLTAuOTA2MzA4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuOTA2MzA4LDAuMDAwMDAwLDAuNDIyNjE4LDAuMDAwMDAwLDAuODk1MDAwLDAuNjkwMDAwLDAuMjYwMDAwLDEuMDAwMDAwIgogICAgfSwKICAgIHsKICAgICAgInBhcnQiOiAidHJ1bms6cmVhciIsCiAgICAgICJ2YWx1ZSI6IDAsCiAgICAgICJtYXRyaXgiOiAiMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4wMDAwMDAsMC4wMDAwMDAsMC4wMDAwMDAsMS4xMDAwMDAsMS44ODAwMDAsMS4wMDAwMDAiCiAgICB9LAogICAgewogICAgICAicGFydCI6ICJ0cnVuazpyZWFyIiwKICAgICAgInZhbHVlIjogMC41LAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuNjQyNzg4LC0wLjc2NjA0NCwwLjAwMDAwMCwwLjAwMDAwMCwwLjc2NjA0NCwwLjY0Mjc4OCwwLjAwMDAwMCwwLjAwMDAwMCwxLjEwMDAwMCwxLjg4MDAwMCwxLjAwMDAwMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXJ0IjogInRydW5rOnJlYXIiLAogICAgICAidmFsdWUiOiAxLAogICAgICAibWF0cml4IjogIjEuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLDAuMDAwMDAwLC0wLjE3MzY0OCwtMC45ODQ4MDgsMC4wMDAwMDAsMC4wMDAwMDAsMC45ODQ4MDgsLTAuMTczNjQ4LDAuMDAwMDAwLDAuMDAwMDAwLDEuMTAwMDAwLDEuODgwMDAwLDEuMDAwMDAwIgogICAgfQogIF0sCiAgInJldmVyc2FsIjogMC4yMjU1Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-63d7d2a130625cf0446f",
+          "file": "mechanical.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "I4 every window keeps its local travel at all three door angles; rules and clarify use the same state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 59993,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:39:41.476Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "door-window-local-frame-combinations",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjMxMzc4MywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMDk5MjgzLDAuNzAyNDg3IgogIH0sCiAgewogICAgImMiOiAiZmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zMTM3ODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4wOTkyODMsMC43MDI0ODciCiAgfSwKICB7CiAgICAiYyI6ICJmbCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjExNTIxNywwLjcwMjQ4NyIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zMTM3OTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4wOTkyOTAsMC43MDI0ODAiCiAgfSwKICB7CiAgICAiYyI6ICJmciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzEzNzkwLDAuNzAyNDgwIgogIH0sCiAgewogICAgImMiOiAiZnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjA5OTI5MCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogImZyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjExNTIxMCwwLjcwMjQ4MCIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDAsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICIwLjE0NTAwMCwwLjM0NzUyNCwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDkwMDAwLDAuMTUwNTI0LDAuNDk4OTIxIgogIH0sCiAgewogICAgImMiOiAicmwiLAogICAgImRvb3IiOiAwLjUsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJsIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMC41LAogICAgImxvY2FsUG9zaXRpb24iOiAiMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjEiCiAgfSwKICB7CiAgICAiYyI6ICJybCIsCiAgICAiZG9vciI6IDEsCiAgICAid2luIjogMSwKICAgICJsb2NhbFBvc2l0aW9uIjogIjAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMSIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAwLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMCwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMC41LAogICAgIndpbiI6IDAsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4xNDUwMDAsMC4zNDc1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAwLjUsCiAgICAibG9jYWxQb3NpdGlvbiI6ICItMC4wOTAwMDAsMC4xNTA1MjQsMC40OTg5MjIiCiAgfSwKICB7CiAgICAiYyI6ICJyciIsCiAgICAiZG9vciI6IDAuNSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAwLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMTQ1MDAwLDAuMzQ3NTI0LDAuNDk4OTIyIgogIH0sCiAgewogICAgImMiOiAicnIiLAogICAgImRvb3IiOiAxLAogICAgIndpbiI6IDAuNSwKICAgICJsb2NhbFBvc2l0aW9uIjogIi0wLjA5MDAwMCwwLjE1MDUyNCwwLjQ5ODkyMiIKICB9LAogIHsKICAgICJjIjogInJyIiwKICAgICJkb29yIjogMSwKICAgICJ3aW4iOiAxLAogICAgImxvY2FsUG9zaXRpb24iOiAiLTAuMDM1MDAwLC0wLjA0NjQ3NiwwLjQ5ODkyMiIKICB9Cl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-d66ca51934257c0d6d03",
+          "file": "mechanical.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "I4 labelled model hotspots act on real parts; canvas drag cannot activate a part",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12872,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T11:40:41.488Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adb67cac04d033643eab-f8b2134a4d660d3e064e",
+          "file": "mechanical.spec.ts",
+          "line": 29,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-30T11:38:50.107Z",
+    "duration": 144923.921,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -22,6 +22,8 @@ test('real remote events animate independent pixels, preserve indicators and pro
  for(const f of frames)for(let m=0;m<4;m++)expect(f.powers[m]).toEqual(f.powers[m+4]);
  await page.screenshot({path:`docs/assets/welcome/meteor-${info.project.name}.png`});
  await page.getByRole('button',{name:'灯组细节',exact:true}).click();await page.waitForTimeout(1700);await page.screenshot({path:`docs/assets/welcome/matrix-detail-${info.project.name}.png`});
+ await expect.poll(async()=>(await read()).elapsedMs).toBeGreaterThan(4800);
+ await remote.getByRole('button',{name:'关闭流星雨',exact:true}).click();
  await expect.poll(async()=>(await read()).active,{timeout:7000}).toBe(false);
  const after=await read('data-appearance');expect(after.headlights).toBe(before.headlights);expect(after.turnSignal).toBe('hazard');
  await remote.getByRole('button',{name:'锁定车辆',exact:true}).click();await remote.getByRole('button',{name:'解锁车辆',exact:true}).click();await expect.poll(async()=>(await read()).active).toBe(true);
@@ -68,6 +70,8 @@ test('normal low/high beams survive welcome, mid-animation controls and expired 
  await expect.poll(async()=>Object.values((await read('data-appearance')).nativeLamps.projectors).flat().map(p=>p.power)).toEqual([4,4,0,0,4,4,0,0]);
  await page.getByRole('button',{name:'流星雨迎宾',exact:true}).click();await expect.poll(async()=>(await read('data-welcome')).active).toBe(true);
  await page.getByRole('button',{name:'远光灯',exact:true}).click();await expect.poll(async()=>Object.values((await read('data-appearance')).nativeLamps.projectors).flat().map(p=>p.power)).toEqual(Array(8).fill(10));
+ await expect.poll(async()=>(await read('data-welcome')).elapsedMs).toBeGreaterThan(4800);
+ await page.getByRole('button',{name:'关闭流星雨',exact:true}).click();
  await expect.poll(async()=>(await read('data-welcome')).active,{timeout:6500}).toBe(false);expect((await read('data-welcome')).powers.flat()).toEqual(Array(96).fill(.3));
  // Joining after completion must not replay a stale event on the new renderer.
  const late=await context.newPage();await late.goto('/');await expect(late.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await expect.poll(()=>late.locator('canvas').getAttribute('data-welcome').then(s=>s&&JSON.parse(s).active)).toBe(false);await late.close();
@@ -83,6 +87,6 @@ test('paired remote works on actual private-address HTTP without secure-context 
   const page=await context.newPage();await page.goto(`${base}/remote?token=${pair.token}`);expect(await page.evaluate(()=>isSecureContext)).toBe(false);
   await expect(page.getByRole('button',{name:'流星雨迎宾',exact:true})).toBeEnabled();await page.getByRole('button',{name:'流星雨迎宾',exact:true}).click();
   const state=async()=>await(await fetch(`${base}/api/welcome/state`,{headers:{Authorization:`Bearer ${pair.token}`}})).json();
-  await expect.poll(async()=>(await state()).event?.source).toBe('manual');expect((await state()).event.id).toHaveLength(32);
+  await expect.poll(async()=>(await state()).rain?.id.length).toBe(32);expect((await state()).rain.id).toHaveLength(32);
  }finally{await context.close();await directBrowser.close();server.closeAllConnections();await new Promise<void>(r=>server.close(()=>r()));}
 });

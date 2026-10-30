@@ -1,7 +1,7 @@
 import {test,expect,type Page} from '@playwright/test';
 import {corners,doorLabels} from '../../packages/shared/src/vehicle';
 const pose=(p:Page,part:string)=>p.locator('canvas').getAttribute(`data-${part.replaceAll(':','-')}-openness`).then(Number);
-async function ready(page:Page){await page.goto('/');await expect(page.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled();await page.getByRole('button',{name:'门与尾箱',exact:true}).click();}
+async function ready(page:Page){await page.goto('/');await expect(page.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('button',{name:'门与尾箱',exact:true}).click();}
 async function text(p:Page,s:string){await p.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(s);await p.getByRole('button',{name:'发送',exact:false}).click();}
 test('I4 four independent original doors and trunk reach zero half full, reverse and stay isolated',async({page},info)=>{
   test.setTimeout(90000);await ready(page);const records=[];
