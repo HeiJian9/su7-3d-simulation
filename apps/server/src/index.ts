@@ -1,5 +1,6 @@
 import {intentConfig,assistantRoutes} from './assistant.js';
 import {attachWake} from './wake.js';
+import {welcomeRoutes} from './welcome.js';
 import express, { type ErrorRequestHandler } from 'express';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -25,10 +26,11 @@ const providers = providerConfig(testUnconfigured ? {} : process.env);
 const intent=intentConfig(testUnconfigured?{}:process.env);
 app.use('/api/assistant',express.json({limit:'128kb'}),assistantRoutes(intent.config));
 app.disable('x-powered-by');
+app.use('/api/welcome',express.json({limit:'2kb'}),welcomeRoutes());
 let wakeConnections=()=>0,wakeDiagnostics:()=>unknown=()=>[];
 app.get('/api/wake/status',(_req,res)=>res.set('Cache-Control','no-store').json({engine:'sherpa-onnx',runtime:'local-node-worker',keyword:'小爱同学',connections:wakeConnections(),cloudAudio:false,recent:wakeDiagnostics()}));
 app.get('/api/health', (_req, res) => {
-  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I7–I9', version: '0.7.8', providers: {
+  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I7–I9', version: '0.8.0', providers: {
     ...providers.health,
     intent: intent.health,
   } });
@@ -87,6 +89,6 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, _next) => {
   if (!res.headersSent) res.status(error?.status === 413 ? 413 : 400).json({ code: 'INVALID_REQUEST', message: '请求内容或大小不符合接口要求。', retryable: false });
 };
 app.use(errorHandler);
-const server = app.listen(port, '127.0.0.1', () => console.log(`SU7 I7–I9: http://localhost:${port}`));
+const server = app.listen(port, process.env.HOST??'127.0.0.1', () => console.log(`SU7 I7–I9: http://localhost:${port}`));
 const wakeService=attachWake(server,root);wakeConnections=()=>wakeService.clients.size;wakeDiagnostics=()=>wakeService.diagnostics();
 server.on('error', (error) => { console.error(error.message); process.exitCode = 1; });

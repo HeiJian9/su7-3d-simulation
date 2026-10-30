@@ -2,12 +2,14 @@ import {AmbientControls} from './AmbientControls';
 import {paintPresets,type VehicleCommand} from '../../../packages/shared/src/vehicle';
 import {manualCommand,useVehicle} from './vehicle';
 import {useScene} from './store';
+import {WelcomeControls} from './WelcomeControls';
 export function AppearancePanel(){
   const s=useVehicle(v=>v.state),ready=useVehicle(v=>v.capabilities.includes('paint:body'));
   const domeReady=useVehicle(v=>v.capabilities.includes('cabinLight:front')&&v.capabilities.includes('cabinLight:rear'));
   const haze=s.scatter.strength,hazeEnabled=s.scatter.enabled;
   const send=(c:VehicleCommand)=>manualCommand([c]);
   return <div className="component-content appearance-panel">
+    <WelcomeControls/>
     <AmbientControls/>
     <section>
       <div className="component-row"><strong>车灯</strong></div>

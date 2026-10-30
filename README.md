@@ -1,6 +1,10 @@
-# SU7 智能座舱 · 0.7.8
+# SU7 智能座舱 · 0.8.0
 
 第一次下载或在其他电脑运行，请先看 [简明启动指南](启动指南.md)。
+
+0.8.0：新增双侧 96 单元流星雨迎宾、四门随动 SU7 地面投影，以及手动／解锁／配对遥控触发。近光与远光模组独立，远光保留近光；现有转向灯几何、颜色和控制代码保持。见 [实现与验收](docs/WELCOME_LIGHTING.md)。
+
+使用：打开“灯光外观”，在顶部点击“流星雨迎宾”；“灯组细节”可近看独立单元。先锁定再解锁可验自动迎宾。开任一车门查看对应地面投影，“连接遥控器”可打开独立控制页。局域网配置与配对方法见上述报告。
 
 0.7.8：移除仪表台上沿的附加灯面，直接照亮原车可见饰边 Mesh54；与前门饰边共用表面发光方式和调光，不移动原车顶点。近景与两分辨率证据见 [本轮报告](docs/NATIVE_CROWN.md)。
 
@@ -28,7 +32,7 @@
 
 交付索引：[I7–I9 报告](docs/I7_I9_VALIDATION.md)、[工具与参数](docs/LLM_TOOLS.md)、[能力证据矩阵](docs/CAPABILITY_COVERAGE.md)、[R01–R19](docs/REQUIREMENTS_TRACEABILITY.md)、[过程与录像索引](docs/SESSION_LOG.md)。真实 API 固定音源与真人分别记录，尚未将整轮标为全部通过。
 
-本地交付包：`deliverables/SU7-0.7.8.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
+本地交付包：`deliverables/SU7-0.8.0.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
 
 本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮视觉报告目录为 `docs/validation/native-crown/`；旧扩散面证据保存在 `docs/validation/crown-profile/`，0.7.5 光场证据保存在 `docs/validation/line-lighting/`，0.7.4 原生饰边证据保存在 `docs/validation/native-ambient/`，0.7.3 浏览器与真实 API 报告目录为 `docs/validation/trim-dialogue/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
 

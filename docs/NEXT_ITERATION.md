@@ -1,3 +1,11 @@
+# 当前交接 · 0.8.0 / 流星雨迎宾与四门投影
+
+见 [WELCOME_LIGHTING.md](WELCOME_LIGHTING.md)。新增 8 个原灯腔内矩阵／96 单元和四个底部 gobo 投影器，运行时从真实原网格衍生，不改基础 .blend／GLB。转向灯及 AppearanceMechanism、VolumetricLights、车门机构代码保持；三份 mapping 只改高灯专用标志，模组 0/1 近光、2/3 远光，远光保留近光。已有原生灯带和接缝修正继续保护。
+
+远程通道原先不存在，本轮在原 Express 服务增加 welcome HTTP/SSE，/remote 为独立配对遥控页。一次事件驱动 4.8 秒本地动画，结束恢复当前真实灯态；晚加入不重播。锁态与自动迎宾由服务端同步，默认解锁；先锁定再解锁可验自动播放。默认仍监听回环，HOST=0.0.0.0 可供可信局域网遥控，令牌需本机配对取得。
+
+原投射面、Mesh70 外透镜和门底定位只读推导自 GLB；修改基础模型后重新运行 node scripts/derive-welcome-lamps.mjs。不要运行旧导入／分件。新增灯光与语音服务无凭据耦合，原 ASR/TTS/LLM 配置沿用。
+
 # 当前交接 · 0.7.8 / 原车仪表台饰边发光
 
 用户明确要求原车线条发光。移除 0.7.6／0.7.7 的两个运行时 crown 扩散面，改在可见原饰边 Mesh54 上使用 nativeAmbient；此前仅在其下方 Mesh53 发光会被饰边遮住，不能据此推断原车表面发光不可用。删除 dashboardProfile 生成器、数据与绑定，勿恢复。31 条原生路径／11 个原网格，加两条保留的下沿灯面，总覆盖仍为 33；五个光场改采原生 crown 路径。前后排覆盖保持。原 .blend／GLB 不变，只读 derive-native-ambient 可重新生成路径；正常模型导出仍仅 asset:export。详见 [本轮报告](NATIVE_CROWN.md)。

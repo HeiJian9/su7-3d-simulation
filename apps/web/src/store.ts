@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 export type CameraMode = 'orbit' | 'free';
-export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lounge' | 'rearCabin' | 'lighting' | 'roofFront' | 'roofRear' | 'frunk' | 'cargo';
+export type View = 'overview' | 'front' | 'rear' | 'left' | 'right' | 'cabin' | 'ambient' | 'lounge' | 'rearCabin' | 'lighting' | 'roofFront' | 'roofRear' | 'frunk' | 'cargo' | 'welcome' | 'welcomeDetail' | 'puddle' | 'puddleLeft';
 export interface Metrics {
   fps: number;
   calls: number;

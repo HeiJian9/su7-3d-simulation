@@ -12,7 +12,7 @@ test('native projector and inner rear modules emit yellow, restore original colo
   await mkdir('docs/assets/native-lamps',{recursive:true});await page.goto('/');await expect(page.getByRole('button',{name:'全部打开',exact:true})).toBeEnabled();await page.getByRole('button',{name:'灯光外观',exact:true}).click();
   const records=[];
   for(const [label,power,beam] of [['关闭前灯',0,0],['近光灯',4,1200],['远光灯',10,6500]] as const){
-    await page.getByRole('button',{name:label,exact:true}).click();await expect.poll(async()=>{const a=await actual(page);return Object.values(a.nativeLamps.projectors).flat().every(p=>p.power===power);}).toBe(true);
+    await page.getByRole('button',{name:label,exact:true}).click();await expect.poll(async()=>{const a=await actual(page);return Object.values(a.nativeLamps.projectors).flat().every(p=>p.power===(label==='近光灯'&&Number(p.material.split('_').at(-1))>=2?0:power));}).toBe(true);
     const a=await actual(page);expect(a.headlightPower).toEqual([beam,beam]);for(const caps of Object.values(a.nativeLamps.projectors)){expect(caps).toHaveLength(4);expect(caps.every(p=>p.node==='Mesh61')).toBe(true);}records.push(a);
   }
   await page.getByRole('button',{name:'近光灯',exact:true}).click();await page.getByRole('button',{name:'折叠车辆面板',exact:true}).click();await view(page,'前');await page.screenshot({path:`docs/assets/native-lamps/front-low-${info.project.name}.png`});

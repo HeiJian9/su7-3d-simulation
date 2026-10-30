@@ -287,7 +287,7 @@
           {
             "node": "Mesh61",
             "material": "LAMP_LEFT_PROJECTOR_2",
-            "highOnly": false,
+            "highOnly": true,
             "sourceFaces": 10,
             "center": [
               -0.771004319190979,
@@ -298,7 +298,7 @@
           {
             "node": "Mesh61",
             "material": "LAMP_LEFT_PROJECTOR_3",
-            "highOnly": false,
+            "highOnly": true,
             "sourceFaces": 10,
             "center": [
               -0.8484730124473572,
@@ -342,7 +342,7 @@
           {
             "node": "Mesh61",
             "material": "LAMP_RIGHT_PROJECTOR_2",
-            "highOnly": false,
+            "highOnly": true,
             "sourceFaces": 10,
             "center": [
               0.7709952592849731,
@@ -353,7 +353,7 @@
           {
             "node": "Mesh61",
             "material": "LAMP_RIGHT_PROJECTOR_3",
-            "highOnly": false,
+            "highOnly": true,
             "sourceFaces": 10,
             "center": [
               0.8484646081924438,
