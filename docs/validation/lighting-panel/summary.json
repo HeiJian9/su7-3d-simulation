@@ -1,0 +1,56 @@
+{
+  "version": "0.8.4",
+  "date": "2026-10-30",
+  "scope": "lighting panel presentation and shared percentage input component",
+  "checks": {
+    "typecheck": {
+      "passed": true,
+      "evidence": "build.log"
+    },
+    "lint": {
+      "passed": true
+    },
+    "build": {
+      "passed": true,
+      "evidence": "build.log"
+    },
+    "browser": {
+      "uniquePassed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "resolutions": [
+        "1920x1080",
+        "1366x768"
+      ],
+      "evidence": "browser-final.json",
+      "latestVisualRecheck": {
+        "passed": 2,
+        "evidence": "visual-final.json",
+        "reason": "Correct global i size inheritance on switch track and shorten one caption"
+      }
+    },
+    "secrets": {
+      "passed": true,
+      "evidence": "secret-scan.json"
+    }
+  },
+  "verified": [
+    "all seven brightness values reach actual vehicle state",
+    "keyboard checkbox and disclosure",
+    "remote pairing link",
+    "compact and expanded screenshots",
+    "no horizontal overflow",
+    "Logo door gating",
+    "main page reset and remote state",
+    "long-range and central rain ground pixels",
+    "original ambient palettes and vehicle controls"
+  ],
+  "unchanged": [
+    "model and render code",
+    "registered command schemas and execution semantics",
+    "voice providers and credentials"
+  ],
+  "liveCloud": "not repeated for a visual change; prior eight real API synthetic-input cases preserved in ../welcome-controls/live-speech.json",
+  "human": "no new human acceptance",
+  "delivery": "deliverables/SU7-0.8.4.zip"
+}

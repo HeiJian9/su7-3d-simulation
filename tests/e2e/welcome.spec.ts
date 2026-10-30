@@ -8,7 +8,7 @@ test('real remote events animate independent pixels, preserve indicators and pro
  test.setTimeout(90000);await mkdir('docs/assets/welcome',{recursive:true});
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();
- await page.getByRole('button',{name:'灯光外观',exact:true}).click();
+ await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByText('视角与遥控',{exact:true}).click();
  await expect(page.getByRole('button',{name:'流星雨迎宾',exact:true})).toBeEnabled();
  const canvas=page.locator('canvas'),read=async(attr='data-welcome')=>JSON.parse((await canvas.getAttribute(attr))!);
  await expect.poll(async()=>(await read()).units).toBe(96);
@@ -39,7 +39,7 @@ test('real remote events animate independent pixels, preserve indicators and pro
 
 test('each door projects visible ground pixels independently and the footprint follows its real hinge',async({page},info)=>{
  test.setTimeout(90000);await mkdir('docs/assets/welcome',{recursive:true});await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();
- await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();
+ await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByText('视角与遥控',{exact:true}).click();await page.getByRole('button',{name:'柔光展厅',exact:true}).click();
  const canvas=page.locator('canvas'),read=async()=>JSON.parse((await canvas.getAttribute('data-welcome'))!);
  const command=async(text:string)=>{await page.getByRole('textbox',{name:'车辆文字指令',exact:true}).fill(text);await page.getByRole('button',{name:'发送',exact:false}).click();};
  for(const [corner,label]of [['fl','左前'],['rl','左后'],['fr','右前'],['rr','右后']]){
@@ -64,7 +64,7 @@ test('each door projects visible ground pixels independently and the footprint f
 });
 
 test('normal low/high beams survive welcome, mid-animation controls and expired event reconnects',async({page,context})=>{
- await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await page.getByRole('button',{name:'灯光外观',exact:true}).click();
+ await page.goto('/');await expect(page.getByRole('button',{name:'开始录音',exact:true})).toBeEnabled({timeout:25000});await page.getByRole('checkbox',{name:'语音反馈',exact:true}).uncheck();await page.getByRole('button',{name:'灯光外观',exact:true}).click();await page.getByText('视角与遥控',{exact:true}).click();
  const canvas=page.locator('canvas'),read=async(attr:string)=>JSON.parse((await canvas.getAttribute(attr))!);
  await page.getByRole('button',{name:'近光灯',exact:true}).click();
  await expect.poll(async()=>Object.values((await read('data-appearance')).nativeLamps.projectors).flat().map(p=>p.power)).toEqual([4,4,0,0,4,4,0,0]);

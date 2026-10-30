@@ -1,0 +1,263 @@
+{
+  "config": {
+    "argv": [
+      "D:\\software\\node\\node.exe",
+      "D:\\code\\Projects\\3D simulation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/lighting-panel.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "D:\\code\\Projects\\3D simulation\\playwright.config.ts",
+    "rootDir": "D:/code/Projects/3D simulation/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\code\\Projects\\3D simulation\\tests\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1920x1080",
+        "name": "Edge-1920x1080",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "D:/code/Projects/3D simulation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Edge-1366x768",
+        "name": "Edge-1366x768",
+        "testDir": "D:/code/Projects/3D simulation/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1920x1080",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1920x1080"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\code\\Projects\\3D simulation\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "Edge-1366x768",
+        "testDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "snapshotDir": "D:\\code\\Projects\\3D simulation\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://localhost:3003",
+          "channel": "msedge",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "permissions": [
+            "microphone"
+          ],
+          "launchOptions": {
+            "args": [
+              "--use-fake-ui-for-media-stream",
+              "--use-fake-device-for-media-stream",
+              "--use-file-for-fake-audio-capture=D:\\code\\Projects\\3D simulation\\.tools\\test-fixtures\\mock-microphone.wav"
+            ]
+          },
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "Edge-1366x768"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run start:test",
+      "url": "http://localhost:3003",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "lighting-panel.spec.ts",
+      "file": "lighting-panel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "lighting panel keeps a compact hierarchy, keyboard controls and all seven real brightness bindings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1920x1080",
+              "projectName": "Edge-1920x1080",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11938,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T15:05:00.669Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "lighting-ui-controls",
+                      "contentType": "application/json",
+                      "body": "eyJiaW5kaW5ncyI6W1si5rWB5pif6Zuo5Lqu5bqmIiwid2VsY29tZVJhaW46ZnJvbnQ6YnJpZ2h0bmVzcyJdLFsi6L+O5a6+5oqV5b2x5Lqu5bqmIiwid2VsY29tZUxvZ286ZG9vcnM6YnJpZ2h0bmVzcyJdLFsi5rCb5Zu054Gv5Lqu5bqmIiwiYW1iaWVudDpjYWJpbjpicmlnaHRuZXNzIl0sWyLliY3nga/kuq7luqYiLCJoZWFkbGlnaHRzOmZyb250OmJyaWdodG5lc3MiXSxbIuepuuawlOaVo+WwhOW8uuW6piIsInNjYXR0ZXI6c2NlbmU6c3RyZW5ndGgiXSxbIuWJjeaOkumhtueBr+S6ruW6piIsImNhYmluTGlnaHQ6ZnJvbnQ6YnJpZ2h0bmVzcyJdLFsi5ZCO5o6S6aG254Gv5Lqu5bqmIiwiY2FiaW5MaWdodDpyZWFyOmJyaWdodG5lc3MiXV0sImtleWJvYXJkQXV0byI6dHJ1ZSwia2V5Ym9hcmREaXNjbG9zdXJlIjp0cnVlLCJwYWlyaW5nTGluayI6dHJ1ZSwibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOnRydWUsImVycm9ycyI6W10sInJlYWxBcGkiOmZhbHNlfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a73a8715da182141336-9da436eff763bb4e6a51",
+          "file": "lighting-panel.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "lighting panel keeps a compact hierarchy, keyboard controls and all seven real brightness bindings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge-1366x768",
+              "projectName": "Edge-1366x768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10395,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T15:05:13.243Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "lighting-ui-controls",
+                      "contentType": "application/json",
+                      "body": "eyJiaW5kaW5ncyI6W1si5rWB5pif6Zuo5Lqu5bqmIiwid2VsY29tZVJhaW46ZnJvbnQ6YnJpZ2h0bmVzcyJdLFsi6L+O5a6+5oqV5b2x5Lqu5bqmIiwid2VsY29tZUxvZ286ZG9vcnM6YnJpZ2h0bmVzcyJdLFsi5rCb5Zu054Gv5Lqu5bqmIiwiYW1iaWVudDpjYWJpbjpicmlnaHRuZXNzIl0sWyLliY3nga/kuq7luqYiLCJoZWFkbGlnaHRzOmZyb250OmJyaWdodG5lc3MiXSxbIuepuuawlOaVo+WwhOW8uuW6piIsInNjYXR0ZXI6c2NlbmU6c3RyZW5ndGgiXSxbIuWJjeaOkumhtueBr+S6ruW6piIsImNhYmluTGlnaHQ6ZnJvbnQ6YnJpZ2h0bmVzcyJdLFsi5ZCO5o6S6aG254Gv5Lqu5bqmIiwiY2FiaW5MaWdodDpyZWFyOmJyaWdodG5lc3MiXV0sImtleWJvYXJkQXV0byI6dHJ1ZSwia2V5Ym9hcmREaXNjbG9zdXJlIjp0cnVlLCJwYWlyaW5nTGluayI6dHJ1ZSwibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOnRydWUsImVycm9ycyI6W10sInJlYWxBcGkiOmZhbHNlfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a73a8715da182141336-1b2245d3b61bec76fd53",
+          "file": "lighting-panel.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-30T15:04:59.476Z",
+    "duration": 24704.736,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

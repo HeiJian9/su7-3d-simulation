@@ -1,6 +1,7 @@
 import type {CSSProperties} from 'react';
 import {manualCommand,useVehicle} from './vehicle';
 import {useScene} from './store';
+import {LightLevel} from './LightLevel';
 
 export const ambientPalettes = [
   {name:'冰川蓝',color:'#72c9ff',brightness:.65},
@@ -41,8 +42,7 @@ export function AmbientControls(){
       {component:'ambient',targets:['cabin'],operation:'set',property:'brightness',value:p.brightness},
     ])}><i/>{p.name}</button>)}</div>
     <label className="color-picker">自定义色调<input disabled={!ready} type="color" aria-label="氛围灯颜色" value={ambient.color} onChange={e=>send('color',e.target.value)}/></label>
-    <label className="component-row" htmlFor="ambient-brightness">灯光亮度<output>{Math.round(ambient.brightness*100)}%</output></label>
-    <input disabled={!ready} id="ambient-brightness" aria-label="氛围灯亮度" type="range" min="0" max="100" value={Math.round(ambient.brightness*100)} onChange={e=>send('brightness',Number(e.target.value)/100)}/>
+    <LightLevel label="灯光亮度" ariaLabel="氛围灯亮度" value={ambient.brightness} disabled={!ready} onChange={value=>send('brightness',value)}/>
     <p>仪表台 · 四门饰板 · 中央通道 · 前后脚窝</p>
     <div className="mode-buttons"><button onClick={()=>useScene.getState().go('lounge')}>全舱视角</button><button onClick={()=>useScene.getState().go('ambient')}>门板视角</button><button onClick={()=>useScene.getState().go('rearCabin')}>后排视角</button></div>
   </section>;
