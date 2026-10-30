@@ -1,7 +1,7 @@
 import {z} from 'zod';
 
 export const welcomeDurationMs=4800;
-export const welcomeActionSchema=z.object({requestId:z.string().min(1).max(80),action:z.enum(['play','rain','lock','unlock','auto']),enabled:z.boolean().optional(),brightness:z.number().min(0).max(1).optional()}).strict().superRefine((v,c)=>{if((v.action==='auto'||v.action==='rain')&&typeof v.enabled!=='boolean')c.addIssue({code:'custom',message:'enabled required'});if(v.action!=='rain'&&v.brightness!==undefined)c.addIssue({code:'custom',message:'brightness only applies to rain'});});
+export const welcomeActionSchema=z.object({requestId:z.string().min(1).max(80),action:z.enum(['play','rain','lock','unlock','auto','reset']),enabled:z.boolean().optional(),brightness:z.number().min(0).max(1).optional()}).strict().superRefine((v,c)=>{if((v.action==='auto'||v.action==='rain')&&typeof v.enabled!=='boolean')c.addIssue({code:'custom',message:'enabled required'});if(v.action!=='rain'&&v.brightness!==undefined)c.addIssue({code:'custom',message:'brightness only applies to rain'});});
 export type WelcomeAction=z.infer<typeof welcomeActionSchema>;
 export interface WelcomeEvent {id:string;sequence:number;startedAt:number;source:'manual'|'unlock'}
 export interface WelcomeSnapshot {sessionId:string;serverTime:number;sequence:number;locked:boolean;auto:boolean;brightness:number;rain:{id:string;startedAt:number}|null;event:WelcomeEvent|null}
@@ -14,6 +14,7 @@ export class WelcomeController {
   if(this.seen.has(action.requestId))return {changed:false,snapshot:this.snapshot(now)};
   this.seen.add(action.requestId);if(this.seen.size>256)this.seen.delete(this.seen.values().next().value!);
   const unlock=action.action==='unlock'&&this.state.locked;
+  if(action.action==='reset')this.state={...this.state,locked:false,auto:true,brightness:1,rain:null,event:null};
   if(action.action==='lock')this.state.locked=true;
   if(action.action==='unlock')this.state.locked=false;
   if(action.action==='auto')this.state.auto=action.enabled!;

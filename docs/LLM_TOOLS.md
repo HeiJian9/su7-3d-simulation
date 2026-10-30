@@ -1,8 +1,8 @@
-# 车载智能助手工具与参数 · 0.8.2
+# 车载智能助手工具与参数 · 0.8.3
 
 唯一注册来源：[capabilities.ts](../packages/shared/src/capabilities.ts)。命令 Schema 同时供 VehicleLedger、手动入口、规则和 LLM 校验；`registeredTools()` 从这些 Zod Schema 生成工具定义。模型只能选择注册工具，不能提交脚本、场景节点路径或其它操作。
 
-每个控车工具接收严格对象 `{actions:[...]}`。每个 action 包含 `component`、`targets`、`property`、`operation`，设值／调整另带 `value`；一次刮刷改用 `operation:"trigger",action:"swipe_once"`。完整机器 Schema 由 `scripts/report-i7-i9.mjs` 导出；当前 20 项控车工具＋assistant_reply 机器 Schema 另存 `docs/validation/welcome-optical/tools.json`，旧快照保留。0.8.2 仅将流星雨亮度的视觉说明更新为矩阵空气雾光，名称和参数保持；开关／亮度经真实迎宾服务确认的执行语义保持。
+每个控车工具接收严格对象 `{actions:[...]}`。每个 action 包含 `component`、`targets`、`property`、`operation`，设值／调整另带 `value`；一次刮刷改用 `operation:"trigger",action:"swipe_once"`。完整机器 Schema 由 `scripts/report-i7-i9.mjs` 导出；当前 22 项控车工具＋assistant_reply 机器 Schema 另存 `docs/validation/welcome-controls/tools.json`，旧快照保留。0.8.2 仅将流星雨亮度的视觉说明更新为矩阵空气雾光，名称和参数保持；开关／亮度经真实迎宾服务确认的执行语义保持。
 
 | 工具 | 对象 / 属性 | 操作与合法值 |
 |---|---|---|
@@ -25,12 +25,14 @@
 | vehicle_scatter_strength | scatter / scene / strength | set 0–1；adjust −1–1；query |
 | vehicle_welcome_rain_switch | welcomeRain / front / enabled | set boolean；query；持续开关，不改近远光 |
 | vehicle_welcome_rain_brightness | welcomeRain / front / brightness | set 0–1；adjust −1–1；query；独立实际亮度 |
+| vehicle_welcome_logo_switch | welcomeLogo / doors / enabled | set boolean；query；允许开门点亮，关闭车门仍熄灭 |
+| vehicle_welcome_logo_brightness | welcomeLogo / doors / brightness | set 0–1；adjust −1–1；query；门底灯口、字标、光晕及雾光共同调节 |
 | vehicle_observation | observation / scene / night | set boolean；query |
 | assistant_reply | 无车辆副作用 | kind clarify / unsupported / not_understood / noop / chat，加简短 message |
 
 fl / fr / rl / rr 依次是左前、右前、左后、右后；cabinLight 的 front / rear 指前排、后排。灯光、车漆的目标域彼此独立。后行车灯红环是既有固定常亮资产，不伪造可调工具；统一散射开关控制其空气散射。
 
-百分比和内部量统一：35% = 0.35，三成 = 0.3。`set .1` 是设为 10%，`adjust .1` 是增加十个百分点。模糊“一点”的步长集中在 `tuning.ts`，开度／亮度／散射为 0.1，雨刷为一档。相对调整被合法边界钳制并反馈上／下限。亮度调节不会擅自开灯。
+百分比和内部量统一：35% = 0.35，三成 = 0.3。`set .1` 是设为 10%，`adjust .1` 是增加十个百分点。模糊“一点”的步长集中在 `tuning.ts`，开度／亮度／散射为 0.1，雨刷为一档。相对调整被合法边界钳制并反馈上／下限。亮度调节不会擅自开灯。Logo 迎宾投影是四门整体设置；开启不会打开车门。它与车前流星雨独立，不明确的“迎宾灯”需要结合唯一上下文或追问。
 
 所有调用先完整校验，再按返回语义顺序计算、一次提交；同对象 set→adjust 基于前一步值，query 保留对应顺序观察。每个 tool_call_id 只回传该工具涉及属性的结果。动画中途可改向；去重、版本、录音代次、手动抢占、取消与旧回复丢弃沿用同一执行器。
 

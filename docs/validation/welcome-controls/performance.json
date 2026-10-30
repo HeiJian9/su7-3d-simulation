@@ -1,0 +1,103 @@
+{
+  "version": "0.8.3",
+  "at": "2026-10-30T14:40:04.675Z",
+  "viewport": "1920x1080",
+  "source": "real renderer, isolated unconfigured local service; no cloud API or human microphone",
+  "seconds": 30,
+  "samples": [
+    {
+      "elapsedSeconds": 2,
+      "fps": 193,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 4,
+      "fps": 194,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 6,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 8,
+      "fps": 201,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 10,
+      "fps": 201,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 12,
+      "fps": 201,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 14,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 16,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 18,
+      "fps": 204,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 20,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 22,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 24,
+      "fps": 195,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 26,
+      "fps": 201,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 28,
+      "fps": 197,
+      "active": true,
+      "matrixSources": 8
+    },
+    {
+      "elapsedSeconds": 30,
+      "fps": 202,
+      "active": true,
+      "matrixSources": 8
+    }
+  ],
+  "warmMedianFps": 202,
+  "warmMinFps": 195,
+  "rainStopped": true,
+  "errors": []
+}

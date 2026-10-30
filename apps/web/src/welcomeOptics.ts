@@ -2,10 +2,11 @@ import {CanvasTexture,HalfFloatType,Matrix4,ShaderMaterial,Vector3,WebGLRenderTa
 import {FullScreenQuad} from 'three/examples/jsm/postprocessing/Pass.js';
 
 export const rainCount=42;
+export const rainLayout={start:2.7,length:11.8,halfWidth:2.8};
 export function rainSample(ms:number,index:number,side:number,persistent=false){
  const n=index+3,seed=((n*n*n*17+n*31)%997)/997,t=ms/1000,p=((t*.64+seed)%1+1)%1;
- const lane=((n*n*37+n*113+17)%991)/991;
- const x=side*(.25+lane*1.7)*(.65+p*.35),z=-2.85-p*5.4;
+ const lane=index%6===0?(index%12===0?0:.025):.08+(((n*n*37+n*113+17)%991)/991)*.92;
+ const x=side*lane*rainLayout.halfWidth*(.65+p*.35),z=-rainLayout.start-p*rainLayout.length;
  const envelope=Math.min(1,Math.max(0,t/.22))*(persistent?1:Math.min(1,Math.max(0,(4.8-t)/.8)));
  return {x,z,p,power:envelope*Math.pow(Math.sin(p*Math.PI),.45)};
 }
@@ -23,7 +24,7 @@ export function createWelcomeGobos(logo:CanvasTexture){
   vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',
   fragmentShader:`varying vec2 vUv;uniform sampler2D logo;uniform mat4 inverseLight,rootInverse;uniform vec3 origin,center;uniform float side,time;uniform int mode;
 void main(){vec3 p;float lightSide=side,cell=-1.;
- if(mode==2){vec2 tile=fract(vUv*vec2(4.,2.));cell=floor(vUv.x*4.);lightSide=vUv.y<.5?-1.:1.;p=vec3(lightSide*tile.x*2.2,0.,-2.5-tile.y*6.1);}
+ if(mode==2){vec2 tile=fract(vUv*vec2(4.,2.));cell=floor(vUv.x*4.);lightSide=vUv.y<.5?-1.:1.;p=vec3(lightSide*tile.x*${rainLayout.halfWidth.toFixed(1)},0.,-${rainLayout.start.toFixed(1)}-tile.y*${rainLayout.length.toFixed(1)});}
  else{vec4 farPoint=inverseLight*vec4(vUv*2.-1.,1.,1.);vec3 ray=farPoint.xyz/farPoint.w-origin;
  if(ray.y>=-.0001){gl_FragColor=vec4(0.);return;}float distance=(-.0145-origin.y)/ray.y;p=(rootInverse*vec4(origin+ray*distance,1.)).xyz;}float glow=0.;
  if(mode==0){vec2 d=vec2(p.z-center.z,p.x-center.x),uv=-d*side/.30+.5;
@@ -31,12 +32,12 @@ void main(){vec3 p;float lightSide=side,cell=-1.;
  if(all(greaterThanEqual(uv,vec2(0.)))&&all(lessThanEqual(uv,vec2(1.))))glow+=.14*texture2D(logo,uv).r;}
  else{for(int i=0;i<42;i++){float n=float(i)+3.,seed=mod(n*n*n*17.+n*31.,997.)/997.,progress=fract(time*.64+seed);
  if(mode==2&&mod(float(i),4.)!=cell)continue;
- float lane=mod(n*n*37.+n*113.+17.,991.)/991.;float x=lightSide*(.25+lane*1.7)*(.65+progress*.35),z=-2.85-progress*5.4;
+ float lane=mod(float(i),6.)==0.?(mod(float(i),12.)==0.?0.:.025):.08+mod(n*n*37.+n*113.+17.,991.)/991.*.92;float x=lightSide*lane*${rainLayout.halfWidth.toFixed(1)}*(.65+progress*.35),z=-${rainLayout.start.toFixed(1)}-progress*${rainLayout.length.toFixed(1)};
  float dx=abs(p.x-x),dz=p.z-z;
- float rectangle=(1.-smoothstep(.018,.022,dx))*(1.-smoothstep(.17,.19,abs(dz-.12)));
- float halo=.055*exp(-pow(dx/.05,2.)-pow((dz-.12)/.27,2.));
- float haze=exp(-pow(dx/.085,2.)-pow((dz-.12)/.32,2.));
+ float rectangle=(1.-smoothstep(.022,.027,dx))*(1.-smoothstep(.23,.26,abs(dz-.12)));
+ float halo=.045*exp(-pow(dx/.055,2.)-pow((dz-.12)/.34,2.));
+ float haze=exp(-pow(dx/.12,2.)-pow((dz-.12)/.55,2.));
  glow=max(glow,(mode==2?haze:rectangle+halo)*pow(sin(progress*3.141593),.45));}}
  gl_FragColor=vec4(vec3(glow),1.);}`});
- return {material,quad:new FullScreenQuad(material),hazeAtlas:new WebGLRenderTarget(512,256,{depthBuffer:false,type:HalfFloatType}),targets:Array.from({length:6},(_,i)=>new WebGLRenderTarget(i<4?512:1024,i<4?512:1024,{depthBuffer:false,type:HalfFloatType})),dispose(){material.dispose();this.quad.dispose();this.hazeAtlas.dispose();this.targets.forEach(t=>t.dispose());}};
+ return {material,quad:new FullScreenQuad(material),hazeAtlas:new WebGLRenderTarget(512,256,{depthBuffer:false,type:HalfFloatType}),targets:Array.from({length:6},(_,i)=>new WebGLRenderTarget(i<4?512:1536,i<4?512:1536,{depthBuffer:false,type:HalfFloatType})),dispose(){material.dispose();this.quad.dispose();this.hazeAtlas.dispose();this.targets.forEach(t=>t.dispose());}};
 }

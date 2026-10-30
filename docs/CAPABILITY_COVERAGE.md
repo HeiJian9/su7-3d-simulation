@@ -1,3 +1,5 @@
+> 0.8.3：R06／R09 延长并补齐中央流星投射、增强矩阵薄雾；R10／R13／R15 新增 welcomeLogo / doors 开关、亮度、相对调节、查询和语音；R14 主展示刷新重置，遥控刷新及 SSE 重连保留同步。当前 22 项控车工具。实际证据与验收层级见 [WELCOME_CONTROLS.md](WELCOME_CONTROLS.md)。
+
 > 0.8.1 新增 welcomeRain / front / enabled（set、query）及 brightness（set、adjust、query）。对应 vehicle_welcome_rain_switch、vehicle_welcome_rain_brightness；真实千问 ASR → DeepSeek tool_calls → 渲染执行 → tool_call_id 回传 → CosyVoice 播放证据：[六轮固定合成输入](validation/welcome-correction/live-speech.json)。本轮不是新增真人记录。原覆盖证据如下。
 
 > 0.7.1 视觉更新：现有氛围灯工具覆盖扩展后的全部 25 灯面及 16 处照明，仍使用同一开关／颜色／亮度状态。六种配色通过既有命令批次执行，不新增工具或脱离统一账本的控制。以下 0.7.0 真实 API 证据保留；0.7.1 视觉与手动／Mock 回归见 [报告](FINAL_POLISH.md)。

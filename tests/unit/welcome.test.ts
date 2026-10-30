@@ -29,10 +29,19 @@ describe('welcome event semantics and original lens fit',()=>{
  });
  it('spreads rain lanes independently and keeps looping particles bounded after a long run',()=>{
   for(const t of [0,100,1000,5000,3600000])for(let i=0;i<rainCount;i++){
-   const l=rainSample(t,i,-1,true),r=rainSample(t,i,1,true);expect(l.x).toBe(-r.x);expect(l.z).toBe(r.z);expect(r.z).toBeGreaterThanOrEqual(-8.25);expect(r.z).toBeLessThanOrEqual(-2.85);expect(r.power).toBeGreaterThanOrEqual(0);expect(r.power).toBeLessThanOrEqual(1);
+   const l=rainSample(t,i,-1,true),r=rainSample(t,i,1,true);expect(l.x).toBe(-r.x);expect(l.z).toBe(r.z);expect(r.z).toBeGreaterThanOrEqual(-14.5);expect(r.z).toBeLessThanOrEqual(-2.7);expect(r.power).toBeGreaterThanOrEqual(0);expect(r.power).toBeLessThanOrEqual(1);
   }
   expect(rainSample(6000,3,1).power).toBe(0);expect(rainSample(6000,3,1,true).power).toBeGreaterThan(0);
-  expect(new Set(Array.from({length:rainCount},(_,i)=>rainSample(1000,i,1).x)).size).toBe(rainCount);
+  const field=Array.from({length:rainCount},(_,i)=>rainSample(1000,i,1));
+  expect(new Set(field.map(p=>p.x)).size).toBeGreaterThan(34);
+  expect(field.some(p=>Math.abs(p.x)<.05&&p.power>.1)).toBe(true);
+  expect(Math.min(...field.map(p=>p.z))).toBeLessThan(-14);
+ });
+ it('resets the exhibition on a new main document while preserving ordered dedupe',()=>{
+  const c=new WelcomeController();c.apply({requestId:'start',action:'rain',enabled:true,brightness:.3},100);c.apply({requestId:'lock',action:'lock'},200);c.apply({requestId:'auto',action:'auto',enabled:false},300);
+  const before=c.snapshot(),reset=c.apply({requestId:'new-document',action:'reset'},400);
+  expect(reset.snapshot).toMatchObject({sessionId:before.sessionId,sequence:before.sequence+1,locked:false,auto:true,brightness:1,rain:null,event:null});
+  expect(c.apply({requestId:'new-document',action:'reset'},500).changed).toBe(false);expect(welcomePlayback(reset.snapshot,500).active).toBe(false);
  });
  it('plays once for unlock transitions, respects auto preference and deduplicates remote retries',()=>{
   const c=new WelcomeController();c.apply({requestId:'l',action:'lock'},100);

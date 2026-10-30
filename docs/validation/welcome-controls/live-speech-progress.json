@@ -1,0 +1,3129 @@
+{
+  "at": "2026-10-30T14:36:11.765Z",
+  "mode": "real-Qwen-ASR+DeepSeek-tools+actual-renderer+CosyVoice-with-synthetic-microphone",
+  "human": false,
+  "cases": [
+    {
+      "index": 0,
+      "input": "关闭Logo迎宾灯。",
+      "transcript": "听到：关闭logo迎宾灯。",
+      "feedback": "Logo迎宾灯已经关好了，之后开门就不会再投射啦。",
+      "plans": [
+        {
+          "requestId": "e8d24d0d-80d3-4368-a2e4-73b3a2406c69",
+          "turnId": "084de877-6ac7-488e-968c-72af09922bc3",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_4f9139d981e2494fbd571856",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": false}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": false
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 1,
+          "durationMs": 1322
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "084de877-6ac7-488e-968c-72af09922bc3",
+          "requestId": "e8d24d0d-80d3-4368-a2e4-73b3a2406c69",
+          "results": [
+            {
+              "tool_call_id": "call_4f9139d981e2494fbd571856",
+              "status": "completed",
+              "message": "Logo迎宾灯已关闭。",
+              "revision": 2,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:enabled",
+                  "value": false
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:enabled",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "e8d24d0d-80d3-4368-a2e4-73b3a2406c69",
+          "text": "Logo迎宾灯已经关好了，之后开门就不会再投射啦。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_4f9139d981e2494fbd571856"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": false,
+        "welcomeLogo:doors:brightness": 1,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 1,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 14042,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "input": "迎宾投影亮度设为百分之四十。",
+      "transcript": "听到：迎宾投影亮度设为40%。",
+      "feedback": "Logo迎宾投影的亮度已经调到40%啦。",
+      "plans": [
+        {
+          "requestId": "b65575fb-1400-4308-bf0c-51718838e02b",
+          "turnId": "e99f8496-eb45-4550-b83e-5550fc7af429",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_8be302e0767b4d6498be4aae",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.4}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.4
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 2,
+          "durationMs": 998
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "e99f8496-eb45-4550-b83e-5550fc7af429",
+          "requestId": "b65575fb-1400-4308-bf0c-51718838e02b",
+          "results": [
+            {
+              "tool_call_id": "call_8be302e0767b4d6498be4aae",
+              "status": "completed",
+              "message": "Logo迎宾灯亮度已设为 40%。",
+              "revision": 3,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:brightness",
+                  "value": 0.4
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:brightness",
+                      "value": 0.4
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "b65575fb-1400-4308-bf0c-51718838e02b",
+          "text": "Logo迎宾投影的亮度已经调到40%啦。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_8be302e0767b4d6498be4aae"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": false,
+        "welcomeLogo:doors:brightness": 0.4,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 1,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 12950,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "input": "打开Logo迎宾灯。",
+      "transcript": "听到：打开logo迎宾灯。",
+      "feedback": "Logo迎宾灯已经打开啦，之后开门时就会投射。",
+      "plans": [
+        {
+          "requestId": "bc4f879c-d201-4c7c-bfa3-f0785d2be9c8",
+          "turnId": "db8f8cb7-0f37-4587-ba78-add2b5f5cb7d",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_5a9c3eb0d1904a4ebbf77c8d",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 3,
+          "durationMs": 916
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "db8f8cb7-0f37-4587-ba78-add2b5f5cb7d",
+          "requestId": "bc4f879c-d201-4c7c-bfa3-f0785d2be9c8",
+          "results": [
+            {
+              "tool_call_id": "call_5a9c3eb0d1904a4ebbf77c8d",
+              "status": "completed",
+              "message": "Logo迎宾灯已开启。",
+              "revision": 4,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:enabled",
+                  "value": true
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:enabled",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "bc4f879c-d201-4c7c-bfa3-f0785d2be9c8",
+          "text": "Logo迎宾灯已经打开啦，之后开门时就会投射。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_5a9c3eb0d1904a4ebbf77c8d"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": true,
+        "welcomeLogo:doors:brightness": 0.4,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 1,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0.39999999999999986,
+            "targetPower": 0.4,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 3.199999999999999
+          },
+          {
+            "corner": "fr",
+            "power": 0.39999999999999986,
+            "targetPower": 0.4,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 3.199999999999999
+          },
+          {
+            "corner": "rl",
+            "power": 0.39999999999999986,
+            "targetPower": 0.4,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 3.199999999999999
+          },
+          {
+            "corner": "rr",
+            "power": 0.39999999999999986,
+            "targetPower": 0.4,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 3.199999999999999
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 12999,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "input": "再暗一点。",
+      "transcript": "听到：再暗一点。",
+      "feedback": "Logo迎宾投影的亮度已经调到30%啦，这已经是最低档了。",
+      "plans": [
+        {
+          "requestId": "701751ad-09bd-4956-b835-d9edcd603055",
+          "turnId": "771a79fc-3e5e-4639-884c-9583abda4cfb",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_2f01ee6b61d147e9a5955d45",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"brightness\", \"operation\": \"adjust\", \"value\": -0.1}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "brightness",
+              "operation": "adjust",
+              "value": -0.1
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 4,
+          "durationMs": 1324
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "771a79fc-3e5e-4639-884c-9583abda4cfb",
+          "requestId": "701751ad-09bd-4956-b835-d9edcd603055",
+          "results": [
+            {
+              "tool_call_id": "call_2f01ee6b61d147e9a5955d45",
+              "status": "completed",
+              "message": "Logo迎宾灯亮度已设为 30%。已到达调节边界。",
+              "revision": 5,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:brightness",
+                  "value": 0.3
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:brightness",
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "701751ad-09bd-4956-b835-d9edcd603055",
+          "text": "Logo迎宾投影的亮度已经调到30%啦，这已经是最低档了。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_2f01ee6b61d147e9a5955d45"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": true,
+        "welcomeLogo:doors:brightness": 0.3,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 1,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0.3000000000000002,
+            "targetPower": 0.3,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000017
+          },
+          {
+            "corner": "fr",
+            "power": 0.3000000000000002,
+            "targetPower": 0.3,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000017
+          },
+          {
+            "corner": "rl",
+            "power": 0.3000000000000002,
+            "targetPower": 0.3,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000017
+          },
+          {
+            "corner": "rr",
+            "power": 0.3000000000000002,
+            "targetPower": 0.3,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000017
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 15090,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "input": "查询迎宾投影亮度。",
+      "transcript": "听到：查询迎宾投影亮度。",
+      "feedback": "Logo迎宾投影当前亮度是30%，已经是最低档了。",
+      "plans": [
+        {
+          "requestId": "418e622d-3610-42c3-81bb-b2c5a43ba9c2",
+          "turnId": "9b8f7d49-19d3-483a-a12d-ec96afcbfd32",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_2413c654b70b4ea58ea675a5",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"brightness\", \"operation\": \"query\"}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "brightness",
+              "operation": "query"
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 5,
+          "durationMs": 1027
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "9b8f7d49-19d3-483a-a12d-ec96afcbfd32",
+          "requestId": "418e622d-3610-42c3-81bb-b2c5a43ba9c2",
+          "results": [
+            {
+              "tool_call_id": "call_2413c654b70b4ea58ea675a5",
+              "status": "completed",
+              "message": "Logo迎宾灯亮度目标为 30%。",
+              "revision": 5,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:brightness",
+                  "value": 0.3
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:brightness",
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "418e622d-3610-42c3-81bb-b2c5a43ba9c2",
+          "text": "Logo迎宾投影当前亮度是30%，已经是最低档了。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_2413c654b70b4ea58ea675a5"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": true,
+        "welcomeLogo:doors:brightness": 0.3,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 1,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0.30000000000000016,
+            "targetPower": 0.3,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000012
+          },
+          {
+            "corner": "fr",
+            "power": 0.30000000000000016,
+            "targetPower": 0.3,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000012
+          },
+          {
+            "corner": "rl",
+            "power": 0.30000000000000016,
+            "targetPower": 0.3,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000012
+          },
+          {
+            "corner": "rr",
+            "power": 0.30000000000000016,
+            "targetPower": 0.3,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 2.4000000000000012
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 14036,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "input": "关闭Logo迎宾灯，同时打开流星雨大灯。",
+      "transcript": "听到：关闭logo迎宾灯，同时打开流星雨大灯。",
+      "feedback": "Logo迎宾灯已经关好啦，流星雨大灯也打开了，晚上用车会更有氛围。",
+      "plans": [
+        {
+          "requestId": "14ebc281-9d58-4ac3-9b3b-067d52b7f254",
+          "turnId": "0a75acaa-22bc-4155-bc6e-7090b2bdbeaa",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_51ce5c1752fb4cce99707fb8",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_logo_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeLogo\", \"targets\": [\"doors\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": false}]}"
+              }
+            },
+            {
+              "id": "call_338486b9ed3c40d296775b23",
+              "index": 1,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": true}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeLogo",
+              "targets": [
+                "doors"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": false
+            },
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": true
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 5,
+          "durationMs": 2120
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "0a75acaa-22bc-4155-bc6e-7090b2bdbeaa",
+          "requestId": "14ebc281-9d58-4ac3-9b3b-067d52b7f254",
+          "results": [
+            {
+              "tool_call_id": "call_51ce5c1752fb4cce99707fb8",
+              "status": "completed",
+              "message": "Logo迎宾灯已关闭，流星雨大灯已开启。",
+              "revision": 6,
+              "effects": [
+                {
+                  "key": "welcomeLogo:doors:enabled",
+                  "value": false
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeLogo:doors:enabled",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tool_call_id": "call_338486b9ed3c40d296775b23",
+              "status": "completed",
+              "message": "Logo迎宾灯已关闭，流星雨大灯已开启。",
+              "revision": 6,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:enabled",
+                  "value": true
+                }
+              ],
+              "observations": [
+                {
+                  "index": 1,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:enabled",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "14ebc281-9d58-4ac3-9b3b-067d52b7f254",
+          "text": "Logo迎宾灯已经关好啦，流星雨大灯也打开了，晚上用车会更有氛围。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_51ce5c1752fb4cce99707fb8",
+            "call_338486b9ed3c40d296775b23"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": false,
+        "welcomeLogo:doors:brightness": 0.3,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 1,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 1,
+        "envelope": 1,
+        "eventId": "5e4dbafb-0e33-4d78-904d-eb5409d4530b",
+        "elapsedMs": 10759,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06
+          ],
+          [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.10423907601274468,
+            0.06,
+            0.06039633591260812,
+            0.12523297394173877,
+            0.2760000000000001
+          ],
+          [
+            0.06,
+            0.06,
+            0.09805471950386907,
+            0.22942740100136544,
+            0.060011080450614485,
+            0.1178388711879837,
+            0.26399734012289505,
+            0.46248213472917604,
+            0.14115625000000015,
+            0.30066033227127914,
+            0.5052898697086936,
+            0.7190405097860717
+          ],
+          [
+            0.11083734922621763,
+            0.25222724169321803,
+            0.4483437500000002,
+            0.6631825216203915,
+            0.28822455336822944,
+            0.49096586253982694,
+            0.7052285645197998,
+            0.8950083067819754,
+            0.5340488307919891,
+            0.7462952890304959,
+            0.9268579170459721,
+            1.039732362312244
+          ],
+          [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06
+          ],
+          [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.10423907601274468,
+            0.06,
+            0.06039633591260812,
+            0.12523297394173877,
+            0.2760000000000001
+          ],
+          [
+            0.06,
+            0.06,
+            0.09805471950386907,
+            0.22942740100136544,
+            0.060011080450614485,
+            0.1178388711879837,
+            0.26399734012289505,
+            0.46248213472917604,
+            0.14115625000000015,
+            0.30066033227127914,
+            0.5052898697086936,
+            0.7190405097860717
+          ],
+          [
+            0.11083734922621763,
+            0.25222724169321803,
+            0.4483437500000002,
+            0.6631825216203915,
+            0.28822455336822944,
+            0.49096586253982694,
+            0.7052285645197998,
+            0.8950083067819754,
+            0.5340488307919891,
+            0.7462952890304959,
+            0.9268579170459721,
+            1.039732362312244
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 19070,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "input": "流星雨亮度设为百分之五十。",
+      "transcript": "听到：流星雨亮度设为50%。",
+      "feedback": "流星雨大灯亮度已经调到50%啦，亮度刚刚好。",
+      "plans": [
+        {
+          "requestId": "0a525759-6806-4aae-8902-a31e7a668be7",
+          "turnId": "bf2d9ae0-e978-4560-98dc-f405ce080cc6",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_5f933e1a44e54ffbb09f2b50",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_brightness",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"brightness\", \"operation\": \"set\", \"value\": 0.5}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "brightness",
+              "operation": "set",
+              "value": 0.5
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 6,
+          "durationMs": 980
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "bf2d9ae0-e978-4560-98dc-f405ce080cc6",
+          "requestId": "0a525759-6806-4aae-8902-a31e7a668be7",
+          "results": [
+            {
+              "tool_call_id": "call_5f933e1a44e54ffbb09f2b50",
+              "status": "completed",
+              "message": "流星雨大灯亮度已设为 50%。",
+              "revision": 7,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:brightness",
+                  "value": 0.5
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:brightness",
+                      "value": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "0a525759-6806-4aae-8902-a31e7a668be7",
+          "text": "流星雨大灯亮度已经调到50%啦，亮度刚刚好。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_5f933e1a44e54ffbb09f2b50"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": false,
+        "welcomeLogo:doors:brightness": 0.3,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": true,
+        "welcomeRain:front:brightness": 0.5,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": true,
+        "persistent": true,
+        "brightness": 0.5,
+        "envelope": 0.5,
+        "eventId": "5e4dbafb-0e33-4d78-904d-eb5409d4530b",
+        "elapsedMs": 24819,
+        "durationMs": null,
+        "units": 96,
+        "powers": [
+          [
+            0.03,
+            0.03019816795630406,
+            0.06261648697086938,
+            0.13800000000000004,
+            0.03238051177742382,
+            0.07483204369594895,
+            0.15664833437642242,
+            0.25982720755575783,
+            0.08862219077150671,
+            0.17615117205279932,
+            0.2814423005803368,
+            0.3864934000910333
+          ],
+          [
+            0.07057812500000007,
+            0.15033016613563957,
+            0.2526449348543469,
+            0.3595202548930361,
+            0.16956417131315435,
+            0.27423122439690484,
+            0.3798583935480201,
+            0.4684435025034137,
+            0.29585591858215754,
+            0.39951484979517526,
+            0.48253128555985436,
+            0.5269030496131087
+          ],
+          [
+            0.26702441539599453,
+            0.3731476445152482,
+            0.46342895852298593,
+            0.5198661811561219,
+            0.3930473301661357,
+            0.478,
+            0.5255081432066454,
+            0.53,
+            0.49107326041192534,
+            0.5289322371415567,
+            0.5042402343750002,
+            0.03
+          ],
+          [
+            0.4733022943218025,
+            0.5238668070095585,
+            0.53,
+            0.07057812500000006,
+            0.5280461922507965,
+            0.5219843750000002,
+            0.03,
+            0.03,
+            0.4447285156250004,
+            0.03,
+            0.03,
+            0.03
+          ],
+          [
+            0.03,
+            0.03019816795630406,
+            0.06261648697086938,
+            0.13800000000000004,
+            0.03238051177742382,
+            0.07483204369594895,
+            0.15664833437642242,
+            0.25982720755575783,
+            0.08862219077150671,
+            0.17615117205279932,
+            0.2814423005803368,
+            0.3864934000910333
+          ],
+          [
+            0.07057812500000007,
+            0.15033016613563957,
+            0.2526449348543469,
+            0.3595202548930361,
+            0.16956417131315435,
+            0.27423122439690484,
+            0.3798583935480201,
+            0.4684435025034137,
+            0.29585591858215754,
+            0.39951484979517526,
+            0.48253128555985436,
+            0.5269030496131087
+          ],
+          [
+            0.26702441539599453,
+            0.3731476445152482,
+            0.46342895852298593,
+            0.5198661811561219,
+            0.3930473301661357,
+            0.478,
+            0.5255081432066454,
+            0.53,
+            0.49107326041192534,
+            0.5289322371415567,
+            0.5042402343750002,
+            0.03
+          ],
+          [
+            0.4733022943218025,
+            0.5238668070095585,
+            0.53,
+            0.07057812500000006,
+            0.5280461922507965,
+            0.5219843750000002,
+            0.03,
+            0.03,
+            0.4447285156250004,
+            0.03,
+            0.03,
+            0.03
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 14039,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "input": "关闭流星雨。",
+      "transcript": "听到：关闭流星雨。",
+      "feedback": "流星雨大灯已经关好啦，需要时再叫我。",
+      "plans": [
+        {
+          "requestId": "42f5f561-0bc3-4ee5-a3ba-2f2d65300073",
+          "turnId": "83cdf211-e472-4e09-978b-badfcbda4161",
+          "model": "deepseek-v4.1-flash-1017",
+          "calls": [
+            {
+              "id": "call_2cea0c0e196345c2856a0aad",
+              "index": 0,
+              "type": "function",
+              "function": {
+                "name": "vehicle_welcome_rain_switch",
+                "arguments": "{\"actions\": [{\"component\": \"welcomeRain\", \"targets\": [\"front\"], \"property\": \"enabled\", \"operation\": \"set\", \"value\": false}]}"
+              }
+            }
+          ],
+          "commands": [
+            {
+              "component": "welcomeRain",
+              "targets": [
+                "front"
+              ],
+              "property": "enabled",
+              "operation": "set",
+              "value": false
+            }
+          ],
+          "validationRepairs": 0,
+          "baseRevision": 7,
+          "durationMs": 1076
+        }
+      ],
+      "receipts": [
+        {
+          "turnId": "83cdf211-e472-4e09-978b-badfcbda4161",
+          "requestId": "42f5f561-0bc3-4ee5-a3ba-2f2d65300073",
+          "results": [
+            {
+              "tool_call_id": "call_2cea0c0e196345c2856a0aad",
+              "status": "completed",
+              "message": "流星雨大灯已关闭。",
+              "revision": 8,
+              "effects": [
+                {
+                  "key": "welcomeRain:front:enabled",
+                  "value": false
+                }
+              ],
+              "observations": [
+                {
+                  "index": 0,
+                  "effects": [
+                    {
+                      "key": "welcomeRain:front:enabled",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "finishes": [
+        {
+          "requestId": "42f5f561-0bc3-4ee5-a3ba-2f2d65300073",
+          "text": "流星雨大灯已经关好啦，需要时再叫我。",
+          "model": "deepseek-v4.1-flash-1017",
+          "toolCallIds": [
+            "call_2cea0c0e196345c2856a0aad"
+          ]
+        }
+      ],
+      "actual": {
+        "welcomeLogo:doors:enabled": false,
+        "welcomeLogo:doors:brightness": 0.3,
+        "scatter:scene:enabled": true,
+        "scatter:scene:strength": 0.35,
+        "observation:scene:night": false,
+        "welcomeRain:front:enabled": false,
+        "welcomeRain:front:brightness": 0.5,
+        "door:fl:openness": 0.5,
+        "door:fr:openness": 0.5,
+        "door:rl:openness": 0.5,
+        "door:rr:openness": 0.5,
+        "trunk:rear:openness": 0,
+        "frunk:front:openness": 0,
+        "window:fl:openness": 0,
+        "window:fr:openness": 0,
+        "window:rl:openness": 0,
+        "window:rr:openness": 0,
+        "paint:body:color": "#e4e6e8",
+        "headlights:front:mode": "off",
+        "headlights:front:brightness": 1,
+        "turnSignal:vehicle:mode": "off",
+        "ambient:cabin:enabled": false,
+        "ambient:cabin:color": "#9867ff",
+        "ambient:cabin:brightness": 0.4,
+        "wiper:front:mode": "off",
+        "wiper:front:swipe": 0,
+        "cabinLight:front:enabled": false,
+        "cabinLight:front:brightness": 1,
+        "cabinLight:rear:enabled": false,
+        "cabinLight:rear:brightness": 1
+      },
+      "welcome": {
+        "active": false,
+        "persistent": false,
+        "brightness": 0.5,
+        "envelope": 0,
+        "elapsedMs": null,
+        "durationMs": 4800,
+        "units": 96,
+        "powers": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "normalMode": "off",
+        "projections": [
+          {
+            "corner": "fl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.245368003437144,
+              0.28590777042158755,
+              -0.3808671737817856
+            ],
+            "ground": [
+              -1.1273038199823,
+              -0.015000000000000013,
+              -0.2422697010739975
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              0.131792469488556,
+              -0.17667673835531109,
+              0.9979663224369216
+            ],
+            "parent": "DOOR_FL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "fr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.245368003437144,
+              0.2859072944678016,
+              -0.3808671737817856
+            ],
+            "ground": [
+              1.12730381967148,
+              -0.015000000000000013,
+              -0.24226970070912074
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              -0.2425
+            ],
+            "ndc": [
+              -0.10675283297253903,
+              -0.3261721943556762,
+              0.9975468790697333
+            ],
+            "parent": "DOOR_FR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rl",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              -1.2104435340186888,
+              0.29231557808832836,
+              0.6993123807468413
+            ],
+            "ground": [
+              -1.127364831612307,
+              -0.015000000000000013,
+              0.7475785286385284
+            ],
+            "entry": [
+              -1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              0.042365767104791174,
+              -0.11898350307424553,
+              0.9981281938778183
+            ],
+            "parent": "DOOR_RL_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          },
+          {
+            "corner": "rr",
+            "power": 0,
+            "targetPower": 0,
+            "source": [
+              1.2104435340186888,
+              0.2922971583341838,
+              0.6993123807468413
+            ],
+            "ground": [
+              1.12736482349695,
+              -0.015000000000000013,
+              0.7475785333532989
+            ],
+            "entry": [
+              1.1275000000000002,
+              0,
+              0.7474999999999999
+            ],
+            "ndc": [
+              -0.19116375822598514,
+              -0.2455260515497786,
+              0.9977731500922397
+            ],
+            "parent": "DOOR_RR_ROOT",
+            "gobo": true,
+            "castsShadow": true,
+            "mark": "mi",
+            "style": "light-stencil",
+            "whiteBadge": false,
+            "sourceEmission": 0
+          }
+        ],
+        "originalGeometry": true
+      },
+      "elapsedMs": 12968,
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/transcribe",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/plan",
+      "status": 200
+    },
+    {
+      "path": "/api/assistant/finish",
+      "status": 200
+    },
+    {
+      "path": "/api/speech/synthesize",
+      "status": 200
+    }
+  ],
+  "passed": false
+}

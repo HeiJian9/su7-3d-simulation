@@ -9,15 +9,15 @@ import {vehicleCommandSchema,wiperModes,colorSchema,type VehicleCommand} from '.
 export type {VehicleCommand};
 export const vehicleRequestSchema=z.object({requestId:z.string().min(1).max(128),baseRevision:z.number().int().nonnegative(),origin:z.enum(['manual','text','voice']),route:z.enum(['manual','rules','llm']),commands:z.array(vehicleCommandSchema).min(1).max(16)}).strict().refine(r=>(r.origin==='manual')===(r.route==='manual'));
 export type CommandRequest=z.infer<typeof vehicleRequestSchema>;
-export const vehicleStateSchema=z.object({revision:z.number().int().nonnegative(),windows:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),doors:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),trunk:z.object({openness:z.number().min(0).max(1)}),frunk:z.object({openness:z.number().min(0).max(1)}),lights:z.object({headlights:z.enum(['off','low','high']),turnSignal:z.enum(['off','left','right','hazard']),brightness:z.number().min(0).max(1)}),cabinBrightness:z.object({front:z.number().min(0).max(1),rear:z.number().min(0).max(1)}),scatter:z.object({enabled:z.boolean(),strength:z.number().min(0).max(1)}),observation:z.object({night:z.boolean()}),welcomeRain:z.object({enabled:z.boolean(),brightness:z.number().min(0).max(1)}),cabinLights:z.object({front:z.boolean(),rear:z.boolean()}),paint:z.object({color:colorSchema}),ambient:z.object({enabled:z.boolean(),color:colorSchema,brightness:z.number().min(0).max(1)}),wipers:z.object({mode:z.enum(wiperModes),onceSequence:z.number().int().nonnegative()})});
+export const vehicleStateSchema=z.object({revision:z.number().int().nonnegative(),windows:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),doors:z.record(cornerSchema,z.object({openness:z.number().min(0).max(1)})),trunk:z.object({openness:z.number().min(0).max(1)}),frunk:z.object({openness:z.number().min(0).max(1)}),lights:z.object({headlights:z.enum(['off','low','high']),turnSignal:z.enum(['off','left','right','hazard']),brightness:z.number().min(0).max(1)}),cabinBrightness:z.object({front:z.number().min(0).max(1),rear:z.number().min(0).max(1)}),scatter:z.object({enabled:z.boolean(),strength:z.number().min(0).max(1)}),observation:z.object({night:z.boolean()}),welcomeRain:z.object({enabled:z.boolean(),brightness:z.number().min(0).max(1)}),welcomeLogo:z.object({enabled:z.boolean(),brightness:z.number().min(0).max(1)}),cabinLights:z.object({front:z.boolean(),rear:z.boolean()}),paint:z.object({color:colorSchema}),ambient:z.object({enabled:z.boolean(),color:colorSchema,brightness:z.number().min(0).max(1)}),wipers:z.object({mode:z.enum(wiperModes),onceSequence:z.number().int().nonnegative()})});
 export type VehicleState=z.infer<typeof vehicleStateSchema>;
-export function defaultVehicle():VehicleState{return {...defaultWindows(),doors:defaultWindows().windows,trunk:{openness:0},frunk:{openness:0},lights:{headlights:'off',turnSignal:'off',brightness:1},cabinBrightness:{front:1,rear:1},scatter:{enabled:true,strength:.35},observation:{night:false},welcomeRain:{enabled:false,brightness:1},cabinLights:{front:false,rear:false},paint:{color:'#e4e6e8'},ambient:{enabled:false,color:'#9867ff',brightness:.4},wipers:{mode:'off',onceSequence:0}};}
+export function defaultVehicle():VehicleState{return {...defaultWindows(),doors:defaultWindows().windows,trunk:{openness:0},frunk:{openness:0},lights:{headlights:'off',turnSignal:'off',brightness:1},cabinBrightness:{front:1,rear:1},scatter:{enabled:true,strength:.35},observation:{night:false},welcomeRain:{enabled:false,brightness:1},welcomeLogo:{enabled:true,brightness:1},cabinLights:{front:false,rear:false},paint:{color:'#e4e6e8'},ambient:{enabled:false,color:'#9867ff',brightness:.4},wipers:{mode:'off',onceSequence:0}};}
 export type Value=number|string|boolean;
 export interface Effect {key:string;value:Value}
 export interface Execution {requestId:string;status:'accepted'|'animating'|'completed'|'superseded'|'failed';revision:number;origin:CommandRequest['origin'];route:CommandRequest['route'];targets:Corner[];values:Partial<Record<Corner,number>>;effects:Effect[];observations:Array<{index:number;effects:Effect[]}>;query:boolean;boundary:boolean;message:string}
 export function commandKeys(c:VehicleCommand):string[]{return c.targets.map(t=>`${c.component}:${t}:${'property'in c?c.property:'swipe'}`);}
 function read(s:VehicleState,c:VehicleCommand,t:string):Value {
-  if(c.component==='welcomeRain')return s.welcomeRain[c.property];
+  if(c.component==='welcomeRain'||c.component==='welcomeLogo')return s[c.component][c.property];
   if(c.component==='window'||c.component==='door')return s[c.component==='window'?'windows':'doors'][t as Corner].openness;
   if(c.component==='scatter')return s.scatter[c.property];
   if(c.component==='observation')return s.observation.night;
@@ -31,7 +31,7 @@ function read(s:VehicleState,c:VehicleCommand,t:string):Value {
   return s.ambient[c.property];
 }
 function write(s:VehicleState,c:VehicleCommand,t:string,v:Value){
-  if(c.component==='welcomeRain'){if(c.property==='enabled')s.welcomeRain.enabled=v as boolean;else s.welcomeRain.brightness=v as number;}
+  if(c.component==='welcomeRain'||c.component==='welcomeLogo'){if(c.property==='enabled')s[c.component].enabled=v as boolean;else s[c.component].brightness=v as number;}
   else if(c.component==='window'||c.component==='door')s[c.component==='window'?'windows':'doors'][t as Corner].openness=v as number;
   else if(c.component==='scatter'){if(c.property==='enabled')s.scatter.enabled=v as boolean;else s.scatter.strength=v as number;}
   else if(c.component==='observation')s.observation.night=v as boolean;
@@ -44,7 +44,7 @@ function write(s:VehicleState,c:VehicleCommand,t:string,v:Value){
   else if(c.component==='paint')s.paint.color=v as string;
   else if(c.property==='brightness')s.ambient.brightness=v as number;else if(c.property==='color')s.ambient.color=v as string;else s.ambient.enabled=v as boolean;
 }
-const labels:Record<string,string>={'cabinLight:front':'前排主灯','cabinLight:rear':'后排主灯','frunk:front':'前备箱','trunk:rear':'后备箱','headlights:front':'前灯','turnSignal:vehicle':'转向灯','paint:body':'车漆','ambient:cabin':'氛围灯','wiper:front':'雨刷','scatter:scene':'空气散射','observation:scene':'夜间观察','welcomeRain:front':'流星雨大灯'};
+const labels:Record<string,string>={'cabinLight:front':'前排主灯','cabinLight:rear':'后排主灯','frunk:front':'前备箱','trunk:rear':'后备箱','headlights:front':'前灯','turnSignal:vehicle':'转向灯','paint:body':'车漆','ambient:cabin':'氛围灯','wiper:front':'雨刷','scatter:scene':'空气散射','observation:scene':'夜间观察','welcomeRain:front':'流星雨大灯','welcomeLogo:doors':'Logo迎宾灯'};
 export function effectLabel(key:string){const [component,target]=key.split(':');return component==='window'?windowLabels[target as Corner]:component==='door'?doorLabels[target as Corner]:labels[`${component}:${target}`]??key;}
 export function describeEffects(effects:Effect[],query=false){return effects.map(({key,value})=>{
   const label=effectLabel(key);const property=key.split(':')[2];
@@ -94,16 +94,17 @@ const colorWords:Record<string,string>={紫:'#9867ff',蓝:'#4d80b4',白:'#e4e6e8
 function percentText(text:string){const nums:Record<string,number>={零:0,一:1,二:2,两:2,三:3,四:4,五:5,六:6,七:7,八:8,九:9};return text.replace(/百分之([零一二两三四五六七八九十百\d.]+)/g,(_,n:string)=>{let value=Number(n);if(!Number.isFinite(value)){if(n==='一百'||n==='百')value=100;else if(n.includes('十')){const [a,b]=n.split('十');value=(a?nums[a]:1)*10+(b?nums[b]:0);}else value=nums[n];}return `${value}%`;});}
 function accessory(clause:string,component:VehicleCommand['component'],focusedTargets:string[]=[]):VehicleCommand[]|null {
   let cleaned=percentText(clause).replace(/[\s。！!？?]/g,'').replace(/请|帮我|麻烦|把|将|吧|谢谢/g,'');
-  if(component==='welcomeRain'){
-    cleaned=cleaned.replace(/迎宾流星雨大灯|流星雨迎宾灯|流星雨大灯|流星雨灯光|流星雨灯|流星雨|迎宾大灯|迎宾灯/g,'');
-    if(/^(打开|开启|开|关闭|关掉|关上|关)$/.test(cleaned))return [{component,targets:['front'],operation:'set',property:'enabled',value:!cleaned.includes('关')}];
-    if(/^(查询|查看)?(开关|开关状态|状态)$/.test(cleaned))return [{component,targets:['front'],operation:'query',property:'enabled'}];
-    if(/^(查询|查看)(亮度)$/.test(cleaned))return [{component,targets:['front'],operation:'query',property:'brightness'}];
+  if(component==='welcomeRain'||component==='welcomeLogo'){
+    const targets=component==='welcomeRain'?['front']:['doors'];
+    cleaned=cleaned.replace(/迎宾流星雨大灯|流星雨迎宾灯|流星雨大灯|流星雨灯光|流星雨灯|流星雨|迎宾大灯|(?:mi|logo)?迎宾(?:投影灯?|光毯灯?|地毯灯?|地灯|灯)|(?:mi|logo)(?:地毯灯?|投影灯?|灯)|地毯灯|光毯|投影灯|迎宾灯/gi,'');
+    if(/^(打开|开启|开|关闭|关掉|关上|关)$/.test(cleaned))return [{component,targets,operation:'set',property:'enabled',value:!cleaned.includes('关')} as VehicleCommand];
+    if(/^(查询|查看)?(开关|开关状态|状态)$/.test(cleaned))return [{component,targets,operation:'query',property:'enabled'} as VehicleCommand];
+    if(/^(查询|查看)(亮度)$/.test(cleaned))return [{component,targets,operation:'query',property:'brightness'} as VehicleCommand];
     const percent=cleaned.match(/(\d+(?:\.\d+)?)%/);
     if(percent&&Number(percent[1])>100)return null;
     if(!/^(亮度|再|调|设为|设置为|调到|调为|增加|降低|减小|提高|亮|暗|一点|一些|到|为|\d|\.|%)+$/.test(cleaned))return null;
     const relative=/再|增加|降低|减小|提高|一点|一些/.test(cleaned);if(!percent&&!relative)return null;
-    return [{component,targets:['front'],operation:relative?'adjust':'set',property:'brightness',value:(relative&&/暗|降低|减小/.test(cleaned)?-1:1)*(percent?Number(percent[1])/100:adjustmentSteps.brightness)}];
+    return [{component,targets,operation:relative?'adjust':'set',property:'brightness',value:(relative&&/暗|降低|减小/.test(cleaned)?-1:1)*(percent?Number(percent[1])/100:adjustmentSteps.brightness)} as VehicleCommand];
   }
   if(component==='cabinLight'){
     const targets:Array<'front'|'rear'>=/所有|全部|两盏|两个/.test(cleaned)?['front','rear']:/前排|前面|前方/.test(cleaned)?['front']:/后排|后面|后方/.test(cleaned)?['rear']:!(/主灯|顶灯|阅读灯|车内灯|车内照明灯/.test(cleaned))?focusedTargets.filter((t):t is 'front'|'rear'=>t==='front'||t==='rear'):[];
@@ -169,7 +170,7 @@ export function parseVehicleText(raw:string,context:VehicleContext={},now=Date.n
       if(positive.kind==='unsupported'||positive.kind==='noop')return {kind:'unsupported',message:'否定子句未被完整理解，车辆未改变。请明确部件和动作。'};
       continue;
     }
-    let component:VehicleCommand['component']|undefined=/流星雨|迎宾大灯|迎宾灯/.test(clause)?'welcomeRain':/前备箱|前舱盖|前机盖|引擎盖|机舱盖/.test(clause)?'frunk':/主灯|顶灯|阅读灯|车内照明灯|车内灯/.test(clause)?'cabinLight':/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|雨刮|刮一下|刮一次/.test(clause)?'wiper':focus?.component;
+    let component:VehicleCommand['component']|undefined=/(?:mi|logo)|迎宾投影|投影灯|光毯|地毯|迎宾地灯/i.test(clause)?'welcomeLogo':/流星雨|迎宾大灯/.test(clause)?'welcomeRain':/前备箱|前舱盖|前机盖|引擎盖|机舱盖/.test(clause)?'frunk':/主灯|顶灯|阅读灯|车内照明灯|车内灯/.test(clause)?'cabinLight':/车窗|窗户|窗|玻璃/.test(clause)?'window':/后备箱|尾箱|行李箱/.test(clause)?'trunk':/车门|门/.test(clause)?'door':/近光|远光|前灯|大灯|车灯/.test(clause)?'headlights':/转向|双闪/.test(clause)?'turnSignal':/氛围灯|灯带/.test(clause)?'ambient':/车身|车漆/.test(clause)?'paint':/雨刷|雨刮|刮一下|刮一次/.test(clause)?'wiper':focus?.component;
     // Existing I3 accepts directional shorthand without a noun.
     component ??= /左前|右前|左后|右后|主驾|副驾|开|关/.test(clause)?pending?.component??focus?.component:undefined;
     if(component==='window'||component==='door'||component==='trunk'||component==='frunk'){

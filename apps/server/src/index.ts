@@ -30,7 +30,7 @@ app.use('/api/welcome',express.json({limit:'2kb'}),welcomeRoutes());
 let wakeConnections=()=>0,wakeDiagnostics:()=>unknown=()=>[];
 app.get('/api/wake/status',(_req,res)=>res.set('Cache-Control','no-store').json({engine:'sherpa-onnx',runtime:'local-node-worker',keyword:'小爱同学',connections:wakeConnections(),cloudAudio:false,recent:wakeDiagnostics()}));
 app.get('/api/health', (_req, res) => {
-  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I7–I9', version: '0.8.2', providers: {
+  res.set('Cache-Control', 'no-store').json({ status: 'ok', increment: 'I7–I9', version: '0.8.3', providers: {
     ...providers.health,
     intent: intent.health,
   } });

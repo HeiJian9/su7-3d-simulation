@@ -1,6 +1,8 @@
-# SU7 智能座舱 · 0.8.2
+# SU7 智能座舱 · 0.8.3
 
 第一次下载或在其他电脑运行，请先看 [简明启动指南](启动指南.md)。
+
+0.8.3：刷新主展示页恢复默认灯态；流星雨延长至车头前约 12 米，补齐中央光纹并增强矩阵灯口薄雾。四门 Logo 迎宾投影新增独立开关和亮度，支持面板、语音、真实 LLM 工具与连续相对调节。自动解锁迎宾是锁定→解锁后约 5 秒的一次播放；持续展示用流星雨开关。见 [本次修改和证据](docs/WELCOME_CONTROLS.md)。
 
 0.8.2：迎宾投影取消白底徽章，改为浅色 mi 字标与克制的圆形柔光，让地面自然显露。流星雨取消悬空实体光条，改为从原数字矩阵单元位置出发的薄雾散射，清晰的等宽矩形落在地面；修正投射层与地面的深度冲突。持续开关、亮度、语音、真实 LLM 工具及配对遥控保持，点击不切镜头。见 [本次画面与验收](docs/WELCOME_OPTICAL.md)；上一轮真实 API 证据保留在 [0.8.1 报告](docs/WELCOME_CORRECTION.md)。
 
@@ -22,7 +24,7 @@
 
 0.7.1 完成环绕式氛围灯与产品界面收尾：25 个贴合灯面、16 处局部照明、六种配色及全舱／后排视角。主界面收起开发信息，诊断移至“操作帮助 → 连接与诊断”。[本轮设计与验收](docs/FINAL_POLISH.md)包含两分辨率截图、42 项浏览器回归及 99 项单元测试结果。
 
-已有车载智能助手、全能力真实 DeepSeek Function Calling、前灯和前后排顶灯亮度、统一空气散射／夜间观察，以及可开关的本地“小爱同学”关键词唤醒。20 项控制工具由共享 Schema 生成，真实执行到位后逐 ID 回传结果，再用原 CosyVoice 回应。
+已有车载智能助手、全能力真实 DeepSeek Function Calling、前灯和前后排顶灯亮度、统一空气散射／夜间观察，以及可开关的本地“小爱同学”关键词唤醒。22 项控制工具由共享 Schema 生成，真实执行到位后逐 ID 回传结果，再用原 CosyVoice 回应。
 
 当前服务：北京百炼 `qwen3-asr-flash`、`deepseek-v4.1-flash-1017`、`cosyvoice-v3-flash` / `longanhuan`，本机 `.env` 已按用户授权复用现有 Key。无需重新提供，不切回 Gemini。
 
@@ -32,9 +34,9 @@
 
 交付索引：[I7–I9 报告](docs/I7_I9_VALIDATION.md)、[工具与参数](docs/LLM_TOOLS.md)、[能力证据矩阵](docs/CAPABILITY_COVERAGE.md)、[R01–R19](docs/REQUIREMENTS_TRACEABILITY.md)、[过程与录像索引](docs/SESSION_LOG.md)。真实 API 固定音源与真人分别记录，尚未将整轮标为全部通过。
 
-本地交付包：`deliverables/SU7-0.8.2.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
+本地交付包：`deliverables/SU7-0.8.3.zip`，包含源码、生产构建、工作 .blend／GLB／纹理、原始来源包、许可和验收证据。校验与文件数量见同目录 manifest；不含 `.env`、Key、依赖目录或临时工具。解压后按下文 `npm ci`／配置／启动。扩展距离／噪声统计已按用户要求移出验收，不做距离模拟；剩余仅为录像原文件及时间偏移归档。
 
-本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮视觉报告目录为 `docs/validation/welcome-optical/`；原生仪表台饰边证据保存在 `docs/validation/native-crown/`；旧扩散面证据保存在 `docs/validation/crown-profile/`，0.7.5 光场证据保存在 `docs/validation/line-lighting/`，0.7.4 原生饰边证据保存在 `docs/validation/native-ambient/`，0.7.3 浏览器与真实 API 报告目录为 `docs/validation/trim-dialogue/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
+本轮显式真实验证命令（会调用已配置 API）：`npm run assistant:probe`、`npm run assistant:verify-live`、`node --import tsx scripts/verify-assistant-speech.mjs`、`npm run wake:verify`、`npm run wake:verify-live`；唤醒验证默认可通过 `DEMO_URL=http://localhost:3000` 指定演示。保密检查：`npm run secrets:check`。本轮视觉报告目录为 `docs/validation/welcome-controls/`；0.8.2 证据保存在 `docs/validation/welcome-optical/`；原生仪表台饰边证据保存在 `docs/validation/native-crown/`；旧扩散面证据保存在 `docs/validation/crown-profile/`，0.7.5 光场证据保存在 `docs/validation/line-lighting/`，0.7.4 原生饰边证据保存在 `docs/validation/native-ambient/`，0.7.3 浏览器与真实 API 报告目录为 `docs/validation/trim-dialogue/`，0.7.0 证据保存在 `docs/validation/i7-i9/`。
 
 **以下 I4–I6 段落是历史说明；与上文冲突的阶段限制已被本轮用户要求替代。**
 

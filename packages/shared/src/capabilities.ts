@@ -38,6 +38,8 @@ export const capabilityRegistry=[
  {name:'vehicle_observation',description:'展厅scene夜间观察night开关；set/query。',schema:fixed('observation',z.literal('scene'),'night',z.boolean())},
  {name:'vehicle_welcome_rain_switch',description:'车前迎宾流星雨大灯front持续开关enabled；set布尔值/query。开启后持续播放地面和空气流星，直到关闭，不改变近光远光。',schema:fixed('welcomeRain',z.literal('front'),'enabled',z.boolean())},
  {name:'vehicle_welcome_rain_brightness',description:'迎宾流星雨大灯front实际矩阵灯、地面投影、矩阵空气雾光及散射亮度0–1；set绝对值/adjust相对百分点/100/query。关闭时调节亮度不会开灯。',schema:scalar('welcomeRain',z.literal('front'),'brightness')},
+ {name:'vehicle_welcome_logo_switch',description:'四门踏板旁mi Logo投影/光毯/迎宾地毯灯doors统一开关enabled；set布尔值/query。开启表示允许开门时点亮，车门关闭仍熄灭，不自动开门；与车前流星雨分开。',schema:fixed('welcomeLogo',z.literal('doors'),'enabled',z.boolean())},
+ {name:'vehicle_welcome_logo_brightness',description:'四门mi Logo投影/光毯doors实际字标、光晕、门底灯口及雾光亮度0–1；set绝对值/adjust相对百分点/100/query。关闭时调亮度不会开启。',schema:scalar('welcomeLogo',z.literal('doors'),'brightness')},
 ] as const;
 export const vehicleCommandSchema=z.union(capabilityRegistry.map(c=>c.schema));
 export type VehicleCommand=z.infer<typeof vehicleCommandSchema>;

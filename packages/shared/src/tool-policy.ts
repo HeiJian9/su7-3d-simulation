@@ -13,6 +13,10 @@ export function unsupportedRequestPart(text:string):string|undefined{
 // A model may interpret semantics, but it may not invent a target or expand an
 // ambiguous singular instruction to all parts. This guard is shared by both ends.
 export function targetScopeError(text:string,commands:VehicleCommand[],focus?:{component:string;targets:string[]}):string|undefined{
+ const welcomeCommands=commands.filter(c=>c.component==='welcomeRain'||c.component==='welcomeLogo');
+ if(/迎宾灯/.test(text)&&!/流星雨|迎宾大灯|logo|mi|投影|光毯|地毯|地灯/i.test(text)&&welcomeCommands.length){
+  if(!focus||!['welcomeRain','welcomeLogo'].includes(focus.component)||focus.targets.length!==1||welcomeCommands.some(c=>c.component!==focus.component||c.targets.some(t=>!focus.targets.includes(t))))return '你想调整车前流星雨，还是车门 Logo 迎宾投影？';
+ }
  const directions:Record<string,RegExp>={fl:/左前|前左|主驾/,fr:/右前|前右|副驾/,rl:/左后|后左/,rr:/右后|后右/};
  for(const command of commands){
   if(command.component==='window'||command.component==='door'||command.component==='cabinLight'){

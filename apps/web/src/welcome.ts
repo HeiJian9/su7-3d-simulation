@@ -8,13 +8,23 @@ export const useWelcome=create<WelcomeStore>((set,get)=>({snapshot:null,offset:0
  set({snapshot:s,offset:s.serverTime-Date.now(),connected:true,error:''});
 }}));
 const token=()=>new URLSearchParams(location.search).get('token');
+// One reset per actual document load, including React StrictMode's effect replay.
+// Reconnecting SSE or opening the paired remote must not reset the vehicle.
+let documentReset:Promise<WelcomeSnapshot|null>|undefined;
 export function useWelcomeConnection(){
  useEffect(()=>{
-  let disposed=false;
-  const events=new EventSource(`/api/welcome/events${token()?`?token=${encodeURIComponent(token()!)}`:''}`);
+  let disposed=false,events:EventSource|undefined;
+  const connect=async()=>{
+  if(location.pathname!=='/remote'){
+   documentReset??=welcomeAction('reset');
+   if(!await documentReset||disposed)return;
+  }
+  if(disposed)return;
+  events=new EventSource(`/api/welcome/events${token()?`?token=${encodeURIComponent(token()!)}`:''}`);
   events.onmessage=e=>{if(disposed)return;try{useWelcome.getState().apply(JSON.parse(e.data));}catch{useWelcome.setState({error:'迎宾状态读取失败'});}};
   events.onerror=()=>{if(!disposed)useWelcome.setState({connected:false,error:'迎宾服务连接中断，正在重连'});};
-  return()=>{disposed=true;events.onmessage=events.onerror=null;events.close();useWelcome.setState({connected:false});};
+  };void connect();
+  return()=>{disposed=true;if(events){events.onmessage=events.onerror=null;events.close();}useWelcome.setState({connected:false});};
  },[]);
 }
 export async function welcomeAction(action:WelcomeAction['action'],enabled?:boolean,brightness?:number){
