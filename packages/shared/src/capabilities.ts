@@ -37,7 +37,7 @@ export const capabilityRegistry=[
  {name:'vehicle_scatter_strength',description:'空气散射scene强度0–1；set/adjust/query。',schema:scalar('scatter',z.literal('scene'),'strength')},
  {name:'vehicle_observation',description:'展厅scene夜间观察night开关；set/query。',schema:fixed('observation',z.literal('scene'),'night',z.boolean())},
  {name:'vehicle_welcome_rain_switch',description:'车前迎宾流星雨大灯front持续开关enabled；set布尔值/query。开启后持续播放地面和空气流星，直到关闭，不改变近光远光。',schema:fixed('welcomeRain',z.literal('front'),'enabled',z.boolean())},
- {name:'vehicle_welcome_rain_brightness',description:'迎宾流星雨大灯front实际矩阵灯、地面投影、空气光条及散射亮度0–1；set绝对值/adjust相对百分点/100/query。关闭时调节亮度不会开灯。',schema:scalar('welcomeRain',z.literal('front'),'brightness')},
+ {name:'vehicle_welcome_rain_brightness',description:'迎宾流星雨大灯front实际矩阵灯、地面投影、矩阵空气雾光及散射亮度0–1；set绝对值/adjust相对百分点/100/query。关闭时调节亮度不会开灯。',schema:scalar('welcomeRain',z.literal('front'),'brightness')},
 ] as const;
 export const vehicleCommandSchema=z.union(capabilityRegistry.map(c=>c.schema));
 export type VehicleCommand=z.infer<typeof vehicleCommandSchema>;

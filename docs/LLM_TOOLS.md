@@ -1,8 +1,8 @@
-# 车载智能助手工具与参数 · 0.8.1
+# 车载智能助手工具与参数 · 0.8.2
 
 唯一注册来源：[capabilities.ts](../packages/shared/src/capabilities.ts)。命令 Schema 同时供 VehicleLedger、手动入口、规则和 LLM 校验；`registeredTools()` 从这些 Zod Schema 生成工具定义。模型只能选择注册工具，不能提交脚本、场景节点路径或其它操作。
 
-每个控车工具接收严格对象 `{actions:[...]}`。每个 action 包含 `component`、`targets`、`property`、`operation`，设值／调整另带 `value`；一次刮刷改用 `operation:"trigger",action:"swipe_once"`。完整机器 Schema 由 `scripts/report-i7-i9.mjs` 导出；当前 20 项控车工具＋assistant_reply 机器 Schema 另存 `docs/validation/welcome-correction/tools.json`，旧 I7–I9 快照保留在 `docs/validation/i7-i9/tools.json`。
+每个控车工具接收严格对象 `{actions:[...]}`。每个 action 包含 `component`、`targets`、`property`、`operation`，设值／调整另带 `value`；一次刮刷改用 `operation:"trigger",action:"swipe_once"`。完整机器 Schema 由 `scripts/report-i7-i9.mjs` 导出；当前 20 项控车工具＋assistant_reply 机器 Schema 另存 `docs/validation/welcome-optical/tools.json`，旧快照保留。0.8.2 仅将流星雨亮度的视觉说明更新为矩阵空气雾光，名称和参数保持；开关／亮度经真实迎宾服务确认的执行语义保持。
 
 | 工具 | 对象 / 属性 | 操作与合法值 |
 |---|---|---|

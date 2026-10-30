@@ -1,0 +1,109 @@
+{
+  "version": "0.8.2",
+  "date": "2026-10-30",
+  "baseline": "755e1e9 / v0.8.1-welcome-correction",
+  "checks": {
+    "typecheck": {
+      "passed": true,
+      "evidence": "build.log"
+    },
+    "lint": {
+      "passed": true,
+      "command": "npm run lint"
+    },
+    "unit": {
+      "passed": 114,
+      "files": 14,
+      "command": "npm test"
+    },
+    "browser": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "resolutions": [
+        "1920x1080",
+        "1366x768"
+      ],
+      "evidence": "browser-final.json"
+    },
+    "asset": {
+      "passed": true,
+      "evidence": "runtime-asset.json"
+    },
+    "protectedOriginals": {
+      "passed": true,
+      "evidence": "protected-baseline.json"
+    },
+    "productionBuild": {
+      "passed": true,
+      "evidence": "build.log"
+    },
+    "secrets": {
+      "passed": true,
+      "evidence": "secret-scan.json"
+    }
+  },
+  "opticalComparisons": [
+    {
+      "project": "Edge-1920x1080",
+      "name": "performance-sample",
+      "value": "54\nFPS\nWEBGL 2"
+    },
+    {
+      "project": "Edge-1920x1080",
+      "name": "separate-ground-and-fog",
+      "value": {
+        "fixedPhaseMs": 1400,
+        "airParticles": 0,
+        "realMatrixSources": 8,
+        "softScatteringPixelDifference": {
+          "visible": 131829,
+          "mean": 0.8360572599702041
+        },
+        "groundIndependentOfScatter": true,
+        "brightnessZeroVerified": true
+      }
+    },
+    {
+      "project": "Edge-1366x768",
+      "name": "performance-sample",
+      "value": "60\nFPS\nWEBGL 2"
+    },
+    {
+      "project": "Edge-1366x768",
+      "name": "separate-ground-and-fog",
+      "value": {
+        "fixedPhaseMs": 1400,
+        "airParticles": 0,
+        "realMatrixSources": 8,
+        "softScatteringPixelDifference": {
+          "visible": 60116,
+          "mean": 0.7852338893266915
+        },
+        "groundIndependentOfScatter": true,
+        "brightnessZeroVerified": true
+      }
+    }
+  ],
+  "continuousRenderer": {
+    "seconds": 60,
+    "warmMedianFps": 79,
+    "warmMinFps": 75,
+    "errors": [],
+    "stopped": true,
+    "evidence": "performance.json"
+  },
+  "evidenceLayers": {
+    "unit": "local domain/protocol",
+    "browser": "real GLB/WebGL/local HTTP and SSE, plus separately identified Mock speech and failure injection",
+    "liveCloud": "not rerun for this optical change; prior six synthetic-input real ASR/DeepSeek/CosyVoice cases in ../welcome-correction/live-speech.json",
+    "human": "no new human acceptance"
+  },
+  "delivery": "deliverables/SU7-0.8.2.zip",
+  "limits": [
+    "Real-time volumetric approximation: one representative LED source per matrix module, two ground projectors",
+    "One-minute local performance sample; no claim of other-device or prolonged performance",
+    "User recording offsets not provided; not fabricated"
+  ]
+}

@@ -1,0 +1,2396 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_windows",
+      "description": "四窗独立开度。fl左前/fr右前/rl左后/rr右后。openness为打开程度0–1；set绝对值，adjust相对百分点/100，query查询。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "window"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "window"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "window"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_doors",
+      "description": "四门独立开度，角标同车窗。0关闭，1全开；支持set/adjust/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "door"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "door"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "door"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "fl",
+                          "fr",
+                          "rl",
+                          "rr"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_trunk",
+      "description": "后备箱 rear 开度0–1；支持set/adjust/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "trunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "rear"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "trunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "rear"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "trunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "rear"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_frunk",
+      "description": "前备箱 front 开度0–1；支持set/adjust/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "frunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "frunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "frunk"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "openness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_headlight_mode",
+      "description": "前灯 front 模式off关闭/low近光/high远光；set/query。亮度用独立工具。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "headlights"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "mode"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "string",
+                      "enum": [
+                        "off",
+                        "low",
+                        "high"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "headlights"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "mode"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_headlight_brightness",
+      "description": "前灯front实际灯面、光源和散射亮度0–1；set/adjust/query，关闭时设置亮度不会开灯。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "headlights"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "headlights"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "headlights"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_turn_signals",
+      "description": "转向与双闪vehicle，模式off/left/right/hazard；set/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "turnSignal"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "vehicle"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "mode"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "string",
+                      "enum": [
+                        "off",
+                        "left",
+                        "right",
+                        "hazard"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "turnSignal"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "vehicle"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "mode"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_cabin_light_switch",
+      "description": "前排front、后排rear主灯/顶灯独立开关enabled；set布尔值/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "cabinLight"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "front",
+                          "rear"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "cabinLight"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "front",
+                          "rear"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_cabin_light_brightness",
+      "description": "前后排顶灯独立实际亮度0–1；set/adjust/query，front前排rear后排。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "cabinLight"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "front",
+                          "rear"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "cabinLight"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "front",
+                          "rear"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "cabinLight"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "front",
+                          "rear"
+                        ]
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_paint",
+      "description": "车身body车漆color六位HEX。set/query。与氛围灯颜色分开。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "paint"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "body"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "color"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "string",
+                      "pattern": "^#[\\da-fA-F]{6}$"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "paint"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "body"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "color"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_ambient_switch",
+      "description": "车内cabin氛围灯enabled开关；set/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_ambient_color",
+      "description": "车内cabin氛围灯color六位HEX；set/query，不改车漆。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "color"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "string",
+                      "pattern": "^#[\\da-fA-F]{6}$"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "color"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_ambient_brightness",
+      "description": "车内cabin氛围灯实际亮度0–1；set/adjust/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "ambient"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "cabin"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_wiper_mode",
+      "description": "前雨刷front档位off停止归位/intermittent间歇/low低速/high高速；set/query；adjust整数-3至3，正值加档。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "component": {
+                          "type": "string",
+                          "const": "wiper"
+                        },
+                        "targets": {
+                          "minItems": 1,
+                          "maxItems": 4,
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "const": "front"
+                          }
+                        },
+                        "property": {
+                          "type": "string",
+                          "const": "mode"
+                        },
+                        "operation": {
+                          "type": "string",
+                          "const": "set"
+                        },
+                        "value": {
+                          "type": "string",
+                          "enum": [
+                            "off",
+                            "intermittent",
+                            "low",
+                            "high"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "component",
+                        "targets",
+                        "property",
+                        "operation",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "component": {
+                          "type": "string",
+                          "const": "wiper"
+                        },
+                        "targets": {
+                          "minItems": 1,
+                          "maxItems": 4,
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "const": "front"
+                          }
+                        },
+                        "property": {
+                          "type": "string",
+                          "const": "mode"
+                        },
+                        "operation": {
+                          "type": "string",
+                          "const": "query"
+                        }
+                      },
+                      "required": [
+                        "component",
+                        "targets",
+                        "property",
+                        "operation"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "wiper"
+                    },
+                    "targets": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string",
+                          "const": "front"
+                        }
+                      ],
+                      "additionalItems": false,
+                      "minItems": 1,
+                      "maxItems": 1
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "mode"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "integer",
+                      "minimum": -3,
+                      "maximum": 3
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_wiper_once",
+      "description": "前雨刷front一次刮刷trigger/swipe_once，执行后按当前档位继续或归位。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "component": {
+                  "type": "string",
+                  "const": "wiper"
+                },
+                "targets": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string",
+                      "const": "front"
+                    }
+                  ],
+                  "additionalItems": false,
+                  "minItems": 1,
+                  "maxItems": 1
+                },
+                "operation": {
+                  "type": "string",
+                  "const": "trigger"
+                },
+                "action": {
+                  "type": "string",
+                  "const": "swipe_once"
+                }
+              },
+              "required": [
+                "component",
+                "targets",
+                "operation",
+                "action"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_scatter_switch",
+      "description": "空气散射/丁达尔光束scene开关enabled；set/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "scatter"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "scatter"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_scatter_strength",
+      "description": "空气散射scene强度0–1；set/adjust/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "scatter"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "strength"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "scatter"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "strength"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "scatter"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "strength"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_observation",
+      "description": "展厅scene夜间观察night开关；set/query。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "observation"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "night"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "observation"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "scene"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "night"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_welcome_rain_switch",
+      "description": "车前迎宾流星雨大灯front持续开关enabled；set布尔值/query。开启后持续播放地面和空气流星，直到关闭，不改变近光远光。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "welcomeRain"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "welcomeRain"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "enabled"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "vehicle_welcome_rain_brightness",
+      "description": "迎宾流星雨大灯front实际矩阵灯、地面投影、矩阵空气雾光及散射亮度0–1；set绝对值/adjust相对百分点/100/query。关闭时调节亮度不会开灯。 actions按语义顺序排列；同一对象连续操作放同一actions，整轮先校验再执行。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "actions": {
+            "minItems": 1,
+            "maxItems": 16,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "welcomeRain"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "set"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "welcomeRain"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "adjust"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": -1,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "component": {
+                      "type": "string",
+                      "const": "welcomeRain"
+                    },
+                    "targets": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "const": "front"
+                      }
+                    },
+                    "property": {
+                      "type": "string",
+                      "const": "brightness"
+                    },
+                    "operation": {
+                      "type": "string",
+                      "const": "query"
+                    }
+                  },
+                  "required": [
+                    "component",
+                    "targets",
+                    "property",
+                    "operation"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "actions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "assistant_reply",
+      "description": "不执行车辆动作的回复。对象或参数有歧义clarify；能力表没有的功能unsupported；没听清not_understood；取消或否定noop；车载助手交谈chat。与控车工具互斥，不得宣称执行成功。",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "clarify",
+              "unsupported",
+              "not_understood",
+              "noop",
+              "chat"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "kind",
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+]

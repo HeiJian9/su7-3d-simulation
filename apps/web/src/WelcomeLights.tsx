@@ -8,7 +8,7 @@ import {meteorPower,welcomeDurationMs,welcomePlayback} from '../../../packages/s
 import {corners} from '../../../packages/shared/src/vehicle';
 import {useWelcome} from './welcome';
 import {actualValues,useVehicle} from './vehicle';
-import {createWelcomeGobos,miTexture} from './welcomeOptics';
+import {createWelcomeGobos,miTexture,rainSample} from './welcomeOptics';
 /** New fixtures only. Original headlamps, indicators and door mechanisms are never replaced. */
 export function WelcomeLights({model}:{model:Group}){
  const {gl}=useThree(),tick=useRef(0);
@@ -43,13 +43,13 @@ export function WelcomeLights({model}:{model:Group}){
   model.traverse(o=>{if(o instanceof Mesh&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>!m.transparent)){
    const mesh=new Mesh(o.geometry,occluderMaterial);mesh.matrixAutoUpdate=false;mesh.castShadow=true;projectionScene.add(mesh);occluders.push({source:o,mesh});
   }});
-  const groundGeometry=new PlaneGeometry(160,160),groundMaterial=new MeshStandardMaterial({color:'#fff',roughness:1,metalness:0,blending:AdditiveBlending,depthWrite:false});
+  const groundGeometry=new PlaneGeometry(160,160),groundMaterial=new MeshStandardMaterial({color:'#fff',roughness:1,metalness:0,blending:AdditiveBlending,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-4});
   const ground=new Mesh(groundGeometry,groundMaterial);ground.rotation.x=-Math.PI/2;ground.position.y=-.0145;ground.receiveShadow=true;projectionScene.add(ground);
   const logo=miTexture(),gobos=createWelcomeGobos(logo),housingGeometry=new CylinderGeometry(.010,.010,.007,16),housingMaterial=new MeshStandardMaterial({color:'#37444c',metalness:.7,roughness:.4}),lensGeometry=new CircleGeometry(.007,24);
   const projectors=corners.map((corner,index)=>{
    const cfg=mapping.doors[corner],door=model.getObjectByName(cfg.node)!,side=corner.endsWith('l')?-1:1;
    const source=new Vector3(...lenses.doorSources[corner]).sub(new Vector3(...cfg.hinge));
-   const light=new SpotLight('#edf6ff',0,1.4,.70,.12,2);light.name=`WELCOME_LOGO_${corner}`;light.position.copy(source);light.target.position.copy(source).add(new Vector3(side*.14,-.45,0));
+   const light=new SpotLight('#eef2f1',0,1.4,.70,.12,2);light.name=`WELCOME_LOGO_${corner}`;light.position.copy(source);light.target.position.copy(source).add(new Vector3(side*.14,-.45,0));
    light.map=gobos.targets[index].texture;light.castShadow=true;light.shadow.mapSize.set(512,512);light.shadow.camera.near=.015;light.shadow.camera.up.set(0,0,1);light.shadow.bias=-.00002;light.shadow.normalBias=.0005;
    const housing=new Mesh(housingGeometry,housingMaterial);housing.name=`WELCOME_PROJECTOR_${corner}`;housing.position.copy(source).add(new Vector3(0,.004,0));
    const faceMaterial=new MeshStandardMaterial({color:'#c4e9ff',emissive:'#d5eeff',emissiveIntensity:0,side:DoubleSide,roughness:.25}),face=new Mesh(lensGeometry,faceMaterial);face.name=`WELCOME_PROJECTOR_LENS_${corner}`;face.position.copy(source);face.userData.welcomeEmitter=true;
@@ -64,7 +64,7 @@ export function WelcomeLights({model}:{model:Group}){
  useEffect(()=>{
   fixtures.root.add(fixtures.group);for(const p of fixtures.projectors)p.door.add(p.housing,p.face);
   return()=>{
-  fixtures.group.removeFromParent();delete fixtures.root.userData.welcomeVolumes;delete fixtures.root.userData.welcomeBloom;for(const m of fixtures.matrices){m.geometry.dispose();m.material.dispose();m.ringGeometry.dispose();m.ringMaterial.dispose();}
+  fixtures.group.removeFromParent();delete fixtures.root.userData.welcomeVolumes;delete fixtures.root.userData.welcomeBloom;delete fixtures.root.userData.welcomeRainAtlas;for(const m of fixtures.matrices){m.geometry.dispose();m.material.dispose();m.ringGeometry.dispose();m.ringMaterial.dispose();}
   for(const p of fixtures.projectors){p.light.removeFromParent();p.light.target.removeFromParent();p.housing.removeFromParent();p.face.removeFromParent();p.faceMaterial.dispose();p.light.dispose();}
   fixtures.road.forEach(p=>p.light.dispose());fixtures.gobos.dispose();fixtures.lensGeometry.dispose();
   fixtures.logo.dispose();fixtures.housingGeometry.dispose();fixtures.housingMaterial.dispose();
@@ -79,7 +79,7 @@ export function WelcomeLights({model}:{model:Group}){
   for(const m of fixtures.matrices){const a:number[]=[];for(let row=0;row<3;row++)for(let col=0;col<4;col++){
    const normal=mode==='off'||m.cfg.module>=2&&mode!=='high'?0:(mode==='high'?.30:.16)*brightness;
    const t=Math.max(0,Math.min(1,(elapsed-3800)/1000)),restore=t*t*(3-2*t);
-   const p=active?meteorPower(playback.phaseMs,m.cfg.module,col,row)*rainBrightness+normal*(playback.persistent?1:restore):normal;m.power.setX(row*4+col,p);a.push(p);
+   const p=active?(meteorPower(playback.phaseMs,m.cfg.module,col,row)+.06*playback.envelope)*rainBrightness+normal*(playback.persistent?1:restore):normal;m.power.setX(row*4+col,p);a.push(p);
   }m.power.needsUpdate=true;powers.push(a);}
   const projections=fixtures.projectors.map(p=>{
    const open=Number(actualValues[`door:${p.corner}:openness`]??0),t=Math.max(0,Math.min(1,(open-.04)/.26)),target=t*t*(3-2*t);
@@ -91,12 +91,22 @@ export function WelcomeLights({model}:{model:Group}){
    const direction=p.light.target.position.clone().sub(p.light.position).normalize(),localDirection=direction.clone().transformDirection(new Matrix4().copy(p.door.matrixWorld).invert());
    p.face.quaternion.setFromUnitVectors(new Vector3(0,0,1),localDirection);p.faceMaterial.emissiveIntensity=p.power*8;
    const from=p.light.getWorldPosition(new Vector3()),toward=p.light.target.getWorldPosition(new Vector3()).sub(from),hit=from.clone().addScaledVector(toward,(-.015-from.y)/toward.y);
-   return {corner:p.corner,power:p.power,source:from.toArray(),ground:hit.toArray(),entry:p.center.toArray(),ndc:hit.clone().project(_.camera).toArray(),parent:p.door.name,gobo:!!p.light.map,castsShadow:p.light.castShadow,mark:'mi',sourceEmission:p.faceMaterial.emissiveIntensity};
+   return {corner:p.corner,power:p.power,source:from.toArray(),ground:hit.toArray(),entry:p.center.toArray(),ndc:hit.clone().project(_.camera).toArray(),parent:p.door.name,gobo:!!p.light.map,castsShadow:p.light.castShadow,mark:'mi',style:'light-stencil',whiteBadge:false,sourceEmission:p.faceMaterial.emissiveIntensity};
   });
   const envelope=playback.envelope*rainBrightness;
   fixtures.root.userData.welcomeBloom=active||fixtures.projectors.some(p=>p.power>.0001);
   fixtures.road.forEach(p=>{p.light.position.copy(p.source).applyMatrix4(fixtures.root.matrixWorld);p.light.target.position.set(p.side*.9,0,-5.3).applyMatrix4(fixtures.root.matrixWorld);p.light.target.position.y=-.0145;p.light.intensity=envelope*75;p.light.updateMatrixWorld();p.light.target.updateMatrixWorld();});
-  fixtures.root.userData.welcomeVolumes=[...fixtures.projectors.map(p=>({origin:p.light.position.clone(),target:p.light.target.position.clone(),power:p.power*6,angle:.40,range:p.light.position.distanceTo(p.light.target.position)+.06})),...fixtures.road.map(p=>({origin:p.light.position.clone(),target:p.light.target.position.clone(),power:envelope*.7,angle:.48,range:7}))];
+  const fogSources=fixtures.matrices.map((m,index)=>{
+   const values=powers[index],cell=values.indexOf(Math.max(...values));
+   const cellMatrix=new Matrix4();m.mesh.getMatrixAt(cell,cellMatrix);m.mesh.updateWorldMatrix(true,false);
+   const origin=new Vector3().setFromMatrixPosition(cellMatrix).applyMatrix4(m.mesh.matrixWorld);
+   const target=new Vector3(m.cfg.side==='left'?-.9:.9,0,-5.3).applyMatrix4(fixtures.root.matrixWorld);target.y=-.0145;
+   return {origin,target,power:envelope*.6,angle:.48,range:8,cell:(m.cfg.side==='left'?0:4)+m.cfg.module,unit:cell};
+  });
+  fixtures.root.userData.welcomeRainAtlas=fixtures.gobos.hazeAtlas.texture;
+  fixtures.root.userData.welcomeVolumes=[...fixtures.projectors.map(p=>({origin:p.light.position.clone(),target:p.light.target.position.clone(),power:p.power*6,angle:.40,range:p.light.position.distanceTo(p.light.target.position)+.06,cell:-1})),...fogSources];
+  const samples=[-1,1].flatMap(side=>[0,7,14,21,28,35].map(i=>{const p=rainSample(elapsed,i,side,playback.persistent),ground=new Vector3(p.x,-.0145,p.z).applyMatrix4(fixtures.root.matrixWorld);return {side,position:ground.toArray(),ndc:ground.clone().project(_.camera).toArray(),power:p.power};}));
+  gl.domElement.setAttribute('data-welcome-rain',JSON.stringify({active,airParticles:0,medium:'volumetric-fog',matrixBeams:active?fogSources.length:0,groundProjectors:active?2:0,samples:active?samples:[],origins:active?fogSources.map(s=>({origin:s.origin.toArray(),cell:s.cell,unit:s.unit})):[]}));
   tick.current+=delta;if(tick.current>.05){tick.current=0;gl.domElement.setAttribute('data-welcome',JSON.stringify({active,persistent:playback.persistent,brightness:rainBrightness,envelope,eventId:playback.eventId,elapsedMs:active?elapsed:null,durationMs:playback.persistent?null:welcomeDurationMs,units:fixtures.matrices.reduce((n,m)=>n+m.mesh.count,0),powers,normalMode:mode,projections,originalGeometry:true}));}
  },.5);
  useFrame(({gl,scene,camera})=>{
@@ -112,6 +122,7 @@ export function WelcomeLights({model}:{model:Group}){
     u.center.value.copy(i<4?fixtures.projectors[i].center:new Vector3());
     gl.setRenderTarget(fixtures.gobos.targets[i]);gl.clear();fixtures.gobos.quad.render(gl);
    });
+   fixtures.gobos.material.uniforms.mode.value=2;gl.setRenderTarget(fixtures.gobos.hazeAtlas);gl.clear();fixtures.gobos.quad.render(gl);
    gl.setRenderTarget(null);gl.clearDepth();scene.background=null;scene.overrideMaterial=fixtures.depth;gl.render(scene,camera);
    scene.overrideMaterial=override;scene.background=background;transparent.forEach(o=>{o.mesh.visible=o.visible;});
    gl.render(fixtures.projectionScene,camera);
